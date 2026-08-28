@@ -1,0 +1,7 @@
+{
+  "pages": {
+    "output_directory": ".next",
+    "install_command": "npm install",
+    "build_command": "npm run build"
+  }
+}
