@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,20 +16,21 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-black/80">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/80 backdrop-blur-md dark:border-zinc-800 dark:bg-black/80">
+      {/* Desktop Navigation */}
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-zinc-900 dark:text-white">
-          2Nspira
+        <Link href="/" className="flex items-center space-x-2">
+          <span className="font-bold text-xl text-zinc-900 dark:text-white">2Nspira</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop Nav Links */}
+        <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
+              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white transition-colors"
             >
               {link.name}
             </Link>
@@ -35,31 +39,24 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex items-center gap-2 text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
+          className="md:hidden flex items-center"
+          onClick={() => setIsMobileMenuOpen(true)}
+          aria-label="Open menu"
         >
-          {isMobileMenuOpen ? "Close" : "Menu"}
+          <svg
+            className="h-6 w-6 text-zinc-700 dark:text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </div>
 
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <nav className="md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black">
-          <div className="mx-auto flex max-w-7xl flex-col px-4 py-4 sm:px-6 lg:px-8 gap-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="rounded-lg px-3 py-2 text-base font-medium text-zinc-700 hover:bg-zinc-50 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-white transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      )}
+      {/* Mobile Menu Panel */}
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
     </header>
   );
 }
