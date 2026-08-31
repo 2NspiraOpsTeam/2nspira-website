@@ -14,9 +14,70 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteName = "2Nspira";
+const siteDomain = "https://www.2nspira.com";
+const siteDescription =
+  "Human-centered technology transformation and practical AI adoption — specializing in AI enablement, systems optimization, and fractional technology leadership.";
+const ogImageAlt = "2Nspira: Human-centered technology transformation";
+
 export const metadata: Metadata = {
-  title: "2Nspira | Human-centered technology transformation and practical AI adoption",
-  description: "AI Enablement & Governance, Systems & Process Optimization, Technology Transformation / Fractional Leadership.",
+  title: {
+    default: `${siteName} | Human-centered technology transformation and practical AI adoption`,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: [
+    "AI enablement",
+    "AI governance",
+    "technology transformation",
+    "systems optimization",
+    "fractional CTO",
+    "practical AI adoption",
+    "human-centered technology",
+    "process optimization",
+    "technology leadership",
+  ],
+  authors: [{ name: siteName }],
+  creator: siteName,
+  publisher: siteName,
+  metadataBase: new URL(siteDomain),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteDomain,
+    title: `${siteName} | Human-centered technology transformation and practical AI adoption`,
+    description: siteDescription,
+    siteName: siteName,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: ogImageAlt,
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} | Human-centered technology transformation and practical AI adoption`,
+    description: siteDescription,
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
