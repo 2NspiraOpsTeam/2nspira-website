@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import MobileMenu from "./MobileMenu";
 
 // Escape key handler for closing menus
@@ -23,7 +23,7 @@ const useEscapeKey = (isOpen: boolean, onClose: () => void) => {
 
 // Trap focus in mobile menu when open
 const useFocusTrap = (isActive: boolean) => {
-  const containerRef = useState<HTMLDivElement | null>(null)[1];
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!isActive || !containerRef?.current) return;
