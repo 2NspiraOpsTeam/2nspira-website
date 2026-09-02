@@ -93,7 +93,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
         </button>
 
         {/* Menu Items */}
-        <nav className="mt-10 px-4 space-y-2">
+        <nav className="space-y-2 px-4 pt-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
