@@ -73,7 +73,7 @@ export default function AboutPage() {
           <div className="mt-8 rounded-2xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-950/50">
             <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">Practical AI philosophy</h3>
             <p className="mt-4 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-              We distinguish between "AI adoption" and "practical AI use." Most organizations need the latter: targeted applications that solve specific problems, integrated into existing workflows. Our approach focuses on usable solutions with clear value, not experimental pilots that disappear after proof-of-concept.
+              We distinguish between “AI adoption” and “practical AI use.” Most organizations need the latter: targeted applications that solve specific problems, integrated into existing workflows. Our approach focuses on usable solutions with clear value, not experimental pilots that disappear after proof-of-concept.
             </p>
           </div>
 

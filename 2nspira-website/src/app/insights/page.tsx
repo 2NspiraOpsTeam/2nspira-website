@@ -46,7 +46,7 @@ export default function InsightsPage() {
           <div className="mt-12 rounded-2xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-950/50">
             <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">Have insights to share?</h3>
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              Have practical experience or case studies you'd like to contribute? We welcome submissions from organizations that have worked with 2Nspira.
+              Have practical experience or case studies you’d like to contribute? We welcome submissions from organizations that have worked with 2Nspira.
             </p>
             <a
               href="/contact"

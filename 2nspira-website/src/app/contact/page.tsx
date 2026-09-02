@@ -42,7 +42,7 @@ export default function ContactPage() {
             Get in touch
           </h1>
           <p className="mt-6 text-xl leading-8 text-zinc-600 dark:text-zinc-300">
-            Questions about our services? Ready to get started? Let's talk.
+            Questions about our services? Ready to get started? Let’s talk.
           </p>
         </div>
       </section>
@@ -138,7 +138,7 @@ export default function ContactPage() {
             {/* Success/Error states */}
             {status === "success" && (
               <p className="mt-4 text-sm text-green-600 dark:text-green-400">
-                Thanks! We'll get back to you shortly.
+                Thanks! We’ll get back to you shortly.
               </p>
             )}
           </form>
