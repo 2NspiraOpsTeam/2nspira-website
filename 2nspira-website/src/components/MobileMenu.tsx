@@ -1,9 +1,11 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
@@ -12,41 +14,57 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
     { name: "Contact", href: "/contact" },
   ];
 
-  // Close menu when Escape key is pressed
-  React.useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+  useEffect(() => {
+    if (!isOpen || !dialogRef.current) return;
+
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const focusableElements = dialogRef.current.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+    );
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose();
+        return;
+      }
+
+      if (event.key !== "Tab" || !firstElement || !lastElement) return;
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
     };
 
-    if (isOpen) {
-      document.addEventListener("keydown", handleEscape);
-      document.body.style.overflow = "hidden";
-    }
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+    closeButtonRef.current?.focus();
 
     return () => {
-      document.removeEventListener("keydown", handleEscape);
       document.body.style.overflow = "";
+      document.removeEventListener("keydown", handleKeyDown);
+      previouslyFocused?.focus();
     };
   }, [isOpen, onClose]);
 
-  // Prevent scrolling when menu is open
-  React.useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  }, [isOpen]);
+  if (!isOpen) return null;
 
   return (
     <div
-      className={`fixed inset-0 z-[60] transform transition-transform duration-300 ${
-        isOpen ? "translate-x-0" : "-translate-x-full"
-      }`}
+      ref={dialogRef}
+      id="mobile-menu"
+      className="fixed inset-0 z-[60]"
       role="dialog"
       aria-modal="true"
-      aria-label="Mobile navigation menu"
+      aria-labelledby="mobile-menu-title"
     >
+      <h2 id="mobile-menu-title" className="sr-only">Mobile navigation</h2>
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
@@ -58,6 +76,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       <div className="relative h-full w-[85vw] max-w-xs bg-white shadow-xl dark:bg-black sm:max-w-md">
         {/* Close Button */}
         <button
+          ref={closeButtonRef}
           onClick={onClose}
           className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-lg text-zinc-600 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white"
           aria-label="Close menu"

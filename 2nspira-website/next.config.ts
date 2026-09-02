@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
+import { fileURLToPath } from "node:url";
 
 const nextConfig: NextConfig = {
   turbopack: {
-    root: "/Users/adam/.openclaw/workspace/2nspira-website",
+    root: fileURLToPath(new URL(".", import.meta.url)),
   },
 };
 

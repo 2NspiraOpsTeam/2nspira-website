@@ -1,13 +1,8 @@
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-
-      <main className="flex-1">
+    <main className="flex-1">
         {/* Hero */}
         <section className="bg-white py-24 dark:bg-black sm:py-32">
           <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
@@ -122,9 +117,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
-
-      <Footer />
-    </div>
+    </main>
   );
 }
