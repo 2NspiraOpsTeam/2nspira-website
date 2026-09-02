@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services | 2Nspira — AI Enablement, Systems Optimization & Technology Leadership",
+  title: "Services",
   description:
     "Our three integrated capabilities: AI Enablement & Governance, Systems & Process Optimization, and Technology Transformation / Fractional Leadership.",
   alternates: {

@@ -1,112 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useCallback, useRef } from "react";
+import { usePathname } from "next/navigation";
+import { useCallback, useState } from "react";
 import MobileMenu from "./MobileMenu";
 
-// Escape key handler for closing menus
-const useEscapeKey = (isOpen: boolean, onClose: () => void) => {
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        e.preventDefault();
-        onClose();
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, onClose]);
-};
-
-// Trap focus in mobile menu when open
-const useFocusTrap = (isActive: boolean) => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (!isActive || !containerRef?.current) return;
-
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'textarea:not([disabled])',
-      'input:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-    ];
-    const focusableElements = containerRef.current.querySelectorAll(focusableSelectors.join(", "));
-
-    if (focusableElements.length === 0) return;
-
-    const firstEl = focusableElements[0] as HTMLElement;
-    const lastEl = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-    const handleTab = (e: KeyboardEvent) => {
-      if (e.key !== "Tab") return;
-
-      if (e.shiftKey) {
-        if (document.activeElement === firstEl) {
-          e.preventDefault();
-          lastEl.focus();
-        }
-      } else {
-        if (document.activeElement === lastEl) {
-          e.preventDefault();
-          firstEl.focus();
-        }
-      }
-    };
-
-    document.addEventListener("keydown", handleTab);
-    return () => document.removeEventListener("keydown", handleTab);
-  }, [isActive, containerRef]);
-};
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "About", href: "/about" },
+  { name: "Insights", href: "/insights" },
+  { name: "Contact", href: "/contact" },
+];
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeRoute, setActiveRoute] = useState("");
+  const pathname = usePathname();
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "About", href: "/about" },
-    { name: "Insights", href: "/insights" },
-    { name: "Contact", href: "/contact" },
-  ];
-
-  useEscapeKey(isMobileMenuOpen, () => setIsMobileMenuOpen(false));
-  useFocusTrap(isMobileMenuOpen);
-
-  // Track current route for active link styling and screen reader announcements
-  useEffect(() => {
-    const setRoute = () => setActiveRoute(window.location.pathname || "/");
-    setRoute();
-    window.addEventListener("popstate", setRoute);
-    return () => window.removeEventListener("popstate", setRoute);
-  }, []);
-
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [isMobileMenuOpen]);
-
-  const handleNavClick = useCallback(() => {
+  const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
   }, []);
 
-  // Determine current link for active state
   const getLinkProps = (href: string) => {
-    if (href === "/") return { "aria-current": activeRoute === "/" ? ("page" as const) : undefined };
-    if (activeRoute.startsWith(href)) return { "aria-current": "page" as const };
-    return {};
+    const isCurrent = href === "/" ? pathname === "/" : pathname.startsWith(href);
+    return { "aria-current": isCurrent ? ("page" as const) : undefined };
   };
-
-  // Generate page name for screen reader on logo click
-  const ariaLabel = isMobileMenuOpen
-    ? "Menu open. Press Escape to close."
-    : "Main navigation";
 
   return (
     <header
@@ -114,40 +32,32 @@ export default function Header() {
       role="banner"
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        {/* Logo */}
         <Link
           href="/"
-          className="flex items-center space-x-2 focus-visible:outline-none"
-          aria-label="2Nspira Home"
+          className="flex items-center space-x-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          aria-label="2Nspira home"
         >
-          <span className="font-bold text-xl text-zinc-900 dark:text-white">
-            2Nspira
-          </span>
+          <span className="text-xl font-bold text-zinc-900 dark:text-white">2Nspira</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav
-          className="hidden md:flex items-center space-x-6"
-          aria-label="Main navigation"
-        >
+        <nav className="hidden items-center space-x-6 md:flex" aria-label="Main navigation">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               {...getLinkProps(link.href)}
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded"
+              className="rounded text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:text-zinc-300 dark:hover:text-white"
             >
               {link.name}
             </Link>
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+          className="flex items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 md:hidden"
           onClick={() => setIsMobileMenuOpen(true)}
           aria-expanded={isMobileMenuOpen}
-          aria-label={isMobileMenuOpen ? "Close menu" : "Open navigation menu"}
+          aria-label="Open menu"
           aria-controls="mobile-menu"
         >
           <svg
@@ -157,33 +67,15 @@ export default function Header() {
             stroke="currentColor"
             strokeWidth={2}
             aria-hidden="true"
-            focusable="false"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
 
-      {/* Mobile Navigation Panel */}
-      <nav
-        id="mobile-menu"
-        className={isMobileMenuOpen ? "md:hidden" : "hidden"}
-        aria-label="Mobile navigation"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="mobile-menu-title"
-      >
-        {isMobileMenuOpen && (
-          <MobileMenu isOpen={isMobileMenuOpen} onClose={handleNavClick} />
-        )}
-      </nav>
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
 
-      {/* Screen reader announcement for state changes */}
-      <span className="sr-only">
+      <span className="sr-only" aria-live="polite" aria-atomic="true">
         {isMobileMenuOpen ? "Navigation menu opened" : "Navigation menu closed"}
       </span>
     </header>

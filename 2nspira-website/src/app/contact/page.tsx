@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -41,10 +39,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-
-      <main className="flex-1 bg-zinc-50 dark:bg-black" id="contact-page">
+    <main className="flex-1 bg-zinc-50 dark:bg-black" id="contact-page">
         {/* Hero */}
         <section className="bg-white py-24 dark:bg-black" aria-labelledby="contact-hero-heading">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
@@ -198,9 +193,6 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
-      </main>
-
-      <Footer />
-    </div>
+    </main>
   );
 }

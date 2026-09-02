@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | 2Nspira — Our human-centered philosophy and values",
+  title: "About",
   description:
     "Learn about 2Nspira's approach to human-centered technology transformation, practical AI adoption, systems optimization, and our core values.",
   alternates: {

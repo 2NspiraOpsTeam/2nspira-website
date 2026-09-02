@@ -18,8 +18,6 @@ const siteName = "2Nspira";
 const siteDomain = "https://www.2nspira.com";
 const siteDescription =
   "Human-centered technology transformation and practical AI adoption — specializing in AI enablement, systems optimization, and fractional technology leadership.";
-const ogImageAlt = "2Nspira: Human-centered technology transformation";
-
 export const metadata: Metadata = {
   title: {
     default: `${siteName} | Human-centered technology transformation and practical AI adoption`,
@@ -51,21 +49,11 @@ export const metadata: Metadata = {
     title: `${siteName} | Human-centered technology transformation and practical AI adoption`,
     description: siteDescription,
     siteName: siteName,
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: ogImageAlt,
-        type: "image/png",
-      },
-    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: `${siteName} | Human-centered technology transformation and practical AI adoption`,
     description: siteDescription,
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,

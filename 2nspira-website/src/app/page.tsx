@@ -1,14 +1,4 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "Home | 2Nspira — Human-centered technology transformation and practical AI adoption",
-  description:
-    "We help organizations navigate technology change with clarity and purpose — specializing in AI enablement, systems optimization, and fractional technology leadership.",
-  alternates: {
-    canonical: "/",
-  },
-};
 
 export default function Home() {
   const services = [
