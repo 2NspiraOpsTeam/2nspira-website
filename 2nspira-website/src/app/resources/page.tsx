@@ -1,10 +1,5 @@
 import { Metadata } from "next";
-import Link from "next/link";
-import { Card, CardHeader, CardContent, Typography, Box, Grid } from "@mui/material";
-import StrengthProfileCard from "@/components/Resources/StrengthProfileCard";
-import AiReadinessCard from "@/components/Resources/AiReadinessCard";
 
-// Metadata extracted from 2Nspira_RESOURCES_PAGE_DRAFT.md
 export const metadata: Metadata = {
   title: "2Nspira Resources | Assessments, Scorecards, and Practical Tools",
   description: "Explore practical tools from 2Nspira, including professional strengths assessments, AI readiness scorecards, and executive resources designed to support better decisions and clearer next steps.",
@@ -20,79 +15,53 @@ export const metadata: Metadata = {
   ],
 };
 
-const featuredResources = [
+const resources = [
   {
-    title: "Professional Strengths Assessment",
-    link: "/resources/strength-profile",
-    description:
-      "A professional strengths and work-fit assessment designed to help people understand how they naturally create value, collaborate, and thrive at work.",
-    ctaText: "Take the Strength Profile",
-    icon: <span className="text-blue-500 mr-2">•</span>,
+    title: "AI Readiness Scorecard",
+    description: "A comprehensive tool to assess your organization's AI readiness, identify gaps, and create a roadmap for successful adoption.",
+    icon: "🤖",
   },
   {
-    title: "AI Readiness Assessment for Organizations",
-    link: "/resources/ai-readiness-scorecard",
-    description:
-      "An executive-facing AI readiness assessment that helps organizations evaluate strategy, governance, workflows, trust, and implementation preparedness.",
-    ctaText: "Take the AI Readiness Scorecard",
-    icon: <span className="text-orange-500 mr-2">•</span>,
+    title: "Strength Profile Generator",
+    description: "Generate personalized strength profiles to help teams understand their unique capabilities and areas for improvement.",
+    icon: "💪",
+  },
+  {
+    title: "Resource Library",
+    description: "Access a curated collection of tools, guides, and templates designed to support your AI journey.",
+    icon: "📚",
   },
 ];
 
 export default function ResourcesPage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-zinc-950/90 pt-24 pb-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Hero Section */}
-        <header className="text-center py-12 md:py-20 border-b border-zinc-200 dark:border-zinc-800">
-          <h1 className="text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-6xl">
-            Practical tools and assessments from 2Nspira
-          </h1>
-          <p className="mt-4 text-xl leading-8 text-zinc-600 dark:text-zinc-400">
-            Explore free 2Nspira resources built to help professionals, teams, and organizations make clearer decisions, understand their current position, and take practical next steps.
+    <div className="min-h-screen bg-slate-50 p-8">
+      <div className="max-w-6xl mx-auto">
+        <header className="mb-12 text-center">
+          <h1 className="text-4xl font-bold text-slate-900 mb-4">Resources</h1>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            Explore our collection of tools and resources designed to support your organization&apos;s AI readiness journey.
           </p>
         </header>
 
-        {/* Featured Resources */}
-        <section className="py-16 md:py-24">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
-              Featured Resources
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-              These tools are designed to be useful, credible, and action-oriented. Each resource is built to help people move from uncertainty to clarity, whether the goal is understanding strengths, evaluating organizational readiness, or identifying better next steps.
-            </p>
-            <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {featuredResources.map((resource) => (
-                <div key={resource.title} className="border border-zinc-200 rounded-xl bg-white p-8 shadow-lg hover:shadow-xl dark:border-zinc-800 dark:bg-zinc-900/30 transition-shadow duration-300">
-                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white">{resource.title}</h3>
-                  <p className="mt-1 text-base text-zinc-600 dark:text-zinc-400">{resource.description}</p>
-                  <div className="mt-6 flex justify-center">
-                    <Link
-                      href={resource.link}
-                      className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-2 text-sm font-medium text-white hover:bg-blue-500 transition-colors"
-                    >
-                      {resource.ctaText}
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Trust Section */}
-        <section className="py-16 border-t border-zinc-200 dark:border-zinc-800">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
-              Designed for practical use
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-              2Nspira resources are designed to be clear, credible, and action-oriented. They are meant to support reflection, planning, and better conversations. They are not intended to replace formal legal, clinical, regulatory, or certification processes where those are required.
-            </p>
-          </div>
-        </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {resources.map((resource, index) => (
+            <ResourceCard key={index} {...resource} />
+          ))}
+        </div>
       </div>
     </div>
+  );
+}
+
+function ResourceCard({ title, description, icon }: { title: string; description: string; icon: string }) {
+  return (
+    <article className="rounded-xl overflow-hidden shadow-md bg-white border border-slate-200 h-full flex flex-col">
+      <div className="p-6">
+        <div className="text-5xl mb-4">{icon}</div>
+        <h3 className="text-lg font-semibold text-slate-900 mb-2">{title}</h3>
+        <p className="text-slate-600 leading-relaxed">{description}</p>
+      </div>
+    </article>
   );
 }
