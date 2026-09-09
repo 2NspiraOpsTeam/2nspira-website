@@ -1,67 +1,32 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
+import AiReadinessCard from "@/components/Resources/AiReadinessCard";
+import StrengthProfileCard from "@/components/Resources/StrengthProfileCard";
 
 export const metadata: Metadata = {
-  title: "2Nspira Resources | Assessments, Scorecards, and Practical Tools",
-  description: "Explore practical tools from 2Nspira, including professional strengths assessments, AI readiness scorecards, and executive resources designed to support better decisions and clearer next steps.",
-  keywords: [
-    "professional strengths assessment",
-    "work fit assessment",
-    "strengths profile for professionals",
-    "AI readiness assessment",
-    "organizational AI readiness",
-    "executive AI readiness scorecard",
-    "responsible AI adoption assessment",
-    "2Nspira resources",
-  ],
+  title: "Resources | Assessments and Practical Tools",
+  description: "Explore free 2Nspira strengths assessments and AI readiness scorecards for clearer decisions and practical next steps.",
+  alternates: { canonical: "/resources" },
 };
-
-const resources = [
-  {
-    title: "AI Readiness Scorecard",
-    description: "A comprehensive tool to assess your organization's AI readiness, identify gaps, and create a roadmap for successful adoption.",
-    icon: "🤖",
-  },
-  {
-    title: "Strength Profile Generator",
-    description: "Generate personalized strength profiles to help teams understand their unique capabilities and areas for improvement.",
-    icon: "💪",
-  },
-  {
-    title: "Resource Library",
-    description: "Access a curated collection of tools, guides, and templates designed to support your AI journey.",
-    icon: "📚",
-  },
-];
 
 export default function ResourcesPage() {
   return (
-    <div className="min-h-screen bg-slate-50 p-8">
-      <div className="max-w-6xl mx-auto">
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-slate-900 mb-4">Resources</h1>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Explore our collection of tools and resources designed to support your organization&apos;s AI readiness journey.
-          </p>
-        </header>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {resources.map((resource, index) => (
-            <ResourceCard key={index} {...resource} />
-          ))}
+    <main className="flex-1 bg-zinc-50 dark:bg-black">
+      <section className="border-b border-zinc-200 bg-white py-20 dark:border-zinc-800 dark:bg-black sm:py-28">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-400">2Nspira Resources</p>
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">Practical tools. Clearer next steps.</h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-300">Explore free assessments built to help professionals, teams, and organizations understand their strengths, evaluate readiness, and move forward with confidence.</p>
         </div>
-      </div>
-    </div>
-  );
-}
-
-function ResourceCard({ title, description, icon }: { title: string; description: string; icon: string }) {
-  return (
-    <article className="rounded-xl overflow-hidden shadow-md bg-white border border-slate-200 h-full flex flex-col">
-      <div className="p-6">
-        <div className="text-5xl mb-4">{icon}</div>
-        <h3 className="text-lg font-semibold text-slate-900 mb-2">{title}</h3>
-        <p className="text-slate-600 leading-relaxed">{description}</p>
-      </div>
-    </article>
+      </section>
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6" aria-label="Featured assessments">
+        <div className="grid gap-8 md:grid-cols-2"><StrengthProfileCard /><AiReadinessCard /></div>
+        <div className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950 sm:p-8">
+          <h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">Designed for practical use</h2>
+          <p className="mt-4 leading-7 text-zinc-600 dark:text-zinc-300">Use these tools to support career reflection, coaching conversations, team development, and responsible AI planning. Each assessment gives you a starting point for a better conversation.</p>
+          <Link href="/contact" className="mt-6 inline-block rounded font-semibold text-blue-700 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 dark:text-blue-400">Talk through your next steps with 2Nspira →</Link>
+        </div>
+      </section>
+    </main>
   );
 }

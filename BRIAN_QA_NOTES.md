@@ -108,3 +108,7 @@ The following steps can now proceed:
 **Status**: READY FOR DEPLOYMENT — No blockers remaining.
 
 **Last Updated**: September 6, 2026 by Jeffrey Cortez (via Adam/BIOS)
+
+## September 9 follow-up — Adam's direct validation
+
+The prior "no blockers remaining" assessment was too broad for a Wix migration. Builds passed, but Resources lacked actionable cards, detail routes, navigation and sitemap coverage, and Contact simulated success without sending anything. These issues were addressed in the September 9 increment. Cloudflare deployment uses **Workers**, not Pages/Certbot. See `docs/MIGRATION_STATUS.md` for observed checks, preview deployment, limitations and outstanding migration scope. This update is not an independent Brian approval or production-launch approval.

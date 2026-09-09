@@ -9,7 +9,7 @@ export default function ContactPage() {
     organization: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [emailOpened, setEmailOpened] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState((prev) => ({
@@ -18,18 +18,14 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("submitting");
-
-    // For now, simulate submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    setStatus("success");
-    setFormState({ name: "", email: "", organization: "", message: "" });
-
-    // Clear success after 5 seconds
-    setTimeout(() => setStatus("idle"), 5000);
+    const subject = encodeURIComponent(`Website inquiry from ${formState.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formState.name}\nEmail: ${formState.email}\nOrganization: ${formState.organization || "Not provided"}\n\n${formState.message}`,
+    );
+    window.location.href = `mailto:info@2nspira.com?subject=${subject}&body=${body}`;
+    setEmailOpened(true);
   };
 
   const faqs = [
@@ -55,8 +51,9 @@ export default function ContactPage() {
         {/* Contact Form */}
         <section className="py-16 sm:py-24" aria-labelledby="form-heading">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <form onSubmit={handleSubmit} className="rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-950/50" aria-labelledby="form-heading" noValidate>
-              <h2 id="form-heading" className="text-2xl font-bold text-zinc-900 dark:text-white">Send us a message</h2>
+            <form onSubmit={handleSubmit} className="rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-950/50" aria-labelledby="form-heading">
+              <h2 id="form-heading" className="text-2xl font-bold text-zinc-900 dark:text-white">Email us a message</h2>
+              <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">This form opens a draft in your email app. Review it and press send there to contact us.</p>
 
               {/* Name */}
               <div className="mt-6">
@@ -73,7 +70,6 @@ export default function ContactPage() {
                   value={formState.name}
                   onChange={handleChange}
                   aria-required="true"
-                  aria-invalid={false}
                   className="mt-1 block w-full rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-zinc-700 dark:bg-black dark:text-white dark:focus:border-white sm:text-sm"
                   placeholder="John Doe"
                 />
@@ -94,7 +90,6 @@ export default function ContactPage() {
                   value={formState.email}
                   onChange={handleChange}
                   aria-required="true"
-                  aria-invalid={false}
                   className="mt-1 block w-full rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-zinc-700 dark:bg-black dark:text-white dark:focus:border-white sm:text-sm"
                   placeholder="john@example.com"
                 />
@@ -132,7 +127,6 @@ export default function ContactPage() {
                   value={formState.message}
                   onChange={handleChange}
                   aria-required="true"
-                  aria-invalid={false}
                   className="mt-1 block w-full rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-zinc-700 dark:bg-black dark:text-white dark:focus:border-white sm:text-sm"
                   placeholder="Tell us about your needs..."
                 />
@@ -142,30 +136,18 @@ export default function ContactPage() {
               <div className="mt-6 flex items-center justify-between">
                 <button
                   type="submit"
-                  disabled={status === "submitting" || status === "success"}
-                  aria-busy={status === "submitting"}
-                  className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-colors ${
-                    status === "success"
-                      ? "bg-green-500 text-white"
-                      : "bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 disabled:opacity-70"
-                  } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500`}
+                  className="inline-flex items-center justify-center rounded-lg bg-zinc-900 px-6 py-3 text-base font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 >
-                  {status === "submitting" ? "Sending..." : status === "success" ? "Message sent!" : "Send message"}
+                  Open email draft
                 </button>
               </div>
 
-              {/* Success state */}
-              {status === "success" && (
-                <p className="mt-4 text-sm text-green-600 dark:text-green-400" role="status">
-                  Thanks! We’ll get back to you shortly.
+              {emailOpened && (
+                <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400" role="status">
+                  Your email app should open with a draft. Nothing has been sent by this website.
+                  If it did not open, email info@2nspira.com directly. Your message remains here to copy.
                 </p>
               )}
-
-              {/* Live region for form status announcements */}
-              <span className="sr-only" aria-live="polite">
-                {status === "submitting" ? "Your message is being sent." : ""}
-                {status === "success" ? "Your message was sent successfully." : ""}
-              </span>
             </form>
 
             {/* Alternative contact methods */}

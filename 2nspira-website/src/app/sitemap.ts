@@ -11,6 +11,9 @@ const pages: Array<{
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/about", priority: 0.8, changeFrequency: "monthly" },
   { path: "/insights", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/resources", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/resources/strength-profile", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/resources/ai-readiness-scorecard", priority: 0.8, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
 ];
 

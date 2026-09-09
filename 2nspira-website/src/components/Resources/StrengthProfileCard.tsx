@@ -10,9 +10,9 @@ export default function StrengthProfileCard() {
   return (
     <div className="flex flex-col h-full rounded-2xl bg-white p-8 shadow-sm dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-800">
       <div className="flex-1">
-        <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+        <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">
           Professional Strengths Assessment
-        </h3>
+        </h2>
         <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
           Identify your natural operating strengths and work-fit profile.
         </p>
@@ -20,9 +20,9 @@ export default function StrengthProfileCard() {
           A comprehensive assessment to help you understand how you naturally
           create value, collaborate, and thrive at work.
         </p>
-        <h4 className="mt-6 text-base font-semibold text-zinc-900 dark:text-white">
+        <h3 className="mt-6 text-base font-semibold text-zinc-900 dark:text-white">
           Why Use It:
-        </h4>
+        </h3>
         <ul className="mt-2 space-y-1 pl-4">
           {highlights.map((item) => (
             <li key={item} className="text-sm text-zinc-600 dark:text-zinc-400 list-disc">
@@ -36,7 +36,7 @@ export default function StrengthProfileCard() {
           href="/resources/strength-profile"
           className="inline-flex w-full justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-900"
         >
-          Take the Strength Profile →
+          Explore the Strength Profile →
         </Link>
       </div>
     </div>
