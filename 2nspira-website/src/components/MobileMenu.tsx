@@ -69,18 +69,18 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       <h2 id="mobile-menu-title" className="sr-only">Mobile navigation</h2>
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
+        className="absolute inset-0 bg-ink/40 backdrop-blur-sm transition-opacity duration-300 ease-gentle"
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Menu Panel */}
-      <div className="relative h-full w-[85vw] max-w-xs bg-white shadow-xl dark:bg-black sm:max-w-md">
+      <div className="relative h-full w-[85vw] max-w-xs bg-canvas shadow-lift sm:max-w-md">
         {/* Close Button */}
         <button
           ref={closeButtonRef}
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-lg text-zinc-600 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white"
+          className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           aria-label="Close menu"
         >
           <svg
@@ -88,30 +88,36 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            strokeWidth={2}
+            strokeWidth={1.75}
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
 
         {/* Menu Items */}
-        <nav className="space-y-2 px-4 pt-10">
+        <nav className="space-y-1 px-4 pt-14" aria-label="Mobile navigation">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={onClose}
-              className="block rounded-lg px-4 py-3 text-lg font-medium text-zinc-900 hover:bg-zinc-50 dark:text-white dark:hover:bg-zinc-900 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white"
+              className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors duration-300 ease-gentle hover:bg-accent-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               {link.name}
             </Link>
           ))}
         </nav>
 
-        {/* Footer in mobile menu */}
-        <div className="absolute bottom-8 left-4 right-4">
-          <p className="text-center text-sm text-zinc-500 dark:text-zinc-400">
-            &copy; 2026 2Nspira
+        <div className="absolute bottom-10 left-4 right-4">
+          <Link
+            href="/contact"
+            onClick={onClose}
+            className="block rounded-xl bg-accent px-4 py-3.5 text-center text-base font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          >
+            Start a conversation
+          </Link>
+          <p className="mt-6 text-center text-sm text-muted">
+            &copy; {new Date().getFullYear()} 2Nspira
           </p>
         </div>
       </div>

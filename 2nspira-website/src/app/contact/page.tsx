@@ -11,6 +11,8 @@ type SubmitState =
 
 const CONTACT_EMAIL = "hello@2nspira.com";
 
+import { buttonPrimary, card, cardFlat, caption, field, label, lead, pageMain } from "@/components/ui";
+
 export default function ContactPage() {
   const [formState, setFormState] = useState({
     name: "",
@@ -87,11 +89,11 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="flex-1 bg-zinc-50 dark:bg-black" id="contact-page">
-      <section className="bg-white py-24 dark:bg-black" aria-labelledby="contact-hero-heading">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 id="contact-hero-heading" className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">Get in touch</h1>
-          <p className="mt-6 text-xl leading-8 text-zinc-600 dark:text-zinc-300">Questions about our services? Ready to get started? Let&rsquo;s talk.</p>
+    <main className={pageMain} id="contact-page">
+      <section className="border-b border-line bg-surface">
+        <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
+          <h1 id="contact-hero-heading" className="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Get in touch</h1>
+          <p className={`mx-auto mt-6 max-w-xl ${lead}`}>Questions about our services? Ready to get started? Let&rsquo;s talk.</p>
         </div>
       </section>
 
@@ -114,80 +116,81 @@ export default function ContactPage() {
                 Your message was composed with the following content. If your email app did not open, copy the text below and email <a href={`mailto:${state.to}`} className="font-semibold underline">{state.to}</a> directly.
               </p>
               <div className="mt-6 rounded-lg border border-amber-200 bg-white p-5 font-mono text-xs leading-5 text-zinc-700 dark:border-amber-900 dark:bg-zinc-950 dark:text-zinc-300">
-                <p className="font-sans text-sm font-semibold text-zinc-900 dark:text-white">Subject: {state.subject}</p>
+                <p className="font-sans text-sm font-semibold text-ink">Subject: {state.subject}</p>
                 <pre className="mt-3 whitespace-pre-wrap font-mono">{state.body}</pre>
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-950/50" aria-labelledby="form-heading" noValidate={false}>
-              <h2 id="form-heading" className="text-2xl font-bold text-zinc-900 dark:text-white">Send us a message</h2>
-              <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+            <form onSubmit={handleSubmit} className={`p-8 ${card}`} aria-labelledby="form-heading" noValidate={false}>
+              <h2 id="form-heading" className="text-2xl font-bold text-ink">Send us a message</h2>
+              <p className={`mt-3 ${caption}`}
+              >
                 Your inquiry is delivered to our team. If direct delivery is temporarily unavailable, we will open a pre-composed draft in your email app — review and press send there.
               </p>
 
               <div className="mt-6">
-                <label htmlFor="name" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                <label htmlFor="name" className={label}>
                   Your name <span className="text-red-500" aria-hidden="true">*</span>
                   <span className="sr-only">(required)</span>
                 </label>
                 <input type="text" id="name" name="name" required autoComplete="name" value={formState.name} onChange={handleChange} aria-required="true"
-                  className="mt-1 block w-full rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-zinc-700 dark:bg-black dark:text-white dark:focus:border-white sm:text-sm" placeholder="John Doe" />
+                  className={field} placeholder="John Doe" />
               </div>
 
               <div className="mt-6">
-                <label htmlFor="email" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                <label htmlFor="email" className={label}>
                   Email address <span className="text-red-500" aria-hidden="true">*</span>
                   <span className="sr-only">(required)</span>
                 </label>
                 <input type="email" id="email" name="email" required autoComplete="email" value={formState.email} onChange={handleChange} aria-required="true"
-                  className="mt-1 block w-full rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-zinc-700 dark:bg-black dark:text-white dark:focus:border-white sm:text-sm" placeholder="john@example.com" />
+                  className={field} placeholder="john@example.com" />
               </div>
 
               <div className="mt-6">
-                <label htmlFor="organization" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">Organization (optional)</label>
+                <label htmlFor="organization" className={label}>Organization (optional)</label>
                 <input type="text" id="organization" name="organization" autoComplete="organization" value={formState.organization} onChange={handleChange} aria-required="false"
-                  className="mt-1 block w-full rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-zinc-700 dark:bg-black dark:text-white dark:focus:border-white sm:text-sm" placeholder="Your organization name" />
+                  className={field} placeholder="Your organization name" />
               </div>
 
               <div className="mt-6">
-                <label htmlFor="message" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                <label htmlFor="message" className={label}>
                   How can we help? <span className="text-red-500" aria-hidden="true">*</span>
                   <span className="sr-only">(required)</span>
                 </label>
                 <textarea id="message" name="message" required rows={4} value={formState.message} onChange={handleChange} aria-required="true"
-                  className="mt-1 block w-full rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-zinc-700 dark:bg-black dark:text-white dark:focus:border-white sm:text-sm" placeholder="Tell us about your needs..." />
+                  className={field} placeholder="Tell us about your needs..." />
               </div>
 
               <div className="mt-6 flex items-center justify-between">
                 <button type="submit" disabled={state.kind === "sending"}
-                  className="inline-flex items-center justify-center rounded-lg bg-zinc-900 px-6 py-3 text-base font-medium text-white hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-white dark:text-black dark:hover:bg-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  className={`${buttonPrimary} disabled:cursor-not-allowed disabled:opacity-60`}>
                   {state.kind === "sending" ? "Sending…" : "Send message"}
                 </button>
               </div>
             </form>
           )}
 
-          <div className="mt-12 rounded-2xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-950/50" role="complementary" aria-label="Alternative contact methods">
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">Prefer to email directly?</h3>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <div className={`mt-12 p-8 ${cardFlat}`} role="complementary" aria-label="Alternative contact methods">
+            <h3 className="text-lg font-semibold text-ink">Prefer to email directly?</h3>
+            <p className={`mt-2 ${caption}`}>
               Reach us at:{" "}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="underline hover:text-zinc-900 dark:hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">{CONTACT_EMAIL}</a>
+              <a href={`mailto:${CONTACT_EMAIL}`} className="underline underline-offset-4 transition-colors duration-300 ease-gentle hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">{CONTACT_EMAIL}</a>
             </p>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              Phone: <a href="tel:+16465430199" className="underline">+1 (646) 543-0199</a>
+            <p className={`mt-2 ${caption}`}>
+              Phone: <a href="tel:+16465430199" className="underline underline-offset-4 transition-colors duration-300 ease-gentle hover:text-accent">+1 (646) 543-0199</a>
             </p>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+            <p className={`mt-2 ${caption}`}>
               11215 72nd Rd, Forest Hills, NY
             </p>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-950/50" role="complementary" aria-label="Frequently asked questions">
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">Common questions</h3>
+          <div className={`mt-8 p-8 ${cardFlat}`} role="complementary" aria-label="Frequently asked questions">
+            <h3 className="text-lg font-semibold text-ink">Common questions</h3>
             <dl className="mt-4 space-y-4">
               {faqs.map((item, i) => (
                 <div key={i}>
-                  <dt className="font-medium text-zinc-900 dark:text-white">{item.q}</dt>
-                  <dd className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{item.a}</dd>
+                  <dt className="font-medium text-ink">{item.q}</dt>
+                  <dd className={`mt-1 ${caption}`}>{item.a}</dd>
                 </div>
               ))}
             </dl>

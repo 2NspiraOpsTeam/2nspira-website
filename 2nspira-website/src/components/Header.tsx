@@ -10,8 +10,8 @@ const navLinks = [
   { name: "Services", href: "/services" },
   { name: "About", href: "/about" },
   { name: "Insights", href: "/insights" },
-    { name: "Resources", href: "/resources" },
-    { name: "Books", href: "/books" },
+  { name: "Resources", href: "/resources" },
+  { name: "Books", href: "/books" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -30,49 +30,60 @@ export default function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/95 dark:border-zinc-800 dark:bg-black/95"
+      className="sticky top-0 z-50 w-full border-b border-line bg-canvas/85 backdrop-blur-md backdrop-saturate-150 transition-[background-color,border-color] duration-300 ease-gentle"
       role="banner"
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link
           href="/"
-          className="flex items-center space-x-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="group flex items-center space-x-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
           aria-label="2Nspira home"
         >
-          <span className="text-xl font-bold text-zinc-900 dark:text-white">2Nspira</span>
+          <span className="text-xl font-semibold tracking-tight text-ink transition-colors duration-300 ease-gentle group-hover:text-accent">
+            2Nspira
+          </span>
         </Link>
 
-        <nav className="hidden items-center space-x-6 md:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               {...getLinkProps(link.href)}
-              className="rounded text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:text-zinc-300 dark:hover:text-white"
+              className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink"
             >
               {link.name}
             </Link>
           ))}
         </nav>
 
-        <button
-          className="flex items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 md:hidden"
-          onClick={() => setIsMobileMenuOpen(true)}
-          aria-expanded={isMobileMenuOpen}
-          aria-label="Open menu"
-          aria-controls="mobile-menu"
-        >
-          <svg
-            className="h-6 w-6 text-zinc-700 dark:text-white"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-            aria-hidden="true"
+        <div className="flex items-center gap-2">
+          <Link
+            href="/contact"
+            className="hidden rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas sm:inline-flex"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+            Start a conversation
+          </Link>
+
+          <button
+            className="flex h-10 w-10 items-center justify-center rounded-full text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent md:hidden"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-expanded={isMobileMenuOpen}
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.75}
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />

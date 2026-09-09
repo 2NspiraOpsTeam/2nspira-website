@@ -1,5 +1,83 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import source from "@/content/our-story.json";
-export const metadata:Metadata={title:"Our Story",description:"From EKM IT Solutions to 2Nspira: practical, human-centered technology that helps organizations move forward with clarity, trust, and purpose.",alternates:{canonical:"/about"}};
-export default function AboutPage(){const story=source.blocks.slice(1,12);return <main className="flex-1 bg-zinc-50 dark:bg-black"><header className="mx-auto max-w-4xl px-4 py-20 sm:px-6"><p className="text-sm font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-400">Our story</p><h1 className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">Technology should inspire possibility—not pressure.</h1><p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-300">We help smaller organizations access the technology strategy, systems thinking, and innovation support often reserved for larger institutions.</p></header><div className="mx-auto max-w-4xl px-4 pb-20 sm:px-6"><section className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950 sm:p-10"><h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">Our ethos</h2>{story.map((block,i)=><p key={i} className="mt-5 leading-8 text-zinc-600 dark:text-zinc-300">{block.text}</p>)}</section><section className="mt-12"><h2 className="text-3xl font-semibold text-zinc-900 dark:text-white">The 2Nspira Framework</h2><div className="mt-8 grid gap-4 sm:grid-cols-2">{[{title:"Functional",text:"Systems that work the way you do"},{title:"Financial",text:"Smart investments with clear ROI"},{title:"Emotional",text:"Technology that builds confidence"},{title:"Identity",text:"Solutions reflecting your organization"},{title:"Meaning",text:"Outcomes supporting your mission"}].map(item=><div key={item.title} className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950"><h3 className="text-xl font-semibold text-zinc-900 dark:text-white">{item.title}</h3><p className="mt-3 text-zinc-600 dark:text-zinc-300">{item.text}</p></div>)}</div></section><section className="mt-12"><h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">When you grow, we all move forward.</h2><p className="mt-4 leading-8 text-zinc-600 dark:text-zinc-300">We work with educational institutions, nonprofits, small businesses, IT teams, creatives, and professionals. Your success is a shared mission.</p><Link href="/contact" className="mt-6 inline-block rounded-lg bg-blue-700 px-6 py-3 font-semibold text-white hover:bg-blue-800">Start a conversation →</Link></section></div></main>;}
+import {
+  buttonPrimary,
+  card,
+  cardFlat,
+  eyebrow,
+  h2,
+  h3,
+  lead,
+  pageMain,
+  pageHero,
+} from "@/components/ui";
+
+export const metadata: Metadata = {
+  title: "Our Story",
+  description:
+    "From EKM IT Solutions to 2Nspira: practical, human-centered technology that helps organizations move forward with clarity, trust, and purpose.",
+  alternates: { canonical: "/about" },
+};
+
+const framework = [
+  { title: "Functional", text: "Systems that work the way you do" },
+  { title: "Financial", text: "Smart investments with clear ROI" },
+  { title: "Emotional", text: "Technology that builds confidence" },
+  { title: "Identity", text: "Solutions reflecting your organization" },
+  { title: "Meaning", text: "Outcomes supporting your mission" },
+];
+
+export default function AboutPage() {
+  const story = source.blocks.slice(1, 12);
+  return (
+    <main className={pageMain}>
+      <header className={pageHero}>
+        <p className={eyebrow}>Our story</p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          Technology should inspire possibility—not pressure.
+        </h1>
+        <p className={lead}>
+          We help smaller organizations access the technology strategy, systems
+          thinking, and innovation support often reserved for larger
+          institutions.
+        </p>
+      </header>
+
+      <div className="mx-auto max-w-4xl px-4 pb-20 sm:px-6">
+        <section className={`p-6 sm:p-10 ${card}`}>
+          <h2 className={h2}>Our ethos</h2>
+          {story.map((block, i) => (
+            <p key={i} className="mt-5 leading-8 text-body">
+              {block.text}
+            </p>
+          ))}
+        </section>
+
+        <section className="mt-12">
+          <h2 className={h2}>The 2Nspira Framework</h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {framework.map((item) => (
+              <div key={item.title} className={`p-6 ${cardFlat}`}>
+                <h3 className={h3}>{item.title}</h3>
+                <p className="mt-3 text-body">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <h2 className={h2}>When you grow, we all move forward.</h2>
+          <p className={`mt-4 ${lead}`}>
+            We work with educational institutions, nonprofits, small businesses,
+            IT teams, creatives, and professionals. Your success is a shared
+            mission.
+          </p>
+          <Link href="/contact" className={`mt-6 ${buttonPrimary}`}>
+            Start a conversation →
+          </Link>
+        </section>
+      </div>
+    </main>
+  );
+}
