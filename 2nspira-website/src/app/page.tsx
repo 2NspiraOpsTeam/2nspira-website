@@ -20,6 +20,7 @@ export default function Home() {
       title: "AI Enablement & Governance",
       description:
         "Pragmatic AI strategy and governance frameworks for responsible implementation — readiness, guardrails, and workflows your people will actually use.",
+      benefit: "Outcome: a clear, responsible path to AI adoption your teams can follow.",
       href: "/ai-enablement",
       linkLabel: "Explore AI enablement",
     },
@@ -27,6 +28,7 @@ export default function Home() {
       title: "Systems & Process Optimization",
       description:
         "Streamlined operations powered by appropriate technology — mapping friction, designing efficient workflows, and building sustainable improvements.",
+      benefit: "Outcome: less friction in day-to-day operations, and processes that hold up over time.",
       href: null,
       linkLabel: null,
     },
@@ -34,6 +36,7 @@ export default function Home() {
       title: "Technology Leadership",
       description:
         "Fractional CTO guidance, architecture reviews, and transformation pathways that align technology investment with business outcomes.",
+      benefit: "Outcome: technology decisions that follow your business priorities, not the other way around.",
       href: "/fractional-cio",
       linkLabel: "Explore fractional leadership",
     },
@@ -104,6 +107,9 @@ export default function Home() {
                 <h3 className={h3}>{feature.title}</h3>
                 <p className={`mt-3 flex-1 text-sm leading-7 text-body`}>
                   {feature.description}
+                </p>
+                <p className="mt-3 text-sm font-medium leading-6 text-ink">
+                  {feature.benefit}
                 </p>
                 {feature.href && feature.linkLabel && (
                   <Link

@@ -30,6 +30,8 @@ const capabilities = [
     title: "AI Enablement & Governance",
     description:
       "Pragmatic AI strategy and governance frameworks. We help organizations evaluate readiness, establish responsible workflows, and implement practical solutions — not hype-driven pilots.",
+    benefit:
+      "You get: a clear adoption path, guardrails your teams can follow, and AI work that supports your priorities.",
     points: ["AI readiness assessment", "Governance frameworks", "Responsible implementation paths"],
     href: "/ai-enablement",
     linkLabel: "Explore AI enablement",
@@ -39,6 +41,8 @@ const capabilities = [
     title: "Systems & Process Optimization",
     description:
       "Streamlined operations powered by appropriate technology. We identify friction points, design efficient workflows, and implement sustainable improvements.",
+    benefit:
+      "You get: less friction in daily operations, and processes that keep working after the project ends.",
     points: ["Process mapping & optimization", "Workflow automation", "Integration architecture"],
     href: null,
     linkLabel: null,
@@ -48,6 +52,8 @@ const capabilities = [
     title: "Technology Transformation / Fractional Leadership",
     description:
       "Strategic technology leadership when you need it most. Fractional CTO guidance, architecture reviews, team enablement, and transformation pathways.",
+    benefit:
+      "You get: senior technology judgment on demand, aligned to your business outcomes — without a full-time executive hire.",
     points: ["Technology strategy & planning", "Fractional leadership", "Team enablement & mentoring"],
     href: "/fractional-cio",
     linkLabel: "Explore fractional CIO advisory",
@@ -127,6 +133,9 @@ export default function ServicesPage() {
                 </h3>
                 <p className="mt-4 flex-1 text-sm leading-7 text-body">
                   {item.description}
+                </p>
+                <p className="mt-3 text-sm font-medium leading-6 text-ink">
+                  {item.benefit}
                 </p>
                 <ul
                   className="mt-6 space-y-2.5 text-sm text-body"
