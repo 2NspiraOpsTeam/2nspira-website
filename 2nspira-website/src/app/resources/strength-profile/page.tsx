@@ -20,7 +20,7 @@ export default function Page() {
     "Collaboration patterns and contribution zones",
     "Questions to support role-fit and coaching conversations"
   ],
-  "href": "https://strength-profile.vercel.app",
+  "href": "https://strength.2nspira.com/",
   "action": "Take the Strength Profile"
 }} />;
 }

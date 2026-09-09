@@ -20,7 +20,7 @@ export default function Page() {
     "Risk, trust, and implementation maturity",
     "Priority gaps and practical next steps"
   ],
-  "href": "https://ai-readiness-scorecard-zeta.vercel.app",
+  "href": "https://scorecard.2nspira.com/",
   "action": "Take the AI Readiness Scorecard"
 }} />;
 }

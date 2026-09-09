@@ -96,3 +96,19 @@ body {
   white-space: nowrap;
   border-width: 0;
 }
+
+.article-body { overflow-wrap: anywhere; line-height: 1.85; }
+.article-body p { margin: 1.25rem 0; }
+.article-body :is(h2,h3,h4,h5,h6) { margin: 2.5rem 0 1rem; font-size: 1.4rem; font-weight: 700; line-height: 1.4; }
+.article-body :is(ul,ol) { margin: 1.25rem 0; padding-left: 1.5rem; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li { margin: .5rem 0; }
+.article-body a { text-decoration: underline; text-underline-offset: .2em; }
+.article-body img { display: block; max-width: 100%; height: auto; margin: 2rem auto; border-radius: .75rem; }
+.article-body blockquote { border-left: 3px solid #2563eb; margin: 2rem 0; padding-left: 1.5rem; font-style: italic; }
+.article-body table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+.article-body :is(td,th) { padding: .5rem; border: 1px solid #a1a1aa; }
+.article-body pre { overflow-x: auto; padding: 1rem; }
+.article-body figcaption { font-size: .875rem; text-align: center; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

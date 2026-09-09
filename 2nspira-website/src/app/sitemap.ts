@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import posts from "@/content/posts/index.json";
 
 const siteDomain = process.env.NEXT_PUBLIC_SITE_URL || "https://www.2nspira.com";
 
@@ -14,6 +15,8 @@ const pages: Array<{
   { path: "/terms-conditions", priority: 0.3, changeFrequency: "monthly" },
   { path: "/refund-cancellation", priority: 0.3, changeFrequency: "monthly" },
   { path: "/copyright", priority: 0.3, changeFrequency: "monthly" },
+  { path: "/books", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/blog/categories/trust-is-the-operating-system", priority: 0.6, changeFrequency: "monthly" },
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/about", priority: 0.8, changeFrequency: "monthly" },
   { path: "/insights", priority: 0.7, changeFrequency: "weekly" },
@@ -24,9 +27,9 @@ const pages: Array<{
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.map(({ path, priority, changeFrequency }) => ({
+  return [...pages.map(({ path, priority, changeFrequency }) => ({
     url: `${siteDomain}${path}`,
     changeFrequency,
     priority,
-  }));
+  })), ...posts.map(post => ({url: `${siteDomain}/post/${post.slug}`, lastModified: post.dateModified, changeFrequency: "monthly" as const, priority: 0.6}))];
 }

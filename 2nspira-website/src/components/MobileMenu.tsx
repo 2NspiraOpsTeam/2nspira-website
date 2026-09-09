@@ -12,6 +12,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
     { name: "About", href: "/about" },
     { name: "Insights", href: "/insights" },
     { name: "Resources", href: "/resources" },
+    { name: "Books", href: "/books" },
     { name: "Contact", href: "/contact" },
   ];
 

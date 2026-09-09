@@ -42,7 +42,9 @@ def fetch(url):
         status = subprocess.check_output(['curl', '-sS', '--max-time', '30', '-D', str(headers), '-o', str(body), '-w', '%{http_code}', url], text=True)
         return int(status), headers.read_text(), body.read_text()
 
-routes = ['', '/services', '/about', '/insights', '/contact', '/resources', '/resources/strength-profile', '/resources/ai-readiness-scorecard', '/ai-enablement', '/fractional-cio', '/privacy-policy', '/terms-conditions', '/refund-cancellation', '/copyright']
+routes = ['', '/services', '/about', '/insights', '/contact', '/resources', '/resources/strength-profile', '/resources/ai-readiness-scorecard', '/ai-enablement', '/fractional-cio', '/privacy-policy', '/terms-conditions', '/refund-cancellation', '/copyright', '/books', '/blog/categories/trust-is-the-operating-system']
+posts = json.loads((ROOT / 'src/content/posts/index.json').read_text())
+routes += ['/post/' + post['slug'] for post in posts]
 for route in routes:
     status, headers, body = fetch(BASE + (route or '/'))
     parsed = MainText()
@@ -73,3 +75,10 @@ for route in routes:
     assert 'https://www.2nspira.com' + route in sitemap
 assert fetch(BASE + '/missing-migration-qa-page')[0] == 404
 print('PASS robots, sitemap and 404')
+
+for old, new in [('/blog', '/insights'), ('/our-story', '/about')]:
+    status, headers, _ = fetch(BASE + old)
+    assert status == 308 and ('location: ' + new) in headers.lower(), (old, status, headers)
+    print('PASS permanent redirect', old, new)
+assert fetch(BASE + '/post/missing-article')[0] == 404
+print('PASS unknown article 404')

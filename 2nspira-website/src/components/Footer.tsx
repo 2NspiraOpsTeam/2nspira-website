@@ -8,6 +8,7 @@ export default function Footer() {
     { name: "About", href: "/about" },
     { name: "Insights", href: "/insights" },
     { name: "Resources", href: "/resources" },
+    { name: "Books", href: "/books" },
     { name: "Contact", href: "/contact" },
   ];
 
