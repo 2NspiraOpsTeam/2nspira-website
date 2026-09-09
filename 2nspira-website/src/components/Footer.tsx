@@ -74,6 +74,15 @@ export default function Footer() {
           </div>
         </div>
 
+        <nav aria-label="Legal" className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+          {[
+            { name: "Privacy policy", href: "/privacy-policy" },
+            { name: "Terms and conditions", href: "/terms-conditions" },
+            { name: "Refunds and cancellations", href: "/refund-cancellation" },
+            { name: "Copyright", href: "/copyright" },
+          ].map(link => <Link key={link.href} href={link.href} className="rounded underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">{link.name}</Link>)}
+        </nav>
+
         {/* Bottom */}
         <div className="mt-12 border-t border-zinc-200 pt-8 text-center dark:border-zinc-800">
           <p className="text-sm text-zinc-500 dark:text-zinc-500">

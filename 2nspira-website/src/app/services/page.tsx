@@ -64,6 +64,7 @@ export default function ServicesPage() {
                 <li>• Governance frameworks</li>
                 <li>• Responsible implementation paths</li>
               </ul>
+              <Link href="/ai-enablement" className="mt-6 inline-block rounded font-semibold text-blue-700 underline dark:text-blue-400">Explore AI enablement →</Link>
             </article>
 
             {/* Service 2 */}
@@ -94,6 +95,7 @@ export default function ServicesPage() {
                 <li>• Fractional leadership</li>
                 <li>• Team enablement & mentoring</li>
               </ul>
+              <Link href="/fractional-cio" className="mt-6 inline-block rounded font-semibold text-blue-700 underline dark:text-blue-400">Explore fractional CIO advisory →</Link>
             </article>
           </div>
         </div>

@@ -38,7 +38,7 @@ node scripts/deploy-preview.mjs
 
 The script rebuilds vinext, creates a generated preview entry that preserves response bodies/status and adds noindex/no-store headers, and deploys only `2nspira-website-preview` with no custom routes. Production config is not edited. A subsequent ordinary vinext build regenerates production artifacts without the preview wrapper.
 
-The first preview wrapper incorrectly converted a Response to text; corrected before handoff and verified as HTML on the live deployment. Current deployed version: `baf84f13-1e74-4aa5-b820-c43cc7d213ea`.
+The first preview wrapper incorrectly converted a Response to text; corrected before handoff and verified as HTML on the live deployment. See the latest deployment log for the current version.
 
 ## Remaining migration scope
 
@@ -50,13 +50,13 @@ Public Wix sitemap inspected at https://www.2nspira.com/pages-sitemap.xml. Its 1
 | `/contact` | Email-draft fallback only; select and verify production inquiry handling. |
 | `/our-story` | New `/about` exists; reconcile content and prepare a 301 mapping. |
 | `/blog` | `/insights` is a placeholder; inventory and migrate approved posts with URL preservation. |
-| `/ai-enablement` | Generic Services exists; dedicated service page and redirect decision outstanding. |
-| `/fractional-cio` | Generic Services exists; dedicated service page and redirect decision outstanding. |
+| `/ai-enablement` | Dedicated page migrated at the existing URL, linked from Services. |
+| `/fractional-cio` | Dedicated page migrated at the existing URL, linked from Services. |
 | `/books` | Not migrated. |
-| `/privacy-policy` | Not migrated; preserve approved legal text rather than inventing policy. |
-| `/terms-conditions` | Not migrated; preserve approved legal text. |
-| `/refund-cancellation` | Not migrated; preserve approved legal text. |
-| `/copyright` | Not migrated. |
+| `/privacy-policy` | Published Wix text migrated, parity verified; confirm alignment with final production behavior before launch. |
+| `/terms-conditions` | Published Wix text migrated, parity verified. |
+| `/refund-cancellation` | Published Wix text migrated, parity verified. |
+| `/copyright` | Published Wix text migrated, parity verified. |
 | `/inquiry-services-page` | Not migrated; determine relationship to inquiry/booking flow. |
 
 Wix's sitemap index also lists blog posts/categories, bookings, pricing plans, dynamic industries/insights, and member profiles. These are not yet fully inventoried or migrated; do not assume all need recreation. Member information has not been exported. Blog sitemap parsing did not produce a usable inventory in this pass.
@@ -68,3 +68,17 @@ Wix's sitemap index also lists blog posts/categories, bookings, pricing plans, d
 3. Implement and live-test the selected consultation/inquiry flow; verify recipient and consent requirements.
 4. Validate old-to-new links, metadata, accessibility, responsive layouts, content, performance and production runtime.
 5. Review and merge the branch; schedule domain cutover with an explicit rollback plan. Do not retire Wix until production acceptance.
+
+## Second increment — services and legal content
+
+- Continued with GPT-6 Astra selected for the session.
+- Six additional pages now deployed: AI enablement, fractional CIO, privacy, terms, refunds/cancellations and copyright. Their Wix URLs are preserved, so these routes need no redirect.
+- Service descriptions are editorial summaries based on the public source, not verbatim full-page copies; Wix booking widgets are replaced with explicit contact links, not fake booking controls.
+- Added Services links, legal footer navigation and sitemap entries.
+- Public source text-block snapshots live in `docs/wix-source/`, including partial inventories for About/Books. These snapshots do not include images, embeds, booking behavior or all links.
+- Legal source snapshots and app content preserve visible text (ignoring whitespace and zero-width characters). Published dates were not changed. Missing parenthetical scope notes in the initial refund extraction were restored before final validation.
+- Added `python3 scripts/verify-preview.py` (run inside the app): checks all 14 site routes, one H1, canonical URLs, noindex, sitemap, robots, 404 and published/source/rendered text parity for all four policies. All checks passed against the deployed preview.
+- Lint, Next production build/TypeScript, vinext build and diff checks passed for this increment.
+- Chromium at 390px: AI enablement and privacy have no horizontal overflow; legal headings/lists render; browser error log empty.
+- Still outstanding: Our Story/About reconciliation, blog/content inventory, Books media/links, inquiry/booking flow, redirects, fuller QA and production cutover.
+- Existing published legal text describes accounts, payments, analytics and security practices; migration is not verification that the unfinished new site implements those practices. Reconcile the policies with final actual behavior before launch. The published policy contact is `hello@2nspira.com`, while the existing new contact form uses `info@2nspira.com`; confirm the intended inquiry destination before adding server-side delivery.

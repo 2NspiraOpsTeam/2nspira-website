@@ -8,6 +8,12 @@ const pages: Array<{
   changeFrequency: NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 }> = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/ai-enablement", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/fractional-cio", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/privacy-policy", priority: 0.3, changeFrequency: "monthly" },
+  { path: "/terms-conditions", priority: 0.3, changeFrequency: "monthly" },
+  { path: "/refund-cancellation", priority: 0.3, changeFrequency: "monthly" },
+  { path: "/copyright", priority: 0.3, changeFrequency: "monthly" },
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/about", priority: 0.8, changeFrequency: "monthly" },
   { path: "/insights", priority: 0.7, changeFrequency: "weekly" },
