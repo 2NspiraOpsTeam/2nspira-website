@@ -89,7 +89,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className={pageMain} id="main-content" aria-label="main content">
+    <main className={pageMain} id="main-content">
       <section className="border-b border-line bg-surface">
         <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
           <h1 id="contact-hero-heading" className="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Get in touch</h1>
