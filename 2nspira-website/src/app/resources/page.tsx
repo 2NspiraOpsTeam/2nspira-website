@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function ResourcesPage() {
   return (
-    <main className={pageMain}>
+    <main className={pageMain} id="main-content">
       <section className="border-b border-line bg-surface">
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
           <p className={eyebrow}>2Nspira Resources</p>

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function BooksPage() {
   return (
-    <main className={pageMain}>
+    <main className={pageMain} id="main-content">
       <header className={pageHero}>
         <p className={eyebrow}>From the author</p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">

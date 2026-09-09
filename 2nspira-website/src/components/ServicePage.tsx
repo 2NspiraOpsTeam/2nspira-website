@@ -22,7 +22,7 @@ type Props = {
 
 export default function ServicePage({ title, intro, audience, outcomes, steps }: Props) {
   return (
-    <main className={pageMain}>
+    <main className={pageMain} id="main-content">
       <section className="border-b border-line bg-surface">
         <div className={pageHero}>
           <Link href="/services" className={linkInline}>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className={pageMain}>
+    <main className={pageMain} id="main-content">
       <header className="mx-auto max-w-4xl px-4 pt-16 sm:px-6">
         <Link href="/insights" className={linkInline}>
           ← All insights

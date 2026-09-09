@@ -21,7 +21,7 @@ export default function LegalPage({ title, blocks }: { title: string; blocks: Bl
     }
   }
   return (
-    <main className={pageMain}>
+    <main className={pageMain} id="main-content">
       <article className="mx-auto max-w-3xl px-4 py-16 text-base leading-8 text-body sm:px-6 sm:py-24">
         <h1 className="mb-10 text-4xl font-semibold tracking-tight text-ink">{title}</h1>
         {content}

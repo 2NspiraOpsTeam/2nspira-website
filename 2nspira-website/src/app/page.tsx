@@ -47,7 +47,7 @@ export default function Home() {
   ];
 
   return (
-    <main className={pageMain}>
+    <main className={pageMain} id="main-content">
       {/* Hero */}
       <section
         className="py-24 sm:py-32"

@@ -17,7 +17,7 @@ export const buttonSecondary =
 
 /* Cards */
 export const card =
-  "rounded-2xl border border-line bg-surface shadow-soft transition-[box-shadow,transform] duration-300 ease-gentle hover:shadow-lift";
+  "rounded-2xl border border-line bg-surface shadow-soft transition-[box-shadow] duration-300 ease-gentle hover:shadow-lift";
 
 export const cardFlat =
   "rounded-2xl border border-line bg-surface transition-colors duration-300 ease-gentle hover:border-line-strong";

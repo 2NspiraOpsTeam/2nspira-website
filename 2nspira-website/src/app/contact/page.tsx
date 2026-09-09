@@ -89,7 +89,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className={pageMain} id="contact-page">
+    <main className={pageMain} id="main-content" aria-label="main content">
       <section className="border-b border-line bg-surface">
         <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
           <h1 id="contact-hero-heading" className="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Get in touch</h1>
@@ -100,22 +100,22 @@ export default function ContactPage() {
       <section className="py-16 sm:py-24" aria-labelledby="form-heading">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           {state.kind === "delivered" && submitted ? (
-            <div className="rounded-2xl border border-green-200 bg-green-50 p-8 dark:border-green-900 dark:bg-green-950/40" role="status">
-              <h2 className="text-2xl font-bold text-green-900 dark:text-green-200">Message sent</h2>
-              <p className="mt-3 text-sm leading-6 text-green-800 dark:text-green-300">
+            <div className="rounded-2xl border border-green-200 bg-green-50 p-8" role="status">
+              <h2 className="text-2xl font-bold text-green-900">Message sent</h2>
+              <p className="mt-3 text-sm leading-6 text-green-800">
                 Thanks, {submitted.name}. Your inquiry was delivered to {CONTACT_EMAIL}. We typically respond within one business day.
               </p>
-              <div className="mt-6 rounded-lg border border-green-200 bg-white p-5 text-sm text-zinc-700 dark:border-green-900 dark:bg-zinc-950 dark:text-zinc-300">
+              <div className="mt-6 rounded-lg border border-green-200 bg-white p-5 text-sm text-zinc-700">
                 <p><span className="font-semibold">Your message:</span> {submitted.message}</p>
               </div>
             </div>
           ) : state.kind === "draft" && submitted ? (
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-8 dark:border-amber-900 dark:bg-amber-950/40" role="status">
-              <h2 className="text-2xl font-bold text-amber-900 dark:text-amber-200">Your email app should have opened</h2>
-              <p className="mt-3 text-sm leading-6 text-amber-800 dark:text-amber-300">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-8" role="status">
+              <h2 className="text-2xl font-bold text-amber-900">Your email app should have opened</h2>
+              <p className="mt-3 text-sm leading-6 text-amber-800">
                 Your message was composed with the following content. If your email app did not open, copy the text below and email <a href={`mailto:${state.to}`} className="font-semibold underline">{state.to}</a> directly.
               </p>
-              <div className="mt-6 rounded-lg border border-amber-200 bg-white p-5 font-mono text-xs leading-5 text-zinc-700 dark:border-amber-900 dark:bg-zinc-950 dark:text-zinc-300">
+              <div className="mt-6 rounded-lg border border-amber-200 bg-white p-5 font-mono text-xs leading-5 text-zinc-700">
                 <p className="font-sans text-sm font-semibold text-ink">Subject: {state.subject}</p>
                 <pre className="mt-3 whitespace-pre-wrap font-mono">{state.body}</pre>
               </div>

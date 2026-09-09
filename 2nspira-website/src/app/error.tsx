@@ -16,7 +16,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-canvas px-4 py-12 text-center">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-canvas px-4 py-12 text-center" id="main-content">
       <div className="max-w-md">
         <h1 className="text-6xl font-semibold tracking-tight text-ink">500</h1>
         <h2 className="mt-4 text-2xl font-semibold text-ink">Something went wrong</h2>

@@ -74,7 +74,7 @@ const outcomes = [
 
 export default function ServicesPage() {
   return (
-    <main className={pageMain}>
+    <main className={pageMain} id="main-content">
       {/* Hero */}
       <section
         className="border-b border-line bg-surface py-24 sm:py-28"

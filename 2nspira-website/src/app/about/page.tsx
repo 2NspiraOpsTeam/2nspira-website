@@ -31,7 +31,7 @@ const framework = [
 export default function AboutPage() {
   const story = source.blocks.slice(1, 12);
   return (
-    <main className={pageMain}>
+    <main className={pageMain} id="main-content">
       <header className={pageHero}>
         <p className={eyebrow}>Our story</p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">

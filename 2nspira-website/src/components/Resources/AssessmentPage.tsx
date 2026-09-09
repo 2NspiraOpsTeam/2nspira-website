@@ -20,7 +20,7 @@ type Props = {
 
 export default function AssessmentPage({ title, intro, audience, highlights, href, action }: Props) {
   return (
-    <main className={pageMain}>
+    <main className={pageMain} id="main-content">
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
         <Link href="/resources" className={linkInline}>
           ← All resources
