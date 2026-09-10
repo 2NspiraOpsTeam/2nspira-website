@@ -21,6 +21,11 @@ export default function Page() {
     "Questions to support role-fit and coaching conversations"
   ],
   "href": "https://strength.2nspira.com/",
-  "action": "Take the Strength Profile"
+  "action": "Take the Strength Profile",
+  "breadcrumb": [
+    { "name": "Home", "url": "/" },
+    { "name": "Resources", "url": "/resources" },
+    { "name": "Strength Profile", "url": "/resources/strength-profile" }
+  ]
 }} />;
 }

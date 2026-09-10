@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BreadcrumbList, { type Crumb } from "../BreadcrumbList";
 import {
   buttonPrimary,
   card,
@@ -16,12 +17,13 @@ type Props = {
   highlights: string[];
   href: string;
   action: string;
+  breadcrumb?: Crumb[];
 };
 
-export default function AssessmentPage({ title, intro, audience, highlights, href, action }: Props) {
+export default function AssessmentPage({ title, intro, audience, highlights, href, action, breadcrumb }: Props) {
   return (
     <main className={pageMain} id="main-content">
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
+      {breadcrumb && <BreadcrumbList items={breadcrumb} />}      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
         <Link href="/resources" className={linkInline}>
           ← All resources
         </Link>

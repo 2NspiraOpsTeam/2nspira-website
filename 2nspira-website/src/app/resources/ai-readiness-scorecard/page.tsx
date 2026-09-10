@@ -21,6 +21,11 @@ export default function Page() {
     "Priority gaps and practical next steps"
   ],
   "href": "https://scorecard.2nspira.com/",
-  "action": "Take the AI Readiness Scorecard"
+  "action": "Take the AI Readiness Scorecard",
+  "breadcrumb": [
+    { "name": "Home", "url": "/" },
+    { "name": "Resources", "url": "/resources" },
+    { "name": "AI Readiness Scorecard", "url": "/resources/ai-readiness-scorecard" }
+  ]
 }} />;
 }
