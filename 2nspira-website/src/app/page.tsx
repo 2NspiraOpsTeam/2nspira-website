@@ -57,7 +57,7 @@ export default function Home() {
         aria-labelledby="hero-heading"
       >
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <p className={eyebrow}>Human-centered technology transformation</p>
+          <p className={eyebrow}>For leaders of small and mission-driven organizations</p>
           <h1
             id="hero-heading"
             className="mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-6xl"
@@ -65,20 +65,17 @@ export default function Home() {
             Technology that works the way your people do.
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
-            2Nspira helps organizations navigate technology change with clarity
-            and purpose — AI enablement, systems optimization, and fractional
-            technology leadership for teams that would rather trust their
-            systems than manage them.
+            2Nspira helps you turn technology change into durable outcomes —
+            practical AI enablement, process optimization, and fractional
+            technology leadership, built so your teams trust their systems
+            instead of managing them.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link
-              href="/services"
-              className={buttonPrimary}
-            >
-              Explore our services
+            <Link href="/contact" className={buttonPrimary}>
+              Start a conversation <span aria-hidden="true">→</span>
             </Link>
-            <Link href="/contact" className={buttonSecondary}>
-              Contact us <span aria-hidden="true">→</span>
+            <Link href="/services" className={buttonSecondary}>
+              Explore our services
             </Link>
           </div>
         </div>
