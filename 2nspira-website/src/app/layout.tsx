@@ -70,6 +70,32 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  const siteJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.2nspira.com/#organization",
+        name: "2Nspira",
+        url: "https://www.2nspira.com",
+        description:
+          "Human-centered technology transformation and practical AI adoption — specializing in AI enablement, systems optimization, and fractional technology leadership.",
+        contactPoint: {
+          "@type": "ContactPoint",
+          email: "hello@2nspira.com",
+          telephone: "+1-646-543-0199",
+          contactType: "customer support",
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.2nspira.com/#website",
+        url: "https://www.2nspira.com",
+        name: "2Nspira",
+        publisher: { "@id": "https://www.2nspira.com/#organization" },
+      },
+    ],
+  };
   return (
     <html
       lang="en"
@@ -81,6 +107,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <Footer />
       </Analytics>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(siteJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
     </body>
     </html>
   );
