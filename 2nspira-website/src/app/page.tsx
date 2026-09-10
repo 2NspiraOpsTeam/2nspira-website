@@ -51,32 +51,66 @@ export default function Home() {
 
   return (
     <main className={pageMain} id="main-content">
-      {/* Hero */}
+      {/* Hero — B2 Split Advisory prototype (WAVE3-B2-STATIC-HERO) */}
+      {/* Reversible design checkpoint; no motion; conceptual visual slot per Maya's spec. */}
       <section
         className="py-24 sm:py-32"
         aria-labelledby="hero-heading"
+        data-prototype="B2-SPLIT-ADVISORY"
       >
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <p className={eyebrow}>For leaders of small and mission-driven organizations</p>
-          <h1
-            id="hero-heading"
-            className="mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-6xl"
-          >
-            Technology that works the way your people do.
-          </h1>
-          <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
-            2Nspira helps you turn technology change into durable outcomes —
-            practical AI enablement, process optimization, and fractional
-            technology leadership, built so your teams trust their systems
-            instead of managing them.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link href="/contact" className={buttonPrimary}>
-              Start a conversation <span aria-hidden="true">→</span>
-            </Link>
-            <Link href="/services" className={buttonSecondary}>
-              Explore our services
-            </Link>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[55fr_45fr] lg:items-center lg:gap-16">
+            {/* Left: typography / value proposition */}
+            <div>
+              <p className={eyebrow}>For leaders of small and mission-driven organizations</p>
+              <h1
+                id="hero-heading"
+                className="mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-6xl"
+              >
+                Technology that works the way your people do.
+              </h1>
+              <p className={`mt-6 max-w-2xl ${lead}`}>
+                2Nspira helps you turn technology change into durable outcomes —
+                practical AI enablement, process optimization, and fractional
+                technology leadership, built so your teams trust their systems
+                instead of managing them.
+              </p>
+              <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-x-6">
+                <Link href="/contact" className={buttonPrimary}>
+                  Start a conversation <span aria-hidden="true">→</span>
+                </Link>
+                <Link href="/services" className={buttonSecondary}>
+                  Explore our services
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: conceptual advisory visual slot */}
+            {/* Clearly labeled per Maya's spec — not final imagery, no invented clients. */}
+            <figure
+              className="relative aspect-[4/5] lg:aspect-[5/6]"
+              aria-label="Conceptual design visualization placeholder — commissioned photography per Visual V2 plan"
+            >
+              {/* Base surface */}
+              <div
+                className="absolute inset-0 rounded-2xl border border-line bg-canvas-deep shadow-soft"
+                aria-hidden="true"
+              />
+              {/* Window-side light direction cue (single accent-soft radial, restrained) */}
+              <div
+                className="absolute inset-0 rounded-2xl bg-[radial-gradient(120%_100%_at_70%_15%,var(--color-accent-soft)_0%,transparent_60%)]"
+                aria-hidden="true"
+              />
+              {/* Caption */}
+              <figcaption className="absolute inset-x-4 bottom-4 rounded-lg border border-line bg-canvas/90 px-4 py-3">
+                <span className="block text-xs font-semibold uppercase tracking-widest text-accent">
+                  Conceptual Design Visualization
+                </span>
+                <span className="mt-1 block text-xs leading-relaxed text-body">
+                  Not an actual 2Nspira client or engagement. Composition slot for B2 split advisory hero — final visual pending commissioned photography.
+                </span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
