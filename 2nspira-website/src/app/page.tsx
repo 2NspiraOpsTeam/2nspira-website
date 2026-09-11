@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   buttonPrimary,
@@ -85,21 +86,19 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: conceptual advisory visual slot */}
-            {/* Clearly labeled per Maya's spec — not final imagery, no invented clients. */}
+            {/* Right: approved human-advisory visual (Option 2 — Ideas to Impact) */}
+            {/* Approved by Jeffrey 2026-09-10; clearly labeled conceptual per Maya's spec. */}
             <figure
-              className="relative aspect-[4/5] lg:aspect-[5/6]"
-              aria-label="Conceptual design visualization placeholder — commissioned photography per Visual V2 plan"
+              className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line shadow-soft lg:aspect-[5/6]"
+              aria-label="Conceptual advisory visualization — Ideas to Impact"
             >
-              {/* Base surface */}
-              <div
-                className="absolute inset-0 rounded-2xl border border-line bg-canvas-deep shadow-soft"
-                aria-hidden="true"
-              />
-              {/* Window-side light direction cue (single accent-soft radial, restrained) */}
-              <div
-                className="absolute inset-0 rounded-2xl bg-[radial-gradient(120%_100%_at_70%_15%,var(--color-accent-soft)_0%,transparent_60%)]"
-                aria-hidden="true"
+              <Image
+                src="/images/advisory/advisory-ideas-to-impact.webp"
+                alt="Conceptual visualization of an advisory conversation about turning ideas into operational impact."
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                fetchPriority="high"
+                className="object-cover object-[center_30%]"
               />
               {/* Caption */}
               <figcaption className="absolute inset-x-4 bottom-4 rounded-lg border border-line bg-canvas/90 px-4 py-3">
@@ -107,7 +106,7 @@ export default function Home() {
                   Conceptual Design Visualization
                 </span>
                 <span className="mt-1 block text-xs leading-relaxed text-body">
-                  Not an actual 2Nspira client or engagement. Composition slot for B2 split advisory hero — final visual pending commissioned photography.
+                  Conceptual visualization — not an actual 2Nspira client or engagement.
                 </span>
               </figcaption>
             </figure>

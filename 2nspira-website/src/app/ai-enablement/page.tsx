@@ -32,5 +32,9 @@ export default function Page() { return <ServicePage {...{
       "title": "Enable adoption",
       "text": "Support workflow implementation, train teams, and maintain leadership oversight as adoption grows."
     }
-  ]
+  ],
+  "image": {
+    "src": "/images/advisory/focused-collaboration.webp",
+    "alt": "Conceptual visualization of a focused collaboration session reviewing data and AI workflows."
+  }
 }} />; }

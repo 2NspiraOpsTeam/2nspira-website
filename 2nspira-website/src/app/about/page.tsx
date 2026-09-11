@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import source from "@/content/our-story.json";
 import {
@@ -45,7 +46,20 @@ export default function AboutPage() {
       </header>
 
       <div className="mx-auto max-w-4xl px-4 pb-20 sm:px-6">
-        <section className={`p-6 sm:p-10 ${card}`}>
+        <figure className="-mx-4 mt-0 overflow-hidden sm:-mx-6 lg:-mx-8">
+          <Image
+            src="/images/advisory/collaborative-strategy.webp"
+            alt="Conceptual visualization of a collaborative strategy discussion."
+            width={1672}
+            height={941}
+            className="h-auto w-full"
+          />
+          <figcaption className="bg-canvas px-4 py-3 text-center text-xs leading-relaxed text-muted sm:px-6">
+            Conceptual visualization — not an actual 2Nspira client or engagement.
+          </figcaption>
+        </figure>
+
+        <section className={`mt-12 p-6 sm:p-10 ${card}`}>
           <h2 className={h2}>Our ethos</h2>
           {story.map((block, i) => (
             <p key={i} className="mt-5 leading-8 text-body">

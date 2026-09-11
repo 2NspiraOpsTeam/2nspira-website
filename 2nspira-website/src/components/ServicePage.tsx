@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   buttonPrimary,
   card,
@@ -18,9 +19,15 @@ type Props = {
   audience: string;
   outcomes: string[];
   steps: { title: string; text: string }[];
+  image?: {
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+  };
 };
 
-export default function ServicePage({ title, intro, audience, outcomes, steps }: Props) {
+export default function ServicePage({ title, intro, audience, outcomes, steps, image }: Props) {
   return (
     <main className={pageMain} id="main-content">
       <section className="border-b border-line bg-surface">
@@ -39,10 +46,27 @@ export default function ServicePage({ title, intro, audience, outcomes, steps }:
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <section className="grid gap-8 md:grid-cols-2" aria-label="Who we help and outcomes">
+        {image && (
+          <figure className="overflow-hidden rounded-2xl border border-line shadow-soft">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={image.width ?? 1672}
+              height={image.height ?? 941}
+              className="h-auto w-full"
+            />
+            <figcaption className="bg-canvas px-4 py-3 text-xs leading-relaxed text-muted">
+              Conceptual visualization — not an actual 2Nspira client or engagement.
+            </figcaption>
+          </figure>
+        )}
+
+        <section className={`${image ? "mt-16" : ""} grid gap-8 md:grid-cols-2`} aria-label="Who we help and outcomes">
           <div>
             <h2 className={h2}>Who this is for</h2>
-            <p className={`mt-4 ${lead}`}>{audience}</p>
+            <p className={`mt-4 ${lead}`}>
+              {audience}
+            </p>
           </div>
           <div>
             <h2 className={h2}>What we help you achieve</h2>
