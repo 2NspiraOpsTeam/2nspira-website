@@ -36,12 +36,17 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link
           href="/"
-          className="group flex items-center space-x-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          className="group flex items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
           aria-label="2Nspira home"
         >
-          <span className="text-xl font-semibold tracking-tight text-ink transition-colors duration-300 ease-gentle group-hover:text-accent">
-            2Nspira
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo/2nspira-logo.png"
+            alt="2Nspira"
+            className="h-9 w-auto"
+            width={320}
+            height={132}
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">

@@ -22,9 +22,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <h2 className="text-lg font-semibold tracking-tight text-ink">
-              2Nspira
-            </h2>
+            <Link
+              href="/"
+              className="group inline-flex items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+              aria-label="2Nspira home"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo/2nspira-logo.png"
+                alt="2Nspira"
+                className="h-10 w-auto"
+                width={320}
+                height={132}
+              />
+            </Link>
             <p className={`mt-3 ${caption}`}>
               Human-centered technology transformation and practical AI adoption for organizations.
             </p>
