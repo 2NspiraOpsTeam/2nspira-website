@@ -32,5 +32,11 @@ export default function Page() { return <ServicePage {...{
       "title": "Guide execution",
       "text": "Provide ongoing leadership for vendor decisions, implementation sequencing, and operational accountability."
     }
-  ]
+  ],
+  "image": {
+    "src": "/images/pages/fractional-cio-focus.webp",
+    "alt": "Conceptual visualization of a focused technology leader reviewing an operations dashboard.",
+    "width": 600,
+    "height": 674
+  }
 }} />; }

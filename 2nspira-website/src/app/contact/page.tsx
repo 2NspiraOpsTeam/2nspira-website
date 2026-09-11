@@ -12,6 +12,7 @@ type SubmitState =
 const CONTACT_EMAIL = "hello@2nspira.com";
 
 import { buttonPrimary, card, cardFlat, caption, field, label, lead, pageMain } from "@/components/ui";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -96,6 +97,21 @@ export default function ContactPage() {
           <p className={`mx-auto mt-6 max-w-xl ${lead}`}>Questions about our services? Ready to get started? Let&rsquo;s talk.</p>
         </div>
       </section>
+
+      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+      <figure className="-mx-4 overflow-hidden sm:-mx-6 lg:-mx-8">
+        <Image
+          src="/images/pages/contact-environmental.webp"
+          alt="Conceptual visualization of a calm, minimal meeting corner beside a window."
+          width={1344}
+          height={768}
+          className="h-auto w-full"
+        />
+        <figcaption className="bg-canvas px-4 py-3 text-center text-xs leading-relaxed text-muted sm:px-6">
+          Conceptual visualization — not an actual 2Nspira client or engagement.
+        </figcaption>
+      </figure>
+      </div>
 
       <section className="py-16 sm:py-24" aria-labelledby="form-heading">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

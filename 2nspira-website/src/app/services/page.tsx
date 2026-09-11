@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   buttonPrimary,
@@ -109,6 +110,22 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* Advisory visual — conceptual, not an actual client or engagement */}
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+      <figure className="-mx-4 overflow-hidden sm:-mx-6 lg:-mx-8">
+        <Image
+          src="/images/pages/services-advisory.webp"
+          alt="Conceptual visualization of an advisory conversation between a consultant and a client."
+          width={1344}
+          height={768}
+          className="h-auto w-full"
+        />
+        <figcaption className="bg-canvas px-4 py-3 text-center text-xs leading-relaxed text-muted sm:px-6">
+          Conceptual visualization — not an actual 2Nspira client or engagement.
+        </figcaption>
+      </figure>
+      </div>
 
       {/* Services Grid */}
       <section className={section} aria-labelledby="services-heading">

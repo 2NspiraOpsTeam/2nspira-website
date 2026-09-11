@@ -143,6 +143,33 @@ export default function BooksPage() {
             </a>
           </div>
         </section>
+
+        <section
+          className={`grid gap-8 p-6 sm:p-10 md:grid-cols-2 ${card}`}
+          aria-labelledby="reading-title"
+        >
+          <Image
+            src="/images/pages/books-reading.webp"
+            alt="Conceptual visualization of an open book and tea beside a soft window."
+            width={1344}
+            height={768}
+            className="h-auto w-full rounded-xl"
+          />
+          <div className="self-center">
+            <p className={eyebrow}>The practice of reading</p>
+            <h2 id="reading-title" className="mt-4 text-3xl font-semibold tracking-tight text-ink">
+              Ideas that stay with you
+            </h2>
+            <p className="mt-6 leading-8 text-body">
+              Each book and essay in this collection is an invitation to slow
+              down and think clearly — the same quiet discipline that trusted,
+              human-centered leadership requires.
+            </p>
+            <p className={`mt-4 ${caption}`}>
+              Conceptual visualization — not an actual 2Nspira client or engagement.
+            </p>
+          </div>
+        </section>
       </div>
     </main>
   );

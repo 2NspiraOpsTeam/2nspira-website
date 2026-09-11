@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import AiReadinessCard from "@/components/Resources/AiReadinessCard";
 import StrengthProfileCard from "@/components/Resources/StrengthProfileCard";
@@ -34,6 +35,21 @@ export default function ResourcesPage() {
           </p>
         </div>
       </section>
+
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+      <figure className="-mx-4 mt-0 overflow-hidden sm:-mx-6 lg:-mx-8">
+        <Image
+          src="/images/pages/resources-decision-support.webp"
+          alt="Conceptual minimalist illustration of a checklist card and compass symbolizing clear decision support."
+          width={1344}
+          height={768}
+          className="h-auto w-full"
+        />
+        <figcaption className="bg-canvas px-4 py-3 text-center text-xs leading-relaxed text-muted sm:px-6">
+          Conceptual visualization — not an actual 2Nspira client or engagement.
+        </figcaption>
+      </figure>
+      </div>
 
       <section
         className="mx-auto max-w-6xl px-4 py-16 sm:px-6"
