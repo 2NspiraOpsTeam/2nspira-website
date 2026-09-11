@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import {
   buttonPrimary,
@@ -63,20 +64,26 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[55fr_45fr] lg:items-center lg:gap-16">
             {/* Left: typography / value proposition */}
             <div>
-              <p className={eyebrow}>For leaders of small and mission-driven organizations</p>
+              <p className={`animate-rise ${eyebrow}`} style={{ animationDelay: "60ms" }}>
+                For leaders of small and mission-driven organizations
+              </p>
               <h1
                 id="hero-heading"
-                className="mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-6xl"
+                className="animate-rise mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-6xl"
+                style={{ animationDelay: "140ms" }}
               >
                 Technology that works the way your people do.
               </h1>
-              <p className={`mt-6 max-w-2xl ${lead}`}>
+              <p className={`animate-rise mt-6 max-w-2xl ${lead}`} style={{ animationDelay: "240ms" }}>
                 2Nspira helps you turn technology change into durable outcomes —
                 practical AI enablement, process optimization, and fractional
                 technology leadership, built so your teams trust their systems
                 instead of managing them.
               </p>
-              <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-x-6">
+              <div
+                className="animate-rise mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-x-6"
+                style={{ animationDelay: "340ms" }}
+              >
                 <Link href="/contact" className={buttonPrimary}>
                   Start a conversation <span aria-hidden="true">→</span>
                 </Link>
@@ -89,7 +96,8 @@ export default function Home() {
             {/* Right: approved human-advisory visual (Option 2 — Ideas to Impact) */}
             {/* Approved by Jeffrey 2026-09-10; clearly labeled conceptual per Maya's spec. */}
             <figure
-              className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line shadow-soft lg:aspect-[5/6]"
+              className="hero-settle relative aspect-[4/5] overflow-hidden rounded-2xl border border-line shadow-soft lg:aspect-[5/6]"
+              style={{ animationDelay: "220ms" }}
               aria-label="Conceptual advisory visualization — Ideas to Impact"
             >
               <Image
@@ -120,15 +128,18 @@ export default function Home() {
         aria-labelledby="services-heading"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 id="services-heading" className={h2}>
-            What we do
-          </h2>
-          <p className={`mt-4 max-w-2xl ${lead}`}>
-            Three integrated capabilities designed to work together or
-            independently.
-          </p>
+          <Reveal>
+            <h2 id="services-heading" className={h2}>
+              What we do
+            </h2>
+            <p className={`mt-4 max-w-2xl ${lead}`}>
+              Three integrated capabilities designed to work together or
+              independently.
+            </p>
+          </Reveal>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <Reveal delay={120} className="mt-14">
+            <div className="grid gap-6 md:grid-cols-3">
             {services.map((feature) => (
               <article
                 key={feature.title}
@@ -151,57 +162,64 @@ export default function Home() {
                 )}
               </article>
             ))}
-          </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Approach */}
       <section className={section} aria-labelledby="approach-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 id="approach-heading" className={h2}>
-            Our approach
-          </h2>
-          <p className={`mt-6 max-w-2xl ${lead}`}>
-            Technology must serve people — not the other way around. Our
-            human-centered philosophy ensures that AI systems, workflow changes,
-            and technology implementations are designed for actual use.
-          </p>
+          <Reveal>
+            <h2 id="approach-heading" className={h2}>
+              Our approach
+            </h2>
+            <p className={`mt-6 max-w-2xl ${lead}`}>
+              Technology must serve people — not the other way around. Our
+              human-centered philosophy ensures that AI systems, workflow changes,
+              and technology implementations are designed for actual use.
+            </p>
+          </Reveal>
 
-          <div
-            className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
-            role="list"
-            aria-label="Our core values"
-          >
+          <Reveal delay={120}>
+            <div
+              className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+              role="list"
+              aria-label="Our core values"
+            >
             {values.map((value) => (
               <div key={value.title} className={`p-6 ${cardFlat}`} role="listitem">
                 <p className="text-base font-semibold text-ink">{value.title}</p>
                 <p className={`mt-2 ${caption}`}>{value.text}</p>
               </div>
             ))}
-          </div>
+            </div>
+          </Reveal>
 
-          <div className="mt-12">
+          <Reveal delay={200} className="mt-12">
             <Link href="/about" className={buttonSecondary}>
               Learn more about 2Nspira <span aria-hidden="true">→</span>
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* CTA */}
       <section className={sectionBand} aria-labelledby="cta-heading">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <h2 id="cta-heading" className={h2}>
-            Ready to explore how 2Nspira can help?
-          </h2>
-          <p className={`mx-auto mt-6 max-w-xl ${lead}`}>
-            Schedule a discovery call. No commitments required.
-          </p>
-          <div className="mt-10 flex justify-center">
-            <Link href="/contact" className={buttonPrimary}>
-              Get in touch
-            </Link>
-          </div>
+          <Reveal>
+            <h2 id="cta-heading" className={h2}>
+              Ready to explore how 2Nspira can help?
+            </h2>
+            <p className={`mx-auto mt-6 max-w-xl ${lead}`}>
+              Schedule a discovery call. No commitments required.
+            </p>
+            <div className="mt-10 flex justify-center">
+              <Link href="/contact" className={buttonPrimary}>
+                Get in touch
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
     </main>
