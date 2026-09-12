@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 
 export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -57,7 +58,9 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
 
   if (!isOpen) return null;
 
-  return (
+  // Escape the header backdrop-filter containing block so fixed positioning
+  // covers the viewport rather than just the header height.
+  return createPortal(
     <div
       ref={dialogRef}
       id="mobile-menu"
@@ -75,7 +78,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       />
 
       {/* Menu Panel */}
-      <div className="relative h-full w-[85vw] max-w-xs bg-canvas shadow-lift sm:max-w-md">
+      <div className="relative flex h-full w-[85vw] max-w-xs flex-col overflow-y-auto bg-canvas shadow-lift sm:max-w-md">
         {/* Close Button */}
         <button
           ref={closeButtonRef}
@@ -108,7 +111,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           ))}
         </nav>
 
-        <div className="absolute bottom-10 left-4 right-4">
+        <div className="mt-auto px-4 pb-10 pt-8">
           <Link
             href="/contact"
             onClick={onClose}
@@ -121,6 +124,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           </p>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
