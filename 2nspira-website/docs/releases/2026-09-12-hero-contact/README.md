@@ -1,4 +1,4 @@
-# Hero/contact release — prepared, NOT deployed
+# Hero/contact release — final candidate
 
 ## Scope and provenance
 
@@ -6,7 +6,7 @@
 - Production baseline snapshot: `04f1e62` (existing apex canonicals, production Worker routes, www middleware and favicon). All 36 pre-existing modified text files other than Wrangler were verified to contain only www-to-apex canonical-host substitutions. Original checkout left untouched.
 - Maya source commit: `02300f7c9c1700fdcbce6aeb7ec8c9084df5c58b` on lean `main`. Do not deploy/cherry-pick its full page replacements.
 - Removed homepage figure disclaimer and contact street address. Email, phone, functional contact form, existing headline (including its existing terminal period), site structure, content, SEO and routing retained.
-- Hero replacement is BLOCKED: Maya's `public/hero-human-warmth.jpg` contains ASCII placeholder text, not a JPEG. The real approved high-resolution asset has been requested. Current approved hero remains intact until it arrives. No substitute/generated image is authorized by this release.
+- Image blocker resolved by Jeffrey on 2026-09-12: “Just use this same one and just remove the disclaimer.” The latest supplied whiteboard/advisory image visually matches the existing 1672 × 941 hero. Retain the existing optimized WebP and its layout; do not use either alternative AVIF. Homepage visible disclaimer removed, headline unchanged.
 
 ## Validation, 2026-09-12
 
@@ -21,12 +21,12 @@
 - Sitemap: same 41 entries as live production. All 22 configured/in-app redirects and two unknown-page/post 404 checks passed. Robots responds 200 and allows public crawling.
 - Invalid contact POST returns 422; no real inquiry sent.
 - Live www-to-apex redirect preserves resource path and query, HTTP 301.
-- Public bare-URL baseline: 41 of 43 probes returned 200. TWO PRE-EXISTING cached self-redirects: `/sitemap.xml` and `/post/the-great-ai-decentralization`. Both report CF cache HIT, HTTP 301 back to themselves; cache-busted requests serve the correct content. These must be cleared/reverified during launch; do not claim all ordinary production URLs pass based only on cache-busting.
+- Public bare-URL baseline: 41 of 43 probes returned 200. TWO PRE-EXISTING cached self-redirects: `/sitemap.xml` and `/post/the-great-ai-decentralization`. Both report CF cache HIT, HTTP 301 back to themselves; cache-busted requests serve the correct content. Both ordinary URLs were rechecked at 18:18 UTC and now return HTTP 200 (sitemap cache expired naturally). Reverify during launch; do not rely only on cache-busting.
 - Active production Worker version before this work: `13ed31f4-04c5-42bb-acf0-22f9fbf9a23d` (2026-09-12 14:16:50 UTC). No Git SHA is recorded in that deployment. No deployment executed for this release.
 
 ## Remaining launch steps
 
-1. Obtain and validate the actual approved hero image (file signature, resolution, visual match); port only the asset/reference, retaining headline/layout.
+1. Completed: verified latest supplied image against existing approved hero; retain same image per explicit follow-up.
 2. Repeat relevant checks/build and asset rendering validation; commit final source; record full SHA.
 3. Run supported `npm run deploy:vinext`; record Worker version and exact source SHA.
 4. Resolve pre-existing cached redirects through supported Cloudflare cache management and verify ordinary, uncached and www URLs.
