@@ -10,7 +10,7 @@ export type Crumb = { name: string; url: string };
  * expressed in structured data too. Pure structured data: no visual change,
  * no new claims — only the page hierarchy already present in the navigation.
  *
- * URLs are emitted as canonical absolute URLs (https://www.2nspira.com),
+ * URLs are emitted as canonical absolute URLs (https://2nspira.com),
  * matching the metadataBase used across the site.
  */
 export default function BreadcrumbList({ items }: { items: Crumb[] }) {
@@ -21,7 +21,7 @@ export default function BreadcrumbList({ items }: { items: Crumb[] }) {
       "@type": "ListItem",
       position: i + 1,
       name: crumb.name,
-      item: `https://www.2nspira.com${crumb.url}`,
+      item: `https://2nspira.com${crumb.url}`,
     })),
   };
   return (

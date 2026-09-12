@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 const siteName = "2Nspira";
-const siteDomain = "https://www.2nspira.com";
+const siteDomain = "https://2nspira.com";
 const siteDescription =
   "Human-centered technology transformation and practical AI adoption — specializing in AI enablement, systems optimization, and fractional technology leadership.";
 export const metadata: Metadata = {
@@ -93,9 +93,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://www.2nspira.com/#organization",
+        "@id": "https://2nspira.com/#organization",
         name: "2Nspira",
-        url: "https://www.2nspira.com",
+        url: "https://2nspira.com",
         description:
           "Human-centered technology transformation and practical AI adoption — specializing in AI enablement, systems optimization, and fractional technology leadership.",
         contactPoint: {
@@ -107,10 +107,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.2nspira.com/#website",
-        url: "https://www.2nspira.com",
+        "@id": "https://2nspira.com/#website",
+        url: "https://2nspira.com",
         name: "2Nspira",
-        publisher: { "@id": "https://www.2nspira.com/#organization" },
+        publisher: { "@id": "https://2nspira.com/#organization" },
       },
     ],
   };

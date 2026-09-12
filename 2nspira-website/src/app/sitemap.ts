@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import posts from "@/content/posts/index.json";
 
-const siteDomain = process.env.NEXT_PUBLIC_SITE_URL || "https://www.2nspira.com";
+const siteDomain = process.env.NEXT_PUBLIC_SITE_URL || "https://2nspira.com";
 
 const pages: Array<{
   path: string;
