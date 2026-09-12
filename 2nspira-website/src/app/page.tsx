@@ -94,7 +94,7 @@ export default function Home() {
             </div>
 
             {/* Right: approved human-advisory visual (Option 2 — Ideas to Impact) */}
-            {/* Approved by Jeffrey 2026-09-10; clearly labeled conceptual per Maya's spec. */}
+            {/* Approved by Jeffrey 2026-09-10. */}
             <figure
               className="hero-settle relative aspect-[4/5] overflow-hidden rounded-2xl border border-line shadow-soft lg:aspect-[5/6]"
               style={{ animationDelay: "220ms" }}
@@ -108,15 +108,6 @@ export default function Home() {
                 fetchPriority="high"
                 className="object-cover object-[center_30%]"
               />
-              {/* Caption */}
-              <figcaption className="absolute inset-x-4 bottom-4 rounded-lg border border-line bg-canvas/90 px-4 py-3">
-                <span className="block text-xs font-semibold uppercase tracking-widest text-accent">
-                  Conceptual Design Visualization
-                </span>
-                <span className="mt-1 block text-xs leading-relaxed text-body">
-                  Conceptual visualization — not an actual 2Nspira client or engagement.
-                </span>
-              </figcaption>
             </figure>
           </div>
         </div>

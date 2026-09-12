@@ -1,0 +1,688 @@
+{
+  "routes": [
+    {
+      "path": "/insights",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "bb8e74b7176b14dbe5aba491d1d03b813bf5cc491ea0a1b1a7ea650f2da041be",
+      "candidateContentHash": "bb8e74b7176b14dbe5aba491d1d03b813bf5cc491ea0a1b1a7ea650f2da041be"
+    },
+    {
+      "path": "/about",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "02cffb41e81e916c7d979755d09cac3eae1da3067a7217a84f0a19a50b5944c5",
+      "candidateContentHash": "02cffb41e81e916c7d979755d09cac3eae1da3067a7217a84f0a19a50b5944c5"
+    },
+    {
+      "path": "/contact",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "addressRemoved": true,
+        "email": true,
+        "phone": true,
+        "form": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "8fbec25d1f751393230e35361afe69dce75aa35d36c934da4ba1f6fc01263111",
+      "candidateContentHash": "8fbec25d1f751393230e35361afe69dce75aa35d36c934da4ba1f6fc01263111"
+    },
+    {
+      "path": "/services",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "699cf5ed23ecbfb52a8c96428a19bf046159fc0ee4960df1c3ebc0fb5a0341a5",
+      "candidateContentHash": "699cf5ed23ecbfb52a8c96428a19bf046159fc0ee4960df1c3ebc0fb5a0341a5"
+    },
+    {
+      "path": "/",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "headline": true,
+        "disclaimerRemoved": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "ac0a6a8b32aeec619ca0fd26b8d0146b60780a5a3eac7841cbb20c86ed494e76",
+      "candidateContentHash": "ac0a6a8b32aeec619ca0fd26b8d0146b60780a5a3eac7841cbb20c86ed494e76"
+    },
+    {
+      "path": "/resources",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "9981ddb42dafd981a4271a44e5acd8cfe4217cb817304de4334a34398d943ecc",
+      "candidateContentHash": "9981ddb42dafd981a4271a44e5acd8cfe4217cb817304de4334a34398d943ecc"
+    },
+    {
+      "path": "/resources/ai-readiness-scorecard",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "c9f439f10a26cf421c2518b8dba21488ac63d9f16f395be11286fb2edd7f5d2d",
+      "candidateContentHash": "c9f439f10a26cf421c2518b8dba21488ac63d9f16f395be11286fb2edd7f5d2d"
+    },
+    {
+      "path": "/fractional-cio",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "70b2b362d6540bb0f9c1c65f179c1626782ac51e8681b0d0b1a76db5097c202f",
+      "candidateContentHash": "70b2b362d6540bb0f9c1c65f179c1626782ac51e8681b0d0b1a76db5097c202f"
+    },
+    {
+      "path": "/resources/strength-profile",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "bc78327015c4624e811e328782c1212976f58e87556fd823da3ab37a2953dcdc",
+      "candidateContentHash": "bc78327015c4624e811e328782c1212976f58e87556fd823da3ab37a2953dcdc"
+    },
+    {
+      "path": "/ai-enablement",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "6ba300c07e40c4e3e1e5336c249fd65ca7f0b5dc967ab5033c32d304bf1bacd4",
+      "candidateContentHash": "6ba300c07e40c4e3e1e5336c249fd65ca7f0b5dc967ab5033c32d304bf1bacd4"
+    },
+    {
+      "path": "/terms-conditions",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "294cb7b5aaf51bee660b245d7c253f1582f8cdc7f9747d7ce55f286ad2694840",
+      "candidateContentHash": "294cb7b5aaf51bee660b245d7c253f1582f8cdc7f9747d7ce55f286ad2694840"
+    },
+    {
+      "path": "/refund-cancellation",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "1edef5e254021c9a1f215401ce415041fbc2b34bc32815d44dacb7bfa940f6ab",
+      "candidateContentHash": "1edef5e254021c9a1f215401ce415041fbc2b34bc32815d44dacb7bfa940f6ab"
+    },
+    {
+      "path": "/copyright",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "3c8930a4441276b6017ddd53ef9ab9304b9d4d65803348b070d8b1722662ff66",
+      "candidateContentHash": "3c8930a4441276b6017ddd53ef9ab9304b9d4d65803348b070d8b1722662ff66"
+    },
+    {
+      "path": "/books",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "2d6438c7a2083dbaacba7af00ee26ddbd5f0b6318bcf553858b937fc678e3250",
+      "candidateContentHash": "2d6438c7a2083dbaacba7af00ee26ddbd5f0b6318bcf553858b937fc678e3250"
+    },
+    {
+      "path": "/privacy-policy",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "4d09af63b90228c54bcd21dc132dfcfb3b5fd552673d704a8d45a7af6a7448d6",
+      "candidateContentHash": "4d09af63b90228c54bcd21dc132dfcfb3b5fd552673d704a8d45a7af6a7448d6"
+    },
+    {
+      "path": "/post/the-great-ai-decentralization",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "ed30cd94ba09a3e78ad9500982c32db495a46695697653247503e0f4b9f361a2",
+      "candidateContentHash": "ed30cd94ba09a3e78ad9500982c32db495a46695697653247503e0f4b9f361a2"
+    },
+    {
+      "path": "/post/the-concept-of-work-is-changing-moving-from-doing-the-actual-work-to-directing-the-ai",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "c0f144924256c7bbaee62c65de90e362d6da0f6cb2689dddfe06be19320dfe2c",
+      "candidateContentHash": "c0f144924256c7bbaee62c65de90e362d6da0f6cb2689dddfe06be19320dfe2c"
+    },
+    {
+      "path": "/post/operational-ai-doesn-t-fail-because-of-technology-it-fails-because-of-how-organizations-think",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "fe67761b7c190f1c0a53b1083d074c9c163bc8e9825c001f6561d89500160788",
+      "candidateContentHash": "fe67761b7c190f1c0a53b1083d074c9c163bc8e9825c001f6561d89500160788"
+    },
+    {
+      "path": "/post/the-0-trillion-ai-trap",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "690636331addbbbd40cd000a155a5d9c3b25aa5667f9f5a5961a0b0961733d47",
+      "candidateContentHash": "690636331addbbbd40cd000a155a5d9c3b25aa5667f9f5a5961a0b0961733d47"
+    },
+    {
+      "path": "/blog/categories/trust-is-the-operating-system",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "489d2857fc60c6f16c3117ba4505e0acc4784b7930b3cb5cea75f8585e7cb1e7",
+      "candidateContentHash": "489d2857fc60c6f16c3117ba4505e0acc4784b7930b3cb5cea75f8585e7cb1e7"
+    },
+    {
+      "path": "/post/re-engage-a-disengaged-team",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "c2f1480b436eaa5647e797a01f4ca3b2cb867c9ee96e959dca6a55721b76b94e",
+      "candidateContentHash": "c2f1480b436eaa5647e797a01f4ca3b2cb867c9ee96e959dca6a55721b76b94e"
+    },
+    {
+      "path": "/post/website-design-strategies-for-impact-guide",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "f48711a30e54e76f418571543a23bc72235e268138dc2e1f9b33bdf492d41930",
+      "candidateContentHash": "f48711a30e54e76f418571543a23bc72235e268138dc2e1f9b33bdf492d41930"
+    },
+    {
+      "path": "/post/ai-literacy-for-leaders-core-leadership-competency",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "76a404546ed05b2b0527a90ca53e1fae1edc1785a43992039f366142e7c71cbb",
+      "candidateContentHash": "76a404546ed05b2b0527a90ca53e1fae1edc1785a43992039f366142e7c71cbb"
+    },
+    {
+      "path": "/post/building-ai-team-multi-agent-workflow-lessons",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "65871a1bb74e3b15df1b180d9bc3ada9c3b93846efdbb75daac1db09b15cb3cd",
+      "candidateContentHash": "65871a1bb74e3b15df1b180d9bc3ada9c3b93846efdbb75daac1db09b15cb3cd"
+    },
+    {
+      "path": "/post/when-ai-took-the-tasks-human-judgment-became-the-work",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "1fac0191476d3697fb1fa6a820cabc294c9deed2b280fb1528a02d383ec09848",
+      "candidateContentHash": "1fac0191476d3697fb1fa6a820cabc294c9deed2b280fb1528a02d383ec09848"
+    },
+    {
+      "path": "/post/why-efficiency-without-trust-creates-fragility",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "8578578dfb47247330d822c4af074740d6f0f5b3ddfe18893b38ab4f9de7401b",
+      "candidateContentHash": "8578578dfb47247330d822c4af074740d6f0f5b3ddfe18893b38ab4f9de7401b"
+    },
+    {
+      "path": "/post/why-silence-is-a-system-signal",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "15ad52096502d3c17836356a12a4d3ed7d6e2e01010ee3cbc82934683c38341c",
+      "candidateContentHash": "15ad52096502d3c17836356a12a4d3ed7d6e2e01010ee3cbc82934683c38341c"
+    },
+    {
+      "path": "/post/igniting-innovation-in-small-businesses-innovative-solutions-for-small-businesses",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "b123b05faa626464b586d06d21b78fec331ab3cb3f5ea9a6491fa27dcbdc987d",
+      "candidateContentHash": "b123b05faa626464b586d06d21b78fec331ab3cb3f5ea9a6491fa27dcbdc987d"
+    },
+    {
+      "path": "/post/when-systems-work-but-trust-disappears",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "bf9578fc063c7240cac339b49e039bb8e0ee3de21a8c1c2ea4077176bdb7fb1f",
+      "candidateContentHash": "bf9578fc063c7240cac339b49e039bb8e0ee3de21a8c1c2ea4077176bdb7fb1f"
+    },
+    {
+      "path": "/post/building-resilience-in-leadership-roles-embracing-resilient-leadership-traits",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "95b0bce2c7cdae72931687be3f9268afcde3d66676eaece60ea888096eeeb816",
+      "candidateContentHash": "95b0bce2c7cdae72931687be3f9268afcde3d66676eaece60ea888096eeeb816"
+    },
+    {
+      "path": "/post/achieve-business-goals-with-aligning-it-with-business",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "81199f679a72f597e3cea946a33ce788711575fa287caec18c7b08116a10e137",
+      "candidateContentHash": "81199f679a72f597e3cea946a33ce788711575fa287caec18c7b08116a10e137"
+    },
+    {
+      "path": "/post/building-resilience-in-leadership-roles-essential-resilient-leadership-traits",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "4d9bad834e28b8b86a954ea82f5993838728058e42dd39c19e5c64b7de7e9053",
+      "candidateContentHash": "4d9bad834e28b8b86a954ea82f5993838728058e42dd39c19e5c64b7de7e9053"
+    },
+    {
+      "path": "/post/the-tuesday-that-taught-me-everything-about-trust",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "686173d62d2ead29e10e9cd20edf55a949e776d0948a06be0feb2999d1ec5346",
+      "candidateContentHash": "686173d62d2ead29e10e9cd20edf55a949e776d0948a06be0feb2999d1ec5346"
+    },
+    {
+      "path": "/post/why-innovation-feels-harder-in-2025-and-what-great-leaders-do-differently",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "e52a9d2875c741d4b3fe5fc66511f3836c19f5bcfc1adecfd5d2628e12f8e3f8",
+      "candidateContentHash": "e52a9d2875c741d4b3fe5fc66511f3836c19f5bcfc1adecfd5d2628e12f8e3f8"
+    },
+    {
+      "path": "/post/ai-overload-in-2025-why-people-are-turning-ai-off-and-what-leaders-really-need",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "53643a5ab0e0a32e9c26d05f87dd39e7de7b2a27f75025fc35633873c52215a4",
+      "candidateContentHash": "53643a5ab0e0a32e9c26d05f87dd39e7de7b2a27f75025fc35633873c52215a4"
+    },
+    {
+      "path": "/post/the-human-side-of-technology-resilience-reinvention-and-my-journey-toward-leadership",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "1363c067f72bed9e7afe6036770af50c718f08e237011c3d834f42756fb907f7",
+      "candidateContentHash": "1363c067f72bed9e7afe6036770af50c718f08e237011c3d834f42756fb907f7"
+    },
+    {
+      "path": "/post/from-paper-folders-to-digital-confidence-a-story-of-trust-brains-and-the-real-work-of-change",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "93f82d5a6eb4d36836174e1ff1ff38d50a64b0d3a921cb5b68e8e252f2b24839",
+      "candidateContentHash": "93f82d5a6eb4d36836174e1ff1ff38d50a64b0d3a921cb5b68e8e252f2b24839"
+    },
+    {
+      "path": "/post/neurodiversity-aithe-untapped-superpower-of-2025-for-organizations",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "c3b3ad7dfcd8cedad2998f87f85b131c9f8570570d62e668b27ce5356ea09712",
+      "candidateContentHash": "c3b3ad7dfcd8cedad2998f87f85b131c9f8570570d62e668b27ce5356ea09712"
+    },
+    {
+      "path": "/post/the-real-digital-transformation-killing-the-systems-you-re-afraid-to-touch",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "e0ff64bf4e797fa0c8531f5e07019b4ccd1aa551e3ce5f04ca9f989d8f268000",
+      "candidateContentHash": "e0ff64bf4e797fa0c8531f5e07019b4ccd1aa551e3ce5f04ca9f989d8f268000"
+    },
+    {
+      "path": "/post/designing-for-what-matters",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "46fd38d353de335d5516549b6e8b87a7a2501bc84c7be82180c2f75096b0c47e",
+      "candidateContentHash": "46fd38d353de335d5516549b6e8b87a7a2501bc84c7be82180c2f75096b0c47e"
+    },
+    {
+      "path": "/post/beyond-the-hype-why-emotional-ai-will-define-the-next-decade-of-human-computer-interaction",
+      "checks": {
+        "live200": true,
+        "local200": true,
+        "h1": true,
+        "canonical": true,
+        "mainContentPreserved": true,
+        "navigationPreserved": true
+      },
+      "baselineContentHash": "5ea763585d9d5e5942dc08ce34679fb97b4601664454d2bba9c42bf6566d10ff",
+      "candidateContentHash": "5ea763585d9d5e5942dc08ce34679fb97b4601664454d2bba9c42bf6566d10ff"
+    }
+  ],
+  "errors": [],
+  "posts": 25,
+  "sitemap": {
+    "candidate": 41,
+    "baseline": 41,
+    "same": true
+  },
+  "redirects": [
+    {
+      "from": "/blog",
+      "to": "/insights",
+      "status": 308,
+      "ok": true
+    },
+    {
+      "from": "/our-story",
+      "to": "/about",
+      "status": 308,
+      "ok": true
+    },
+    {
+      "from": "/pricing-plans/list",
+      "to": "/services",
+      "status": 308,
+      "ok": true
+    },
+    {
+      "from": "/book-online",
+      "to": "/contact",
+      "status": 308,
+      "ok": true
+    },
+    {
+      "from": "/service-page/ai-strategy-session",
+      "to": "/contact",
+      "status": 308,
+      "ok": true
+    },
+    {
+      "from": "/service-page/schedule-a-strategic-cio-consultation",
+      "to": "/contact",
+      "status": 308,
+      "ok": true
+    },
+    {
+      "from": "/service-page/claris-filemaker-support-packages",
+      "to": "/services",
+      "status": 308,
+      "ok": true
+    },
+    {
+      "from": "/inquiry-services-page",
+      "to": "/contact",
+      "status": 308,
+      "ok": true
+    },
+    {
+      "from": "/insights/globalization-in-the-new-age",
+      "to": "/insights",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/insights/changing-pricing-strategy",
+      "to": "/insights",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/insights/how-social-media-affects-the-market",
+      "to": "/insights",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/insights/trust-analytics",
+      "to": "/insights",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/insights/mba-graduates:the-consultants-of-tomorrow",
+      "to": "/insights",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/industries-categories/retail",
+      "to": "/services",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/industries-categories/security",
+      "to": "/services",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/industries-categories/food",
+      "to": "/services",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/industries-categories/healthcare",
+      "to": "/services",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/industries-categories/energy",
+      "to": "/services",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/industries-categories/cyber",
+      "to": "/services",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/industries-categories/technology",
+      "to": "/services",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/industries-categories/it",
+      "to": "/services",
+      "status": 307,
+      "ok": true
+    },
+    {
+      "from": "/industries-categories/environment",
+      "to": "/services",
+      "status": 307,
+      "ok": true
+    }
+  ],
+  "robots": {
+    "status": 200,
+    "body": "User-Agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: https://2nspira.com/sitemap.xml\n"
+  }
+}

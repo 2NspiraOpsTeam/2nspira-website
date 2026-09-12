@@ -195,9 +195,6 @@ export default function ContactPage() {
             <p className={`mt-2 ${caption}`}>
               Phone: <a href="tel:+16465430199" className="underline underline-offset-4 transition-colors duration-300 ease-gentle hover:text-accent">+1 (646) 543-0199</a>
             </p>
-            <p className={`mt-2 ${caption}`}>
-              11215 72nd Rd, Forest Hills, NY
-            </p>
           </div>
 
           <div className={`mt-8 p-8 ${cardFlat}`} role="complementary" aria-label="Frequently asked questions">
