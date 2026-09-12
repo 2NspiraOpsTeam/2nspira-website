@@ -108,15 +108,6 @@ export default function Home() {
                 fetchPriority="high"
                 className="object-cover object-[center_30%]"
               />
-              {/* Caption */}
-              <figcaption className="absolute inset-x-4 bottom-4 rounded-lg border border-line bg-canvas/90 px-4 py-3">
-                <span className="block text-xs font-semibold uppercase tracking-widest text-accent">
-                  Conceptual Design Visualization
-                </span>
-                <span className="mt-1 block text-xs leading-relaxed text-body">
-                  Conceptual visualization — not an actual 2Nspira client or engagement.
-                </span>
-              </figcaption>
             </figure>
           </div>
         </div>

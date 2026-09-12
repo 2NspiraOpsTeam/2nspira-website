@@ -47,7 +47,11 @@ export default function ResourcesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {resources.map((resource, index) => (
-            <ResourceCard key={index} {...resource} />
+            <ResourceCard 
+              key={index} 
+              {...resource}
+              solidBackground={resource.title === "AI Readiness Scorecard" || resource.title === "Strength Profile Generator"}
+            />
           ))}
         </div>
       </div>

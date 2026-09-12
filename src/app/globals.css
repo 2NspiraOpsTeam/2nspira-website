@@ -1,0 +1,62 @@
+/* 2Nspira Website - Global Styles */
+/* Enforce solid, non-transparent backgrounds on all sections */
+
+:root {
+  /* Solid background colors — no transparency */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+}
+
+/* Base styles with solid backgrounds */
+html, body {
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-geist), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure all section containers have solid backgrounds on mobile */
+section, .section, [class*="section-"], article, aside {
+  background-color: var(--bg-card);
+  /* Force solid background — no glassmorphism */
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background-opacity: 1 !important;
+}
+
+/* Tailwind utility overrides for mobile sections */
+@layer components {
+  /* Solid section backgrounds */
+  .section-solid {
+    background-color: var(--bg-card) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Mobile-specific solid backgrounds for headers/sections */
+  @media (max-width: 768px) {
+    section, .section, [class*="section-"], article, aside, header, footer {
+      background-color: var(--bg-card) !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      background-opacity: 1 !important;
+    }
+    
+    /* Ensure all nav/sidebar sections are solid */
+    .nav-section, .sidebar-section, .drawer-section {
+      background-color: var(--bg-card) !important;
+      backdrop-filter: none !important;
+    }
+  }
+}
+
+/* Default section styling for cards */
+article {
+  background-color: var(--bg-card);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}

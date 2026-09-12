@@ -54,9 +54,6 @@ export default function AboutPage() {
             height={941}
             className="h-auto w-full"
           />
-          <figcaption className="bg-canvas px-4 py-3 text-center text-xs leading-relaxed text-muted sm:px-6">
-            Conceptual visualization — not an actual 2Nspira client or engagement.
-          </figcaption>
         </figure>
 
         <section className={`mt-12 p-6 sm:p-10 ${card}`}>

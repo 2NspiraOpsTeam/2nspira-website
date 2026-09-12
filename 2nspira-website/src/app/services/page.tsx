@@ -121,9 +121,6 @@ export default function ServicesPage() {
           height={768}
           className="h-auto w-full"
         />
-        <figcaption className="bg-canvas px-4 py-3 text-center text-xs leading-relaxed text-muted sm:px-6">
-          Conceptual visualization — not an actual 2Nspira client or engagement.
-        </figcaption>
       </figure>
       </div>
 

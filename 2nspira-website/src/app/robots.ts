@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteDomain = process.env.NEXT_PUBLIC_SITE_URL || "https://www.2nspira.com";
+const siteDomain = process.env.NEXT_PUBLIC_SITE_URL || "https://2nspira.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
