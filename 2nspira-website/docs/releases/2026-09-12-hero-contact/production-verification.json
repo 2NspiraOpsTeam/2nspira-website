@@ -1,0 +1,996 @@
+{
+  "sha": "a6aa7e6e3ae69c0acb9ef6d362035fdd7c68cd3e",
+  "checkedAt": "2026-09-12T18:21:42.371Z",
+  "routes": [
+    {
+      "path": "/about",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true,
+        "headline": true,
+        "disclaimerRemoved": true,
+        "heroRetained": true
+      }
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true,
+        "noAddress": true,
+        "email": true,
+        "phone": true,
+        "form": true
+      }
+    },
+    {
+      "path": "/insights",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/resources/ai-readiness-scorecard",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/resources/strength-profile",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/resources",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/fractional-cio",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/ai-enablement",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/books",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/privacy-policy",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/copyright",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/refund-cancellation",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/terms-conditions",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/the-0-trillion-ai-trap",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/the-great-ai-decentralization",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/operational-ai-doesn-t-fail-because-of-technology-it-fails-because-of-how-organizations-think",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/the-concept-of-work-is-changing-moving-from-doing-the-actual-work-to-directing-the-ai",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/blog/categories/trust-is-the-operating-system",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/re-engage-a-disengaged-team",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/ai-literacy-for-leaders-core-leadership-competency",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/website-design-strategies-for-impact-guide",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/when-ai-took-the-tasks-human-judgment-became-the-work",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/building-ai-team-multi-agent-workflow-lessons",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/why-silence-is-a-system-signal",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/when-systems-work-but-trust-disappears",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/igniting-innovation-in-small-businesses-innovative-solutions-for-small-businesses",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/building-resilience-in-leadership-roles-embracing-resilient-leadership-traits",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/why-efficiency-without-trust-creates-fragility",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/why-innovation-feels-harder-in-2025-and-what-great-leaders-do-differently",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/ai-overload-in-2025-why-people-are-turning-ai-off-and-what-leaders-really-need",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/building-resilience-in-leadership-roles-essential-resilient-leadership-traits",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/achieve-business-goals-with-aligning-it-with-business",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/the-tuesday-that-taught-me-everything-about-trust",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/the-real-digital-transformation-killing-the-systems-you-re-afraid-to-touch",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/from-paper-folders-to-digital-confidence-a-story-of-trust-brains-and-the-real-work-of-change",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/designing-for-what-matters",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/the-human-side-of-technology-resilience-reinvention-and-my-journey-toward-leadership",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/neurodiversity-aithe-untapped-superpower-of-2025-for-organizations",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    },
+    {
+      "path": "/post/beyond-the-hype-why-emotional-ai-will-define-the-next-decade-of-human-computer-interaction",
+      "status": 200,
+      "checks": {
+        "status200": true,
+        "oneH1": true,
+        "canonical": true,
+        "contentPreserved": true,
+        "indexable": true
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "path": "/blog",
+      "status": 308,
+      "location": "/insights",
+      "ok": true
+    },
+    {
+      "path": "/our-story",
+      "status": 308,
+      "location": "/about",
+      "ok": true
+    },
+    {
+      "path": "/pricing-plans/list",
+      "status": 308,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/book-online",
+      "status": 308,
+      "location": "/contact",
+      "ok": true
+    },
+    {
+      "path": "/service-page/ai-strategy-session",
+      "status": 308,
+      "location": "/contact",
+      "ok": true
+    },
+    {
+      "path": "/service-page/schedule-a-strategic-cio-consultation",
+      "status": 308,
+      "location": "/contact",
+      "ok": true
+    },
+    {
+      "path": "/service-page/claris-filemaker-support-packages",
+      "status": 308,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/inquiry-services-page",
+      "status": 308,
+      "location": "/contact",
+      "ok": true
+    },
+    {
+      "path": "/insights/globalization-in-the-new-age",
+      "status": 307,
+      "location": "/insights",
+      "ok": true
+    },
+    {
+      "path": "/insights/changing-pricing-strategy",
+      "status": 307,
+      "location": "/insights",
+      "ok": true
+    },
+    {
+      "path": "/insights/how-social-media-affects-the-market",
+      "status": 307,
+      "location": "/insights",
+      "ok": true
+    },
+    {
+      "path": "/insights/trust-analytics",
+      "status": 307,
+      "location": "/insights",
+      "ok": true
+    },
+    {
+      "path": "/insights/mba-graduates:the-consultants-of-tomorrow",
+      "status": 307,
+      "location": "/insights",
+      "ok": true
+    },
+    {
+      "path": "/industries-categories/retail",
+      "status": 307,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/industries-categories/security",
+      "status": 307,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/industries-categories/food",
+      "status": 307,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/industries-categories/healthcare",
+      "status": 307,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/industries-categories/energy",
+      "status": 307,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/industries-categories/cyber",
+      "status": 307,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/industries-categories/technology",
+      "status": 307,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/industries-categories/it",
+      "status": 307,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "/industries-categories/environment",
+      "status": 307,
+      "location": "/services",
+      "ok": true
+    },
+    {
+      "path": "www/?release=20260912",
+      "status": 301,
+      "ok": true
+    },
+    {
+      "path": "www/resources/strength-profile?release=20260912",
+      "status": 301,
+      "ok": true
+    },
+    {
+      "path": "www/post/the-great-ai-decentralization?release=20260912",
+      "status": 301,
+      "ok": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+      "status": 200,
+      "bytes": 716,
+      "type": "text/javascript"
+    },
+    {
+      "path": "/_next/static/css/index.BNcC4M5E.css",
+      "status": 200,
+      "bytes": 34107,
+      "type": "text/css"
+    },
+    {
+      "path": "/_next/static/chunks/vinext-DDP21ipx.js",
+      "status": 200,
+      "bytes": 143938,
+      "type": "text/javascript"
+    },
+    {
+      "path": "/_next/static/chunks/framework-DTZGTDtF.js",
+      "status": 200,
+      "bytes": 190109,
+      "type": "text/javascript"
+    },
+    {
+      "path": "/images/logo/2nspira-logo.png",
+      "status": 200,
+      "bytes": 11826,
+      "type": "image/png"
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Fadvisory%2Fcollaborative-strategy.webp&w=3840&q=75",
+      "status": 200,
+      "bytes": 114572,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Fadvisory%2Fadvisory-ideas-to-impact.webp&w=640&q=75",
+      "status": 200,
+      "bytes": 26509,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Fpages%2Fcontact-environmental.webp&w=3840&q=75",
+      "status": 200,
+      "bytes": 41813,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Fpages%2Fservices-advisory.webp&w=3840&q=75",
+      "status": 200,
+      "bytes": 86794,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Fpages%2Finsights-editorial.webp&w=3840&q=75",
+      "status": 200,
+      "bytes": 67603,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/static/chunks/index-rXQWimqf.js",
+      "status": 200,
+      "bytes": 119433,
+      "type": "text/javascript"
+    },
+    {
+      "path": "/images/posts/326394f240e40675.png",
+      "status": 200,
+      "bytes": 1523405,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/142359d690cf57ae.png",
+      "status": 200,
+      "bytes": 977690,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/6d75c538f6ca8f2b.png",
+      "status": 200,
+      "bytes": 1606245,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/e32fad3a9e2faabf.png",
+      "status": 200,
+      "bytes": 1211963,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/0d8fb8c0d63c4787.png",
+      "status": 200,
+      "bytes": 910996,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/6d2e28543c97005e.png",
+      "status": 200,
+      "bytes": 1378334,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/8ff967b5dc9944ec.png",
+      "status": 200,
+      "bytes": 1555433,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/608ab14aad912fde.jpg",
+      "status": 200,
+      "bytes": 127642,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/914a901eeeb541a9.jpg",
+      "status": 200,
+      "bytes": 77396,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/9c11d0b123e18a99.png",
+      "status": 200,
+      "bytes": 1423141,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/e42dbb9424af53ca.png",
+      "status": 200,
+      "bytes": 1162704,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/87fe0773e5cde9ca.png",
+      "status": 200,
+      "bytes": 1316045,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/942d610e32c0072f.png",
+      "status": 200,
+      "bytes": 1177464,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/31fcd961dcdb1ef3.jpg",
+      "status": 200,
+      "bytes": 162519,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/cf18b40a40863cd3.jpg",
+      "status": 200,
+      "bytes": 73997,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/9ce5d34f37bcdd5a.png",
+      "status": 200,
+      "bytes": 1097784,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/48ee48b2e6fe4512.jpg",
+      "status": 200,
+      "bytes": 150714,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/b2069447adcd9644.jpg",
+      "status": 200,
+      "bytes": 76181,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/4eeee9c7194a6309.png",
+      "status": 200,
+      "bytes": 911339,
+      "type": "image/png"
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Fpages%2Fresources-decision-support.webp&w=3840&q=75",
+      "status": 200,
+      "bytes": 16369,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Fpages%2Ffractional-cio-focus.webp&w=1200&q=75",
+      "status": 200,
+      "bytes": 39578,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/0c0aea48017c6c38.jpg",
+      "status": 200,
+      "bytes": 106951,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/cef9d08e7e6de8a4.jpg",
+      "status": 200,
+      "bytes": 89084,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/b4bde22bee33087b.png",
+      "status": 200,
+      "bytes": 1096153,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/c5b24f92be6312dd.png",
+      "status": 200,
+      "bytes": 1519850,
+      "type": "image/png"
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Fadvisory%2Ffocused-collaboration.webp&w=3840&q=75",
+      "status": 200,
+      "bytes": 131806,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/2cda463cee2c0721.png",
+      "status": 200,
+      "bytes": 4152,
+      "type": "image/png"
+    },
+    {
+      "path": "/_next/image?url=%2Fimages%2Fpages%2Fbooks-reading.webp&w=3840&q=75",
+      "status": 200,
+      "bytes": 107542,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/books/trust-is-the-operating-system.jpg",
+      "status": 200,
+      "bytes": 1751017,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/4a928d46c0b7729f.png",
+      "status": 200,
+      "bytes": 3842,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/books/reduce-the-noise.png",
+      "status": 200,
+      "bytes": 22220218,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/20cffa667b31e148.png",
+      "status": 200,
+      "bytes": 3741,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/f78ef057513fbd1b.png",
+      "status": 200,
+      "bytes": 4795,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/776459d5ddb7d1d4.png",
+      "status": 200,
+      "bytes": 4687,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/0176bd385acb1ba3.jpg",
+      "status": 200,
+      "bytes": 2902,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/3dbf347be13bf4f4.png",
+      "status": 200,
+      "bytes": 4480,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/e530391a71f0c404.jpg",
+      "status": 200,
+      "bytes": 4518,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/84864695f5f428a3.jpg",
+      "status": 200,
+      "bytes": 3726,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/417ca70011552a91.jpg",
+      "status": 200,
+      "bytes": 2850,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/033b1d72d70f1b6c.jpg",
+      "status": 200,
+      "bytes": 2869,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/717a674b99915f43.jpg",
+      "status": 200,
+      "bytes": 3071,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/6fc8bdf286425501.jpg",
+      "status": 200,
+      "bytes": 2440,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/95cf6629317294af.jpg",
+      "status": 200,
+      "bytes": 3101,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/e587f9efd8e45808.png",
+      "status": 200,
+      "bytes": 3849,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/fd1e73e3386c56d2.png",
+      "status": 200,
+      "bytes": 5532,
+      "type": "image/png"
+    },
+    {
+      "path": "/images/posts/b4d72fbd9fb92201.jpg",
+      "status": 200,
+      "bytes": 3726,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/3741cd7c769efa75.jpg",
+      "status": 200,
+      "bytes": 2144,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/57f6b8f2797f0cb5.jpg",
+      "status": 200,
+      "bytes": 3070,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/4655a62205634d21.jpg",
+      "status": 200,
+      "bytes": 4004,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/images/posts/4a6e1fabad2ed309.jpg",
+      "status": 200,
+      "bytes": 3369,
+      "type": "image/jpeg"
+    }
+  ],
+  "errors": [],
+  "sitemap": {
+    "status": 200,
+    "urls": 41,
+    "allPresent": true
+  },
+  "robots": {
+    "status": 200,
+    "allowsCrawling": true,
+    "sitemap": true
+  },
+  "hero": {
+    "status": 200,
+    "identicalBytes": true
+  }
+}

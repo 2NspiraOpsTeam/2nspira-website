@@ -1,4 +1,4 @@
-# Hero/contact release — final candidate
+# Hero/contact release — deployed and verified
 
 ## Scope and provenance
 
@@ -24,13 +24,18 @@
 - Public bare-URL baseline: 41 of 43 probes returned 200. TWO PRE-EXISTING cached self-redirects: `/sitemap.xml` and `/post/the-great-ai-decentralization`. Both report CF cache HIT, HTTP 301 back to themselves; cache-busted requests serve the correct content. Both ordinary URLs were rechecked at 18:18 UTC and now return HTTP 200 (sitemap cache expired naturally). Reverify during launch; do not rely only on cache-busting.
 - Active production Worker version before this work: `13ed31f4-04c5-42bb-acf0-22f9fbf9a23d` (2026-09-12 14:16:50 UTC). No Git SHA is recorded in that deployment. No deployment executed for this release.
 
-## Remaining launch steps
+## Production launch result
 
-1. Completed: verified latest supplied image against existing approved hero; retain same image per explicit follow-up.
-2. Repeat relevant checks/build and asset rendering validation; commit final source; record full SHA.
-3. Run supported `npm run deploy:vinext`; record Worker version and exact source SHA.
-4. Resolve pre-existing cached redirects through supported Cloudflare cache management and verify ordinary, uncached and www URLs.
-5. Verify all 41 pages, 25 posts, redirects, SEO, navigation, homepage asset and contact changes in production; record results against deployed SHA.
+- Deployed source SHA: `a6aa7e6e3ae69c0acb9ef6d362035fdd7c68cd3e`.
+- Worker version: `274d6e39-c354-4da1-ad95-1ce548eac75b`, confirmed active at 100%, deployed 2026-09-12 18:20:37 UTC.
+- Supported command: `npm run deploy:vinext`; both apex and www production routes retained. Deployed from the full-site release branch, never lean `main`.
+- Final lint, typecheck, diff check and Vinext build passed.
+- All 41 ordinary production content URLs return 200 with correct canonical and one H1. All normalized main-content hashes match the approved candidate: 25 posts, all services/resources and other content preserved.
+- 22 existing redirects plus three www/path/query redirect probes passed. Two unknown routes return 404. Sitemap returns 200 with all 41 entries, general search crawlers allowed; Cloudflare's existing bot-specific robots restrictions preserved.
+- All 61 sampled image/script/style assets return 200. Original hero bytes match the repository exactly.
+- Browser: homepage hero decoded successfully; same headline and no visible disclaimer. Desktop 1920px and mobile 390px show no horizontal overflow. Contact page shows email/phone, no physical address, and the existing four-field form. No browser page errors observed.
+- Prior cached self-redirects are no longer present on ordinary sitemap/post URLs. No DNS or cache policy changes were needed.
+- Machine-readable final results: `production-verification.json`. This report is a documentation-only follow-up to the deployed SHA; it does not represent another deployment.
 
 ## Post-launch follow-up: repository divergence cleanup
 
