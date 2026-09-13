@@ -93,20 +93,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: approved human-advisory visual (Option 2 — Ideas to Impact) */}
-            {/* Approved by Jeffrey 2026-09-10; clearly labeled conceptual per Maya's spec. */}
+            {/* Portrait composition keeps the people and workflow visible at every breakpoint. */}
             <figure
-              className="hero-settle relative aspect-[4/5] overflow-hidden rounded-2xl border border-line shadow-soft lg:aspect-[5/6]"
+              className="hero-settle relative aspect-[4/5] overflow-hidden rounded-2xl border border-line shadow-soft lg:aspect-[4/5]"
               style={{ animationDelay: "220ms" }}
-              aria-label="Conceptual advisory visualization — Ideas to Impact"
+              aria-label="People-centered technology planning"
             >
               <Image
-                src="/images/advisory/advisory-ideas-to-impact.webp"
-                alt="Conceptual visualization of an advisory conversation about turning ideas into operational impact."
+                src="/images/advisory/people-process-technology-v2.webp"
+                alt="Illustration of a team reviewing a workflow map and dashboard during a technology planning session."
                 fill
-                sizes="(min-width: 1024px) 45vw, 100vw"
+                sizes="(min-width: 1152px) 461px, (min-width: 1024px) 42vw, calc(100vw - 32px)"
+                unoptimized
                 fetchPriority="high"
-                className="object-cover object-[center_30%]"
+                className="object-cover object-center"
               />
             </figure>
           </div>
