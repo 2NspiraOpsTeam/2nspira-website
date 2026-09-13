@@ -57,6 +57,26 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
 
   if (!isOpen) return null;
 
+  // Force solid opaque styles on all elements via inline styles
+  const navLinkStyle = {
+    backgroundColor: "#ffffff",
+    opacity: 1,
+    backdropFilter: "none",
+    WebkitBackdropFilter: "none"
+  };
+
+  const menuPanelStyle = {
+    backgroundColor: "#ffffff",
+    opacity: 1,
+    backdropFilter: "none",
+    WebkitBackdropFilter: "none"
+  };
+
+  const backdropStyle = {
+    backgroundColor: "#000000",
+    opacity: 1
+  };
+
   return (
     <div
       ref={dialogRef}
@@ -65,45 +85,40 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       role="dialog"
       aria-modal="true"
       aria-labelledby="mobile-menu-title"
+      style={backdropStyle} // Force solid black backdrop
     >
       <h2 id="mobile-menu-title" className="sr-only">Mobile navigation</h2>
 
-      {/* Backdrop - Solid black, completely opaque */}
-      <div
-        className="absolute inset-0 bg-black transition-opacity duration-300 ease-gentle"
+      {/* Close Button */}
+      <button
+        ref={closeButtonRef}
         onClick={onClose}
-        aria-hidden="true"
-      />
-
-      {/* Menu Panel - Solid white background, completely opaque */}
-      <div className="relative h-full w-[85vw] max-w-xs bg-white shadow-lg sm:max-w-md">
-        
-        {/* Close Button */}
-        <button
-          ref={closeButtonRef}
-          onClick={onClose}
-          className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full text-white hover:bg-gray-800 transition-colors duration-300 ease-gentle focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-          aria-label="Close menu"
+        className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full text-white hover:bg-gray-800 focus:outline-none"
+        aria-label="Close menu"
+      >
+        <svg
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={1.75}
         >
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.75}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
 
-        {/* Menu Items - All solid white backgrounds */}
+      {/* Menu Panel - Solid white with no transparency */}
+      <div className="relative h-full w-[85vw] max-w-xs sm:max-w-md shadow-lg" style={menuPanelStyle}>
+        
+        {/* Menu Items - All solid white backgrounds, absolutely forced via inline styles */}
         <nav className="space-y-1 px-4 pt-14" aria-label="Mobile navigation">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={onClose}
-              className="block rounded-xl bg-white px-4 py-3.5 text-lg font-medium text-gray-900 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent border border-gray-200"
+              style={navLinkStyle} // Force solid white via inline style
+              className="block rounded-xl px-4 py-3.5 text-lg font-medium text-gray-900 focus:outline-none"
             >
               {link.name}
             </Link>
