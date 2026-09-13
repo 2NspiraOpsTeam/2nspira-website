@@ -67,20 +67,22 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       aria-labelledby="mobile-menu-title"
     >
       <h2 id="mobile-menu-title" className="sr-only">Mobile navigation</h2>
-      {/* Backdrop */}
+
+      {/* Backdrop - Solid black, completely opaque */}
       <div
-        className="absolute inset-0 bg-ink/40 backdrop-blur-sm transition-opacity duration-300 ease-gentle"
+        className="absolute inset-0 bg-black transition-opacity duration-300 ease-gentle"
         onClick={onClose}
         aria-hidden="true"
       />
 
-      {/* Menu Panel */}
-      <div className="relative h-full w-[85vw] max-w-xs bg-canvas shadow-lift sm:max-w-md">
+      {/* Menu Panel - Solid white background, completely opaque */}
+      <div className="relative h-full w-[85vw] max-w-xs bg-white shadow-lg sm:max-w-md">
+        
         {/* Close Button */}
         <button
           ref={closeButtonRef}
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full text-white hover:bg-gray-800 transition-colors duration-300 ease-gentle focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           aria-label="Close menu"
         >
           <svg
@@ -94,14 +96,14 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           </svg>
         </button>
 
-        {/* Menu Items */}
+        {/* Menu Items - All solid white backgrounds */}
         <nav className="space-y-1 px-4 pt-14" aria-label="Mobile navigation">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={onClose}
-              className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors duration-300 ease-gentle hover:bg-accent-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="block rounded-xl bg-white px-4 py-3.5 text-lg font-medium text-gray-900 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent border border-gray-200"
             >
               {link.name}
             </Link>
@@ -112,11 +114,11 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           <Link
             href="/contact"
             onClick={onClose}
-            className="block rounded-xl bg-accent px-4 py-3.5 text-center text-base font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            className="block rounded-xl bg-blue-600 px-4 py-3.5 text-center text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 ease-gentle"
           >
-            Start a conversation
+            Start a conversation →
           </Link>
-          <p className="mt-6 text-center text-sm text-muted">
+          <p className="mt-6 text-center text-sm text-gray-500">
             &copy; {new Date().getFullYear()} 2Nspira
           </p>
         </div>
