@@ -3,11 +3,37 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
+// Cache-bust key to force fresh asset loading
+const CACHE_BUST = "1726193800000_" + Math.random().toString(36).substr(2, 9);
+
 export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  // Force cache busting with randomized component key
-  const COMPONENT_KEY = Math.random().toString(36).slice(-8);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  
+  // Force solid opaque styles via inline styles - these override ANY global CSS rules
+  const navLinkStyle = {
+    backgroundColor: "#ffffff",
+    backgroundImage: "none",
+    opacity: 1,
+    backdropFilter: "none",
+    WebkitBackdropFilter: "none",
+    boxSizing: "border-box"
+  };
+
+  const menuPanelStyle = {
+    backgroundColor: "#ffffff",
+    boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+    backdropFilter: "none",
+    WebkitBackdropFilter: "none"
+  };
+
+  const backdropStyle = {
+    backgroundColor: "#000000",
+    opacity: 1,
+    position: "absolute",
+    inset: 0
+  };
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
@@ -59,19 +85,6 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
 
   if (!isOpen) return null;
 
-  // Force solid opaque styles via inline styles to override any global rules
-  const navLinkStyle = {
-    backgroundColor: "#ffffff",
-    opacity: 1,
-    backdropFilter: "none",
-    WebkitBackdropFilter: "none"
-  };
-
-  const menuPanelStyle = {
-    backgroundColor: "#ffffff",
-    boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
-  };
-
   return (
     <div
       ref={dialogRef}
@@ -81,33 +94,34 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       aria-modal="true"
       aria-labelledby="mobile-menu-title"
       onClick={(e) => {
-        // Close on backdrop click only (not when clicking content)
         if ((e.target as HTMLElement).id !== 'mobile-menu') {
           onClose();
         }
       }}
+      style={backdropStyle} // Force solid black backdrop via inline style
     >
       <h2 id="mobile-menu-title" className="sr-only">Mobile navigation</h2>
 
-      {/* Close Button - X icon at top right */}
+      {/* X Close Button - Top Right */}
       <button
         ref={closeButtonRef}
         onClick={(e) => { e.preventDefault(); onClose(); }}
-        className="absolute right-4 top-4 z-10 flex h-12 w-12 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200 transition-colors duration-300 ease-gentle focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        style={{ 
+          position: "absolute", 
+          right: "1rem", 
+          top: "1rem", 
+          zIndex: 100, 
+          backgroundColor: "#f9fafb",
+          color: "#374151"
+        }}
         aria-label="Close menu"
       >
-        <svg
-          className="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={1.75}
-        >
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
 
-      {/* Menu Panel - Solid white background with close button */}
+      {/* Menu Panel - Solid white background with X close button */}
       <div className="relative h-full w-[85vw] max-w-xs flex flex-col sm:max-w-md" style={menuPanelStyle}>
         
         {/* Menu Items - All solid white backgrounds, absolutely forced via inline styles */}
