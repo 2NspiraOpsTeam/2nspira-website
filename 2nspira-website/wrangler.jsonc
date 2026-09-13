@@ -3,9 +3,7 @@
   "account_id": "36a7807b2d8726b889873bab8b572113",
   "compatibility_date": "2024-12-01",
   "compatibility_flags": ["nodejs_compat"],
-  "routes": ["2nspira.com/*", "www.2nspira.com/*", 
-    "strength.2nspira.com/*",
-    "scorecard.2nspira.com/*"],
+  "routes": ["2nspira.com/*", "www.2nspira.com/*"],
   "main": "vinext/server/fetch-handler",
   "assets": {
     "directory": "dist/client",
