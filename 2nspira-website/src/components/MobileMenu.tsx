@@ -57,7 +57,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
 
   if (!isOpen) return null;
 
-  // Force solid opaque styles on all elements via inline styles
+  // Force solid opaque styles via inline styles to override any global rules
   const navLinkStyle = {
     backgroundColor: "#ffffff",
     opacity: 1,
@@ -67,14 +67,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
 
   const menuPanelStyle = {
     backgroundColor: "#ffffff",
-    opacity: 1,
-    backdropFilter: "none",
-    WebkitBackdropFilter: "none"
-  };
-
-  const backdropStyle = {
-    backgroundColor: "#000000",
-    opacity: 1
+    boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
   };
 
   return (
@@ -85,15 +78,20 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       role="dialog"
       aria-modal="true"
       aria-labelledby="mobile-menu-title"
-      style={backdropStyle} // Force solid black backdrop
+      onClick={(e) => {
+        // Close on backdrop click only (not when clicking content)
+        if ((e.target as HTMLElement).id !== 'mobile-menu') {
+          onClose();
+        }
+      }}
     >
       <h2 id="mobile-menu-title" className="sr-only">Mobile navigation</h2>
 
-      {/* Close Button */}
+      {/* Close Button - X icon at top right */}
       <button
         ref={closeButtonRef}
-        onClick={onClose}
-        className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full text-white hover:bg-gray-800 focus:outline-none"
+        onClick={(e) => { e.preventDefault(); onClose(); }}
+        className="absolute right-4 top-4 z-10 flex h-12 w-12 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200 transition-colors duration-300 ease-gentle focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         aria-label="Close menu"
       >
         <svg
@@ -107,11 +105,11 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
         </svg>
       </button>
 
-      {/* Menu Panel - Solid white with no transparency */}
-      <div className="relative h-full w-[85vw] max-w-xs sm:max-w-md shadow-lg" style={menuPanelStyle}>
+      {/* Menu Panel - Solid white background with close button */}
+      <div className="relative h-full w-[85vw] max-w-xs flex flex-col sm:max-w-md" style={menuPanelStyle}>
         
         {/* Menu Items - All solid white backgrounds, absolutely forced via inline styles */}
-        <nav className="space-y-1 px-4 pt-14" aria-label="Mobile navigation">
+        <nav className="space-y-1 px-4 pt-0 pb-auto" aria-label="Mobile navigation">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -125,15 +123,16 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           ))}
         </nav>
 
-        <div className="absolute bottom-10 left-4 right-4">
+        {/* Contact CTA and copyright at bottom */}
+        <div className="absolute bottom-8 left-4 right-4">
           <Link
             href="/contact"
             onClick={onClose}
-            className="block rounded-xl bg-blue-600 px-4 py-3.5 text-center text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 ease-gentle"
+            className="block rounded-xl bg-blue-600 px-4 py-3.5 text-center text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 ease-gentle mb-6"
           >
             Start a conversation →
           </Link>
-          <p className="mt-6 text-center text-sm text-gray-500">
+          <p className="text-center text-sm text-gray-500">
             &copy; {new Date().getFullYear()} 2Nspira
           </p>
         </div>
