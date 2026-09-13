@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 
 export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -26,10 +27,13 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
   };
 
   const backdropStyle: CSSProperties = {
-    backgroundColor: "#000000",
+    backgroundColor: "#ffffff",
     opacity: 1,
-    position: "absolute",
-    inset: 0
+    position: "fixed",
+    inset: 0,
+    height: "100dvh",
+    overflowY: "auto",
+    zIndex: 1000
   };
 
   const navLinks = [
@@ -83,7 +87,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
 
   if (!isOpen) return null;
 
-  return (
+  return createPortal(
     <div
       ref={dialogRef}
       id="mobile-menu"
@@ -91,11 +95,6 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       role="dialog"
       aria-modal="true"
       aria-labelledby="mobile-menu-title"
-      onClick={(e) => {
-        if ((e.target as HTMLElement).id !== 'mobile-menu') {
-          onClose();
-        }
-      }}
       style={backdropStyle} // Force solid black backdrop via inline style
     >
       <h2 id="mobile-menu-title" className="sr-only">Mobile navigation</h2>
@@ -108,7 +107,11 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           position: "absolute", 
           right: "1rem", 
           top: "1rem", 
-          zIndex: 100, 
+          zIndex: 100,
+          width: 44,
+          height: 44,
+          display: "grid",
+          placeItems: "center", 
           backgroundColor: "#f9fafb",
           color: "#374151"
         }}
@@ -120,10 +123,10 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       </button>
 
       {/* Menu Panel - Solid white background with X close button */}
-      <div className="relative h-full w-[85vw] max-w-xs flex flex-col sm:max-w-md" style={menuPanelStyle}>
+      <div className="flex min-h-full w-full flex-col" style={menuPanelStyle}>
         
         {/* Menu Items - All solid white backgrounds, absolutely forced via inline styles */}
-        <nav className="space-y-1 px-4 pt-0 pb-auto" aria-label="Mobile navigation">
+        <nav className="space-y-1 px-4 pt-16 pb-4" aria-label="Mobile navigation">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -138,7 +141,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
         </nav>
 
         {/* Contact CTA and copyright at bottom */}
-        <div className="absolute bottom-8 left-4 right-4">
+        <div className="mt-auto px-4 pb-8 pt-8">
           <Link
             href="/contact"
             onClick={onClose}
@@ -151,6 +154,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           </p>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

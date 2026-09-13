@@ -55,9 +55,6 @@ export default function ServicePage({ title, intro, audience, outcomes, steps, i
               height={image.height ?? 941}
               className="h-auto w-full"
             />
-            <figcaption className="bg-canvas px-4 py-3 text-xs leading-relaxed text-muted">
-              Conceptual visualization — not an actual 2Nspira client or engagement.
-            </figcaption>
           </figure>
         )}
 

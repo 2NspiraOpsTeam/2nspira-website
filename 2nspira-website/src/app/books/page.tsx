@@ -165,9 +165,6 @@ export default function BooksPage() {
               down and think clearly — the same quiet discipline that trusted,
               human-centered leadership requires.
             </p>
-            <p className={`mt-4 ${caption}`}>
-              Conceptual visualization — not an actual 2Nspira client or engagement.
-            </p>
           </div>
         </section>
       </div>
