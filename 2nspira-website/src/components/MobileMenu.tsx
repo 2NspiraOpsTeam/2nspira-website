@@ -1,17 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { useEffect, useRef } from "react";
-
-// Cache-bust key to force fresh asset loading
-const CACHE_BUST = "1726193800000_" + Math.random().toString(36).substr(2, 9);
 
 export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   
   // Force solid opaque styles via inline styles - these override ANY global CSS rules
-  const navLinkStyle = {
+  const navLinkStyle: CSSProperties = {
     backgroundColor: "#ffffff",
     backgroundImage: "none",
     opacity: 1,
@@ -20,14 +18,14 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
     boxSizing: "border-box"
   };
 
-  const menuPanelStyle = {
+  const menuPanelStyle: CSSProperties = {
     backgroundColor: "#ffffff",
     boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
     backdropFilter: "none",
     WebkitBackdropFilter: "none"
   };
 
-  const backdropStyle = {
+  const backdropStyle: CSSProperties = {
     backgroundColor: "#000000",
     opacity: 1,
     position: "absolute",
