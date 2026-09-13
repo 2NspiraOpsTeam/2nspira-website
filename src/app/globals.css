@@ -60,3 +60,23 @@ article {
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
+
+/* FORCE opaque backgrounds on mobile menu and all dialog content */
+@media (max-width: 768px) {
+  /* Override any backdrop-filter/blur on mobile modals/drawers */
+  dialog, .dialog, .drawer, .modal, [role='dialog'], .mobile-menu {\n    backdrop-filter: none !important;\n    -webkit-backdrop-filter: none !important;\n    background-color: rgba(255, 255, 255, 1) !important;\n    opacity: 1 !important;
+  }
+
+  /* Force solid backgrounds on all nav items inside mobile menus */
+  .mobile-menu nav a,\n  .mobile-menu div.nav-item,\n  .mobile-menu link[href],\n  [class*='mobile'] a,\n  [class*='drawer'] a {\n    background-color: rgba(255, 255, 255, 1) !important;\n    opacity: 1 !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Ensure no transparency anywhere in mobile overlays */
+  .fixed.inset-0[class*='mobile'],\n  .fixed[class*='drawer'] {\n    background-color: rgba(255, 255, 255, 1) !important;
+  }
+
+  /* White backgrounds for all mobile navigation sections */
+  [class*='nav-'][class*='mobile'] a,\n  nav[class*='mobile'] a,\n  .menu-nav a {\n    background-color: #ffffff !important;
+  }
+}
