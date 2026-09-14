@@ -97,11 +97,11 @@ export default function Home() {
             <figure
               className="hero-settle relative aspect-[4/5] overflow-hidden rounded-2xl border border-line shadow-soft lg:aspect-[4/5]"
               style={{ animationDelay: "220ms" }}
-              aria-label="People-centered technology planning"
+              aria-label="Strategy planning at the whiteboard"
             >
               <Image
-                src="/images/advisory/people-process-technology-v2.webp"
-                alt="Illustration of a team reviewing a workflow map and dashboard during a technology planning session."
+                src="/images/advisory/whiteboard-strategy-4x5.webp"
+                alt="A professional pointing at a whiteboard of charts and strategy notes while a client looks on."
                 fill
                 sizes="(min-width: 1152px) 461px, (min-width: 1024px) 42vw, calc(100vw - 32px)"
                 unoptimized
