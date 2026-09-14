@@ -36,5 +36,14 @@ export default function Page() { return <ServicePage {...{
   "image": {
     "src": "/images/advisory/focused-collaboration.webp",
     "alt": "Conceptual visualization of a focused collaboration session reviewing data and AI workflows."
+  },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "AI Enablement, Training & Governance Advisory",
+    description: "Move from fragmented AI experimentation to structured, responsible adoption. We help leaders build practical governance, equip their teams, and turn technology into operational capacity.",
+    url: "https://2nspira.com/ai-enablement",
+    provider: { "@id": "https://2nspira.com/#organization" },
+    areaServed: "Worldwide"
   }
 }} />; }

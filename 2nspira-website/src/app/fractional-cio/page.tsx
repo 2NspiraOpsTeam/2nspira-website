@@ -38,5 +38,14 @@ export default function Page() { return <ServicePage {...{
     "alt": "Conceptual visualization of a focused technology leader reviewing an operations dashboard.",
     "width": 600,
     "height": 674
+  },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Fractional CIO Advisory & Modernization Strategy",
+    description: "Stop managing complexity. Start leading with clarity. Get senior technology leadership to align investments with business outcomes, unify fragmented systems, and guide modernization without a full-time executive hire.",
+    url: "https://2nspira.com/fractional-cio",
+    provider: { "@id": "https://2nspira.com/#organization" },
+    areaServed: "Worldwide"
   }
 }} />; }

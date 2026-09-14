@@ -89,8 +89,24 @@ export default function ContactPage() {
     { q: "What regions do you serve?", a: "We work with organizations globally, with a focus on mission-driven institutions." },
   ];
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <main className={pageMain} id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <section className="border-b border-line bg-surface">
         <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
           <h1 id="contact-hero-heading" className="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Get in touch</h1>

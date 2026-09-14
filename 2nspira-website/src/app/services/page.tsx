@@ -61,6 +61,42 @@ const capabilities = [
   },
 ];
 
+const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://2nspira.com/services#ai-enablement",
+      name: "AI Enablement & Governance",
+      description:
+        "Pragmatic AI strategy and governance frameworks. We help organizations evaluate readiness, establish responsible workflows, and implement practical solutions.",
+      url: "https://2nspira.com/ai-enablement",
+      provider: { "@id": "https://2nspira.com/#organization" },
+      areaServed: "Worldwide",
+    },
+    {
+      "@type": "Service",
+      "@id": "https://2nspira.com/services#systems-optimization",
+      name: "Systems & Process Optimization",
+      description:
+        "Streamlined operations powered by appropriate technology. We identify friction points, design efficient workflows, and implement sustainable improvements.",
+      url: "https://2nspira.com/services",
+      provider: { "@id": "https://2nspira.com/#organization" },
+      areaServed: "Worldwide",
+    },
+    {
+      "@type": "Service",
+      "@id": "https://2nspira.com/services#fractional-leadership",
+      name: "Technology Transformation / Fractional Leadership",
+      description:
+        "Strategic technology leadership when you need it most. Fractional CIO guidance, architecture reviews, team enablement, and transformation pathways.",
+      url: "https://2nspira.com/fractional-cio",
+      provider: { "@id": "https://2nspira.com/#organization" },
+      areaServed: "Worldwide",
+    },
+  ],
+};
+
 const outcomes = [
   {
     title: "Clear Strategic Direction",
@@ -82,6 +118,12 @@ const outcomes = [
 export default function ServicesPage() {
   return (
     <main className={pageMain} id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       {/* Hero */}
       <section
         className="border-b border-line bg-surface py-24 sm:py-28"

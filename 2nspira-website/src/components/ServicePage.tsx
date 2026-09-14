@@ -25,11 +25,20 @@ type Props = {
     width?: number;
     height?: number;
   };
+  jsonLd?: Record<string, unknown>;
 };
 
-export default function ServicePage({ title, intro, audience, outcomes, steps, image }: Props) {
+export default function ServicePage({ title, intro, audience, outcomes, steps, image, jsonLd }: Props) {
   return (
     <main className={pageMain} id="main-content">
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
       <section className="border-b border-line bg-surface">
         <div className={pageHero}>
           <Link href="/services" className={linkInline}>

@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: `${siteName} | Human-centered technology transformation and practical AI adoption`,
     description: siteDescription,
   },
@@ -98,12 +98,32 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         url: "https://2nspira.com",
         description:
           "Human-centered technology transformation and practical AI adoption — specializing in AI enablement, systems optimization, and fractional technology leadership.",
+        email: "hello@2nspira.com",
+        telephone: "+1-646-543-0199",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "11215 72nd Rd",
+          addressLocality: "Forest Hills",
+          addressRegion: "NY",
+          addressCountry: "US",
+        },
         contactPoint: {
           "@type": "ContactPoint",
           email: "hello@2nspira.com",
           telephone: "+1-646-543-0199",
           contactType: "customer support",
         },
+        founder: {
+          "@type": "Person",
+          name: "Jeffrey Cortez",
+          sameAs: ["https://www.linkedin.com/in/jeffreyvcortez"],
+        },
+        sameAs: [
+          "https://www.linkedin.com/company/2nspira",
+          "https://www.instagram.com/2nspira/",
+          "https://www.youtube.com/@2Nspira",
+          "https://github.com/2NspiraOpsTeam",
+        ],
       },
       {
         "@type": "WebSite",
