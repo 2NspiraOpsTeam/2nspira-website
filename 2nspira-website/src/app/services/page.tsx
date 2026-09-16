@@ -60,7 +60,6 @@ export default function ServicesPage() {
                 Pragmatic AI strategy and governance frameworks. We help organizations evaluate readiness, establish responsible workflows, and implement practical solutions — not hype-driven pilots.
               </p>
               <ul className="mt-6 space-y-3 text-sm text-zinc-600 dark:text-zinc-400" aria-label="AI Enablement & Governance capabilities">
-                <li>• AI readiness assessment</li>
                 <li>• Governance frameworks</li>
                 <li>• Responsible implementation paths</li>
               </ul>

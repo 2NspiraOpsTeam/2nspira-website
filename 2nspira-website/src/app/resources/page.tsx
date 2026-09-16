@@ -20,7 +20,10 @@ export default function ResourcesPage() {
         </div>
       </section>
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6" aria-label="Featured assessments">
-        <div className="grid gap-8 md:grid-cols-2"><StrengthProfileCard /><AiReadinessCard /></div>
+        <div className="grid gap-8 md:grid-cols-2">
+          <StrengthProfileCard />
+          <AiReadinessCard />
+        </div>
         <div className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950 sm:p-8">
           <h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">Designed for practical use</h2>
           <p className="mt-4 leading-7 text-zinc-600 dark:text-zinc-300">Use these tools to support career reflection, coaching conversations, team development, and responsible AI planning. Each assessment gives you a starting point for a better conversation.</p>
