@@ -14,12 +14,18 @@
 - **Preview deploy command:** `npm run deploy:preview`
 - **Preview Worker:** `2nspira-website-preview` with no routes and `workers_dev` enabled
 
-Cloudflare Workers Builds is connected to the repository with preview builds enabled:
+Cloudflare Workers Builds uses two separate Git connections:
 
-- **Build command:** `npm run build:ci`
-- **Production deploy command:** `npm run deploy:production`
-- **Non-production version command:** `npm run deploy:preview`
-- **Root directory:** `/2nspira-website`
+- `2nspira-website`: production branch `main`, build `npm run build:ci`, deploy
+  `npm run deploy:production`, root `/2nspira-website`, and **non-production builds disabled**.
+- `2nspira-website-preview`: production branch `main`, build `npm run build:ci`, both
+  deploy/version commands `npm run deploy:preview`, root `/2nspira-website`, and
+  **non-production builds enabled**.
+
+Cloudflare Workers Builds pins the connected Worker name at runtime. A preview command
+on the production Worker is therefore unsafe even if its generated Wrangler config names
+`2nspira-website-preview`; branch builds belong only on the separately connected preview
+Worker.
 
 `deploy:production` hard-fails unless it is running in Cloudflare Workers Builds,
 the source branch is exactly `main`, and the built artifact contains the same full
