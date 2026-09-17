@@ -14,6 +14,13 @@
 - **Preview deploy command:** `npm run deploy:preview`
 - **Preview Worker:** `2nspira-website-preview` with no routes and `workers_dev` enabled
 
+Cloudflare Workers Builds is connected to the repository with preview builds enabled:
+
+- **Build command:** `npm run build:ci`
+- **Production deploy command:** `npm run deploy:production`
+- **Non-production version command:** `npm run deploy:preview`
+- **Root directory:** `/2nspira-website`
+
 `deploy:production` hard-fails unless it is running in Cloudflare Workers Builds,
 the source branch is exactly `main`, and the built artifact contains the same full
 commit SHA supplied by Cloudflare. Local production deployment is intentionally
@@ -35,7 +42,7 @@ unsupported.
    EXPECTED_SHA="$(git rev-parse origin/main)"
    LIVE_SHA="$(curl -fsS https://2nspira.com/deployment.json | jq -r .commit)"
    test "$LIVE_SHA" = "$EXPECTED_SHA"
-   curl -fsSI https://2nspira.com/ | rg "^x-deployment-commit: $EXPECTED_SHA$"
+   curl -fsSI https://2nspira.com/deployment.json | rg -i "^x-deployment-commit: $EXPECTED_SHA$"
    ```
 
 Any mismatch between live and `origin/main` is a deployment incident. Stop releases,
