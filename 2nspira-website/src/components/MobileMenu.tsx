@@ -1,13 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import type { CSSProperties } from "react";
-import { useEffect, useRef } from "react";
+import type { CSSProperties, KeyboardEvent as ReactKeyboardEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const ideasButtonRef = useRef<HTMLButtonElement>(null);
+  const [isIdeasOpen, setIsIdeasOpen] = useState(false);
   
   // Force solid opaque styles via inline styles - these override ANY global CSS rules
   const navLinkStyle: CSSProperties = {
@@ -36,34 +38,54 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
     zIndex: 1000
   };
 
-  const navLinks = [
+  const primaryLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
+    { name: "Work", href: "/websites" },
+  ];
+
+  const secondaryLinks = [
     { name: "About", href: "/about" },
-    { name: "Insights", href: "/insights" },
-    { name: "Resources", href: "/resources" },
-    { name: "Books", href: "/books" },
     { name: "Contact", href: "/contact" },
   ];
+
+  const ideaLinks = [
+    { name: "Books", href: "/books" },
+    { name: "Insights", href: "/insights" },
+    { name: "Resources", href: "/resources" },
+  ];
+
+  const handleClose = () => {
+    setIsIdeasOpen(false);
+    onClose();
+  };
+
+  const handleDialogKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (event.key !== "Escape") return;
+    event.preventDefault();
+
+    if (isIdeasOpen) {
+      setIsIdeasOpen(false);
+      ideasButtonRef.current?.focus();
+      return;
+    }
+
+    onClose();
+  };
 
   useEffect(() => {
     if (!isOpen || !dialogRef.current) return;
 
     const previouslyFocused = document.activeElement as HTMLElement | null;
-    const focusableElements = dialogRef.current.querySelectorAll<HTMLElement>(
-      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
-    );
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
-
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        event.preventDefault();
-        onClose();
-        return;
-      }
+      if (event.key !== "Tab" || !dialogRef.current) return;
 
-      if (event.key !== "Tab" || !firstElement || !lastElement) return;
+      const focusableElements = dialogRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      );
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+      if (!firstElement || !lastElement) return;
 
       if (event.shiftKey && document.activeElement === firstElement) {
         event.preventDefault();
@@ -95,6 +117,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       role="dialog"
       aria-modal="true"
       aria-labelledby="mobile-menu-title"
+      onKeyDown={handleDialogKeyDown}
       style={backdropStyle} // Force solid black backdrop via inline style
     >
       <h2 id="mobile-menu-title" className="sr-only">Mobile navigation</h2>
@@ -102,7 +125,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
       {/* X Close Button - Top Right */}
       <button
         ref={closeButtonRef}
-        onClick={(e) => { e.preventDefault(); onClose(); }}
+        onClick={(e) => { e.preventDefault(); handleClose(); }}
         style={{ 
           position: "absolute", 
           right: "1rem", 
@@ -127,13 +150,66 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
         
         {/* Menu Items - All solid white backgrounds, absolutely forced via inline styles */}
         <nav className="space-y-1 px-4 pt-16 pb-4" aria-label="Mobile navigation">
-          {navLinks.map((link) => (
+          {primaryLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              onClick={onClose}
+              onClick={handleClose}
               style={navLinkStyle} // Force solid white via inline style
-              className="block rounded-xl px-4 py-3.5 text-lg font-medium text-gray-900 focus:outline-none"
+              className="block rounded-xl px-4 py-3.5 text-lg font-medium text-gray-900 transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              {link.name}
+            </Link>
+          ))}
+
+          <button
+            ref={ideasButtonRef}
+            type="button"
+            onClick={() => setIsIdeasOpen((open) => !open)}
+            aria-expanded={isIdeasOpen}
+            aria-controls="mobile-ideas-navigation"
+            style={navLinkStyle}
+            className="flex w-full items-center justify-between rounded-xl px-4 py-3.5 text-left text-lg font-medium text-gray-900 transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          >
+            Ideas
+            <svg
+              className={`h-5 w-5 transition-transform duration-200 ${isIdeasOpen ? "rotate-180" : ""}`}
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <div
+            id="mobile-ideas-navigation"
+            className={isIdeasOpen ? "space-y-1 pb-1 pl-4" : "hidden"}
+          >
+            {ideaLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={handleClose}
+                style={navLinkStyle}
+                className="flex min-h-[48px] items-center rounded-xl px-4 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          {secondaryLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={handleClose}
+              style={navLinkStyle}
+              className="block rounded-xl px-4 py-3.5 text-lg font-medium text-gray-900 transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               {link.name}
             </Link>
@@ -144,7 +220,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
         <div className="mt-auto px-4 pb-8 pt-8">
           <Link
             href="/contact"
-            onClick={onClose}
+            onClick={handleClose}
             className="block rounded-xl bg-blue-600 px-4 py-3.5 text-center text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-300 ease-gentle mb-6"
           >
             Start a conversation →
