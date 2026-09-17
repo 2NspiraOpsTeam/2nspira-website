@@ -4,10 +4,6 @@ import { fileURLToPath } from "node:url";
 
 // An isolated Worker: never attach production routes or change DNS.
 const root = fileURLToPath(new URL("../", import.meta.url));
-const branch = process.env.WORKERS_CI_BRANCH ?? "local-preview";
-if (branch === "main") {
-  throw new Error("Preview deployment refused: main may deploy only through deploy:production.");
-}
 
 const configPath = new URL("../dist/server/wrangler.json", import.meta.url);
 await access(configPath).catch(() => {
