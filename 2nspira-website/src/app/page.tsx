@@ -1,179 +1,218 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Reveal from "@/components/Reveal";
+import Link from "next/link";
+import {
+  buttonPrimary,
+  buttonSecondary,
+  card,
+  cardFlat,
+  caption,
+  eyebrow,
+  h2,
+  h3,
+  lead,
+  pageMain,
+  section,
+  sectionBand,
+} from "@/components/ui";
 
 export default function Home() {
+  const services = [
+    {
+      title: "AI Enablement & Governance",
+      description:
+        "Pragmatic AI strategy and governance frameworks for responsible implementation — readiness, guardrails, and workflows your people will actually use.",
+      benefit: "Outcome: a clear, responsible path to AI adoption your teams can follow.",
+      href: "/ai-enablement",
+      linkLabel: "Explore AI enablement",
+    },
+    {
+      title: "Systems & Process Optimization",
+      description:
+        "Streamlined operations powered by appropriate technology — mapping friction, designing efficient workflows, and building sustainable improvements.",
+      benefit: "Outcome: less friction in day-to-day operations, and processes that hold up over time.",
+      href: null,
+      linkLabel: null,
+    },
+    {
+      title: "Technology Leadership",
+      description:
+        "Fractional CTO guidance, architecture reviews, and transformation pathways that align technology investment with business outcomes.",
+      benefit: "Outcome: technology decisions that follow your business priorities, not the other way around.",
+      href: "/fractional-cio",
+      linkLabel: "Explore fractional leadership",
+    },
+  ];
+
+  const values = [
+    { title: "People First", text: "Technology serves people, never the reverse." },
+    { title: "Process Clarity", text: "Work flows your team can follow without a manual." },
+    { title: "Data Integrity", text: "Decisions grounded in information you can trust." },
+    { title: "Practical AI", text: "Adoption measured in outcomes, not pilots." },
+  ];
+
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Background Image - High Resolution, No Lazy Load */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ 
-            backgroundImage: 'linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url("/hero-human-warmth.jpg")' 
-          }}
-        />
-        
-        {/* Content */}
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <p className="text-gray-300 text-lg md:text-xl font-medium mb-3">
-            For leaders of small and mission-driven organizations
-          </p>
-          
-          <h1 className="text-white text-4xl md:text-6xl font-bold mb-4 tracking-tight">
-            Human-centered technology transformation and practical AI adoption
-          </h1>
-          
-          <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
-            2Nspira helps you turn technology change into durable outcomes — practical AI enablement, process optimization, and fractional technology leadership, built so your teams trust their systems instead of managing them.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-enablement"
-              className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+    <main className={pageMain} id="main-content">
+      {/* Hero — B2 Split Advisory prototype (WAVE3-B2-STATIC-HERO) */}
+      {/* Reversible design checkpoint; no motion; conceptual visual slot per Maya's spec. */}
+      <section
+        className="py-24 sm:py-32"
+        aria-labelledby="hero-heading"
+        data-prototype="B2-SPLIT-ADVISORY"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[55fr_45fr] lg:items-center lg:gap-16">
+            {/* Left: typography / value proposition */}
+            <div>
+              <p className={`animate-rise ${eyebrow}`} style={{ animationDelay: "60ms" }}>
+                For leaders of small and mission-driven organizations
+              </p>
+              <h1
+                id="hero-heading"
+                className="animate-rise mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-6xl"
+                style={{ animationDelay: "140ms" }}
+              >
+                Technology that works the way your people do.
+              </h1>
+              <p className={`animate-rise mt-6 max-w-2xl ${lead}`} style={{ animationDelay: "240ms" }}>
+                2Nspira helps you turn technology change into durable outcomes —
+                practical AI enablement, process optimization, and fractional
+                technology leadership, built so your teams trust their systems
+                instead of managing them.
+              </p>
+              <div
+                className="animate-rise mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-x-6"
+                style={{ animationDelay: "340ms" }}
+              >
+                <Link href="/contact" className={buttonPrimary}>
+                  Start a conversation <span aria-hidden="true">→</span>
+                </Link>
+                <Link href="/services" className={buttonSecondary}>
+                  Explore our services
+                </Link>
+              </div>
+            </div>
+
+            {/* Portrait composition keeps the people and workflow visible at every breakpoint. */}
+            <figure
+              className="hero-settle relative aspect-[4/5] overflow-hidden rounded-2xl border border-line shadow-soft lg:aspect-[4/5]"
+              style={{ animationDelay: "220ms" }}
+              aria-label="Strategy planning at the whiteboard"
             >
-              Explore AI enablement
-            </Link>
-            
-            <Link 
-              href="/fractional-cio"
-              className="inline-flex items-center justify-center px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+              <Image
+                src="/images/advisory/whiteboard-strategy-4x5.webp"
+                alt="A professional pointing at a whiteboard of charts and strategy notes while a client looks on."
+                fill
+                sizes="(min-width: 1152px) 461px, (min-width: 1024px) 42vw, calc(100vw - 32px)"
+                unoptimized
+                fetchPriority="high"
+                className="object-cover object-center"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities */}
+      <section
+        className={sectionBand}
+        aria-labelledby="services-heading"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 id="services-heading" className={h2}>
+              What we do
+            </h2>
+            <p className={`mt-4 max-w-2xl ${lead}`}>
+              Three integrated capabilities designed to work together or
+              independently.
+            </p>
+          </Reveal>
+
+          <Reveal delay={120} className="mt-14">
+            <div className="grid gap-6 md:grid-cols-3">
+            {services.map((feature) => (
+              <article
+                key={feature.title}
+                className={`flex flex-col p-8 ${card}`}
+              >
+                <h3 className={h3}>{feature.title}</h3>
+                <p className={`mt-3 flex-1 text-sm leading-7 text-body`}>
+                  {feature.description}
+                </p>
+                <p className="mt-3 text-sm font-medium leading-6 text-ink">
+                  {feature.benefit}
+                </p>
+                {feature.href && feature.linkLabel && (
+                  <Link
+                    href={feature.href}
+                    className="mt-6 inline-flex items-center rounded text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors duration-300 ease-gentle hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+                  >
+                    {feature.linkLabel} <span aria-hidden="true">→</span>
+                  </Link>
+                )}
+              </article>
+            ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section className={section} aria-labelledby="approach-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 id="approach-heading" className={h2}>
+              Our approach
+            </h2>
+            <p className={`mt-6 max-w-2xl ${lead}`}>
+              Technology must serve people — not the other way around. Our
+              human-centered philosophy ensures that AI systems, workflow changes,
+              and technology implementations are designed for actual use.
+            </p>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div
+              className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+              role="list"
+              aria-label="Our core values"
             >
-              Explore fractional leadership
+            {values.map((value) => (
+              <div key={value.title} className={`p-6 ${cardFlat}`} role="listitem">
+                <p className="text-base font-semibold text-ink">{value.title}</p>
+                <p className={`mt-2 ${caption}`}>{value.text}</p>
+              </div>
+            ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={200} className="mt-12">
+            <Link href="/about" className={buttonSecondary}>
+              Learn more about 2Nspira <span aria-hidden="true">→</span>
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-            What we do
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* AI Enablement */}
-            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-              <Link href="/ai-enablement" className="block group">
-                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-3">
-                  AI Enablement & Governance
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Pragmatic AI strategy and governance frameworks for responsible implementation — readiness, guardrails, and workflows your people will actually use.
-                </p>
-                <div className="flex items-center text-blue-600 font-medium">
-                  Outcome: a clear, responsible path to AI adoption your teams can follow.
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
+      {/* CTA */}
+      <section className={sectionBand} aria-labelledby="cta-heading">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+          <Reveal>
+            <h2 id="cta-heading" className={h2}>
+              Ready to explore how 2Nspira can help?
+            </h2>
+            <p className={`mx-auto mt-6 max-w-xl ${lead}`}>
+              Schedule a discovery call. No commitments required.
+            </p>
+            <div className="mt-10 flex justify-center">
+              <Link href="/contact" className={buttonPrimary}>
+                Get in touch
               </Link>
             </div>
-
-            {/* Systems & Process */}
-            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-              <Link href="/systems-process" className="block group">
-                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-3">
-                  Systems & Process Optimization
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Streamlined operations powered by appropriate technology — mapping friction, designing efficient workflows, and building sustainable improvements.
-                </p>
-                <div className="flex items-center text-blue-600 font-medium">
-                  Outcome: less friction in day-to-day operations, and processes that hold up over time.
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </Link>
-            </div>
-
-            {/* Technology Leadership */}
-            <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-              <Link href="/fractional-cio" className="block group">
-                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-3">
-                  Technology Leadership
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Fractional CTO guidance, architecture reviews, and transformation pathways that align technology investment with business outcomes.
-                </p>
-                <div className="flex items-center text-blue-600 font-medium">
-                  Outcome: technology decisions that follow your business priorities, not the other way around.
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </Link>
-            </div>
-          </div>
+          </Reveal>
         </div>
       </section>
-
-      {/* Our Approach Section */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-            Our approach
-          </h2>
-          
-          <p className="text-xl text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-            Technology must serve people — not the other way around. Our human-centered philosophy ensures that AI systems, workflow changes, and technology implementations are designed for actual use.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            {/* People First */}
-            <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">People First</h3>
-              <p className="text-gray-600">Technology serves people, never the reverse.</p>
-            </div>
-
-            {/* Process Clarity */}
-            <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Process Clarity</h3>
-              <p className="text-gray-600">Work flows your team can follow without a manual.</p>
-            </div>
-
-            {/* Data Integrity */}
-            <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 12c0 5.591 3.898 10.29 9 11.622V21M7.29 21h15.42M9 12h6" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Integrity</h3>
-              <p className="text-gray-600">Decisions grounded in information you can trust.</p>
-            </div>
-
-            {/* Practical AI */}
-            <div>
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Practical AI</h3>
-              <p className="text-gray-600">Solutions that solve real problems today.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 bg-gray-900 text-center text-gray-400 text-sm">
-        © 2026 2Nspira. All rights reserved.
-      </footer>
-    </div>
+    </main>
   );
 }

@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 2Nspira Website
 
-## Getting Started
+Next.js 16 (App Router) + React 19 + Tailwind CSS 4, deployed to Cloudflare Workers via **vinext**.
 
-First, run the development server:
+## Canonical commands (Cloudflare / vinext path)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev:vinext      # local dev on :3001
+npm run build:vinext    # production build → dist/
+npm run start:vinext    # run the built worker locally (wrangler dev)
+npm run verify:release  # clean/pushed/up-to-date branch + lint/build/typecheck
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Why `npm run build` (plain `next build`) fails — known & expected
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project targets the Cloudflare Workers runtime, and `src/app/api/contact/route.ts`
+imports the vinext virtual module `cloudflare:workers` (injected at the historical
+starting SHA `7b52268`). Plain `next build` cannot resolve that module and aborts
+during page-data collection with:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+Error: Failed to load external module cloudflare:workers
+Cannot find module 'cloudflare:workers'
+```
 
-## Learn More
+This is **not a regression** — the failure exists at `7b52268` as well. The canonical
+build is `npm run build:vinext`, which resolves the module through vinext's
+Cloudflare plugin and completes successfully (all 21 routes). The plain
+`build`/`dev`/`start` scripts are legacy from `create-next-app` and are not part of
+the deployment path. Do not "fix" the failure by removing the `cloudflare:workers`
+import — the contact relay depends on it.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Script | Purpose |
+|---|---|
+| `dev:vinext` | Local dev server (port 3001) |
+| `build:vinext` | Production build (canonical) |
+| `start:vinext` | Local worker run from `dist/server` |
+| `build:ci` | Build with an embedded source commit (`deployment.json`) |
+| `deploy:production` | Guarded Cloudflare production deploy; Workers Builds + `main` only |
+| `deploy:preview` | Route-free, noindex deployment to the preview Worker |
+| `verify:release` | Local pre-merge release checks on a pushed feature branch |
+| `lint` | ESLint |
+| `typecheck` | `tsc --noEmit` (add as script when desired) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Note: run `npm run build:vinext` before `tsc` on a clean checkout — vinext
+regenerates `.next/types` (the typecheck includes `.next/types/**/*.ts`). A stale
+Next-generated `validator.ts` from a plain `next build` attempt will not match the
+vinext layout and reports spurious `AppRoutes`/`LayoutRoutes` errors.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Production is Git-driven. Do not run `wrangler deploy`, `vinext-cloudflare deploy`,
+or a production deploy from a local checkout. See [DEPLOYMENT.md](DEPLOYMENT.md).

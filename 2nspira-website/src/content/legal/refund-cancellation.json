@@ -1,0 +1,174 @@
+{
+  "source": "https://2nspira.com/refund-cancellation",
+  "retrieved": "2026-09-09",
+  "blocks": [
+    {
+      "tag": "h1",
+      "text": "Refund and Cancellation Policy"
+    },
+    {
+      "tag": "p",
+      "text": "Effective Date: 1/1/2025"
+    },
+    {
+      "tag": "p",
+      "text": "Last Updated: 10/5/2025"
+    },
+    {
+      "tag": "p",
+      "text": "At 2nspira LLC, we strive to deliver exceptional value through our consulting, development, and AI integration services. We understand that circumstances may change, and we aim to make our refund and cancellation process clear, fair, and transparent."
+    },
+    {
+      "tag": "h2",
+      "text": "1. Scope"
+    },
+    {
+      "tag": "p",
+      "text": "This policy applies to all purchases, subscriptions, and bookings made through our website or directly with 2nspira LLC. It covers one-time service engagements, packaged solutions, and recurring service subscriptions."
+    },
+    {
+      "tag": "h2",
+      "text": "2. Workshops & Booked Sessions (e.g., AI Enablement)"
+    },
+    {
+      "tag": "h3",
+      "text": "2.1 Cancellations"
+    },
+    {
+      "tag": "p",
+      "text": "Clients may cancel or reschedule booked sessions up to 24 hours before the scheduled time without penalty."
+    },
+    {
+      "tag": "p",
+      "text": "Cancellations made within 24 hours may be subject to a 50% cancellation fee to compensate for time reserved and preparation work completed."
+    },
+    {
+      "tag": "p",
+      "text": "If 2nspira LLC must reschedule a service due to unforeseen circumstances, we will notify clients promptly and offer an alternative time at no additional cost."
+    },
+    {
+      "tag": "h3",
+      "text": "2.2 No-Shows"
+    },
+    {
+      "tag": "p",
+      "text": "Failure to attend a booked session without prior notice (“no-show”) will result in the session being considered fulfilled and is non-refundable."
+    },
+    {
+      "tag": "h3",
+      "text": "3. Retainer & Subscription Services (e.g., Fractional CTO)"
+    },
+    {
+      "tag": "p",
+      "text": "For recurring service subscriptions (e.g., monthly support, training, or optimization plans):"
+    },
+    {
+      "tag": "li",
+      "text": "Subscriptions renew automatically unless canceled before the next billing cycle."
+    },
+    {
+      "tag": "li",
+      "text": "Clients may cancel at any time by contacting hello@2nspira.com or through their account portal (if available)."
+    },
+    {
+      "tag": "li",
+      "text": "Cancellation stops future charges but does not retroactively refund completed services or partially used periods."
+    },
+    {
+      "tag": "h3",
+      "text": "4. Custom Development Projects (e.g., Claris FileMaker)"
+    },
+    {
+      "tag": "p",
+      "text": "Due to the personalized nature of our consulting, Claris FileMaker development, and AI Integration projects:"
+    },
+    {
+      "tag": "li",
+      "text": "Deposits and milestone payments are non-refundable once project work begins."
+    },
+    {
+      "tag": "li",
+      "text": "Refunds are not issued for work already completed, delivered, or approved."
+    },
+    {
+      "tag": "li",
+      "text": "In cases of early termination, we will bill only for work performed and costs incurred up to the termination date."
+    },
+    {
+      "tag": "p",
+      "text": "Each Statement of Work (SOW) or proposal outlines specific payment terms, deliverables, and approval milestones."
+    },
+    {
+      "tag": "h3",
+      "text": "5. Digital Materials & Training Resources"
+    },
+    {
+      "tag": "p",
+      "text": "For digital downloads, templates, or AI training materials:"
+    },
+    {
+      "tag": "li",
+      "text": "All sales are final once access or delivery has been granted."
+    },
+    {
+      "tag": "li",
+      "text": "If a technical issue prevents access, we will provide reasonable support to restore access or reissue materials."
+    },
+    {
+      "tag": "h3",
+      "text": "6. Refund Requests"
+    },
+    {
+      "tag": "p",
+      "text": "All refund requests must be submitted in writing to hello@2nspira.com within 10 business days of the original purchase or scheduled service date."
+    },
+    {
+      "tag": "p",
+      "text": "Each request will be reviewed on a case-by-case basis. Approved refunds will be processed to the original payment method within 7–10 business days."
+    },
+    {
+      "tag": "h3",
+      "text": "7. Exceptions and Discretion"
+    },
+    {
+      "tag": "p",
+      "text": "2nspira LLC reserves the right to make exceptions or provide partial credits at its discretion in cases of documented hardship, system errors, or extraordinary circumstances."
+    },
+    {
+      "tag": "h3",
+      "text": "8. Contact Us"
+    },
+    {
+      "tag": "p",
+      "text": "If you have questions about this Refund and Cancellation Policy or wish to request a refund, please contact:"
+    },
+    {
+      "tag": "p",
+      "text": "2nspira LLC"
+    },
+    {
+      "tag": "p",
+      "text": "Address: 11215 72nd Rd"
+    },
+    {
+      "tag": "p",
+      "text": "Forest Hills, NY 11375"
+    },
+    {
+      "tag": "p",
+      "text": "📧 Email: hello@2nspira.com"
+    },
+    {
+      "tag": "p",
+      "text": "📞 Phone: 646-543-0199"
+    },
+    {
+      "tag": "h3",
+      "text": "9. Policy Changes"
+    },
+    {
+      "tag": "p",
+      "text": "We may update this policy periodically to reflect business, legal, or operational changes. Updates will be posted with a revised “Last Updated” date. Continued use of our website or services after updates constitutes acceptance of the revised terms."
+    }
+  ]
+}
