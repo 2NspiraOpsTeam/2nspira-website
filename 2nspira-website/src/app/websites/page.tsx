@@ -191,9 +191,96 @@ export default function WebsitesPage() {
             Work we’ve shipped
           </h2>
           <p className={`mt-4 max-w-2xl ${lead}`}>
-            Live projects built for clients — click through and explore them
-            yourself.
+            Selected live projects plus an anonymized enterprise operations pilot.
           </p>
+
+          <article
+            id="manufacturing-pilot"
+            className="mt-12 overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.10)]"
+            aria-labelledby="manufacturing-pilot-heading"
+          >
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
+              <div className="bg-ink p-8 text-white sm:p-10 lg:p-12">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/65">
+                  Featured enterprise pilot · Client anonymized
+                </p>
+                <h3
+                  id="manufacturing-pilot-heading"
+                  className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl"
+                >
+                  Manufacturing Operations Command Center
+                </h3>
+                <p className="mt-5 text-base leading-8 text-white/75">
+                  A custom operations platform designed to replace fragmented paper
+                  logs and spreadsheets with one shared view of production,
+                  inventory, quality, and equipment readiness.
+                </p>
+                <div className="mt-8 rounded-2xl border border-white/15 bg-white/10 p-5">
+                  <p className="text-sm font-semibold text-white">The operating challenge</p>
+                  <p className="mt-2 text-sm leading-7 text-white/70">
+                    Critical information lived across disconnected tools, limiting
+                    visibility between the production floor, operations managers,
+                    and leadership.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-8 sm:p-10 lg:p-12">
+                <p className={eyebrow}>What the pilot brings together</p>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  {[
+                    {
+                      number: "01",
+                      title: "Production visibility",
+                      text: "A shared view of work in progress, priorities, blockers, and completion status.",
+                    },
+                    {
+                      number: "02",
+                      title: "Inventory & maintenance",
+                      text: "Stock awareness, reorder signals, equipment schedules, and service history in one workflow.",
+                    },
+                    {
+                      number: "03",
+                      title: "Quality traceability",
+                      text: "Consistent digital records for issues, supporting evidence, ownership, and follow-through.",
+                    },
+                    {
+                      number: "04",
+                      title: "Role-based decisions",
+                      text: "Focused views for frontline teams, managers, and executives without duplicating data.",
+                    },
+                  ].map((item) => (
+                    <div key={item.number} className="rounded-2xl border border-line bg-surface p-5">
+                      <p className="text-xs font-semibold tracking-[0.2em] text-accent">
+                        {item.number}
+                      </p>
+                      <h4 className="mt-3 font-semibold text-ink">{item.title}</h4>
+                      <p className="mt-2 text-sm leading-6 text-body">{item.text}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 border-t border-line pt-6">
+                  <p className="text-sm font-semibold text-ink">Enterprise design principles</p>
+                  <ul className="mt-3 flex flex-wrap gap-2" aria-label="Enterprise design principles">
+                    {["Role-based access", "Audit-ready records", "Modular integrations", "Phased rollout"].map(
+                      (item) => (
+                        <li
+                          key={item}
+                          className="rounded-full border border-line bg-canvas-deep px-3 py-1.5 text-xs font-medium text-body"
+                        >
+                          {item}
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                  <p className={`mt-5 ${caption}`}>
+                    Client identity and confidential operational details are intentionally omitted.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {showcase.map((site) => (
