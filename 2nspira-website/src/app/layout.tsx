@@ -66,13 +66,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/logo/favicon-16.png", sizes: "16x16", type: "image/png" },
-      { url: "/images/logo/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/images/logo/favicon-48.png", sizes: "48x48", type: "image/png" },
-      { url: "/images/logo/favicon-64.png", sizes: "64x64", type: "image/png" },
-      { url: "/images/logo/favicon.ico", type: "image/x-icon" },
+      { url: "/images/logo/favicon-transparent-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/logo/favicon-transparent-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/logo/favicon-transparent-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/images/logo/favicon-transparent-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/images/logo/favicon-transparent.ico", type: "image/x-icon" },
     ],
-    apple: "/images/logo/apple-touch-icon.png",
+    apple: "/images/logo/apple-touch-icon-transparent.png",
   },
   robots: {
     index: true,
