@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Our three integrated capabilities: AI Enablement & Governance, Systems & Process Optimization, and Technology Transformation / Fractional Leadership.",
+    "Our four integrated capabilities: AI Enablement & Governance, Systems & Process Optimization, Websites & Web Applications, and Technology Transformation / Fractional Leadership.",
   alternates: {
     canonical: "/services",
   },
@@ -44,12 +44,33 @@ const capabilities = [
       "Streamlined operations powered by appropriate technology. We identify friction points, design efficient workflows, and implement sustainable improvements.",
     benefit:
       "You get: less friction in daily operations, and processes that keep working after the project ends.",
-    points: ["Process mapping & optimization", "Workflow automation", "Integration architecture"],
+    points: [
+      "Process mapping & optimization",
+      "Workflow automation",
+      "Integration architecture",
+      "Build vs. buy guidance",
+    ],
     href: null,
     linkLabel: null,
   },
   {
     id: "service-heading-3",
+    title: "Websites & Web Applications",
+    description:
+      "Websites and web applications that work for your business — from bilingual marketing sites to internal tools. We give you an honest build-vs-buy recommendation before anything is spent.",
+    benefit:
+      "You get: a site or tool that reflects how your business actually operates — and stays maintainable after the project ends.",
+    points: [
+      "Websites & marketing sites",
+      "Web applications & internal tools",
+      "Build vs. buy guidance",
+      "Performance, SEO & accessibility",
+    ],
+    href: "/websites",
+    linkLabel: "See what we've built",
+  },
+  {
+    id: "service-heading-4",
     title: "Technology Transformation / Fractional Leadership",
     description:
       "Strategic technology leadership when you need it most. Fractional CTO guidance, architecture reviews, team enablement, and transformation pathways.",
@@ -81,6 +102,16 @@ const servicesJsonLd = {
       description:
         "Streamlined operations powered by appropriate technology. We identify friction points, design efficient workflows, and implement sustainable improvements.",
       url: "https://2nspira.com/services",
+      provider: { "@id": "https://2nspira.com/#organization" },
+      areaServed: "Worldwide",
+    },
+    {
+      "@type": "Service",
+      "@id": "https://2nspira.com/services#websites",
+      name: "Websites & Web Applications",
+      description:
+        "We design and build websites and web applications that work for your business — from bilingual marketing sites to internal tools. Includes an honest build-vs-buy recommendation before any spend.",
+      url: "https://2nspira.com/websites",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
     },
@@ -173,11 +204,11 @@ export default function ServicesPage() {
             Core Capabilities
           </h2>
           <p className={`mt-4 max-w-2xl ${lead}`}>
-            Three integrated capabilities designed to work together or
+            Four integrated capabilities designed to work together or
             independently.
           </p>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {capabilities.map((item) => (
               <article
                 key={item.id}

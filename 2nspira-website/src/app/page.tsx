@@ -35,6 +35,15 @@ export default function Home() {
       linkLabel: null,
     },
     {
+      title: "Websites & Web Applications",
+      description:
+        "We design and build websites and web applications that work for your business — from bilingual marketing sites to internal tools, with an honest build-vs-buy call before you spend.",
+      benefit:
+        "Outcome: a site or tool that reflects how your business actually operates — and stays maintainable.",
+      href: "/websites",
+      linkLabel: "See what we've built",
+    },
+    {
       title: "Technology Leadership",
       description:
         "Fractional CTO guidance, architecture reviews, and transformation pathways that align technology investment with business outcomes.",
@@ -124,13 +133,13 @@ export default function Home() {
               What we do
             </h2>
             <p className={`mt-4 max-w-2xl ${lead}`}>
-              Three integrated capabilities designed to work together or
+              Four integrated capabilities designed to work together or
               independently.
             </p>
           </Reveal>
 
           <Reveal delay={120} className="mt-14">
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((feature) => (
               <article
                 key={feature.title}
