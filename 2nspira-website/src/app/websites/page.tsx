@@ -1,0 +1,332 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  buttonPrimary,
+  card,
+  cardFlat,
+  caption,
+  eyebrow,
+  h2,
+  h3,
+  lead,
+  linkInline,
+  pageMain,
+  section,
+  sectionBand,
+} from "@/components/ui";
+
+export const metadata: Metadata = {
+  title: "Websites & Web Applications",
+  description:
+    "We design and build websites and web applications that work for your business — from bilingual marketing sites to internal tools. See the work we've shipped for clients.",
+  alternates: {
+    canonical: "/websites",
+  },
+};
+
+const capabilities = [
+  {
+    title: "Websites & marketing sites",
+    text: "Clean, fast, accessible sites that communicate clearly and convert visitors — built to be simple to update and easy to maintain.",
+  },
+  {
+    title: "Web applications",
+    text: "Purpose-built tools for real workflows — trackers, dashboards, and internal systems designed around how your team actually works.",
+  },
+  {
+    title: "Build vs. buy guidance",
+    text: "An honest assessment of whether to build a custom solution or buy an existing one — so you spend budget where it earns its keep.",
+  },
+  {
+    title: "Performance, SEO & accessibility",
+    text: "Fast load times, structured data, and accessible markup — engineered so the site stays healthy long after launch.",
+  },
+];
+
+const outcomes = [
+  "A site or tool that reflects how your business actually operates.",
+  "A clear build-vs-buy recommendation before any spend is committed.",
+  "Systems and code that stay maintainable after the project ends.",
+  "Performance and search visibility handled from day one.",
+];
+
+const steps = [
+  {
+    title: "Understand the job",
+    text: "We start with the audience, the workflow, and the outcome the site or tool has to deliver.",
+  },
+  {
+    title: "Build it right",
+    text: "Clean architecture, structured content, and the performance and accessibility fundamentals baked in — not retrofitted.",
+  },
+  {
+    title: "Verify and hand over",
+    text: "We test real user flows, confirm live behavior, and hand over something your team can update without fear.",
+  },
+];
+
+type ShowcaseSite = {
+  name: string;
+  url: string;
+  tag: string;
+  description: string;
+  scope: string[];
+};
+
+const showcase: ShowcaseSite[] = [
+  {
+    name: "2Nspira",
+    url: "https://2nspira.com",
+    tag: "Services & advisory",
+    description:
+      "A consulting and think-tank site for technology leadership, AI readiness, and responsible AI enablement — with a resource library, insights, and assessment tools.",
+    scope: ["Marketing site", "Resource library", "Assessment tools", "Structured data & SEO"],
+  },
+  {
+    name: "CalmLoop",
+    url: "https://calmloop.vercel.app",
+    tag: "Consumer web app",
+    description:
+      "A fast, low-pressure companion for families supporting autistic and neurodivergent children — gentle routine suggestions built around how a moment is feeling right now.",
+    scope: ["Web app", "Family-focused UX", "Sensory-aware design", "Free to run & maintain"],
+  },
+  {
+    name: "Breadcrumb",
+    url: "https://breadcrumb-challenge.vercel.app",
+    tag: "Interactive experience",
+    description:
+      "A zero-cost interactive OSINT challenge game — plain HTML, CSS, and JavaScript engineered to run anywhere without a server or database.",
+    scope: ["Interactive game", "Zero-infrastructure hosting", "Performance-focused build"],
+  },
+  {
+    name: "GeVitals",
+    url: "https://gevitals-website.jcortez-36a.workers.dev",
+    tag: "Bilingual professional site",
+    description:
+      "A fully bilingual (ES/EN) practice website for a naturopathic clinic in Santo Domingo, Dominican Republic — content migrated from a prior platform, with videos, blog, and local-search optimization.",
+    scope: ["Bilingual site (ES/EN)", "Content migration", "Video showcase", "Local SEO"],
+  },
+  {
+    name: "Open Goal Soccer",
+    url: "https://opengoalsoccer.com",
+    tag: "Mission-driven archival site",
+    description:
+      "A preserved and modernized digital home for an inclusive, autism-friendly youth soccer organization — honoring its mission, program history, and community story in an accessible archival experience.",
+    scope: ["Archival redesign", "Content preservation", "Accessible responsive build", "Cloudflare deployment"],
+  },
+];
+
+const websitesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Websites & Web Applications",
+  description:
+    "We design and build websites and web applications that work for your business — from bilingual marketing sites to internal tools. Includes an honest build-vs-buy recommendation before any spend.",
+  url: "https://2nspira.com/websites",
+  provider: { "@id": "https://2nspira.com/#organization" },
+  areaServed: "Worldwide",
+};
+
+export default function WebsitesPage() {
+  return (
+    <main className={pageMain} id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websitesJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      {/* Hero */}
+      <section className="border-b border-line bg-surface">
+        <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
+          <p className={eyebrow}>
+            <Link href="/services" className="hover:text-accent">
+              ← All services
+            </Link>
+          </p>
+          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+            Websites &amp; Web Applications
+          </h1>
+          <p className={lead}>
+            We design and build websites and web applications that work for your
+            business — from bilingual marketing sites to internal tools your team
+            will actually use. And before anything is built, we give you an honest
+            build-vs-buy recommendation.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/contact" className={buttonPrimary}>
+              Start a conversation
+            </Link>
+            <a href="#our-work" className={buttonSecondaryClasses}>
+              See what we’ve built
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities */}
+      <section className={section} aria-labelledby="capabilities-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="capabilities-heading" className={h2}>
+            What we build
+          </h2>
+          <p className={`mt-4 max-w-2xl ${lead}`}>
+            Every engagement is scoped around the outcome — not a template.
+          </p>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2">
+            {capabilities.map((item) => (
+              <article key={item.title} className={`p-8 ${card}`}>
+                <h3 className={h3}>{item.title}</h3>
+                <p className={`mt-3 text-sm leading-7 text-body`}>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Showcase — the heart of the page */}
+      <section id="our-work" className={sectionBand} aria-labelledby="showcase-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="showcase-heading" className={h2}>
+            Work we’ve shipped
+          </h2>
+          <p className={`mt-4 max-w-2xl ${lead}`}>
+            Live projects built for clients — click through and explore them
+            yourself.
+          </p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {showcase.map((site) => (
+              <article
+                key={site.name}
+                className={`flex flex-col p-8 ${card}`}
+                aria-labelledby={`showcase-${site.name.toLowerCase().replace(/\s+/g, "-")}`}
+              >
+                <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+                  {site.tag}
+                </p>
+                <h3
+                  id={`showcase-${site.name.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="mt-3 text-2xl font-semibold tracking-tight text-ink"
+                >
+                  {site.name}
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-7 text-body">
+                  {site.description}
+                </p>
+                <ul
+                  className="mt-5 flex flex-wrap gap-2"
+                  aria-label={`${site.name} scope`}
+                >
+                  {site.scope.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-full border border-line bg-canvas-deep px-3 py-1 text-xs font-medium text-body"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={site.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-6 self-start ${linkInline}`}
+                >
+                  Visit {site.name} →
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <aside className={`mt-10 flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8 ${cardFlat}`}>
+            <div>
+              <h3 className={h3}>Have a project in mind?</h3>
+              <p className={`mt-2 ${caption}`}>
+                From a single marketing page to a full internal tool — tell us the
+                outcome you need.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className={`${buttonPrimary} shrink-0 self-start sm:self-auto`}
+            >
+              Discuss your project
+            </Link>
+          </aside>
+        </div>
+      </section>
+
+      {/* Who it's for + outcomes */}
+      <section className={section} aria-labelledby="fit-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div>
+              <h2 id="fit-heading" className={h2}>
+                Who this is for
+              </h2>
+              <p className={`mt-4 ${lead}`}>
+                Leaders and teams who need a presence or a tool that actually
+                works — and who want a straight answer on whether to build or buy
+                before a single dollar is spent.
+              </p>
+            </div>
+            <div>
+              <h2 className={h2}>What you get</h2>
+              <ul className="mt-4 list-disc space-y-3 pl-5 leading-8 text-body">
+                {outcomes.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section className={sectionBand} aria-labelledby="approach-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="approach-heading" className={h2}>
+            How we work
+          </h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {steps.map((step, index) => (
+              <article key={step.title} className={`p-6 ${card}`}>
+                <p className="text-sm font-semibold tracking-widest text-accent">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className={`mt-4 ${h3}`}>{step.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-body">{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className={section}>
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+          <h2 className={h2}>
+            Ready to build something that works?
+          </h2>
+          <p className={`mx-auto mt-4 max-w-xl ${lead}`}>
+            Tell us the outcome you need — we’ll tell you the simplest way to get
+            there.
+          </p>
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/contact"
+              className={buttonPrimary}
+              aria-label="Get in touch with 2Nspira"
+            >
+              Get in touch
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+const buttonSecondaryClasses =
+  "inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium text-ink transition-colors duration-300 ease-gentle hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas";

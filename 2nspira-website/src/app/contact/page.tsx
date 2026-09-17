@@ -1,142 +1,231 @@
-import Link from 'next/link';
+"use client";
 
-export default function Contact() {
+import { useState } from "react";
+
+type SubmitState =
+  | { kind: "idle" }
+  | { kind: "sending" }
+  | { kind: "delivered" }
+  | { kind: "draft"; to: string; subject: string; body: string }
+  | { kind: "error"; detail: string };
+
+const CONTACT_EMAIL = "hello@2nspira.com";
+
+import { buttonPrimary, card, cardFlat, caption, field, label, lead, pageMain } from "@/components/ui";
+import Image from "next/image";
+
+export default function ContactPage() {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    organization: "",
+    message: "",
+  });
+  const [state, setState] = useState<SubmitState>({ kind: "idle" });
+  const [submitted, setSubmitted] = useState<{ name: string; email: string; organization: string; message: string } | null>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormState((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const compose = (f: typeof formState) => {
+    const subject = `Website inquiry from ${f.name}${f.organization ? ` (${f.organization})` : ""}`;
+    const body = [
+      `Name: ${f.name}`,
+      `Email: ${f.email}`,
+      `Organization: ${f.organization || "Not provided"}`,
+      "",
+      f.message,
+      "",
+      `— Submitted via 2nspira.com on ${new Date().toISOString()}`,
+    ].join("\n");
+    return { subject, body };
+  };
+
+  const openMailto = (subject: string, body: string) => {
+    const href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = href;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (state.kind === "sending") return;
+    setState({ kind: "sending" });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
+      const data = (await res.json()) as {
+        ok: boolean; status?: "delivered" | "draft"; to?: string; subject?: string; body?: string; error?: string;
+      };
+      if (res.ok && data.status === "delivered") {
+        setSubmitted({ ...formState });
+        setState({ kind: "delivered" });
+        return;
+      }
+      if (data.status === "draft" && data.subject && data.body) {
+        setSubmitted({ ...formState });
+        setState({ kind: "draft", to: data.to ?? CONTACT_EMAIL, subject: data.subject, body: data.body });
+        openMailto(data.subject, data.body);
+        return;
+      }
+      const { subject, body } = compose(formState);
+      setSubmitted({ ...formState });
+      setState({ kind: "draft", to: CONTACT_EMAIL, subject, body });
+      openMailto(subject, body);
+    } catch {
+      const { subject, body } = compose(formState);
+      setSubmitted({ ...formState });
+      setState({ kind: "draft", to: CONTACT_EMAIL, subject, body });
+      openMailto(subject, body);
+    }
+  };
+
+  const faqs = [
+    { q: "How soon do you respond to inquiries?", a: "We typically respond within one business day." },
+    { q: "Do you offer free consultations?", a: "Yes, we offer complimentary discovery calls to understand your needs." },
+    { q: "What regions do you serve?", a: "We work with organizations globally, with a focus on mission-driven institutions." },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
-    <div className="min-h-screen py-12 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Get in touch</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Questions about our services? Ready to get started? Let's talk.
-          </p>
+    <main className={pageMain} id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <section className="border-b border-line bg-surface">
+        <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
+          <h1 id="contact-hero-heading" className="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Get in touch</h1>
+          <p className={`mx-auto mt-6 max-w-xl ${lead}`}>Questions about our services? Ready to get started? Let&rsquo;s talk.</p>
         </div>
+      </section>
 
-        {/* Contact Form */}
-        <div className="bg-white rounded-2xl shadow-sm p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a message</h2>
-          
-          <p className="text-gray-600 mb-8">
-            Your inquiry is delivered to our team. If direct delivery is temporarily unavailable, we will open a pre-composed draft in your email app — review and press send there.
-          </p>
-
-          {/* Contact Information - No Address */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="flex items-start space-x-3">
-              <svg className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                <a href="mailto:hello@2nspira.com" className="text-blue-600 hover:text-blue-700">
-                  hello@2nspira.com
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-3">
-              <svg className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                <a href="tel:+16465430199" className="text-blue-600 hover:text-blue-700">
-                  +1 (646) 543-0199
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Simple Form Fields */}
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Your name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="John Doe"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email address
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="john@company.com"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">
-                Organization <span className="text-gray-400 font-normal">(optional)</span>
-              </label>
-              <input
-                type="text"
-                id="organization"
-                name="organization"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Your company name"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                How can we help?
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={5}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
-                placeholder="Tell us about your project or question..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-
-        {/* Common Questions */}
-        <div className="bg-white rounded-2xl shadow-sm p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Common questions</h2>
-          
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">How soon do you respond to inquiries?</h3>
-              <p className="text-gray-600">We typically respond within one business day.</p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Do you offer free consultations?</h3>
-              <p className="text-gray-600">Yes, we offer complimentary discovery calls to understand your needs.</p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">What regions do you serve?</h3>
-              <p className="text-gray-600">We work with organizations globally, with a focus on mission-driven institutions.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <footer className="mt-12 text-center text-sm text-gray-500">
-          <Link href="/" className="hover:text-gray-700">← Back to home</Link>
-        </footer>
+      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        <figure className="-mx-4 overflow-hidden sm:-mx-6 lg:-mx-8">
+          <Image
+            src="/images/pages/contact-environmental.webp"
+            alt="Conceptual visualization of a calm, minimal meeting corner beside a window."
+            width={1344}
+            height={768}
+            className="h-auto w-full"
+          />
+        </figure>
       </div>
-    </div>
+
+      <section className="py-16 sm:py-24" aria-labelledby="form-heading">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          {state.kind === "delivered" && submitted ? (
+            <div className="rounded-2xl border border-green-200 bg-green-50 p-8" role="status">
+              <h2 className="text-2xl font-bold text-green-900">Message sent</h2>
+              <p className="mt-3 text-sm leading-6 text-green-800">
+                Thanks, {submitted.name}. Your inquiry was delivered to {CONTACT_EMAIL}. We typically respond within one business day.
+              </p>
+              <div className="mt-6 rounded-lg border border-green-200 bg-white p-5 text-sm text-zinc-700">
+                <p><span className="font-semibold">Your message:</span> {submitted.message}</p>
+              </div>
+            </div>
+          ) : state.kind === "draft" && submitted ? (
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-8" role="status">
+              <h2 className="text-2xl font-bold text-amber-900">Your email app should have opened</h2>
+              <p className="mt-3 text-sm leading-6 text-amber-800">
+                Your message was composed with the following content. If your email app did not open, copy the text below and email <a href={`mailto:${state.to}`} className="font-semibold underline">{state.to}</a> directly.
+              </p>
+              <div className="mt-6 rounded-lg border border-amber-200 bg-white p-5 font-mono text-xs leading-5 text-zinc-700">
+                <p className="font-sans text-sm font-semibold text-ink">Subject: {state.subject}</p>
+                <pre className="mt-3 whitespace-pre-wrap font-mono">{state.body}</pre>
+              </div>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className={`p-8 ${card}`} aria-labelledby="form-heading" noValidate={false}>
+              <h2 id="form-heading" className="text-2xl font-bold text-ink">Send us a message</h2>
+              <p className={`mt-3 ${caption}`}
+              >
+                Your inquiry is delivered to our team. If direct delivery is temporarily unavailable, we will open a pre-composed draft in your email app — review and press send there.
+              </p>
+
+              <div className="mt-6">
+                <label htmlFor="name" className={label}>
+                  Your name <span className="text-red-500" aria-hidden="true">*</span>
+                  <span className="sr-only">(required)</span>
+                </label>
+                <input type="text" id="name" name="name" required autoComplete="name" value={formState.name} onChange={handleChange} aria-required="true"
+                  className={field} placeholder="John Doe" />
+              </div>
+
+              <div className="mt-6">
+                <label htmlFor="email" className={label}>
+                  Email address <span className="text-red-500" aria-hidden="true">*</span>
+                  <span className="sr-only">(required)</span>
+                </label>
+                <input type="email" id="email" name="email" required autoComplete="email" value={formState.email} onChange={handleChange} aria-required="true"
+                  className={field} placeholder="john@example.com" />
+              </div>
+
+              <div className="mt-6">
+                <label htmlFor="organization" className={label}>Organization (optional)</label>
+                <input type="text" id="organization" name="organization" autoComplete="organization" value={formState.organization} onChange={handleChange} aria-required="false"
+                  className={field} placeholder="Your organization name" />
+              </div>
+
+              <div className="mt-6">
+                <label htmlFor="message" className={label}>
+                  How can we help? <span className="text-red-500" aria-hidden="true">*</span>
+                  <span className="sr-only">(required)</span>
+                </label>
+                <textarea id="message" name="message" required rows={4} value={formState.message} onChange={handleChange} aria-required="true"
+                  className={field} placeholder="Tell us about your needs..." />
+              </div>
+
+              <div className="mt-6 flex items-center justify-between">
+                <button type="submit" disabled={state.kind === "sending"}
+                  className={`${buttonPrimary} disabled:cursor-not-allowed disabled:opacity-60`}>
+                  {state.kind === "sending" ? "Sending…" : "Send message"}
+                </button>
+              </div>
+            </form>
+          )}
+
+          <div className={`mt-12 p-8 ${cardFlat}`} role="complementary" aria-label="Alternative contact methods">
+            <h3 className="text-lg font-semibold text-ink">Prefer to email directly?</h3>
+            <p className={`mt-2 ${caption}`}>
+              Reach us at:{" "}
+              <a href={`mailto:${CONTACT_EMAIL}`} className="underline underline-offset-4 transition-colors duration-300 ease-gentle hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">{CONTACT_EMAIL}</a>
+            </p>
+            <p className={`mt-2 ${caption}`}>
+              Phone: <a href="tel:+16465430199" className="underline underline-offset-4 transition-colors duration-300 ease-gentle hover:text-accent">+1 (646) 543-0199</a>
+            </p>
+            <p className={`mt-2 ${caption}`}>
+              11215 72nd Rd, Forest Hills, NY
+            </p>
+          </div>
+
+          <div className={`mt-8 p-8 ${cardFlat}`} role="complementary" aria-label="Frequently asked questions">
+            <h3 className="text-lg font-semibold text-ink">Common questions</h3>
+            <dl className="mt-4 space-y-4">
+              {faqs.map((item, i) => (
+                <div key={i}>
+                  <dt className="font-medium text-ink">{item.q}</dt>
+                  <dd className={`mt-1 ${caption}`}>{item.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

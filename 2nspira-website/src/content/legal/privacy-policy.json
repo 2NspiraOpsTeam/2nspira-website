@@ -1,0 +1,426 @@
+{
+  "source": "https://2nspira.com/privacy-policy",
+  "retrieved": "2026-09-09",
+  "blocks": [
+    {
+      "tag": "h1",
+      "text": "Privacy Policy"
+    },
+    {
+      "tag": "p",
+      "text": "Effective Date: 1/1/2025"
+    },
+    {
+      "tag": "p",
+      "text": "Last Updated: 10/5/2025"
+    },
+    {
+      "tag": "p",
+      "text": "Welcome to 2nspira LLC (“we,” “us,” “our”). We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you visit our website (the “Site”), subscribe to our blog, book our services, or purchase service plans."
+    },
+    {
+      "tag": "p",
+      "text": "By using our Site or services, you agree to this Privacy Policy. If you do not agree, please discontinue use."
+    },
+    {
+      "tag": "h3",
+      "text": "1. Information We Collect"
+    },
+    {
+      "tag": "p",
+      "text": "When you purchase, subscribe, or book a service through our website, we collect payment information, billing details, and contact data necessary to complete the transaction. Payments are processed securely through our third-party providers, and we do not store your full payment card information on our servers."
+    },
+    {
+      "tag": "h4",
+      "text": "1.1 Personal Information You Provide"
+    },
+    {
+      "tag": "p",
+      "text": "You may provide personal data when you:"
+    },
+    {
+      "tag": "li",
+      "text": "Create an account or subscribe to our blog"
+    },
+    {
+      "tag": "li",
+      "text": "Book services or purchase a plan"
+    },
+    {
+      "tag": "li",
+      "text": "Submit inquiries, forms, or feedback"
+    },
+    {
+      "tag": "li",
+      "text": "Complete a payment"
+    },
+    {
+      "tag": "li",
+      "text": "Interact through comments or messages"
+    },
+    {
+      "tag": "p",
+      "text": "This information may include:"
+    },
+    {
+      "tag": "li",
+      "text": "Name, email, phone number, and mailing address"
+    },
+    {
+      "tag": "li",
+      "text": "Payment and billing information"
+    },
+    {
+      "tag": "li",
+      "text": "Account credentials (username, password)"
+    },
+    {
+      "tag": "li",
+      "text": "Communication records and preferences"
+    },
+    {
+      "tag": "h4",
+      "text": "1.2 Automatically Collected Information"
+    },
+    {
+      "tag": "p",
+      "text": "When you visit our Site, we may collect:"
+    },
+    {
+      "tag": "li",
+      "text": "IP address, browser type, and operating system"
+    },
+    {
+      "tag": "li",
+      "text": "Pages visited, timestamps, referral URLs"
+    },
+    {
+      "tag": "li",
+      "text": "Device and usage analytics via cookies or pixels"
+    },
+    {
+      "tag": "li",
+      "text": "Approximate location (via IP geolocation)"
+    },
+    {
+      "tag": "h4",
+      "text": "1.3 Third-Party Sources"
+    },
+    {
+      "tag": "p",
+      "text": "We may receive data from:"
+    },
+    {
+      "tag": "li",
+      "text": "Payment processors"
+    },
+    {
+      "tag": "li",
+      "text": "Analytics providers (e.g., Google Analytics)"
+    },
+    {
+      "tag": "li",
+      "text": "Marketing platforms or ad networks"
+    },
+    {
+      "tag": "li",
+      "text": "Social media platforms, when you connect or share"
+    },
+    {
+      "tag": "p",
+      "text": "1.4 Information Collected"
+    },
+    {
+      "tag": "p",
+      "text": "During Client Services While performing services, we may process data you provide to us, which can include sensitive business information such as strategic plans, financial data, customer lists, system credentials, or employee information for the purposes of analysis and training. This data is governed by the Confidentiality clause in our Terms & Conditions and is used exclusively to fulfill our contractual obligations."
+    },
+    {
+      "tag": "h3",
+      "text": "2. How We Use Your Information"
+    },
+    {
+      "tag": "p",
+      "text": "We use collected data to:"
+    },
+    {
+      "tag": "li",
+      "text": "To Deliver Our Services: This includes processing transactions, managing projects, and providing the core services you have engaged us for, such as developing a Claris FileMaker application, providing strategic analysis as a Fractional CTO, or using business data to develop and customize AI frameworks as outlined in a Statement of Work."
+    },
+    {
+      "tag": "li",
+      "text": "Provide and improve our services"
+    },
+    {
+      "tag": "li",
+      "text": "Process payments, bookings, and subscriptions"
+    },
+    {
+      "tag": "li",
+      "text": "Manage and secure accounts"
+    },
+    {
+      "tag": "li",
+      "text": "Communicate updates, confirmations, or support"
+    },
+    {
+      "tag": "li",
+      "text": "Customize your experience"
+    },
+    {
+      "tag": "li",
+      "text": "Send marketing materials (if you opt in)"
+    },
+    {
+      "tag": "li",
+      "text": "Detect and prevent fraud or unauthorized access"
+    },
+    {
+      "tag": "li",
+      "text": "Comply with laws and enforce our terms"
+    },
+    {
+      "tag": "h3",
+      "text": "3. Legal Basis for Processing"
+    },
+    {
+      "tag": "p",
+      "text": "Where required by law (e.g., under GDPR), we process data based on:"
+    },
+    {
+      "tag": "li",
+      "text": "Your consent"
+    },
+    {
+      "tag": "li",
+      "text": "Contractual necessity (to fulfill services)"
+    },
+    {
+      "tag": "li",
+      "text": "Legitimate interests (security, analytics)"
+    },
+    {
+      "tag": "li",
+      "text": "Legal obligations"
+    },
+    {
+      "tag": "h3",
+      "text": "4. Sharing and Disclosure"
+    },
+    {
+      "tag": "p",
+      "text": "We may share your information with:"
+    },
+    {
+      "tag": "li",
+      "text": "Vendors and service providers (hosting, analytics, payment, email delivery)"
+    },
+    {
+      "tag": "li",
+      "text": "Regulators and legal authorities, when required"
+    },
+    {
+      "tag": "li",
+      "text": "Business partners during mergers or acquisitions"
+    },
+    {
+      "tag": "li",
+      "text": "Others with your consent"
+    },
+    {
+      "tag": "li",
+      "text": "With Third-Party AI Platforms or APIs, only when necessary to perform AI Enablement services and as explicitly agreed upon in a Statement of Work. We will take commercially reasonable steps to anonymize data where possible and will ensure such platforms meet our security standards."
+    },
+    {
+      "tag": "p",
+      "text": "We do not sell your personal information."
+    },
+    {
+      "tag": "h3",
+      "text": "5. Cookies and Tracking Technologies"
+    },
+    {
+      "tag": "p",
+      "text": "We use cookies and similar tools for:"
+    },
+    {
+      "tag": "li",
+      "text": "Site functionality and session management"
+    },
+    {
+      "tag": "li",
+      "text": "Analytics and traffic measurement"
+    },
+    {
+      "tag": "li",
+      "text": "Personalization and marketing"
+    },
+    {
+      "tag": "p",
+      "text": "You can disable cookies in your browser settings. Some features may not function properly if disabled."
+    },
+    {
+      "tag": "h3",
+      "text": "6. Data Security"
+    },
+    {
+      "tag": "p",
+      "text": "We implement industry-standard safeguards, including:"
+    },
+    {
+      "tag": "li",
+      "text": "TLS/SSL encryption for all web traffic"
+    },
+    {
+      "tag": "li",
+      "text": "Encryption at rest for sensitive data"
+    },
+    {
+      "tag": "li",
+      "text": "Secure password hashing and MFA for admin access"
+    },
+    {
+      "tag": "li",
+      "text": "Regular security audits and vulnerability scans"
+    },
+    {
+      "tag": "li",
+      "text": "Role-based access controls and data minimization"
+    },
+    {
+      "tag": "li",
+      "text": "Continuous monitoring and incident response procedures"
+    },
+    {
+      "tag": "p",
+      "text": "Our cybersecurity framework aligns with NIST and ISO 27001 best practices."
+    },
+    {
+      "tag": "h3",
+      "text": "7. Data Retention"
+    },
+    {
+      "tag": "p",
+      "text": "We retain personal data only as long as necessary to:"
+    },
+    {
+      "tag": "li",
+      "text": "Deliver our services"
+    },
+    {
+      "tag": "li",
+      "text": "Comply with legal obligations"
+    },
+    {
+      "tag": "li",
+      "text": "Resolve disputes"
+    },
+    {
+      "tag": "li",
+      "text": "Maintain financial records"
+    },
+    {
+      "tag": "p",
+      "text": "Afterward, we securely delete or anonymize the data."
+    },
+    {
+      "tag": "h3",
+      "text": "8. Your Rights"
+    },
+    {
+      "tag": "p",
+      "text": "Depending on your jurisdiction, you may:"
+    },
+    {
+      "tag": "li",
+      "text": "Request access to your data"
+    },
+    {
+      "tag": "li",
+      "text": "Correct inaccurate information"
+    },
+    {
+      "tag": "li",
+      "text": "Request deletion (“Right to be Forgotten”)"
+    },
+    {
+      "tag": "li",
+      "text": "Object to certain processing or marketing"
+    },
+    {
+      "tag": "li",
+      "text": "Withdraw consent at any time"
+    },
+    {
+      "tag": "li",
+      "text": "Request data portability"
+    },
+    {
+      "tag": "p",
+      "text": "Submit requests via hello@2nspira.com. We may verify your identity before fulfilling your request."
+    },
+    {
+      "tag": "h3",
+      "text": "9. International Data Transfers"
+    },
+    {
+      "tag": "p",
+      "text": "If we transfer your data outside your jurisdiction, we implement:"
+    },
+    {
+      "tag": "li",
+      "text": "Standard Contractual Clauses (SCCs)"
+    },
+    {
+      "tag": "li",
+      "text": "Encryption and access restrictions"
+    },
+    {
+      "tag": "li",
+      "text": "Vendor due diligence for compliance assurance"
+    },
+    {
+      "tag": "h3",
+      "text": "10. Children’s Privacy"
+    },
+    {
+      "tag": "p",
+      "text": "Our Site and services are not intended for children under 13. If we learn that we collected data from a child without parental consent, we will delete it promptly."
+    },
+    {
+      "tag": "h3",
+      "text": "11. Policy Updates"
+    },
+    {
+      "tag": "p",
+      "text": "We may update this Privacy Policy from time to time. Updates will be posted with a revised “Last Updated” date, and significant changes will be communicated through email or site notices."
+    },
+    {
+      "tag": "h3",
+      "text": "12. Contact Us"
+    },
+    {
+      "tag": "p",
+      "text": "If you have questions, concerns, or requests regarding this Privacy Policy, please contact us at:"
+    },
+    {
+      "tag": "p",
+      "text": "2nspira LLC"
+    },
+    {
+      "tag": "p",
+      "text": "Address: 11215 72nd Rd"
+    },
+    {
+      "tag": "p",
+      "text": "Forest Hills, NY 11375"
+    },
+    {
+      "tag": "p",
+      "text": "📧 Email: hello@2nspira.com"
+    },
+    {
+      "tag": "p",
+      "text": "📞 Phone: 646-543-0199"
+    }
+  ]
+}

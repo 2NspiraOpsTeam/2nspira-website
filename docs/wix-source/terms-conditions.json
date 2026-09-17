@@ -1,0 +1,438 @@
+{
+  "source": "https://www.2nspira.com/terms-conditions",
+  "retrieved": "2026-09-09",
+  "blocks": [
+    {
+      "tag": "h1",
+      "text": "Terms and Conditions"
+    },
+    {
+      "tag": "p",
+      "text": "Effective Date: 1/1/2025"
+    },
+    {
+      "tag": "p",
+      "text": "Last Updated: 10/5/2025"
+    },
+    {
+      "tag": "p",
+      "text": "Welcome to 2nspira LLC (“we,” “us,” “our”). These Terms and Conditions (“Terms”) govern your access to and use of our website, products, and professional services, including Claris FileMaker development, strategy consulting, and IT management (collectively, the “Services”)."
+    },
+    {
+      "tag": "p",
+      "text": "By accessing or using our website or engaging our Services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree, please discontinue use immediately."
+    },
+    {
+      "tag": "h2",
+      "text": "1. Company Information"
+    },
+    {
+      "tag": "p",
+      "text": "2nspira LLC"
+    },
+    {
+      "tag": "p",
+      "text": "Address: 11215 72nd Rd"
+    },
+    {
+      "tag": "p",
+      "text": "Forest Hills, NY 11375"
+    },
+    {
+      "tag": "p",
+      "text": "📧 Email: hello@2nspira.com"
+    },
+    {
+      "tag": "p",
+      "text": "📞 Phone: 646-543-0199"
+    },
+    {
+      "tag": "h2",
+      "text": "2. Scope of Services"
+    },
+    {
+      "tag": "p",
+      "text": "We provide professional and technology services that may include:"
+    },
+    {
+      "tag": "li",
+      "text": "Claris FileMaker Solutions: Custom application design, database architecture, development, integration, and ongoing support as detailed in the project's Statement of Work (SOW)."
+    },
+    {
+      "tag": "li",
+      "text": "AI Enablement & Training: Strategic workshops, team training, and development of AI frameworks. Specific deliverables and learning outcomes will be outlined in our Proposal."
+    },
+    {
+      "tag": "li",
+      "text": "Fractional CTO Services: A strategic advisory service provided on a retainer basis. This service includes technology leadership, strategic planning, team mentorship, and project oversight as defined in our agreement."
+    },
+    {
+      "tag": "p",
+      "text": "Service details, pricing, and deliverables will be outlined in individual Service Agreements, Statements of Work (SOW), or proposals accepted by both parties. Clients may also access select services through packaged offerings available for direct purchase, subscription, or booking on our website. Each package clearly defines the scope, duration, and deliverables to ensure transparency, flexibility, and alignment with client goals."
+    },
+    {
+      "tag": "h2",
+      "text": "3. Engagement and Client Responsibilities"
+    },
+    {
+      "tag": "p",
+      "text": "By engaging with 2nspira LLC, you agree to:"
+    },
+    {
+      "tag": "li",
+      "text": "Provide timely access to information, systems, and personnel necessary for project completion;"
+    },
+    {
+      "tag": "li",
+      "text": "Ensure that any data or materials you provide are lawful, accurate, and do not infringe third-party rights;"
+    },
+    {
+      "tag": "li",
+      "text": "Designate a primary contact or decision-maker for all project communications;"
+    },
+    {
+      "tag": "li",
+      "text": "Comply with all applicable laws, including data protection and export controls."
+    },
+    {
+      "tag": "p",
+      "text": "We rely on your cooperation to meet timelines and deliverables. Delays in client response or required access may impact project delivery dates."
+    },
+    {
+      "tag": "h2",
+      "text": "4. Payment Terms"
+    },
+    {
+      "tag": "p",
+      "text": "Unless otherwise agreed in writing:"
+    },
+    {
+      "tag": "li",
+      "text": "Invoices are due within 15 days of issuance."
+    },
+    {
+      "tag": "li",
+      "text": "Late payments may incur interest at 1.5% per month or the maximum allowed by law."
+    },
+    {
+      "tag": "li",
+      "text": "Subscription or managed services may renew automatically unless canceled before the renewal date."
+    },
+    {
+      "tag": "li",
+      "text": "Project fees are billed according to the agreed SOW (hourly, fixed, or milestone-based)."
+    },
+    {
+      "tag": "li",
+      "text": "Fractional CTO and other retainer-based services are billed monthly in advance and are non-refundable for the service period."
+    },
+    {
+      "tag": "li",
+      "text": "You are responsible for all applicable taxes and transaction fees."
+    },
+    {
+      "tag": "p",
+      "text": "We reserve the right to suspend work for non-payment."
+    },
+    {
+      "tag": "h2",
+      "text": "5. Intellectual Property"
+    },
+    {
+      "tag": "h3",
+      "text": "5.1 Client Materials"
+    },
+    {
+      "tag": "p",
+      "text": "All content, data, and intellectual property you provide remain your property. You grant 2nspira LLC a limited license to use such materials solely for the purpose of performing Services."
+    },
+    {
+      "tag": "h3",
+      "text": "5.2 Work Product"
+    },
+    {
+      "tag": "p",
+      "text": "Unless otherwise specified in a signed agreement. Our goal is for you to own the work you pay for, while we protect the tools and expertise that make our work possible."
+    },
+    {
+      "tag": "li",
+      "text": "Client Ownership: Upon full and final payment for a project, you (the Client) will own the specific, finished deliverable we created for you (e.g., the completed FileMaker application)."
+    },
+    {
+      "tag": "li",
+      "text": "Our Retained Tools: 2nspira LLC retains full ownership of all our underlying pre-existing code, libraries, development tools, and proprietary methodologies. We grant you a permanent, royalty-free license to use these embedded tools as part of your deliverable."
+    },
+    {
+      "tag": "p",
+      "text": "Any custom software or database created in Claris FileMaker remains your property upon payment in full, except for embedded proprietary components that remain ours."
+    },
+    {
+      "tag": "h2",
+      "text": "6. Confidentiality"
+    },
+    {
+      "tag": "p",
+      "text": "Both parties agree to keep all non-public information confidential, including business plans, system architecture, client data, and project documentation."
+    },
+    {
+      "tag": "p",
+      "text": "Each party will:"
+    },
+    {
+      "tag": "li",
+      "text": "Use the information solely for fulfilling the Agreement;"
+    },
+    {
+      "tag": "li",
+      "text": "Restrict access to authorized personnel; and"
+    },
+    {
+      "tag": "li",
+      "text": "Implement reasonable technical and administrative safeguards."
+    },
+    {
+      "tag": "p",
+      "text": "Confidentiality obligations survive termination of this Agreement."
+    },
+    {
+      "tag": "h2",
+      "text": "7. Data Protection and Cybersecurity"
+    },
+    {
+      "tag": "p",
+      "text": "We prioritize the protection of client data and follow recognized cybersecurity frameworks such as NIST and ISO/IEC 27001."
+    },
+    {
+      "tag": "p",
+      "text": "Our safeguards include:"
+    },
+    {
+      "tag": "li",
+      "text": "Encryption (in transit and at rest)"
+    },
+    {
+      "tag": "li",
+      "text": "Access control and least-privilege permissions"
+    },
+    {
+      "tag": "li",
+      "text": "Multi-factor authentication"
+    },
+    {
+      "tag": "li",
+      "text": "Secure data backups"
+    },
+    {
+      "tag": "li",
+      "text": "Network monitoring and incident response protocols"
+    },
+    {
+      "tag": "li",
+      "text": "Vendor risk management"
+    },
+    {
+      "tag": "p",
+      "text": "Clients are responsible for maintaining appropriate cybersecurity on their own networks and systems."
+    },
+    {
+      "tag": "h2",
+      "text": "8. Acceptable Use"
+    },
+    {
+      "tag": "p",
+      "text": "You may not use our website or Services to:"
+    },
+    {
+      "tag": "li",
+      "text": "Engage in illegal, harmful, or deceptive practices;"
+    },
+    {
+      "tag": "li",
+      "text": "Attempt to breach or bypass our security controls;"
+    },
+    {
+      "tag": "li",
+      "text": "Reverse engineer or copy proprietary code without permission;"
+    },
+    {
+      "tag": "li",
+      "text": "Host, distribute, or transmit malicious code;"
+    },
+    {
+      "tag": "li",
+      "text": "Misuse confidential information or intellectual property."
+    },
+    {
+      "tag": "p",
+      "text": "We reserve the right to suspend or terminate Services for misuse or security risk without liability."
+    },
+    {
+      "tag": "h2",
+      "text": "9. Warranties and Disclaimers"
+    },
+    {
+      "tag": "p",
+      "text": "We represent and warrant that we will perform Services:"
+    },
+    {
+      "tag": "li",
+      "text": "In a professional, workmanlike manner consistent with industry standards; and"
+    },
+    {
+      "tag": "li",
+      "text": "Using qualified personnel."
+    },
+    {
+      "tag": "p",
+      "text": "However, we do not warrant that:"
+    },
+    {
+      "tag": "li",
+      "text": "Any software or solution will be error-free or uninterrupted;"
+    },
+    {
+      "tag": "li",
+      "text": "Services will meet all specific business outcomes; or"
+    },
+    {
+      "tag": "li",
+      "text": "Third-party systems (e.g., Claris, hosting platforms, or APIs) will perform without issue."
+    },
+    {
+      "tag": "p",
+      "text": "Except as expressly stated, all warranties are disclaimed, including implied warranties of merchantability or fitness for a particular purpose."
+    },
+    {
+      "tag": "h2",
+      "text": "10. Limitation of Liability"
+    },
+    {
+      "tag": "p",
+      "text": "To the maximum extent permitted by law, 2nspira LLC, its affiliates, and personnel shall not be liable for:"
+    },
+    {
+      "tag": "li",
+      "text": "Any indirect, incidental, consequential, or punitive damages;"
+    },
+    {
+      "tag": "li",
+      "text": "Loss of profits, data, or business opportunities;"
+    },
+    {
+      "tag": "li",
+      "text": "Downtime or loss arising from third-party systems or force majeure events."
+    },
+    {
+      "tag": "p",
+      "text": "Our total liability under these Terms shall not exceed the total fees paid to 2nspira LLC for the Services giving rise to the claim in the 12 months preceding the event."
+    },
+    {
+      "tag": "h2",
+      "text": "11. Indemnification"
+    },
+    {
+      "tag": "p",
+      "text": "You agree to indemnify and hold harmless 2nspira LLC, its officers, and employees from any claims, losses, or damages arising from:"
+    },
+    {
+      "tag": "li",
+      "text": "Your breach of these Terms;"
+    },
+    {
+      "tag": "li",
+      "text": "Your misuse of deliverables; or"
+    },
+    {
+      "tag": "li",
+      "text": "Any data, content, or instructions provided by you that infringe third-party rights or violate laws."
+    },
+    {
+      "tag": "h2",
+      "text": "12. Termination"
+    },
+    {
+      "tag": "p",
+      "text": "Either party may terminate the engagement with written notice if the other party:"
+    },
+    {
+      "tag": "li",
+      "text": "Materially breaches these Terms and fails to cure within 15 days; or"
+    },
+    {
+      "tag": "li",
+      "text": "Becomes insolvent or enters bankruptcy."
+    },
+    {
+      "tag": "p",
+      "text": "Upon termination:"
+    },
+    {
+      "tag": "li",
+      "text": "All unpaid fees become due immediately;"
+    },
+    {
+      "tag": "li",
+      "text": "You will receive all deliverables completed and paid for; and"
+    },
+    {
+      "tag": "li",
+      "text": "Confidentiality and IP provisions remain in effect."
+    },
+    {
+      "tag": "h2",
+      "text": "13. Governing Law and Dispute Resolution"
+    },
+    {
+      "tag": "p",
+      "text": "These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to conflicts of law principles."
+    },
+    {
+      "tag": "p",
+      "text": "Any dispute shall first be resolved amicably between the parties. If unresolved, it shall be submitted to binding arbitration in New York County, NY, under the rules of the American Arbitration Association (AAA)."
+    },
+    {
+      "tag": "h2",
+      "text": "14. Force Majeure"
+    },
+    {
+      "tag": "p",
+      "text": "We are not liable for delays or failures caused by circumstances beyond our control, including natural disasters, labor disputes, cyberattacks, acts of government, or internet outages."
+    },
+    {
+      "tag": "h2",
+      "text": "15. Changes to Terms"
+    },
+    {
+      "tag": "p",
+      "text": "We may update these Terms periodically. The “Last Updated” date will reflect the most recent revision. Continued use of our Site or Services after updates constitutes acceptance."
+    },
+    {
+      "tag": "h2",
+      "text": "16. Entire Agreement"
+    },
+    {
+      "tag": "p",
+      "text": "These Terms, together with the Privacy Policy, SOWs, and any written agreements, constitute the entire agreement between you and 2nspira LLC. Any prior understandings are superseded."
+    },
+    {
+      "tag": "h2",
+      "text": "17. Contact Us"
+    },
+    {
+      "tag": "p",
+      "text": "For questions, service inquiries, or legal notices:"
+    },
+    {
+      "tag": "p",
+      "text": "2nspira LLC"
+    },
+    {
+      "tag": "p",
+      "text": "📧 Email: hello@2nspira.com"
+    },
+    {
+      "tag": "p",
+      "text": "📞 Phone: 646-543-0199"
+    }
+  ]
+}
