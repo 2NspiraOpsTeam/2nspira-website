@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   buttonPrimary,
@@ -161,6 +162,22 @@ export default function WebsitesPage() {
               See what we’ve built
             </a>
           </div>
+        </div>
+        <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 sm:pb-20">
+          <figure
+            className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-line shadow-soft"
+            aria-label="A website layout and a web application dashboard"
+          >
+            <Image
+              src="/images/pages/websites-hero.webp"
+              alt="A modern website layout and an analytics dashboard on two floating screens."
+              fill
+              sizes="(min-width: 1024px) 1024px, calc(100vw - 32px)"
+              unoptimized
+              fetchPriority="high"
+              className="object-cover object-center"
+            />
+          </figure>
         </div>
       </section>
 
