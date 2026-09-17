@@ -96,6 +96,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         "@id": "https://2nspira.com/#organization",
         name: "2Nspira",
         url: "https://2nspira.com",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://2nspira.com/images/logo/2nspira-logo.png",
+          width: 320,
+          height: 132,
+        },
         description:
           "Human-centered technology transformation and practical AI adoption — specializing in AI enablement, systems optimization, and fractional technology leadership.",
         email: "hello@2nspira.com",
