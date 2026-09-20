@@ -66,6 +66,30 @@ const steps = [
   },
 ];
 
+const propertyOperationsTransformation = [
+  {
+    number: "01",
+    before: "Manual listings",
+    after: "AI-assisted publishing",
+    detail:
+      "Structured property details become clear, consistent listing drafts ready for review and publication.",
+  },
+  {
+    number: "02",
+    before: "Manual applicant review",
+    after: "Structured digital workflow",
+    detail:
+      "Applicant information moves through a consistent review process with clearer status, ownership, and follow-through.",
+  },
+  {
+    number: "03",
+    before: "Paper lease agreements",
+    after: "Digital lease generation and e-signature",
+    detail:
+      "Approved terms flow into digital lease documents, electronic signatures, and automated document delivery.",
+  },
+];
+
 type ShowcaseSite = {
   name: string;
   url: string;
@@ -208,12 +232,118 @@ export default function WebsitesPage() {
             Work we’ve shipped
           </h2>
           <p className={`mt-4 max-w-2xl ${lead}`}>
-            Selected live projects plus an anonymized enterprise operations pilot.
+            Selected live projects and operational modernization work designed
+            around how organizations actually run.
           </p>
 
           <article
-            id="manufacturing-pilot"
+            id="water-bear-mecca"
             className="mt-12 overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.10)]"
+            aria-labelledby="water-bear-mecca-heading"
+          >
+            <div className="grid lg:grid-cols-[0.88fr_1.12fr]">
+              <div className="relative overflow-hidden bg-ink p-8 text-white sm:p-10 lg:p-12">
+                <div
+                  className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
+                  aria-hidden="true"
+                />
+                <div className="relative">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/65">
+                    Client project · Property operations modernization
+                  </p>
+                  <h3
+                    id="water-bear-mecca-heading"
+                    className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl"
+                  >
+                    Water Bear Mecca
+                  </h3>
+                  <p className="mt-4 text-xl font-medium leading-8 text-white">
+                    Digitizing the property-management workflow from listing to
+                    signed lease
+                  </p>
+                  <p className="mt-5 text-base leading-8 text-white/75">
+                    2Nspira is helping Water Bear Mecca modernize property
+                    operations by using AI-assisted listing workflows, structured
+                    applicant review, and digital lease execution with electronic
+                    signatures and automated document delivery.
+                  </p>
+
+                  <div className="mt-8 border-t border-white/15 pt-6">
+                    <p className="text-sm font-semibold text-white">
+                      The modernization objective
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-white/70">
+                      Replace disconnected manual handoffs with one clearer,
+                      repeatable operating flow while keeping human review at the
+                      decisions that matter.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-8 sm:p-10 lg:p-12">
+                <p className={eyebrow}>From manual handoffs to a connected workflow</p>
+                <div className="mt-6 space-y-4">
+                  {propertyOperationsTransformation.map((item) => (
+                    <div
+                      key={item.number}
+                      className="rounded-2xl border border-line bg-surface p-5 sm:p-6"
+                    >
+                      <div className="flex items-start gap-4">
+                        <span className="mt-0.5 text-xs font-semibold tracking-[0.2em] text-accent">
+                          {item.number}
+                        </span>
+                        <div className="min-w-0 flex-1">
+                          <div className="grid gap-2 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+                            <p className="text-sm font-medium text-body line-through decoration-line">
+                              {item.before}
+                            </p>
+                            <span
+                              className="hidden text-accent sm:inline"
+                              aria-hidden="true"
+                            >
+                              →
+                            </span>
+                            <p className="font-semibold text-ink">{item.after}</p>
+                          </div>
+                          <p className="mt-3 text-sm leading-6 text-body">
+                            {item.detail}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 border-t border-line pt-6">
+                  <p className="text-sm font-semibold text-ink">Modernization scope</p>
+                  <ul
+                    className="mt-3 flex flex-wrap gap-2"
+                    aria-label="Water Bear Mecca modernization scope"
+                  >
+                    {[
+                      "AI-assisted workflows",
+                      "Structured review",
+                      "Digital lease generation",
+                      "Electronic signatures",
+                      "Automated delivery",
+                    ].map((item) => (
+                      <li
+                        key={item}
+                        className="rounded-full border border-line bg-canvas-deep px-3 py-1.5 text-xs font-medium text-body"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article
+            id="manufacturing-pilot"
+            className="mt-8 overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.10)]"
             aria-labelledby="manufacturing-pilot-heading"
           >
             <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
