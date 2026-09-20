@@ -91,7 +91,6 @@ export default function Footer() {
           {[
             { name: "Privacy policy", href: "/privacy-policy" },
             { name: "Terms and conditions", href: "/terms-conditions" },
-            { name: "Refunds and cancellations", href: "/refund-cancellation" },
             { name: "Copyright", href: "/copyright" },
           ].map((link) => (
             <Link
