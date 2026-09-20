@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 import {
   buttonPrimary,
   card,
@@ -28,19 +29,19 @@ export const metadata: Metadata = {
 const capabilities = [
   {
     title: "Websites & marketing sites",
-    text: "Clean, fast, accessible sites that communicate clearly and convert visitors — built to be simple to update and easy to maintain.",
+    text: "Clear, fast, accessible sites built to convert and stay easy to maintain.",
   },
   {
     title: "Web applications",
-    text: "Purpose-built tools for real workflows — trackers, dashboards, and internal systems designed around how your team actually works.",
+    text: "Trackers, dashboards, and internal tools shaped around real workflows.",
   },
   {
     title: "Build vs. buy guidance",
-    text: "An honest assessment of whether to build a custom solution or buy an existing one — so you spend budget where it earns its keep.",
+    text: "A practical recommendation before budget is committed.",
   },
   {
     title: "Performance, SEO & accessibility",
-    text: "Fast load times, structured data, and accessible markup — engineered so the site stays healthy long after launch.",
+    text: "The technical foundations that keep a digital product healthy after launch.",
   },
 ];
 
@@ -71,29 +72,21 @@ const propertyOperationsTransformation = [
     number: "01",
     before: "Manual listings",
     after: "AI-assisted publishing",
-    detail:
-      "Structured property details become clear, consistent listing drafts ready for review and publication.",
   },
   {
     number: "02",
     before: "Manual applicant review",
     after: "Structured digital workflow",
-    detail:
-      "Applicant information moves through a consistent review process with clearer status, ownership, and follow-through.",
   },
   {
     number: "03",
     before: "Paper lease agreements",
     after: "Digital lease generation and e-signature",
-    detail:
-      "Approved terms flow into digital lease documents, electronic signatures, and automated document delivery.",
   },
   {
     number: "04",
     before: "Physical copies and manual distribution",
     after: "Automatic emailed signed copies",
-    detail:
-      "Completed lease documents are delivered to the appropriate parties automatically, improving recordkeeping and reducing administrative follow-up.",
   },
 ];
 
@@ -111,40 +104,40 @@ const showcase: ShowcaseSite[] = [
     url: "https://2nspira.com",
     tag: "Services & advisory",
     description:
-      "A consulting and think-tank site for technology leadership, AI readiness, and responsible AI enablement — with a resource library, insights, and assessment tools.",
-    scope: ["Marketing site", "Resource library", "Assessment tools", "Structured data & SEO"],
+      "Technology leadership, AI readiness, insights, and practical assessment tools in one clear digital home.",
+    scope: ["Advisory platform", "Resource library", "Assessment tools"],
   },
   {
     name: "CalmLoop",
     url: "https://calmloop.vercel.app",
     tag: "Consumer web app",
     description:
-      "A fast, low-pressure companion for families supporting autistic and neurodivergent children — gentle routine suggestions built around how a moment is feeling right now.",
-    scope: ["Web app", "Family-focused UX", "Sensory-aware design", "Free to run & maintain"],
+      "A low-pressure companion offering gentle routine ideas for neurodivergent children and their families.",
+    scope: ["Family-focused UX", "Sensory-aware design", "Web app"],
   },
   {
     name: "Breadcrumb",
     url: "https://breadcrumb-challenge.vercel.app",
     tag: "Interactive experience",
     description:
-      "A zero-cost interactive OSINT challenge game — plain HTML, CSS, and JavaScript engineered to run anywhere without a server or database.",
-    scope: ["Interactive game", "Zero-infrastructure hosting", "Performance-focused build"],
+      "A fast OSINT challenge game engineered to run anywhere without a server or database.",
+    scope: ["Interactive game", "Zero-infrastructure", "Fast delivery"],
   },
   {
     name: "GeVitals",
     url: "https://gevitals-website.jcortez-36a.workers.dev",
     tag: "Bilingual professional site",
     description:
-      "A fully bilingual (ES/EN) practice website for a naturopathic clinic in Santo Domingo, Dominican Republic — content migrated from a prior platform, with videos, blog, and local-search optimization.",
-    scope: ["Bilingual site (ES/EN)", "Content migration", "Video showcase", "Local SEO"],
+      "A bilingual clinic website combining migrated content, video, publishing, and local discovery.",
+    scope: ["Bilingual experience", "Content migration", "Local SEO"],
   },
   {
     name: "Open Goal Soccer",
     url: "https://opengoalsoccer.com",
     tag: "Mission-driven archival site",
     description:
-      "A preserved and modernized digital home for an inclusive, autism-friendly youth soccer organization — honoring its mission, program history, and community story in an accessible archival experience.",
-    scope: ["Archival redesign", "Content preservation", "Accessible responsive build", "Cloudflare deployment"],
+      "An accessible digital archive preserving an inclusive youth soccer program’s mission and community story.",
+    scope: ["Archival redesign", "Content preservation", "Accessibility"],
   },
 ];
 
@@ -176,16 +169,19 @@ export default function WebsitesPage() {
               ← All services
             </Link>
           </p>
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          <h1 className="animate-rise mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             Websites &amp; Web Applications
           </h1>
-          <p className={lead}>
+          <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>
             We design and build websites and web applications that work for your
             business — from bilingual marketing sites to internal tools your team
             will actually use. And before anything is built, we give you an honest
             build-vs-buy recommendation.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div
+            className="animate-rise mt-8 flex flex-wrap gap-3"
+            style={{ animationDelay: "150ms" }}
+          >
             <Link href="/contact" className={buttonPrimary}>
               Start a conversation
             </Link>
@@ -196,9 +192,13 @@ export default function WebsitesPage() {
         </div>
         <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 sm:pb-20">
           <figure
-            className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-line shadow-soft"
+            className="hero-settle group relative aspect-[3/2] overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_20px_60px_rgba(35,41,54,0.10)]"
             aria-label="A website layout and a web application dashboard"
           >
+            <div
+              className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-tr from-white/10 via-transparent to-accent/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+              aria-hidden="true"
+            />
             <Image
               src="/images/pages/websites-hero.webp"
               alt="A modern website layout and an analytics dashboard on two floating screens."
@@ -206,7 +206,7 @@ export default function WebsitesPage() {
               sizes="(min-width: 1024px) 1024px, calc(100vw - 32px)"
               unoptimized
               fetchPriority="high"
-              className="object-cover object-center"
+              className="object-cover object-center transition-transform duration-700 ease-gentle group-hover:scale-[1.02]"
             />
           </figure>
         </div>
@@ -221,290 +221,311 @@ export default function WebsitesPage() {
           <p className={`mt-4 max-w-2xl ${lead}`}>
             Every engagement is scoped around the outcome — not a template.
           </p>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2">
-            {capabilities.map((item) => (
-              <article key={item.title} className={`p-8 ${card}`}>
-                <h3 className={h3}>{item.title}</h3>
-                <p className={`mt-3 text-sm leading-7 text-body`}>{item.text}</p>
-              </article>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {capabilities.map((item, index) => (
+              <Reveal key={item.title} delay={index * 70} className="h-full">
+                <article
+                  className={`group h-full p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${card}`}
+                >
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent transition-transform duration-300 group-hover:scale-110">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className={`mt-5 ${h3}`}>{item.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-body">{item.text}</p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* Showcase — the heart of the page */}
-      <section id="our-work" className={sectionBand} aria-labelledby="showcase-heading">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 id="showcase-heading" className={h2}>
-            Work we’ve shipped
-          </h2>
-          <p className={`mt-4 max-w-2xl ${lead}`}>
-            Selected live projects and operational modernization work designed
-            around how organizations actually run.
-          </p>
+      <section
+        id="our-work"
+        className={`${sectionBand} relative overflow-hidden`}
+        aria-labelledby="showcase-heading"
+      >
+        <div
+          className="pointer-events-none absolute -left-28 top-32 h-72 w-72 rounded-full bg-accent/10 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -right-32 bottom-40 h-80 w-80 rounded-full bg-accent-soft/70 blur-3xl"
+          aria-hidden="true"
+        />
 
-          <article
-            id="water-bear-mecca"
-            className="mt-12 overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.10)]"
-            aria-labelledby="water-bear-mecca-heading"
-          >
-            <div className="grid lg:grid-cols-[0.88fr_1.12fr]">
-              <div className="relative overflow-hidden bg-ink p-8 text-white sm:p-10 lg:p-12">
-                <div
-                  className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
-                  aria-hidden="true"
-                />
-                <div className="relative">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/65">
-                    Client project · Property operations modernization
-                  </p>
-                  <h3
-                    id="water-bear-mecca-heading"
-                    className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl"
-                  >
-                    Water Bear Mecca
-                  </h3>
-                  <p className="mt-4 text-xl font-medium leading-8 text-white">
-                    Digitizing the property-management workflow from listing to
-                    signed lease
-                  </p>
-                  <p className="mt-5 text-base leading-8 text-white/75">
-                    2Nspira is helping Water Bear Mecca modernize property
-                    operations by using AI-assisted listing workflows, structured
-                    applicant review, and digital lease execution with electronic
-                    signatures and automated document delivery.
-                  </p>
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <h2 id="showcase-heading" className={h2}>
+                Work we’ve shipped
+              </h2>
+              <p className={`mt-4 max-w-2xl ${lead}`}>
+                Digital experiences and operating systems built to make work
+                clearer, faster, and easier to manage.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2" aria-label="Portfolio overview">
+              <span className="rounded-full border border-line bg-canvas/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-body backdrop-blur">
+                2 operations initiatives
+              </span>
+              <span className="rounded-full border border-line bg-canvas/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-body backdrop-blur">
+                5 live experiences
+              </span>
+            </div>
+          </div>
 
-                  <div className="mt-8 border-t border-white/15 pt-6">
-                    <p className="text-sm font-semibold text-white">
-                      The modernization objective
+          <Reveal className="mt-12">
+            <article
+              id="water-bear-mecca"
+              className="group overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.10)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(35,41,54,0.14)]"
+              aria-labelledby="water-bear-mecca-heading"
+            >
+              <div className="grid lg:grid-cols-[0.82fr_1.18fr]">
+                <div className="relative flex flex-col justify-between overflow-hidden bg-ink p-8 text-white sm:p-10">
+                  <div
+                    className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-accent/25 blur-3xl transition-transform duration-700 group-hover:scale-125"
+                    aria-hidden="true"
+                  />
+                  <div className="relative">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">
+                      Property operations modernization
                     </p>
-                    <p className="mt-2 text-sm leading-7 text-white/70">
-                      Replace disconnected manual handoffs with one clearer,
-                      repeatable operating flow while keeping human review at the
-                      decisions that matter.
+                    <h3
+                      id="water-bear-mecca-heading"
+                      className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl"
+                    >
+                      Water Bear Mecca
+                    </h3>
+                    <p className="mt-4 text-xl font-medium leading-8 text-white">
+                      From listing to signed lease
+                    </p>
+                    <p className="mt-4 max-w-md text-sm leading-7 text-white/70">
+                      An initiative connecting AI-assisted publishing, structured
+                      applicant review, digital leasing, and document delivery.
+                    </p>
+                  </div>
+                  <div className="relative mt-8 flex flex-wrap gap-2">
+                    {["Fewer handoffs", "Clearer status", "Standardized records"].map(
+                      (item) => (
+                        <span
+                          key={item}
+                          className="rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-medium text-white/80"
+                        >
+                          {item}
+                        </span>
+                      ),
+                    )}
+                  </div>
+                </div>
+
+                <div className="p-6 sm:p-8 lg:p-10">
+                  <p className={eyebrow}>The operating shift</p>
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                    {propertyOperationsTransformation.map((item) => (
+                      <div
+                        key={item.number}
+                        className="group/shift relative overflow-hidden rounded-2xl border border-line bg-surface p-5 transition-all duration-300 hover:border-accent/30 hover:bg-canvas"
+                      >
+                        <div className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-accent transition-transform duration-300 group-hover/shift:scale-x-100" />
+                        <p className="text-xs font-semibold tracking-[0.18em] text-accent">
+                          {item.number}
+                        </p>
+                        <p className="mt-3 text-xs font-medium uppercase tracking-wide text-body/70 line-through decoration-line">
+                          {item.before}
+                        </p>
+                        <p className="mt-2 font-semibold leading-6 text-ink">
+                          {item.after}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 border-t border-line pt-5">
+                    <ul
+                      className="flex flex-wrap gap-2"
+                      aria-label="Water Bear Mecca modernization scope"
+                    >
+                      {[
+                        "AI-assisted listings",
+                        "Applicant review",
+                        "Digital leasing",
+                        "E-signatures",
+                        "Automated delivery",
+                        "Operational visibility",
+                      ].map((item) => (
+                        <li
+                          key={item}
+                          className="rounded-full bg-accent-soft px-3 py-1.5 text-xs font-medium text-ink"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className={`mt-4 ${caption}`}>
+                      A phased modernization initiative moving through design,
+                      rollout, and operational verification.
                     </p>
                   </div>
                 </div>
               </div>
+            </article>
+          </Reveal>
 
-              <div className="p-8 sm:p-10 lg:p-12">
-                <p className={eyebrow}>
-                  The operating model this initiative is building toward
-                </p>
-                <div className="mt-6 space-y-4">
-                  {propertyOperationsTransformation.map((item) => (
-                    <div
-                      key={item.number}
-                      className="rounded-2xl border border-line bg-surface p-5 sm:p-6"
+          <Reveal className="mt-8" delay={80}>
+            <article
+              id="manufacturing-pilot"
+              className="group overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_20px_60px_rgba(35,41,54,0.08)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(35,41,54,0.12)]"
+              aria-labelledby="manufacturing-pilot-heading"
+            >
+              <div className="grid lg:grid-cols-[0.82fr_1.18fr]">
+                <div className="relative overflow-hidden bg-ink p-8 text-white sm:p-10">
+                  <div
+                    className="absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl transition-transform duration-700 group-hover:scale-125"
+                    aria-hidden="true"
+                  />
+                  <div className="relative">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">
+                      Enterprise pilot · Client anonymized
+                    </p>
+                    <h3
+                      id="manufacturing-pilot-heading"
+                      className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl"
                     >
-                      <div className="flex items-start gap-4">
-                        <span className="mt-0.5 text-xs font-semibold tracking-[0.2em] text-accent">
-                          {item.number}
+                      Manufacturing Operations Command Center
+                    </h3>
+                    <p className="mt-5 max-w-md text-sm leading-7 text-white/70">
+                      One shared operational view replacing scattered paper logs
+                      and spreadsheets.
+                    </p>
+                  </div>
+                  <div className="relative mt-8 grid grid-cols-2 gap-2 text-xs font-medium text-white/75">
+                    {["Production", "Inventory", "Quality", "Equipment"].map(
+                      (item) => (
+                        <span
+                          key={item}
+                          className="rounded-xl border border-white/10 bg-white/10 px-3 py-3"
+                        >
+                          {item}
                         </span>
-                        <div className="min-w-0 flex-1">
-                          <div className="grid gap-2 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
-                            <p className="text-sm font-medium text-body line-through decoration-line">
-                              {item.before}
-                            </p>
-                            <span
-                              className="hidden text-accent sm:inline"
-                              aria-hidden="true"
-                            >
-                              →
-                            </span>
-                            <p className="font-semibold text-ink">{item.after}</p>
-                          </div>
-                          <p className="mt-3 text-sm leading-6 text-body">
-                            {item.detail}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                      ),
+                    )}
+                  </div>
                 </div>
 
-                <div className="mt-6 border-t border-line pt-6">
-                  <p className="text-sm font-semibold text-ink">
-                    Modernization initiative scope
-                  </p>
-                  <ul
-                    className="mt-3 flex flex-wrap gap-2"
-                    aria-label="Water Bear Mecca modernization scope"
-                  >
+                <div className="p-6 sm:p-8 lg:p-10">
+                  <p className={eyebrow}>What the pilot brings together</p>
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
                     {[
-                      "AI-assisted unit listing workflows",
-                      "Applicant review automation",
-                      "Digital leasing workflows",
-                      "Electronic signatures",
-                      "Automated document delivery",
-                      "Operational visibility and standardization",
-                    ].map((item) => (
+                      ["01", "Production visibility", "Priorities, blockers, progress"],
+                      ["02", "Inventory & maintenance", "Stock, service, readiness"],
+                      ["03", "Quality traceability", "Issues, evidence, ownership"],
+                      ["04", "Role-based decisions", "The right view for each role"],
+                    ].map(([number, title, text]) => (
+                      <div
+                        key={number}
+                        className="rounded-2xl border border-line bg-surface p-5 transition-colors duration-300 hover:border-accent/30 hover:bg-canvas"
+                      >
+                        <p className="text-xs font-semibold tracking-[0.18em] text-accent">
+                          {number}
+                        </p>
+                        <h4 className="mt-3 font-semibold text-ink">{title}</h4>
+                        <p className="mt-1 text-sm leading-6 text-body">{text}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <ul
+                    className="mt-5 flex flex-wrap gap-2"
+                    aria-label="Enterprise design principles"
+                  >
+                    {["Role-based", "Audit-ready", "Modular", "Phased"].map((item) => (
                       <li
                         key={item}
-                        className="rounded-full border border-line bg-canvas-deep px-3 py-1.5 text-xs font-medium text-body"
+                        className="rounded-full bg-canvas-deep px-3 py-1.5 text-xs font-medium text-body"
                       >
                         {item}
                       </li>
                     ))}
                   </ul>
-                  <p className={`mt-4 ${caption}`}>
-                    Capabilities move through design, phased rollout, and
-                    operational verification as the modernization initiative
-                    progresses.
-                  </p>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </Reveal>
 
-          <article
-            id="manufacturing-pilot"
-            className="mt-8 overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.10)]"
-            aria-labelledby="manufacturing-pilot-heading"
-          >
-            <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="bg-ink p-8 text-white sm:p-10 lg:p-12">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/65">
-                  Featured enterprise pilot · Client anonymized
-                </p>
-                <h3
-                  id="manufacturing-pilot-heading"
-                  className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl"
-                >
-                  Manufacturing Operations Command Center
-                </h3>
-                <p className="mt-5 text-base leading-8 text-white/75">
-                  A custom operations platform designed to replace fragmented paper
-                  logs and spreadsheets with one shared view of production,
-                  inventory, quality, and equipment readiness.
-                </p>
-                <div className="mt-8 rounded-2xl border border-white/15 bg-white/10 p-5">
-                  <p className="text-sm font-semibold text-white">The operating challenge</p>
-                  <p className="mt-2 text-sm leading-7 text-white/70">
-                    Critical information lived across disconnected tools, limiting
-                    visibility between the production floor, operations managers,
-                    and leadership.
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-8 sm:p-10 lg:p-12">
-                <p className={eyebrow}>What the pilot brings together</p>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  {[
-                    {
-                      number: "01",
-                      title: "Production visibility",
-                      text: "A shared view of work in progress, priorities, blockers, and completion status.",
-                    },
-                    {
-                      number: "02",
-                      title: "Inventory & maintenance",
-                      text: "Stock awareness, reorder signals, equipment schedules, and service history in one workflow.",
-                    },
-                    {
-                      number: "03",
-                      title: "Quality traceability",
-                      text: "Consistent digital records for issues, supporting evidence, ownership, and follow-through.",
-                    },
-                    {
-                      number: "04",
-                      title: "Role-based decisions",
-                      text: "Focused views for frontline teams, managers, and executives without duplicating data.",
-                    },
-                  ].map((item) => (
-                    <div key={item.number} className="rounded-2xl border border-line bg-surface p-5">
-                      <p className="text-xs font-semibold tracking-[0.2em] text-accent">
-                        {item.number}
-                      </p>
-                      <h4 className="mt-3 font-semibold text-ink">{item.title}</h4>
-                      <p className="mt-2 text-sm leading-6 text-body">{item.text}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 border-t border-line pt-6">
-                  <p className="text-sm font-semibold text-ink">Enterprise design principles</p>
-                  <ul className="mt-3 flex flex-wrap gap-2" aria-label="Enterprise design principles">
-                    {["Role-based access", "Audit-ready records", "Modular integrations", "Phased rollout"].map(
-                      (item) => (
-                        <li
-                          key={item}
-                          className="rounded-full border border-line bg-canvas-deep px-3 py-1.5 text-xs font-medium text-body"
-                        >
-                          {item}
-                        </li>
-                      ),
-                    )}
-                  </ul>
-                  <p className={`mt-5 ${caption}`}>
-                    Client identity and confidential operational details are intentionally omitted.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {showcase.map((site) => (
-              <article
+          <p className="mt-10 text-xs font-semibold uppercase tracking-[0.16em] text-body/60 md:hidden">
+            Swipe to explore more work →
+          </p>
+          <div className="mt-4 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 md:mt-10 md:grid md:grid-cols-2 md:overflow-visible md:pb-0 lg:grid-cols-3">
+            {showcase.map((site, index) => (
+              <Reveal
                 key={site.name}
-                className={`flex flex-col p-8 ${card}`}
-                aria-labelledby={`showcase-${site.name.toLowerCase().replace(/\s+/g, "-")}`}
+                delay={index * 60}
+                className="h-full min-w-[82%] snap-start md:min-w-0"
               >
-                <p className="text-sm font-semibold uppercase tracking-widest text-accent">
-                  {site.tag}
-                </p>
-                <h3
-                  id={`showcase-${site.name.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="mt-3 text-2xl font-semibold tracking-tight text-ink"
+                <article
+                  className={`group relative flex h-full flex-col overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${card}`}
+                  aria-labelledby={`showcase-${site.name.toLowerCase().replace(/\s+/g, "-")}`}
                 >
-                  {site.name}
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-7 text-body">
-                  {site.description}
-                </p>
-                <ul
-                  className="mt-5 flex flex-wrap gap-2"
-                  aria-label={`${site.name} scope`}
-                >
-                  {site.scope.map((item) => (
-                    <li
-                      key={item}
-                      className="rounded-full border border-line bg-canvas-deep px-3 py-1 text-xs font-medium text-body"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={site.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`mt-6 self-start ${linkInline}`}
-                >
-                  Visit {site.name} →
-                </a>
-              </article>
+                  <div
+                    className="absolute -right-10 -top-12 h-28 w-28 rounded-full bg-accent-soft opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100"
+                    aria-hidden="true"
+                  />
+                  <div className="relative flex items-start justify-between gap-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+                      {site.tag}
+                    </p>
+                    <span className="text-xs font-semibold tracking-[0.18em] text-body/50">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3
+                    id={`showcase-${site.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="relative mt-4 text-2xl font-semibold tracking-tight text-ink"
+                  >
+                    {site.name}
+                  </h3>
+                  <p className="relative mt-3 flex-1 text-sm leading-6 text-body">
+                    {site.description}
+                  </p>
+                  <ul className="relative mt-5 flex flex-wrap gap-2" aria-label={`${site.name} scope`}>
+                    {site.scope.map((item) => (
+                      <li
+                        key={item}
+                        className="rounded-full bg-canvas-deep px-3 py-1 text-[0.7rem] font-medium text-body"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={site.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`relative mt-5 self-start ${linkInline}`}
+                  >
+                    Visit {site.name} →
+                  </a>
+                </article>
+              </Reveal>
             ))}
           </div>
 
-          <aside className={`mt-10 flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8 ${cardFlat}`}>
-            <div>
-              <h3 className={h3}>Have a project in mind?</h3>
-              <p className={`mt-2 ${caption}`}>
-                From a single marketing page to a full internal tool — tell us the
-                outcome you need.
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className={`${buttonPrimary} shrink-0 self-start sm:self-auto`}
-            >
-              Discuss your project
-            </Link>
-          </aside>
+          <Reveal className="mt-8">
+            <aside className={`flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8 ${cardFlat}`}>
+              <div>
+                <h3 className={h3}>Have a project in mind?</h3>
+                <p className={`mt-2 ${caption}`}>
+                  Tell us the outcome. We’ll help identify the simplest useful path.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className={`${buttonPrimary} shrink-0 self-start sm:self-auto`}
+              >
+                Discuss your project
+              </Link>
+            </aside>
+          </Reveal>
         </div>
       </section>
 
