@@ -249,6 +249,7 @@ export default function ContactPage() {
           __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
         }}
       />
+      {/* ── Hero section ── */}
       <section className="border-b border-line bg-surface">
         <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
           <Reveal>
@@ -268,20 +269,39 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* ── Hero image with gradient overlay (matches /websites treatment) ── */}
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <figure className="-mx-4 overflow-hidden sm:-mx-6 lg:-mx-8">
+        <figure className="group relative overflow-hidden sm:-mx-6 lg:-mx-8">
+          <div
+            className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-tr from-white/10 via-transparent to-accent/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            aria-hidden="true"
+          />
           <Image
             src="/images/pages/contact-environmental.webp"
             alt="Conceptual visualization of a calm, minimal meeting corner beside a window."
             width={1344}
             height={768}
-            className="h-auto w-full"
+            className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.01]"
           />
         </figure>
       </div>
 
-      <section className="py-16 sm:py-24" aria-labelledby="form-heading">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      {/* ── Contact section with ambient orbs (matching /websites sectionBand depth) ── */}
+      <section
+        className="relative bg-canvas-deep py-16 sm:py-24"
+        aria-labelledby="form-heading"
+      >
+        {/* Ambient background orbs — same treatment as /websites */}
+        <div
+          className="pointer-events-none absolute -left-28 top-32 h-72 w-72 rounded-full bg-accent/10 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -right-32 bottom-40 h-80 w-80 rounded-full bg-accent-soft/70 blur-3xl"
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           {/* ---- Success / Draft states ---- */}
           {state.kind === "delivered" && submitted ? (
             <div
@@ -353,10 +373,15 @@ export default function ContactPage() {
             <form
               ref={formRef}
               onSubmit={handleSubmit}
-              className={`p-8 ${card}`}
+              className={`p-8 ${card} shadow-[0_20px_60px_rgba(35,41,54,0.08)] transition-[box-shadow] duration-500 hover:shadow-[0_28px_70px_rgba(35,41,54,0.12)]`}
               aria-labelledby="form-heading"
               noValidate={false}
             >
+              {/* Accent top-line reveal (matching /websites card treatment) */}
+              <div
+                className="absolute -top-px left-8 right-8 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 group-hover/form-card:scale-x-100"
+                aria-hidden="true"
+              />
               <h2 id="form-heading" className="text-2xl font-bold text-ink">
                 Send us a message
               </h2>
@@ -488,55 +513,81 @@ export default function ContactPage() {
             </form>
           )}
 
-          {/* ---- Contact card (always visible) ---- */}
+          {/* ---- Contact card (always visible) ── enhanced with badge + hover + accent line ── */}
           <Reveal delay={0}>
             <div
-              className={`mt-12 p-8 ${cardFlat}`}
+              className={`group relative mt-12 overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${cardFlat}`}
               role="complementary"
               aria-label="Alternative contact methods"
             >
-              <h3 className="text-lg font-semibold text-ink">
-                Prefer to email directly?
-              </h3>
-              <p className={`mt-2 ${caption}`}>
-                Reach us at:{" "}
-                <a
-                  href={`mailto:${CONTACT_EMAIL}`}
-                  className="underline underline-offset-4 transition-colors duration-300 ease-gentle hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                >
-                  {CONTACT_EMAIL}
-                </a>
-              </p>
-              <p className={`mt-2 ${caption}`}>
-                Phone:{" "}
-                <a
-                  href="tel:+16465430199"
-                  className="underline underline-offset-4 transition-colors duration-300 ease-gentle hover:text-accent"
-                >
-                  +1 (646) 543-0199
-                </a>
-              </p>
-              <p className={`mt-2 ${caption}`}>
-                11215 72nd Rd, Forest Hills, NY
-              </p>
+              {/* Accent top-line */}
+              <div
+                className="absolute -top-px left-8 right-8 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 group-hover:scale-x-100"
+                aria-hidden="true"
+              />
+              <div className="p-8">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-lg font-semibold text-ink">
+                    Prefer to email directly?
+                  </h3>
+                  {/* Badge pill (matching /websites tag styling) */}
+                  <span className="shrink-0 rounded-full border border-line bg-canvas/80 px-3 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-body">
+                    Direct
+                  </span>
+                </div>
+                <p className={`mt-3 ${caption}`}>
+                  Reach us at:{" "}
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors duration-300 ease-gentle hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  >
+                    {CONTACT_EMAIL}
+                  </a>
+                </p>
+                <p className={`mt-2 ${caption}`}>
+                  Phone:{" "}
+                  <a
+                    href="tel:+16465430199"
+                    className="font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors duration-300 ease-gentle hover:decoration-accent"
+                  >
+                    +1 (646) 543-0199
+                  </a>
+                </p>
+                <p className={`mt-2 ${caption}`}>
+                  11215 72nd Rd, Forest Hills, NY
+                </p>
+              </div>
             </div>
           </Reveal>
 
-          {/* ---- FAQ card ---- */}
+          {/* ---- FAQ card ── enhanced with badge + hover + accent line ── */}
           <Reveal delay={100}>
             <div
-              className={`mt-8 p-8 ${cardFlat}`}
+              className={`group relative mt-8 overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${cardFlat}`}
               role="complementary"
               aria-label="Frequently asked questions"
             >
-              <h3 className="text-lg font-semibold text-ink">
-                Common questions
-              </h3>
-              <dl className="mt-4 space-y-4">
-                {faqs.map((item, i) => (
-                  <FAQItem key={i} q={item.q} a={item.a} index={i} />
-                ))}
-              </dl>
+              {/* Accent top-line */}
+              <div
+                className="absolute -top-px left-8 right-8 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 group-hover:scale-x-100"
+                aria-hidden="true"
+              />
+              <div className="p-8">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-lg font-semibold text-ink">
+                    Common questions
+                  </h3>
+                  {/* Badge pill */}
+                  <span className="shrink-0 rounded-full border border-line bg-canvas/80 px-3 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-body">
+                    FAQ
+                  </span>
+                </div>
+                <dl className="mt-4 space-y-4">
+                  {faqs.map((item, i) => (
+                    <FAQItem key={i} q={item.q} a={item.a} index={i} />
+                  ))}
+                </dl>
+              </div>
             </div>
           </Reveal>
         </div>
