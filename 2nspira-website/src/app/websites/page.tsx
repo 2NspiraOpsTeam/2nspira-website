@@ -88,6 +88,13 @@ const propertyOperationsTransformation = [
     detail:
       "Approved terms flow into digital lease documents, electronic signatures, and automated document delivery.",
   },
+  {
+    number: "04",
+    before: "Physical copies and manual distribution",
+    after: "Automatic emailed signed copies",
+    detail:
+      "Completed lease documents are delivered to the appropriate parties automatically, improving recordkeeping and reducing administrative follow-up.",
+  },
 ];
 
 type ShowcaseSite = {
@@ -282,7 +289,9 @@ export default function WebsitesPage() {
               </div>
 
               <div className="p-8 sm:p-10 lg:p-12">
-                <p className={eyebrow}>From manual handoffs to a connected workflow</p>
+                <p className={eyebrow}>
+                  The operating model this initiative is building toward
+                </p>
                 <div className="mt-6 space-y-4">
                   {propertyOperationsTransformation.map((item) => (
                     <div
@@ -316,17 +325,20 @@ export default function WebsitesPage() {
                 </div>
 
                 <div className="mt-6 border-t border-line pt-6">
-                  <p className="text-sm font-semibold text-ink">Modernization scope</p>
+                  <p className="text-sm font-semibold text-ink">
+                    Modernization initiative scope
+                  </p>
                   <ul
                     className="mt-3 flex flex-wrap gap-2"
                     aria-label="Water Bear Mecca modernization scope"
                   >
                     {[
-                      "AI-assisted workflows",
-                      "Structured review",
-                      "Digital lease generation",
+                      "AI-assisted unit listing workflows",
+                      "Applicant review automation",
+                      "Digital leasing workflows",
                       "Electronic signatures",
-                      "Automated delivery",
+                      "Automated document delivery",
+                      "Operational visibility and standardization",
                     ].map((item) => (
                       <li
                         key={item}
@@ -336,6 +348,11 @@ export default function WebsitesPage() {
                       </li>
                     ))}
                   </ul>
+                  <p className={`mt-4 ${caption}`}>
+                    Capabilities move through design, phased rollout, and
+                    operational verification as the modernization initiative
+                    progresses.
+                  </p>
                 </div>
               </div>
             </div>
