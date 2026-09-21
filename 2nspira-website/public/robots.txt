@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /post/
+Allow: /resources/
+Sitemap: https://2nspira.com/sitemap.xml
