@@ -18,13 +18,13 @@ import {
 } from "@/components/ui";
 
 const homepageDescription =
-  "AI enablement, systems optimization, and fractional technology leadership for organizations navigating change and growth.";
+  "We help organizations modernize systems, adopt AI responsibly, and strengthen technology leadership to turn complexity into practical, measurable progress.";
 const homepageShareTitle =
-  "Human-centered technology transformation and practical AI adoption";
+  "Human-centered technology transformation for the AI era";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 
 export const metadata: Metadata = {
-  title: { absolute: "2Nspira" },
+  title: { absolute: "2Nspira | Technology Transformation & AI" },
   description: homepageDescription,
   alternates: { canonical: "https://2nspira.com/" },
   openGraph: {
