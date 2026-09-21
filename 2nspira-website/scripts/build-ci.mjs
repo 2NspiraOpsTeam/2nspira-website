@@ -26,3 +26,8 @@ execFileSync("npm", ["run", "build:vinext"], {
   env: { ...process.env, NEXT_PUBLIC_DEPLOYMENT_SHA: commit },
   stdio: "inherit",
 });
+
+execFileSync("node", ["scripts/smoke-build.mjs"], {
+  cwd: root,
+  stdio: "inherit",
+});
