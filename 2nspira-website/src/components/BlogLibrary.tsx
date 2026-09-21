@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import posts from "@/content/posts/index.json";
 import { caption, card } from "./ui";
+import Reveal from "./Reveal";
+import { AccentRule } from "./VisualAccents";
 
 export default function BlogLibrary({ category }: { category?: string }) {
   const [query, setQuery] = useState("");
@@ -27,17 +29,19 @@ export default function BlogLibrary({ category }: { category?: string }) {
       </div>
       {filtered.length ? (
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((post) => (
-            <article key={post.slug} className={`flex flex-col overflow-hidden ${card}`}>
+          {filtered.map((post, index) => (
+            <Reveal key={post.slug} delay={(index % 6) * 55} className="h-full">
+            <article className={`group relative flex h-full flex-col overflow-hidden hover:-translate-y-1 ${card}`}>
+              <AccentRule className="absolute inset-x-0 top-0 z-10 w-full scale-x-0 group-hover:scale-x-100" />
               {post.image && (
-                <Image
+                <div className="overflow-hidden"><Image
                   src={post.image}
                   alt=""
                   width={1200}
                   height={800}
                   unoptimized
-                  className="aspect-[3/2] w-full object-cover"
-                />
+                  className="aspect-[3/2] w-full object-cover transition-transform duration-700 ease-gentle group-hover:scale-[1.025]"
+                /></div>
               )}
               <div className="flex flex-1 flex-col p-6">
                 <time dateTime={post.datePublished} className={caption}>
@@ -54,7 +58,7 @@ export default function BlogLibrary({ category }: { category?: string }) {
                 <p className="mt-4 line-clamp-3 text-sm leading-6 text-body">{post.description}</p>
                 <p className={`mt-5 ${caption}`}>By {post.author}</p>
               </div>
-            </article>
+            </article></Reveal>
           ))}
         </div>
       ) : (

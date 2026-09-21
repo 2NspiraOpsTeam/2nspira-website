@@ -10,14 +10,14 @@
 
 /* Buttons */
 export const buttonPrimary =
-  "inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas";
+  "inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium text-white shadow-[0_8px_24px_rgba(74,111,165,0.18)] transition-all duration-300 ease-gentle hover:-translate-y-0.5 hover:bg-accent-strong hover:shadow-[0_12px_30px_rgba(74,111,165,0.24)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas";
 
 export const buttonSecondary =
   "inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-ink transition-colors duration-300 ease-gentle hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas";
 
 /* Cards */
 export const card =
-  "rounded-2xl border border-line bg-surface shadow-soft transition-[box-shadow] duration-300 ease-gentle hover:shadow-lift";
+  "rounded-2xl border border-line bg-surface shadow-soft transition-[transform,box-shadow,border-color] duration-300 ease-gentle hover:border-accent/20 hover:shadow-lift";
 
 export const cardFlat =
   "rounded-2xl border border-line bg-surface transition-colors duration-300 ease-gentle hover:border-line-strong";

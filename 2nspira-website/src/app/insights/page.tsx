@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BlogLibrary from "@/components/BlogLibrary";
-import { eyebrow, lead, linkInline, pageMain } from "@/components/ui";
+import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
+import { lead, linkInline, pageMain } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Executive Insights",
@@ -14,9 +15,10 @@ export const metadata: Metadata = {
 export default function InsightsPage() {
   return (
     <main className={pageMain} id="main-content">
-      <section className="border-b border-line bg-surface">
-        <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
-          <p className={eyebrow}>Ideas for leaders</p>
+      <section className="relative overflow-hidden border-b border-line bg-surface">
+        <AmbientField />
+        <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
+          <p><EyebrowPill>Ideas for leaders</EyebrowPill></p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             Executive Insights
           </h1>
@@ -34,14 +36,14 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-      <figure className="-mx-4 mt-0 overflow-hidden sm:-mx-6 lg:-mx-8">
+      <div className="mx-auto max-w-5xl px-4 pt-10 sm:px-6">
+      <figure className="group relative overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
         <Image
           src="/images/pages/insights-editorial.webp"
           alt="Conceptual editorial still life of a notebook, pen, and coffee beside a window."
           width={1344}
           height={768}
-          className="h-auto w-full"
+          className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.015]"
         />
       </figure>
       </div>
