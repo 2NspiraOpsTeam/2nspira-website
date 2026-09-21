@@ -9,7 +9,8 @@ export default function AiReadinessCard() {
   ];
 
   return (
-    <div className={`flex h-full flex-col p-8 ${card}`}>
+    <div className={`group flex h-full flex-col p-8 hover:-translate-y-1 ${card}`}>
+      <span className="mb-5 text-xs font-semibold uppercase tracking-[0.16em] text-accent">Organizational readiness</span>
       <div className="flex-1">
         <h2 className="text-lg font-semibold text-ink">
           AI Readiness Assessment for Organizations

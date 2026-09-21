@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
+import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
   buttonPrimary,
   card,
   caption,
-  eyebrow,
   h2,
   lead,
   linkInline,
@@ -23,20 +24,22 @@ export const metadata: Metadata = {
 export default function BooksPage() {
   return (
     <main className={pageMain} id="main-content">
-      <header className={pageHero}>
-        <p className={eyebrow}>From the author</p>
+      <header className={`${pageHero} relative overflow-hidden text-center`}>
+        <AmbientField />
+        <div className="relative">
+        <p><EyebrowPill>From the author</EyebrowPill></p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Leadership Books &amp; Visual Essays
         </h1>
-        <p className={lead}>
+        <p className={`mx-auto max-w-2xl ${lead}`}>
           Explore clarity, restraint, and leadership through different mediums.
           Each piece is an invitation to think about how trust, judgment, and
           meaning shape modern organizations.
-        </p>
+        </p></div>
       </header>
 
       <div className="mx-auto max-w-6xl space-y-10 px-4 pb-20 sm:px-6">
-        <section
+        <Reveal><section
           className={`grid gap-10 p-6 sm:p-10 md:grid-cols-[1fr_2fr] ${card}`}
           aria-labelledby="book-title"
         >
@@ -46,7 +49,7 @@ export default function BooksPage() {
             width={1600}
             height={2560}
             unoptimized
-            className="mx-auto h-auto w-full max-w-xs rounded-xl"
+            className="mx-auto h-auto w-full max-w-xs rounded-xl shadow-[0_18px_45px_rgba(35,41,54,0.16)] transition-transform duration-500 ease-gentle hover:-translate-y-1"
           />
           <div>
             <h2 id="book-title" className={h2}>
@@ -89,12 +92,13 @@ export default function BooksPage() {
               Read selected excerpts →
             </Link>
           </div>
-        </section>
+        </section></Reveal>
 
-        <section
+        <Reveal><section
           className={`p-6 sm:p-10 ${card}`}
           aria-labelledby="audio-title"
         >
+          <AccentRule className="mb-6" />
           <h2 id="audio-title" className={h2}>
             When Systems Work, Trust Weakens
           </h2>
@@ -112,9 +116,9 @@ export default function BooksPage() {
               Listen to the audio
             </a>
           </audio>
-        </section>
+        </section></Reveal>
 
-        <section
+        <Reveal><section
           className={`grid gap-8 p-6 sm:p-10 md:grid-cols-2 ${card}`}
           aria-labelledby="print-title"
         >
@@ -124,10 +128,10 @@ export default function BooksPage() {
             width={1014}
             height={1522}
             unoptimized
-            className="mx-auto h-auto w-full max-w-xs rounded-xl"
+            className="mx-auto h-auto w-full max-w-xs rounded-xl shadow-[0_18px_45px_rgba(35,41,54,0.14)] transition-transform duration-500 ease-gentle hover:-translate-y-1"
           />
           <div className="self-center">
-            <p className={eyebrow}>Visual essays</p>
+            <p><EyebrowPill>Visual essays</EyebrowPill></p>
             <h2 id="print-title" className="mt-4 text-3xl font-semibold tracking-tight text-ink">
               Reduce the Noise. Strengthen the Signal.
             </h2>
@@ -142,9 +146,9 @@ export default function BooksPage() {
               View the print on Etsy →
             </a>
           </div>
-        </section>
+        </section></Reveal>
 
-        <section
+        <Reveal><section
           className={`grid gap-8 p-6 sm:p-10 md:grid-cols-2 ${card}`}
           aria-labelledby="reading-title"
         >
@@ -153,10 +157,10 @@ export default function BooksPage() {
             alt="Conceptual visualization of an open book and tea beside a soft window."
             width={1344}
             height={768}
-            className="h-auto w-full rounded-xl"
+            className="h-auto w-full rounded-xl transition-transform duration-700 ease-gentle hover:scale-[1.015]"
           />
           <div className="self-center">
-            <p className={eyebrow}>The practice of reading</p>
+            <p><EyebrowPill>The practice of reading</EyebrowPill></p>
             <h2 id="reading-title" className="mt-4 text-3xl font-semibold tracking-tight text-ink">
               Ideas that stay with you
             </h2>
@@ -166,7 +170,7 @@ export default function BooksPage() {
               human-centered leadership requires.
             </p>
           </div>
-        </section>
+        </section></Reveal>
       </div>
     </main>
   );

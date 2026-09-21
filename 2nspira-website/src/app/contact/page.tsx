@@ -17,7 +17,6 @@ import {
   cardFlat,
   caption,
   field,
-  label,
   lead,
   pageMain,
 } from "@/components/ui";
@@ -35,7 +34,6 @@ type FieldGroupProps = {
   children: ReactNode;
   delay?: number;
   id: string;
-  "aria-describedby"?: string;
 };
 
 function FieldGroup({
@@ -45,7 +43,6 @@ function FieldGroup({
   children,
   delay = 0,
   id,
-  ...rest
 }: FieldGroupProps) {
   return (
     <Reveal delay={delay}>
@@ -135,7 +132,7 @@ export default function ContactPage() {
     setFormState((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const compose = (f: typeof formState) => {
+  const compose = useCallback((f: typeof formState) => {
     const subject = `Website inquiry from ${f.name}${
       f.organization ? ` (${f.organization})` : ""
     }`;
@@ -149,7 +146,7 @@ export default function ContactPage() {
       `— Submitted via 2nspira.com on ${new Date().toISOString()}`,
     ].join("\n");
     return { subject, body };
-  };
+  }, []);
 
   const openMailto = (subject: string, body: string) => {
     const href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -202,7 +199,7 @@ export default function ContactPage() {
         openMailto(subject, body);
       }
     },
-    [state.kind, formState],
+    [state.kind, formState, compose],
   );
 
   const handleReset = useCallback(() => {
@@ -237,9 +234,6 @@ export default function ContactPage() {
       acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
   };
-
-  const isTerminal =
-    state.kind === "delivered" || state.kind === "draft";
 
   return (
     <main className={pageMain} id="main-content">
@@ -288,7 +282,7 @@ export default function ContactPage() {
 
       {/* ── Contact section with ambient orbs (matching /websites sectionBand depth) ── */}
       <section
-        className="relative bg-canvas-deep py-16 sm:py-24"
+        className="relative overflow-hidden bg-canvas-deep py-16 sm:py-24"
         aria-labelledby="form-heading"
       >
         {/* Ambient background orbs — same treatment as /websites */}
