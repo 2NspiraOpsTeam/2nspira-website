@@ -18,7 +18,7 @@ import {
 } from "@/components/ui";
 
 const homepageDescription =
-  "AI enablement, systems optimization, and fractional technology leadership for organizations navigating practical AI adoption.";
+  "AI enablement, systems optimization, and fractional technology leadership for organizations navigating change and growth.";
 const homepageShareTitle =
   "Human-centered technology transformation and practical AI adoption";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
