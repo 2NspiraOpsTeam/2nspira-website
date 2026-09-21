@@ -43,18 +43,27 @@ try {
   if (!ready) throw new Error(`Timed out waiting for Worker.\n${output}`);
 
   for (const route of requiredRoutes) {
-    const response = await fetch(`${origin}${route}`, { redirect: "manual" });
+    const response = await fetch(`${origin}${route}`, {
+      headers: { "x-forwarded-proto": "https" },
+      redirect: "manual",
+    });
     if (response.status !== 200) {
       throw new Error(`Smoke check failed: ${route} returned ${response.status}.`);
     }
   }
 
-  const missing = await fetch(`${origin}/__release-smoke-missing__`, { redirect: "manual" });
+  const missing = await fetch(`${origin}/__release-smoke-missing__`, {
+    headers: { "x-forwarded-proto": "https" },
+    redirect: "manual",
+  });
   if (missing.status !== 404) {
     throw new Error(`Smoke check failed: missing route returned ${missing.status}, expected 404.`);
   }
 
-  console.log(`Build smoke checks passed for ${requiredRoutes.join(", ")}; missing-route 404 passed.`);
+  console.log(
+    `Build smoke checks passed for ${requiredRoutes.join(", ")}; ` +
+      "missing-route 404 passed.",
+  );
 } finally {
   worker.kill("SIGTERM");
 }
