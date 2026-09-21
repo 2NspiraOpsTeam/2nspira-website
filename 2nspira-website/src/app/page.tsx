@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import Link from "next/link";
 import {
   buttonPrimary,
@@ -7,7 +8,6 @@ import {
   card,
   cardFlat,
   caption,
-  eyebrow,
   h2,
   h3,
   lead,
@@ -65,16 +65,17 @@ export default function Home() {
       {/* Hero — B2 Split Advisory prototype (WAVE3-B2-STATIC-HERO) */}
       {/* Reversible design checkpoint; no motion; conceptual visual slot per Maya's spec. */}
       <section
-        className="py-24 sm:py-32"
+        className="relative overflow-hidden border-b border-line bg-surface py-24 sm:py-32"
         aria-labelledby="hero-heading"
         data-prototype="B2-SPLIT-ADVISORY"
       >
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <AmbientField />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[55fr_45fr] lg:items-center lg:gap-16">
             {/* Left: typography / value proposition */}
             <div>
-              <p className={`animate-rise ${eyebrow}`} style={{ animationDelay: "60ms" }}>
-                For leaders of small and mission-driven organizations
+              <p className="animate-rise" style={{ animationDelay: "60ms" }}>
+                <EyebrowPill>For leaders of small and mission-driven organizations</EyebrowPill>
               </p>
               <h1
                 id="hero-heading"
@@ -104,7 +105,7 @@ export default function Home() {
 
             {/* Portrait composition keeps the people and workflow visible at every breakpoint. */}
             <figure
-              className="hero-settle relative aspect-[4/5] overflow-hidden rounded-2xl border border-line shadow-soft lg:aspect-[4/5]"
+              className="hero-settle group relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.12)] lg:aspect-[4/5]"
               style={{ animationDelay: "220ms" }}
               aria-label="Strategy planning at the whiteboard"
             >
@@ -115,8 +116,9 @@ export default function Home() {
                 sizes="(min-width: 1152px) 461px, (min-width: 1024px) 42vw, calc(100vw - 32px)"
                 unoptimized
                 fetchPriority="high"
-                className="object-cover object-center"
+                className="object-cover object-center transition-transform duration-700 ease-gentle group-hover:scale-[1.02]"
               />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-ink/10 via-transparent to-accent/15 opacity-70" aria-hidden="true" />
             </figure>
           </div>
         </div>
@@ -143,8 +145,9 @@ export default function Home() {
             {services.map((feature) => (
               <article
                 key={feature.title}
-                className={`flex flex-col p-8 ${card}`}
+                className={`group relative flex flex-col overflow-hidden p-8 hover:-translate-y-1 ${card}`}
               >
+                <AccentRule className="absolute inset-x-0 top-0 w-full scale-x-0 group-hover:scale-x-100" />
                 <h3 className={h3}>{feature.title}</h3>
                 <p className={`mt-3 flex-1 text-sm leading-7 text-body`}>
                   {feature.description}
@@ -188,7 +191,8 @@ export default function Home() {
               aria-label="Our core values"
             >
             {values.map((value) => (
-              <div key={value.title} className={`p-6 ${cardFlat}`} role="listitem">
+              <div key={value.title} className={`group p-6 transition-all duration-300 hover:-translate-y-0.5 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
+                <AccentRule className="mb-4 w-8" />
                 <p className="text-base font-semibold text-ink">{value.title}</p>
                 <p className={`mt-2 ${caption}`}>{value.text}</p>
               </div>
@@ -205,8 +209,9 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className={sectionBand} aria-labelledby="cta-heading">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+      <section className={`${sectionBand} relative overflow-hidden`} aria-labelledby="cta-heading">
+        <AmbientField />
+        <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
           <Reveal>
             <h2 id="cta-heading" className={h2}>
               Ready to explore how 2Nspira can help?
