@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import Link from "next/link";
@@ -15,6 +16,40 @@ import {
   section,
   sectionBand,
 } from "@/components/ui";
+
+const homepageDescription =
+  "AI enablement, systems optimization, and fractional technology leadership for organizations navigating practical AI adoption.";
+const homepageShareTitle =
+  "Human-centered technology transformation and practical AI adoption";
+const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
+
+export const metadata: Metadata = {
+  title: { absolute: "2Nspira" },
+  description: homepageDescription,
+  alternates: { canonical: "https://2nspira.com/" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://2nspira.com/",
+    siteName: "2Nspira",
+    title: homepageShareTitle,
+    description: homepageDescription,
+    images: [
+      {
+        url: homepageSocialImage,
+        width: 1200,
+        height: 630,
+        alt: "2Nspira — human-centered technology transformation and practical AI adoption",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homepageShareTitle,
+    description: homepageDescription,
+    images: [homepageSocialImage],
+  },
+};
 
 export default function Home() {
   const services = [
