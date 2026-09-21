@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         url: socialImageUrl,
         width: 1200,
         height: 630,
-        alt: "2Nspira — human-centered technology transformation and practical AI adoption",
+        alt: "2Nspira",
       },
     ],
   },
