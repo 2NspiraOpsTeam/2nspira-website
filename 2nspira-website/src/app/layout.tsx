@@ -17,11 +17,13 @@ const geistMono = Geist_Mono({
 
 const siteName = "2Nspira";
 const siteDomain = "https://2nspira.com";
+const siteTitle =
+  "Human-centered technology transformation and practical AI adoption";
 const siteDescription =
-  "Human-centered technology transformation and practical AI adoption — specializing in AI enablement, systems optimization, and fractional technology leadership.";
+  "AI enablement, systems optimization, and fractional technology leadership for organizations navigating practical AI adoption.";
 export const metadata: Metadata = {
   title: {
-    default: `${siteName} | Human-centered technology transformation and practical AI adoption`,
+    default: siteTitle,
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -47,12 +49,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteDomain,
-    title: `${siteName} | Human-centered technology transformation and practical AI adoption`,
+    title: siteTitle,
     description: siteDescription,
     siteName: siteName,
     images: [
       {
-        url: "/images/logo/og-image.png",
+        url: "https://2nspira.com/images/logo/og-image-v2.png",
         width: 1200,
         height: 630,
         alt: siteName,
@@ -61,8 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteName} | Human-centered technology transformation and practical AI adoption`,
+    title: siteTitle,
     description: siteDescription,
+    images: ["https://2nspira.com/images/logo/og-image-v2.png"],
   },
   icons: {
     icon: [
