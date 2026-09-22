@@ -6,8 +6,8 @@ import { authClient } from "@/lib/portal/auth-client";
 
 export default function SignInForm() {
   const router = useRouter();
-  const [email, setEmail] = useState("peter@demo.2nspira.com");
-  const [password, setPassword] = useState("PortalDemo!2026");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [pending, setPending] = useState(false);
 

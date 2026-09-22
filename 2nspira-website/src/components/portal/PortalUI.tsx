@@ -15,8 +15,12 @@ export function SectionCard({ title, subtitle, action, children, className = "" 
   return <section className={`portal-card ${className}`}><header className="portal-card-head"><div><h2>{title}</h2>{subtitle && <p>{subtitle}</p>}</div>{action}</header>{children}</section>;
 }
 
-export function DemoAction({ children }: { children: React.ReactNode }) {
-  return <button type="button" className="portal-secondary-button" disabled title="Provider connection required" aria-describedby="demo-action-note">{children}</button>;
+export function DemoAction({ children, reason = "This action is not live in Milestone 1." }: { children: React.ReactNode; reason?: string }) {
+  return <button type="button" className="portal-secondary-button" disabled title={reason}>{children}</button>;
+}
+
+export function PreviewNotice({ children }: { children: React.ReactNode }) {
+  return <div className="portal-notice" role="note"><span aria-hidden="true">i</span><p><strong>Preview only.</strong> {children}</p></div>;
 }
 
 export function EmptyState({ title, body }: { title: string; body: string }) {
