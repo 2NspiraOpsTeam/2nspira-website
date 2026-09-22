@@ -321,7 +321,7 @@ export default function WebsitesPage() {
 
                 <div className="p-6 sm:p-8 lg:p-10">
                   <p className={eyebrow}>The operating shift</p>
-                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  <div className="mt-5 grid auto-rows-fr gap-3 sm:grid-cols-2">
                     {propertyOperationsTransformation.map((item) => (
                       <div
                         key={item.number}
@@ -386,7 +386,7 @@ export default function WebsitesPage() {
                   />
                   <div className="relative">
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">
-                      Enterprise pilot · Client anonymized
+                      Manufacturing operations · Sample solution
                     </p>
                     <h3
                       id="manufacturing-pilot-heading"
@@ -395,8 +395,10 @@ export default function WebsitesPage() {
                       Manufacturing Operations Command Center
                     </h3>
                     <p className="mt-5 max-w-md text-sm leading-7 text-white/70">
-                      One shared operational view replacing scattered paper logs
-                      and spreadsheets.
+                      A connected operations workspace that gives manufacturing
+                      teams visibility across production, materials, quality,
+                      equipment, and accountability — without relying on
+                      disconnected spreadsheets, paper logs, and manual handoffs.
                     </p>
                   </div>
                   <div className="relative mt-8 grid grid-cols-2 gap-2 text-xs font-medium text-white/75">
@@ -414,13 +416,31 @@ export default function WebsitesPage() {
                 </div>
 
                 <div className="p-6 sm:p-8 lg:p-10">
-                  <p className={eyebrow}>What the pilot brings together</p>
+                  <p className={eyebrow}>
+                    What your operations team could manage in one place
+                  </p>
                   <div className="mt-5 grid gap-3 sm:grid-cols-2">
                     {[
-                      ["01", "Production visibility", "Priorities, blockers, progress"],
-                      ["02", "Inventory & maintenance", "Stock, service, readiness"],
-                      ["03", "Quality traceability", "Issues, evidence, ownership"],
-                      ["04", "Role-based decisions", "The right view for each role"],
+                      [
+                        "01",
+                        "Production control",
+                        "Schedules, priorities, work queues, blockers, and throughput",
+                      ],
+                      [
+                        "02",
+                        "Materials & inventory",
+                        "Stock levels, shortages, purchasing, and job readiness",
+                      ],
+                      [
+                        "03",
+                        "Quality & traceability",
+                        "Inspections, issues, evidence, ownership, and job history",
+                      ],
+                      [
+                        "04",
+                        "Equipment & maintenance",
+                        "Downtime, service history, preventive maintenance, and asset readiness",
+                      ],
                     ].map(([number, title, text]) => (
                       <div
                         key={number}
@@ -436,9 +456,14 @@ export default function WebsitesPage() {
                   </div>
                   <ul
                     className="mt-5 flex flex-wrap gap-2"
-                    aria-label="Enterprise design principles"
+                    aria-label="Manufacturing operations capabilities"
                   >
-                    {["Role-based", "Audit-ready", "Modular", "Phased"].map((item) => (
+                    {[
+                      "Role-based dashboards",
+                      "Audit-ready records",
+                      "Workflow automation",
+                      "Real-time reporting",
+                    ].map((item) => (
                       <li
                         key={item}
                         className="rounded-full bg-canvas-deep px-3 py-1.5 text-xs font-medium text-body"
