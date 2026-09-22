@@ -125,7 +125,7 @@ const showcase: ShowcaseSite[] = [
   },
   {
     name: "GeVitals",
-    url: "https://gevitals-website.jcortez-36a.workers.dev",
+    url: "https://gevitals.com",
     tag: "Bilingual professional site",
     description:
       "A bilingual clinic website combining migrated content, video, publishing, and local discovery.",
