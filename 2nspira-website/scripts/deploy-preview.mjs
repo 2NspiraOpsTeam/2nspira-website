@@ -14,6 +14,19 @@ config.name = "2nspira-website-preview";
 config.main = "preview-entry.js";
 config.workers_dev = true;
 config.routes = [];
+config.vars = {
+  ...(config.vars ?? {}),
+  BETTER_AUTH_URL: "https://2nspira-website-preview.jcortez-36a.workers.dev",
+};
+config.d1_databases = (config.d1_databases ?? []).map((database) =>
+  database.binding === "PORTAL_DB"
+    ? {
+        ...database,
+        database_name: "2nspira-client-portal-preview",
+        database_id: "6fc65c97-0414-4b11-9505-c3ccc1bd4914",
+      }
+    : database,
+);
 delete config.route;
 await writeFile(new URL("../dist/server/wrangler.preview.json", import.meta.url), JSON.stringify(config, null, 2));
 await writeFile(new URL("../dist/server/preview-entry.js", import.meta.url), `

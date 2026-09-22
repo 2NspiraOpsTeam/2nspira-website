@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Analytics from "@/components/Analytics";
+import SiteChrome from "@/components/SiteChrome";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -149,10 +148,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col"><Analytics>
-        <a href="#main-content" className="skip-link">Skip to main content</a>
-        <Header />
-        {children}
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </Analytics>
       <script
         type="application/ld+json"

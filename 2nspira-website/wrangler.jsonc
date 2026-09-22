@@ -13,10 +13,20 @@
   "observability": {
     "enabled": true
   },
+  "vars": {
+    "BETTER_AUTH_URL": "https://2nspira.com"
+  },
   "cache": {
     "enabled": false
   },
   "images": {
     "binding": "IMAGES"
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "PORTAL_DB",
+      "database_name": "2nspira-client-portal",
+      "database_id": "4e120ff9-b2b8-438f-8692-00cc80eed19e"
+    }
+  ]
 }
