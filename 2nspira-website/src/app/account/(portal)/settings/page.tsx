@@ -1,0 +1,7 @@
+import { getPortalContext } from "@/lib/portal/context";
+import { PageHeading, SectionCard } from "@/components/portal/PortalUI";
+
+export default async function SettingsPage() {
+  const { user, organization, role } = await getPortalContext();
+  return <><PageHeading eyebrow="ACCOUNT" title="Organization and profile" description="The essential identity and billing details connected to this workspace." /><div className="portal-two-column"><SectionCard title="Organization"><dl className="portal-detail-list"><div><dt>Name</dt><dd>{organization.name}</dd></div><div><dt>Legal name</dt><dd>{organization.legalName ?? "—"}</dd></div><div><dt>Billing email</dt><dd>{organization.billingEmail}</dd></div><div><dt>Phone</dt><dd>{organization.phone ?? "—"}</dd></div><div><dt>Address</dt><dd>{organization.address ?? "—"}</dd></div></dl></SectionCard><SectionCard title="Your profile"><dl className="portal-detail-list"><div><dt>Name</dt><dd>{user.name}</dd></div><div><dt>Email</dt><dd>{user.email}</dd></div><div><dt>Access role</dt><dd>{role.replaceAll("_", " ")}</dd></div><div><dt>Email status</dt><dd>{user.emailVerified ? "Verified" : "Demo verification pending"}</dd></div></dl></SectionCard></div><div className="portal-notice"><span aria-hidden="true">i</span><p>Profile and organization editing will be enabled after administrative workflows and verification delivery are connected.</p></div></>;
+}

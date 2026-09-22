@@ -13,10 +13,16 @@
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
     "deploy:production": "node scripts/deploy-production.mjs",
     "deploy:preview": "node scripts/deploy-preview.mjs",
-    "verify:release": "node scripts/verify-release.mjs"
+    "verify:release": "node scripts/verify-release.mjs",
+    "db:migrate:local": "wrangler d1 execute 2nspira-client-portal-preview --local --file=migrations/0001_client_portal.sql",
+    "db:seed:local": "wrangler d1 execute 2nspira-client-portal-preview --local --file=migrations/seed-demo.sql",
+    "db:migrate:preview": "wrangler d1 execute 2nspira-client-portal-preview --remote --file=migrations/0001_client_portal.sql",
+    "db:seed:preview": "wrangler d1 execute 2nspira-client-portal-preview --remote --file=migrations/seed-demo.sql"
   },
   "dependencies": {
     "@vinext/cloudflare": "^1.0.0-beta.6",
+    "better-auth": "^1.7.5",
+    "drizzle-orm": "^0.45.3",
     "next": "16.3.3",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -25,6 +31,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.54.6",
+    "@cloudflare/workers-types": "^5.20260922.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -32,6 +39,7 @@
     "@vitejs/plugin-react": "^6.1.1",
     "@vitejs/plugin-rsc": "^0.5.34",
     "cheerio": "^1.2.0",
+    "drizzle-kit": "^0.31.11",
     "eslint": "^9",
     "eslint-config-next": "16.3.3",
     "sanitize-html": "^2.17.7",

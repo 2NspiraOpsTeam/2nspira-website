@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NoAccessPage() { return <main className="portal-simple-page"><div><p className="portal-kicker">ACCOUNT ACCESS</p><h1>No organization is connected yet.</h1><p>Your sign-in is valid, but your client organization has not been assigned. Contact 2Nspira for access.</p><Link href="mailto:hello@2nspira.com" className="portal-primary-button">Contact 2Nspira</Link></div></main>; }
