@@ -386,7 +386,7 @@ export default function WebsitesPage() {
                   />
                   <div className="relative">
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">
-                      Manufacturing operations · Sample solution
+                      Manufacturing operations
                     </p>
                     <h3
                       id="manufacturing-pilot-heading"
