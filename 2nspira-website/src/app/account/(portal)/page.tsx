@@ -12,7 +12,7 @@ export default async function PortalOverview() {
 
   return <>
     <PageHeading eyebrow={organization.demo ? "DEMO CLIENT WORKSPACE" : "CLIENT WORKSPACE"} title={`Good morning, ${firstName}`} description={`${organization.name} · Here’s the current picture across your 2Nspira relationship.`} action={<div className="portal-heading-actions"><DemoAction>Pay balance</DemoAction><TextLink href="/account/invoices">View invoices</TextLink></div>} />
-    <PreviewNotice>Balances, invoices, payments, payment methods, and autopay below are demonstration data. Financial actions are disabled until a payment provider is connected.</PreviewNotice>
+    <PreviewNotice>Demonstration tenant and Stripe test mode only. No live funds move from this preview.</PreviewNotice>
     <section className="portal-metric-grid" aria-label="Billing summary">
       <div className="portal-metric"><span>Outstanding balance</span><strong>{money(balance)}</strong><small>{balance ? "Across open invoices" : "You’re all caught up"}</small></div>
       <div className="portal-metric"><span>Next payment</span><strong>{next?.engagement.amount ? money(next.engagement.amount) : "—"}</strong><small>{next ? `${date(next.engagement.nextBillingDate)} · ${next.service.name}` : "No payment scheduled"}</small></div>
