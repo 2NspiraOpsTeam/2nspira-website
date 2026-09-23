@@ -1,4 +1,4 @@
-import type { AutopayAuthorization, BillingSchedule, NotificationEvent, PaymentRecord, SafePaymentMethod } from './models';
+import type { AutopayAuthorization, BillingSchedule, ManualPaymentMethod, ManualPaymentRecord, NotificationEvent, PaymentRecord, SafePaymentMethod } from './models';
 
 export interface PaymentStore {
   savePaymentMethod(value: SafePaymentMethod): Promise<void>;
@@ -14,6 +14,9 @@ export interface PaymentStore {
   saveNotification(value: NotificationEvent): Promise<void>;
   findNotification(scheduleId: string, chargeDate: string): Promise<NotificationEvent | null>;
   recordWebhookEvent(id: string, type: string): Promise<boolean>;
+  saveManualPayment(value: ManualPaymentRecord): Promise<void>;
+  getManualPayment(id: string): Promise<ManualPaymentRecord | null>;
+  findManualPayment(invoiceId: string, method: ManualPaymentMethod): Promise<ManualPaymentRecord | null>;
 }
 
 export class MemoryPaymentStore implements PaymentStore {
@@ -23,6 +26,7 @@ export class MemoryPaymentStore implements PaymentStore {
   payments = new Map<string, PaymentRecord>();
   notifications = new Map<string, NotificationEvent>();
   events = new Set<string>();
+  manualPayments = new Map<string, ManualPaymentRecord>();
   async savePaymentMethod(v: SafePaymentMethod) { this.methods.set(v.paymentMethodId, structuredClone(v)); }
   async getPaymentMethod(id: string) { return structuredClone(this.methods.get(id) ?? null); }
   async saveAuthorization(v: AutopayAuthorization) { this.authorizations.set(v.id, structuredClone(v)); }
@@ -36,6 +40,9 @@ export class MemoryPaymentStore implements PaymentStore {
   async saveNotification(v: NotificationEvent) { this.notifications.set(`${v.scheduleId}:${v.chargeDate}`, structuredClone(v)); }
   async findNotification(scheduleId: string, chargeDate: string) { return structuredClone(this.notifications.get(`${scheduleId}:${chargeDate}`) ?? null); }
   async recordWebhookEvent(id: string) { if (this.events.has(id)) return false; this.events.add(id); return true; }
+  async saveManualPayment(v: ManualPaymentRecord) { this.manualPayments.set(v.id, structuredClone(v)); }
+  async getManualPayment(id: string) { return structuredClone(this.manualPayments.get(id) ?? null); }
+  async findManualPayment(invoiceId: string, method: ManualPaymentMethod) { return structuredClone([...this.manualPayments.values()].find(v => v.invoiceId === invoiceId && v.method === method) ?? null); }
 }
 
 export class D1PaymentStore implements PaymentStore {
@@ -71,5 +78,11 @@ export class D1PaymentStore implements PaymentStore {
   async recordWebhookEvent(id: string, type: string) {
     const result = await this.db.prepare('INSERT OR IGNORE INTO webhook_events (id, type, received_at) VALUES (?, ?, ?)').bind(id, type, new Date().toISOString()).run();
     return result.meta.changes === 1;
+  }
+  async saveManualPayment(v: ManualPaymentRecord) { await this.put('manual_payments', v.id, v); }
+  async getManualPayment(id: string) { return this.get<ManualPaymentRecord>('manual_payments', id); }
+  async findManualPayment(invoiceId: string, method: ManualPaymentMethod) {
+    const row = await this.db.prepare("SELECT data FROM manual_payments WHERE json_extract(data, '$.invoiceId') = ? AND json_extract(data, '$.method') = ? LIMIT 1").bind(invoiceId, method).first<{ data: string }>();
+    return row ? JSON.parse(row.data) as ManualPaymentRecord : null;
   }
 }

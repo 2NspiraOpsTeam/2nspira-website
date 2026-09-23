@@ -19,9 +19,22 @@ Copy `.env.example` to `.dev.vars` and populate locally:
 STRIPE_SECRET_KEY=       # sk_test_...
 STRIPE_PUBLISHABLE_KEY=  # pk_test_...
 STRIPE_WEBHOOK_SECRET=   # whsec_... from Stripe CLI/listener
+MANUAL_ACH_INSTRUCTIONS= # approved client-facing transfer instructions
+ZELLE_INSTRUCTIONS=      # approved client-facing Zelle destination/instructions
+PAYMENTS_OPERATOR_KEY=   # long random secret for internal reconciliation actions
 ```
 
 Never paste these values into chat or commit `.dev.vars`.
+
+For deployed environments, store manual payment instructions as Worker secrets rather than source code:
+
+```bash
+wrangler secret put MANUAL_ACH_INSTRUCTIONS
+wrangler secret put ZELLE_INSTRUCTIONS
+wrangler secret put PAYMENTS_OPERATOR_KEY
+```
+
+Manual ACH and Zelle acknowledgments remain `OPEN` / `PENDING_VERIFICATION` until an authenticated 2Nspira operator confirms receipt. Optional references, notes, and attachment references are evidence only and never settle an invoice.
 
 ## Local setup
 

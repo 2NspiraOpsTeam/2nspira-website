@@ -78,3 +78,41 @@ export interface NotificationEvent {
   status: 'scheduled' | 'sent' | 'delivered' | 'failed';
   createdAt: string;
 }
+
+export type ManualPaymentMethod = 'manual_ach' | 'zelle';
+export type ManualPaymentState =
+  | 'AWAITING_PAYMENT' | 'CLIENT_REPORTED_SENT' | 'PENDING_VERIFICATION'
+  | 'SETTLED' | 'PAYMENT_NOT_RECEIVED' | 'REJECTED';
+
+export interface ManualPaymentAuditEvent {
+  id: string;
+  action: 'CLIENT_REPORTED_SENT' | 'PENDING_VERIFICATION' | 'CONFIRMED_RECEIVED' | 'PAYMENT_NOT_FOUND' | 'REQUESTED_MORE_INFORMATION';
+  actorType: 'client' | '2nspira';
+  actorUserId: string;
+  at: string;
+  note?: string;
+}
+
+export interface ManualPaymentRecord {
+  id: string;
+  invoiceId: string;
+  organization: string;
+  method: ManualPaymentMethod;
+  expectedAmount: number;
+  convenienceFee: 0;
+  state: ManualPaymentState;
+  invoiceState: 'OPEN' | 'SETTLED';
+  clientReportedAt: string;
+  clientUserId: string;
+  acknowledgmentVersion: string;
+  acknowledgmentText: string;
+  referenceNumber?: string;
+  clientNote?: string;
+  attachmentReference?: string;
+  verifiedAt?: string;
+  verifiedBy?: string;
+  verificationNote?: string;
+  createdAt: string;
+  updatedAt: string;
+  audit: ManualPaymentAuditEvent[];
+}

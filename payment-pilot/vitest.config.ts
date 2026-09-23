@@ -2,6 +2,6 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
-    include: ['tests/payment-service.test.ts'],
+    include: ['tests/payment-service.test.ts', 'tests/manual-payment-service.test.ts'],
   },
 });
