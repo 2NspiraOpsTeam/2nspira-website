@@ -10,7 +10,8 @@ export function pilotHtml(publishableKey: string) {
 <section><h2>4. Billing schedule</h2><input id="service" value="Website Hosting"><input id="amount" type="number" value="22500"><select id="frequency"><option>monthly</option><option>annual</option><option>specific</option></select><input id="chargeDate" type="date"><input id="fee" type="number" value="0" aria-label="Convenience fee cents"><button id="schedule">Authorize schedule</button><pre id="scheduleOut">No schedule</pre></section>
 <section><h2>History / status</h2><button id="refresh">Refresh</button><pre id="state">No data</pre></section>
 <script>
-const stripe=Stripe(${safeKey}); let customerId,methodId,type,elements,setupIntentId,scheduleId;
+const stripe=Stripe(${safeKey}); let customerId=new URLSearchParams(location.search).get('customer')||undefined,methodId,type,elements,setupIntentId,scheduleId;
+if(customerId){customerOut.textContent=JSON.stringify({id:customerId,source:'existing Stripe Customer'},null,2)}
 const post=async(url,body)=>{const r=await fetch(url,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});const j=await r.json();if(!r.ok)throw Error(j.error||'Request failed');return j};
 customer.onclick=async()=>{const j=await post('/api/customers',{name:'Demo Property Management Client'});customerId=j.id;customerOut.textContent=JSON.stringify(j,null,2)};
 document.querySelectorAll('[data-setup]').forEach(b=>b.onclick=async()=>{if(!customerId)return alert('Create customer first');type=b.dataset.setup;const j=await post('/api/setup-intents',{customerId,type});setupIntentId=j.id;elements=stripe.elements({clientSecret:j.clientSecret});const el=elements.create('payment',{layout:'tabs'});const target=type==='card'?'#card-element':'#ach-element';el.mount(target);document.querySelector(type==='card'?'#confirmCard':'#confirmAch').disabled=false});
