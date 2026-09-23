@@ -46,5 +46,6 @@ export default {
   }
 };
 `);
+await writeFile(new URL("../dist/client/robots.txt", import.meta.url), "User-agent: *\nDisallow: /\n");
 await appendFile(new URL("../dist/client/_headers", import.meta.url), "\n/*\n  X-Robots-Tag: noindex, nofollow\n");
 execFileSync("./node_modules/.bin/wrangler", ["deploy", "--config", "dist/server/wrangler.preview.json"], { cwd: root, stdio: "inherit" });
