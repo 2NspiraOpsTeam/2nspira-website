@@ -17,6 +17,8 @@ config.routes = [];
 config.vars = {
   ...(config.vars ?? {}),
   BETTER_AUTH_URL: "https://2nspira-website-preview.jcortez-36a.workers.dev",
+  MANAGED_ACH_FEE_CENTS: "2000",
+  CARD_FEE_BPS: "0",
 };
 config.d1_databases = (config.d1_databases ?? []).map((database) =>
   database.binding === "PORTAL_DB"
@@ -44,5 +46,6 @@ export default {
   }
 };
 `);
+await writeFile(new URL("../dist/client/robots.txt", import.meta.url), "User-agent: *\nDisallow: /\n");
 await appendFile(new URL("../dist/client/_headers", import.meta.url), "\n/*\n  X-Robots-Tag: noindex, nofollow\n");
 execFileSync("./node_modules/.bin/wrangler", ["deploy", "--config", "dist/server/wrangler.preview.json"], { cwd: root, stdio: "inherit" });

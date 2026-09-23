@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "vitest run --config vitest.config.ts",
     "dev:vinext": "vinext dev --port 3001",
     "build:vinext": "vinext build",
     "build:ci": "node scripts/build-ci.mjs",
@@ -14,12 +15,16 @@
     "deploy:production": "node scripts/deploy-production.mjs",
     "deploy:preview": "node scripts/deploy-preview.mjs",
     "verify:release": "node scripts/verify-release.mjs",
-    "db:migrate:local": "wrangler d1 execute 2nspira-client-portal-preview --local --file=migrations/0001_client_portal.sql",
-    "db:seed:local": "wrangler d1 execute 2nspira-client-portal-preview --local --file=migrations/seed-demo.sql",
-    "db:migrate:preview": "wrangler d1 execute 2nspira-client-portal-preview --remote --file=migrations/0001_client_portal.sql",
-    "db:seed:preview": "wrangler d1 execute 2nspira-client-portal-preview --remote --file=migrations/seed-demo.sql"
+    "db:migrate:local": "wrangler d1 execute PORTAL_DB --local --file=migrations/0001_client_portal.sql",
+    "db:migrate:payments:local": "wrangler d1 execute PORTAL_DB --local --file=migrations/0002_portal_payments.sql",
+    "db:seed:local": "wrangler d1 execute PORTAL_DB --local --file=migrations/seed-demo.sql",
+    "db:migrate:preview": "wrangler d1 execute PORTAL_DB --remote --config dist/server/wrangler.preview.json --file=migrations/0001_client_portal.sql",
+    "db:migrate:payments:preview": "wrangler d1 execute PORTAL_DB --remote --config dist/server/wrangler.preview.json --file=migrations/0002_portal_payments.sql",
+    "db:seed:preview": "wrangler d1 execute PORTAL_DB --remote --config dist/server/wrangler.preview.json --file=migrations/seed-demo.sql"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^6.11.0",
+    "@stripe/stripe-js": "^9.17.0",
     "@vinext/cloudflare": "^1.0.0-beta.6",
     "better-auth": "^1.7.5",
     "drizzle-orm": "^0.45.3",
@@ -27,6 +32,7 @@
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-server-dom-webpack": "^19.2.8",
+    "stripe": "^22.6.2",
     "vinext": "^1.0.0-beta.8"
   },
   "devDependencies": {
@@ -46,6 +52,7 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite": "^8.2.2",
+    "vitest": "^4.1.11",
     "wrangler": "^4.130.0"
   },
   "type": "module",

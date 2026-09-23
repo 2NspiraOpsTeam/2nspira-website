@@ -15,7 +15,7 @@ export async function getPortalData(organizationId: string) {
   const [engagementRows, invoiceRows, paymentRows, paymentMethodRows, authorizationRows] = await Promise.all([
     db.select({ engagement: engagements, service: services }).from(engagements).innerJoin(services, eq(engagements.serviceId, services.id)).where(eq(engagements.organizationId, organizationId)).orderBy(asc(services.name)),
     db.select({ invoice: invoices, serviceName: services.name }).from(invoices).leftJoin(engagements, eq(invoices.engagementId, engagements.id)).leftJoin(services, eq(engagements.serviceId, services.id)).where(eq(invoices.organizationId, organizationId)).orderBy(desc(invoices.issueDate)),
-    db.select({ payment: payments, method: paymentMethodReferences }).from(payments).leftJoin(paymentMethodReferences, eq(payments.paymentMethodReferenceId, paymentMethodReferences.id)).where(eq(payments.organizationId, organizationId)).orderBy(desc(payments.paidAt)),
+    db.select({ payment: payments, method: paymentMethodReferences }).from(payments).leftJoin(paymentMethodReferences, and(eq(payments.paymentMethodReferenceId, paymentMethodReferences.id), eq(paymentMethodReferences.organizationId, organizationId))).where(eq(payments.organizationId, organizationId)).orderBy(desc(payments.paidAt)),
     db.select().from(paymentMethodReferences).where(and(eq(paymentMethodReferences.organizationId, organizationId), eq(paymentMethodReferences.status, "active"))).orderBy(desc(paymentMethodReferences.isDefault)),
     db.select().from(billingAuthorizations).where(and(eq(billingAuthorizations.organizationId, organizationId), eq(billingAuthorizations.active, true))).limit(1),
   ]);

@@ -14,7 +14,9 @@
     "enabled": true
   },
   "vars": {
-    "BETTER_AUTH_URL": "https://2nspira.com"
+    "BETTER_AUTH_URL": "https://2nspira.com",
+    "MANAGED_ACH_FEE_CENTS": "2000",
+    "CARD_FEE_BPS": "0"
   },
   "cache": {
     "enabled": false

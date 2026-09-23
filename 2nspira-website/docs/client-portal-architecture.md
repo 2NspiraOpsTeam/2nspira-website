@@ -138,7 +138,11 @@ provider references, and explicitly named demo organizations. It must remain pre
 local only. Demo credentials are provisioned separately in preview and are not
 embedded in source code or the client bundle.
 
-## Intentionally incomplete / non-live functionality
+## Integrated payment review branch
+
+`feat/client-portal-payments` replaces the unconfigured provider with the proven Stripe test-mode implementation, organization-scoped API routes, signed webhook processing, schedules, notifications, and manual ACH/Zelle reconciliation. See `docs/client-portal-payments.md` for configuration and operational boundaries.
+
+## Intentionally incomplete / non-live functionality on `feat/client-portal-v1`
 
 The following controls are disabled or described as preview-only in the UI:
 
