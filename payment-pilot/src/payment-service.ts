@@ -127,7 +127,8 @@ export class PaymentService {
     const payment = await this.store.findPaymentByProviderId(event.paymentId);
     if (!payment) return { duplicate: false, updated: false };
     payment.providerStatus = event.type;
-    payment.state = mapWebhookType(event.type, event.failureReason);
+    const nextState = mapWebhookType(event.type, event.failureReason);
+    payment.state = payment.state === 'RETURNED' && nextState === 'FAILED' ? 'RETURNED' : nextState;
     payment.failureReason = event.failureReason;
     payment.updatedAt = new Date().toISOString();
     await this.store.savePayment(payment);

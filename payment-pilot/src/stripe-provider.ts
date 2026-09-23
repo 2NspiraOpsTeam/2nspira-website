@@ -47,6 +47,7 @@ export class StripePaymentProvider implements PaymentProvider {
       : {
           provider: 'stripe', customerId, paymentMethodId: method.id, type: 'ach',
           bankName: method.us_bank_account?.bank_name ?? undefined,
+          accountType: method.us_bank_account?.account_type ?? undefined,
           last4: method.us_bank_account?.last4 ?? 'unknown',
           verificationStatus: 'verified',
           createdAt: new Date(method.created * 1000).toISOString(),

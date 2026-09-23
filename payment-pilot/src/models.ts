@@ -14,6 +14,7 @@ export interface SafePaymentMethod {
   expiryMonth?: number;
   expiryYear?: number;
   bankName?: string;
+  accountType?: string;
   verificationStatus: 'pending' | 'verified' | 'failed';
   createdAt: string;
 }

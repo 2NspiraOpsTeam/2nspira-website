@@ -52,6 +52,16 @@ describe('Stripe payment pilot', () => {
     expect((await service.applyWebhook(event)).duplicate).toBe(false);
     expect((await service.applyWebhook(event)).duplicate).toBe(true);
   });
+  it('preserves RETURNED when generic failure arrives later', async () => {
+    const store=new MemoryPaymentStore(), provider=new FakeStripeProvider(), service=new PaymentService(provider,store);
+    provider.method={...provider.method,type:'ach',paymentMethodId:'pm_ach'};
+    await service.saveVerifiedMethod('cus_demo','pm_ach');
+    const {schedule}=await service.createSchedule({organization:'demo',service:'Invoice',customerId:'cus_demo',paymentMethodId:'pm_ach',paymentType:'ach',amount:10000,frequency:'specific',nextChargeAt:new Date().toISOString(),authorizationText:'authorized',authorizationVersion:'v1'});
+    const payment=await service.executeSchedule(schedule.id);
+    await service.applyWebhook({id:'evt_return',type:'charge.failed',paymentId:payment.providerPaymentId,failureReason:'ACH return: account closed'});
+    await service.applyWebhook({id:'evt_failed',type:'payment_intent.payment_failed',paymentId:payment.providerPaymentId,failureReason:'Payment failed'});
+    expect((await store.findPaymentByProviderId(payment.providerPaymentId!))?.state).toBe('RETURNED');
+  });
   it('normalizes ACH processing, failures, and returns', () => {
     expect(mapStripeStatus('processing','ach')).toBe('PROCESSING');
     expect(mapWebhookType('payment_intent.payment_failed')).toBe('FAILED');
