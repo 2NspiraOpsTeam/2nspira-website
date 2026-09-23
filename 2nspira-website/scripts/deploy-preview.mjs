@@ -17,6 +17,8 @@ config.routes = [];
 config.vars = {
   ...(config.vars ?? {}),
   BETTER_AUTH_URL: "https://2nspira-website-preview.jcortez-36a.workers.dev",
+  MANAGED_ACH_FEE_CENTS: "2000",
+  CARD_FEE_BPS: "0",
 };
 config.d1_databases = (config.d1_databases ?? []).map((database) =>
   database.binding === "PORTAL_DB"

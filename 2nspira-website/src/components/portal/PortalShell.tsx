@@ -11,7 +11,6 @@ const nav = [
   ["Services", "/account/services"],
   ["Billing", "/account/billing"],
   ["Invoices", "/account/invoices"],
-  ["Payment Methods", "/account/payment-methods"],
   ["Account", "/account/settings"],
 ] as const;
 

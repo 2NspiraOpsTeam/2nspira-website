@@ -58,6 +58,12 @@ export const organizations = sqliteTable("organization", {
   updatedAt: text("updated_at").notNull(),
 });
 
+export const stripeCustomers = sqliteTable("stripe_customer", {
+  organizationId: text("organization_id").primaryKey().references(() => organizations.id, { onDelete: "cascade" }),
+  customerReference: text("customer_reference").notNull().unique(),
+  createdAt: text("created_at").notNull(),
+});
+
 export const memberships = sqliteTable("organization_membership", {
   id: text("id").primaryKey(),
   organizationId: text("organization_id").notNull().references(() => organizations.id, { onDelete: "cascade" }),
@@ -121,6 +127,8 @@ export const paymentMethodReferences = sqliteTable("payment_method_reference", {
   lastFour: text("last_four").notNull(),
   expirationMonth: integer("expiration_month"),
   expirationYear: integer("expiration_year"),
+  accountType: text("account_type"),
+  verificationStatus: text("verification_status").notNull().default("verified"),
   isDefault: integer("is_default", { mode: "boolean" }).notNull().default(false),
   status: text("status", { enum: ["active", "expired", "removed"] }).notNull(),
   createdAt: text("created_at").notNull(),
@@ -134,9 +142,15 @@ export const payments = sqliteTable("payment", {
   provider: text("provider").notNull(),
   providerTransactionReference: text("provider_transaction_reference"),
   amount: real("amount").notNull(),
+  convenienceFee: real("convenience_fee").notNull().default(0),
   currency: text("currency").notNull().default("USD"),
-  status: text("status", { enum: ["scheduled", "processing", "succeeded", "failed", "refunded"] }).notNull(),
+  status: text("status", { enum: ["scheduled", "notified", "authorized", "submitted", "processing", "settled", "failed", "returned", "canceled", "refunded", "pending_verification"] }).notNull(),
+  providerStatus: text("provider_status"),
+  idempotencyKey: text("idempotency_key").unique(),
+  failureReason: text("failure_reason"),
   paidAt: text("paid_at"),
+  createdAt: text("created_at"),
+  updatedAt: text("updated_at"),
 });
 
 export const billingAuthorizations = sqliteTable("billing_authorization", {
@@ -148,6 +162,67 @@ export const billingAuthorizations = sqliteTable("billing_authorization", {
   authorizedAt: text("authorized_at").notNull(),
   authorizedByUserId: text("authorized_by_user_id").notNull().references(() => users.id),
   revokedAt: text("revoked_at"),
+});
+
+export const billingSchedules = sqliteTable("billing_schedule", {
+  id: text("id").primaryKey(),
+  organizationId: text("organization_id").notNull().references(() => organizations.id),
+  engagementId: text("engagement_id").references(() => engagements.id),
+  authorizationId: text("authorization_id").notNull().references(() => billingAuthorizations.id),
+  paymentMethodReferenceId: text("payment_method_reference_id").notNull().references(() => paymentMethodReferences.id),
+  frequency: text("frequency", { enum: ["monthly", "annual", "specific"] }).notNull(),
+  amount: real("amount").notNull(),
+  convenienceFee: real("convenience_fee").notNull().default(0),
+  nextChargeAt: text("next_charge_at").notNull(),
+  advanceNoticeDays: integer("advance_notice_days").notNull().default(3),
+  status: text("status", { enum: ["active", "paused", "revoked", "completed"] }).notNull(),
+  createdAt: text("created_at").notNull(),
+  updatedAt: text("updated_at").notNull(),
+});
+
+export const advanceNotifications = sqliteTable("advance_notification", {
+  id: text("id").primaryKey(),
+  organizationId: text("organization_id").notNull().references(() => organizations.id),
+  scheduleId: text("schedule_id").notNull().references(() => billingSchedules.id),
+  chargeAt: text("charge_at").notNull(),
+  status: text("status", { enum: ["scheduled", "sent", "delivered", "failed"] }).notNull(),
+  createdAt: text("created_at").notNull(),
+}, (table) => [uniqueIndex("advance_notice_once").on(table.scheduleId, table.chargeAt)]);
+
+export const stripeWebhookEvents = sqliteTable("stripe_webhook_event", {
+  id: text("id").primaryKey(),
+  eventType: text("event_type").notNull(),
+  processedAt: text("processed_at").notNull(),
+});
+
+export const manualPayments = sqliteTable("manual_payment", {
+  id: text("id").primaryKey(),
+  organizationId: text("organization_id").notNull().references(() => organizations.id),
+  invoiceId: text("invoice_id").notNull().references(() => invoices.id),
+  method: text("method", { enum: ["manual_ach", "zelle"] }).notNull(),
+  expectedAmount: real("expected_amount").notNull(),
+  state: text("state", { enum: ["awaiting_payment", "pending_verification", "settled", "payment_not_received", "rejected"] }).notNull(),
+  clientReportedAt: text("client_reported_at").notNull(),
+  clientUserId: text("client_user_id").notNull().references(() => users.id),
+  acknowledgmentVersion: text("acknowledgment_version").notNull(),
+  acknowledgmentText: text("acknowledgment_text").notNull(),
+  referenceNumber: text("reference_number"),
+  clientNote: text("client_note"),
+  verifiedAt: text("verified_at"),
+  verifiedBy: text("verified_by").references(() => users.id),
+  verificationNote: text("verification_note"),
+  createdAt: text("created_at").notNull(),
+  updatedAt: text("updated_at").notNull(),
+}, (table) => [uniqueIndex("manual_payment_once").on(table.organizationId, table.invoiceId, table.method)]);
+
+export const manualPaymentAuditEvents = sqliteTable("manual_payment_audit_event", {
+  id: text("id").primaryKey(),
+  organizationId: text("organization_id").notNull().references(() => organizations.id),
+  manualPaymentId: text("manual_payment_id").notNull().references(() => manualPayments.id),
+  actorUserId: text("actor_user_id").notNull().references(() => users.id),
+  action: text("action").notNull(),
+  note: text("note"),
+  occurredAt: text("occurred_at").notNull(),
 });
 
 export const auditEvents = sqliteTable("audit_event", {

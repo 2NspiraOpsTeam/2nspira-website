@@ -28,6 +28,17 @@
   --shadow-lift: 0 1px 2px rgba(31, 36, 48, 0.05), 0 8px 20px rgba(31, 36, 48, 0.06);
 }
 
+.portal-payment-center { display: grid; gap: 1.5rem; }
+.portal-payment-element, .portal-invoice-payment { border: 1px solid rgba(34, 47, 43, .14); border-radius: 1rem; padding: 1.25rem; display: grid; gap: 1rem; background: #fff; }
+.portal-payment-element { max-width: 42rem; }
+.portal-payment-choices { display: grid; gap: 1rem; }
+.portal-invoice-payment header { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.portal-choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.portal-choice-grid label { border: 1px solid rgba(34, 47, 43, .14); border-radius: .75rem; padding: .9rem; display: grid; grid-template-columns: auto 1fr; gap: .25rem .5rem; cursor: pointer; }
+.portal-choice-grid small { grid-column: 2; color: #60706b; }
+.portal-invoice-payment input[type="text"], .portal-invoice-payment label > input:not([type="radio"]) { display: block; width: 100%; margin-top: .35rem; border: 1px solid rgba(34, 47, 43, .25); border-radius: .5rem; padding: .7rem; }
+@media (max-width: 720px) { .portal-choice-grid { grid-template-columns: 1fr; } }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
