@@ -5,9 +5,10 @@ import type { CreateChargeRequest, CreateSetupRequest, PaymentProvider, Provider
 export class StripePaymentProvider implements PaymentProvider {
   readonly name = 'stripe';
   private readonly stripe: Stripe;
+  private readonly isTestMode: boolean;
 
   constructor(secretKey: string, private readonly webhookSecret: string) {
-    if (!secretKey.startsWith('sk_test_')) throw new Error('Stripe test-mode secret key required');
+    this.isTestMode = secretKey.startsWith('sk_test_');
     this.stripe = new Stripe(secretKey, {
       apiVersion: '2026-08-26.dahlia',
       httpClient: Stripe.createFetchHttpClient(),
@@ -15,11 +16,13 @@ export class StripePaymentProvider implements PaymentProvider {
   }
 
   async createCustomer(name: string, metadata: Record<string, string> = {}) {
+    this.assertTestMode();
     const customer = await this.stripe.customers.create({ name, metadata });
     return { id: customer.id };
   }
 
   async createSetupIntent({ customerId, type }: CreateSetupRequest) {
+    this.assertTestMode();
     const intent = await this.stripe.setupIntents.create({
       customer: customerId,
       payment_method_types: [type === 'ach' ? 'us_bank_account' : 'card'],
@@ -29,6 +32,7 @@ export class StripePaymentProvider implements PaymentProvider {
   }
 
   async retrieveSafePaymentMethod(customerId: string, paymentMethodId: string): Promise<SafePaymentMethod> {
+    this.assertTestMode();
     const method = await this.stripe.paymentMethods.retrieve(paymentMethodId);
     if (method.customer !== customerId) throw new Error('Payment method is not attached to this customer');
     if (method.type !== 'card' && method.type !== 'us_bank_account') throw new Error('Unsupported payment method');
@@ -50,6 +54,7 @@ export class StripePaymentProvider implements PaymentProvider {
   }
 
   async chargeSavedMethod(request: CreateChargeRequest) {
+    this.assertTestMode();
     const methodType = request.type === 'ach' ? 'us_bank_account' : 'card';
     const intent = await this.stripe.paymentIntents.create({
       amount: request.amount,
@@ -86,5 +91,9 @@ export class StripePaymentProvider implements PaymentProvider {
         ? object.failure_message ?? undefined
         : undefined;
     return { id: event.id, type: event.type, paymentId, providerStatus: object.object, failureReason };
+  }
+
+  private assertTestMode() {
+    if (!this.isTestMode) throw new Error('Stripe test-mode secret key required for API operations');
   }
 }
