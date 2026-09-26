@@ -203,6 +203,15 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
             ))}
           </div>
 
+          <div className="my-2 border-t border-gray-200" />
+          <Link
+            href="/portal/login"
+            onClick={handleClose}
+            style={navLinkStyle}
+            className="block rounded-xl px-4 py-3.5 text-lg font-medium text-gray-900 transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          >
+            Client Portal
+          </Link>
           {secondaryLinks.map((link) => (
             <Link
               key={link.name}

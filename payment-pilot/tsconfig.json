@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "types": ["@cloudflare/workers-types", "vitest/globals"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src/app.ts", "src/manual-payment-service.ts", "src/models.ts", "src/payment-policy.ts", "src/payment-provider.ts", "src/payment-service.ts", "src/pilot-ui.ts", "src/store.ts", "src/stripe-provider.ts", "tests/payment-service.test.ts", "tests/manual-payment-service.test.ts"]
+}
