@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { env } from "cloudflare:workers";
 
 /**
  * Production inquiry delivery (release candidate, 2026-09-09).
@@ -65,8 +64,8 @@ export async function POST(request: NextRequest) {
     `— Submitted via 2nspira.com on ${new Date().toISOString()}`,
   ].join("\n");
 
-  const relayUrl = env.CONTACT_API_URL as string | undefined;
-  const relayKey = env.CONTACT_API_KEY as string | undefined;
+  const relayUrl = process.env.CONTACT_API_URL as string | undefined;
+  const relayKey = process.env.CONTACT_API_KEY as string | undefined;
 
   if (relayUrl) {
     try {

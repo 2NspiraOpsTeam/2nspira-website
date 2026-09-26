@@ -186,6 +186,20 @@ export default function Header() {
             Start a conversation
           </Link>
 
+          <Link
+            href="/portal/login"
+            className="hidden rounded-full border border-line px-4 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:border-accent hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas sm:inline-flex"
+          >
+            Login
+          </Link>
+
+          <Link
+            href="/portal/register"
+            className="hidden rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas sm:inline-flex"
+          >
+            Register
+          </Link>
+
           <button
             className="flex h-10 w-10 items-center justify-center rounded-full text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent md:hidden"
             onClick={() => setIsMobileMenuOpen(true)}
