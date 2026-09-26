@@ -1,8 +1,9 @@
+import { env } from "cloudflare:workers";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
 const STRIPE_KEY = process.env.STRIPE_SECRET_KEY || "";
-const PORTAL_URL = process.env.PORTAL_URL || "http://localhost:3000";
+const PORTAL_URL = env.PORTAL_URL || "http://localhost:3000";
 
 const stripe = new Stripe(STRIPE_KEY, {
   apiVersion: "2025-01-27.acacia" as Stripe.LatestApiVersion,
