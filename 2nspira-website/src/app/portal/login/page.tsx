@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -98,6 +99,15 @@ export default function LoginPage() {
               Demo: admin@acme.example.com / password123
             </div>
           </form>
+          <p className="mt-5 border-t border-line pt-5 text-center text-sm text-body">
+            Don’t have an account?{" "}
+            <Link
+              href="/portal/register"
+              className="rounded font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              Register
+            </Link>
+          </p>
         </div>
       </div>
     </div>
