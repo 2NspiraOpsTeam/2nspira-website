@@ -1,9 +1,9 @@
 import { env } from "cloudflare:workers";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 const PORTAL_URL = env.PORTAL_URL || "http://localhost:3000";
 
-export async function POST(request: NextRequest) {
+export async function POST() {
   try {
     const res = await fetch(`${PORTAL_URL}/api/auth/logout`, {
       method: "POST",

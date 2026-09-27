@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 export default function Home() {
   const services = [
     {
-      title: "AI Enablement & Governance",
+      title: "AI Enablement",
       description:
         "Pragmatic AI strategy and governance frameworks for responsible implementation — readiness, guardrails, and workflows your people will actually use.",
       benefit: "Outcome: a clear, responsible path to AI adoption your teams can follow.",
@@ -62,24 +62,24 @@ export default function Home() {
       linkLabel: "Explore AI enablement",
     },
     {
-      title: "Systems & Process Optimization",
+      title: "Automation & Systems Optimization",
       description:
         "Streamlined operations powered by appropriate technology — mapping friction, designing efficient workflows, and building sustainable improvements.",
       benefit: "Outcome: less friction in day-to-day operations, and processes that hold up over time.",
-      href: null,
-      linkLabel: null,
+      href: "/services#automation-systems-optimization",
+      linkLabel: "Explore systems optimization",
     },
     {
-      title: "Websites & Web Applications",
+      title: "Websites & Digital Platforms",
       description:
-        "We design and build websites and web applications that work for your business — from bilingual marketing sites to internal tools, with an honest build-vs-buy call before you spend.",
+        "Digital foundations that connect the customer experience to business data, workflows, automation, portals, payments, and future services.",
       benefit:
-        "Outcome: a site or tool that reflects how your business actually operates — and stays maintainable.",
+        "Outcome: a platform that can grow with the business instead of becoming another isolated site to replace.",
       href: "/websites",
-      linkLabel: "See what we've built",
+      linkLabel: "Explore digital platforms",
     },
     {
-      title: "Technology Leadership",
+      title: "Fractional CIO / Technology Leadership",
       description:
         "Fractional CTO guidance, architecture reviews, and transformation pathways that align technology investment with business outcomes.",
       benefit: "Outcome: technology decisions that follow your business priorities, not the other way around.",

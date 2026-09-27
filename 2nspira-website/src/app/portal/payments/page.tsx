@@ -6,9 +6,17 @@ import Sidebar from "@/components/portal/Sidebar";
 import { StatusBadge } from "@/components/StatusBadge";
 import { DollarSign, CheckCircle, XCircle, Clock, CreditCard } from "lucide-react";
 
+type Payment = {
+  id: string;
+  amount: number;
+  status: string;
+  createdAt?: string;
+  stripePaymentIntentId?: string;
+};
+
 export default function PaymentsPage() {
   const router = useRouter();
-  const [payments, setPayments] = useState<any[]>([]);
+  const [payments, setPayments] = useState<Payment[]>([]);
   const [filter, setFilter] = useState("all");
   const [loading, setLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -28,7 +36,9 @@ export default function PaymentsPage() {
     } catch {} finally { setLoading(false); }
   }, [filter, router]);
 
-  useEffect(() => { load(); }, [load]);
+  // The loader updates state only after its network request resolves.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { void load(); }, [load]);
 
   const handleLogout = async () => {
     await fetch("/api/portal/auth/logout", { method: "POST" });
@@ -67,7 +77,7 @@ export default function PaymentsPage() {
             {loading ? (
               <div className="text-center py-8 text-foreground/50">Loading...</div>
             ) : (
-              payments.map((pay: any) => (
+              payments.map((pay) => (
                 <div key={pay.id} className="rounded-2xl border border-line bg-canvas p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">

@@ -1,14 +1,29 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Sidebar from "@/components/portal/Sidebar";
 import { StatusBadge } from "@/components/StatusBadge";
-import { FileText, Filter, Download } from "lucide-react";
+import { FileText, Download } from "lucide-react";
+
+type InvoiceLineItem = {
+  description: string;
+  total: number;
+};
+
+type Invoice = {
+  id: string;
+  amount: number;
+  status: string;
+  issueDate: string;
+  dueDate: string;
+  paidAt?: string;
+  lineItems?: InvoiceLineItem[];
+};
 
 export default function BillingPage() {
   const router = useRouter();
-  const [invoices, setInvoices] = useState<any[]>([]);
+  const [invoices, setInvoices] = useState<Invoice[]>([]);
   const [filter, setFilter] = useState("all");
   const [loading, setLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -28,7 +43,9 @@ export default function BillingPage() {
     } catch {} finally { setLoading(false); }
   }, [filter, router]);
 
-  useEffect(() => { load(); }, [load]);
+  // The loader updates state only after its network request resolves.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { void load(); }, [load]);
 
   const handleLogout = async () => {
     await fetch("/api/portal/auth/logout", { method: "POST" });
@@ -75,7 +92,7 @@ export default function BillingPage() {
             {loading ? (
               <div className="text-center py-8 text-foreground/50">Loading...</div>
             ) : (
-              invoices.map((inv: any) => (
+              invoices.map((inv) => (
                 <div key={inv.id} className="rounded-2xl border border-line bg-canvas p-4 hover:border-accent-500/30 transition-colors">
                   <div className="flex items-center justify-between">
                     <div>
@@ -89,9 +106,9 @@ export default function BillingPage() {
                       <span className="text-xs text-foreground/40 font-mono">{inv.id.slice(0, 8)}</span>
                     </div>
                   </div>
-                  {inv.lineItems?.length > 0 && (
+                  {inv.lineItems && inv.lineItems.length > 0 && (
                     <div className="mt-3 space-y-1">
-                      {inv.lineItems.map((item: any, i: number) => (
+                      {inv.lineItems.map((item, i) => (
                         <div key={i} className="text-sm flex justify-between text-foreground/60">
                           <span>{item.description}</span>
                           <span>${item.total.toLocaleString()}</span>

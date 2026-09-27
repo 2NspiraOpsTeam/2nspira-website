@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -61,7 +62,7 @@ export default function RegisterPage() {
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <img src="/images/logo/2nspira-logo.png" alt="2Nspira" className="h-9 w-auto mx-auto mb-2" />
+          <Image src="/images/logo/2nspira-logo.png" alt="2Nspira" width={320} height={132} className="h-9 w-auto mx-auto mb-2" priority />
           <div className="text-foreground/60">Create Your Account</div>
         </div>
 

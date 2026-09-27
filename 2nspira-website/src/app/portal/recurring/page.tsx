@@ -6,9 +6,17 @@ import Sidebar from "@/components/portal/Sidebar";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Repeat, Pause, Play, RotateCcw, Calendar, DollarSign } from "lucide-react";
 
+type RecurringAuthorization = {
+  id: string;
+  amount: number;
+  status: string;
+  billingCycle: string;
+  nextChargeDate?: string;
+};
+
 export default function RecurringPage() {
   const router = useRouter();
-  const [auths, setAuths] = useState<any[]>([]);
+  const [auths, setAuths] = useState<RecurringAuthorization[]>([]);
   const [loading, setLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [client, setClient] = useState<Record<string, unknown> | null>(null);
@@ -25,7 +33,9 @@ export default function RecurringPage() {
     } catch {} finally { setLoading(false); }
   }, [router]);
 
-  useEffect(() => { load(); }, [load]);
+  // The loader updates state only after its network request resolves.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { void load(); }, [load]);
 
   const handleLogout = async () => {
     await fetch("/api/portal/auth/logout", { method: "POST" });
@@ -75,7 +85,7 @@ export default function RecurringPage() {
             {loading ? (
               <div className="text-center py-8 text-foreground/50">Loading...</div>
             ) : (
-              auths.map((auth: any) => (
+              auths.map((auth) => (
                 <div key={auth.id} className="rounded-2xl border border-line bg-canvas p-4">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
