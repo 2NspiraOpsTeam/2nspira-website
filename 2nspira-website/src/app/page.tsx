@@ -64,9 +64,9 @@ export default function Home() {
     {
       title: "Automation & Systems Optimization",
       description:
-        "Streamlined operations powered by appropriate technology — mapping friction, designing efficient workflows, and building sustainable improvements.",
-      benefit: "Outcome: less friction in day-to-day operations, and processes that hold up over time.",
-      href: "/services#automation-systems-optimization",
+        "Optimize the operating model across systems, data, processes, people, and governance — then integrate, automate, and apply AI where it creates practical value.",
+      benefit: "Outcome: connected, governed operations with fewer workarounds and a foundation that can scale.",
+      href: "/automation-systems-optimization",
       linkLabel: "Explore systems optimization",
     },
     {

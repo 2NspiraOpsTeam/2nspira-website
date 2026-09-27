@@ -42,17 +42,17 @@ const capabilities = [
     id: "service-heading-2",
     title: "Automation & Systems Optimization",
     description:
-      "Streamlined operations powered by appropriate technology. We identify friction points, design efficient workflows, and implement sustainable improvements.",
+      "Operating-model improvement across strategy, infrastructure, platforms, systems, data, processes, people, and governance — followed by integration, automation, and AI where they add practical value.",
     benefit:
-      "You get: less friction in daily operations, and processes that keep working after the project ends.",
+      "You get: connected, governed operations that reduce workarounds and scale without unnecessary rip-and-replace.",
     points: [
       "Process mapping & optimization",
       "Workflow automation",
       "Integration architecture",
       "Build vs. buy guidance",
     ],
-    href: null,
-    linkLabel: null,
+    href: "/automation-systems-optimization",
+    linkLabel: "Explore systems optimization",
   },
   {
     id: "service-heading-3",
@@ -98,11 +98,11 @@ const servicesJsonLd = {
     },
     {
       "@type": "Service",
-      "@id": "https://2nspira.com/services#systems-optimization",
+      "@id": "https://2nspira.com/automation-systems-optimization#service",
       name: "Automation & Systems Optimization",
       description:
-        "Streamlined operations powered by appropriate technology. We identify friction points, design efficient workflows, and implement sustainable improvements.",
-      url: "https://2nspira.com/services",
+        "Operating-model optimization across strategy, infrastructure, platforms, systems, data, processes, people, and governance, followed by practical integration, automation, and AI implementation.",
+      url: "https://2nspira.com/automation-systems-optimization",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
     },
@@ -214,7 +214,6 @@ export default function ServicesPage() {
             {capabilities.map((item, index) => (
               <Reveal key={item.id} delay={index * 70} className="h-full"><article
                 key={item.id}
-                id={index === 1 ? "automation-systems-optimization" : undefined}
                 className={`group relative flex h-full flex-col overflow-hidden p-8 hover:-translate-y-1 ${card}`}
                 aria-labelledby={item.id}
               >
