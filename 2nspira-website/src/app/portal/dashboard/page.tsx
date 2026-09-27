@@ -4,10 +4,22 @@ import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { StatusBadge } from "@/components/StatusBadge";
 
+type Client = { name: string; email: string };
+type PortalService = { status: string };
+type Invoice = { id: string; issueDate: string; amount: number; status: string };
+type RecurringAuthorization = { status: string };
+type DashboardData = {
+  client: Client;
+  services: PortalService[];
+  invoices: Invoice[];
+  recurringAuthorizations: RecurringAuthorization[];
+  upcomingBalance?: number;
+};
+
 export default function DashboardPage() {
   const router = useRouter();
   const pathname = usePathname();
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [navItems] = useState([
@@ -48,10 +60,10 @@ export default function DashboardPage() {
 
   if (!data) return null;
 
-  const { client, services, invoices, paymentMethods, recurringAuthorizations, upcomingBalance, outstandingInvoices } = data;
-  const activeServices = services.filter((s: any) => s.status === "active").length;
-  const pendingInvoices = invoices.filter((i: any) => i.status === "pending" || i.status === "overdue").length;
-  const activeRecurring = recurringAuthorizations.filter((r: any) => r.status === "active").length;
+  const { client, services, invoices, recurringAuthorizations, upcomingBalance } = data;
+  const activeServices = services.filter((service) => service.status === "active").length;
+  const pendingInvoices = invoices.filter((invoice) => invoice.status === "pending" || invoice.status === "overdue").length;
+  const activeRecurring = recurringAuthorizations.filter((authorization) => authorization.status === "active").length;
 
   return (
     <div className="min-h-screen flex">
@@ -113,7 +125,7 @@ export default function DashboardPage() {
         <div className="p-4 lg:p-8 space-y-6">
           <div>
             <h1 className="text-2xl font-bold">Welcome, {client?.name}</h1>
-            <p className="text-foreground/50 mt-1">Here's your portal overview</p>
+            <p className="text-foreground/50 mt-1">Here&apos;s your portal overview</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -138,7 +150,7 @@ export default function DashboardPage() {
           <div className="rounded-2xl border border-line bg-canvas p-6">
             <h2 className="font-semibold mb-4">Recent Invoices</h2>
             <div className="space-y-2">
-              {invoices.slice(0, 5).map((inv: any) => (
+              {invoices.slice(0, 5).map((inv) => (
                 <div key={inv.id} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0 text-sm">
                   <span className="text-foreground/70">{inv.issueDate}</span>
                   <span className="font-medium">${inv.amount.toLocaleString()}</span>

@@ -5,9 +5,20 @@ import { useRouter } from "next/navigation";
 import Sidebar from "@/components/portal/Sidebar";
 import { CreditCard, Plus, Shield, AlertTriangle } from "lucide-react";
 
+type PaymentMethod = {
+  id: string;
+  brand?: string;
+  last4?: string;
+  isDefault?: boolean;
+  expiryMonth: number;
+  expiryYear: number;
+  isValid?: boolean;
+  billingAddress?: { city?: string; state?: string };
+};
+
 export default function PaymentMethodsPage() {
   const router = useRouter();
-  const [methods, setMethods] = useState<any[]>([]);
+  const [methods, setMethods] = useState<PaymentMethod[]>([]);
   const [loading, setLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [client, setClient] = useState<Record<string, unknown> | null>(null);
@@ -26,7 +37,9 @@ export default function PaymentMethodsPage() {
     } catch {} finally { setLoading(false); }
   }, [router]);
 
-  useEffect(() => { load(); }, [load]);
+  // The loader updates state only after its network request resolves.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { void load(); }, [load]);
 
   const handleLogout = async () => {
     await fetch("/api/portal/auth/logout", { method: "POST" });
@@ -126,7 +139,8 @@ export default function PaymentMethodsPage() {
             </div>
           )}
           <div className="grid gap-4">
-            {methods.map((pm: any) => (
+            {loading && <div className="text-center py-8 text-foreground/50">Loading...</div>}
+            {!loading && methods.map((pm) => (
               <div key={pm.id} className="rounded-2xl border border-line bg-canvas p-4 flex items-center gap-4">
                 <Shield size={28} className="text-accent-500" />
                 <div className="flex-1">
@@ -143,7 +157,7 @@ export default function PaymentMethodsPage() {
               </div>
             ))}
           </div>
-          {methods.length === 0 && !showForm && (
+          {methods.length === 0 && !showForm && !loading && (
             <div className="rounded-2xl border border-line bg-canvas text-center py-12 text-foreground/40">
               <CreditCard size={32} className="mx-auto mb-3 text-foreground/20" />
               <p>No payment methods yet. Add a card to get started.</p>

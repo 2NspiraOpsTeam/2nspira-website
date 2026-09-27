@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Our four integrated capabilities: AI Enablement & Governance, Systems & Process Optimization, Websites & Web Applications, and Technology Transformation / Fractional Leadership.",
+    "Four integrated capabilities: AI Enablement, Automation & Systems Optimization, Websites & Digital Platforms, and Fractional CIO / Technology Leadership.",
   alternates: {
     canonical: "/services",
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const capabilities = [
   {
     id: "service-heading-1",
-    title: "AI Enablement & Governance",
+    title: "AI Enablement",
     description:
       "Pragmatic AI strategy and governance frameworks. We help organizations evaluate readiness, establish responsible workflows, and implement practical solutions — not hype-driven pilots.",
     benefit:
@@ -40,7 +40,7 @@ const capabilities = [
   },
   {
     id: "service-heading-2",
-    title: "Systems & Process Optimization",
+    title: "Automation & Systems Optimization",
     description:
       "Streamlined operations powered by appropriate technology. We identify friction points, design efficient workflows, and implement sustainable improvements.",
     benefit:
@@ -56,23 +56,23 @@ const capabilities = [
   },
   {
     id: "service-heading-3",
-    title: "Websites & Web Applications",
+    title: "Websites & Digital Platforms",
     description:
-      "Websites and web applications that work for your business — from bilingual marketing sites to internal tools. We give you an honest build-vs-buy recommendation before anything is spent.",
+      "Digital foundations that connect the customer experience to business data, workflows, automation, portals, payments, and future services.",
     benefit:
-      "You get: a site or tool that reflects how your business actually operates — and stays maintainable after the project ends.",
+      "You get: a platform that supports how your business operates now and can grow without being replaced later.",
     points: [
-      "Websites & marketing sites",
-      "Web applications & internal tools",
-      "Build vs. buy guidance",
-      "Performance, SEO & accessibility",
+      "Customer-facing experiences",
+      "Portals, payments & integrations",
+      "Automation & AI-ready architecture",
+      "Performance, accessibility & discoverability",
     ],
     href: "/websites",
-    linkLabel: "See what we've built",
+    linkLabel: "Explore digital platforms",
   },
   {
     id: "service-heading-4",
-    title: "Technology Transformation / Fractional Leadership",
+    title: "Fractional CIO / Technology Leadership",
     description:
       "Strategic technology leadership when you need it most. Fractional CTO guidance, architecture reviews, team enablement, and transformation pathways.",
     benefit:
@@ -89,7 +89,7 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#ai-enablement",
-      name: "AI Enablement & Governance",
+      name: "AI Enablement",
       description:
         "Pragmatic AI strategy and governance frameworks. We help organizations evaluate readiness, establish responsible workflows, and implement practical solutions.",
       url: "https://2nspira.com/ai-enablement",
@@ -99,7 +99,7 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#systems-optimization",
-      name: "Systems & Process Optimization",
+      name: "Automation & Systems Optimization",
       description:
         "Streamlined operations powered by appropriate technology. We identify friction points, design efficient workflows, and implement sustainable improvements.",
       url: "https://2nspira.com/services",
@@ -109,9 +109,9 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#websites",
-      name: "Websites & Web Applications",
+      name: "Websites & Digital Platforms",
       description:
-        "We design and build websites and web applications that work for your business — from bilingual marketing sites to internal tools. Includes an honest build-vs-buy recommendation before any spend.",
+        "Digital foundations that connect customer-facing experiences to business systems, data, workflows, automation, APIs, AI, portals, and payments.",
       url: "https://2nspira.com/websites",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
@@ -119,7 +119,7 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#fractional-leadership",
-      name: "Technology Transformation / Fractional Leadership",
+      name: "Fractional CIO / Technology Leadership",
       description:
         "Strategic technology leadership when you need it most. Fractional CIO guidance, architecture reviews, team enablement, and transformation pathways.",
       url: "https://2nspira.com/fractional-cio",
@@ -214,6 +214,7 @@ export default function ServicesPage() {
             {capabilities.map((item, index) => (
               <Reveal key={item.id} delay={index * 70} className="h-full"><article
                 key={item.id}
+                id={index === 1 ? "automation-systems-optimization" : undefined}
                 className={`group relative flex h-full flex-col overflow-hidden p-8 hover:-translate-y-1 ${card}`}
                 aria-labelledby={item.id}
               >

@@ -18,52 +18,68 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Websites & Web Applications",
+  title: "Websites & Digital Platforms",
   description:
-    "We design and build websites and web applications that work for your business — from bilingual marketing sites to internal tools. See the work we've shipped for clients.",
+    "A website designed as part of your digital operating model — connected to data, workflows, automation, portals, payments, APIs, and future services.",
   alternates: {
     canonical: "/websites",
   },
 };
 
-const capabilities = [
+const platformConnections = [
   {
-    title: "Websites & marketing sites",
-    text: "Clear, fast, accessible sites built to convert and stay easy to maintain.",
+    title: "Customer experience",
+    text: "A clear, fast, accessible front door shaped around what customers need to do.",
   },
   {
-    title: "Web applications",
-    text: "Trackers, dashboards, and internal tools shaped around real workflows.",
+    title: "Backend systems & data",
+    text: "The operational systems and business data that keep the experience accurate and useful.",
   },
   {
-    title: "Build vs. buy guidance",
-    text: "A practical recommendation before budget is committed.",
+    title: "Workflows & automation",
+    text: "Connected processes that reduce repeated entry, manual handoffs, and avoidable delays.",
   },
   {
-    title: "Performance, SEO & accessibility",
-    text: "The technical foundations that keep a digital product healthy after launch.",
+    title: "APIs & integrations",
+    text: "Practical connections to the platforms your organization already relies on.",
+  },
+  {
+    title: "AI capabilities",
+    text: "Purposeful AI features introduced with the right data, controls, and human oversight.",
+  },
+  {
+    title: "Client & customer portals",
+    text: "Secure spaces for services, documents, status, communication, and account activity.",
+  },
+  {
+    title: "Payments",
+    text: "Payment and billing journeys designed into the platform instead of bolted on later.",
+  },
+  {
+    title: "Future services",
+    text: "An extensible foundation that can support new offerings and integrations as you grow.",
   },
 ];
 
 const outcomes = [
-  "A site or tool that reflects how your business actually operates.",
-  "A clear build-vs-buy recommendation before any spend is committed.",
-  "Systems and code that stay maintainable after the project ends.",
-  "Performance and search visibility handled from day one.",
+  "A platform roadmap tied to how your business operates and intends to grow.",
+  "A clear recommendation on what to build, buy, connect, or defer.",
+  "Architecture that can add portals, payments, automation, and AI without starting over.",
+  "A maintainable foundation with performance, accessibility, security, and discoverability built in.",
 ];
 
 const steps = [
   {
-    title: "Understand the job",
-    text: "We start with the audience, the workflow, and the outcome the site or tool has to deliver.",
+    title: "Map the operating model",
+    text: "We start with customers, teams, information, workflows, and the outcomes the platform needs to support.",
   },
   {
-    title: "Build it right",
-    text: "Clean architecture, structured content, and the performance and accessibility fundamentals baked in — not retrofitted.",
+    title: "Design the foundation",
+    text: "We define the right experience, architecture, integrations, and phased roadmap before committing budget to a build.",
   },
   {
-    title: "Verify and hand over",
-    text: "We test real user flows, confirm live behavior, and hand over something your team can update without fear.",
+    title: "Build, connect, and evolve",
+    text: "We ship in useful stages, verify real journeys, and leave room for the next service, workflow, or integration.",
   },
 ];
 
@@ -144,9 +160,9 @@ const showcase: ShowcaseSite[] = [
 const websitesJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Websites & Web Applications",
+  name: "Websites & Digital Platforms",
   description:
-    "We design and build websites and web applications that work for your business — from bilingual marketing sites to internal tools. Includes an honest build-vs-buy recommendation before any spend.",
+    "Websites designed as part of a broader digital operating model, connected to business systems, data, workflows, automation, APIs, AI capabilities, portals, and payments.",
   url: "https://2nspira.com/websites",
   provider: { "@id": "https://2nspira.com/#organization" },
   areaServed: "Worldwide",
@@ -166,34 +182,37 @@ export default function WebsitesPage() {
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
           <p className={eyebrow}>
             <Link href="/services" className="hover:text-accent">
-              ← All services
+              Websites &amp; Digital Platforms
             </Link>
           </p>
           <h1 className="animate-rise mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-            Websites &amp; Web Applications
+            More than a website. A digital foundation for your business.
           </h1>
           <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>
-            We design and build websites and web applications that work for your
-            business — from bilingual marketing sites to internal tools your team
-            will actually use. And before anything is built, we give you an honest
-            build-vs-buy recommendation.
+            We design the customer-facing experience as part of your broader digital
+            operating model — connected to the systems, data, and workflows behind
+            the business, and ready for what comes next.
+          </p>
+          <p className="animate-rise mt-5 max-w-2xl text-base leading-7 text-body" style={{ animationDelay: "120ms" }}>
+            The value is not measured by page count. It is measured by whether the
+            platform makes the business easier to find, serve, operate, and extend.
           </p>
           <div
             className="animate-rise mt-8 flex flex-wrap gap-3"
             style={{ animationDelay: "150ms" }}
           >
             <Link href="/contact" className={buttonPrimary}>
-              Start a conversation
+              Request a consultation
             </Link>
-            <a href="#our-work" className={buttonSecondaryClasses}>
-              See what we’ve built
+            <a href="#platform-model" className={buttonSecondaryClasses}>
+              See the platform model
             </a>
           </div>
         </div>
         <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 sm:pb-20">
           <figure
             className="hero-settle group relative aspect-[3/2] overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_20px_60px_rgba(35,41,54,0.10)]"
-            aria-label="A website layout and a web application dashboard"
+            aria-label="A connected website experience and digital operations dashboard"
           >
             <div
               className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-tr from-white/10 via-transparent to-accent/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
@@ -201,7 +220,7 @@ export default function WebsitesPage() {
             />
             <Image
               src="/images/pages/websites-hero.webp"
-              alt="A modern website layout and an analytics dashboard on two floating screens."
+              alt="A modern customer website and business operations dashboard shown as one connected digital platform."
               fill
               sizes="(min-width: 1024px) 1024px, calc(100vw - 32px)"
               unoptimized
@@ -212,17 +231,21 @@ export default function WebsitesPage() {
         </div>
       </section>
 
-      {/* Capabilities */}
-      <section className={section} aria-labelledby="capabilities-heading">
+      {/* Platform model */}
+      <section id="platform-model" className={section} aria-labelledby="platform-model-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 id="capabilities-heading" className={h2}>
-            What we build
+          <div className="max-w-3xl">
+          <h2 id="platform-model-heading" className={h2}>
+            The website is the front door, not the whole building
           </h2>
-          <p className={`mt-4 max-w-2xl ${lead}`}>
-            Every engagement is scoped around the outcome — not a template.
+          <p className={`mt-4 ${lead}`}>
+            Traditional website projects often stop at pages and publishing. We look
+            at the operating model behind the experience, then design a foundation
+            that can connect what customers see with how the business actually works.
           </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {capabilities.map((item, index) => (
+          </div>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {platformConnections.map((item, index) => (
               <Reveal key={item.title} delay={index * 70} className="h-full">
                 <article
                   className={`group h-full p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${card}`}
@@ -236,6 +259,25 @@ export default function WebsitesPage() {
               </Reveal>
             ))}
           </div>
+          <Reveal className="mt-8">
+            <div className="grid gap-6 rounded-[2rem] border border-line bg-ink p-8 text-white shadow-[0_24px_70px_rgba(35,41,54,0.14)] sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Built to evolve</p>
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">One foundation. Many next steps.</h3>
+                <p className="mt-4 max-w-xl leading-7 text-white/70">
+                  Launch what creates value now, while preserving a credible path to
+                  future services, integrations, automation, portals, payments, and AI.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 text-sm sm:grid-cols-3" aria-label="Examples of platform growth">
+                {["Website", "Business data", "Client portal", "Payments", "Automation", "AI services"].map((item, index) => (
+                  <div key={item} className={`rounded-2xl border px-4 py-4 font-medium ${index === 0 ? "border-accent bg-accent text-white" : "border-white/15 bg-white/5 text-white/80"}`}>
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -563,9 +605,9 @@ export default function WebsitesPage() {
                 Who this is for
               </h2>
               <p className={`mt-4 ${lead}`}>
-                Leaders and teams who need a presence or a tool that actually
-                works — and who want a straight answer on whether to build or buy
-                before a single dollar is spent.
+                Leaders who need more than an isolated brochure site: a digital
+                presence that can support customer journeys, internal operations,
+                and new services as the organization grows.
               </p>
             </div>
             <div>
@@ -604,11 +646,11 @@ export default function WebsitesPage() {
       <section className={section}>
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 className={h2}>
-            Ready to build something that works?
+            Build the foundation, not another dead end
           </h2>
           <p className={`mx-auto mt-4 max-w-xl ${lead}`}>
-            Tell us the outcome you need — we’ll tell you the simplest way to get
-            there.
+            Tell us where the business is going. We’ll help define the simplest
+            useful platform to support it now and evolve with it later.
           </p>
           <div className="mt-10 flex justify-center">
             <Link
@@ -616,7 +658,7 @@ export default function WebsitesPage() {
               className={buttonPrimary}
               aria-label="Get in touch with 2Nspira"
             >
-              Get in touch
+              Request a consultation
             </Link>
           </div>
         </div>

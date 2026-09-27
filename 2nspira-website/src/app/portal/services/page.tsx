@@ -6,9 +6,24 @@ import Sidebar from "@/components/portal/Sidebar";
 import { StatusBadge } from "@/components/StatusBadge";
 import { Briefcase, Clock, Plus } from "lucide-react";
 
+type PortalService = {
+  id: string;
+  name: string;
+  description: string;
+  status: string;
+  price: number;
+  billingCycle: string;
+  nextBillingDate?: string;
+};
+
+type ServicesData = {
+  services: PortalService[];
+  client?: Record<string, unknown>;
+};
+
 export default function ServicesPage() {
   const router = useRouter();
-  const [data, setData] = useState<{ services: any[]; client?: Record<string, unknown> } | null>(null);
+  const [data, setData] = useState<ServicesData | null>(null);
   const [loading, setLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -53,7 +68,7 @@ export default function ServicesPage() {
             <h1 className="text-2xl font-bold">Your Services</h1>
           </div>
           <div className="grid gap-4">
-            {services.map((svc: any) => (
+            {services.map((svc) => (
               <div key={svc.id} className="rounded-2xl border border-line bg-canvas p-4">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
