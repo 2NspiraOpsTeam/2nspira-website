@@ -18,7 +18,7 @@ export default function AdminClientDetailPage() {
   const [loading, setLoading] = useState(true);
 
   // Edit client
-  const [edit, setEdit] = useState({ name: "", company: "" });
+  const [edit, setEdit] = useState({ name: "", company: "", active: true });
   const [editMsg, setEditMsg] = useState<{ ok: boolean; text: string } | null>(null);
   const [savingEdit, setSavingEdit] = useState(false);
 
@@ -46,7 +46,7 @@ export default function AdminClientDetailPage() {
       if (res.ok) {
         const json = await res.json();
         setData(json);
-        setEdit({ name: json.client?.name || "", company: json.client?.company || "" });
+        setEdit({ name: json.client?.name || "", company: json.client?.company || "", active: json.client?.active !== false });
       }
     } catch {} finally {
       setLoading(false);
@@ -217,6 +217,10 @@ export default function AdminClientDetailPage() {
                   required
                 />
               </div>
+              <label className="flex items-center gap-2 text-sm font-medium text-foreground/80">
+                <input type="checkbox" checked={edit.active} onChange={(e) => setEdit({ ...edit, active: e.target.checked })} />
+                Account active
+              </label>
               <div>
                 <label className="block text-sm font-medium text-foreground/80 mb-1.5">Company</label>
                 <input

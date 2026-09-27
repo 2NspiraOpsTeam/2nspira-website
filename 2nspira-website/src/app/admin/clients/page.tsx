@@ -14,6 +14,7 @@ export default function AdminClientsPage() {
   const [form, setForm] = useState({ name: "", email: "", company: "", password: "" });
   const [createMsg, setCreateMsg] = useState<{ ok: boolean; text: string } | null>(null);
   const [saving, setSaving] = useState(false);
+  const [query, setQuery] = useState("");
 
   const load = useCallback(async () => {
     try {
@@ -153,6 +154,14 @@ export default function AdminClientsPage() {
           </div>
         )}
 
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search clients by name, email, or company"
+          className="w-full rounded-xl border border-line bg-canvas px-4 py-3 text-sm"
+        />
+
         <div className="rounded-2xl border border-line bg-canvas overflow-hidden">
           <table className="w-full text-sm">
             <thead>
@@ -164,7 +173,7 @@ export default function AdminClientsPage() {
               </tr>
             </thead>
             <tbody>
-              {clients.map((c) => (
+              {clients.filter((c) => `${c.name} ${c.email} ${c.company}`.toLowerCase().includes(query.toLowerCase())).map((c) => (
                 <tr
                   key={c.id}
                   onClick={() => router.push(`/admin/clients/${c.id}`)}
