@@ -140,8 +140,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           <Link href="/about" onClick={handleClose} aria-current={isCurrent("/about") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">About</Link>
           <Link href="/contact" onClick={handleClose} aria-current={isCurrent("/contact") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Contact</Link>
           <div className="my-3 border-t border-line" />
-          <Link href="/portal/login" onClick={handleClose} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">Login</Link>
-          <Link href="/portal/register" onClick={handleClose} className="mt-2 block rounded-xl bg-accent px-4 py-3.5 text-center text-base font-medium text-white transition-colors hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas">Register</Link>
+          <Link href="/portal/login" onClick={handleClose} className="mt-2 block rounded-xl bg-accent px-4 py-3.5 text-center text-base font-medium text-white transition-colors hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas">Login</Link>
         </nav>
 
         <div className="mt-auto border-t border-line py-6">

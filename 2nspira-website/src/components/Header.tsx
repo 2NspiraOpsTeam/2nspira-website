@@ -142,8 +142,7 @@ export default function Header() {
             </Link>
           ))}
           <span className="mx-1 h-5 w-px bg-line" aria-hidden="true" />
-          <Link href="/portal/login" className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas">Login</Link>
-          <Link href="/portal/register" className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas">Register</Link>
+          <Link href="/portal/login" className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas">Login</Link>
         </nav>
 
         <button className="flex h-10 w-10 items-center justify-center rounded-full text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent lg:hidden" onClick={() => setIsMobileMenuOpen(true)} aria-expanded={isMobileMenuOpen} aria-label="Open menu" aria-controls="mobile-menu">
