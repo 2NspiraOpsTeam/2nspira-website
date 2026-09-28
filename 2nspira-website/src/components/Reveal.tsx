@@ -7,6 +7,8 @@ type RevealProps = {
   className?: string;
   /** Stagger delay in ms (applied as transition-delay). */
   delay?: number;
+  /** Optional restrained entrance variation. */
+  variant?: "rise" | "fade" | "scale";
 };
 
 /**
@@ -23,6 +25,7 @@ export default function Reveal({
   children,
   className = "",
   delay = 0,
+  variant = "rise",
 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -51,7 +54,7 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      className={`reveal ${className}`}
+      className={`reveal reveal-${variant} ${className}`}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}

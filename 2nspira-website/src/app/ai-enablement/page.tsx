@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return <ServicePage {...{
+    visualTreatment: "editorial" as const,
     title: "AI Enablement, Training & Governance Advisory",
     intro: "Move from fragmented AI experimentation to structured, responsible adoption. We help leaders build practical governance, equip their teams, and turn technology into operational capacity.",
     audience: "Executive teams, school and academic leaders, founders, nonprofits, and operators adopting AI without a clear framework for governance, training, or data privacy.",
