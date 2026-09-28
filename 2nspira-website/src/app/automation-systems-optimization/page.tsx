@@ -129,6 +129,14 @@ export default function AutomationSystemsOptimizationPage() {
 
       <section className="relative overflow-hidden border-b border-line bg-surface">
         <AmbientField />
+        <div className="absolute inset-0 z-0 opacity-40">
+          <img
+            src="/images/hero/automation-systems-optimization-hero.jpg"
+            alt="Abstract connected digital infrastructure representing interconnected business systems"
+            className="h-full w-full object-cover"
+            loading="eager"
+          />
+        </div>
         <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
           <p>
             <EyebrowPill>Automation &amp; Systems Optimization</EyebrowPill>
