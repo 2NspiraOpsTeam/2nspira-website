@@ -9,12 +9,51 @@ const ADMIN = { name: "Jeffrey C", email: "jcortez@waterbearmecca.com" };
 const BILLING_CYCLES = ["monthly", "quarterly", "annual", "one-time"];
 const SERVICE_STATUSES = ["active", "paused", "terminated"];
 
+type ClientRecord = {
+  name: string;
+  email: string;
+  company?: string;
+  active?: boolean;
+};
+
+type ServiceRecord = {
+  id: string;
+  name: string;
+  description?: string;
+  price?: number | string;
+  billingCycle: string;
+  status: string;
+};
+
+type InvoiceRecord = {
+  id: string;
+  issueDate?: string;
+  issuedAt?: string;
+  amount?: number | string;
+  status: string;
+};
+
+type PaymentRecord = {
+  id: string;
+  createdAt?: string;
+  created_at?: string;
+  amount?: number | string;
+  status: string;
+};
+
+type ClientDetailData = {
+  client: ClientRecord;
+  services: ServiceRecord[];
+  invoices: InvoiceRecord[];
+  payments: PaymentRecord[];
+};
+
 export default function AdminClientDetailPage() {
   const params = useParams<{ id: string }>();
   const router = useRouter();
   const id = params.id;
 
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<ClientDetailData | null>(null);
   const [loading, setLoading] = useState(true);
 
   // Edit client
@@ -54,7 +93,8 @@ export default function AdminClientDetailPage() {
   }, [id, router]);
 
   useEffect(() => {
-    load();
+    const timeoutId = window.setTimeout(() => void load(), 0);
+    return () => window.clearTimeout(timeoutId);
   }, [load]);
 
   const saveClient = async (e: React.FormEvent) => {
@@ -97,7 +137,7 @@ export default function AdminClientDetailPage() {
       } else {
         setSvcMsg({ ok: true, text: `Service "${json.service.name}" added.` });
         setSvc({ name: "", description: "", price: "", billingCycle: "monthly" });
-        setData((d: any) => ({ ...d, services: json.services || d?.services }));
+        setData((current) => current ? { ...current, services: json.services || current.services } : current);
       }
     } catch {
       setSvcMsg({ ok: false, text: "Connection failed" });
@@ -115,7 +155,7 @@ export default function AdminClientDetailPage() {
       });
       if (res.ok) {
         const json = await res.json();
-        setData((d: any) => ({ ...d, services: json.services || d?.services }));
+        setData((current) => current ? { ...current, services: json.services || current.services } : current);
       }
     } catch {}
   };
@@ -128,7 +168,7 @@ export default function AdminClientDetailPage() {
       });
       if (res.ok) {
         const json = await res.json();
-        setData((d: any) => ({ ...d, services: json.services || d?.services }));
+        setData((current) => current ? { ...current, services: json.services || current.services } : current);
       }
     } catch {}
   };
@@ -173,8 +213,8 @@ export default function AdminClientDetailPage() {
 
   const { client, services = [], invoices = [], payments = [] } = data;
   const activeMrr = services
-    .filter((s: any) => s.status === "active" && s.billingCycle !== "one-time")
-    .reduce((sum: number, s: any) => {
+    .filter((s) => s.status === "active" && s.billingCycle !== "one-time")
+    .reduce((sum, s) => {
       const p = Number(s.price) || 0;
       if (s.billingCycle === "quarterly") return sum + p / 3;
       if (s.billingCycle === "annual") return sum + p / 12;
@@ -356,7 +396,7 @@ export default function AdminClientDetailPage() {
           </form>
 
           <div className="space-y-3">
-            {services.map((s: any) => (
+            {services.map((s) => (
               <div key={s.id} className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl border border-border/60">
                 <div className="min-w-0">
                   <div className="font-medium text-sm">{s.name}</div>
@@ -399,7 +439,7 @@ export default function AdminClientDetailPage() {
           <div className="rounded-2xl border border-line bg-canvas p-6">
             <h2 className="font-semibold mb-4">Invoices ({invoices.length})</h2>
             <div className="space-y-2">
-              {invoices.slice(0, 8).map((inv: any) => (
+              {invoices.slice(0, 8).map((inv) => (
                 <div key={inv.id} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0 text-sm">
                   <span className="text-foreground/70">{inv.issueDate || inv.issuedAt || "—"}</span>
                   <span className="font-medium">${Number(inv.amount || 0).toLocaleString()}</span>
@@ -416,7 +456,7 @@ export default function AdminClientDetailPage() {
           <div className="rounded-2xl border border-line bg-canvas p-6">
             <h2 className="font-semibold mb-4">Payments ({payments.length})</h2>
             <div className="space-y-2">
-              {payments.slice(0, 8).map((p: any) => (
+              {payments.slice(0, 8).map((p) => (
                 <div key={p.id} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0 text-sm">
                   <span className="text-foreground/70">{p.createdAt || p.created_at || "—"}</span>
                   <span className="font-medium">${Number(p.amount || 0).toLocaleString()}</span>

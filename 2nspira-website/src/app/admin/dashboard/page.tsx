@@ -5,9 +5,27 @@ import { useRouter } from "next/navigation";
 import AdminShell from "@/components/admin/AdminShell";
 import { StatusBadge } from "@/components/StatusBadge";
 
+type RecentPayment = {
+  id: string;
+  clientName?: string;
+  amount?: number;
+  status: string;
+};
+
+type AdminStats = {
+  clients?: number;
+  activeServices?: number;
+  monthlyMrr?: number;
+  totalRevenue?: number;
+  invoices?: number;
+  unpaidInvoices?: number;
+  recentPayments?: RecentPayment[];
+  error?: string;
+};
+
 export default function AdminDashboardPage() {
   const router = useRouter();
-  const [stats, setStats] = useState<any>(null);
+  const [stats, setStats] = useState<AdminStats | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -40,6 +58,8 @@ export default function AdminDashboardPage() {
     );
   }
 
+  if (!stats) return null;
+
   const admin = { name: "Jeffrey C", email: "jcortez@waterbearmecca.com" };
 
   const cards = [
@@ -71,7 +91,7 @@ export default function AdminDashboardPage() {
         <div className="rounded-2xl border border-line bg-canvas p-6">
           <h2 className="font-semibold mb-4">Recent Payments</h2>
           <div className="space-y-2">
-            {(stats.recentPayments || []).map((p: any) => (
+            {(stats.recentPayments || []).map((p) => (
               <div
                 key={p.id}
                 className="flex items-center justify-between py-2 border-b border-border/50 last:border-0 text-sm"
