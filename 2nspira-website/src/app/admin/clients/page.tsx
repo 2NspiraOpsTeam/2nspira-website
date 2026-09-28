@@ -6,9 +6,19 @@ import AdminShell from "@/components/admin/AdminShell";
 
 const ADMIN = { name: "Jeffrey C", email: "jcortez@waterbearmecca.com" };
 
+type ClientSummary = {
+  id: string;
+  name: string;
+  email: string;
+  company?: string;
+  activeServices: number;
+  serviceCount: number;
+  mrr?: number;
+};
+
 export default function AdminClientsPage() {
   const router = useRouter();
-  const [clients, setClients] = useState<any[]>([]);
+  const [clients, setClients] = useState<ClientSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", company: "", password: "" });
@@ -33,7 +43,8 @@ export default function AdminClientsPage() {
   }, [router]);
 
   useEffect(() => {
-    load();
+    const timeoutId = window.setTimeout(() => void load(), 0);
+    return () => window.clearTimeout(timeoutId);
   }, [load]);
 
   const handleCreate = async (e: React.FormEvent) => {
@@ -41,7 +52,7 @@ export default function AdminClientsPage() {
     setSaving(true);
     setCreateMsg(null);
     try {
-      const body: any = { name: form.name, email: form.email, company: form.company };
+      const body: Record<string, string> = { name: form.name, email: form.email, company: form.company };
       if (form.password) body.password = form.password;
       const res = await fetch("/api/admin/clients", {
         method: "POST",
