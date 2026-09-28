@@ -150,10 +150,18 @@ body {
   /* Scroll reveal (see src/components/Reveal.tsx) */
   .reveal {
     opacity: 0;
-    transform: translateY(16px);
     transition:
       opacity 0.6s var(--ease-gentle),
       transform 0.6s var(--ease-gentle);
+  }
+  .reveal-rise {
+    transform: translateY(16px);
+  }
+  .reveal-fade {
+    transform: none;
+  }
+  .reveal-scale {
+    transform: translateY(8px) scale(0.985);
   }
   .reveal.is-visible {
     opacity: 1;
