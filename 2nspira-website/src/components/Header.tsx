@@ -22,7 +22,7 @@ const ideaLinks = [
 ];
 
 const primaryLinks = [
-  { name: "Work", href: "/websites#our-work" },
+  { name: "Work", href: "/work" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

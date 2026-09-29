@@ -135,7 +135,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
 
         <nav className="space-y-1 py-5" aria-label="Mobile navigation">
           {accordion("services", "Services", serviceLinks, serviceButtonRef)}
-          <Link href="/websites#our-work" onClick={handleClose} aria-current={pathname === "/websites" ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Work</Link>
+          <Link href="/work" onClick={handleClose} aria-current={pathname === "/work" ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Work</Link>
           {accordion("ideas", "Ideas", ideaLinks, ideasButtonRef)}
           <Link href="/about" onClick={handleClose} aria-current={isCurrent("/about") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">About</Link>
           <Link href="/contact" onClick={handleClose} aria-current={isCurrent("/contact") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Contact</Link>
