@@ -111,7 +111,7 @@ export default function WorkPage() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
-        </div>
+        </div >
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-3xl">
@@ -127,8 +127,8 @@ export default function WorkPage() {
                 scale.
               </p>
             </Reveal>
-          </div>
-        </div>
+          </div >
+        </div >
       </section>
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-24">
@@ -140,7 +140,7 @@ export default function WorkPage() {
               <h3 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Manufacturing Operations Command Center
               </h3>
-            </div>
+            </div >
           </Reveal>
           
           <div className="grid gap-12 lg:grid-cols-2">
@@ -154,11 +154,11 @@ export default function WorkPage() {
                     <li key={cap} className="flex items-start gap-3">
                       <span className="mt-1 text-accent">•</span>
                       <span>{cap}</span>
-                    </li>
+                    </li >
                   ))}
-                </ul>
-              </div>
-            </div>
+                </ul >
+              </div >
+            </div >
             <div className="flex items-center justify-center">
               <Image
                 src="/images/work/project-manufacturing.png"
@@ -167,8 +167,8 @@ export default function WorkPage() {
                 height={675}
                 className="aspect-video w-full rounded-2xl border border-line object-cover shadow-sm sm:h-full"
               />
-            </div>
-          </div>
+            </div >
+          </div >
           
           <Reveal className="mt-8">
             <p className="text-sm text-body/60 italic">
@@ -185,13 +185,19 @@ export default function WorkPage() {
               <h3 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Water Bear Mecca
               </h3>
-            </div>
+            </div >
           </Reveal>
 
           <div className="grid gap-12 lg:grid-cols-2">
-            <div className="order-2 lg:order-1 flex items-center justify-center">
-              <div className="aspect-video w-full rounded-2xl border border-line bg-canvas shadow-sm sm:aspect-auto sm:h-full" />
-            </div>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/images/work/project-waterbear.png"
+                alt="Water Bear Mecca"
+                width={1200}
+                height={675}
+                className="aspect-video w-full rounded-2xl border border-line object-cover shadow-sm sm:h-full"
+              />
+            </div >
             <div className="order-1 space-y-6 lg:order-2">
               <p className="text-xl text-body">{waterbearChallenge}</p>
               <p className="text-lg text-body/80">{waterbearOperationalShift}</p>
@@ -202,12 +208,12 @@ export default function WorkPage() {
                     <li key={cap} className="flex items-start gap-3">
                       <span className="mt-1 text-accent">•</span>
                       <span>{cap}</span>
-                    </li>
+                    </li >
                   ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+                </ul >
+              </div >
+            </div >
+          </div >
 
           <Reveal className="mt-8">
             <p className="text-sm text-body/60 italic">
@@ -228,7 +234,7 @@ export default function WorkPage() {
                 2Nspira has built — from mission‑driven archives to bilingual
                 experiences and interactive tools.
               </p>
-            </div>
+            </div >
           </Reveal>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
             {supportingProjects.map((project, idx) => (
@@ -243,7 +249,7 @@ export default function WorkPage() {
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                  </div>
+                  </div >
                   <div className="p-5">
                     <h4 className="text-sm font-semibold tracking-tight text-ink">
                       {project.name}
@@ -259,11 +265,11 @@ export default function WorkPage() {
                     >
                       Visit Project →
                     </a>
-                  </div>
+                  </div >
                 </article>
               </Reveal>
             ))}
-          </div>
+          </div >
         </section>
 
         {/* --- CTA Band --- */}
@@ -279,12 +285,12 @@ export default function WorkPage() {
               <Link href="/contact" className="inline-block rounded-full bg-ink px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-ink/90">
                 Get in touch
               </Link>
-            </div>
+            </div >
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
             <div className="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-black/10 blur-3xl" />
-          </div>
+          </div >
         </Reveal>
-      </div>
+      </div >
     </main>
   );
 }
