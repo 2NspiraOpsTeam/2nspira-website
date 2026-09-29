@@ -98,7 +98,7 @@ export default function WorkPage() {
       <section className="relative overflow-hidden bg-ink py-24 sm:py-32">
         <div className="absolute inset-0 opacity-40">
           <Image
-            src="/images/work/hero.png"
+            src="/images/work/hero-modern.png"
             alt="People collaborating on industrial digital systems"
             fill
             className="object-cover object-center"
