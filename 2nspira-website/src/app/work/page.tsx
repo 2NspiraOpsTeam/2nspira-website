@@ -160,7 +160,13 @@ export default function WorkPage() {
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <div className="aspect-video w-full rounded-2xl border border-line bg-canvas shadow-sm sm:aspect-auto sm:h-full" />
+              <Image
+                src="/images/work/project-manufacturing.png"
+                alt="Manufacturing Operations Command Center"
+                width={1200}
+                height={675}
+                className="aspect-video w-full rounded-2xl border border-line object-cover shadow-sm sm:h-full"
+              />
             </div>
           </div>
           
