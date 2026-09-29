@@ -163,9 +163,9 @@ export default function WorkPage() {
               <Image
                 src="/images/work/project-manufacturing.png"
                 alt="Manufacturing Operations Command Center"
-                width={1200}
-                height={675}
-                className="aspect-video w-full rounded-2xl border border-line object-cover shadow-sm sm:h-full"
+                width={1600}
+                height={900}
+                className="w-full rounded-2xl border border-line object-contain shadow-sm sm:h-auto"
               />
             </div >
           </div >
@@ -189,13 +189,13 @@ export default function WorkPage() {
           </Reveal>
 
           <div className="grid gap-12 lg:grid-cols-2">
-            <div className="flex items-center justify-center">
+            <div className="order-2 lg:order-1 flex items-center justify-center">
               <Image
                 src="/images/work/project-waterbear.png"
                 alt="Water Bear Mecca"
-                width={1200}
-                height={675}
-                className="aspect-video w-full rounded-2xl border border-line object-cover shadow-sm sm:h-full"
+                width={1600}
+                height={900}
+                className="w-full rounded-2xl border border-line object-contain shadow-sm sm:h-auto"
               />
             </div >
             <div className="order-1 space-y-6 lg:order-2">
