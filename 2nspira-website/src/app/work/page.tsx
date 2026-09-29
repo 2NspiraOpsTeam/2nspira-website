@@ -64,30 +64,35 @@ const supportingProjects = [
     description:
       "Technology leadership, AI readiness, insights, and practical assessment tools in one clear digital home.",
     url: "https://2nspira.com",
+    image: "/images/work/project-2nspira.png",
   },
   {
     name: "GeVitals",
     description:
       "A bilingual clinic website combining migrated content, video, publishing, and local discovery.",
     url: "https://gevitals.com",
+    image: "/images/work/project-gevitals.png",
   },
   {
     name: "Open Goal Soccer",
     description:
       "An accessible digital archive preserving an inclusive youth soccer program's mission and community story.",
     url: "https://opengoalsoccer.com",
+    image: "/images/work/project-soccer.png",
   },
   {
     name: "CalmLoop",
     description:
       "A low‑pressure companion offering gentle routine ideas for neurodivergent children and their families.",
     url: "https://calmloop.vercel.app",
+    image: "/images/work/project-calmloop.png",
   },
   {
     name: "Breadcrumb",
     description:
       "A fast OSINT challenge game engineered to run anywhere without a server or database.",
     url: "https://breadcrumb-challenge.vercel.app",
+    image: "/images/work/project-breadcrumb.png",
   },
 ];
 
@@ -98,8 +103,8 @@ export default function WorkPage() {
       <section className="relative overflow-hidden bg-ink py-24 sm:py-32">
         <div className="absolute inset-0 opacity-40">
           <Image
-            src="/images/work/hero-modern.png"
-            alt="People collaborating on industrial digital systems"
+            src="/images/work/hero-new.png"
+            alt="Real Organizations. Measurable Progress."
             fill
             className="object-cover object-center"
             priority
@@ -223,37 +228,32 @@ export default function WorkPage() {
             {supportingProjects.map((project, idx) => (
               <Reveal key={project.name} delay={idx * 0.1}>
                 <article
-                  className={`group p-5 ${card} rounded-xl border border-line transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent`}
+                  className={`group p-0 ${card} rounded-xl border border-line transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent overflow-hidden`}
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-md mb-4 bg-accent-soft text-accent group-hover:bg-accent group-hover:text-white transition-colors">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2l-2-2-2 2"
-                      />
-                    </svg>
+                  <div className="relative aspect-video w-full overflow-hidden bg-canvas/50">
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
-                  <h4 className="text-sm font-semibold tracking-tight text-ink">
-                    {project.name}
-                  </h4>
-                  <p className="mt-2 text-xs text-body/60 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center text-xs font-medium text-accent underline underline-offset-4 hover:text-accent/80 transition-colors"
-                  >
-                    Visit Project →
-                  </a>
+                  <div className="p-5">
+                    <h4 className="text-sm font-semibold tracking-tight text-ink">
+                      {project.name}
+                    </h4>
+                    <p className="mt-2 text-xs text-body/60 leading-relaxed">
+                      {project.description}
+                    </p>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center text-xs font-medium text-accent underline underline-offset-4 hover:text-accent/80 transition-colors"
+                    >
+                      Visit Project →
+                    </a>
+                  </div>
                 </article>
               </Reveal>
             ))}
@@ -282,4 +282,3 @@ export default function WorkPage() {
     </main>
   );
 }
-
