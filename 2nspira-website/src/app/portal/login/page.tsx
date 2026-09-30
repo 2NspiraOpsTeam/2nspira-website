@@ -19,7 +19,7 @@ export default function LoginPage() {
       setLoading(true);
 
       try {
-        const res = await fetch("/api/portal/auth/login", {
+        const res = await fetch("/api/auth/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
@@ -32,7 +32,10 @@ export default function LoginPage() {
           return;
         }
 
-        router.push("/portal/dashboard");
+        // Role-based redirect decided server-side from the authenticated identity.
+        // Admins land on the admin console; clients on the client dashboard.
+        const next = typeof data.redirect === "string" ? data.redirect : "/portal/dashboard";
+        router.push(next);
       } catch {
         setError("Connection failed. Try again.");
         setLoading(false);
@@ -46,7 +49,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Image src="/images/logo/2nspira-logo.png" alt="2Nspira" width={320} height={132} className="h-9 w-auto mx-auto mb-2" priority />
-          <div className="text-foreground/60">Client Portal</div>
+          <div className="text-foreground/60">Sign in to 2Nspira</div>
         </div>
 
         <div className="rounded-2xl border border-line bg-canvas p-6">
@@ -96,7 +99,7 @@ export default function LoginPage() {
             </button>
 
             <div className="text-center text-xs text-foreground/40 pt-2">
-              Demo: admin@acme.example.com / password123
+              Single sign-in for admin and client accounts
             </div>
           </form>
           <p className="mt-5 border-t border-line pt-5 text-center text-sm text-body">
