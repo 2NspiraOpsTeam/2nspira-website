@@ -81,10 +81,10 @@ export default function CareersPage() {
       <Reveal className="mx-auto max-w-5xl px-4 pt-10 sm:px-6">
         <figure className="group overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
           <Image
-            src="/images/pages/careers-collaboration.jpg"
+            src="/images/pages/careers-collaboration.png"
             alt="Illustrative scene of professionals collaborating around laptops in a technology workspace."
-            width={1672}
-            height={941}
+            width={1536}
+            height={1024}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1024px"
             priority
             className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.015] motion-reduce:transform-none"
