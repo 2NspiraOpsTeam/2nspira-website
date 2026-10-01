@@ -21,6 +21,7 @@ const pages: Array<{
   { path: "/blog/categories/trust-is-the-operating-system", priority: 0.6, changeFrequency: "monthly" },
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/about", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/careers", priority: 0.6, changeFrequency: "monthly" },
   { path: "/insights", priority: 0.7, changeFrequency: "weekly" },
   { path: "/resources", priority: 0.9, changeFrequency: "monthly" },
   { path: "/resources/strength-profile", priority: 0.8, changeFrequency: "monthly" },
