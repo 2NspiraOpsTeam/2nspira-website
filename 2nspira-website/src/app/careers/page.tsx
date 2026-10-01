@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
@@ -77,6 +78,20 @@ export default function CareersPage() {
         </div>
       </header>
 
+      <Reveal className="mx-auto max-w-5xl px-4 pt-10 sm:px-6">
+        <figure className="group overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
+          <Image
+            src="/images/pages/careers-collaboration.jpg"
+            alt="Illustrative scene of professionals collaborating around laptops in a technology workspace."
+            width={1672}
+            height={941}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1024px"
+            priority
+            className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.015] motion-reduce:transform-none"
+          />
+        </figure>
+      </Reveal>
+
       <section className={section} aria-labelledby="talent-model-heading">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
           <Reveal>
@@ -148,7 +163,7 @@ export default function CareersPage() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
               <Reveal key={value.title} delay={index * 60}>
-                <div className={`h-full p-6 ${cardFlat}`}>
+                <div className={`group h-full p-6 ${cardFlat}`}>
                   <AccentRule className="mb-5" />
                   <h3 className={h3}>{value.title}</h3>
                   <p className="mt-3 leading-7 text-body">{value.text}</p>
@@ -169,9 +184,10 @@ export default function CareersPage() {
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {relationships.map((relationship, index) => (
               <Reveal key={relationship.title} delay={index * 80}>
-                <div className={`h-full p-6 sm:p-8 ${cardFlat}`}>
+                <div className={`group h-full p-6 sm:p-8 ${cardFlat}`}>
                   <span className="text-xs font-semibold tracking-[0.18em] text-accent">{String(index + 1).padStart(2, "0")}</span>
-                  <h3 className={`mt-4 ${h3}`}>{relationship.title}</h3>
+                  <AccentRule className="mt-4 mb-4" />
+                  <h3 className={h3}>{relationship.title}</h3>
                   <p className="mt-3 leading-7 text-body">{relationship.text}</p>
                 </div>
               </Reveal>
