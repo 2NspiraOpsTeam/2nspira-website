@@ -24,6 +24,7 @@ const ideaLinks = [
 const primaryLinks = [
   { name: "Work", href: "/work" },
   { name: "About", href: "/about" },
+  { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
 ];
 
