@@ -87,7 +87,7 @@ export default function CareersPage() {
                 We shape each engagement around the expertise it actually needs. Core leadership provides continuity; independent specialists and partners can be brought together for the work at hand.
               </p>
               <p className="mt-4 font-medium leading-8 text-ink">
-                The right expertise for the engagement, without unnecessary organizational overhead.
+                The right expertise for each engagement, with a delivery model designed to remain focused, adaptable, and responsive to client needs.
               </p>
             </div>
           </Reveal>
@@ -128,7 +128,7 @@ export default function CareersPage() {
               <p className="text-sm font-semibold uppercase tracking-widest text-accent">Future collaboration</p>
               <h2 id="network-heading" className={`mt-4 ${h2}`}>Join the 2Nspira Talent Network</h2>
               <p className={`mt-5 max-w-2xl ${body}`}>
-                We welcome introductions from experienced professionals interested in possible future employment, consulting, subcontracting, or project collaboration. We value strong technical capability paired with sound business judgment.
+                We welcome introductions from experienced professionals interested in future employment, independent consulting, or project collaboration opportunities. We value strong technical capability paired with sound business judgment.
               </p>
               <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
                 Introduce yourself by email. A brief note about your expertise and a link to your professional profile is a good place to start.
