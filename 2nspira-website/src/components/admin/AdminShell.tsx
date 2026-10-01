@@ -50,6 +50,13 @@ export default function AdminShell({
               <span aria-hidden="true" className="text-xl">✕</span>
             </button>
           </div>
+          <button
+            onClick={handleLogout}
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-red-500/10 px-3 py-2.5 text-sm font-semibold text-red-500 hover:bg-red-500/20 transition-colors"
+          >
+            <span aria-hidden="true">↩</span>
+            Sign Out
+          </button>
         </div>
 
         <nav className="flex-1 p-4 space-y-1">
@@ -76,18 +83,12 @@ export default function AdminShell({
 
         <div className="p-4 border-t border-line">
           {admin && (
-            <div className="px-3 py-2 text-xs text-foreground/40 mb-3">
+            <div className="px-3 py-2 text-xs text-foreground/40">
               {admin.name}
               <br />
               {admin.email}
             </div>
           )}
-          <button
-            onClick={handleLogout}
-            className="w-full text-left px-3 py-2.5 rounded-lg text-sm text-red-500 hover:bg-red-500/10 transition-colors"
-          >
-            Sign Out
-          </button>
         </div>
       </aside>
 
@@ -101,15 +102,23 @@ export default function AdminShell({
 
       {/* Main */}
       <main className="flex-1 min-w-0">
-        <header className="lg:hidden flex items-center gap-3 p-4 border-b border-line bg-canvas">
+        <header className="lg:hidden flex items-center justify-between gap-3 p-4 border-b border-line bg-canvas">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="text-foreground/60 text-xl"
+              aria-label="Open menu"
+            >
+              ☰
+            </button>
+            <span className="font-semibold text-accent-500">2Nspira Admin</span>
+          </div>
           <button
-            onClick={() => setSidebarOpen(true)}
-            className="text-foreground/60 text-xl"
-            aria-label="Open menu"
+            onClick={handleLogout}
+            className="rounded-lg bg-red-500/10 px-3 py-1.5 text-xs font-semibold text-red-500"
           >
-            ☰
+            Sign Out
           </button>
-          <span className="font-semibold text-accent-500">2Nspira Admin</span>
         </header>
         <div className="p-4 lg:p-8">{children}</div>
       </main>
