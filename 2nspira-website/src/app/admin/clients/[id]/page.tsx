@@ -23,6 +23,7 @@ type ServiceRecord = {
   price?: number | string;
   billingCycle: string;
   status: string;
+  dueDate?: string | null;
 };
 
 type InvoiceRecord = {
@@ -62,9 +63,13 @@ export default function AdminClientDetailPage() {
   const [savingEdit, setSavingEdit] = useState(false);
 
   // Add service
-  const [svc, setSvc] = useState({ name: "", description: "", price: "", billingCycle: "monthly" });
+  const [svc, setSvc] = useState({ name: "", description: "", price: "", billingCycle: "monthly", dueDate: "" });
   const [svcMsg, setSvcMsg] = useState<{ ok: boolean; text: string } | null>(null);
   const [savingSvc, setSavingSvc] = useState(false);
+
+  // Welcome email
+  const [sendingInvite, setSendingInvite] = useState(false);
+  const [inviteMsg, setInviteMsg] = useState<{ ok: boolean; text: string } | null>(null);
 
   // Reset password
   const [resetPw, setResetPw] = useState("");
@@ -129,14 +134,18 @@ export default function AdminClientDetailPage() {
       const res = await fetch(`/api/admin/clients/${id}/services`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...svc, price: Number(svc.price) || 0 }),
+        body: JSON.stringify({
+          ...svc,
+          price: Number(svc.price) || 0,
+          nextBillingDate: svc.dueDate || undefined,
+        }),
       });
       const json = await res.json();
       if (!res.ok) {
         setSvcMsg({ ok: false, text: json.error || "Failed to add service" });
       } else {
         setSvcMsg({ ok: true, text: `Service "${json.service.name}" added.` });
-        setSvc({ name: "", description: "", price: "", billingCycle: "monthly" });
+        setSvc({ name: "", description: "", price: "", billingCycle: "monthly", dueDate: "" });
         setData((current) => current ? { ...current, services: json.services || current.services } : current);
       }
     } catch {
@@ -158,6 +167,40 @@ export default function AdminClientDetailPage() {
         setData((current) => current ? { ...current, services: json.services || current.services } : current);
       }
     } catch {}
+  };
+
+  const saveDueDate = async (serviceId: string, dueDate: string) => {
+    try {
+      const res = await fetch(`/api/admin/clients/${id}/services/${serviceId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nextBillingDate: dueDate || null }),
+      });
+      if (res.ok) {
+        const json = await res.json();
+        setData((current) => current ? { ...current, services: json.services || current.services } : current);
+      }
+    } catch {}
+  };
+
+  const sendWelcomeEmail = async () => {
+    setSendingInvite(true);
+    setInviteMsg(null);
+    try {
+      const res = await fetch(`/api/admin/clients/${id}/invite`, { method: "POST" });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok) {
+        setInviteMsg({ ok: true, text: `Welcome email sent to ${client.email}. It includes their assigned services and a one-time account setup link (valid 7 days).` });
+      } else if (res.status === 503) {
+        setInviteMsg({ ok: false, text: "Welcome email delivery is not configured yet (email provider key missing). Set the client's portal password below and share it directly — the welcome email button will work as soon as delivery is enabled." });
+      } else {
+        setInviteMsg({ ok: false, text: json.error || "Could not send the welcome email. Use the portal password reset below as a fallback." });
+      }
+    } catch {
+      setInviteMsg({ ok: false, text: "Connection failed. Try again, or use the portal password reset below." });
+    } finally {
+      setSendingInvite(false);
+    }
   };
 
   const deleteService = async (serviceId: string) => {
@@ -290,6 +333,32 @@ export default function AdminClientDetailPage() {
             </form>
           </div>
 
+          {/* Welcome email */}
+          <div className="rounded-2xl border border-line bg-canvas p-6">
+            <h2 className="font-semibold mb-4">Welcome Email</h2>
+            <p className="text-sm text-foreground/60 mb-4">
+              Sends {client.email} a notification with their assigned services and a one-time link to set their own password, log in, and add a payment method.
+            </p>
+            {inviteMsg && (
+              <div
+                className={`p-3 rounded-lg text-sm mb-4 ${
+                  inviteMsg.ok
+                    ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
+                    : "bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400"
+                }`}
+              >
+                {inviteMsg.text}
+              </div>
+            )}
+            <button
+              onClick={sendWelcomeEmail}
+              disabled={sendingInvite}
+              className="rounded-full bg-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-strong disabled:opacity-50"
+            >
+              {sendingInvite ? "Sending…" : "Send Welcome Email"}
+            </button>
+          </div>
+
           {/* Reset portal password */}
           <div className="rounded-2xl border border-line bg-canvas p-6">
             <h2 className="font-semibold mb-4">Portal Access</h2>
@@ -354,6 +423,15 @@ export default function AdminClientDetailPage() {
                 className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
               />
             </div>
+            <div>
+              <label className="block text-xs font-medium text-foreground/60 mb-1">Due date</label>
+              <input
+                type="date"
+                value={svc.dueDate}
+                onChange={(e) => setSvc({ ...svc, dueDate: e.target.value })}
+                className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
+              />
+            </div>
             <div className="flex flex-col gap-2">
               <select
                 value={svc.billingCycle}
@@ -402,10 +480,18 @@ export default function AdminClientDetailPage() {
                   <div className="font-medium text-sm">{s.name}</div>
                   <div className="text-xs text-foreground/50">
                     ${Number(s.price || 0).toLocaleString()} / {s.billingCycle}
+                    {s.dueDate ? ` · due ${s.dueDate}` : " · no due date set"}
                     {s.description ? ` — ${s.description}` : ""}
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <input
+                    type="date"
+                    value={s.dueDate || ""}
+                    onChange={(e) => saveDueDate(s.id, e.target.value)}
+                    className="rounded-lg border border-line bg-canvas px-2 py-1.5 text-xs"
+                    title="Set due date"
+                  />
                   <select
                     value={s.status}
                     onChange={(e) => updateServiceStatus(s.id, e.target.value)}
