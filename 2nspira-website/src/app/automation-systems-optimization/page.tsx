@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
@@ -129,32 +130,47 @@ export default function AutomationSystemsOptimizationPage() {
 
       <section className="relative overflow-hidden border-b border-line bg-surface">
         <AmbientField />
-        <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
-          <p>
-            <EyebrowPill>Automation &amp; Systems Optimization</EyebrowPill>
-          </p>
-          <h1 className="animate-rise mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-            Optimize the operating model first. Automate what makes sense.
-          </h1>
-          <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>
-            Make your systems work together, not around each other. We help
-            organizations move from fragmented tools and manual work toward a
-            connected, governed, and scalable technology environment.
-          </p>
-          <p
-            className="animate-rise mt-5 max-w-3xl text-base leading-7 text-body"
-            style={{ animationDelay: "120ms" }}
-          >
-            Automation is not the starting point. We first understand how the
-            organization operates, then decide where systems should connect,
-            processes should simplify, data should move, infrastructure should
-            modernize, and AI can add practical value.
-          </p>
-          <div className="animate-rise mt-8" style={{ animationDelay: "160ms" }}>
-            <Link href="/contact" className={buttonPrimary}>
-              Request a consultation
-            </Link>
+        <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
+          <div className="max-w-4xl">
+            <p>
+              <EyebrowPill>Automation &amp; Systems Optimization</EyebrowPill>
+            </p>
+            <h1 className="animate-rise mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+              Optimize the operating model first. Automate what makes sense.
+            </h1>
+            <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>
+              Make your systems work together, not around each other. We help
+              organizations move from fragmented tools and manual work toward a
+              connected, governed, and scalable technology environment.
+            </p>
+            <p
+              className="animate-rise mt-5 max-w-3xl text-base leading-7 text-body"
+              style={{ animationDelay: "120ms" }}
+            >
+              Automation is not the starting point. We first understand how the
+              organization operates, then decide where systems should connect,
+              processes should simplify, data should move, infrastructure should
+              modernize, and AI can add practical value.
+            </p>
+            <div className="animate-rise mt-8" style={{ animationDelay: "160ms" }}>
+              <Link href="/contact" className={buttonPrimary}>
+                Request a consultation
+              </Link>
+            </div>
           </div>
+
+          <figure className="hero-settle mt-12 overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
+            <Image
+              src="/images/hero/automation-systems-optimization-hero.png"
+              alt="A team collaborating around connected operations dashboards in a modern technology workspace."
+              width={1855}
+              height={848}
+              sizes="(min-width: 1152px) 1152px, calc(100vw - 32px)"
+              unoptimized
+              fetchPriority="high"
+              className="h-auto w-full"
+            />
+          </figure>
         </div>
       </section>
 
