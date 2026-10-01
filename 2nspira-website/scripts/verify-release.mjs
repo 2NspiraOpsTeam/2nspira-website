@@ -21,6 +21,7 @@ execFileSync("git", ["merge-base", "--is-ancestor", "origin/main", "HEAD"], {
   stdio: "inherit",
 });
 
+execFileSync("node", ["scripts/verify-work-assets.mjs"], { cwd: root, stdio: "inherit" });
 execFileSync("npm", ["run", "lint"], { cwd: root, stdio: "inherit" });
 execFileSync("npm", ["run", "build:ci"], { cwd: root, stdio: "inherit" });
 execFileSync("./node_modules/.bin/tsc", ["--noEmit"], { cwd: root, stdio: "inherit" });
