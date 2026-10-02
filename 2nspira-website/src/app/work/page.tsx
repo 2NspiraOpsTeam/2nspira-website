@@ -3,11 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import {
-  buttonPrimary,
   card,
-  h2,
-  h3,
-  lead,
   eyebrow,
 } from "@/components/ui";
 
@@ -116,7 +112,7 @@ export default function WorkPage() {
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-3xl">
             <Reveal>
-              <eyebrow className="mb-6 text-accent">Case Studies & Evidence</eyebrow>
+              <p className={`${eyebrow} mb-6 text-accent`}>Case Studies &amp; Evidence</p>
               <h2 className="mb-6 text-4xl font-semibold tracking-tight text-white sm:text-6xl">
                 Our Work: Operating‑System Case Studies
               </h2>
@@ -136,7 +132,7 @@ export default function WorkPage() {
         <section className="mb-32">
           <Reveal>
             <div className="mb-12 flex flex-col gap-4">
-              <eyebrow>Featured Case Study</eyebrow>
+              <p className={eyebrow}>Featured Case Study</p>
               <h3 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Manufacturing Operations Command Center
               </h3>
@@ -182,7 +178,7 @@ export default function WorkPage() {
         <section className="mb-32">
           <Reveal>
             <div className="mb-12 flex flex-col gap-4">
-              <eyebrow>Featured Case Study</eyebrow>
+              <p className={eyebrow}>Featured Case Study</p>
               <h3 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Water Bear Mecca
               </h3>
@@ -282,7 +278,7 @@ export default function WorkPage() {
                 Ready to modernize your operations?
               </h3>
               <p className="mb-8 text-white/80">
-                Let's discuss how we can build the systems your organization needs to scale.
+                Let&apos;s discuss how we can build the systems your organization needs to scale.
               </p>
               <Link href="/contact" className="inline-block rounded-full bg-ink px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-ink/90">
                 Get in touch
