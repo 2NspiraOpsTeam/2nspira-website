@@ -23,7 +23,7 @@ type ServiceRecord = {
   price?: number | string;
   billingCycle: string;
   status: string;
-  dueDate?: string | null;
+  nextBillingDate?: string | null;
 };
 
 type InvoiceRecord = {
@@ -480,14 +480,14 @@ export default function AdminClientDetailPage() {
                   <div className="font-medium text-sm">{s.name}</div>
                   <div className="text-xs text-foreground/50">
                     ${Number(s.price || 0).toLocaleString()} / {s.billingCycle}
-                    {s.dueDate ? ` · due ${s.dueDate}` : " · no due date set"}
+                    {s.nextBillingDate ? ` · due ${s.nextBillingDate}` : " · no due date set"}
                     {s.description ? ` — ${s.description}` : ""}
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                   <input
                     type="date"
-                    value={s.dueDate || ""}
+                    value={s.nextBillingDate || ""}
                     onChange={(e) => saveDueDate(s.id, e.target.value)}
                     className="rounded-lg border border-line bg-canvas px-2 py-1.5 text-xs"
                     title="Set due date"
