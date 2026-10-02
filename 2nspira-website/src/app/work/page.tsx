@@ -84,7 +84,7 @@ const supportingProjects = [
     name: "CalmLoop",
     description:
       "A low‑pressure companion offering gentle routine ideas for neurodivergent children and their families.",
-    url: "https://calmloop.vercel.app",
+    url: "https://calmloop.2nspira.com",
     image: "/images/work/project-calmloop.png",
   },
   {
