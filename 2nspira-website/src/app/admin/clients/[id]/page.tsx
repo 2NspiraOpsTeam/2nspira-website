@@ -44,6 +44,7 @@ type PaymentRecord = {
 
 type ClientDetailData = {
   client: ClientRecord;
+  invitationEligibility?: "new" | "pending" | "provisioned" | "inactive" | "email_conflict";
   services: ServiceRecord[];
   invoices: InvoiceRecord[];
   payments: PaymentRecord[];
@@ -191,6 +192,10 @@ export default function AdminClientDetailPage() {
       const json = await res.json().catch(() => ({}));
       if (res.ok) {
         setInviteMsg({ ok: true, text: `Welcome email sent to ${client.email}. It includes their assigned services and a one-time account setup link (valid 7 days).` });
+        await load();
+      } else if (res.status === 409) {
+        await load();
+        setInviteMsg({ ok: false, text: "This account cannot be invited. Its portal access may already be set up; use Portal Access if a password reset is needed." });
       } else if (res.status === 503) {
         setInviteMsg({ ok: false, text: "Welcome email delivery is not configured yet (email provider key missing). Set the client's portal password below and share it directly — the welcome email button will work as soon as delivery is enabled." });
       } else {
@@ -236,6 +241,7 @@ export default function AdminClientDetailPage() {
       } else {
         setPwMsg({ ok: true, text: `Portal password reset for ${json.email}` });
         setResetPw("");
+        await load();
       }
     } catch {
       setPwMsg({ ok: false, text: "Connection failed" });
@@ -334,6 +340,12 @@ export default function AdminClientDetailPage() {
           </div>
 
           {/* Welcome email */}
+          {data.invitationEligibility === "provisioned" ? (
+            <div className="rounded-2xl border border-line bg-canvas p-6">
+              <h2 className="font-semibold mb-4">Portal Access</h2>
+              <p className="text-sm text-foreground/60">This client already has a portal password. Use the password reset below if access needs to be restored.</p>
+            </div>
+          ) : data.invitationEligibility === "new" || data.invitationEligibility === "pending" ? (
           <div className="rounded-2xl border border-line bg-canvas p-6">
             <h2 className="font-semibold mb-4">Welcome Email</h2>
             <p className="text-sm text-foreground/60 mb-4">
@@ -355,9 +367,15 @@ export default function AdminClientDetailPage() {
               disabled={sendingInvite}
               className="rounded-full bg-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-strong disabled:opacity-50"
             >
-              {sendingInvite ? "Sending…" : "Send Welcome Email"}
+              {sendingInvite ? "Sending…" : data.invitationEligibility === "pending" ? "Resend Welcome Email" : "Send Welcome Email"}
             </button>
           </div>
+          ) : data.invitationEligibility === "inactive" || data.invitationEligibility === "email_conflict" ? (
+            <div className="rounded-2xl border border-line bg-canvas p-6">
+              <h2 className="font-semibold mb-4">Welcome Email Unavailable</h2>
+              <p className="text-sm text-foreground/60">{data.invitationEligibility === "inactive" ? "Activate this client before sending an invitation." : "This email is already associated with another client identity."}</p>
+            </div>
+          ) : null}
 
           {/* Reset portal password */}
           <div className="rounded-2xl border border-line bg-canvas p-6">
