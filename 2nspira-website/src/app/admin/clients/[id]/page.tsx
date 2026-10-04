@@ -325,7 +325,7 @@ export default function AdminClientDetailPage() {
               {client.email} {client.company ? `· ${client.company}` : ""}
             </p>
             <p className="text-foreground/40 text-sm mt-1">
-              MRR ${activeMrr.toLocaleString()} · {services.length} services · {invoices.length} invoices
+              MRR {activeMrr.toLocaleString("en-US", { style: "currency", currency: "USD" })} · {services.length} services · {invoices.length} invoices
             </p>
           </div>
         </div>
