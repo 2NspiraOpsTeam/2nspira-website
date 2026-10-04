@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import AdminShell from "@/components/admin/AdminShell";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -8,6 +8,12 @@ import { StatusBadge } from "@/components/StatusBadge";
 const ADMIN = { name: "Jeffrey C", email: "jcortez@waterbearmecca.com" };
 const BILLING_CYCLES = ["monthly", "quarterly", "annual", "one-time"];
 const SERVICE_STATUSES = ["active", "paused", "terminated"];
+const validDueDate = (value: string) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const year = Number(value.slice(0, 4));
+  return year >= 1900 && year <= 2100 && !Number.isNaN(Date.parse(`${value}T00:00:00Z`))
+    && new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;
+};
 
 type ClientRecord = {
   name: string;
@@ -71,7 +77,7 @@ export default function AdminClientDetailPage() {
   const [notificationMsg, setNotificationMsg] = useState<{ ok: boolean; text: string } | null>(null);
   const [dateEdits, setDateEdits] = useState<Record<string, string>>({});
   const [savingDates, setSavingDates] = useState<Record<string, boolean>>({});
-  const dateRevision = useRef<Record<string, number>>({});
+  const [dateErrors, setDateErrors] = useState<Record<string, string>>({});
 
   // Welcome email
   const [sendingInvite, setSendingInvite] = useState(false);
@@ -134,6 +140,10 @@ export default function AdminClientDetailPage() {
 
   const addService = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (svc.nextBillingDate && !validDueDate(svc.nextBillingDate)) {
+      setSvcMsg({ ok: false, text: "Enter a complete due date with a four-digit year (1900–2100)." });
+      return;
+    }
     setSavingSvc(true);
     setSvcMsg(null);
     try {
@@ -176,25 +186,31 @@ export default function AdminClientDetailPage() {
   };
 
   const saveDueDate = async (serviceId: string, nextBillingDate: string) => {
-    const revision = (dateRevision.current[serviceId] || 0) + 1;
-    dateRevision.current[serviceId] = revision;
-    setDateEdits(current => ({ ...current, [serviceId]: nextBillingDate }));
+    if (!nextBillingDate) {
+      setDateErrors(current => ({ ...current, [serviceId]: "Choose a complete date before saving." }));
+      return;
+    }
+    if (!validDueDate(nextBillingDate)) {
+      setDateErrors(current => ({ ...current, [serviceId]: "Enter a complete date with a four-digit year (1900–2100)." }));
+      return;
+    }
+    setDateErrors(current => ({ ...current, [serviceId]: "" }));
     setSavingDates(current => ({ ...current, [serviceId]: true }));
     try {
       const res = await fetch(`/api/admin/clients/${id}/services/${serviceId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nextBillingDate: nextBillingDate || null }),
+        body: JSON.stringify({ nextBillingDate }),
       });
-      if (res.ok && dateRevision.current[serviceId] === revision) {
+      if (res.ok) {
         const json = await res.json();
         setData((current) => current ? { ...current, services: json.services || current.services } : current);
         setDateEdits(current => { const next = { ...current }; delete next[serviceId]; return next; });
-      } else if (!res.ok && dateRevision.current[serviceId] === revision) {
+      } else {
         const json = await res.json().catch(() => ({}));
-        setSvcMsg({ ok: false, text: json.error || "Could not save due date" });
+        setDateErrors(current => ({ ...current, [serviceId]: json.error || "Could not save due date" }));
       }
-    } catch { setSvcMsg({ ok: false, text: "Could not save due date" }); }
+    } catch { setDateErrors(current => ({ ...current, [serviceId]: "Could not save due date" })); }
     finally { setSavingDates(current => ({ ...current, [serviceId]: false })); }
   };
 
@@ -480,6 +496,8 @@ export default function AdminClientDetailPage() {
               <label className="block text-xs font-medium text-foreground/60 mb-1">Due date</label>
               <input
                 type="date"
+                min="1900-01-01"
+                max="2100-12-31"
                 value={svc.nextBillingDate}
                 onChange={(e) => setSvc(current => ({ ...current, nextBillingDate: e.target.value }))}
                 className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
@@ -540,12 +558,25 @@ export default function AdminClientDetailPage() {
                 <div className="flex flex-wrap items-center gap-2">
                   <input
                     type="date"
+                    min="1900-01-01"
+                    max="2100-12-31"
                     value={dateEdits[s.id] ?? s.nextBillingDate ?? ""}
-                    onChange={(e) => saveDueDate(s.id, e.target.value)}
+                    onChange={(e) => {
+                      setDateEdits(current => ({ ...current, [s.id]: e.target.value }));
+                      setDateErrors(current => ({ ...current, [s.id]: "" }));
+                    }}
                     disabled={savingDates[s.id]}
                     className="rounded-lg border border-line bg-canvas px-2 py-1.5 text-xs"
-                    title="Set due date"
+                    aria-label={`Due date for ${s.name}`}
                   />
+                  {dateEdits[s.id] !== undefined && dateEdits[s.id] !== (s.nextBillingDate ?? "") && (
+                    <button type="button" onClick={() => saveDueDate(s.id, dateEdits[s.id])}
+                      disabled={savingDates[s.id]}
+                      className="rounded-lg bg-accent px-3 py-1.5 text-xs text-white disabled:opacity-50">
+                      {savingDates[s.id] ? "Saving…" : "Save date"}
+                    </button>
+                  )}
+                  {dateErrors[s.id] && <span role="alert" className="text-xs text-red-600">{dateErrors[s.id]}</span>}
                   <select
                     value={s.status}
                     onChange={(e) => updateServiceStatus(s.id, e.target.value)}
