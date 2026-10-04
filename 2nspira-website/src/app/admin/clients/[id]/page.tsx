@@ -186,11 +186,7 @@ export default function AdminClientDetailPage() {
   };
 
   const saveDueDate = async (serviceId: string, nextBillingDate: string) => {
-    if (!nextBillingDate) {
-      setDateErrors(current => ({ ...current, [serviceId]: "Choose a complete date before saving." }));
-      return;
-    }
-    if (!validDueDate(nextBillingDate)) {
+    if (nextBillingDate && !validDueDate(nextBillingDate)) {
       setDateErrors(current => ({ ...current, [serviceId]: "Enter a complete date with a four-digit year (1900–2100)." }));
       return;
     }
@@ -200,7 +196,7 @@ export default function AdminClientDetailPage() {
       const res = await fetch(`/api/admin/clients/${id}/services/${serviceId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nextBillingDate }),
+        body: JSON.stringify({ nextBillingDate: nextBillingDate || null }),
       });
       if (res.ok) {
         const json = await res.json();
