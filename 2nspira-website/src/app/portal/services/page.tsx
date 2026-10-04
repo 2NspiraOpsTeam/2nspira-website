@@ -81,7 +81,7 @@ export default function ServicesPage() {
                       <span className="flex items-center gap-1.5"><Clock size={14} />${svc.price.toLocaleString()}</span>
                       <span className="flex items-center gap-1.5"><Clock size={14} />{svc.billingCycle}</span>
                       {svc.nextBillingDate && (
-                        <span className="flex items-center gap-1.5"><Clock size={14} />Next: {svc.nextBillingDate}</span>
+                        <span className="flex items-center gap-1.5"><Clock size={14} />Due date: {svc.nextBillingDate}</span>
                       )}
                     </div>
                   </div>
