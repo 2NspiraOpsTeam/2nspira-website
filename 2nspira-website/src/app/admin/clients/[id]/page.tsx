@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import AdminShell from "@/components/admin/AdminShell";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -23,7 +23,7 @@ type ServiceRecord = {
   price?: number | string;
   billingCycle: string;
   status: string;
-  dueDate?: string | null;
+  nextBillingDate?: string | null;
 };
 
 type InvoiceRecord = {
@@ -64,9 +64,14 @@ export default function AdminClientDetailPage() {
   const [savingEdit, setSavingEdit] = useState(false);
 
   // Add service
-  const [svc, setSvc] = useState({ name: "", description: "", price: "", billingCycle: "monthly", dueDate: "" });
+  const [svc, setSvc] = useState({ name: "", description: "", price: "", billingCycle: "monthly", nextBillingDate: "" });
   const [svcMsg, setSvcMsg] = useState<{ ok: boolean; text: string } | null>(null);
   const [savingSvc, setSavingSvc] = useState(false);
+  const [sendingNotification, setSendingNotification] = useState(false);
+  const [notificationMsg, setNotificationMsg] = useState<{ ok: boolean; text: string } | null>(null);
+  const [dateEdits, setDateEdits] = useState<Record<string, string>>({});
+  const [savingDates, setSavingDates] = useState<Record<string, boolean>>({});
+  const dateRevision = useRef<Record<string, number>>({});
 
   // Welcome email
   const [sendingInvite, setSendingInvite] = useState(false);
@@ -138,7 +143,7 @@ export default function AdminClientDetailPage() {
         body: JSON.stringify({
           ...svc,
           price: Number(svc.price) || 0,
-          nextBillingDate: svc.dueDate || undefined,
+          nextBillingDate: svc.nextBillingDate || undefined,
         }),
       });
       const json = await res.json();
@@ -146,7 +151,7 @@ export default function AdminClientDetailPage() {
         setSvcMsg({ ok: false, text: json.error || "Failed to add service" });
       } else {
         setSvcMsg({ ok: true, text: `Service "${json.service.name}" added.` });
-        setSvc({ name: "", description: "", price: "", billingCycle: "monthly", dueDate: "" });
+        setSvc({ name: "", description: "", price: "", billingCycle: "monthly", nextBillingDate: "" });
         setData((current) => current ? { ...current, services: json.services || current.services } : current);
       }
     } catch {
@@ -170,18 +175,39 @@ export default function AdminClientDetailPage() {
     } catch {}
   };
 
-  const saveDueDate = async (serviceId: string, dueDate: string) => {
+  const saveDueDate = async (serviceId: string, nextBillingDate: string) => {
+    const revision = (dateRevision.current[serviceId] || 0) + 1;
+    dateRevision.current[serviceId] = revision;
+    setDateEdits(current => ({ ...current, [serviceId]: nextBillingDate }));
+    setSavingDates(current => ({ ...current, [serviceId]: true }));
     try {
       const res = await fetch(`/api/admin/clients/${id}/services/${serviceId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nextBillingDate: dueDate || null }),
+        body: JSON.stringify({ nextBillingDate: nextBillingDate || null }),
       });
-      if (res.ok) {
+      if (res.ok && dateRevision.current[serviceId] === revision) {
         const json = await res.json();
         setData((current) => current ? { ...current, services: json.services || current.services } : current);
+        setDateEdits(current => { const next = { ...current }; delete next[serviceId]; return next; });
+      } else if (!res.ok && dateRevision.current[serviceId] === revision) {
+        const json = await res.json().catch(() => ({}));
+        setSvcMsg({ ok: false, text: json.error || "Could not save due date" });
       }
-    } catch {}
+    } catch { setSvcMsg({ ok: false, text: "Could not save due date" }); }
+    finally { setSavingDates(current => ({ ...current, [serviceId]: false })); }
+  };
+
+  const sendServiceNotification = async () => {
+    if (sendingNotification) return;
+    setSendingNotification(true);
+    setNotificationMsg(null);
+    try {
+      const res = await fetch(`/api/admin/clients/${id}/service-notification`, { method: "POST" });
+      const json = await res.json().catch(() => ({}));
+      setNotificationMsg({ ok: res.ok, text: res.ok ? `Service notification sent for ${json.serviceCount} active payable service(s).` : json.error || "Could not send service notification" });
+    } catch { setNotificationMsg({ ok: false, text: "Connection failed; check delivery before retrying." }); }
+    finally { setSendingNotification(false); }
   };
 
   const sendWelcomeEmail = async () => {
@@ -418,6 +444,15 @@ export default function AdminClientDetailPage() {
         {/* Services */}
         <div className="rounded-2xl border border-line bg-canvas p-6">
           <h2 className="font-semibold mb-4">Services ({services.length})</h2>
+          <div className="mb-5 flex flex-wrap items-center gap-3">
+            <button type="button" onClick={sendServiceNotification}
+              disabled={sendingNotification || data.invitationEligibility !== "provisioned" || !services.some(s => s.status === "active" && Number(s.price) > 0)}
+              className="rounded-full bg-accent px-4 py-2.5 text-sm font-medium text-white disabled:opacity-50">
+              {sendingNotification ? "Sending…" : "Send Service Notification"}
+            </button>
+            <span className="text-xs text-foreground/60">Sends the currently active payable services after you finish editing. Requires portal access.</span>
+          </div>
+          {notificationMsg && <p role="status" className={`mb-4 text-sm ${notificationMsg.ok ? "text-green-700" : "text-red-600"}`}>{notificationMsg.text}</p>}
 
           <form onSubmit={addService} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 p-4 rounded-xl bg-surface/40">
             <div className="col-span-2">
@@ -445,8 +480,8 @@ export default function AdminClientDetailPage() {
               <label className="block text-xs font-medium text-foreground/60 mb-1">Due date</label>
               <input
                 type="date"
-                value={svc.dueDate}
-                onChange={(e) => setSvc({ ...svc, dueDate: e.target.value })}
+                value={svc.nextBillingDate}
+                onChange={(e) => setSvc(current => ({ ...current, nextBillingDate: e.target.value }))}
                 className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
               />
             </div>
@@ -498,15 +533,16 @@ export default function AdminClientDetailPage() {
                   <div className="font-medium text-sm">{s.name}</div>
                   <div className="text-xs text-foreground/50">
                     ${Number(s.price || 0).toLocaleString()} / {s.billingCycle}
-                    {s.dueDate ? ` · due ${s.dueDate}` : " · no due date set"}
+                    {s.nextBillingDate ? ` · due ${s.nextBillingDate}` : " · no due date set"}
                     {s.description ? ` — ${s.description}` : ""}
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                   <input
                     type="date"
-                    value={s.dueDate || ""}
+                    value={dateEdits[s.id] ?? s.nextBillingDate ?? ""}
                     onChange={(e) => saveDueDate(s.id, e.target.value)}
+                    disabled={savingDates[s.id]}
                     className="rounded-lg border border-line bg-canvas px-2 py-1.5 text-xs"
                     title="Set due date"
                   />
