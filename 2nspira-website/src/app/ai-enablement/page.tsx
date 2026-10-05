@@ -3,7 +3,7 @@ import ServicePage from "@/components/ServicePage";
 
 export const metadata: Metadata = {
   title: "AI Enablement, Training & Governance Advisory",
-  description: "Move from fragmented AI experimentation to structured, responsible adoption. We help leaders build practical governance, equip their teams, and turn technology into operational capacity.",
+  description: "Build an AI strategy your team can use. 2Nspira helps leaders assess readiness, establish governance, train teams, and implement responsible AI workflows.",
   alternates: {
     canonical: "/ai-enablement"
   }

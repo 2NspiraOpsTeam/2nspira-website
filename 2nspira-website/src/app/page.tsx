@@ -18,7 +18,7 @@ import {
 } from "@/components/ui";
 
 const homepageDescription =
-  "We help organizations modernize systems, adopt AI responsibly, and strengthen technology leadership to turn complexity into practical, measurable progress.";
+  "2Nspira helps small and mission-driven organizations adopt AI responsibly, modernize systems, automate work, and lead technology change with confidence.";
 const homepageShareTitle =
   "Human-centered technology transformation for the AI era";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";

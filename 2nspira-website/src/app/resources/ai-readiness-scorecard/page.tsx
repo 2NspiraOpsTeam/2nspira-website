@@ -3,7 +3,7 @@ import AssessmentPage from "@/components/Resources/AssessmentPage";
 
 export const metadata: Metadata = {
   "title": "AI Readiness Scorecard | Organizational Assessment",
-  "description": "Evaluate organizational readiness for responsible AI adoption across strategy, governance, workflows, trust, and implementation.",
+  "description": "Assess your organization's readiness for responsible AI across strategy, governance, workflows, data, trust, risk, and implementation—with practical next steps.",
   "alternates": {
     "canonical": "/resources/ai-readiness-scorecard"
   }

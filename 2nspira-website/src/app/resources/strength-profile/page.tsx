@@ -3,7 +3,7 @@ import AssessmentPage from "@/components/Resources/AssessmentPage";
 
 export const metadata: Metadata = {
   "title": "Strength Profile | Professional Strengths Assessment",
-  "description": "Understand how you naturally create value, collaborate, and thrive at work with the free 2Nspira Strength Profile.",
+  "description": "Take the free 2Nspira Strength Profile to discover how you create value, collaborate, find energizing work, and make clearer career and development decisions.",
   "alternates": {
     "canonical": "/resources/strength-profile"
   }
