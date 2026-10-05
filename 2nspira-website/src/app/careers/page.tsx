@@ -16,7 +16,7 @@ import {
 
 const title = "Careers at 2Nspira | Technology, AI & Consulting Opportunities";
 const description =
-  "Explore future careers, consulting opportunities, and the 2Nspira talent network. Learn how we connect with technologists, AI specialists, consultants, and project partners.";
+  "Join 2Nspira's talent network for future roles and project opportunities in AI, technology consulting, development, data, cloud, UX, and delivery.";
 const socialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 const introductionUrl = "mailto:hello@2nspira.com?subject=2Nspira%20Talent%20Network%20Introduction";
 

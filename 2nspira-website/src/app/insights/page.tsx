@@ -8,7 +8,7 @@ import { lead, linkInline, pageMain } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Executive Insights",
   description:
-    "Essays by Jeffrey Cortez on AI strategy, trust, technology leadership, and human-centered modernization.",
+    "Read practical insights from Jeffrey Cortez on AI strategy, technology leadership, digital transformation, organizational trust, and human-centered change.",
   alternates: { canonical: "/insights" },
 };
 
