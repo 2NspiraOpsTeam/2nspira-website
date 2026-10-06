@@ -4,7 +4,7 @@ import content from "@/content/legal/terms-conditions.json";
 
 export const metadata: Metadata = {
   "title": "Terms and Conditions",
-  "description": "Terms and Conditions for 2Nspira LLC.",
+  "description": "Review the terms that govern access to 2Nspira's website, digital resources, professional services, payments, intellectual property, and liability.",
   "alternates": {
     "canonical": "/terms-conditions"
   }

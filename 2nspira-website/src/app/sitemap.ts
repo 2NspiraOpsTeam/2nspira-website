@@ -12,6 +12,7 @@ const pages: Array<{
   { path: "/ai-enablement", priority: 0.8, changeFrequency: "monthly" },
   { path: "/automation-systems-optimization", priority: 0.8, changeFrequency: "monthly" },
   { path: "/websites", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/work", priority: 0.8, changeFrequency: "monthly" },
   { path: "/fractional-cio", priority: 0.8, changeFrequency: "monthly" },
   { path: "/privacy-policy", priority: 0.3, changeFrequency: "monthly" },
   { path: "/terms-conditions", priority: 0.3, changeFrequency: "monthly" },

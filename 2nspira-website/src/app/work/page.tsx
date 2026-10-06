@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Our Work — Operating-System Case Studies",
   description:
-    "Case studies and evidence of 2Nspira's operating-system work for organizations.",
+    "Explore 2Nspira case studies in manufacturing, property operations, digital platforms, automation, and AI-enabled systems built for measurable impact.",
   alternates: {
     canonical: "/work",
   },
