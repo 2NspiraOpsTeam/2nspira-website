@@ -4,7 +4,7 @@ import content from "@/content/legal/copyright.json";
 
 export const metadata: Metadata = {
   "title": "Copyright Policy",
-  "description": "Copyright Policy for 2Nspira LLC.",
+  "description": "Understand how content on the 2Nspira website may be used, shared, or reproduced, and how to request permission or report copyright concerns.",
   "alternates": {
     "canonical": "/copyright"
   }

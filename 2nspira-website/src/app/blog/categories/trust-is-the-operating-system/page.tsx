@@ -6,7 +6,7 @@ import { lead, linkInline, pageMain } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Trust Is the Operating System",
   description:
-    "Selected essays on trust, judgment, and organizational resilience by Jeffrey Cortez.",
+    "Read Trust Is the Operating System essays by Jeffrey Cortez on organizational trust, leadership judgment, resilience, AI, and the human side of change.",
   alternates: { canonical: "/blog/categories/trust-is-the-operating-system" },
 };
 

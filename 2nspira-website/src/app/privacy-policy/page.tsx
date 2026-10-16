@@ -4,7 +4,7 @@ import content from "@/content/legal/privacy-policy.json";
 
 export const metadata: Metadata = {
   "title": "Privacy Policy",
-  "description": "Privacy Policy for 2Nspira LLC.",
+  "description": "Learn how 2Nspira collects, uses, protects, and manages personal information when you visit our website, use our services, or contact our team.",
   "alternates": {
     "canonical": "/privacy-policy"
   }

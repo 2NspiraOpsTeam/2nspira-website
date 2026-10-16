@@ -8,6 +8,12 @@ import { StatusBadge } from "@/components/StatusBadge";
 const ADMIN = { name: "Jeffrey C", email: "jcortez@waterbearmecca.com" };
 const BILLING_CYCLES = ["monthly", "quarterly", "annual", "one-time"];
 const SERVICE_STATUSES = ["active", "paused", "terminated"];
+const validDueDate = (value: string) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const year = Number(value.slice(0, 4));
+  return year >= 1900 && year <= 2100 && !Number.isNaN(Date.parse(`${value}T00:00:00Z`))
+    && new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;
+};
 
 type ClientRecord = {
   name: string;
@@ -23,6 +29,7 @@ type ServiceRecord = {
   price?: number | string;
   billingCycle: string;
   status: string;
+  nextBillingDate?: string | null;
 };
 
 type InvoiceRecord = {
@@ -43,6 +50,7 @@ type PaymentRecord = {
 
 type ClientDetailData = {
   client: ClientRecord;
+  invitationEligibility?: "new" | "pending" | "provisioned" | "inactive" | "email_conflict";
   services: ServiceRecord[];
   invoices: InvoiceRecord[];
   payments: PaymentRecord[];
@@ -62,9 +70,18 @@ export default function AdminClientDetailPage() {
   const [savingEdit, setSavingEdit] = useState(false);
 
   // Add service
-  const [svc, setSvc] = useState({ name: "", description: "", price: "", billingCycle: "monthly" });
+  const [svc, setSvc] = useState({ name: "", description: "", price: "", billingCycle: "monthly", nextBillingDate: "" });
   const [svcMsg, setSvcMsg] = useState<{ ok: boolean; text: string } | null>(null);
   const [savingSvc, setSavingSvc] = useState(false);
+  const [sendingNotification, setSendingNotification] = useState(false);
+  const [notificationMsg, setNotificationMsg] = useState<{ ok: boolean; text: string } | null>(null);
+  const [dateEdits, setDateEdits] = useState<Record<string, string>>({});
+  const [savingDates, setSavingDates] = useState<Record<string, boolean>>({});
+  const [dateErrors, setDateErrors] = useState<Record<string, string>>({});
+
+  // Welcome email
+  const [sendingInvite, setSendingInvite] = useState(false);
+  const [inviteMsg, setInviteMsg] = useState<{ ok: boolean; text: string } | null>(null);
 
   // Reset password
   const [resetPw, setResetPw] = useState("");
@@ -123,20 +140,28 @@ export default function AdminClientDetailPage() {
 
   const addService = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (svc.nextBillingDate && !validDueDate(svc.nextBillingDate)) {
+      setSvcMsg({ ok: false, text: "Enter a complete due date with a four-digit year (1900–2100)." });
+      return;
+    }
     setSavingSvc(true);
     setSvcMsg(null);
     try {
       const res = await fetch(`/api/admin/clients/${id}/services`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...svc, price: Number(svc.price) || 0 }),
+        body: JSON.stringify({
+          ...svc,
+          price: Number(svc.price) || 0,
+          nextBillingDate: svc.nextBillingDate || undefined,
+        }),
       });
       const json = await res.json();
       if (!res.ok) {
         setSvcMsg({ ok: false, text: json.error || "Failed to add service" });
       } else {
         setSvcMsg({ ok: true, text: `Service "${json.service.name}" added.` });
-        setSvc({ name: "", description: "", price: "", billingCycle: "monthly" });
+        setSvc({ name: "", description: "", price: "", billingCycle: "monthly", nextBillingDate: "" });
         setData((current) => current ? { ...current, services: json.services || current.services } : current);
       }
     } catch {
@@ -158,6 +183,67 @@ export default function AdminClientDetailPage() {
         setData((current) => current ? { ...current, services: json.services || current.services } : current);
       }
     } catch {}
+  };
+
+  const saveDueDate = async (serviceId: string, nextBillingDate: string) => {
+    if (nextBillingDate && !validDueDate(nextBillingDate)) {
+      setDateErrors(current => ({ ...current, [serviceId]: "Enter a complete date with a four-digit year (1900–2100)." }));
+      return;
+    }
+    setDateErrors(current => ({ ...current, [serviceId]: "" }));
+    setSavingDates(current => ({ ...current, [serviceId]: true }));
+    try {
+      const res = await fetch(`/api/admin/clients/${id}/services/${serviceId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nextBillingDate: nextBillingDate || null }),
+      });
+      if (res.ok) {
+        const json = await res.json();
+        setData((current) => current ? { ...current, services: json.services || current.services } : current);
+        setDateEdits(current => { const next = { ...current }; delete next[serviceId]; return next; });
+      } else {
+        const json = await res.json().catch(() => ({}));
+        setDateErrors(current => ({ ...current, [serviceId]: json.error || "Could not save due date" }));
+      }
+    } catch { setDateErrors(current => ({ ...current, [serviceId]: "Could not save due date" })); }
+    finally { setSavingDates(current => ({ ...current, [serviceId]: false })); }
+  };
+
+  const sendServiceNotification = async () => {
+    if (sendingNotification) return;
+    setSendingNotification(true);
+    setNotificationMsg(null);
+    try {
+      const res = await fetch(`/api/admin/clients/${id}/service-notification`, { method: "POST" });
+      const json = await res.json().catch(() => ({}));
+      setNotificationMsg({ ok: res.ok, text: res.ok ? `Service notification sent for ${json.serviceCount} active payable service(s).` : json.error || "Could not send service notification" });
+    } catch { setNotificationMsg({ ok: false, text: "Connection failed; check delivery before retrying." }); }
+    finally { setSendingNotification(false); }
+  };
+
+  const sendWelcomeEmail = async () => {
+    setSendingInvite(true);
+    setInviteMsg(null);
+    try {
+      const res = await fetch(`/api/admin/clients/${id}/invite`, { method: "POST" });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok) {
+        setInviteMsg({ ok: true, text: `Welcome email sent to ${client.email}. It includes their assigned services and a one-time account setup link (valid 7 days).` });
+        await load();
+      } else if (res.status === 409) {
+        await load();
+        setInviteMsg({ ok: false, text: "This account cannot be invited. Its portal access may already be set up; use Portal Access if a password reset is needed." });
+      } else if (res.status === 503) {
+        setInviteMsg({ ok: false, text: "Welcome email delivery is not configured yet (email provider key missing). Set the client's portal password below and share it directly — the welcome email button will work as soon as delivery is enabled." });
+      } else {
+        setInviteMsg({ ok: false, text: json.error || "Could not send the welcome email. Use the portal password reset below as a fallback." });
+      }
+    } catch {
+      setInviteMsg({ ok: false, text: "Connection failed. Try again, or use the portal password reset below." });
+    } finally {
+      setSendingInvite(false);
+    }
   };
 
   const deleteService = async (serviceId: string) => {
@@ -193,6 +279,7 @@ export default function AdminClientDetailPage() {
       } else {
         setPwMsg({ ok: true, text: `Portal password reset for ${json.email}` });
         setResetPw("");
+        await load();
       }
     } catch {
       setPwMsg({ ok: false, text: "Connection failed" });
@@ -238,7 +325,7 @@ export default function AdminClientDetailPage() {
               {client.email} {client.company ? `· ${client.company}` : ""}
             </p>
             <p className="text-foreground/40 text-sm mt-1">
-              MRR ${activeMrr.toLocaleString()} · {services.length} services · {invoices.length} invoices
+              MRR {activeMrr.toLocaleString("en-US", { style: "currency", currency: "USD" })} · {services.length} services · {invoices.length} invoices
             </p>
           </div>
         </div>
@@ -290,6 +377,44 @@ export default function AdminClientDetailPage() {
             </form>
           </div>
 
+          {/* Welcome email */}
+          {data.invitationEligibility === "provisioned" ? (
+            <div className="rounded-2xl border border-line bg-canvas p-6">
+              <h2 className="font-semibold mb-4">Portal Access</h2>
+              <p className="text-sm text-foreground/60">This client already has a portal password. Use the password reset below if access needs to be restored.</p>
+            </div>
+          ) : data.invitationEligibility === "new" || data.invitationEligibility === "pending" ? (
+          <div className="rounded-2xl border border-line bg-canvas p-6">
+            <h2 className="font-semibold mb-4">Welcome Email</h2>
+            <p className="text-sm text-foreground/60 mb-4">
+              Sends {client.email} a notification with their assigned services and a one-time link to set their own password, log in, and add a payment method.
+            </p>
+            {inviteMsg && (
+              <div
+                className={`p-3 rounded-lg text-sm mb-4 ${
+                  inviteMsg.ok
+                    ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
+                    : "bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400"
+                }`}
+              >
+                {inviteMsg.text}
+              </div>
+            )}
+            <button
+              onClick={sendWelcomeEmail}
+              disabled={sendingInvite}
+              className="rounded-full bg-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-strong disabled:opacity-50"
+            >
+              {sendingInvite ? "Sending…" : data.invitationEligibility === "pending" ? "Resend Welcome Email" : "Send Welcome Email"}
+            </button>
+          </div>
+          ) : data.invitationEligibility === "inactive" || data.invitationEligibility === "email_conflict" ? (
+            <div className="rounded-2xl border border-line bg-canvas p-6">
+              <h2 className="font-semibold mb-4">Welcome Email Unavailable</h2>
+              <p className="text-sm text-foreground/60">{data.invitationEligibility === "inactive" ? "Activate this client before sending an invitation." : "This email is already associated with another client identity."}</p>
+            </div>
+          ) : null}
+
           {/* Reset portal password */}
           <div className="rounded-2xl border border-line bg-canvas p-6">
             <h2 className="font-semibold mb-4">Portal Access</h2>
@@ -331,6 +456,15 @@ export default function AdminClientDetailPage() {
         {/* Services */}
         <div className="rounded-2xl border border-line bg-canvas p-6">
           <h2 className="font-semibold mb-4">Services ({services.length})</h2>
+          <div className="mb-5 flex flex-wrap items-center gap-3">
+            <button type="button" onClick={sendServiceNotification}
+              disabled={sendingNotification || data.invitationEligibility !== "provisioned" || !services.some(s => s.status === "active" && Number(s.price) > 0)}
+              className="rounded-full bg-accent px-4 py-2.5 text-sm font-medium text-white disabled:opacity-50">
+              {sendingNotification ? "Sending…" : "Send Service Notification"}
+            </button>
+            <span className="text-xs text-foreground/60">Sends the currently active payable services after you finish editing. Requires portal access.</span>
+          </div>
+          {notificationMsg && <p role="status" className={`mb-4 text-sm ${notificationMsg.ok ? "text-green-700" : "text-red-600"}`}>{notificationMsg.text}</p>}
 
           <form onSubmit={addService} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 p-4 rounded-xl bg-surface/40">
             <div className="col-span-2">
@@ -351,6 +485,17 @@ export default function AdminClientDetailPage() {
                 step="0.01"
                 value={svc.price}
                 onChange={(e) => setSvc({ ...svc, price: e.target.value })}
+                className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-medium text-foreground/60 mb-1">Due date</label>
+              <input
+                type="date"
+                min="1900-01-01"
+                max="2100-12-31"
+                value={svc.nextBillingDate}
+                onChange={(e) => setSvc(current => ({ ...current, nextBillingDate: e.target.value }))}
                 className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
               />
             </div>
@@ -402,10 +547,32 @@ export default function AdminClientDetailPage() {
                   <div className="font-medium text-sm">{s.name}</div>
                   <div className="text-xs text-foreground/50">
                     ${Number(s.price || 0).toLocaleString()} / {s.billingCycle}
+                    {s.nextBillingDate ? ` · due ${s.nextBillingDate}` : " · no due date set"}
                     {s.description ? ` — ${s.description}` : ""}
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <input
+                    type="date"
+                    min="1900-01-01"
+                    max="2100-12-31"
+                    value={dateEdits[s.id] ?? s.nextBillingDate ?? ""}
+                    onChange={(e) => {
+                      setDateEdits(current => ({ ...current, [s.id]: e.target.value }));
+                      setDateErrors(current => ({ ...current, [s.id]: "" }));
+                    }}
+                    disabled={savingDates[s.id]}
+                    className="rounded-lg border border-line bg-canvas px-2 py-1.5 text-xs"
+                    aria-label={`Due date for ${s.name}`}
+                  />
+                  {dateEdits[s.id] !== undefined && dateEdits[s.id] !== (s.nextBillingDate ?? "") && (
+                    <button type="button" onClick={() => saveDueDate(s.id, dateEdits[s.id])}
+                      disabled={savingDates[s.id]}
+                      className="rounded-lg bg-accent px-3 py-1.5 text-xs text-white disabled:opacity-50">
+                      {savingDates[s.id] ? "Saving…" : "Save date"}
+                    </button>
+                  )}
+                  {dateErrors[s.id] && <span role="alert" className="text-xs text-red-600">{dateErrors[s.id]}</span>}
                   <select
                     value={s.status}
                     onChange={(e) => updateServiceStatus(s.id, e.target.value)}

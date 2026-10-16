@@ -28,6 +28,7 @@ export function middleware(request: NextRequest) {
   } else if (
     pathname.startsWith("/portal") &&
     pathname !== "/portal/login" &&
+    pathname !== "/portal/activate" &&
     pathname !== "/portal/register"
   ) {
     if (!request.cookies.get(CLIENT_SESSION_COOKIE)?.value) {

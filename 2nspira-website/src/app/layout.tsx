@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 const siteName = "2Nspira";
 const siteDomain = "https://2nspira.com";
 const siteDescription =
-  "We help organizations modernize systems, adopt AI responsibly, and strengthen technology leadership to turn complexity into practical, measurable progress.";
+  "2Nspira helps small and mission-driven organizations adopt AI responsibly, modernize systems, automate work, and lead technology change with confidence.";
 const socialTitle = "Human-centered technology transformation for the AI era";
 const socialImageUrl = `${siteDomain}/images/logo/og-image-v2.png`;
 export const metadata: Metadata = {

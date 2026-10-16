@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Fractional CIO Advisory & Modernization Strategy",
   description:
-    "Senior technology leadership, modernization strategy, and practical mentoring for executives and founders navigating growth, complexity, and consequential technology decisions.",
+    "Get experienced fractional CIO leadership to align technology strategy, investment, modernization, governance, and execution with your business goals.",
   alternates: {
     canonical: "/fractional-cio",
   },

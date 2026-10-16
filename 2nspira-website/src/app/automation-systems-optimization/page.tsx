@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Automation & Systems Optimization",
   description:
-    "Optimize the operating model first. Connect systems, data, processes, and teams—then automate and apply AI where they create practical value.",
+    "Streamline operations with connected systems, trusted data, clearer workflows, and practical automation designed around how your organization actually works.",
   alternates: {
     canonical: "/automation-systems-optimization",
   },

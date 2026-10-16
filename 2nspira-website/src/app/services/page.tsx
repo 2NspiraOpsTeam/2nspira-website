@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Four integrated capabilities: AI Enablement, Automation & Systems Optimization, Websites & Digital Platforms, and Fractional CIO / Technology Leadership.",
+    "Explore 2Nspira services for responsible AI adoption, systems optimization, workflow automation, digital platforms, and fractional CIO leadership.",
   alternates: {
     canonical: "/services",
   },

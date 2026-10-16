@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "Our Story",
   description:
-    "From EKM IT Solutions to 2Nspira: practical, human-centered technology that helps organizations move forward with clarity, trust, and purpose.",
+    "Meet 2Nspira and founder Jeffrey Cortez. Discover our human-centered approach to technology strategy, responsible AI, systems, and organizational change.",
   alternates: { canonical: "/about" },
 };
 

@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Resources | Assessments and Practical Tools",
   description:
-    "Explore free 2Nspira strengths assessments and AI readiness scorecards for clearer decisions and practical next steps.",
+    "Use free 2Nspira assessments to identify professional strengths, evaluate organizational AI readiness, and turn insight into practical next steps.",
   alternates: { canonical: "/resources" },
 };
 

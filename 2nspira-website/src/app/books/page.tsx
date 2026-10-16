@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = {
   title: "From the Author | Books & Visual Essays",
   description:
-    "Explore Trust Is the Operating System, leadership reflections, audio, and visual essays by Jeffrey Cortez.",
+    "Explore Jeffrey Cortez's book Trust Is the Operating System, plus visual essays and audio reflections on trust, judgment, and resilient organizations.",
   alternates: { canonical: "/books" },
 };
 

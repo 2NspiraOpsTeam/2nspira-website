@@ -199,7 +199,7 @@ export default function AdminClientsPage() {
                     {c.activeServices}/{c.serviceCount}
                   </td>
                   <td className="px-4 py-3 hidden md:table-cell font-medium">
-                    ${c.mrr?.toLocaleString() ?? "0"}
+                    {(c.mrr ?? 0).toLocaleString("en-US", { style: "currency", currency: "USD" })}
                   </td>
                 </tr>
               ))}

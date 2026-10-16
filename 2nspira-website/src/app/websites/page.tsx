@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: "Websites & Digital Platforms",
   description:
-    "A website designed as part of your digital operating model — connected to data, workflows, automation, portals, payments, APIs, and future services.",
+    "Build a fast, accessible website or digital platform connected to your data, workflows, portals, payments, automation, APIs, and future services.",
   alternates: {
     canonical: "/websites",
   },
