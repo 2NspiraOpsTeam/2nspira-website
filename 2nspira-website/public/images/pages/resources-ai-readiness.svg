@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="480" viewBox="0 0 600 480" fill="none">
+  <defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0v30" stroke="#c9c5af" stroke-opacity=".055"/></pattern></defs>
+  <path fill="#272b2a" d="M0 0h600v480H0z"/><path fill="url(#grid)" d="M0 0h600v480H0z"/>
+  <path d="m300 67 238 135-238 136L62 202 300 67Z" stroke="#777358" stroke-opacity=".6"/>
+  <path d="m62 236 238 135 238-135M62 270l238 135 238-135" stroke="#777358" stroke-opacity=".4"/>
+  <path d="M300 146v42m-113 56 75-24m76 0 75 24M300 252v81" stroke="#c1a66b" stroke-width="1.5"/>
+  <g fill="#303632" stroke="#898267">
+    <rect x="206" y="69" width="188" height="77" rx="5"/>
+    <rect x="56" y="223" width="162" height="77" rx="5"/>
+    <rect x="382" y="223" width="162" height="77" rx="5"/>
+    <rect x="206" y="333" width="188" height="77" rx="5"/>
+  </g>
+  <path d="m300 177 63 36-63 36-63-36 63-36Z" fill="#c6ae75" stroke="#e0cb9b"/>
+  <path d="m285 211 10 10 20-20" stroke="#30352d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#d6bd83" font-family="Arial, sans-serif" font-size="9" letter-spacing="1.8" text-anchor="middle"><text x="300" y="94">DIRECTION</text><text x="137" y="248">ACCOUNTABILITY</text><text x="463" y="248">OPERATIONS</text><text x="300" y="358">FOUNDATION</text></g>
+  <g fill="#f3efe4" font-family="Georgia, serif" font-size="23" text-anchor="middle"><text x="300" y="123">Strategy</text><text x="137" y="277">Governance</text><text x="463" y="277">Workflows</text><text x="300" y="387">Trust</text></g>
+  <g fill="#d2ba82"><circle cx="300" cy="162" r="3"/><circle cx="232" cy="228" r="3"/><circle cx="368" cy="228" r="3"/><circle cx="300" cy="316" r="3"/></g>
+  <text x="300" y="449" text-anchor="middle" fill="#d6c390" font-family="Arial, sans-serif" font-size="10" letter-spacing="2.2">A PATH TO RESPONSIBLE IMPLEMENTATION</text>
+</svg>
