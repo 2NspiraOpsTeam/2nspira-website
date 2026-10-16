@@ -76,6 +76,9 @@
   .feature { gap: 40px; }
   .useCases li { padding-inline: 12px; gap: 9px; font-size: 12px; }
 }
+@media (min-width: 761px) and (max-width: 900px) {
+  .heroArt { transform: scale(.62); }
+}
 @media (max-width: 760px) {
   .container { width: calc(100% - 40px); }
   .heroInner { display: block; min-height: auto; padding-block: 55px; }
