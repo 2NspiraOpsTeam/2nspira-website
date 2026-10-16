@@ -3,12 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import {
-  buttonPrimary,
   card,
-  h2,
-  h3,
-  lead,
-  eyebrow,
 } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -282,7 +277,7 @@ export default function WorkPage() {
                 Ready to modernize your operations?
               </h3>
               <p className="mb-8 text-white/80">
-                Let's discuss how we can build the systems your organization needs to scale.
+                Let&apos;s discuss how we can build the systems your organization needs to scale.
               </p>
               <Link href="/contact" className="inline-block rounded-full bg-ink px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-ink/90">
                 Get in touch
