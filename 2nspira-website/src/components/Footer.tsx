@@ -11,6 +11,7 @@ export default function Footer() {
     { name: "Insights", href: "/insights" },
     { name: "Resources", href: "/resources" },
     { name: "Books", href: "/books" },
+    { name: "Shop", href: "/shop" },
     { name: "Contact", href: "/contact" },
   ];
 

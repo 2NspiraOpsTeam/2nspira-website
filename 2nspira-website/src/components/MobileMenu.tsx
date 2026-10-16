@@ -15,6 +15,7 @@ const serviceLinks = [
 
 const ideaLinks = [
   { name: "Books", href: "/books" },
+  { name: "Shop", href: "/shop" },
   { name: "Insights", href: "/insights" },
   { name: "Resources", href: "/resources" },
 ];
