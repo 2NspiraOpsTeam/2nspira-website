@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Printables & Games | Shop",
   description,
   alternates: { canonical: "/shop/printables-games" },
-  openGraph: { type: "website", title: "Print, play, and make a little room for joy", description, url: "https://2nspira.com/shop/printables-games", images: [{ url: "https://2nspira.com/images/shop/thanksgiving-family-games.jpg", width: 1080, height: 1080, alt: "Thanksgiving Table Games printable cover" }] },
+  openGraph: { type: "website", siteName: "2Nspira", title: "Print, play, and make a little room for joy", description, url: "https://2nspira.com/shop/printables-games", images: [{ url: "https://2nspira.com/images/shop/thanksgiving-family-games.jpg", width: 1080, height: 1080, alt: "Thanksgiving Table Games printable cover" }] },
   twitter: { card: "summary_large_image", title: "Print, play, and make a little room for joy", description, images: ["https://2nspira.com/images/shop/thanksgiving-family-games.jpg"] },
 };
 

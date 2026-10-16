@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   description:
     "Explore Jeffrey Cortez's book Trust Is the Operating System and audio reflections on trust, judgment, and resilient organizations.",
   alternates: { canonical: "/books" },
-  openGraph: { type: "website", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", url: "https://2nspira.com/books" },
-  twitter: { card: "summary_large_image", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations." },
+  openGraph: { type: "website", siteName: "2Nspira", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", url: "https://2nspira.com/books", images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
+  twitter: { card: "summary_large_image", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
 };
 
 export default function BooksPage() {

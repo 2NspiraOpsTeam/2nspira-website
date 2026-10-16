@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: "Shop | Printables, Games & Art Prints",
   description,
   alternates: { canonical: "/shop" },
-  openGraph: { type: "website", title: "A little clarity. A little creativity.", description, url: "https://2nspira.com/shop" },
-  twitter: { card: "summary_large_image", title: "A little clarity. A little creativity.", description },
+  openGraph: { type: "website", siteName: "2Nspira", title: "A little clarity. A little creativity.", description, url: "https://2nspira.com/shop", images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
+  twitter: { card: "summary_large_image", title: "A little clarity. A little creativity.", description, images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
 };
 
 export default function ShopPage() {
