@@ -56,7 +56,7 @@ export default function BooksPage() {
             <h2 id="book-title" className={h2}>
               Trust Is the Operating System
             </h2>
-            <p className="mt-4 text-sm font-medium text-accent">Book · Available on Amazon</p>
+            <p className="mt-4 text-sm font-medium text-accent">Paperback &amp; Kindle editions</p>
             <div className="mt-6 space-y-4 leading-8 text-body">
               <p>Most organizations aren&rsquo;t failing. They&rsquo;re functioning.</p>
               <p>

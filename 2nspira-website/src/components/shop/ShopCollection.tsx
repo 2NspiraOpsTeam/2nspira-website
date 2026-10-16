@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
-import { buttonPrimary, card, h1, lead, linkInline, pageHero, pageMain } from "@/components/ui";
+import { buttonPrimary, card, h1, lead, pageHero, pageMain } from "@/components/ui";
 import { etsyShopUrl, type ShopProduct } from "@/content/shop/products";
 
 export function CollectionNav({ current }: { current: "shop" | "printables" | "art" }) {
@@ -26,7 +26,7 @@ export function EtsyShopLink() {
   return (
     <div className="mt-14 text-center">
       <p className="mb-4 text-sm text-body">Explore the full collection and current options on Etsy.</p>
-      <a href={etsyShopUrl} className={linkInline}>Visit our Etsy shop <span aria-hidden="true" className="ml-1">↗</span></a>
+      <a href={etsyShopUrl} className={buttonPrimary}>Visit our Etsy shop <span aria-hidden="true" className="ml-1">↗</span></a>
     </div>
   );
 }
