@@ -15,10 +15,12 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "From the Author | Books & Visual Essays",
+  title: "From the Author | Leadership Books",
   description:
-    "Explore Jeffrey Cortez's book Trust Is the Operating System, plus visual essays and audio reflections on trust, judgment, and resilient organizations.",
+    "Explore Jeffrey Cortez's book Trust Is the Operating System and audio reflections on trust, judgment, and resilient organizations.",
   alternates: { canonical: "/books" },
+  openGraph: { type: "website", siteName: "2Nspira", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", url: "https://2nspira.com/books", images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
+  twitter: { card: "summary_large_image", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
 };
 
 export default function BooksPage() {
@@ -29,12 +31,11 @@ export default function BooksPage() {
         <div className="relative">
         <p><EyebrowPill>From the author</EyebrowPill></p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-          Leadership Books &amp; Visual Essays
+          Leadership Books
         </h1>
         <p className={`mx-auto max-w-2xl ${lead}`}>
-          Explore clarity, restraint, and leadership through different mediums.
-          Each piece is an invitation to think about how trust, judgment, and
-          meaning shape modern organizations.
+          Explore clarity, restraint, and leadership through reading and reflection.
+          Consider how trust, judgment, and meaning shape modern organizations.
         </p></div>
       </header>
 
@@ -55,6 +56,7 @@ export default function BooksPage() {
             <h2 id="book-title" className={h2}>
               Trust Is the Operating System
             </h2>
+            <p className="mt-4 text-sm font-medium text-accent">Paperback &amp; Kindle editions</p>
             <div className="mt-6 space-y-4 leading-8 text-body">
               <p>Most organizations aren&rsquo;t failing. They&rsquo;re functioning.</p>
               <p>
@@ -77,13 +79,12 @@ export default function BooksPage() {
             <a
               href="https://amzn.to/4sVBcuF"
               rel="sponsored"
-              className={`mt-6 ${buttonPrimary}`}
+              className={`mt-6 min-h-[44px] ${buttonPrimary}`}
             >
-              View the book on Amazon →
+              Buy on Amazon
             </a>
             <p className={`mt-3 ${caption}`}>
-              Supporting affiliate link. Proceeds help sustain independent
-              publishing and research.
+              As an Amazon Associate I earn from qualifying purchases.
             </p>
             <Link
               href="/blog/categories/trust-is-the-operating-system"
@@ -120,36 +121,6 @@ export default function BooksPage() {
 
         <Reveal><section
           className={`grid gap-8 p-6 sm:p-10 md:grid-cols-2 ${card}`}
-          aria-labelledby="print-title"
-        >
-          <Image
-            src="/images/books/reduce-the-noise.png"
-            alt="Reduce the Noise. Strengthen the Signal. — visual essay print"
-            width={1014}
-            height={1522}
-            unoptimized
-            className="mx-auto h-auto w-full max-w-xs rounded-xl shadow-[0_18px_45px_rgba(35,41,54,0.14)] transition-transform duration-500 ease-gentle hover:-translate-y-1"
-          />
-          <div className="self-center">
-            <p><EyebrowPill>Visual essays</EyebrowPill></p>
-            <h2 id="print-title" className="mt-4 text-3xl font-semibold tracking-tight text-ink">
-              Reduce the Noise. Strengthen the Signal.
-            </h2>
-            <p className="mt-6 leading-8 text-body">
-              A visual meditation on clarity, focus, and leadership in an
-              increasingly noisy world.
-            </p>
-            <a
-              href="https://2nspira.etsy.com/listing/4437231821/reduce-the-noise-strengthen-the-signal"
-              className={`mt-6 ${linkInline}`}
-            >
-              View the print on Etsy →
-            </a>
-          </div>
-        </section></Reveal>
-
-        <Reveal><section
-          className={`grid gap-8 p-6 sm:p-10 md:grid-cols-2 ${card}`}
           aria-labelledby="reading-title"
         >
           <Image
@@ -165,7 +136,7 @@ export default function BooksPage() {
               Ideas that stay with you
             </h2>
             <p className="mt-6 leading-8 text-body">
-              Each book and essay in this collection is an invitation to slow
+              Each book and reflection is an invitation to slow
               down and think clearly — the same quiet discipline that trusted,
               human-centered leadership requires.
             </p>

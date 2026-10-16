@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { buttonPrimary, caption } from "./ui";
+import { buttonPrimary } from "./ui";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,6 +11,7 @@ export default function Footer() {
     { name: "Insights", href: "/insights" },
     { name: "Resources", href: "/resources" },
     { name: "Books", href: "/books" },
+    { name: "Shop", href: "/shop" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -37,7 +38,7 @@ export default function Footer() {
                 height={132}
               />
             </Link>
-            <p className={`mt-3 ${caption}`}>
+            <p className={"mt-3 text-sm text-body"}>
               Human-centered technology transformation and practical AI adoption for organizations.
             </p>
           </div>
@@ -72,7 +73,7 @@ export default function Footer() {
             >
               Contact
             </h3>
-            <p className={`mt-4 ${caption}`}>
+            <p className={"mt-4 text-sm text-body"}>
               Questions about our services or ready to get started?
             </p>
             <Link
@@ -106,7 +107,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 border-t border-line pt-8 text-center">
-          <p className={`text-sm ${caption}`}>
+          <p className={"text-sm text-body"}>
             &copy; {currentYear} 2Nspira. All rights reserved.
           </p>
         </div>
