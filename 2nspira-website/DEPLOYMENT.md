@@ -30,7 +30,10 @@ Worker.
 `deploy:production` hard-fails unless it is running in Cloudflare Workers Builds,
 the source branch is exactly `main`, and the built artifact contains the same full
 commit SHA supplied by Cloudflare. Local production deployment is intentionally
-unsupported.
+unsupported. The production command uses `vinext-cloudflare deploy --skip-build`
+so deployment uploads the exact `build:ci` artifact that passed the SHA guard.
+Do not let the deployment CLI rebuild after that guard: it would lose the
+build-time commit environment and invalidate runtime commit headers.
 
 ## Promotion flow
 

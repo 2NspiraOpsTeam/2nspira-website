@@ -27,6 +27,6 @@ if (artifact.commit !== commit || artifact.branch !== "main") {
 
 execFileSync(
   "./node_modules/.bin/vinext-cloudflare",
-  ["deploy", "--config", "dist/server/wrangler.json"],
+  ["deploy", "--skip-build", "--config", "dist/server/wrangler.json"],
   { cwd: root, stdio: "inherit" },
 );
