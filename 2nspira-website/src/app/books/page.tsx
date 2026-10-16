@@ -79,7 +79,7 @@ export default function BooksPage() {
             <a
               href="https://amzn.to/4sVBcuF"
               rel="sponsored"
-              className={`mt-6 ${buttonPrimary}`}
+              className={`mt-6 min-h-[44px] ${buttonPrimary}`}
             >
               Buy on Amazon
             </a>

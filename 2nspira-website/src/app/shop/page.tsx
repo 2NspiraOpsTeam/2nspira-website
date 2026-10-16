@@ -34,7 +34,7 @@ export default function ShopPage() {
               <h2 id="printables-title" className={h2}>Printables &amp; Games</h2>
               <p className="mt-3 max-w-2xl leading-7 text-body">Shared laughter and creative calm. Download, print, and enjoy at your own pace.</p>
             </div>
-            <Link href="/shop/printables-games" className={`${linkInline} min-h-11`}>Explore Printables &amp; Games <span aria-hidden="true" className="ml-1">→</span></Link>
+            <Link href="/shop/printables-games" className={`${linkInline} min-h-[44px]`}>Explore Printables &amp; Games <span aria-hidden="true" className="ml-1">→</span></Link>
           </div>
           <ProductGrid products={printables} headingLevel="h3" />
         </section>
@@ -44,7 +44,7 @@ export default function ShopPage() {
               <h2 id="art-title" className={h2}>Art Prints</h2>
               <p className="mt-3 max-w-2xl leading-7 text-body">Thoughtful physical artwork for the places where you pause, reflect, and think.</p>
             </div>
-            <Link href="/shop/art-prints" className={`${linkInline} min-h-11`}>Explore Art Prints <span aria-hidden="true" className="ml-1">→</span></Link>
+            <Link href="/shop/art-prints" className={`${linkInline} min-h-[44px]`}>Explore Art Prints <span aria-hidden="true" className="ml-1">→</span></Link>
           </div>
           <ProductGrid products={artPrints} headingLevel="h3" />
         </section>

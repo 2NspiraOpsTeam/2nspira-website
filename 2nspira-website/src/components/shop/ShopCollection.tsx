@@ -14,7 +14,7 @@ export function CollectionNav({ current }: { current: "shop" | "printables" | "a
     <nav aria-label="Shop collections" className="flex flex-wrap justify-center gap-2">
       {collections.map(({ id, title, href }) => (
         <Link key={id} href={href} aria-current={current === id ? "page" : undefined}
-          className={`inline-flex min-h-11 items-center rounded-full border px-4 py-2 text-sm font-medium transition-colors hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${current === id ? "border-accent bg-accent-soft text-ink" : "border-line text-body"}`}>
+          className={`inline-flex min-h-[44px] items-center rounded-full border px-4 py-2 text-sm font-medium transition-colors hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${current === id ? "border-accent bg-accent-soft text-ink" : "border-line text-body"}`}>
           {title}
         </Link>
       ))}
@@ -26,7 +26,7 @@ export function EtsyShopLink() {
   return (
     <div className="mt-14 text-center">
       <p className="mb-4 text-sm text-body">Explore the full collection and current options on Etsy.</p>
-      <a href={etsyShopUrl} className={buttonPrimary}>Visit our Etsy shop <span aria-hidden="true" className="ml-1">↗</span></a>
+      <a href={etsyShopUrl} className={`${buttonPrimary} min-h-[44px]`}>Visit our Etsy shop <span aria-hidden="true" className="ml-1">↗</span></a>
     </div>
   );
 }
@@ -77,7 +77,7 @@ export function ProductGrid({ products, headingLevel = "h2" }: { products: ShopP
                 <p className="mt-4 leading-7 text-body">{product.description}</p>
                 <p className="mt-4 text-sm leading-6 text-body">{product.details}</p>
                 <div className="mt-auto pt-6">
-                  <a href={product.href} className={`${buttonPrimary} w-full sm:w-auto`} aria-label={`Shop on Etsy: ${product.title}`}>
+                  <a href={product.href} className={`${buttonPrimary} min-h-[44px] w-full sm:w-auto`} aria-label={`Shop on Etsy: ${product.title}`}>
                     Shop on Etsy <span aria-hidden="true" className="ml-2">↗</span>
                   </a>
                 </div>
