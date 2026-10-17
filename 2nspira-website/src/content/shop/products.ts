@@ -15,6 +15,16 @@ export type ShopProduct = {
 
 export const printables: ShopProduct[] = [
   {
+    id: "cozy-elf-workshop",
+    title: "The Cozy Elf Workshop — 16 Christmas Activities",
+    description: "Make room for a quieter festive moment with mazes, secret codes, visual puzzles, and drawing pages. Pick any of sixteen stand-alone activities for home or a private family gathering.",
+    format: "Digital download",
+    details: "Printable PDFs · US Letter + A4 · Suggested ages 7–10, with reading help as needed · Personal use",
+    image: "/images/shop/cozy-elf-workshop.jpg",
+    imageAlt: "Christmas Quiet-Time: The Cozy Elf Workshop cover with an elf and reindeer drawing at a festive table",
+    href: "https://2nspira.etsy.com/listing/4596685843",
+  },
+  {
     id: "thanksgiving-family-games",
     title: "Thanksgiving Family Games — 8 Activities",
     description: "Bring the table together with playful choices, shared stories, drawing prompts, charades, and a harvest logic puzzle. Choose the activities that suit your gathering.",
