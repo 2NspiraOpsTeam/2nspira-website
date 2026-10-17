@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="480" viewBox="0 0 600 480" fill="none">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#c6bda8" opacity=".5"/></pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#393626" flood-opacity=".07"/></filter>
+  </defs>
+  <path fill="#eeebe2" d="M0 0h600v480H0z"/><path fill="url(#grid)" d="M0 0h600v480H0z"/>
+  <circle cx="300" cy="239" r="174" stroke="#d2c8b2"/><circle cx="300" cy="239" r="143" stroke="#c3b38c" stroke-dasharray="3 7"/>
+  <path d="M300 103v96M170 309l94-54M430 309l-94-54" stroke="#9b824b" stroke-width="1.5"/>
+  <g filter="url(#shadow)">
+    <rect x="197" y="49" width="206" height="91" rx="6" fill="#fffdf7" stroke="#d2c5a8"/>
+    <rect x="47" y="304" width="206" height="91" rx="6" fill="#fffdf7" stroke="#d2c5a8"/>
+    <rect x="347" y="304" width="206" height="91" rx="6" fill="#fffdf7" stroke="#d2c5a8"/>
+    <circle cx="300" cy="239" r="78" fill="#faf8f1" stroke="#9c8249"/>
+  </g>
+  <g stroke="#896e35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m300 67 3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8Z"/>
+    <path d="M136 331h28m-28 7h20m-20-14h20"/>
+    <circle cx="450" cy="331" r="10"/><path d="m446 332 3 3 6-7"/>
+  </g>
+  <g fill="#30352e" text-anchor="middle" font-family="Arial, sans-serif">
+    <text x="300" y="115" font-size="17">Natural strengths</text>
+    <text x="150" y="372" font-size="17">Work style</text>
+    <text x="450" y="372" font-size="17">Role fit &amp; energy</text>
+  </g>
+  <g fill="#33382f" text-anchor="middle" font-family="Georgia, serif" font-size="25"><text x="300" y="234">How you</text><text x="300" y="264" font-style="italic">create value</text></g>
+  <circle cx="300" cy="154" r="4" fill="#a68b4c"/><circle cx="226" cy="282" r="4" fill="#a68b4c"/><circle cx="374" cy="282" r="4" fill="#a68b4c"/>
+  <text x="300" y="443" text-anchor="middle" fill="#75623a" font-family="Arial, sans-serif" font-size="10" letter-spacing="2.2">A FRAMEWORK FOR REFLECTION</text>
+</svg>
