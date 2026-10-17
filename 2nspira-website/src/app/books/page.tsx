@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import LittleHauntsCard from "@/components/books/LittleHauntsCard";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
   buttonPrimary,
@@ -16,12 +15,12 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Books | Leadership & Creative Coloring",
+  title: "From the Author | Leadership Books",
   description:
-    "Explore Trust Is the Operating System by Jeffrey Cortez and Little Haunts & Happy Plants, a cozy garden coloring book from 2Nspira Books.",
+    "Explore Jeffrey Cortez's book Trust Is the Operating System and audio reflections on trust, judgment, and resilient organizations.",
   alternates: { canonical: "/books" },
-  openGraph: { type: "website", siteName: "2Nspira", title: "Make room for reflection and creativity", description: "Discover Trust Is the Operating System and Little Haunts & Happy Plants: leadership reading and cozy garden coloring for adults and teens.", url: "https://2nspira.com/books", images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
-  twitter: { card: "summary_large_image", title: "Make room for reflection and creativity", description: "Discover Trust Is the Operating System and Little Haunts & Happy Plants: leadership reading and cozy garden coloring for adults and teens.", images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
+  openGraph: { type: "website", siteName: "2Nspira", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", url: "https://2nspira.com/books", images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
+  twitter: { card: "summary_large_image", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
 };
 
 export default function BooksPage() {
@@ -30,13 +29,13 @@ export default function BooksPage() {
       <header className={`${pageHero} relative overflow-hidden text-center`}>
         <AmbientField />
         <div className="relative">
-        <p><EyebrowPill>From 2Nspira</EyebrowPill></p>
+        <p><EyebrowPill>From the author</EyebrowPill></p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-          Books for reflection &amp; creativity
+          Leadership Books
         </h1>
         <p className={`mx-auto max-w-2xl ${lead}`}>
-          Thoughtful reading and cozy coloring. Explore ideas about leadership,
-          or make a little space for your own creativity.
+          Explore clarity, restraint, and leadership through reading and reflection.
+          Consider how trust, judgment, and meaning shape modern organizations.
         </p></div>
       </header>
 
@@ -96,8 +95,6 @@ export default function BooksPage() {
           </div>
         </section></Reveal>
 
-        <Reveal><LittleHauntsCard /></Reveal>
-
         <Reveal><section
           className={`p-6 sm:p-10 ${card}`}
           aria-labelledby="audio-title"
@@ -139,8 +136,9 @@ export default function BooksPage() {
               Ideas that stay with you
             </h2>
             <p className="mt-6 leading-8 text-body">
-              Make room for thoughtful ideas, a creative pause, and a little
-              inspiration. Each book offers a different way to slow down and engage.
+              Each book and reflection is an invitation to slow
+              down and think clearly — the same quiet discipline that trusted,
+              human-centered leadership requires.
             </p>
           </div>
         </section></Reveal>

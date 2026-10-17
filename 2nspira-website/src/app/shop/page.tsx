@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { CollectionNav, EtsyShopLink, ProductGrid } from "@/components/shop/ShopCollection";
-import LittleHauntsCard from "@/components/books/LittleHauntsCard";
+import LittleHauntsCard from "@/components/shop/LittleHauntsCard";
 import { artPrints, printables } from "@/content/shop/products";
 import { h1, h2, lead, linkInline, pageHero, pageMain } from "@/components/ui";
 
@@ -52,8 +52,8 @@ export default function ShopPage() {
         <section aria-labelledby="featured-book-title" className="mt-20 border-t border-line pt-14">
           <h2 id="featured-book-title" className={h2}>Featured book</h2>
           <p className="mt-3 mb-8 max-w-2xl leading-7 text-body">A cozy coloring paperback from 2Nspira Books, available on Amazon.</p>
-          <LittleHauntsCard headingLevel="h3" />
-          <Link href="/books" className={`mt-6 ${linkInline} min-h-[44px]`}>Explore our Books page <span aria-hidden="true" className="ml-1">→</span></Link>
+          <LittleHauntsCard />
+          <Link href="/books" className={`mt-6 ${linkInline} min-h-[44px]`}>Explore our leadership books <span aria-hidden="true" className="ml-1">→</span></Link>
         </section>
         <EtsyShopLink />
       </div>
