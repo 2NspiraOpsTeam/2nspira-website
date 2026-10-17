@@ -1,4 +1,4 @@
-// Listing images/details verified against the live Etsy listings on 2026-10-16.
+// Listing images/details verified against live Etsy listings on 2026-10-16 and 2026-10-17.
 // Preserve owner-supplied shop-subdomain links; do not manufacture tracking parameters.
 export const etsyShopUrl = "https://2nspira.etsy.com";
 
@@ -83,6 +83,54 @@ export const printables: ShopProduct[] = [
 ];
 
 export const artPrints: ShopProduct[] = [
+  {
+    id: "build-the-bridge",
+    title: "Build the bridge — Collaboration",
+    description: "A sculptural bridge joins two sides over flowing water beneath an ochre sun. A warm visual reflection on bringing perspectives together in shared workspaces and home offices.",
+    format: "Digital download",
+    details: "One design · 3 PDF sizes: 5 × 7 in, 8 × 10 in + A4 · Printing guide · No physical item or frame",
+    image: "/images/shop/build-the-bridge.jpg",
+    imageWidth: 1080,
+    imageHeight: 810,
+    imageAlt: "Collaboration artwork mockup showing a navy and terracotta bridge over flowing water beneath an ochre sun",
+    href: "https://2nspira.etsy.com/listing/4597328332",
+  },
+  {
+    id: "leave-room",
+    title: "Leave room — Belonging",
+    description: "A circle of sculptural seats leaves an open invitation for another perspective. An art-led reminder to welcome different voices into meeting spaces, workplaces, and home offices.",
+    format: "Digital download",
+    details: "One design · 3 PDF sizes: 5 × 7 in, 8 × 10 in + A4 · Printing guide · No physical item or frame",
+    image: "/images/shop/leave-room.jpg",
+    imageWidth: 1080,
+    imageHeight: 810,
+    imageAlt: "Belonging artwork mockup showing colorful sculptural seats around an ochre table with space left open",
+    href: "https://2nspira.etsy.com/listing/4597329048",
+  },
+  {
+    id: "own-the-next-step",
+    title: "Own the next step — Accountability",
+    description: "A highlighted stepping stone begins a deliberate path across calm water. A thoughtful reflection on careful choices and following through, without pressure or hustle slogans.",
+    format: "Digital download",
+    details: "One design · 3 PDF sizes: 5 × 7 in, 8 × 10 in + A4 · Printing guide · No physical item or frame",
+    image: "/images/shop/own-the-next-step.jpg",
+    imageWidth: 1080,
+    imageHeight: 810,
+    imageAlt: "Accountability artwork mockup showing a terracotta stepping stone leading across calm blue water toward the sun",
+    href: "https://2nspira.etsy.com/listing/4597329372",
+  },
+  {
+    id: "help-others-rise",
+    title: "Help others rise — Empowerment",
+    description: "Botanical stems grow from shared ground, making space for new growth. A warm visual tribute to mentorship, encouragement, and helping others develop their strengths.",
+    format: "Digital download",
+    details: "One design · 3 PDF sizes: 5 × 7 in, 8 × 10 in + A4 · Printing guide · No physical item or frame",
+    image: "/images/shop/help-others-rise.jpg",
+    imageWidth: 1080,
+    imageHeight: 810,
+    imageAlt: "Empowerment artwork mockup showing navy, teal, and sage botanical stems growing from shared terracotta ground",
+    href: "https://2nspira.etsy.com/listing/4597308883",
+  },
   {
     id: "reduce-the-noise",
     title: "Reduce the Noise. Strengthen the Signal.",
