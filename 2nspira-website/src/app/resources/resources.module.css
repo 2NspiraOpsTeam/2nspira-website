@@ -128,5 +128,5 @@
   .page *, .page *::before, .page *::after { transition: none !important; animation: none !important; }
   .visual:hover, .primary:hover .arrow, .secondary:hover .arrow { transform: none; }
   .page .reveal { opacity: 1; transform: none; }
-  .page .miniCard, .page .primary, .page .secondary { translate: none; }
+  .page .miniCard, .page .primary, .page .secondary { translate: none !important; }
 }
