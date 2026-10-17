@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ShopCollection from "@/components/shop/ShopCollection";
 import { artPrints } from "@/content/shop/products";
 
-const description = "Explore Reduce the Noise. Strengthen the Signal., a minimalist physical art print on matte paper. Choose from multiple sizes and purchase on Etsy.";
+const description = "Discover art inspired by collaboration, belonging, accountability, empowerment, and focus. Choose digital downloads or a physical print and purchase on Etsy.";
 export const metadata: Metadata = {
   title: "Art Prints | Shop",
   description,
@@ -12,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function ArtPrintsPage() {
-  return <ShopCollection title="Art Prints" description="Thoughtful artwork for the places where you pause, reflect, and do your best thinking." current="art" products={artPrints} />;
+  return <ShopCollection title="Art Prints" description="Thoughtful art for shared workspaces, home offices, and spaces for reflection. Explore collaboration, belonging, accountability, empowerment, and focus." current="art" products={artPrints} />;
 }

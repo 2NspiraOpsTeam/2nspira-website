@@ -51,7 +51,7 @@ export default function ShopCollection({ title, description, current, products }
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
         <CollectionNav current={current} />
         <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-6 text-body">
-          {current === "printables" ? "Download and print at home. No physical item is shipped." : "A physical artwork for your space, printed and shipped to you."}
+          {current === "printables" ? "Download and print at home. No physical item is shipped." : "Choose a digital download to print yourself or a physical print shipped to you. Check each item’s format before purchasing."}
           {" "}Purchases and fulfillment are handled on Etsy.
         </p>
         <div className="mt-10"><ProductGrid products={products} /></div>

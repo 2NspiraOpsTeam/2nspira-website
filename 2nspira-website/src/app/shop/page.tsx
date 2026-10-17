@@ -55,7 +55,7 @@ export default function ShopPage() {
           <div data-shop-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="art-title" className={h2}>Art Prints</h2>
-              <p className="mt-3 max-w-2xl leading-7 text-body">Thoughtful physical artwork for the places where you pause, reflect, and think.</p>
+              <p className="mt-3 max-w-2xl leading-7 text-body">Digital art to print yourself and physical prints for the places where you pause, reflect, and think.</p>
             </div>
             <Link href="/shop/art-prints" className={`${linkInline} min-h-[44px]`}>Explore Art Prints <span aria-hidden="true" className="ml-1">→</span></Link>
           </div>

@@ -1,10 +1,10 @@
 # Shop content and purchase links
 
-Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing seven Etsy products and an Amazon coloring paperback in three product-type collections: `/shop/printables-games`, `/shop/coloring-books`, and `/shop/art-prints`. Leadership Books remains separate; coloring books belong only in Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
+Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing eleven Etsy products and an Amazon coloring paperback in three product-type collections: `/shop/printables-games`, `/shop/coloring-books`, and `/shop/art-prints`. Leadership Books remains separate; coloring books belong only in Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
 
 ## Content sources
 
-Product titles use concise display titles based on the owner's requests and published listings. Short descriptions and format details were checked in a normal browser against each live Etsy listing on 2026-10-16. All seven listings belong to 2Nspira and expose purchase controls. Images in `public/images/shop` are downloaded actual first listing images (1080 pixels wide; Little Harvest Table and Christmas Gathering Bundle are 1080 × 914 and the other Etsy images are square), not generated substitutes. They are hosted locally so page rendering does not depend on Etsy image hotlinks.
+Product titles use concise display titles based on the owner's requests and published listings. Short descriptions and format details were checked in a normal browser on 2026-10-16 (original seven listings) and 2026-10-17 (four values-inspired art downloads). All eleven listings belong to 2Nspira and expose purchase controls. Images in `public/images/shop` are downloaded actual first listing images (1080 pixels wide; Little Harvest Table and Christmas Gathering Bundle are 1080 × 914 the four values-art mockups are 1080 × 810; the other Etsy images are square), not generated substitutes. They are hosted locally so page rendering does not depend on Etsy image hotlinks.
 
 | Product | Exact purchase link | Source listing image |
 |---|---|---|
@@ -14,9 +14,13 @@ Product titles use concise display titles based on the owner's requests and publ
 | Thanksgiving Family Games — 8 Activities | https://2nspira.etsy.com/listing/4596133102 | https://i.etsystatic.com/63788734/r/il/97d737/8686225150/il_1080xN.8686225150_s8ad.jpg |
 | Christmas Family Games — 8 Cooperative Challenges | https://2nspira.etsy.com/listing/4596463691 | https://i.etsystatic.com/63788734/r/il/289c0f/8734034937/il_1080xN.8734034937_hvfh.jpg |
 | Cocoa Club — Winter Café Coloring Pages | https://2nspira.etsy.com/listing/4595228205 | https://i.etsystatic.com/63788734/r/il/639cd4/8686227648/il_1080xN.8686227648_amwo.jpg |
+| Build the bridge — Collaboration | https://2nspira.etsy.com/listing/4597328332 | https://i.etsystatic.com/63788734/r/il/b7311a/8741167611/il_1080xN.8741167611_8gud.jpg |
+| Leave room — Belonging | https://2nspira.etsy.com/listing/4597329048 | https://i.etsystatic.com/63788734/r/il/d48439/8741175291/il_1080xN.8741175291_hvoc.jpg |
+| Own the next step — Accountability | https://2nspira.etsy.com/listing/4597329372 | https://i.etsystatic.com/63788734/r/il/17f764/8693362684/il_1080xN.8693362684_qhos.jpg |
+| Help others rise — Empowerment | https://2nspira.etsy.com/listing/4597308883 | https://i.etsystatic.com/63788734/r/il/26e442/8741183129/il_1080xN.8741183129_4v3t.jpg |
 | Reduce the Noise. Strengthen the Signal. | https://2nspira.etsy.com/listing/4437231821 | https://i.etsystatic.com/63788734/r/il/48dcbc/7625477319/il_1080xN.7625477319_9yt2.jpg |
 
-The Thanksgiving and Christmas packs contain the same 15 pages in US Letter and A4 editions, not different games in each size. Cocoa Club includes 40 scenes and four bonus bookmarks, with matching Letter/A4 editions. Digital products are personal-use PDFs, not physical shipments. The art print is matte paper, available in multiple sizes, printed and shipped on demand. No prices, delivery estimates, reviews, ratings, or availability guarantees are copied onto the website.
+The Thanksgiving and Christmas packs contain the same 15 pages in US Letter and A4 editions, not different games in each size. Cocoa Club includes 40 scenes and four bonus bookmarks, with matching Letter/A4 editions. Games/coloring downloads are personal-use PDFs, not physical shipments. The original physical art print is matte paper, available in multiple sizes, printed and shipped on demand. No prices, delivery estimates, reviews, ratings, or availability guarantees are copied onto the website.
 
 ## Tracking and eligibility
 
@@ -59,3 +63,26 @@ uses border/shadow feedback and retains existing focus rings. Touch devices have
 no hover-dependent actions. Reduced-motion preferences skip entrances and suppress
 Shop transforms/transitions, including when changed while an entrance is running.
 No loops, parallax, new dependencies, product-copy changes, or tracking changes.
+
+## Values-inspired Art Prints additions (2026-10-17)
+
+Art Prints now includes Build the bridge — Collaboration, Leave room — Belonging,
+Own the next step — Accountability, and Help others rise — Empowerment, in that
+order before the existing physical Reduce the Noise print. All four were verified
+on their live 2Nspira Etsy listings. The first two URLs were supplied by Jeffrey;
+the remaining two listing IDs were found in the same shop and matched by title,
+artwork and description. All CTAs preserve the shop subdomain without added
+tracking parameters. Seller tooling is visible in the browser, but Share & Save
+enrollment/eligibility was not verified or claimed.
+
+Each new product is DIGITAL ONLY: one ZIP containing one design in three
+non-editable PDF sizes (5 × 7 in, 8 × 10 in, A4), plus a printing/use guide. Sizes
+repeat the same artwork; other collection designs are sold separately. No frame,
+physical print or mounting is shipped. First listing images are illustrated frame
+mockups, preserved unchanged at 1080 × 810 with object-contain rendering and
+descriptive alt text. Do not imply frames or a four-design bundle are included.
+The listing license permits up to ten prints for a household or one workplace
+location, not resale, redistribution or print-on-demand merchandise. No claims
+of tested print quality or improved team performance are made. No prices copied.
+The Art collection intro and metadata distinguish digital downloads from the
+existing physical print; leadership Books, games, paperback and effects stay intact.
