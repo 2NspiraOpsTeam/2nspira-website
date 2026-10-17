@@ -69,7 +69,7 @@ export function ProductGrid({ products, headingLevel = "h2" }: { products: ShopP
             <article key={product.id} aria-labelledby={`${product.id}-title`}
               className={`${card} overflow-hidden ${products.length === 1 ? "grid md:grid-cols-2" : "flex flex-col"}`}>
               <div className="bg-canvas-deep p-5 sm:p-6">
-                <Image src={product.image} alt={product.imageAlt} width={1080} height={1080}
+                <Image src={product.image} alt={product.imageAlt} width={product.imageWidth ?? 1080} height={product.imageHeight ?? 1080}
                   unoptimized className="aspect-square h-auto w-full rounded-xl object-contain" />
               </div>
               <div className="flex flex-1 flex-col p-6">

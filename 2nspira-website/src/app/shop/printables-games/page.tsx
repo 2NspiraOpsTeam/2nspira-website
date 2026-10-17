@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ShopCollection from "@/components/shop/ShopCollection";
 import { printables } from "@/content/shop/products";
 
-const description = "Explore printable family games, Cozy Elf Workshop kids’ activities, and Cocoa Club coloring pages. Four digital downloads from 2Nspira on Etsy.";
+const description = "Explore printable family games, kids’ activity kits, and Cocoa Club coloring pages. Five digital downloads from 2Nspira on Etsy, ready to print at home.";
 export const metadata: Metadata = {
   title: "Printables & Games | Shop",
   description,

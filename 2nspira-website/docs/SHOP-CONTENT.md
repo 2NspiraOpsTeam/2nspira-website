@@ -1,13 +1,14 @@
 # Shop content and purchase links
 
-Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing five Etsy products and an Amazon coloring paperback in three product-type collections: `/shop/printables-games`, `/shop/coloring-books`, and `/shop/art-prints`. Leadership Books remains separate; coloring books belong only in Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
+Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing six Etsy products and an Amazon coloring paperback in three product-type collections: `/shop/printables-games`, `/shop/coloring-books`, and `/shop/art-prints`. Leadership Books remains separate; coloring books belong only in Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
 
 ## Content sources
 
-Product titles use concise display titles based on the owner's requests and published listings. Short descriptions and format details were checked in a normal browser against each live Etsy listing on 2026-10-16. All five listings belong to 2Nspira and expose purchase controls. Images in `public/images/shop` are downloaded actual first listing images (1080 × 1080), not generated substitutes. They are hosted locally so page rendering does not depend on Etsy image hotlinks.
+Product titles use concise display titles based on the owner's requests and published listings. Short descriptions and format details were checked in a normal browser against each live Etsy listing on 2026-10-16. All six listings belong to 2Nspira and expose purchase controls. Images in `public/images/shop` are downloaded actual first listing images (1080 pixels wide; Little Harvest Table is 1080 × 914 and the other Etsy images are square), not generated substitutes. They are hosted locally so page rendering does not depend on Etsy image hotlinks.
 
 | Product | Exact purchase link | Source listing image |
 |---|---|---|
+| Little Harvest Table — Thanksgiving Kids Table Kit | https://2nspira.etsy.com/listing/4597118917 | https://i.etsystatic.com/63788734/r/il/cf594d/8739498723/il_1080xN.8739498723_jw2z.jpg |
 | The Cozy Elf Workshop — 16 Christmas Activities | https://2nspira.etsy.com/listing/4596685843 | https://i.etsystatic.com/63788734/r/il/145717/8688068576/il_1080xN.8688068576_dka3.jpg |
 | Thanksgiving Family Games — 8 Activities | https://2nspira.etsy.com/listing/4596133102 | https://i.etsystatic.com/63788734/r/il/97d737/8686225150/il_1080xN.8686225150_s8ad.jpg |
 | Christmas Family Games — 8 Cooperative Challenges | https://2nspira.etsy.com/listing/4596463691 | https://i.etsystatic.com/63788734/r/il/289c0f/8734034937/il_1080xN.8734034937_hvfh.jpg |
@@ -36,6 +37,8 @@ Listing-based details: paperback for adults/teens; 40 illustrations; 8.5 × 8.5 
 The featured coloring-book card uses `Buy on Amazon`, `rel="sponsored"`, and the nearby disclosure “As an Amazon Associate I earn from qualifying purchases.” Shop metadata/copy acknowledges both Etsy and Amazon destinations. Do not add this coloring book to the leadership Books page.
 
 ## Maintenance
+
+Little Harvest Table is a digital kids-table kit, distinct from Thanksgiving Family Games: six paper-sized activity mats, twelve write-in cards (repeating design, not twelve distinct designs), and one keepsake page. Matching landscape Letter/A4 PDFs each contain the same 15 pages; paper sizes are not extra activities. Suggested ages 6–10 with help as needed. Optional cards need adult cutting; mats do not. These are activity sheets, not protective dining mats. No classroom/commercial-event license, child playtesting, print-testing or independent-use promise is inferred. The original listing image is preserved at its actual 1080 × 914 dimensions; shared rendering contains it without cropping.
 
 The Cozy Elf Workshop is distinct from Christmas Table Rescue: sixteen individual quiet-time puzzles/drawing activities, suggested ages 7–10 with reading help as needed. It contains two non-editable PDFs (matching US Letter/A4 editions), each with the same 22 pages: cover, grown-up guide, sixteen activities, three answer pages, and printing/personal-use information. Do not count the two paper sizes as separate activity sets or promise independent use, a tested grade level, or a fixed playtime.
 
