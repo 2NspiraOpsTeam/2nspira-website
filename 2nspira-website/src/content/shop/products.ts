@@ -9,11 +9,37 @@ export type ShopProduct = {
   format: "Digital download" | "Physical print · Multiple sizes";
   details: string;
   image: string;
+  imageWidth?: number;
+  imageHeight?: number;
   imageAlt: string;
   href: string;
 };
 
 export const printables: ShopProduct[] = [
+  {
+    id: "christmas-gathering-bundle",
+    title: "Christmas Gathering Bundle",
+    description: "Pair eight cooperative family challenges with sixteen individual puzzles and drawing activities. Contains the same PDFs as Christmas Table Rescue and The Cozy Elf Workshop—no additional activities.",
+    format: "Digital download",
+    details: "4 PDFs · US Letter + A4 · Guides and answers included · Personal use",
+    image: "/images/shop/christmas-gathering-bundle.jpg",
+    imageWidth: 1080,
+    imageHeight: 914,
+    imageAlt: "Christmas Gathering Bundle showing the Christmas Table Rescue and Cozy Elf Workshop covers side by side",
+    href: "https://2nspira.etsy.com/listing/4597140476",
+  },
+  {
+    id: "little-harvest-table",
+    title: "Little Harvest Table — Thanksgiving Kids Table Kit",
+    description: "Bring puzzles, drawing, and autumn imagination to the kids’ table with six paper-sized activity mats, twelve write-in place cards, and one keepsake page. Adult cutting is needed only for the optional cards.",
+    format: "Digital download",
+    details: "Landscape PDFs · US Letter + A4 · Suggested ages 6–10, with help as needed · Personal use",
+    image: "/images/shop/little-harvest-table.jpg",
+    imageWidth: 1080,
+    imageHeight: 914,
+    imageAlt: "Thanksgiving Kids Table Kit cover showing a squirrel, turkey, and hedgehog drawing at an autumn table",
+    href: "https://2nspira.etsy.com/listing/4597118917",
+  },
   {
     id: "cozy-elf-workshop",
     title: "The Cozy Elf Workshop — 16 Christmas Activities",
