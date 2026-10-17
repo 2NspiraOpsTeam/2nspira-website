@@ -4,7 +4,7 @@ Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/boo
 
 ## Content sources
 
-Product titles use concise display titles based on the owner's requests and published listings. Short descriptions and format details were checked in a normal browser on 2026-10-16 (original seven listings) and 2026-10-17 (four values-inspired art downloads). All eleven listings belong to 2Nspira and expose purchase controls. Images in `public/images/shop` are downloaded actual first listing images (1080 pixels wide; Little Harvest Table and Christmas Gathering Bundle are 1080 × 914 the four values-art mockups are 1080 × 810; the other Etsy images are square), not generated substitutes. They are hosted locally so page rendering does not depend on Etsy image hotlinks.
+Product titles use concise display titles based on the owner's requests and published listings. Short descriptions and format details were checked in a normal browser on 2026-10-16 (original seven listings) and 2026-10-17 (four values-inspired art downloads). All eleven listings belong to 2Nspira and expose purchase controls. Images in `public/images/shop` are downloaded actual first listing images (1080 pixels wide; Little Harvest Table and Christmas Gathering Bundle are 1080 × 914; the four values-art mockups are 1080 × 810; the other Etsy images are square), not generated substitutes. They are hosted locally so page rendering does not depend on Etsy image hotlinks.
 
 | Product | Exact purchase link | Source listing image |
 |---|---|---|
@@ -26,7 +26,7 @@ The Thanksgiving and Christmas packs contain the same 15 pages in US Letter and 
 
 - General `Visit our Etsy shop` link: exactly https://2nspira.etsy.com, provided by the owner as Etsy's Share & Save shop link.
 - Each product CTA keeps the exact owner-supplied shop-subdomain URL above. No manufactured tracking parameters. Etsy's normal redirects to www.etsy.com are not written back into source links.
-- Seller enrollment and seller-only listing-specific Share & Save link comparisons are **unverified**: the available browser is signed out. No savings eligibility is promised on the website. Owner can confirm enrollment and supply listing-specific links if they differ.
+- Seller enrollment and listing-specific Share & Save comparisons remain **unverified**. The original 2026-10-16 review used a signed-out browser. Seller controls were visible on 2026-10-17, but enrollment/eligibility was not checked. No savings eligibility is promised on the website. Owner can confirm enrollment and supply listing-specific links if they differ.
 - Existing Amazon link for Trust Is the Operating System remains exactly https://amzn.to/4sVBcuF. Its redirect resolves to Amazon ASIN B0GDQG1XBL with existing `tag=2nspira-20`; no tags are added or changed. Amazon's direct fetch initially returned 503; a subsequent normal-browser visit returned 200 and confirmed the book, author, Paperback and Kindle options, and purchase controls. No checkout or purchase was performed. The existing Books page and cover remain the source for this already-published title.
 - Books CTA: `Buy on Amazon`, `rel=sponsored`, with the nearby disclosure: “As an Amazon Associate I earn from qualifying purchases.” Art has been removed from Books.
 - No additional KDP titles are inferred from third-party recommendations in blog articles. Asked the owner for any additional published listings and existing tracked links; none are required for the one known title.
