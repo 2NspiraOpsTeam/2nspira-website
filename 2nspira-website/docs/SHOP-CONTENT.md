@@ -29,7 +29,7 @@ The Thanksgiving and Christmas packs contain the same 15 pages in US Letter and 
 
 Per the owner's clarified request on 2026-10-16, *Little Haunts & Happy Plants: A Cozy Spooky Garden Coloring Book for Adults and Teens* is featured under Ideas → Shop only. The leadership Books page remains unchanged. The two existing Etsy collections remain intact; the paperback now has a dedicated Coloring Books collection and shared card on the Shop landing page. All collection tabs show All collections, Printables & Games, Coloring Books, Art Prints. No marketplace-named tab or leadership-book collection is added.
 
-Exact owner-supplied URL: https://link.amazon/B06jTi3ms. A normal browser returned 200 and resolved to ASIN B0HN71Q8X2, by 2Nspira Books, with existing `tag=2nspira-20`. Preserve the exact supplied short link; do not manufacture tags. Command-line HEAD returned 404, so validate via normal-browser navigation.
+Current owner-supplied URL: https://link.amazon/B03B1TntH (replaces the earlier short link at the owner’s request). A normal browser returned 200 and resolved to ASIN B0HN71Q8X2, by 2Nspira Books, with existing `tag=2nspira-20`. Preserve the exact supplied short link; do not manufacture tags. Validate short links via normal-browser navigation.
 
 Listing-based details: paperback for adults/teens; 40 illustrations; 8.5 × 8.5 inches; black-and-white artwork, blank reverse pages and color-swatch page. Markers require a protective backing sheet; blank backs do not prevent bleed-through. No copied prices or delivery guarantees. Actual 1000 × 1000 cover from https://m.media-amazon.com/images/I/61znbZYl4LL.jpg is hosted at `public/images/books/little-haunts-happy-plants.jpg` (asset folder does not determine site placement).
 
