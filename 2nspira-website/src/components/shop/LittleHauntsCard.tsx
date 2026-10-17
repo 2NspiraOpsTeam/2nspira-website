@@ -33,7 +33,7 @@ export default function LittleHauntsCard({ headingLevel = "h3" }: { headingLevel
                 place a protective sheet behind the page; blank backs do not prevent bleed-through.
               </p>
             </div>
-            <a href="https://link.amazon/B06jTi3ms" rel="sponsored"
+            <a href="https://link.amazon/B03B1TntH" rel="sponsored"
               className={`mt-6 min-h-[44px] ${buttonPrimary}`}>
               Buy on Amazon
             </a>
