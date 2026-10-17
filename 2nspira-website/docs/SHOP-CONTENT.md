@@ -1,13 +1,14 @@
 # Shop content and purchase links
 
-Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing six Etsy products and an Amazon coloring paperback in three product-type collections: `/shop/printables-games`, `/shop/coloring-books`, and `/shop/art-prints`. Leadership Books remains separate; coloring books belong only in Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
+Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing seven Etsy products and an Amazon coloring paperback in three product-type collections: `/shop/printables-games`, `/shop/coloring-books`, and `/shop/art-prints`. Leadership Books remains separate; coloring books belong only in Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
 
 ## Content sources
 
-Product titles use concise display titles based on the owner's requests and published listings. Short descriptions and format details were checked in a normal browser against each live Etsy listing on 2026-10-16. All six listings belong to 2Nspira and expose purchase controls. Images in `public/images/shop` are downloaded actual first listing images (1080 pixels wide; Little Harvest Table is 1080 × 914 and the other Etsy images are square), not generated substitutes. They are hosted locally so page rendering does not depend on Etsy image hotlinks.
+Product titles use concise display titles based on the owner's requests and published listings. Short descriptions and format details were checked in a normal browser against each live Etsy listing on 2026-10-16. All seven listings belong to 2Nspira and expose purchase controls. Images in `public/images/shop` are downloaded actual first listing images (1080 pixels wide; Little Harvest Table and Christmas Gathering Bundle are 1080 × 914 and the other Etsy images are square), not generated substitutes. They are hosted locally so page rendering does not depend on Etsy image hotlinks.
 
 | Product | Exact purchase link | Source listing image |
 |---|---|---|
+| Christmas Gathering Bundle | https://2nspira.etsy.com/listing/4597140476 | https://i.etsystatic.com/63788734/r/il/321a98/8691694066/il_1080xN.8691694066_p2wv.jpg |
 | Little Harvest Table — Thanksgiving Kids Table Kit | https://2nspira.etsy.com/listing/4597118917 | https://i.etsystatic.com/63788734/r/il/cf594d/8739498723/il_1080xN.8739498723_jw2z.jpg |
 | The Cozy Elf Workshop — 16 Christmas Activities | https://2nspira.etsy.com/listing/4596685843 | https://i.etsystatic.com/63788734/r/il/145717/8688068576/il_1080xN.8688068576_dka3.jpg |
 | Thanksgiving Family Games — 8 Activities | https://2nspira.etsy.com/listing/4596133102 | https://i.etsystatic.com/63788734/r/il/97d737/8686225150/il_1080xN.8686225150_s8ad.jpg |
@@ -37,6 +38,8 @@ Listing-based details: paperback for adults/teens; 40 illustrations; 8.5 × 8.5 
 The featured coloring-book card uses `Buy on Amazon`, `rel="sponsored"`, and the nearby disclosure “As an Amazon Associate I earn from qualifying purchases.” Shop metadata/copy acknowledges both Etsy and Amazon destinations. Do not add this coloring book to the leadership Books page.
 
 ## Maintenance
+
+Christmas Gathering Bundle contains the same PDFs sold separately as Christmas Table Rescue (website: Christmas Family Games) and The Cozy Elf Workshop: eight group challenges plus sixteen individual activities. Four PDFs provide matching Letter/A4 editions. No exclusive or additional activities; disclose this overlap clearly in the card. It is not 37 games or 74 unique pages. Do not copy prices or claim savings without a dependable updater.
 
 Little Harvest Table is a digital kids-table kit, distinct from Thanksgiving Family Games: six paper-sized activity mats, twelve write-in cards (repeating design, not twelve distinct designs), and one keepsake page. Matching landscape Letter/A4 PDFs each contain the same 15 pages; paper sizes are not extra activities. Suggested ages 6–10 with help as needed. Optional cards need adult cutting; mats do not. These are activity sheets, not protective dining mats. No classroom/commercial-event license, child playtesting, print-testing or independent-use promise is inferred. The original listing image is preserved at its actual 1080 × 914 dimensions; shared rendering contains it without cropping.
 
