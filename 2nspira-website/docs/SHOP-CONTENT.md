@@ -46,3 +46,16 @@ Little Harvest Table is a digital kids-table kit, distinct from Thanksgiving Fam
 The Cozy Elf Workshop is distinct from Christmas Table Rescue: sixteen individual quiet-time puzzles/drawing activities, suggested ages 7–10 with reading help as needed. It contains two non-editable PDFs (matching US Letter/A4 editions), each with the same 22 pages: cover, grown-up guide, sixteen activities, three answer pages, and printing/personal-use information. Do not count the two paper sizes as separate activity sets or promise independent use, a tested grade level, or a fixed playtime.
 
 Edit the typed Etsy catalog in `src/content/shop/products.ts`; shared product rendering keeps landing and collection pages consistent. Check the live listings before changing descriptions or formats. Replace images with versioned filenames when changing their content. Do not add prices without a dependable update mechanism. All purchases occur on Etsy/Amazon; no cart, payments, customer collection, or credentials are introduced here.
+
+## Shop landing-page motion
+
+The landing page alone composes `ShopEffects` around server-rendered content.
+Collection pages and leadership Books are not restyled. One-shot hero/section
+entrances and card fades progressively enhance content that stays visible without
+JavaScript or IntersectionObserver. Card entrances animate opacity only, leaving
+hover transforms free after and during the entrance. Fine-pointer hover adds a
+4px card lift, subtle cover scale, and 2px collection-link lift; keyboard focus
+uses border/shadow feedback and retains existing focus rings. Touch devices have
+no hover-dependent actions. Reduced-motion preferences skip entrances and suppress
+Shop transforms/transitions, including when changed while an entrance is running.
+No loops, parallax, new dependencies, product-copy changes, or tracking changes.

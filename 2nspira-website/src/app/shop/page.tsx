@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { CollectionNav, EtsyShopLink, ProductGrid } from "@/components/shop/ShopCollection";
+import ShopEffects from "@/components/shop/ShopEffects";
 import LittleHauntsCard from "@/components/shop/LittleHauntsCard";
 import { artPrints, printables } from "@/content/shop/products";
 import { h1, h2, lead, linkInline, pageHero, pageMain } from "@/components/ui";
@@ -18,9 +19,10 @@ export const metadata: Metadata = {
 export default function ShopPage() {
   return (
     <main id="main-content" className={pageMain}>
+      <ShopEffects>
       <header className={`${pageHero} relative overflow-hidden text-center`}>
         <AmbientField />
-        <div className="relative">
+        <div className="relative" data-shop-reveal>
           <EyebrowPill>The 2Nspira shop</EyebrowPill>
           <h1 className={h1}>A little clarity.<br />A little creativity.</h1>
           <p className={lead}>Books to inspire. Games to gather around. Pages to color. Art to make space for what matters.</p>
@@ -30,7 +32,7 @@ export default function ShopPage() {
         <CollectionNav current="shop" />
         <p className="mt-6 text-center text-sm leading-6 text-body">Explore our three collections here. Complete your purchase on Etsy or Amazon.</p>
         <section aria-labelledby="printables-title" className="mt-14">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div data-shop-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="printables-title" className={h2}>Printables &amp; Games</h2>
               <p className="mt-3 max-w-2xl leading-7 text-body">Shared laughter and creative calm. Download, print, and enjoy at your own pace.</p>
@@ -40,7 +42,7 @@ export default function ShopPage() {
           <ProductGrid products={printables} headingLevel="h3" />
         </section>
         <section aria-labelledby="coloring-books-title" className="mt-20 border-t border-line pt-14">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div data-shop-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="coloring-books-title" className={h2}>Coloring Books</h2>
               <p className="mt-3 max-w-2xl leading-7 text-body">Cozy worlds to make your own. Paperback coloring books from 2Nspira Books, available on Amazon.</p>
@@ -50,7 +52,7 @@ export default function ShopPage() {
           <LittleHauntsCard />
         </section>
         <section aria-labelledby="art-title" className="mt-20 border-t border-line pt-14">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div data-shop-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="art-title" className={h2}>Art Prints</h2>
               <p className="mt-3 max-w-2xl leading-7 text-body">Thoughtful physical artwork for the places where you pause, reflect, and think.</p>
@@ -61,6 +63,7 @@ export default function ShopPage() {
         </section>
         <EtsyShopLink />
       </div>
+      </ShopEffects>
     </main>
   );
 }
