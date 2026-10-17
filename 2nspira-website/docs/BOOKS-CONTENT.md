@@ -1,6 +1,6 @@
 # Books: listing sources and purchase links
 
-Books remains separate from the Etsy Shop at `/books`, under Ideas.
+Books remains a dedicated page at `/books`, under Ideas. Per the owner's follow-up request, Little Haunts & Happy Plants is also featured on the Shop landing page under Ideas → Shop. The two existing Etsy collections remain intact; no third collection or duplicate book route is created. The leadership book remains on Books, not in Shop.
 
 ## Trust Is the Operating System
 
@@ -14,4 +14,4 @@ Listing: *Little Haunts & Happy Plants: A Cozy Spooky Garden Coloring Book for A
 
 Actual Amazon cover: https://m.media-amazon.com/images/I/61znbZYl4LL.jpg (1000 × 1000), stored at `public/images/books/little-haunts-happy-plants.jpg`; not an AI-generated substitute. Cover and factual listing description visually/source reviewed in the normal Amazon browser.
 
-Both Amazon buttons use `Buy on Amazon`, `rel="sponsored"`, with the nearby disclosure “As an Amazon Associate I earn from qualifying purchases.” All purchases occur on Amazon. Website metadata and hero accommodate leadership reading and creative coloring without mixing Etsy products into Books.
+All Amazon buttons use `Buy on Amazon`, `rel="sponsored"`, with the nearby disclosure “As an Amazon Associate I earn from qualifying purchases.” The new book card is shared between Books and Shop to keep copy, cover and disclosures consistent. All book purchases occur on Amazon. Website metadata and hero accommodate leadership reading and creative coloring without mixing Etsy products into Books.
