@@ -69,6 +69,24 @@
 .secondary { border: 1px solid #b5aa8e; color: var(--graphite); }
 .secondary:hover { background: #f0eee6; border-color: var(--gold); }
 .page .reveal { transition-duration: 220ms; }
+/* Finite entrances and pointer-only feedback keep the page calm and touch-friendly. */
+@keyframes settleIn {
+  from { opacity: 0; translate: 0 12px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .heroInner > div:first-child { animation: settleIn 520ms cubic-bezier(.22, 1, .36, 1) both; }
+  .backCard { animation: settleIn 600ms 100ms cubic-bezier(.22, 1, .36, 1) both; }
+  .frontCard { animation: settleIn 600ms 180ms cubic-bezier(.22, 1, .36, 1) both; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .miniCard { transition: translate 240ms ease, box-shadow 240ms ease; }
+  .heroArt:hover .frontCard { translate: 0 -4px; box-shadow: 0 18px 40px #272b2a14; }
+  .heroArt:hover .backCard { translate: 0 -2px; }
+  .primary, .secondary { transition: background 200ms ease, border-color 200ms ease, translate 200ms ease, box-shadow 200ms ease; }
+  .primary:hover, .secondary:hover { translate: 0 -2px; box-shadow: 0 6px 16px #272b2a12; }
+  .primary:active, .secondary:active { translate: 0 0; box-shadow: none; }
+}
 @media (max-width: 1050px) {
   .container { width: calc(100% - 56px); }
   .heroInner { grid-template-columns: 1.3fr 1fr; min-height: 490px; }
@@ -110,4 +128,5 @@
   .page *, .page *::before, .page *::after { transition: none !important; animation: none !important; }
   .visual:hover, .primary:hover .arrow, .secondary:hover .arrow { transform: none; }
   .page .reveal { opacity: 1; transform: none; }
+  .page .miniCard, .page .primary, .page .secondary { translate: none; }
 }
