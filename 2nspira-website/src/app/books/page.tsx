@@ -15,12 +15,12 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "From the Author | Leadership Books",
+  title: "Books | Leadership & Creative Coloring",
   description:
-    "Explore Jeffrey Cortez's book Trust Is the Operating System and audio reflections on trust, judgment, and resilient organizations.",
+    "Explore Trust Is the Operating System by Jeffrey Cortez and Little Haunts & Happy Plants, a cozy garden coloring book from 2Nspira Books.",
   alternates: { canonical: "/books" },
-  openGraph: { type: "website", siteName: "2Nspira", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", url: "https://2nspira.com/books", images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
-  twitter: { card: "summary_large_image", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
+  openGraph: { type: "website", siteName: "2Nspira", title: "Make room for reflection and creativity", description: "Discover Trust Is the Operating System and Little Haunts & Happy Plants: leadership reading and cozy garden coloring for adults and teens.", url: "https://2nspira.com/books", images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
+  twitter: { card: "summary_large_image", title: "Make room for reflection and creativity", description: "Discover Trust Is the Operating System and Little Haunts & Happy Plants: leadership reading and cozy garden coloring for adults and teens.", images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
 };
 
 export default function BooksPage() {
@@ -29,13 +29,13 @@ export default function BooksPage() {
       <header className={`${pageHero} relative overflow-hidden text-center`}>
         <AmbientField />
         <div className="relative">
-        <p><EyebrowPill>From the author</EyebrowPill></p>
+        <p><EyebrowPill>From 2Nspira</EyebrowPill></p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-          Leadership Books
+          Books for reflection &amp; creativity
         </h1>
         <p className={`mx-auto max-w-2xl ${lead}`}>
-          Explore clarity, restraint, and leadership through reading and reflection.
-          Consider how trust, judgment, and meaning shape modern organizations.
+          Thoughtful reading and cozy coloring. Explore ideas about leadership,
+          or make a little space for your own creativity.
         </p></div>
       </header>
 
@@ -96,6 +96,45 @@ export default function BooksPage() {
         </section></Reveal>
 
         <Reveal><section
+          className={`grid gap-10 p-6 sm:p-10 md:grid-cols-[1fr_2fr] ${card}`}
+          aria-labelledby="little-haunts-title"
+        >
+          <Image
+            src="/images/books/little-haunts-happy-plants.jpg"
+            alt="Little Haunts & Happy Plants cover with a friendly ghost, white cat, plants, and a mushroom house"
+            width={1000}
+            height={1000}
+            unoptimized
+            className="mx-auto h-auto w-full max-w-xs rounded-xl shadow-[0_18px_45px_rgba(35,41,54,0.16)] transition-transform duration-500 ease-gentle hover:-translate-y-1"
+          />
+          <div>
+            <h2 id="little-haunts-title" className={h2}>Little Haunts &amp; Happy Plants</h2>
+            <p className="mt-4 text-sm font-medium text-accent">Paperback coloring book · Adults &amp; teens</p>
+            <p className="mt-3 text-sm text-body">By 2Nspira Books</p>
+            <div className="mt-6 space-y-4 leading-8 text-body">
+              <p>A cozy, gently spooky garden is waiting for your favorite colors.</p>
+              <p>
+                Explore 40 illustrations of friendly ghosts, curious cats,
+                leafy plants, pumpkins, and little mushroom homes. Spacious scenes
+                and more detailed garden corners offer different ways to enjoy a creative break.
+              </p>
+              <p>
+                This 8.5 × 8.5-inch paperback includes black-and-white artwork,
+                blank reverse pages, and a color-swatch page. If using markers,
+                place a protective sheet behind the page; blank backs do not prevent bleed-through.
+              </p>
+            </div>
+            <a href="https://link.amazon/B06jTi3ms" rel="sponsored"
+              className={`mt-6 min-h-[44px] ${buttonPrimary}`}>
+              Buy on Amazon
+            </a>
+            <p className={`mt-3 ${caption}`}>
+              As an Amazon Associate I earn from qualifying purchases.
+            </p>
+          </div>
+        </section></Reveal>
+
+        <Reveal><section
           className={`p-6 sm:p-10 ${card}`}
           aria-labelledby="audio-title"
         >
@@ -136,9 +175,8 @@ export default function BooksPage() {
               Ideas that stay with you
             </h2>
             <p className="mt-6 leading-8 text-body">
-              Each book and reflection is an invitation to slow
-              down and think clearly — the same quiet discipline that trusted,
-              human-centered leadership requires.
+              Make room for thoughtful ideas, a creative pause, and a little
+              inspiration. Each book offers a different way to slow down and engage.
             </p>
           </div>
         </section></Reveal>
