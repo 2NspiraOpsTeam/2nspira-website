@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { buttonPrimary, caption, card, h2 } from "@/components/ui";
 
-export default function LittleHauntsCard() {
+export default function LittleHauntsCard({ headingLevel = "h3" }: { headingLevel?: "h2" | "h3" }) {
+  const Heading = headingLevel;
   return (
 <section
           className={`grid gap-10 p-6 sm:p-10 md:grid-cols-[1fr_2fr] ${card}`}
@@ -16,7 +17,7 @@ export default function LittleHauntsCard() {
             className="mx-auto h-auto w-full max-w-xs rounded-xl shadow-[0_18px_45px_rgba(35,41,54,0.16)] transition-transform duration-500 ease-gentle hover:-translate-y-1"
           />
           <div>
-            <h3 id="little-haunts-title" className={h2}>Little Haunts &amp; Happy Plants</h3>
+            <Heading id="little-haunts-title" className={h2}>Little Haunts &amp; Happy Plants</Heading>
             <p className="mt-4 text-sm font-medium text-accent">Paperback coloring book · Adults &amp; teens</p>
             <p className="mt-3 text-sm text-body">By 2Nspira Books</p>
             <div className="mt-6 space-y-4 leading-8 text-body">

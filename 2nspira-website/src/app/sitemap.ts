@@ -20,6 +20,7 @@ const pages: Array<{
   { path: "/copyright", priority: 0.3, changeFrequency: "monthly" },
   { path: "/shop", priority: 0.7, changeFrequency: "monthly" },
   { path: "/shop/printables-games", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/shop/coloring-books", priority: 0.7, changeFrequency: "monthly" },
   { path: "/shop/art-prints", priority: 0.7, changeFrequency: "monthly" },
   { path: "/books", priority: 0.7, changeFrequency: "monthly" },
   { path: "/blog/categories/trust-is-the-operating-system", priority: 0.6, changeFrequency: "monthly" },

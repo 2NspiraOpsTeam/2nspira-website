@@ -4,10 +4,11 @@ import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { buttonPrimary, card, h1, lead, pageHero, pageMain } from "@/components/ui";
 import { etsyShopUrl, type ShopProduct } from "@/content/shop/products";
 
-export function CollectionNav({ current }: { current: "shop" | "printables" | "art" }) {
+export function CollectionNav({ current }: { current: "shop" | "printables" | "coloring" | "art" }) {
   const collections = [
     { id: "shop", title: "All collections", href: "/shop" },
     { id: "printables", title: "Printables & Games", href: "/shop/printables-games" },
+    { id: "coloring", title: "Coloring Books", href: "/shop/coloring-books" },
     { id: "art", title: "Art Prints", href: "/shop/art-prints" },
   ];
   return (

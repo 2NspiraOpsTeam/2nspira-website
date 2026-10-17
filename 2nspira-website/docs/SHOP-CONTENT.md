@@ -1,6 +1,6 @@
 # Shop content and purchase links
 
-Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing all five Etsy products in two collections: `/shop/printables-games` and `/shop/art-prints`. No books collection inside Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
+Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing five Etsy products and an Amazon coloring paperback in three product-type collections: `/shop/printables-games`, `/shop/coloring-books`, and `/shop/art-prints`. Leadership Books remains separate; coloring books belong only in Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
 
 ## Content sources
 
@@ -25,17 +25,17 @@ The Thanksgiving and Christmas packs contain the same 15 pages in US Letter and 
 - Books CTA: `Buy on Amazon`, `rel=sponsored`, with the nearby disclosure: “As an Amazon Associate I earn from qualifying purchases.” Art has been removed from Books.
 - No additional KDP titles are inferred from third-party recommendations in blog articles. Asked the owner for any additional published listings and existing tracked links; none are required for the one known title.
 
-## Maintenance
+## Amazon coloring books — Shop only
 
-## Featured Amazon coloring book — Shop only
-
-Per the owner's clarified request on 2026-10-16, *Little Haunts & Happy Plants: A Cozy Spooky Garden Coloring Book for Adults and Teens* is featured under Ideas → Shop only. The leadership Books page remains unchanged. The two existing Etsy collections remain intact; this paperback has a distinct featured card and an Amazon purchase button, not an Etsy collection entry.
+Per the owner's clarified request on 2026-10-16, *Little Haunts & Happy Plants: A Cozy Spooky Garden Coloring Book for Adults and Teens* is featured under Ideas → Shop only. The leadership Books page remains unchanged. The two existing Etsy collections remain intact; the paperback now has a dedicated Coloring Books collection and shared card on the Shop landing page. All collection tabs show All collections, Printables & Games, Coloring Books, Art Prints. No marketplace-named tab or leadership-book collection is added.
 
 Exact owner-supplied URL: https://link.amazon/B06jTi3ms. A normal browser returned 200 and resolved to ASIN B0HN71Q8X2, by 2Nspira Books, with existing `tag=2nspira-20`. Preserve the exact supplied short link; do not manufacture tags. Command-line HEAD returned 404, so validate via normal-browser navigation.
 
 Listing-based details: paperback for adults/teens; 40 illustrations; 8.5 × 8.5 inches; black-and-white artwork, blank reverse pages and color-swatch page. Markers require a protective backing sheet; blank backs do not prevent bleed-through. No copied prices or delivery guarantees. Actual 1000 × 1000 cover from https://m.media-amazon.com/images/I/61znbZYl4LL.jpg is hosted at `public/images/books/little-haunts-happy-plants.jpg` (asset folder does not determine site placement).
 
 The featured coloring-book card uses `Buy on Amazon`, `rel="sponsored"`, and the nearby disclosure “As an Amazon Associate I earn from qualifying purchases.” Shop metadata/copy acknowledges both Etsy and Amazon destinations. Do not add this coloring book to the leadership Books page.
+
+## Maintenance
 
 The Cozy Elf Workshop is distinct from Christmas Table Rescue: sixteen individual quiet-time puzzles/drawing activities, suggested ages 7–10 with reading help as needed. It contains two non-editable PDFs (matching US Letter/A4 editions), each with the same 22 pages: cover, grown-up guide, sixteen activities, three answer pages, and printing/personal-use information. Do not count the two paper sizes as separate activity sets or promise independent use, a tested grade level, or a fixed playtime.
 
