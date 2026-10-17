@@ -125,7 +125,7 @@ const showcase: ShowcaseSite[] = [
   },
   {
     name: "CalmLoop",
-    url: "https://calmloop.vercel.app",
+    url: "https://calmloop.2nspira.com",
     tag: "Consumer web app",
     description:
       "A low-pressure companion offering gentle routine ideas for neurodivergent children and their families.",
