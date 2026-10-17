@@ -63,6 +63,8 @@ export default function AdminClientDetailPage() {
 
   const [data, setData] = useState<ClientDetailData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [statusBusy, setStatusBusy] = useState<Record<string, boolean>>({});
+  const [serviceError, setServiceError] = useState("");
 
   // Edit client
   const [edit, setEdit] = useState({ name: "", company: "", active: true });
@@ -172,6 +174,9 @@ export default function AdminClientDetailPage() {
   };
 
   const updateServiceStatus = async (serviceId: string, status: string) => {
+    if (statusBusy[serviceId]) return;
+    setServiceError("");
+    setStatusBusy(current => ({ ...current, [serviceId]: true }));
     try {
       const res = await fetch(`/api/admin/clients/${id}/services/${serviceId}`, {
         method: "PUT",
@@ -181,8 +186,9 @@ export default function AdminClientDetailPage() {
       if (res.ok) {
         const json = await res.json();
         setData((current) => current ? { ...current, services: json.services || current.services } : current);
-      }
-    } catch {}
+      } else setServiceError("Could not change service status. Please retry.");
+    } catch { setServiceError("Could not change service status. Please retry."); }
+    finally { setStatusBusy(current => ({ ...current, [serviceId]: false })); }
   };
 
   const saveDueDate = async (serviceId: string, nextBillingDate: string) => {
@@ -296,7 +302,12 @@ export default function AdminClientDetailPage() {
     );
   }
 
-  if (!data) return null;
+  if (!data) return (
+    <div role="alert" className="min-h-screen flex flex-col items-center justify-center gap-3 p-6 text-center">
+      <p>Client details could not be loaded.</p>
+      <button type="button" onClick={() => { setLoading(true); void load(); }} className="rounded-full bg-accent px-4 py-2 text-sm text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Retry</button>
+    </div>
+  );
 
   const { client, services = [], invoices = [], payments = [] } = data;
   const activeMrr = services
@@ -336,8 +347,9 @@ export default function AdminClientDetailPage() {
             <h2 className="font-semibold mb-4">Client Details</h2>
             <form onSubmit={saveClient} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">Name</label>
+                <label htmlFor="client-name" className="block text-sm font-medium text-foreground/80 mb-1.5">Name</label>
                 <input
+                  id="client-name"
                   value={edit.name}
                   onChange={(e) => setEdit({ ...edit, name: e.target.value })}
                   className="w-full rounded-lg border border-line bg-canvas px-3 py-2.5 text-sm"
@@ -349,8 +361,9 @@ export default function AdminClientDetailPage() {
                 Account active
               </label>
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">Company</label>
+                <label htmlFor="client-company" className="block text-sm font-medium text-foreground/80 mb-1.5">Company</label>
                 <input
+                  id="client-company"
                   value={edit.company}
                   onChange={(e) => setEdit({ ...edit, company: e.target.value })}
                   className="w-full rounded-lg border border-line bg-canvas px-3 py-2.5 text-sm"
@@ -380,7 +393,7 @@ export default function AdminClientDetailPage() {
           {/* Welcome email */}
           {data.invitationEligibility === "provisioned" ? (
             <div className="rounded-2xl border border-line bg-canvas p-6">
-              <h2 className="font-semibold mb-4">Portal Access</h2>
+              <h2 className="font-semibold mb-4">Portal account ready</h2>
               <p className="text-sm text-foreground/60">This client already has a portal password. Use the password reset below if access needs to be restored.</p>
             </div>
           ) : data.invitationEligibility === "new" || data.invitationEligibility === "pending" ? (
@@ -417,14 +430,17 @@ export default function AdminClientDetailPage() {
 
           {/* Reset portal password */}
           <div className="rounded-2xl border border-line bg-canvas p-6">
-            <h2 className="font-semibold mb-4">Portal Access</h2>
+            <h2 className="font-semibold mb-4">Reset portal password</h2>
+            <p className="mb-4 text-sm text-foreground/60">Changing this password replaces the client’s current portal password. No email is sent.</p>
             <form onSubmit={resetPassword} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+                <label htmlFor="portal-reset-password" className="block text-sm font-medium text-foreground/80 mb-1.5">
                   New Portal Password
                 </label>
                 <input
                   type="password"
+                  id="portal-reset-password"
+                  autoComplete="new-password"
                   value={resetPw}
                   onChange={(e) => setResetPw(e.target.value)}
                   className="w-full rounded-lg border border-line bg-canvas px-3 py-2.5 text-sm"
@@ -465,11 +481,13 @@ export default function AdminClientDetailPage() {
             <span className="text-xs text-foreground/60">Sends the currently active payable services after you finish editing. Requires portal access.</span>
           </div>
           {notificationMsg && <p role="status" className={`mb-4 text-sm ${notificationMsg.ok ? "text-green-700" : "text-red-600"}`}>{notificationMsg.text}</p>}
+          {serviceError && <p role="alert" className="mb-4 text-sm text-red-600">{serviceError}</p>}
 
           <form onSubmit={addService} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 p-4 rounded-xl bg-surface/40">
             <div className="col-span-2">
-              <label className="block text-xs font-medium text-foreground/60 mb-1">Service name *</label>
+              <label htmlFor="new-service-name" className="block text-xs font-medium text-foreground/60 mb-1">Service name *</label>
               <input
+                id="new-service-name"
                 value={svc.name}
                 onChange={(e) => setSvc({ ...svc, name: e.target.value })}
                 className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
@@ -478,8 +496,9 @@ export default function AdminClientDetailPage() {
               />
             </div>
             <div>
-              <label className="block text-xs font-medium text-foreground/60 mb-1">Price (USD)</label>
+              <label htmlFor="new-service-price" className="block text-xs font-medium text-foreground/60 mb-1">Price (USD)</label>
               <input
+                id="new-service-price"
                 type="number"
                 min="0"
                 step="0.01"
@@ -489,8 +508,9 @@ export default function AdminClientDetailPage() {
               />
             </div>
             <div>
-              <label className="block text-xs font-medium text-foreground/60 mb-1">Due date</label>
+              <label htmlFor="new-service-date" className="block text-xs font-medium text-foreground/60 mb-1">Due date</label>
               <input
+                id="new-service-date"
                 type="date"
                 min="1900-01-01"
                 max="2100-12-31"
@@ -501,6 +521,7 @@ export default function AdminClientDetailPage() {
             </div>
             <div className="flex flex-col gap-2">
               <select
+                aria-label="Billing cycle"
                 value={svc.billingCycle}
                 onChange={(e) => setSvc({ ...svc, billingCycle: e.target.value })}
                 className="rounded-lg border border-line bg-canvas px-2 py-2 text-sm"
@@ -521,6 +542,7 @@ export default function AdminClientDetailPage() {
             </div>
             <div className="col-span-2 sm:col-span-4">
               <input
+                aria-label="Service description (optional)"
                 value={svc.description}
                 onChange={(e) => setSvc({ ...svc, description: e.target.value })}
                 className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
@@ -566,14 +588,22 @@ export default function AdminClientDetailPage() {
                     aria-label={`Due date for ${s.name}`}
                   />
                   {dateEdits[s.id] !== undefined && dateEdits[s.id] !== (s.nextBillingDate ?? "") && (
-                    <button type="button" onClick={() => saveDueDate(s.id, dateEdits[s.id])}
-                      disabled={savingDates[s.id]}
-                      className="rounded-lg bg-accent px-3 py-1.5 text-xs text-white disabled:opacity-50">
-                      {savingDates[s.id] ? "Saving…" : "Save date"}
-                    </button>
+                    <>
+                      <button type="button" onClick={() => saveDueDate(s.id, dateEdits[s.id])}
+                        disabled={savingDates[s.id]}
+                        className="rounded-lg bg-accent px-3 py-1.5 text-xs text-white disabled:opacity-50">
+                        {savingDates[s.id] ? "Saving…" : "Save date"}
+                      </button>
+                      <button type="button" onClick={() => {
+                        setDateEdits(current => { const next = { ...current }; delete next[s.id]; return next; });
+                        setDateErrors(current => ({ ...current, [s.id]: "" }));
+                      }} disabled={savingDates[s.id]} className="rounded-lg px-3 py-1.5 text-xs text-foreground/70 hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent">Cancel</button>
+                    </>
                   )}
                   {dateErrors[s.id] && <span role="alert" className="text-xs text-red-600">{dateErrors[s.id]}</span>}
                   <select
+                    aria-label={`Status for ${s.name}`}
+                    disabled={statusBusy[s.id]}
                     value={s.status}
                     onChange={(e) => updateServiceStatus(s.id, e.target.value)}
                     className="rounded-lg border border-line bg-canvas px-2 py-1.5 text-xs"
@@ -584,6 +614,7 @@ export default function AdminClientDetailPage() {
                       </option>
                     ))}
                   </select>
+                  {statusBusy[s.id] && <span role="status" className="text-xs text-foreground/60">Saving status…</span>}
                   <button
                     onClick={() => deleteService(s.id)}
                     className="rounded-lg px-3 py-1.5 text-xs text-red-500 hover:bg-red-500/10 transition-colors"
