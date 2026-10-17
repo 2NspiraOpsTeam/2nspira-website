@@ -75,9 +75,9 @@
   to { opacity: 1; translate: 0 0; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .heroInner > div:first-child { animation: settleIn 520ms cubic-bezier(.22, 1, .36, 1) both; }
-  .backCard { animation: settleIn 600ms 100ms cubic-bezier(.22, 1, .36, 1) both; }
-  .frontCard { animation: settleIn 600ms 180ms cubic-bezier(.22, 1, .36, 1) both; }
+  .heroInner > div:first-child { animation: settleIn 520ms cubic-bezier(.22, 1, .36, 1) backwards; }
+  .backCard { animation: settleIn 600ms 100ms cubic-bezier(.22, 1, .36, 1) backwards; }
+  .frontCard { animation: settleIn 600ms 180ms cubic-bezier(.22, 1, .36, 1) backwards; }
 }
 @media (hover: hover) and (pointer: fine) {
   .miniCard { transition: translate 240ms ease, box-shadow 240ms ease; }
