@@ -27,6 +27,16 @@ The Thanksgiving and Christmas packs contain the same 15 pages in US Letter and 
 
 ## Maintenance
 
+## Featured Amazon coloring book — Shop only
+
+Per the owner's clarified request on 2026-10-16, *Little Haunts & Happy Plants: A Cozy Spooky Garden Coloring Book for Adults and Teens* is featured under Ideas → Shop only. The leadership Books page remains unchanged. The two existing Etsy collections remain intact; this paperback has a distinct featured card and an Amazon purchase button, not an Etsy collection entry.
+
+Exact owner-supplied URL: https://link.amazon/B06jTi3ms. A normal browser returned 200 and resolved to ASIN B0HN71Q8X2, by 2Nspira Books, with existing `tag=2nspira-20`. Preserve the exact supplied short link; do not manufacture tags. Command-line HEAD returned 404, so validate via normal-browser navigation.
+
+Listing-based details: paperback for adults/teens; 40 illustrations; 8.5 × 8.5 inches; black-and-white artwork, blank reverse pages and color-swatch page. Markers require a protective backing sheet; blank backs do not prevent bleed-through. No copied prices or delivery guarantees. Actual 1000 × 1000 cover from https://m.media-amazon.com/images/I/61znbZYl4LL.jpg is hosted at `public/images/books/little-haunts-happy-plants.jpg` (asset folder does not determine site placement).
+
+The featured coloring-book card uses `Buy on Amazon`, `rel="sponsored"`, and the nearby disclosure “As an Amazon Associate I earn from qualifying purchases.” Shop metadata/copy acknowledges both Etsy and Amazon destinations. Do not add this coloring book to the leadership Books page.
+
 The Cozy Elf Workshop is distinct from Christmas Table Rescue: sixteen individual quiet-time puzzles/drawing activities, suggested ages 7–10 with reading help as needed. It contains two non-editable PDFs (matching US Letter/A4 editions), each with the same 22 pages: cover, grown-up guide, sixteen activities, three answer pages, and printing/personal-use information. Do not count the two paper sizes as separate activity sets or promise independent use, a tested grade level, or a fixed playtime.
 
 Edit the typed Etsy catalog in `src/content/shop/products.ts`; shared product rendering keeps landing and collection pages consistent. Check the live listings before changing descriptions or formats. Replace images with versioned filenames when changing their content. Do not add prices without a dependable update mechanism. All purchases occur on Etsy/Amazon; no cart, payments, customer collection, or credentials are introduced here.
