@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { CollectionNav, EtsyShopLink, ProductGrid } from "@/components/shop/ShopCollection";
 import ShopEffects from "@/components/shop/ShopEffects";
+import LittleCocoaCard from "@/components/shop/LittleCocoaCard";
 import LittleHauntsCard from "@/components/shop/LittleHauntsCard";
 import { artPrints, printables } from "@/content/shop/products";
 import { h1, h2, lead, linkInline, pageHero, pageMain } from "@/components/ui";
@@ -49,7 +50,7 @@ export default function ShopPage() {
             </div>
             <Link href="/shop/coloring-books" className={`${linkInline} min-h-[44px]`}>Explore Coloring Books <span aria-hidden="true" className="ml-1">→</span></Link>
           </div>
-          <LittleHauntsCard />
+          <div className="space-y-10"><LittleHauntsCard /><LittleCocoaCard /></div>
         </section>
         <section aria-labelledby="art-title" className="mt-20 border-t border-line pt-14">
           <div data-shop-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">

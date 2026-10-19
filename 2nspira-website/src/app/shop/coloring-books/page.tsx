@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { CollectionNav } from "@/components/shop/ShopCollection";
+import LittleCocoaCard from "@/components/shop/LittleCocoaCard";
 import LittleHauntsCard from "@/components/shop/LittleHauntsCard";
 import { h1, lead, pageHero, pageMain } from "@/components/ui";
 
-const description = "Discover Little Haunts & Happy Plants, a cozy garden coloring paperback for adults and teens from 2Nspira Books. Explore 40 illustrations and buy on Amazon.";
+const description = "Explore Little Haunts & Happy Plants and The Little Cocoa Club: two paperback coloring books for adults and teens from 2Nspira Books. Buy on Amazon.";
 const image = "https://2nspira.com/images/books/little-haunts-happy-plants.jpg";
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default function ColoringBooksPage() {
         <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-6 text-body">
           Physical paperback coloring books, not digital downloads. Purchases and fulfillment are handled on Amazon.
         </p>
-        <div className="mt-10"><LittleHauntsCard headingLevel="h2" /></div>
+        <div className="mt-10 space-y-10"><LittleHauntsCard headingLevel="h2" /><LittleCocoaCard headingLevel="h2" /></div>
       </div>
     </main>
   );

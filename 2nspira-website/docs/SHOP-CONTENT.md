@@ -1,6 +1,6 @@
 # Shop content and purchase links
 
-Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing eleven Etsy products and an Amazon coloring paperback in three product-type collections: `/shop/printables-games`, `/shop/coloring-books`, and `/shop/art-prints`. Leadership Books remains separate; coloring books belong only in Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
+Owner-approved structure (2026-10-16): Books stays separate under Ideas at `/books`. Shop is a second Ideas link at `/shop`, showcasing eleven Etsy products and two Amazon coloring paperbacks in three product-type collections: `/shop/printables-games`, `/shop/coloring-books`, and `/shop/art-prints`. Leadership Books remains separate; coloring books belong only in Shop. The Cozy Elf Workshop was added following the owner's request to include the newly published listing.
 
 ## Content sources
 
@@ -86,3 +86,25 @@ location, not resale, redistribution or print-on-demand merchandise. No claims
 of tested print quality or improved team performance are made. No prices copied.
 The Art collection intro and metadata distinguish digital downloads from the
 existing physical print; leadership Books, games, paperback and effects stay intact.
+
+## The Little Cocoa Club paperback (2026-10-18)
+
+Confirmed Live in the authorized KDP bookshelf, ASIN B0HNDQNTKM. Public Amazon
+listing: https://www.amazon.com/dp/B0HNDQNTKM . 2Nspira Books; paperback for
+adults and teens; 88 pages; 8.5 × 8.5 inches. Forty distinct winter-café scenes
+with four woodland friends and a rhyme beneath each. Blank reverses and a
+color-swatch page; markers still require a protective backing sheet. Do not copy
+PDF-only extras from the separate Cocoa Club Etsy download.
+
+The owner’s replacement link https://link.amazon/B01xtcRTf resolves to the correct
+ASIN with the existing tag=2nspira-20. Preserve it exactly. The initially supplied
+B09oy0uoX redirected to an account page, not the book, and must not be published.
+Actual 1000 × 1000 cover:
+https://m.media-amazon.com/images/I/61XUym9sfNL._SL1000_.jpg .
+
+Add only to Shop overview and Coloring Books, not leadership Books. Keep the Etsy
+PDF in Printables & Games and retain all existing destinations/disclosures. Both
+paperbacks use the shared server-rendered ColoringBookCard; the original Little
+Haunts copy/link/ID/layout stays intact. A data-coloring-book attribute scopes
+existing Shop effects to both paperbacks without hard-coded product IDs.
+No prices, new tags, account settings, KDP publishing actions, or dependencies.
