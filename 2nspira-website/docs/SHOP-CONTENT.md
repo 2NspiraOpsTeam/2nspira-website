@@ -53,8 +53,9 @@ Edit the typed Etsy catalog in `src/content/shop/products.ts`; shared product re
 
 ## Shop landing-page motion
 
-The landing page alone composes `ShopEffects` around server-rendered content.
-Collection pages and leadership Books are not restyled. One-shot hero/section
+The initial landing-page `ShopEffects` is now shared as `CatalogEffects` across
+Shop, its three collections, and leadership Books, per the owner’s SEO/engagement
+request. See `CATALOG-SEO.md` for scope and validation. One-shot hero/section
 entrances and card fades progressively enhance content that stays visible without
 JavaScript or IntersectionObserver. Card entrances animate opacity only, leaving
 hover transforms free after and during the entrance. Fine-pointer hover adds a

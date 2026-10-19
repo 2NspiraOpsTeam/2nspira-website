@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
-import styles from "./ShopEffects.module.css";
+import styles from "./CatalogEffects.module.css";
 
-/** Shop-only progressive enhancement: server-rendered content is never hidden. */
-export default function ShopEffects({ children }: { children: ReactNode }) {
+/** Catalog-page progressive enhancement: server-rendered content is never hidden. */
+export default function CatalogEffects({ children }: { children: ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function ShopEffects({ children }: { children: ReactNode }) {
         const target = entry.target as HTMLElement;
         if (typeof target.animate !== "function") continue;
         // Cards fade only, so entrance transforms never override hover feedback.
-        const heading = target.hasAttribute("data-shop-reveal");
+        const heading = target.hasAttribute("data-catalog-reveal");
         const animation = target.animate(
           heading
             ? [{ opacity: 0.6, transform: "translateY(10px)" }, { opacity: 1, transform: "none" }]
@@ -38,7 +38,7 @@ export default function ShopEffects({ children }: { children: ReactNode }) {
     // No opacity/visibility gate: no-JS, unsupported APIs, and focused controls
     // remain usable. Each entrance runs once, without loops or layout shifts.
     if (!motion.matches) {
-      el.querySelectorAll('[data-shop-reveal], article, [data-coloring-book]')
+      el.querySelectorAll('[data-catalog-reveal], [data-catalog-card], [data-catalog-fade]')
         .forEach((target) => observer.observe(target));
     }
     const stopMotion = () => {
@@ -55,5 +55,5 @@ export default function ShopEffects({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  return <div ref={root} className={styles.shop}>{children}</div>;
+  return <div ref={root} className={styles.catalog}>{children}</div>;
 }
