@@ -38,7 +38,7 @@ export default function ShopEffects({ children }: { children: ReactNode }) {
     // No opacity/visibility gate: no-JS, unsupported APIs, and focused controls
     // remain usable. Each entrance runs once, without loops or layout shifts.
     if (!motion.matches) {
-      el.querySelectorAll('[data-shop-reveal], article, section[aria-labelledby="little-haunts-title"]')
+      el.querySelectorAll('[data-shop-reveal], article, [data-coloring-book]')
         .forEach((target) => observer.observe(target));
     }
     const stopMotion = () => {
