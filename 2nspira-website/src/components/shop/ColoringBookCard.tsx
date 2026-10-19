@@ -17,7 +17,7 @@ export default function ColoringBookCard({ id, title, image, imageAlt, paragraph
     <section data-coloring-book aria-labelledby={`${id}-title`}
       className={`grid gap-10 p-6 sm:p-10 md:grid-cols-[1fr_2fr] ${card}`}>
       <Image src={image} alt={imageAlt} width={1000} height={1000} unoptimized
-        className="mx-auto h-auto w-full max-w-xs rounded-xl shadow-[0_18px_45px_rgba(35,41,54,0.16)] transition-transform duration-500 ease-gentle hover:-translate-y-1" />
+        className="mx-auto h-auto w-full max-w-xs rounded-xl shadow-[0_18px_45px_rgba(35,41,54,0.16)] transition-transform duration-500 ease-gentle motion-safe:hover:-translate-y-1" />
       <div>
         <Heading id={`${id}-title`} className={h2}>{title}</Heading>
         <p className="mt-4 text-sm font-medium text-accent">Paperback coloring book · Adults &amp; teens</p>
