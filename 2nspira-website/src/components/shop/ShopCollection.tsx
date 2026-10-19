@@ -1,3 +1,7 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
+import CatalogBreadcrumbs from "@/components/catalog/CatalogBreadcrumbs";
+import CatalogSchema from "@/components/catalog/CatalogSchema";
+import CatalogFaq from "@/components/catalog/CatalogFaq";
 import Image from "next/image";
 import Link from "next/link";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
@@ -40,9 +44,12 @@ export default function ShopCollection({ title, description, current, products }
 }) {
   return (
     <main id="main-content" className={pageMain}>
+      <CatalogEffects>
+      <CatalogBreadcrumbs page={current} />
+      <CatalogSchema page={current} />
       <header className={`${pageHero} relative overflow-hidden text-center`}>
         <AmbientField />
-        <div className="relative">
+        <div className="relative" data-catalog-reveal>
           <EyebrowPill>The 2Nspira shop</EyebrowPill>
           <h1 className={h1}>{title}</h1>
           <p className={lead}>{description}</p>
@@ -55,8 +62,10 @@ export default function ShopCollection({ title, description, current, products }
           {" "}Purchases and fulfillment are handled on Etsy.
         </p>
         <div className="mt-10"><ProductGrid products={products} /></div>
+        <CatalogFaq page={current} />
         <EtsyShopLink />
       </div>
+      </CatalogEffects>
     </main>
   );
 }
@@ -66,7 +75,7 @@ export function ProductGrid({ products, headingLevel = "h2" }: { products: ShopP
   return (
     <div className={`grid gap-8 ${products.length > 1 ? "md:grid-cols-2 lg:grid-cols-3" : "mx-auto max-w-4xl"}`}>
           {products.map((product) => (
-            <article key={product.id} aria-labelledby={`${product.id}-title`}
+            <article id={product.id} data-catalog-card key={product.id} aria-labelledby={`${product.id}-title`}
               className={`${card} overflow-hidden ${products.length === 1 ? "grid md:grid-cols-2" : "flex flex-col"}`}>
               <div className="bg-canvas-deep p-5 sm:p-6">
                 <Image src={product.image} alt={product.imageAlt} width={product.imageWidth ?? 1080} height={product.imageHeight ?? 1080}

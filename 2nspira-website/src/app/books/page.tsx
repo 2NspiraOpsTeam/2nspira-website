@@ -1,7 +1,11 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
+import CatalogBreadcrumbs from "@/components/catalog/CatalogBreadcrumbs";
+import CatalogSchema from "@/components/catalog/CatalogSchema";
+import CatalogFaq from "@/components/catalog/CatalogFaq";
+import { catalogPages } from "@/content/catalog/seo";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
   buttonPrimary,
@@ -15,20 +19,23 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "From the Author | Leadership Books",
-  description:
-    "Explore Jeffrey Cortez's book Trust Is the Operating System and audio reflections on trust, judgment, and resilient organizations.",
+  title: catalogPages.books.title,
+  authors: [{ name: "Jeffrey Cortez" }],
+  description: catalogPages.books.description,
   alternates: { canonical: "/books" },
-  openGraph: { type: "website", siteName: "2Nspira", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", url: "https://2nspira.com/books", images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
-  twitter: { card: "summary_large_image", title: "Leadership books and reflections", description: "Explore Trust Is the Operating System by Jeffrey Cortez and consider trust, judgment, and resilient organizations.", images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
+  openGraph: { type: "website", siteName: "2Nspira", title: "Leadership books and reflections", description: catalogPages.books.description, url: "https://2nspira.com/books", images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
+  twitter: { card: "summary_large_image", title: "Leadership books and reflections", description: catalogPages.books.description, images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
 };
 
 export default function BooksPage() {
   return (
     <main className={pageMain} id="main-content">
+      <CatalogEffects>
+      <CatalogBreadcrumbs page="books" />
+      <CatalogSchema page="books" />
       <header className={`${pageHero} relative overflow-hidden text-center`}>
         <AmbientField />
-        <div className="relative">
+        <div className="relative" data-catalog-reveal>
         <p><EyebrowPill>From the author</EyebrowPill></p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Leadership Books
@@ -40,9 +47,9 @@ export default function BooksPage() {
       </header>
 
       <div className="mx-auto max-w-6xl space-y-10 px-4 pb-20 sm:px-6">
-        <Reveal><section
+        <section
           className={`grid gap-10 p-6 sm:p-10 md:grid-cols-[1fr_2fr] ${card}`}
-          aria-labelledby="book-title"
+          id="trust-is-the-operating-system" data-catalog-card aria-labelledby="book-title"
         >
           <Image
             src="/images/books/trust-is-the-operating-system.jpg"
@@ -93,11 +100,11 @@ export default function BooksPage() {
               Read selected excerpts →
             </Link>
           </div>
-        </section></Reveal>
+        </section>
 
-        <Reveal><section
+        <section
           className={`p-6 sm:p-10 ${card}`}
-          aria-labelledby="audio-title"
+          id="leadership-reflection" data-catalog-fade aria-labelledby="audio-title"
         >
           <AccentRule className="mb-6" />
           <h2 id="audio-title" className={h2}>
@@ -117,11 +124,11 @@ export default function BooksPage() {
               Listen to the audio
             </a>
           </audio>
-        </section></Reveal>
+        </section>
 
-        <Reveal><section
+        <section
           className={`grid gap-8 p-6 sm:p-10 md:grid-cols-2 ${card}`}
-          aria-labelledby="reading-title"
+          data-catalog-card aria-labelledby="reading-title"
         >
           <Image
             src="/images/pages/books-reading.webp"
@@ -141,8 +148,10 @@ export default function BooksPage() {
               human-centered leadership requires.
             </p>
           </div>
-        </section></Reveal>
+        </section>
+        <CatalogFaq page="books" />
       </div>
+      </CatalogEffects>
     </main>
   );
 }
