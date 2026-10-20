@@ -1,0 +1,11 @@
+.hero { isolation: isolate; }
+.areaLink { text-decoration: none; }
+.areaLink:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+.disclosure { transition: border-color 220ms var(--ease-gentle); }
+.disclosure:focus-within, .disclosure[open] { border-color: var(--color-accent); }
+.summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 44px; cursor: pointer; list-style: none; font-weight: 600; color: var(--color-ink); }
+.summary::-webkit-details-marker { display: none; }
+.summary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; border-radius: 4px; }
+.plus { flex-shrink: 0; font-size: 1.5rem; line-height: 1; color: var(--color-accent); transition: transform 220ms var(--ease-gentle); }
+.disclosure[open] .plus { transform: rotate(45deg); }
+@media (prefers-reduced-motion: reduce) { .disclosure, .plus { transition: none; } }
