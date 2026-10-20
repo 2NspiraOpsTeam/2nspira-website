@@ -97,10 +97,8 @@ function FAQItem({
 }) {
   return (
     <Reveal delay={index * 100}>
-      <div>
-        <dt className="font-medium text-ink">{q}</dt>
-        <dd className={`mt-1 ${caption}`}>{a}</dd>
-      </div>
+      <dt className="font-medium text-ink">{q}</dt>
+      <dd className={`mt-1 ${caption}`}>{a}</dd>
     </Reveal>
   );
 }
@@ -256,8 +254,8 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={100}>
             <p className={`mx-auto mt-6 max-w-xl ${lead}`}>
-              Questions about our services? Ready to get started? Let&rsquo;s
-              talk.
+              From technology priorities to your next business or leadership
+              challenge, let&rsquo;s talk about the support you need.
             </p>
           </Reveal>
         </div>
@@ -457,12 +455,13 @@ export default function ContactPage() {
                   label="How can we help?"
                   required
                   id="message"
-                  hint="Please describe your project, timeline, or questions."
+                  hint="Tell us about your project, business idea, mentoring goals, or leadership challenge."
                   delay={300}
                 >
                   <textarea
                     id="message"
                     name="message"
+                    aria-describedby="message-hint"
                     required
                     rows={4}
                     value={formState.message}

@@ -130,7 +130,8 @@ export default function Home() {
                 2Nspira helps you turn technology change into durable outcomes —
                 practical AI enablement, process optimization, and fractional
                 technology leadership, built so your teams trust their systems
-                instead of managing them.
+                instead of managing them. We also support entrepreneurs through
+                practical mentoring and mindset and leadership coaching.
               </p>
               <div
                 className="animate-rise mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-x-6"
@@ -178,8 +179,8 @@ export default function Home() {
               What we do
             </h2>
             <p className={`mt-4 max-w-2xl ${lead}`}>
-              Four integrated capabilities designed to work together or
-              independently.
+              Four technology capabilities, plus Entrepreneur Mentoring &amp;
+              Coaching to support the person building and leading the business.
             </p>
           </div>
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BlogLibrary from "@/components/BlogLibrary";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
-import { lead, linkInline, pageMain } from "@/components/ui";
+import { buttonPrimary, h2, lead, linkInline, pageMain } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
   "title": "Executive Insights",
@@ -49,6 +49,14 @@ export default function InsightsPage() {
       </div>
 
       <BlogLibrary />
+      <section className="border-t border-line bg-canvas-deep px-4 py-16 sm:px-6" aria-labelledby="insights-coaching-heading">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">From reflection to action</p>
+          <h2 id="insights-coaching-heading" className={`mt-4 ${h2}`}>Work through your own leadership questions.</h2>
+          <p className={`max-w-2xl ${lead}`}>Bring your business idea, difficult decision, or team challenge to Entrepreneur Mentoring &amp; Coaching. We match you with a coach aligned with your industry for practical guidance, mindset, and leadership support.</p>
+          <Link href="/coaching" className={`mt-6 min-h-11 ${buttonPrimary}`}>Explore Entrepreneur Mentoring &amp; Coaching →</Link>
+        </div>
+      </section>
     </main>
   );
 }

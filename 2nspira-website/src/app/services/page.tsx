@@ -198,7 +198,8 @@ export default function ServicesPage() {
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
             Human-centered solutions for AI adoption, systems optimization, and
-            technology leadership.
+            technology leadership—alongside entrepreneur mentoring, mindset,
+            and leadership coaching.
           </p>
           <div className="mt-10 flex justify-center">
             <Link

@@ -23,7 +23,7 @@ export default function BlogLibrary({ category }: { category?: string }) {
           placeholder="Search AI, trust, leadership…"
           className="mt-3 w-full rounded-full border border-line bg-surface px-4 py-3 text-ink transition-colors duration-300 ease-gentle placeholder:text-muted focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         />
-        <p className={`mt-3 ${caption}`} role="status">
+        <p className="mt-3 text-sm text-body" role="status">
           {filtered.length} {filtered.length === 1 ? "article" : "articles"}
         </p>
       </div>
