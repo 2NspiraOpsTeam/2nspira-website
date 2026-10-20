@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
   body,
@@ -65,6 +65,7 @@ const relationships = [
 export default function CareersPage() {
   return (
     <main className={pageMain} id="main-content">
+      <CatalogEffects>
       <header className="relative overflow-hidden border-b border-line bg-surface py-24 sm:py-28">
         <AmbientField />
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
@@ -81,7 +82,7 @@ export default function CareersPage() {
         </div>
       </header>
 
-      <Reveal className="mx-auto max-w-5xl px-4 pt-10 sm:px-6">
+      <div data-catalog-reveal className="mx-auto max-w-5xl px-4 pt-10 sm:px-6">
         <figure className="group overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
           <Image
             src="/images/pages/careers-collaboration.png"
@@ -93,11 +94,11 @@ export default function CareersPage() {
             className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.015] motion-reduce:transform-none"
           />
         </figure>
-      </Reveal>
+      </div>
 
       <section className={section} aria-labelledby="talent-model-heading">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
-          <Reveal>
+          <div data-catalog-reveal>
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-accent">Our talent model</p>
               <h2 id="talent-model-heading" className={`mt-4 ${h2}`}>Expertise that scales with the work</h2>
@@ -112,9 +113,9 @@ export default function CareersPage() {
                 The right expertise for each engagement, with a delivery model designed to remain focused, adaptable, and responsive to client needs.
               </p>
             </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <div className={`p-6 sm:p-8 ${cardFlat}`}>
+          </div>
+          <div data-catalog-reveal>
+            <div data-catalog-card className={`p-6 sm:p-8 ${cardFlat}`}>
               <AccentRule className="mb-5" />
               <h3 className={h3}>Areas of expertise</h3>
               <p className="mt-2 text-sm leading-6 text-muted">Capabilities we may seek as client needs evolve:</p>
@@ -127,23 +128,23 @@ export default function CareersPage() {
                 ))}
               </ul>
             </div>
-          </Reveal>
+          </div>
         </div>
       </section>
 
       <section className={sectionBand} aria-labelledby="opportunities-heading">
-        <Reveal className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+        <div data-catalog-reveal className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Opportunities</p>
           <h2 id="opportunities-heading" className={`mt-4 ${h2}`}>Current Opportunities</h2>
           <p className="mt-6 text-xl font-semibold text-ink">There are no open positions at this time.</p>
           <p className="mx-auto mt-4 max-w-2xl leading-8 text-body">
             2Nspira is growing its client portfolio and professional network. Employment, consulting, and project-based opportunities may become available as our work expands.
           </p>
-        </Reveal>
+        </div>
       </section>
 
       <section className={section} aria-labelledby="network-heading">
-        <Reveal className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div data-catalog-reveal className="mx-auto max-w-4xl px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface p-8 shadow-soft sm:p-12">
             <AmbientField />
             <div className="relative">
@@ -155,27 +156,27 @@ export default function CareersPage() {
               <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
                 Introduce yourself by email. A brief note about your expertise and a link to your professional profile is a good place to start.
               </p>
-              <a href={introductionUrl} className={`mt-7 ${buttonPrimary}`}>Introduce Yourself →</a>
+              <a href={introductionUrl} className={`mt-7 min-h-11 ${buttonPrimary}`}>Introduce Yourself →</a>
             </div>
           </div>
-        </Reveal>
+        </div>
       </section>
 
       <section className={sectionBand} aria-labelledby="values-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <Reveal>
+          <div data-catalog-reveal>
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">How we work</p>
             <h2 id="values-heading" className={`mt-4 ${h2}`}>What We Value</h2>
-          </Reveal>
+          </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
-              <Reveal key={value.title} delay={index * 60}>
-                <div className={`group h-full p-6 ${cardFlat}`}>
+              <div data-catalog-reveal key={value.title}>
+                <div data-catalog-card className={`group h-full p-6 ${cardFlat}`}>
                   <AccentRule className="mb-5" />
                   <h3 className={h3}>{value.title}</h3>
                   <p className="mt-3 leading-7 text-body">{value.text}</p>
                 </div>
-              </Reveal>
+              </div>
             ))}
           </div>
         </div>
@@ -183,35 +184,36 @@ export default function CareersPage() {
 
       <section className={section} aria-labelledby="relationships-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <Reveal>
+          <div data-catalog-reveal>
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">Ways to work together</p>
             <h2 id="relationships-heading" className={`mt-4 ${h2}`}>Types of Relationships</h2>
             <p className="mt-4 max-w-2xl leading-8 text-body">The form of collaboration depends on the opportunity and the needs of the engagement.</p>
-          </Reveal>
+          </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {relationships.map((relationship, index) => (
-              <Reveal key={relationship.title} delay={index * 80}>
-                <div className={`group h-full p-6 sm:p-8 ${cardFlat}`}>
+              <div data-catalog-reveal key={relationship.title}>
+                <div data-catalog-card className={`group h-full p-6 sm:p-8 ${cardFlat}`}>
                   <span className="text-xs font-semibold tracking-[0.18em] text-accent">{String(index + 1).padStart(2, "0")}</span>
                   <AccentRule className="mt-4 mb-4" />
                   <h3 className={h3}>{relationship.title}</h3>
                   <p className="mt-3 leading-7 text-body">{relationship.text}</p>
                 </div>
-              </Reveal>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       <section className="border-t border-line bg-canvas-deep py-16 sm:py-20" aria-labelledby="final-cta-heading">
-        <Reveal className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <div data-catalog-reveal className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 id="final-cta-heading" className={h2}>Interested in working with 2Nspira?</h2>
           <p className="mx-auto mt-4 max-w-2xl leading-8 text-body">
             We&apos;re interested in meeting thoughtful professionals whose experience aligns with the work we do.
           </p>
-          <a href={introductionUrl} className={`mt-7 ${buttonPrimary}`}>Join Our Talent Network →</a>
-        </Reveal>
+          <a href={introductionUrl} className={`mt-7 min-h-11 ${buttonPrimary}`}>Join Our Talent Network →</a>
+        </div>
       </section>
+      </CatalogEffects>
     </main>
   );
 }
