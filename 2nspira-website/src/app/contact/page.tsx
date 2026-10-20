@@ -97,10 +97,8 @@ function FAQItem({
 }) {
   return (
     <Reveal delay={index * 100}>
-      <div>
-        <dt className="font-medium text-ink">{q}</dt>
-        <dd className={`mt-1 ${caption}`}>{a}</dd>
-      </div>
+      <dt className="font-medium text-ink">{q}</dt>
+      <dd className={`mt-1 ${caption}`}>{a}</dd>
     </Reveal>
   );
 }
@@ -463,6 +461,7 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     name="message"
+                    aria-describedby="message-hint"
                     required
                     rows={4}
                     value={formState.message}
