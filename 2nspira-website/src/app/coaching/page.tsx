@@ -129,7 +129,7 @@ export default function EntrepreneurMentoringPage() {
           <h3 id="build-the-right-business" className={`scroll-mt-24 ${h3}`}>Build the right business</h3>
           <h4 className="mt-5 font-semibold text-ink">Turn your idea into a business worth building</h4>
           <p className="mt-4 leading-8 text-body">Together, we work through the foundations of your venture:</p>
-          <p className="mt-3 text-sm text-muted">Open a topic to explore how we work on it together.</p>
+          <p className="mt-3 text-sm text-body">Open a topic to explore how we work on it together.</p>
           <div className="mt-6 grid items-start gap-4 md:grid-cols-2">
             {ventureFoundations.map(({ title, text }) => <details key={title} className={`p-5 sm:p-6 ${cardFlat} ${styles.disclosure}`}>
               <summary className={styles.summary}>{title}<span aria-hidden="true" className={styles.plus}>+</span></summary>
