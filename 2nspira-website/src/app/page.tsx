@@ -81,7 +81,7 @@ export default function Home() {
     {
       title: "Technology Leadership & Founder Advisory",
       description:
-        "Experienced fractional technology leadership for organizations and practical advisory and coaching for founders strengthening their own leadership.",
+        "Experienced fractional technology leadership for organizations and mentoring for founders turning ideas into products, businesses, and stronger leadership.",
       benefit: "Outcome: clearer technology priorities, stronger leadership, and practical execution.",
       href: "/fractional-cio",
       linkLabel: "Explore leadership & advisory",

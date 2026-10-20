@@ -11,6 +11,7 @@ import {
   h2,
   h3,
   lead,
+  linkInline,
   pageMain,
   section,
   sectionBand,
@@ -19,18 +20,64 @@ import {
 export const metadata: Metadata = {
   title: { absolute: "Fractional CIO & Founder Coaching | 2Nspira" },
   description:
-    "Fractional CIO leadership and founder coaching from 2Nspira. Align technology, strengthen leadership, and turn business priorities into practical execution.",
+    "Fractional CIO leadership and founder mentoring from 2Nspira. Validate business ideas, develop products, and strengthen leadership with practical advisory and coaching.",
   openGraph: {
     type: "website", siteName: "2Nspira", title: "Clearer decisions. Stronger leaders. Better execution.",
-    description: "Fractional CIO leadership and founder coaching from 2Nspira. Align technology, strengthen leadership, and turn business priorities into practical execution.",
+    description: "Fractional CIO leadership and founder mentoring from 2Nspira. Validate business ideas, develop products, and strengthen leadership with practical advisory and coaching.",
     url: "https://2nspira.com/fractional-cio",
     images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }],
   },
-  twitter: { card: "summary_large_image", title: "Clearer decisions. Stronger leaders. Better execution.", description: "Fractional CIO leadership and founder coaching from 2Nspira. Align technology, strengthen leadership, and turn business priorities into practical execution.", images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
+  twitter: { card: "summary_large_image", title: "Clearer decisions. Stronger leaders. Better execution.", description: "Fractional CIO leadership and founder mentoring from 2Nspira. Validate business ideas, develop products, and strengthen leadership with practical advisory and coaching.", images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
   alternates: {
     canonical: "/fractional-cio",
   },
 };
+
+const ventureFoundations = [
+  {
+    "title": "Design thinking",
+    "text": "Understand the people experiencing the problem, challenge assumptions, explore possible solutions, and test early concepts."
+  },
+  {
+    "title": "Ideal customer persona",
+    "text": "Identify who you serve, their needs, buying motivations, alternatives, and decision process. Distinguish the person using your product from the person paying for it."
+  },
+  {
+    "title": "Customer discovery and validation",
+    "text": "Learn how to interview potential customers and gather evidence of a meaningful problem and willingness to pay."
+  },
+  {
+    "title": "Product development",
+    "text": "Translate what you learn into a value proposition, prototypes, a focused minimum viable product, and a practical development roadmap."
+  },
+  {
+    "title": "Product–market fit",
+    "text": "Test whether customers consistently choose, use, pay for, and return to your solution. Use the evidence to refine your product and positioning."
+  },
+  {
+    "title": "Business model and go-to-market",
+    "text": "Explore pricing, delivery costs, sales channels, and a realistic path to reaching your first customers."
+  }
+];
+
+const dueDiligenceContents = [
+  "The problem, proposed solution, and founder’s purpose.",
+  "Your ideal customer persona and customer research.",
+  "Market alternatives, competitors, and differentiation.",
+  "Product scope, development milestones, and validation results.",
+  "Business model, pricing assumptions, costs, and resource needs.",
+  "Go-to-market approach and early sales evidence.",
+  "Key risks, unanswered questions, and decision criteria.",
+  "A prioritized action plan with ownership and milestones."
+];
+
+const founderGrowth = [
+  "Mindset, resilience, and responding constructively to setbacks.",
+  "Decision-making when information is incomplete.",
+  "Focus, accountability, and following through.",
+  "Communication, delegation, and building a team.",
+  "Your transition from creating a product to leading a company."
+];
 
 const executiveLenses = [
   { title: "Strategy", text: "Connect technology priorities to the organization’s goals, operating model, and growth plans." },
@@ -62,7 +109,7 @@ const fractionalCioJsonLd = {
   "@type": "Service",
   name: "Technology Leadership & Founder Advisory",
   description:
-    "Fractional CIO leadership and founder coaching from 2Nspira. Align technology, strengthen leadership, and turn business priorities into practical execution.",
+    "Fractional CIO leadership and founder mentoring from 2Nspira. Validate business ideas, develop products, and strengthen leadership with practical advisory and coaching.",
   url: "https://2nspira.com/fractional-cio",
   provider: { "@id": "https://2nspira.com/#organization" },
   areaServed: "Worldwide",
@@ -101,43 +148,80 @@ export default function FractionalCioPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 id="engagements-heading" className={h2}>Two ways to work together</h2>
           <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
-            <article className={`h-full p-7 sm:p-8 ${card}`} aria-labelledby="fractional-engagement-heading">
+            <article className={`flex h-full flex-col p-7 sm:p-8 ${card}`} aria-labelledby="fractional-engagement-heading">
               <AccentRule className="mb-6" />
               <h3 id="fractional-engagement-heading" className={h3}>Fractional CIO / Technology Leadership</h3>
               <p className="mt-5 leading-8 text-body">Experienced executive leadership for organizations that need direction and accountability across technology strategy, investment, vendors, governance, and delivery.</p>
               <p className="mt-4 leading-8 text-body">We provide leadership within an agreed scope, working with your team to move priorities into execution.</p>
+              <Link href="#cio-service-heading" className={`mt-auto min-h-[44px] pt-6 ${linkInline}`}>Explore fractional leadership <span aria-hidden="true">&nbsp;→</span></Link>
             </article>
-            <article className={`h-full p-7 sm:p-8 ${card}`} aria-labelledby="founder-engagement-heading">
+            <article className={`flex h-full flex-col p-7 sm:p-8 ${card}`} aria-labelledby="founder-engagement-heading">
               <AccentRule className="mb-6" />
               <h3 id="founder-engagement-heading" className={h3}>Founder Advisory &amp; Coaching</h3>
-              <p className="mt-5 leading-8 text-body">A trusted sounding board and structured leadership support for founders navigating decisions, delegation, team alignment, accountability, and technology choices.</p>
+              <p className="mt-5 leading-8 text-body">Practical business guidance, mindset and leadership coaching for entrepreneurs—from exploring an initial idea and developing a product to leading a growing company.</p>
               <p className="mt-4 leading-8 text-body">We help you strengthen your leadership while you retain ownership of business decisions and execution.</p>
+              <Link href="#founder-coaching-heading" className={`mt-auto min-h-[44px] pt-6 ${linkInline}`}>Explore founder mentoring <span aria-hidden="true">&nbsp;→</span></Link>
             </article>
           </div>
         </div>
       </section>
 
       <section className={sectionBand} aria-labelledby="founder-coaching-heading">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <h2 id="founder-coaching-heading" className={h2}>Build the business—and your ability to lead it.</h2>
-          <p className="mt-6 leading-8 text-body">Being a founder means making decisions before you have every answer. As your business grows, the challenge shifts from doing everything yourself to setting direction, developing people, and creating accountability.</p>
-          <p className="mt-5 leading-8 text-body">2Nspira provides practical advisory and coaching for founders navigating that transition. Together, we work through the decisions, conversations, and leadership habits that influence how your business moves forward.</p>
-          <p className="mt-8 font-semibold text-ink">We can help you:</p>
-          <ul className="mt-4 list-disc space-y-3 pl-6 leading-8 text-body marker:text-accent">
-            <li>Turn competing priorities into a focused execution plan.</li>
-            <li>Delegate responsibility and establish clear ownership.</li>
-            <li>Strengthen communication and alignment across your team.</li>
-            <li>Evaluate technology investments and work more effectively with technical partners.</li>
-            <li>Prepare for difficult decisions and hold yourself accountable to agreed actions.</li>
-          </ul>
-          <p className="mt-8 leading-8 text-body">Engagements can include focused advisory sessions, an ongoing coaching relationship, or coaching alongside fractional technology leadership.</p>
-          <div className="mt-8"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Talk through your next leadership challenge</Link></div>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="max-w-4xl">
+            <p className={eyebrow}>Founder mentoring with Jeffrey Cortez</p>
+            <h2 id="founder-coaching-heading" className={`mt-4 scroll-mt-24 ${h2}`}>Build a business with purpose. Become the leader it needs.</h2>
+            <p className="mt-6 leading-8 text-body">A product idea is a starting point. Building a company means understanding your customers, testing your assumptions, developing the right product, and growing into the responsibilities of leadership.</p>
+            <p className="mt-5 leading-8 text-body">Drawing on my experience building four companies from the ground up, I mentor entrepreneurs through those decisions—from exploring an initial idea to developing a product and leading a growing business.</p>
+            <p className="mt-5 leading-8 text-body">Our work combines practical business guidance with mindset and leadership coaching. You gain an experienced sounding board, honest feedback, and direction grounded in the challenges you face.</p>
+          </div>
+
+          <section aria-labelledby="venture-foundations-heading" className="mt-12">
+            <h3 id="venture-foundations-heading" className={h3}>Turn your idea into a business worth building</h3>
+            <p className="mt-4 leading-8 text-body">Together, we work through the foundations of your venture:</p>
+            <dl className="mt-6 grid gap-5 md:grid-cols-2">
+              {ventureFoundations.map(({ title, text }) => (
+                <div key={title} className={`p-6 sm:p-7 ${cardFlat}`}>
+                  <dt className="font-semibold text-ink">{title}</dt>
+                  <dd className="mt-3 leading-7 text-body">{text}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+
+          <div className="mt-12 grid items-start gap-8 lg:grid-cols-2">
+            <section aria-labelledby="due-diligence-heading" className={`p-6 sm:p-8 ${cardFlat}`}>
+              <AccentRule className="mb-6" />
+              <h3 id="due-diligence-heading" className={h3}>Develop your Entrepreneur Due Diligence Document</h3>
+              <p className="mt-5 leading-8 text-body">We bring your thinking and research together in a working document that helps you decide what to pursue, what to test, and where to invest your time and money.</p>
+              <p className="mt-5 font-semibold text-ink">Your document captures:</p>
+              <ul className="mt-4 list-disc space-y-3 pl-5 leading-7 text-body marker:text-accent">
+                {dueDiligenceContents.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+              <p className="mt-6 leading-8 text-body">This document evolves as you learn, making your assumptions and evidence visible before you make larger commitments.</p>
+            </section>
+
+            <section aria-labelledby="founder-growth-heading" className={`p-6 sm:p-8 ${cardFlat}`}>
+              <AccentRule className="mb-6" />
+              <h3 id="founder-growth-heading" className={h3}>Grow alongside your company</h3>
+              <p className="mt-5 leading-8 text-body">The business will challenge you personally as well as professionally. Our mentoring relationship also creates space to work on:</p>
+              <ul className="mt-4 list-disc space-y-3 pl-5 leading-7 text-body marker:text-accent">
+                {founderGrowth.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+              <p className="mt-6 leading-8 text-body">I share relevant experiences, recommend books and resources, and help you turn those lessons into practical action. Regular conversations and agreed support between sessions give you a continuing relationship as your business evolves.</p>
+            </section>
+          </div>
+
+          <div className="mt-10 max-w-3xl">
+            <p className="text-lg font-medium leading-8 text-ink">An experienced mentor for the company you’re building—and the leader you’re becoming.</p>
+            <div className="mt-6"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Start a mentoring conversation</Link></div>
+          </div>
         </div>
       </section>
 
       <section aria-labelledby="cio-service-heading">
         <header className="mx-auto max-w-6xl px-4 pt-20 sm:px-6 sm:pt-28">
-          <h2 id="cio-service-heading" className={h2}>Fractional CIO / Technology Leadership</h2>
+          <h2 id="cio-service-heading" className={`scroll-mt-24 ${h2}`}>Fractional CIO / Technology Leadership</h2>
         </header>
         <section className={section} aria-labelledby="leadership-heading">
           <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">

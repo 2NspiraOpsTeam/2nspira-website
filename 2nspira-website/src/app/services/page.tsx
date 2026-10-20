@@ -74,10 +74,10 @@ const capabilities = [
     id: "service-heading-4",
     title: "Technology Leadership & Founder Advisory",
     description:
-      "Experienced fractional technology leadership for organizations, alongside advisory and coaching for founders navigating decisions, delegation, and team alignment.",
+      "Experienced fractional technology leadership for organizations, alongside founder mentoring in customer validation, product development, business planning, mindset, and leadership.",
     benefit:
       "You get: experienced technology leadership or a trusted advisor to strengthen your own leadership, aligned to the decisions and priorities in front of you.",
-    points: ["Technology strategy & investment", "Fractional executive leadership", "Founder advisory & coaching"],
+    points: ["Technology strategy & investment", "Fractional executive leadership", "Founder mentoring & coaching"],
     href: "/fractional-cio",
     linkLabel: "Explore leadership & advisory",
   },
@@ -121,7 +121,7 @@ const servicesJsonLd = {
       "@id": "https://2nspira.com/services#fractional-leadership",
       name: "Technology Leadership & Founder Advisory",
       description:
-        "Fractional technology leadership for organizations and practical founder advisory and coaching to strengthen leadership and execution.",
+        "Fractional technology leadership for organizations and founder mentoring to validate ideas, develop products, and strengthen business leadership.",
       url: "https://2nspira.com/fractional-cio",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
