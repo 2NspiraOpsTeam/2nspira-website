@@ -108,19 +108,16 @@ export default function EntrepreneurMentoringPage() {
     <section aria-labelledby="mentor-heading" className={`${styles.sectionSpacing} ${styles.mentorBand}`}>
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
         <div>
-          <div className="flex items-center gap-6">
-            <Image src="/images/coaching/entrepreneur-mentor-portrait.webp" alt="2Nspira entrepreneur mentor." width={600} height={900} sizes="(min-width: 640px) 140px, 96px" className="h-auto w-24 shrink-0 rounded-2xl border border-line sm:w-[140px]" />
-            <div><p className={eyebrow}>Industry-aligned guidance</p>
-            <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>Matched to your business.</h2></div>
-          </div>
+          <p className={eyebrow}>Industry-aligned guidance</p>
+          <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>Matched to your business.</h2>
           <p className="mt-5 leading-8 text-body">2Nspira matches you with a coach aligned with your industry, business priorities, and stage of development. We start with the decisions and leadership challenges you face.</p>
           <p className="mt-5 leading-8 text-body">Our work combines practical business guidance with mindset and leadership coaching. You gain an experienced sounding board, honest feedback, and direction grounded in the challenges you face.</p>
           <Link href="/about" className={`mt-6 min-h-[44px] ${linkInline}`}>About 2Nspira <span aria-hidden="true">&nbsp;→</span></Link>
         </div>
         <aside aria-labelledby="mentor-background-heading" className={styles.mentorNote} data-catalog-fade>
-          <div className={styles.experienceMark}><span aria-hidden="true">4</span><span>Companies built<br />from the ground up</span></div>
-          <p className="mt-6 leading-8 text-body">This mentoring approach draws on experience building four companies from the ground up—from exploring an initial idea to developing a product and leading a growing business.</p>
-          <h3 id="mentor-background-heading" className={`mt-6 ${h3}`}>Build with purpose</h3>
+          <span className={styles.iconBadge}><Handshake aria-hidden="true" size={28} strokeWidth={1.6} /></span>
+          <h3 id="mentor-background-heading" className={`mt-6 ${h3}`}>Industry leaders. Individual support.</h3>
+          <p className="mt-5 leading-8 text-body">A handful of industry leaders are available to coach you.</p>
           <p className="mt-3 text-sm leading-7 text-body">Our mentoring is focused on helping you build a business worth pursuing while developing your ability to lead it.</p>
         </aside>
       </div>
