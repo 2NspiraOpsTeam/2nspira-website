@@ -121,7 +121,7 @@ export default function EntrepreneurMentoringPage() {
           <ul className="mt-4 space-y-3 text-sm leading-7 text-body">
             {["Building four companies from the ground up.", "Moving from an initial idea to developing a product.", "Leading a growing business."].map(item => <li key={item} className="flex items-start gap-3"><CheckCircle2 aria-hidden="true" size={19} className="mt-1 shrink-0 text-accent" /><span>{item}</span></li>)}
           </ul>
-          <p className="mt-4 text-sm leading-7 text-body">This is one example of the experience available—not a background shared by every coach. We match support to your industry and priorities.</p>
+          <p className="mt-4 text-sm leading-7 text-body">This is one example of the experience available. We match support to your industry and priorities.</p>
         </aside>
       </div>
     </section>

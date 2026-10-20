@@ -165,7 +165,7 @@ export default function WorkPage() {
           </div >
           
           <Reveal className="mt-8">
-            <p className="text-sm text-body/60 italic">
+            <p className="text-sm text-body italic">
               {manufacturingWhatThisDemonstrates}
             </p>
           </Reveal>
@@ -211,7 +211,7 @@ export default function WorkPage() {
           </div >
 
           <Reveal className="mt-8">
-            <p className="text-sm text-body/60 italic">
+            <p className="text-sm text-body italic">
               {waterbearWhatThisDemonstrates}
             </p>
           </Reveal>
@@ -224,7 +224,7 @@ export default function WorkPage() {
               <h2 className="mb-4 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Supporting work
               </h2>
-              <p className="text-lg text-body/60 max-w-2xl">
+              <p className="text-lg text-body max-w-2xl">
                 The following projects demonstrate the range of digital platforms
                 2Nspira has built — from mission‑driven archives to bilingual
                 experiences and interactive tools.
@@ -249,7 +249,7 @@ export default function WorkPage() {
                     <h3 className="text-sm font-semibold tracking-tight text-ink">
                       {project.name}
                     </h3>
-                    <p className="mt-2 text-xs text-body/60 leading-relaxed">
+                    <p className="mt-2 text-xs text-body leading-relaxed">
                       {project.description}
                     </p>
                     <a
@@ -274,7 +274,7 @@ export default function WorkPage() {
               <h2 className="mb-4 text-2xl font-semibold text-white sm:text-3xl">
                 Ready to modernize your operations?
               </h2>
-              <p className="mb-8 text-white/80">
+              <p className="mb-8 text-white">
                 Let&apos;s discuss how we can build the systems your organization needs to scale.
               </p>
               <Link href="/contact" className="inline-block rounded-full bg-ink px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-ink/90">
