@@ -176,7 +176,7 @@ export default function EntrepreneurMentoringPage() {
             <h3 data-catalog-reveal id="keep-moving-with-guidance" className={`mt-4 scroll-mt-24 ${styles.pillarHeading}`}>Keep moving with guidance</h3>
             <p className="mt-5 max-w-xl leading-8 text-body">I share relevant experiences, recommend books and resources, and help you turn those lessons into practical action. Regular conversations and agreed support between sessions give you a continuing relationship as your business evolves.</p>
           </div>
-          <dl className={styles.supportTimeline}>{relationship.map(({title,text,icon: Icon}) => <div key={title} className={styles.supportStep}><span aria-hidden="true" className={styles.timelineIcon}><Icon size={22} strokeWidth={1.7} /></span><div><dt className="font-semibold text-ink">{title}</dt><dd className="mt-2 leading-7 text-body">{text}</dd></div></div>)}</dl>
+          <dl className={styles.supportTimeline}>{relationship.map(({title,text,icon: Icon}) => <div key={title} className={styles.supportStep}><dt className="font-semibold text-ink"><span aria-hidden="true" className={styles.timelineIcon}><Icon size={22} strokeWidth={1.7} /></span>{title}</dt><dd className="mt-2 leading-7 text-body">{text}</dd></div>)}</dl>
         </div>
       </section>
     </section>
