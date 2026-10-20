@@ -9,3 +9,49 @@
 .plus { flex-shrink: 0; font-size: 1.5rem; line-height: 1; color: var(--color-accent); transition: transform 220ms var(--ease-gentle); }
 .disclosure[open] .plus { transform: rotate(45deg); }
 @media (prefers-reduced-motion: reduce) { .disclosure, .plus { transition: none; } }
+
+/* Coaching-only editorial rhythm; use the existing navy, indigo and warm canvas. */
+.sectionSpacing { padding-block: 4rem; }
+.mentorBand { background: var(--color-surface); border-bottom: 1px solid var(--color-line); }
+.mentorNote { padding: 1.75rem; border-left: 3px solid var(--color-accent); border-radius: 0 1.5rem 1.5rem 0; background: var(--color-accent-soft); }
+.experienceMark { display: flex; align-items: center; gap: 1.25rem; color: var(--color-accent-strong); }
+.experienceMark > span:first-child { font-size: 4.5rem; line-height: 1; letter-spacing: -0.06em; font-weight: 600; }
+.experienceMark > span:last-child { font-size: 0.875rem; line-height: 1.6; font-weight: 600; }
+.iconBadge { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 3rem; height: 3rem; border-radius: 0.875rem; background: var(--color-accent-soft); color: var(--color-accent-strong); }
+.areaLink { border-top: 3px solid var(--color-accent); }
+.ventureBand { background: var(--color-accent-soft); border-block: 1px solid #dce4ef; }
+.sectionNumber { color: var(--color-accent-strong); font-size: 0.75rem; line-height: 1.6; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; }
+.pillarHeading { color: var(--color-ink); font-size: clamp(1.625rem, 2.4vw, 2rem); line-height: 1.2; font-weight: 600; letter-spacing: -0.025em; }
+.summaryTitle { display: flex; align-items: center; gap: 0.75rem; }
+.summaryTitle svg { flex-shrink: 0; color: var(--color-accent-strong); }
+.leadershipBoard { display: grid; gap: 2rem; padding: 2rem; border-radius: 1.75rem; background: #232f42; }
+.inverseNumber { color: #c9d8ed; font-size: 0.75rem; line-height: 1.6; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; }
+.inverseHeading { color: #ffffff; font-size: clamp(1.625rem, 2.4vw, 2rem); line-height: 1.2; font-weight: 600; letter-spacing: -0.025em; }
+.inverseText { color: #e0e6ef; }
+.leadershipSymbol { display: inline-flex; margin-top: 1.5rem; padding: 1rem; border: 1px solid #62738b; color: #d0def1; border-radius: 50%; }
+.leadershipList { display: grid; gap: 0; align-content: center; }
+.leadershipList li { display: flex; align-items: center; gap: 1rem; padding-block: 1.25rem; color: #f2f5fa; line-height: 1.7; border-bottom: 1px solid #536176; }
+.leadershipList li:first-child { padding-top: 0; }
+.leadershipList li:last-child { border-bottom: none; padding-bottom: 0; }
+.inverseIcon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 2.75rem; height: 2.75rem; border-radius: 50%; color: #d5e1f2; background: #394963; }
+.guidanceBand { background: var(--color-canvas-deep); border-block: 1px solid var(--color-line); }
+.supportTimeline { position: relative; display: grid; gap: 1.75rem; }
+.supportTimeline::before { position: absolute; content: ""; top: 1.5rem; bottom: 1.5rem; left: 1.375rem; width: 1px; background: var(--color-line-strong); }
+.supportStep { position: relative; display: grid; grid-template-columns: 2.75rem minmax(0,1fr); gap: 1rem; }
+.timelineIcon { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--color-surface); color: var(--color-accent-strong); border: 1px solid var(--color-line); }
+.documentBand { background: var(--color-surface); }
+.documentPreview { border: 1px solid var(--color-line); border-radius: 1.25rem; background: var(--color-canvas); box-shadow: var(--shadow-lift); overflow: hidden; }
+.documentTop { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 1.5rem; background: var(--color-accent-soft); color: var(--color-accent-strong); font-weight: 600; font-size: 0.875rem; border-bottom: 1px solid var(--color-line); }
+.sampleLabel { margin-left: auto; font-weight: 400; font-size: 0.75rem; }
+.documentLines { display: grid; gap: 0.75rem; margin-top: 1.5rem; }
+.documentLines > div { display: flex; gap: 1rem; padding: 1rem; border-radius: 0.625rem; background: var(--color-surface); border: 1px solid var(--color-line); color: var(--color-body); font-size: 0.875rem; }
+.documentLines > div > span:first-child { color: var(--color-accent-strong); font-weight: 600; }
+.processBand { border-block: 1px solid var(--color-line); background: var(--color-canvas-deep); }
+.processSteps { display: grid; gap: 1.25rem; margin-top: 2.5rem; }
+.processSteps article { height: 100%; }
+.stepTop { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--color-accent-strong); font-size: 0.875rem; font-weight: 600; }
+.scopeNote { display: grid; gap: 1rem; align-items: start; margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--color-accent); border-radius: 0 1rem 1rem 0; background: var(--color-surface); }
+.scopeNote > svg { color: var(--color-accent-strong); }
+@media (min-width: 640px) { .sectionSpacing { padding-block: 5rem; } .mentorNote { padding: 2rem; } .leadershipBoard { padding: 3rem; } }
+@media (min-width: 768px) { .processSteps { grid-template-columns: repeat(3,minmax(0,1fr)); } .scopeNote { grid-template-columns: 2.5rem minmax(0,0.8fr) minmax(0,1.8fr); gap: 1.5rem; padding: 2rem; } }
+@media (min-width: 1024px) { .leadershipBoard { grid-template-columns: minmax(0,0.9fr) minmax(0,1.2fr); gap: 3rem; } }
