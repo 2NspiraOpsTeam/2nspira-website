@@ -1,13 +1,12 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import AssessmentPage from "@/components/Resources/AssessmentPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = publicPageMetadata({
   "title": "AI Readiness Scorecard | Organizational Assessment",
   "description": "Assess your organization's readiness for responsible AI across strategy, governance, workflows, data, trust, risk, and implementation—with practical next steps.",
-  "alternates": {
-    "canonical": "/resources/ai-readiness-scorecard"
-  }
-};
+  "path": "/resources/ai-readiness-scorecard"
+});
 
 export default function Page() {
   return <AssessmentPage {...{

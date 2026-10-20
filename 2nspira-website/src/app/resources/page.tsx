@@ -1,14 +1,15 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import styles from "./resources.module.css";
 
-export const metadata: Metadata = {
-  title: "Resources | Assessments and Practical Tools",
-  description: "Use free 2Nspira assessments to identify professional strengths, evaluate organizational AI readiness, and turn insight into practical next steps.",
-  alternates: { canonical: "/resources" },
-};
+export const metadata: Metadata = publicPageMetadata({
+  "title": "Resources | Assessments and Practical Tools",
+  "description": "Use free 2Nspira assessments to identify professional strengths, evaluate organizational AI readiness, and turn insight into practical next steps.",
+  "path": "/resources"
+});
 
 const strengthsUrl = "/resources/strength-profile";
 const readinessUrl = "/resources/ai-readiness-scorecard";

@@ -1,14 +1,14 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Link from "next/link";
 import BlogLibrary from "@/components/BlogLibrary";
 import { lead, linkInline, pageMain } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: "Trust Is the Operating System",
-  description:
-    "Read Trust Is the Operating System essays by Jeffrey Cortez on organizational trust, leadership judgment, resilience, AI, and the human side of change.",
-  alternates: { canonical: "/blog/categories/trust-is-the-operating-system" },
-};
+export const metadata: Metadata = publicPageMetadata({
+  "title": "Trust Is the Operating System",
+  "description": "Read Trust Is the Operating System essays by Jeffrey Cortez on organizational trust, leadership judgment, resilience, AI, and the human side of change.",
+  "path": "/blog/categories/trust-is-the-operating-system"
+});
 
 export default function Page() {
   return (
