@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   title: { absolute: "Entrepreneur Mentoring & Business Coaching | 2Nspira" }, description,
   alternates: { canonical: "/coaching" },
   openGraph: { type: "website", siteName: "2Nspira", title: "Build your business. Grow into the leader it needs.", description,
-    url: "https://2nspira.com/coaching", images: [{ url: "https://2nspira.com/images/coaching/coaching-social-v2.jpg", width: 1200, height: 630, alt: "Creative founders exploring a product idea with a mentor — illustrative scene" }] },
-  twitter: { card: "summary_large_image", title: "Build your business. Grow into the leader it needs.", description, images: ["https://2nspira.com/images/coaching/coaching-social-v2.jpg"] },
+    url: "https://2nspira.com/coaching", images: [{ url: "https://2nspira.com/images/coaching/coaching-social-v3.jpg", width: 1200, height: 630, alt: "Creative founders exploring a product idea with a mentor in an industrial studio — illustrative scene" }] },
+  twitter: { card: "summary_large_image", title: "Build your business. Grow into the leader it needs.", description, images: ["https://2nspira.com/images/coaching/coaching-social-v3.jpg"] },
 };
 
 const ventureFoundations = [
@@ -85,7 +85,7 @@ export default function EntrepreneurMentoringPage() {
           <div className="mt-8"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Discuss your business idea or leadership challenge</Link></div>
         </div>
         <figure className={`relative ${styles.hero}`} data-catalog-fade>
-          <Image src="/images/coaching/creative-mentoring-hero-v2.webp" alt="Illustrative scene of creative founders sharing a product concept with an experienced mentor in a bright studio." width={1536} height={864} loading="eager" fetchPriority="high" className="h-auto w-full rounded-3xl border border-line" />
+          <Image src="/images/coaching/creative-mentoring-hero-v3.webp" alt="Illustrative scene of creative founders sharing a product concept with an experienced mentor in an industrial creative studio." width={1536} height={864} loading="eager" fetchPriority="high" className="h-auto w-full rounded-3xl border border-line" />
           <figcaption className="mt-4 text-sm tracking-wide text-muted">Space to think. Support to move forward.</figcaption>
         </figure>
       </div>
