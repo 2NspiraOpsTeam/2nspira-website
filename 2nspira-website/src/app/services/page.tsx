@@ -130,7 +130,7 @@ const servicesJsonLd = {
     {
       "@type": "Service", "@id": "https://2nspira.com/services#entrepreneur-mentoring",
       name: "Entrepreneur Mentoring & Coaching",
-      description: "Personal mentoring for entrepreneurs, combining venture guidance with mindset and leadership coaching.",
+      description: "One-on-one mentoring for entrepreneurs, combining venture guidance with mindset and leadership coaching.",
       url: "https://2nspira.com/coaching",
       provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide",
     },

@@ -6,13 +6,13 @@ import styles from "./coaching.module.css";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { buttonPrimary, cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section, sectionBand } from "@/components/ui";
 
-const description = "Personal mentoring for entrepreneurs from 2Nspira. Validate your business idea, develop your venture, and grow with mindset and leadership coaching.";
+const description = "One-on-one mentoring for entrepreneurs from 2Nspira. Validate your business idea, develop your venture, and grow with mindset and leadership coaching.";
 export const metadata: Metadata = {
   title: { absolute: "Entrepreneur Mentoring & Business Coaching | 2Nspira" }, description,
   alternates: { canonical: "/coaching" },
   openGraph: { type: "website", siteName: "2Nspira", title: "Build your business. Grow into the leader it needs.", description,
-    url: "https://2nspira.com/coaching", images: [{ url: "https://2nspira.com/images/coaching/coaching-social-v2.jpg", width: 1200, height: 630, alt: "Creative founders exploring a product idea with a mentor — illustrative scene" }] },
-  twitter: { card: "summary_large_image", title: "Build your business. Grow into the leader it needs.", description, images: ["https://2nspira.com/images/coaching/coaching-social-v2.jpg"] },
+    url: "https://2nspira.com/coaching", images: [{ url: "https://2nspira.com/images/coaching/coaching-social-v5.jpg", width: 1200, height: 630, alt: "One-on-one entrepreneur mentoring in an industrial creative studio — illustrative scene" }] },
+  twitter: { card: "summary_large_image", title: "Build your business. Grow into the leader it needs.", description, images: ["https://2nspira.com/images/coaching/coaching-social-v5.jpg"] },
 };
 
 const ventureFoundations = [
@@ -63,7 +63,7 @@ const founderGrowth = [
 
 
 const relationship = [
-  { title: "Regular mentoring conversations", text: "We work through the decisions and challenges in front of you, review what you’re learning, and agree the next priorities." },
+  { title: "Regular one-on-one conversations", text: "We work through the decisions and challenges in front of you, review what you’re learning, and agree the next priorities." },
   { title: "Agreed actions", text: "Each conversation leads to clear actions and a way to review progress." },
   { title: "Personalized reading and exercises", text: "Books, resources, and practical exercises are chosen around your venture and leadership development." },
   { title: "Defined support between sessions", text: "We agree the scope, channels, and boundaries of support between sessions at the start of the relationship." },
@@ -81,11 +81,11 @@ export default function EntrepreneurMentoringPage() {
         <div>
           <EyebrowPill>Entrepreneur Mentoring &amp; Coaching</EyebrowPill>
           <h1 className={h1}>Build your business. Grow into the leader it needs.</h1>
-          <p className={lead}>Personal mentoring for entrepreneurs—from validating a product idea to navigating the challenges of leading a growing company.</p>
+          <p className={lead}>One-on-one mentoring for entrepreneurs—from validating a product idea to navigating the challenges of leading a growing company.</p>
           <div className="mt-8"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Discuss your business idea or leadership challenge</Link></div>
         </div>
         <figure className={`relative ${styles.hero}`} data-catalog-fade>
-          <Image src="/images/coaching/creative-mentoring-hero-v2.webp" alt="Illustrative scene of creative founders sharing a product concept with an experienced mentor in a bright studio." width={1536} height={864} loading="eager" fetchPriority="high" className="h-auto w-full rounded-3xl border border-line" />
+          <Image src="/images/coaching/creative-mentoring-hero-v5.webp" alt="Illustrative scene of one entrepreneur and one mentor in an executive conversation in an industrial creative studio." width={1536} height={864} loading="eager" fetchPriority="high" className="h-auto w-full rounded-3xl border border-line" />
           <figcaption className="mt-4 text-sm tracking-wide text-muted">Space to think. Support to move forward.</figcaption>
         </figure>
       </div>
