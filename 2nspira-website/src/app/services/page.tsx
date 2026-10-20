@@ -2,7 +2,8 @@ import EntrepreneurMentoringCard from "@/components/EntrepreneurMentoringCard";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
+import ServiceEffects from "@/components/ServiceEffects";
+import { Sparkles, Workflow, PanelsTopLeft, Compass } from "lucide-react";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
   buttonPrimary,
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
 
 const capabilities = [
   {
+    icon: Sparkles,
     id: "service-heading-1",
     title: "AI Enablement",
     description:
@@ -40,6 +42,7 @@ const capabilities = [
     linkLabel: "Explore AI enablement",
   },
   {
+    icon: Workflow,
     id: "service-heading-2",
     title: "Automation & Systems Optimization",
     description:
@@ -56,6 +59,7 @@ const capabilities = [
     linkLabel: "Explore systems optimization",
   },
   {
+    icon: PanelsTopLeft,
     id: "service-heading-3",
     title: "Websites & Digital Platforms",
     description:
@@ -72,6 +76,7 @@ const capabilities = [
     linkLabel: "Explore digital platforms",
   },
   {
+    icon: Compass,
     id: "service-heading-4",
     title: "Fractional CIO / Technology Leadership",
     description:
@@ -164,6 +169,7 @@ export default function ServicesPage() {
           __html: JSON.stringify(servicesJsonLd).replace(/</g, "\\u003c"),
         }}
       />
+      <ServiceEffects>
       {/* Hero */}
       <section
         className="relative overflow-hidden border-b border-line bg-surface py-24 sm:py-28"
@@ -196,7 +202,7 @@ export default function ServicesPage() {
 
       {/* Advisory visual — conceptual, not an actual client or engagement */}
       <div className="mx-auto max-w-5xl px-4 pt-10 sm:px-6">
-      <figure className="group relative overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
+      <figure data-catalog-fade className="group relative overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
         <Image
           src="/images/pages/services-advisory.webp"
           alt="Conceptual visualization of an advisory conversation between a consultant and a client."
@@ -210,22 +216,23 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className={section} aria-labelledby="services-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <Reveal><h2 id="services-heading" className={h2}>
+          <div><h2 data-catalog-reveal id="services-heading" className={h2}>
             Core Capabilities
           </h2>
           <p className={`mt-4 max-w-2xl ${lead}`}>
             Four integrated capabilities designed to work together or
             independently.
-          </p></Reveal>
+          </p></div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {capabilities.map((item, index) => (
-              <Reveal key={item.id} delay={index * 70} className="h-full"><article
+              <article data-catalog-card data-service-card
                 key={item.id}
-                className={`group relative flex h-full flex-col overflow-hidden p-8 hover:-translate-y-1 ${card}`}
+                className={`group relative flex h-full flex-col overflow-hidden p-8 ${card}`}
                 aria-labelledby={item.id}
               >
-                <AccentRule className="absolute inset-x-0 top-0 w-full scale-x-0 group-hover:scale-x-100" />
+                <span data-service-rule aria-hidden="true" />
+                <span data-service-icon><item.icon aria-hidden="true" size={25} strokeWidth={1.6} /></span>
                 <span className="mb-5 text-xs font-semibold tracking-[0.18em] text-accent">{String(index + 1).padStart(2, "0")}</span>
                 <h3 id={item.id} className={h3}>
                   {item.title}
@@ -252,10 +259,10 @@ export default function ServicesPage() {
                     href={item.href}
                     className={`mt-6 ${linkInline}`}
                   >
-                    {item.linkLabel} →
+                    {item.linkLabel} <span data-service-arrow aria-hidden="true">→</span>
                   </Link>
                 )}
-              </article></Reveal>
+              </article>
             ))}
           </div>
           <div className="mt-8"><EntrepreneurMentoringCard /></div>
@@ -266,7 +273,7 @@ export default function ServicesPage() {
       <section className={`${sectionBand} relative overflow-hidden`} aria-labelledby="outcomes-heading">
         <AmbientField />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 id="outcomes-heading" className={h2}>
+          <h2 data-catalog-reveal id="outcomes-heading" className={h2}>
             What to expect
           </h2>
           <p className={`mt-4 max-w-2xl ${lead}`}>
@@ -275,12 +282,12 @@ export default function ServicesPage() {
           </p>
 
           <div className="mt-12 grid gap-5 md:grid-cols-3" role="list">
-            {outcomes.map((item, index) => (
-              <Reveal key={item.title} delay={index * 80}><div className={`group h-full p-8 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
+            {outcomes.map((item) => (
+              <div key={item.title} data-catalog-card className={`group h-full p-8 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
                 <AccentRule className="mb-5 w-8" />
                 <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
                 <p className={`mt-2 ${caption}`}>{item.description}</p>
-              </div></Reveal>
+              </div>
             ))}
           </div>
         </div>
@@ -289,7 +296,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className={section} aria-labelledby="cta-heading">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <h2 id="cta-heading" className={h2}>
+          <h2 data-catalog-reveal id="cta-heading" className={h2}>
             Ready to explore how 2Nspira can help?
           </h2>
           <p className={`mx-auto mt-4 max-w-xl ${lead}`}>
@@ -306,6 +313,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      </ServiceEffects>
     </main>
   );
 }

@@ -1,3 +1,5 @@
+import ServiceEffects from "@/components/ServiceEffects";
+import { Sparkles, Workflow, PanelsTopLeft, Compass } from "lucide-react";
 import EntrepreneurMentoringCard from "@/components/EntrepreneurMentoringCard";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -55,6 +57,7 @@ export const metadata: Metadata = {
 export default function Home() {
   const services = [
     {
+      icon: Sparkles,
       title: "AI Enablement",
       description:
         "Pragmatic AI strategy and governance frameworks for responsible implementation — readiness, guardrails, and workflows your people will actually use.",
@@ -63,6 +66,7 @@ export default function Home() {
       linkLabel: "Explore AI enablement",
     },
     {
+      icon: Workflow,
       title: "Automation & Systems Optimization",
       description:
         "Optimize the operating model across systems, data, processes, people, and governance — then integrate, automate, and apply AI where it creates practical value.",
@@ -71,6 +75,7 @@ export default function Home() {
       linkLabel: "Explore systems optimization",
     },
     {
+      icon: PanelsTopLeft,
       title: "Websites & Digital Platforms",
       description:
         "Digital foundations that connect the customer experience to business data, workflows, automation, portals, payments, and future services.",
@@ -80,6 +85,7 @@ export default function Home() {
       linkLabel: "Explore digital platforms",
     },
     {
+      icon: Compass,
       title: "Fractional CIO / Technology Leadership",
       description:
         "Executive direction and accountability for technology decisions and execution, aligned with your business priorities.",
@@ -161,29 +167,31 @@ export default function Home() {
       </section>
 
       {/* Capabilities */}
+      <ServiceEffects>
       <section
         className={sectionBand}
         aria-labelledby="services-heading"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 id="services-heading" className={h2}>
+          <div>
+            <h2 data-catalog-reveal id="services-heading" className={h2}>
               What we do
             </h2>
             <p className={`mt-4 max-w-2xl ${lead}`}>
               Four integrated capabilities designed to work together or
               independently.
             </p>
-          </Reveal>
+          </div>
 
-          <Reveal delay={120} className="mt-14">
+          <div className="mt-14">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((feature) => (
-              <article
+              <article data-catalog-card data-service-card
                 key={feature.title}
-                className={`group relative flex flex-col overflow-hidden p-8 hover:-translate-y-1 ${card}`}
+                className={`group relative flex flex-col overflow-hidden p-8 ${card}`}
               >
-                <AccentRule className="absolute inset-x-0 top-0 w-full scale-x-0 group-hover:scale-x-100" />
+                <span data-service-rule aria-hidden="true" />
+                <span data-service-icon><feature.icon aria-hidden="true" size={25} strokeWidth={1.6} /></span>
                 <h3 className={h3}>{feature.title}</h3>
                 <p className={`mt-3 flex-1 text-sm leading-7 text-body`}>
                   {feature.description}
@@ -196,16 +204,17 @@ export default function Home() {
                     href={feature.href}
                     className="mt-6 inline-flex items-center rounded text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors duration-300 ease-gentle hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
                   >
-                    {feature.linkLabel} <span aria-hidden="true">→</span>
+                    {feature.linkLabel} <span data-service-arrow aria-hidden="true">→</span>
                   </Link>
                 )}
               </article>
             ))}
             </div>
-          </Reveal>
+          </div>
           <div className="mt-8"><EntrepreneurMentoringCard /></div>
         </div>
       </section>
+      </ServiceEffects>
 
       {/* Approach */}
       <section className={section} aria-labelledby="approach-heading">

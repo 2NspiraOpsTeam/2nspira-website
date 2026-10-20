@@ -1,0 +1,32 @@
+.scope [data-service-icon] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  margin-bottom: 1.25rem;
+  border-radius: 0.875rem;
+  background: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+  transition: transform 240ms var(--ease-gentle), color 240ms var(--ease-gentle), background-color 240ms var(--ease-gentle);
+}
+.scope [data-service-card] a { min-height: 44px; }
+.scope [data-service-arrow] { display: inline-block; margin-left: 0.25rem; transition: transform 240ms var(--ease-gentle); }
+.scope [data-service-rule] { position: absolute; top: 0; inset-inline: 0; height: 2px; background: var(--color-accent); transform: scaleX(0.12); transform-origin: left; transition: transform 300ms var(--ease-gentle); }
+.scope [data-service-card]:focus-within [data-service-icon] { background: var(--color-accent-strong); color: white; }
+.scope [data-service-card]:focus-within [data-service-rule] { transform: scaleX(1); }
+@media (hover: hover) and (pointer: fine) {
+  .scope [data-service-card]:hover [data-service-icon] { background: var(--color-accent-strong); color: white; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .scope [data-service-card]:focus-within [data-service-arrow] { transform: translateX(3px); }
+  @media (hover: hover) and (pointer: fine) {
+    .scope [data-service-card]:hover [data-service-rule] { transform: scaleX(1); }
+    .scope [data-service-card]:hover [data-service-icon] { transform: translateY(-2px); }
+    .scope [data-service-card]:hover [data-service-arrow] { transform: translateX(3px); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scope [data-service-icon], .scope [data-service-arrow], .scope [data-service-rule] { transition: none; transform: none; }
+}
