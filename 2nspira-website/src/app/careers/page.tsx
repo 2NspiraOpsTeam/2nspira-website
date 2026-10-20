@@ -169,7 +169,7 @@ export default function CareersPage() {
             <h2 id="values-heading" className={`mt-4 ${h2}`}>What We Value</h2>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {values.map((value, index) => (
+            {values.map((value) => (
               <div data-catalog-reveal key={value.title}>
                 <div data-catalog-card className={`group h-full p-6 ${cardFlat}`}>
                   <AccentRule className="mb-5" />
