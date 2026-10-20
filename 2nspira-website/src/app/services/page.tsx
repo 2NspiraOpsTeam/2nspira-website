@@ -1,3 +1,4 @@
+import EntrepreneurMentoringCard from "@/components/EntrepreneurMentoringCard";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore 2Nspira services for responsible AI adoption, systems optimization, workflow automation, digital platforms, and fractional CIO leadership.",
+    "Explore 2Nspira services for responsible AI adoption, systems optimization, workflow automation, digital platforms, fractional CIO leadership, and entrepreneur mentoring.",
   alternates: {
     canonical: "/services",
   },
@@ -74,7 +75,7 @@ const capabilities = [
     id: "service-heading-4",
     title: "Fractional CIO / Technology Leadership",
     description:
-      "Strategic technology leadership when you need it most. Fractional CTO guidance, architecture reviews, team enablement, and transformation pathways.",
+      "Executive direction and accountability for technology decisions and execution, aligned with your business priorities.",
     benefit:
       "You get: senior technology judgment on demand, aligned to your business outcomes — without a full-time executive hire.",
     points: ["Technology strategy & planning", "Fractional leadership", "Team enablement & mentoring"],
@@ -125,6 +126,13 @@ const servicesJsonLd = {
       url: "https://2nspira.com/fractional-cio",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
+    },
+    {
+      "@type": "Service", "@id": "https://2nspira.com/services#entrepreneur-mentoring",
+      name: "Entrepreneur Mentoring & Coaching",
+      description: "Personal mentoring for entrepreneurs, combining venture guidance with mindset and leadership coaching.",
+      url: "https://2nspira.com/coaching",
+      provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide",
     },
   ],
 };
@@ -250,6 +258,7 @@ export default function ServicesPage() {
               </article></Reveal>
             ))}
           </div>
+          <div className="mt-8"><EntrepreneurMentoringCard /></div>
         </div>
       </section>
 

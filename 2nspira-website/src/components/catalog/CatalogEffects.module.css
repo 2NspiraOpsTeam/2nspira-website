@@ -1,4 +1,4 @@
-/* Scoped to the five catalog pages; other site sections stay unchanged. */
+/* Scoped progressive effects for catalog pages and the coaching service. */
 .catalog [data-catalog-card] {
   transition: transform 280ms var(--ease-gentle), box-shadow 280ms var(--ease-gentle), border-color 280ms var(--ease-gentle);
 }

@@ -1,3 +1,4 @@
+import EntrepreneurMentoringCard from "@/components/EntrepreneurMentoringCard";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
@@ -81,7 +82,7 @@ export default function Home() {
     {
       title: "Fractional CIO / Technology Leadership",
       description:
-        "Fractional CTO guidance, architecture reviews, and transformation pathways that align technology investment with business outcomes.",
+        "Executive direction and accountability for technology decisions and execution, aligned with your business priorities.",
       benefit: "Outcome: technology decisions that follow your business priorities, not the other way around.",
       href: "/fractional-cio",
       linkLabel: "Explore fractional leadership",
@@ -202,6 +203,7 @@ export default function Home() {
             ))}
             </div>
           </Reveal>
+          <div className="mt-8"><EntrepreneurMentoringCard /></div>
         </div>
       </section>
 

@@ -11,6 +11,7 @@ import {
   h2,
   h3,
   lead,
+  linkInline,
   pageMain,
   section,
   sectionBand,
@@ -84,7 +85,7 @@ export default function FractionalCioPage() {
             This is not outsourced IT support or generic technical consulting. It is executive judgment for organizations that need clarity, direction, and accountable execution without hiring a full-time CIO.
           </p>
           <div className="animate-rise mt-8" style={{ animationDelay: "160ms" }}>
-            <Link href="/contact" className={buttonPrimary}>Discuss your technology priorities</Link>
+            <Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Discuss your technology priorities</Link>
           </div>
         </div>
       </section>
@@ -108,7 +109,7 @@ export default function FractionalCioPage() {
           </div>
           <Reveal>
             <figure className="group relative overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
-              <Image src="/images/advisory/advisory-ideas-to-impact.webp" alt="Conceptual visualization of an executive advisory and mentoring conversation at a strategy wall." width={1672} height={941} className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.015]" />
+              <Image src="/images/advisory/advisory-ideas-to-impact.webp" alt="Conceptual visualization of an executive advisory and mentoring conversation at a strategy wall." width={1672} height={941} className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.015]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-ink/10 via-transparent to-accent/10 opacity-60" aria-hidden="true" />
             </figure>
           </Reveal>
@@ -125,7 +126,7 @@ export default function FractionalCioPage() {
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {executiveLenses.map((lens, index) => (
               <Reveal key={lens.title} delay={index * 60} className="h-full">
-                <article className={`group h-full p-6 hover:-translate-y-1 ${card}`}>
+                <article className={`group h-full p-6 motion-safe:hover:-translate-y-1 ${card}`}>
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent">{String(index + 1).padStart(2, "0")}</span>
                   <h3 className={`mt-5 ${h3}`}>{lens.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-body">{lens.text}</p>
@@ -199,12 +200,21 @@ export default function FractionalCioPage() {
         </div>
       </section>
 
+      <section className={section} aria-labelledby="mentoring-intro-heading" id="entrepreneur-mentoring">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <span id="founder-coaching-heading" className="block scroll-mt-24" aria-hidden="true" />
+          <h2 id="mentoring-intro-heading" className={`scroll-mt-24 ${h2}`}>Looking for personal guidance as an entrepreneur?</h2>
+          <p className="mt-5 leading-8 text-body">Entrepreneur Mentoring &amp; Coaching combines practical business guidance with mindset and leadership coaching as you build and lead your business. You retain ownership of your decisions and execution.</p>
+          <Link href="/coaching" className={`mt-6 min-h-[44px] ${linkInline}`}>Explore Entrepreneur Mentoring &amp; Coaching <span aria-hidden="true">&nbsp;→</span></Link>
+        </div>
+      </section>
+
       <section className={sectionBand} aria-labelledby="fractional-cio-cta-heading">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 id="fractional-cio-cta-heading" className={h2}>Bring executive clarity to your next technology decision</h2>
           <p className={`mx-auto mt-4 max-w-2xl ${lead}`}>Start with the priorities, decisions, or initiatives that need stronger technology leadership now.</p>
           <div className="mt-10">
-            <Link href="/contact" className={buttonPrimary}>Start a leadership conversation</Link>
+            <Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Start a leadership conversation</Link>
           </div>
         </div>
       </section>
