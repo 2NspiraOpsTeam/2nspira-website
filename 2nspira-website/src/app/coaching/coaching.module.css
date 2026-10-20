@@ -55,3 +55,28 @@
 @media (min-width: 640px) { .sectionSpacing { padding-block: 5rem; } .mentorNote { padding: 2rem; } .leadershipBoard { padding: 3rem; } }
 @media (min-width: 768px) { .processSteps { grid-template-columns: repeat(3,minmax(0,1fr)); } .scopeNote { grid-template-columns: 2.5rem minmax(0,0.8fr) minmax(0,1.8fr); gap: 1.5rem; padding: 2rem; } }
 @media (min-width: 1024px) { .leadershipBoard { grid-template-columns: minmax(0,0.9fr) minmax(0,1.2fr); gap: 3rem; } }
+
+/* Small, purposeful cues, scoped to coaching rather than all catalog pages. */
+.explore > span { display: inline-block; margin-left: 0.25rem; }
+.areaLink .iconBadge, .explore > span, .summaryTitle > svg,
+.timelineIcon, .processSteps .iconBadge { transition: transform 220ms var(--ease-gentle), background-color 220ms var(--ease-gentle), color 220ms var(--ease-gentle); }
+.disclosure[open] .summaryTitle > svg { color: var(--color-accent); }
+.documentPreview { transition: border-color 220ms var(--ease-gentle), box-shadow 220ms var(--ease-gentle); }
+.documentPreview:focus-within { border-color: var(--color-accent); }
+.areaLink:focus-visible .iconBadge { background: var(--color-accent-strong); color: white; }
+@media (hover: hover) and (pointer: fine) {
+  .areaLink:hover .iconBadge { background: var(--color-accent-strong); color: white; }
+  .supportStep:hover .timelineIcon { border-color: var(--color-accent); background: var(--color-accent-soft); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .areaLink:focus-visible .explore > span { transform: translateX(4px); }
+  @media (hover: hover) and (pointer: fine) {
+    .areaLink:hover .explore > span { transform: translateX(4px); }
+    .areaLink:hover .iconBadge, .processSteps article:hover .iconBadge { transform: translateY(-2px); }
+    .summary:hover .summaryTitle > svg { transform: translateY(-2px); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .areaLink .iconBadge, .explore > span, .summaryTitle > svg,
+  .timelineIcon, .processSteps .iconBadge, .documentPreview { transition: none; }
+}
