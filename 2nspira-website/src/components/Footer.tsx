@@ -32,7 +32,7 @@ export default function Footer() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/logo/2nspira-logo.png" alt="2Nspira" width={320} height={132} className="h-auto w-40" />
           </Link>
-          <p className={styles.description}>Human-centered technology transformation and practical AI adoption for organizations.</p>
+          <p className={styles.description}>Human-centered technology, practical AI adoption, and entrepreneur mentoring and coaching.</p>
         </div>
         <nav aria-labelledby="footer-services-heading">
           <h2 id="footer-services-heading" className={styles.heading}>Services</h2>

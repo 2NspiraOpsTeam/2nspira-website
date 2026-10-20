@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
@@ -14,9 +15,9 @@ import {
   sectionBand,
 } from "@/components/ui";
 
-const title = "Careers at 2Nspira | Technology, AI & Consulting Opportunities";
+const title = "Careers at 2Nspira | Technology, Consulting & Coaching";
 const description =
-  "Join 2Nspira's talent network for future roles and project opportunities in AI, technology consulting, development, data, cloud, UX, and delivery.";
+  "Join 2Nspira's talent network for future roles and project opportunities in technology, AI, consulting, and entrepreneur mentoring and coaching.";
 const socialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 const introductionUrl = "mailto:hello@2nspira.com?subject=2Nspira%20Talent%20Network%20Introduction";
 
@@ -43,6 +44,8 @@ const expertise = [
   "Project and delivery leadership",
   "Business systems consulting",
   "Independent technology advisory",
+  "Entrepreneur mentoring and coaching",
+  "Industry leadership and venture development",
 ];
 
 const values = [
@@ -70,7 +73,7 @@ export default function CareersPage() {
             Build what&apos;s next with us.
           </h1>
           <p className={`mx-auto max-w-2xl ${lead}`}>
-            We build relationships with technologists, strategists, designers, and specialists who believe technology should make organizations stronger, simpler, and more capable.
+            We build relationships with technologists, strategists, designers, coaches, and industry leaders who help organizations and the people leading them become stronger and more capable.
           </p>
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-body">
             Our flexible model combines core leadership with specialized professionals and project partners as each client engagement requires.
@@ -101,6 +104,10 @@ export default function CareersPage() {
               <p className={`mt-5 ${body}`}>
                 We shape each engagement around the expertise it actually needs. Core leadership provides continuity; independent specialists and partners can be brought together for the work at hand.
               </p>
+              <p className={`mt-4 ${body}`}>
+                Our Entrepreneur Mentoring &amp; Coaching service matches clients with coaches aligned with their industry. We welcome introductions from experienced industry leaders interested in supporting entrepreneurs with practical business guidance, mindset, and leadership coaching.
+              </p>
+              <Link href="/coaching" className="mt-4 inline-flex min-h-11 items-center rounded font-medium text-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Explore our mentoring approach →</Link>
               <p className="mt-4 font-medium leading-8 text-ink">
                 The right expertise for each engagement, with a delivery model designed to remain focused, adaptable, and responsive to client needs.
               </p>
@@ -143,7 +150,7 @@ export default function CareersPage() {
               <p className="text-sm font-semibold uppercase tracking-widest text-accent">Future collaboration</p>
               <h2 id="network-heading" className={`mt-4 ${h2}`}>Join the 2Nspira Talent Network</h2>
               <p className={`mt-5 max-w-2xl ${body}`}>
-                We welcome introductions from experienced professionals interested in future employment, independent consulting, or project collaboration opportunities. We value strong technical capability paired with sound business judgment.
+                We welcome introductions from experienced professionals interested in future employment, independent consulting, or project collaboration opportunities. We value relevant industry experience, sound business judgment, and the ability to help others develop.
               </p>
               <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
                 Introduce yourself by email. A brief note about your expertise and a link to your professional profile is a good place to start.

@@ -102,7 +102,9 @@ export default function ResourcesPage() {
         <p className={styles.kicker}>A little clarity goes a long way</p>
         <h2 id="closing-title">Not sure where to start?</h2>
         <p>Choose the assessment that best matches the decision you are trying to make.</p>
+        <p>Looking for ongoing guidance? Our separately arranged Entrepreneur Mentoring &amp; Coaching service matches you with a coach aligned with your industry. Coaching is not included with the free assessments.</p>
         <div className={styles.closingActions}>
+          <Link href="/coaching" className={styles.secondary}>Explore mentoring &amp; coaching <Arrow /></Link>
           <Link href={strengthsUrl} className={styles.secondary}>Explore Professional Strengths <Arrow /></Link>
           <Link href={readinessUrl} className={styles.secondary}>Explore AI Readiness <Arrow /></Link>
         </div>

@@ -18,7 +18,7 @@ import {
 
 export const metadata: Metadata = publicPageMetadata({
   "title": "About 2Nspira",
-  "description": "Meet 2Nspira. Discover our human-centered approach to technology strategy, responsible AI, systems, and organizational change.",
+  "description": "Meet 2Nspira. Discover our human-centered approach to technology strategy, responsible AI, systems, and entrepreneur mentoring and coaching.",
   "path": "/about"
 });
 
@@ -44,7 +44,8 @@ export default function AboutPage() {
         <p className={`mx-auto max-w-2xl ${lead}`}>
           We help smaller organizations access the technology strategy, systems
           thinking, and innovation support often reserved for larger
-          institutions.
+          institutions. We also help entrepreneurs build their businesses and
+          strengthen their leadership through mentoring and coaching.
         </p></div>
       </header>
 
@@ -69,6 +70,15 @@ export default function AboutPage() {
           ))}
         </section></Reveal>
 
+        <section className={`mt-12 p-6 sm:p-10 ${card}`} aria-labelledby="about-coaching-heading">
+          <AccentRule className="mb-6" />
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">People as well as platforms</p>
+          <h2 id="about-coaching-heading" className={`mt-4 ${h2}`}>Support for the business—and the person leading it.</h2>
+          <p className={`mt-4 ${lead}`}>Technology leadership helps organizations make better decisions about their systems. Entrepreneur Mentoring &amp; Coaching creates space for the decisions, mindset, and leadership habits of the person building the business.</p>
+          <p className="mt-4 leading-8 text-body">A handful of industry leaders are available to coach you. We match you with a coach aligned with your industry to work through customer discovery, product development, delegation, and accountability.</p>
+          <Link href="/coaching" className={`mt-6 min-h-11 ${buttonPrimary}`}>Explore Entrepreneur Mentoring &amp; Coaching →</Link>
+        </section>
+
         <section className="mt-20">
           <Reveal>
           <h2 className={h2}>The 2Nspira Framework</h2>
@@ -91,7 +101,8 @@ export default function AboutPage() {
           <h2 className={h2}>When you grow, we all move forward.</h2>
           <p className={`mt-4 ${lead}`}>
             We work with educational institutions, nonprofits, small businesses,
-            IT teams, creatives, and professionals. Your success is a shared
+            IT teams, creatives, professionals, and entrepreneurs developing their
+            ventures and leadership. Your success is a shared
             mission.
           </p>
           <Link href="/contact" className={`mt-6 ${buttonPrimary}`}>
