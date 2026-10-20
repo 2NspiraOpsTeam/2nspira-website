@@ -110,15 +110,18 @@ export default function EntrepreneurMentoringPage() {
         <div>
           <p className={eyebrow}>Industry-aligned guidance</p>
           <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>Matched to your business.</h2>
-          <p className="mt-5 leading-8 text-body">2Nspira matches you with a coach aligned with your industry, business priorities, and stage of development. We start with the decisions and leadership challenges you face.</p>
+          <p className="mt-5 leading-8 text-body">A handful of industry leaders are available to coach you. 2Nspira matches you with a coach aligned with your industry, business priorities, and stage of development.</p>
           <p className="mt-5 leading-8 text-body">Our work combines practical business guidance with mindset and leadership coaching. You gain an experienced sounding board, honest feedback, and direction grounded in the challenges you face.</p>
           <Link href="/about" className={`mt-6 min-h-[44px] ${linkInline}`}>About 2Nspira <span aria-hidden="true">&nbsp;→</span></Link>
         </div>
         <aside aria-labelledby="mentor-background-heading" className={styles.mentorNote} data-catalog-fade>
           <span className={styles.iconBadge}><Handshake aria-hidden="true" size={28} strokeWidth={1.6} /></span>
-          <h3 id="mentor-background-heading" className={`mt-6 ${h3}`}>Industry leaders. Individual support.</h3>
-          <p className="mt-5 leading-8 text-body">A handful of industry leaders are available to coach you.</p>
-          <p className="mt-3 text-sm leading-7 text-body">Our mentoring is focused on helping you build a business worth pursuing while developing your ability to lead it.</p>
+          <h3 id="mentor-background-heading" className={`mt-6 ${h3}`}>Example coach background</h3>
+          <p className="mt-5 leading-8 text-body">One of our coaches brings experience in:</p>
+          <ul className="mt-4 space-y-3 text-sm leading-7 text-body">
+            {["Building four companies from the ground up.", "Moving from an initial idea to developing a product.", "Leading a growing business."].map(item => <li key={item} className="flex items-start gap-3"><CheckCircle2 aria-hidden="true" size={19} className="mt-1 shrink-0 text-accent" /><span>{item}</span></li>)}
+          </ul>
+          <p className="mt-4 text-sm leading-7 text-body">This is one example of the experience available—not a background shared by every coach. We match support to your industry and priorities.</p>
         </aside>
       </div>
     </section>
