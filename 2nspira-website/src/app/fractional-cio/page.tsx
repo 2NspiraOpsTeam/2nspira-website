@@ -92,7 +92,7 @@ export default function FractionalCioPage() {
             2Nspira helps founders and business leaders connect technology, investment, people, and execution. Whether you need an experienced fractional technology executive or a trusted advisor to strengthen your own leadership, we help you clarify priorities, navigate difficult decisions, and turn plans into progress.
           </p>
           <div className="animate-rise mt-8" style={{ animationDelay: "160ms" }}>
-            <Link href="/contact" className={buttonPrimary}>Discuss your leadership priorities</Link>
+            <Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Discuss your leadership priorities</Link>
           </div>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default function FractionalCioPage() {
             <li>Prepare for difficult decisions and hold yourself accountable to agreed actions.</li>
           </ul>
           <p className="mt-8 leading-8 text-body">Engagements can include focused advisory sessions, an ongoing coaching relationship, or coaching alongside fractional technology leadership.</p>
-          <div className="mt-8"><Link href="/contact" className={buttonPrimary}>Talk through your next leadership challenge</Link></div>
+          <div className="mt-8"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Talk through your next leadership challenge</Link></div>
         </div>
       </section>
 
@@ -257,7 +257,7 @@ export default function FractionalCioPage() {
           <h2 id="fractional-cio-cta-heading" className={h2}>Bring clarity to your next leadership decision.</h2>
           <p className={`mx-auto mt-4 max-w-2xl ${lead}`}>Whether you need fractional technology leadership or support navigating your role as a founder, start with the decisions, priorities, or challenges in front of you.</p>
           <div className="mt-10">
-            <Link href="/contact" className={buttonPrimary}>Start a leadership conversation</Link>
+            <Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Start a leadership conversation</Link>
           </div>
         </div>
       </section>
