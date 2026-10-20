@@ -1,3 +1,4 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,12 +6,11 @@ import BlogLibrary from "@/components/BlogLibrary";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { lead, linkInline, pageMain } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: "Executive Insights",
-  description:
-    "Read practical insights from Jeffrey Cortez on AI strategy, technology leadership, digital transformation, organizational trust, and human-centered change.",
-  alternates: { canonical: "/insights" },
-};
+export const metadata: Metadata = publicPageMetadata({
+  "title": "Executive Insights",
+  "description": "Read practical insights from Jeffrey Cortez on AI strategy, technology leadership, digital transformation, organizational trust, and human-centered change.",
+  "path": "/insights"
+});
 
 export default function InsightsPage() {
   return (

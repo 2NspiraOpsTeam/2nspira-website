@@ -1,3 +1,4 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,14 +17,11 @@ import {
   sectionBand,
 } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: "Automation & Systems Optimization",
-  description:
-    "Streamline operations with connected systems, trusted data, clearer workflows, and practical automation designed around how your organization actually works.",
-  alternates: {
-    canonical: "/automation-systems-optimization",
-  },
-};
+export const metadata: Metadata = publicPageMetadata({
+  "title": "Automation & Systems Optimization",
+  "description": "Streamline operations with connected systems, trusted data, clearer workflows, and practical automation designed around how your organization actually works.",
+  "path": "/automation-systems-optimization"
+});
 
 const operatingLenses = [
   {

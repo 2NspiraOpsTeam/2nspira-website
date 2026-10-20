@@ -1,13 +1,12 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
 
-export const metadata: Metadata = {
-  title: "AI Enablement, Training & Governance Advisory",
-  description: "Build an AI strategy your team can use. 2Nspira helps leaders assess readiness, establish governance, train teams, and implement responsible AI workflows.",
-  alternates: {
-    canonical: "/ai-enablement"
-  }
-};
+export const metadata: Metadata = publicPageMetadata({
+  "title": "AI Enablement, Training & Governance Advisory",
+  "description": "Build an AI strategy your team can use. 2Nspira helps leaders assess readiness, establish governance, train teams, and implement responsible AI workflows.",
+  "path": "/ai-enablement"
+});
 
 export default function Page() {
   return <ServicePage {...{

@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 const siteName = "2Nspira";
 const siteDomain = "https://2nspira.com";
 const siteDescription =
-  "2Nspira helps small and mission-driven organizations adopt AI responsibly, modernize systems, automate work, and lead technology change with confidence.";
+  "Practical AI, systems optimization, digital platforms, fractional CIO leadership, and entrepreneur mentoring from 2Nspira. Turn priorities into execution.";
 const socialTitle = "Human-centered technology transformation for the AI era";
 const socialImageUrl = `${siteDomain}/images/logo/og-image-v2.png`;
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "AI governance",
     "technology transformation",
     "systems optimization",
-    "fractional CTO",
+    "fractional CIO",
     "practical AI adoption",
     "human-centered technology",
     "process optimization",
@@ -106,7 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           height: 132,
         },
         description:
-          "Human-centered technology transformation and practical AI adoption — specializing in AI enablement, systems optimization, and fractional technology leadership.",
+          "Human-centered AI enablement, automation and systems optimization, websites and digital platforms, fractional CIO leadership, and entrepreneur mentoring.",
         email: "hello@2nspira.com",
         telephone: "+1-646-543-0199",
         address: {
@@ -121,11 +121,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           email: "hello@2nspira.com",
           telephone: "+1-646-543-0199",
           contactType: "customer support",
-        },
-        founder: {
-          "@type": "Person",
-          name: "Jeffrey Cortez",
-          sameAs: ["https://www.linkedin.com/in/jeffreyvcortez"],
         },
         sameAs: [
           "https://www.linkedin.com/company/2nspira",

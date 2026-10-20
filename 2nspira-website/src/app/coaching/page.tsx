@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Compass, UserRound, Handshake, Lightbulb, Users, Search, Layers, Target, BriefcaseBusiness, Brain, Focus, MessageSquare, BookOpen, ClipboardList, FileText, CheckCircle2, ShieldCheck } from "lucide-react";
+import { Clock, CalendarDays, Video, Compass, UserRound, Handshake, Lightbulb, Users, Search, Layers, Target, BriefcaseBusiness, Brain, Focus, MessageSquare, BookOpen, ClipboardList, FileText, CheckCircle2, ShieldCheck } from "lucide-react";
 import PageEffects from "./CoachingEffects";
 import styles from "./coaching.module.css";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { buttonPrimary, cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section } from "@/components/ui";
 
-const description = "One-on-one mentoring for entrepreneurs from 2Nspira. Validate your business idea, develop your venture, and grow with mindset and leadership coaching.";
+const description = "Industry-aligned entrepreneur mentoring from 2Nspira. Develop your venture, strengthen leadership, and move forward with one-on-one business coaching.";
 export const metadata: Metadata = {
   title: { absolute: "Entrepreneur Mentoring & Business Coaching | 2Nspira" }, description,
   alternates: { canonical: "/coaching" },
@@ -90,7 +90,12 @@ export default function EntrepreneurMentoringPage() {
         <div>
           <EyebrowPill>Entrepreneur Mentoring &amp; Coaching</EyebrowPill>
           <h1 className={h1}>Build your business. Grow into the leader it needs.</h1>
-          <p className={lead}>One-on-one mentoring for entrepreneurs—from validating a product idea to navigating the challenges of leading a growing company.</p>
+          <p className={lead}>One-on-one mentoring for entrepreneurs—from validating a product idea to navigating the challenges of leading a growing company. Matched with a coach aligned with your industry.</p>
+          <ul aria-label="Typical mentoring sessions" className="mt-6 flex flex-wrap gap-2 text-sm text-body">
+            <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><Clock aria-hidden="true" size={17} />Usually 1 hour</li>
+            <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><CalendarDays aria-hidden="true" size={17} />Usually weekly</li>
+            <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><Video aria-hidden="true" size={17} />Zoom · In person when possible</li>
+          </ul>
           <div className="mt-8"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Discuss your business idea or leadership challenge</Link></div>
         </div>
         <figure className={`relative ${styles.hero}`} data-catalog-fade>
@@ -103,20 +108,20 @@ export default function EntrepreneurMentoringPage() {
     <section aria-labelledby="mentor-heading" className={`${styles.sectionSpacing} ${styles.mentorBand}`}>
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
         <div>
-          <div className="flex items-center gap-6">
-            <Image src="/images/coaching/jeffrey-cortez-mentor.webp" alt="Jeffrey Cortez, founder of 2Nspira and entrepreneur mentor." width={600} height={900} sizes="(min-width: 640px) 140px, 96px" className="h-auto w-24 shrink-0 rounded-2xl border border-line sm:w-[140px]" />
-            <div><p className={eyebrow}>Meet your mentor</p>
-            <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>Jeffrey Cortez</h2></div>
-          </div>
-          <p className="mt-5 leading-8 text-body">A product idea is a starting point. Building a company means understanding your customers, testing your assumptions, developing the right product, and growing into the responsibilities of leadership.</p>
+          <p className={eyebrow}>Industry-aligned guidance</p>
+          <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>Matched to your business.</h2>
+          <p className="mt-5 leading-8 text-body">A handful of industry leaders are available to coach you. 2Nspira matches you with a coach aligned with your industry, business priorities, and stage of development.</p>
           <p className="mt-5 leading-8 text-body">Our work combines practical business guidance with mindset and leadership coaching. You gain an experienced sounding board, honest feedback, and direction grounded in the challenges you face.</p>
-          <Link href="/about" className={`mt-6 min-h-[44px] ${linkInline}`}>About Jeffrey and 2Nspira <span aria-hidden="true">&nbsp;→</span></Link>
+          <Link href="/about" className={`mt-6 min-h-[44px] ${linkInline}`}>About 2Nspira <span aria-hidden="true">&nbsp;→</span></Link>
         </div>
         <aside aria-labelledby="mentor-background-heading" className={styles.mentorNote} data-catalog-fade>
-          <div className={styles.experienceMark}><span aria-hidden="true">4</span><span>Companies built<br />from the ground up</span></div>
-          <p className="mt-6 leading-8 text-body">Drawing on my experience building four companies from the ground up, I mentor entrepreneurs through those decisions—from exploring an initial idea to developing a product and leading a growing business.</p>
-          <h3 id="mentor-background-heading" className={`mt-6 ${h3}`}>Build with purpose</h3>
-          <p className="mt-3 text-sm leading-7 text-body">Jeffrey is the founder of 2Nspira and author of Trust Is the Operating System. His mentoring is focused on helping you build a business worth pursuing while developing your ability to lead it.</p>
+          <span className={styles.iconBadge}><Handshake aria-hidden="true" size={28} strokeWidth={1.6} /></span>
+          <h3 id="mentor-background-heading" className={`mt-6 ${h3}`}>Example coach background</h3>
+          <p className="mt-5 leading-8 text-body">One of our coaches brings experience in:</p>
+          <ul className="mt-4 space-y-3 text-sm leading-7 text-body">
+            {["Building four companies from the ground up.", "Moving from an initial idea to developing a product.", "Leading a growing business."].map(item => <li key={item} className="flex items-start gap-3"><CheckCircle2 aria-hidden="true" size={19} className="mt-1 shrink-0 text-accent" /><span>{item}</span></li>)}
+          </ul>
+          <p className="mt-4 text-sm leading-7 text-body">This is one example of the experience available. We match support to your industry and priorities.</p>
         </aside>
       </div>
     </section>
@@ -177,7 +182,7 @@ export default function EntrepreneurMentoringPage() {
           <div>
             <span aria-hidden="true" className={styles.sectionNumber}>03 / Your support</span>
             <h3 data-catalog-reveal id="keep-moving-with-guidance" className={`mt-4 scroll-mt-24 ${styles.pillarHeading}`}>Keep moving with guidance</h3>
-            <p className="mt-5 max-w-xl leading-8 text-body">I share relevant experiences, recommend books and resources, and help you turn those lessons into practical action. Regular conversations and agreed support between sessions give you a continuing relationship as your business evolves.</p>
+            <p className="mt-5 max-w-xl leading-8 text-body">Your coach shares relevant experiences, recommends books and resources, and helps you turn those lessons into practical action. Regular conversations and agreed support between sessions give you a continuing relationship as your business evolves.</p>
           </div>
           <dl className={styles.supportTimeline}>{relationship.map(({title,text,icon: Icon}) => <div key={title} data-coaching-step className={styles.supportStep}><dt className="font-semibold text-ink"><span aria-hidden="true" className={styles.timelineIcon}><Icon size={22} strokeWidth={1.7} /></span>{title}</dt><dd className="mt-2 leading-7 text-body">{text}</dd></div>)}</dl>
         </div>
@@ -215,9 +220,9 @@ export default function EntrepreneurMentoringPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 data-catalog-reveal id="working-together-heading" className={h2}>How working together works</h2>
         <ol className={styles.processSteps} aria-label="Mentoring process">
-          <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><MessageSquare aria-hidden="true" size={24} /></span><span aria-hidden="true">01</span></div><h3 className={`mt-6 ${h3}`}>Start with an introductory conversation</h3><p className="mt-4 leading-7 text-body">We discuss your business idea, current challenges, and what you want to develop as a leader. Together, we decide whether the mentoring relationship fits your needs.</p></article></li>
+          <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><MessageSquare aria-hidden="true" size={24} /></span><span aria-hidden="true">01</span></div><h3 className={`mt-6 ${h3}`}>Start with an introductory conversation</h3><p className="mt-4 leading-7 text-body">We discuss your business idea, industry, current challenges, and what you want to develop as a leader. We then match you with a coach aligned with your industry and priorities.</p></article></li>
           <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><ClipboardList aria-hidden="true" size={24} /></span><span aria-hidden="true">02</span></div><h3 className={`mt-6 ${h3}`}>Agree priorities and actions</h3><p className="mt-4 leading-7 text-body">We identify the decisions and skills that need attention first, agree practical actions, and review what you learn as your business develops.</p></article></li>
-          <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><Compass aria-hidden="true" size={24} /></span><span aria-hidden="true">03</span></div><h3 className={`mt-6 ${h3}`}>Define the rhythm and support</h3><p className="mt-4 leading-7 text-body">We agree session frequency and duration, the scope and channels of support between sessions, and response expectations before the engagement begins.</p></article></li>
+          <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><Compass aria-hidden="true" size={24} /></span><span aria-hidden="true">03</span></div><h3 className={`mt-6 ${h3}`}>Define the rhythm and support</h3><p className="mt-4 leading-7 text-body">Sessions are usually one hour, once a week, via Zoom or in person when possible. We agree the schedule, the scope and channels of support between sessions, and response expectations before the engagement begins.</p></article></li>
         </ol>
         <div className={styles.scopeNote}><ShieldCheck aria-hidden="true" size={32} strokeWidth={1.5} /><h3 className={h3}>Mentoring, not done-for-you development</h3><p className="leading-8 text-body">We help you strengthen your leadership while you retain ownership of business decisions and execution. Mentoring supports your judgment, plans, and actions; it is not done-for-you product development or outsourced operational delivery.</p></div>
       </div>

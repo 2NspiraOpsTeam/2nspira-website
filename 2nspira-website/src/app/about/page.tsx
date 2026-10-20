@@ -1,3 +1,4 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,12 +16,11 @@ import {
   pageHero,
 } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: "Our Story",
-  description:
-    "Meet 2Nspira and founder Jeffrey Cortez. Discover our human-centered approach to technology strategy, responsible AI, systems, and organizational change.",
-  alternates: { canonical: "/about" },
-};
+export const metadata: Metadata = publicPageMetadata({
+  "title": "About 2Nspira",
+  "description": "Meet 2Nspira. Discover our human-centered approach to technology strategy, responsible AI, systems, and organizational change.",
+  "path": "/about"
+});
 
 const framework = [
   { title: "Functional", text: "Systems that work the way you do" },

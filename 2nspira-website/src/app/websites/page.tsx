@@ -1,3 +1,4 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,14 +18,11 @@ import {
   sectionBand,
 } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: "Websites & Digital Platforms",
-  description:
-    "Build a fast, accessible website or digital platform connected to your data, workflows, portals, payments, automation, APIs, and future services.",
-  alternates: {
-    canonical: "/websites",
-  },
-};
+export const metadata: Metadata = publicPageMetadata({
+  "title": "Websites & Digital Platforms",
+  "description": "Build a fast, accessible website or digital platform connected to your data, workflows, portals, payments, automation, APIs, and future services.",
+  "path": "/websites"
+});
 
 const platformConnections = [
   {

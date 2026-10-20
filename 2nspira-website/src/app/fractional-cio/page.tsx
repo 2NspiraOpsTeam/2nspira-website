@@ -1,3 +1,4 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,14 +18,11 @@ import {
   sectionBand,
 } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: "Fractional CIO Advisory & Modernization Strategy",
-  description:
-    "Get experienced fractional CIO leadership to align technology strategy, investment, modernization, governance, and execution with your business goals.",
-  alternates: {
-    canonical: "/fractional-cio",
-  },
-};
+export const metadata: Metadata = publicPageMetadata({
+  "title": "Fractional CIO & Technology Leadership",
+  "description": "Get experienced fractional CIO leadership to align technology strategy, investment, modernization, governance, and execution with your business goals.",
+  "path": "/fractional-cio"
+});
 
 const executiveLenses = [
   { title: "Strategy", text: "Connect technology priorities to the organization’s goals, operating model, and growth plans." },
@@ -53,9 +51,9 @@ const outcomes = [
 const fractionalCioJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Fractional CIO Advisory & Modernization Strategy",
+  name: "Fractional CIO / Technology Leadership",
   description:
-    "Senior technology leadership, modernization strategy, and practical mentoring for executives and founders navigating growth, complexity, and consequential technology decisions.",
+    "Executive technology leadership aligning strategy, investment, modernization, governance, people, and delivery with business priorities.",
   url: "https://2nspira.com/fractional-cio",
   provider: { "@id": "https://2nspira.com/#organization" },
   areaServed: "Worldwide",

@@ -1,13 +1,12 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import AssessmentPage from "@/components/Resources/AssessmentPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = publicPageMetadata({
   "title": "Strength Profile | Professional Strengths Assessment",
   "description": "Take the free 2Nspira Strength Profile to discover how you create value, collaborate, find energizing work, and make clearer career and development decisions.",
-  "alternates": {
-    "canonical": "/resources/strength-profile"
-  }
-};
+  "path": "/resources/strength-profile"
+});
 
 export default function Page() {
   return <AssessmentPage {...{

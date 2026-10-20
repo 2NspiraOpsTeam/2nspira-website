@@ -21,7 +21,7 @@ import {
 } from "@/components/ui";
 
 const homepageDescription =
-  "2Nspira helps small and mission-driven organizations adopt AI responsibly, modernize systems, automate work, and lead technology change with confidence.";
+  "Practical AI, systems optimization, digital platforms, fractional CIO leadership, and entrepreneur mentoring from 2Nspira. Turn priorities into execution.";
 const homepageShareTitle =
   "Human-centered technology transformation for the AI era";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";

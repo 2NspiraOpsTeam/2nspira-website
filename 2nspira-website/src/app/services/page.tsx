@@ -1,3 +1,4 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import EntrepreneurMentoringCard from "@/components/EntrepreneurMentoringCard";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -19,14 +20,11 @@ import {
   sectionBand,
 } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Explore 2Nspira services for responsible AI adoption, systems optimization, workflow automation, digital platforms, fractional CIO leadership, and entrepreneur mentoring.",
-  alternates: {
-    canonical: "/services",
-  },
-};
+export const metadata: Metadata = publicPageMetadata({
+  "title": "Technology Services & Entrepreneur Mentoring",
+  "description": "Explore 2Nspira services for responsible AI adoption, systems optimization, workflow automation, digital platforms, fractional CIO leadership, and entrepreneur mentoring.",
+  "path": "/services"
+});
 
 const capabilities = [
   {
@@ -93,6 +91,20 @@ const servicesJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "CollectionPage",
+      "@id": "https://2nspira.com/services#webpage",
+      url: "https://2nspira.com/services",
+      name: "Technology Services & Entrepreneur Mentoring",
+      about: { "@id": "https://2nspira.com/#organization" },
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: [
+          ...capabilities.map(item => ({ name: item.title, url: `https://2nspira.com${item.href}` })),
+          { name: "Entrepreneur Mentoring & Coaching", url: "https://2nspira.com/coaching" },
+        ].map((item, index) => ({ "@type": "ListItem", position: index + 1, ...item })),
+      },
+    },
+    {
       "@type": "Service",
       "@id": "https://2nspira.com/services#ai-enablement",
       name: "AI Enablement",
@@ -135,7 +147,7 @@ const servicesJsonLd = {
     {
       "@type": "Service", "@id": "https://2nspira.com/services#entrepreneur-mentoring",
       name: "Entrepreneur Mentoring & Coaching",
-      description: "One-on-one mentoring for entrepreneurs, combining venture guidance with mindset and leadership coaching.",
+      description: "Industry-aligned, one-on-one mentoring for entrepreneurs, combining venture guidance with mindset and leadership coaching.",
       url: "https://2nspira.com/coaching",
       provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide",
     },
