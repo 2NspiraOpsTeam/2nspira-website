@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Compass, UserRound, Handshake, Lightbulb, Users, Search, Layers, Target, BriefcaseBusiness, Brain, Focus, MessageSquare, BookOpen, ClipboardList, FileText, CheckCircle2, ShieldCheck } from "lucide-react";
+import { Clock, CalendarDays, Video, Compass, UserRound, Handshake, Lightbulb, Users, Search, Layers, Target, BriefcaseBusiness, Brain, Focus, MessageSquare, BookOpen, ClipboardList, FileText, CheckCircle2, ShieldCheck } from "lucide-react";
 import PageEffects from "./CoachingEffects";
 import styles from "./coaching.module.css";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
@@ -91,6 +91,11 @@ export default function EntrepreneurMentoringPage() {
           <EyebrowPill>Entrepreneur Mentoring &amp; Coaching</EyebrowPill>
           <h1 className={h1}>Build your business. Grow into the leader it needs.</h1>
           <p className={lead}>One-on-one mentoring for entrepreneurs—from validating a product idea to navigating the challenges of leading a growing company. Matched with a coach aligned with your industry.</p>
+          <ul aria-label="Typical mentoring sessions" className="mt-6 flex flex-wrap gap-2 text-sm text-body">
+            <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><Clock aria-hidden="true" size={17} />Usually 1 hour</li>
+            <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><CalendarDays aria-hidden="true" size={17} />Usually weekly</li>
+            <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><Video aria-hidden="true" size={17} />Zoom · In person when possible</li>
+          </ul>
           <div className="mt-8"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Discuss your business idea or leadership challenge</Link></div>
         </div>
         <figure className={`relative ${styles.hero}`} data-catalog-fade>
@@ -217,7 +222,7 @@ export default function EntrepreneurMentoringPage() {
         <ol className={styles.processSteps} aria-label="Mentoring process">
           <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><MessageSquare aria-hidden="true" size={24} /></span><span aria-hidden="true">01</span></div><h3 className={`mt-6 ${h3}`}>Start with an introductory conversation</h3><p className="mt-4 leading-7 text-body">We discuss your business idea, industry, current challenges, and what you want to develop as a leader. We then match you with a coach aligned with your industry and priorities.</p></article></li>
           <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><ClipboardList aria-hidden="true" size={24} /></span><span aria-hidden="true">02</span></div><h3 className={`mt-6 ${h3}`}>Agree priorities and actions</h3><p className="mt-4 leading-7 text-body">We identify the decisions and skills that need attention first, agree practical actions, and review what you learn as your business develops.</p></article></li>
-          <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><Compass aria-hidden="true" size={24} /></span><span aria-hidden="true">03</span></div><h3 className={`mt-6 ${h3}`}>Define the rhythm and support</h3><p className="mt-4 leading-7 text-body">We agree session frequency and duration, the scope and channels of support between sessions, and response expectations before the engagement begins.</p></article></li>
+          <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><Compass aria-hidden="true" size={24} /></span><span aria-hidden="true">03</span></div><h3 className={`mt-6 ${h3}`}>Define the rhythm and support</h3><p className="mt-4 leading-7 text-body">Sessions are usually one hour, once a week, via Zoom or in person when possible. We agree the schedule, the scope and channels of support between sessions, and response expectations before the engagement begins.</p></article></li>
         </ol>
         <div className={styles.scopeNote}><ShieldCheck aria-hidden="true" size={32} strokeWidth={1.5} /><h3 className={h3}>Mentoring, not done-for-you development</h3><p className="leading-8 text-body">We help you strengthen your leadership while you retain ownership of business decisions and execution. Mentoring supports your judgment, plans, and actions; it is not done-for-you product development or outsourced operational delivery.</p></div>
       </div>
