@@ -103,8 +103,11 @@ export default function EntrepreneurMentoringPage() {
     <section aria-labelledby="mentor-heading" className={`${styles.sectionSpacing} ${styles.mentorBand}`}>
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
         <div>
-          <p className={eyebrow}>Meet your mentor</p>
-          <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>Jeffrey Cortez</h2>
+          <div className="flex items-center gap-6">
+            <Image src="/images/coaching/jeffrey-cortez-mentor.webp" alt="Jeffrey Cortez, founder of 2Nspira and entrepreneur mentor." width={600} height={900} sizes="(min-width: 640px) 140px, 96px" className="h-auto w-24 shrink-0 rounded-2xl border border-line sm:w-[140px]" />
+            <div><p className={eyebrow}>Meet your mentor</p>
+            <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>Jeffrey Cortez</h2></div>
+          </div>
           <p className="mt-5 leading-8 text-body">A product idea is a starting point. Building a company means understanding your customers, testing your assumptions, developing the right product, and growing into the responsibilities of leadership.</p>
           <p className="mt-5 leading-8 text-body">Our work combines practical business guidance with mindset and leadership coaching. You gain an experienced sounding board, honest feedback, and direction grounded in the challenges you face.</p>
           <Link href="/about" className={`mt-6 min-h-[44px] ${linkInline}`}>About Jeffrey and 2Nspira <span aria-hidden="true">&nbsp;→</span></Link>
