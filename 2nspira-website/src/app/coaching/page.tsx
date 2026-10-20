@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { Compass, UserRound, Handshake, Lightbulb, Users, Search, Layers, Target, BriefcaseBusiness, Brain, Focus, MessageSquare, BookOpen, ClipboardList, FileText, CheckCircle2, ShieldCheck } from "lucide-react";
 import PageEffects from "@/components/catalog/CatalogEffects";
 import styles from "./coaching.module.css";
-import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
-import { buttonPrimary, cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section, sectionBand } from "@/components/ui";
+import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
+import { buttonPrimary, cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section } from "@/components/ui";
 
 const description = "One-on-one mentoring for entrepreneurs from 2Nspira. Validate your business idea, develop your venture, and grow with mindset and leadership coaching.";
 export const metadata: Metadata = {
@@ -18,26 +19,32 @@ export const metadata: Metadata = {
 const ventureFoundations = [
   {
     "title": "Design thinking",
+    icon: Lightbulb,
     "text": "Understand the people experiencing the problem, challenge assumptions, explore possible solutions, and test early concepts."
   },
   {
     "title": "Ideal customer persona",
+    icon: Users,
     "text": "Identify who you serve, their needs, buying motivations, alternatives, and decision process. Distinguish the person using your product from the person paying for it."
   },
   {
     "title": "Customer discovery and validation",
+    icon: Search,
     "text": "Learn how to interview potential customers and gather evidence of a meaningful problem and willingness to pay."
   },
   {
     "title": "Product development",
+    icon: Layers,
     "text": "Translate what you learn into a value proposition, prototypes, a focused minimum viable product, and a practical development roadmap."
   },
   {
     "title": "Product–market fit",
+    icon: Target,
     "text": "Test whether customers consistently choose, use, pay for, and return to your solution. Use the evidence to refine your product and positioning."
   },
   {
     "title": "Business model and go-to-market",
+    icon: BriefcaseBusiness,
     "text": "Explore pricing, delivery costs, sales channels, and a realistic path to reaching your first customers."
   }
 ];
@@ -62,11 +69,13 @@ const founderGrowth = [
 ];
 
 
+const growthIcons = [Brain, Compass, Focus, MessageSquare, Users];
+
 const relationship = [
-  { title: "Regular one-on-one conversations", text: "We work through the decisions and challenges in front of you, review what you’re learning, and agree the next priorities." },
-  { title: "Agreed actions", text: "Each conversation leads to clear actions and a way to review progress." },
-  { title: "Personalized reading and exercises", text: "Books, resources, and practical exercises are chosen around your venture and leadership development." },
-  { title: "Defined support between sessions", text: "We agree the scope, channels, and boundaries of support between sessions at the start of the relationship." },
+  { icon: MessageSquare, title: "Regular one-on-one conversations", text: "We work through the decisions and challenges in front of you, review what you’re learning, and agree the next priorities." },
+  { icon: ClipboardList, title: "Agreed actions", text: "Each conversation leads to clear actions and a way to review progress." },
+  { icon: BookOpen, title: "Personalized reading and exercises", text: "Books, resources, and practical exercises are chosen around your venture and leadership development." },
+  { icon: Handshake, title: "Defined support between sessions", text: "We agree the scope, channels, and boundaries of support between sessions at the start of the relationship." },
 ];
 
 export default function EntrepreneurMentoringPage() {
@@ -91,92 +100,123 @@ export default function EntrepreneurMentoringPage() {
       </div>
     </header>
 
-    <section aria-labelledby="mentor-heading" className={section}>
-      <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 sm:px-6 lg:grid-cols-[1.5fr_1fr]">
+    <section aria-labelledby="mentor-heading" className={`${styles.sectionSpacing} ${styles.mentorBand}`}>
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <p className={eyebrow}>Meet your mentor</p>
           <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>Jeffrey Cortez</h2>
           <p className="mt-5 leading-8 text-body">A product idea is a starting point. Building a company means understanding your customers, testing your assumptions, developing the right product, and growing into the responsibilities of leadership.</p>
-          <p className="mt-5 leading-8 text-body">Drawing on my experience building four companies from the ground up, I mentor entrepreneurs through those decisions—from exploring an initial idea to developing a product and leading a growing business.</p>
           <p className="mt-5 leading-8 text-body">Our work combines practical business guidance with mindset and leadership coaching. You gain an experienced sounding board, honest feedback, and direction grounded in the challenges you face.</p>
+          <Link href="/about" className={`mt-6 min-h-[44px] ${linkInline}`}>About Jeffrey and 2Nspira <span aria-hidden="true">&nbsp;→</span></Link>
         </div>
-        <aside aria-labelledby="mentor-background-heading" className={`p-6 sm:p-8 ${cardFlat}`} data-catalog-card>
-          <AccentRule className="mb-6" />
-          <h3 id="mentor-background-heading" className={h3}>Build with purpose</h3>
-          <p className="mt-4 leading-7 text-body">Jeffrey is the founder of 2Nspira and author of Trust Is the Operating System. His mentoring is focused on helping you build a business worth pursuing while developing your ability to lead it.</p>
-          <Link href="/about" className={`mt-5 min-h-[44px] ${linkInline}`}>About Jeffrey and 2Nspira <span aria-hidden="true">&nbsp;→</span></Link>
+        <aside aria-labelledby="mentor-background-heading" className={styles.mentorNote} data-catalog-fade>
+          <div className={styles.experienceMark}><span aria-hidden="true">4</span><span>Companies built<br />from the ground up</span></div>
+          <p className="mt-6 leading-8 text-body">Drawing on my experience building four companies from the ground up, I mentor entrepreneurs through those decisions—from exploring an initial idea to developing a product and leading a growing business.</p>
+          <h3 id="mentor-background-heading" className={`mt-6 ${h3}`}>Build with purpose</h3>
+          <p className="mt-3 text-sm leading-7 text-body">Jeffrey is the founder of 2Nspira and author of Trust Is the Operating System. His mentoring is focused on helping you build a business worth pursuing while developing your ability to lead it.</p>
         </aside>
       </div>
     </section>
 
-    <section className={sectionBand} aria-labelledby="support-heading">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section aria-labelledby="support-heading">
+      <div className={`mx-auto max-w-6xl px-4 sm:px-6 ${styles.sectionSpacing}`}>
         <h2 data-catalog-reveal id="support-heading" className={h2}>Three areas of support</h2>
         <p className="mt-5 max-w-2xl leading-7 text-body">A focused venture. Stronger leadership. Support to keep moving. Explore the areas that matter most to you.</p>
         <nav aria-label="Mentoring areas" className="mt-8 grid gap-4 md:grid-cols-3">
           {[
-            {id: "build-the-right-business", number: "01", title: "Build the right business", text: "Understand your customers. Test your idea. Shape your product."},
-            {id: "become-a-stronger-leader", number: "02", title: "Become a stronger leader", text: "Strengthen your judgment, resilience, and ability to lead others."},
-            {id: "keep-moving-with-guidance", number: "03", title: "Keep moving with guidance", text: "Turn conversations into action, with a working plan and ongoing support."},
-          ].map(({id,number,title,text}) => <Link key={id} href={`#${id}`} data-catalog-card className={`block p-6 ${cardFlat} ${styles.areaLink}`}>
-            <span className="text-sm font-semibold tracking-widest text-accent">{number}</span>
-            <span className="mt-4 block text-lg font-semibold text-ink">{title}</span>
+            {id: "build-the-right-business", icon: Compass, number: "01", title: "Build the right business", text: "Understand your customers. Test your idea. Shape your product."},
+            {id: "become-a-stronger-leader", icon: UserRound, number: "02", title: "Become a stronger leader", text: "Strengthen your judgment, resilience, and ability to lead others."},
+            {id: "keep-moving-with-guidance", icon: Handshake, number: "03", title: "Keep moving with guidance", text: "Turn conversations into action, with a working plan and ongoing support."},
+          ].map(({id,icon: Icon,number,title,text}) => <Link key={id} href={`#${id}`} data-catalog-card className={`block p-6 ${cardFlat} ${styles.areaLink}`}>
+            <div className="flex items-center justify-between"><span className={styles.iconBadge}><Icon aria-hidden="true" size={24} strokeWidth={1.6} /></span><span aria-hidden="true" className="text-sm font-semibold tracking-widest text-accent">{number}</span></div>
+            <span className="mt-5 block text-lg font-semibold text-ink">{title}</span>
             <span className="mt-3 block text-sm leading-6 text-body">{text}</span>
             <span aria-hidden="true" className="mt-5 block text-accent">Explore →</span>
           </Link>)}
         </nav>
-        <section aria-labelledby="build-the-right-business" className="mt-12">
-          <h3 id="build-the-right-business" className={`scroll-mt-24 ${h3}`}>Build the right business</h3>
-          <h4 className="mt-5 font-semibold text-ink">Turn your idea into a business worth building</h4>
-          <p className="mt-4 leading-8 text-body">Together, we work through the foundations of your venture:</p>
-          <p className="mt-3 text-sm text-body">Open a topic to explore how we work on it together.</p>
-          <div className="mt-6 grid items-start gap-4 md:grid-cols-2">
-            {ventureFoundations.map(({ title, text }) => <details key={title} className={`p-5 sm:p-6 ${cardFlat} ${styles.disclosure}`}>
-              <summary className={styles.summary}>{title}<span aria-hidden="true" className={styles.plus}>+</span></summary>
+      </div>
+
+      <section aria-labelledby="build-the-right-business" className={`${styles.sectionSpacing} ${styles.ventureBand}`}>
+        <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.4fr]">
+          <div>
+            <span aria-hidden="true" className={styles.sectionNumber}>01 / Your venture</span>
+            <h3 data-catalog-reveal id="build-the-right-business" className={`mt-4 scroll-mt-24 ${styles.pillarHeading}`}>Build the right business</h3>
+            <h4 className="mt-5 text-lg font-medium text-ink">Turn your idea into a business worth building</h4>
+            <p className="mt-4 leading-8 text-body">Together, we work through the foundations of your venture:</p>
+            <p className="mt-4 text-sm leading-7 text-body">Open a topic to explore how we work on it together.</p>
+          </div>
+          <div className="grid items-start gap-3 sm:grid-cols-2">
+            {ventureFoundations.map(({ title, text, icon: Icon }) => <details key={title} className={`p-5 ${cardFlat} ${styles.disclosure}`}>
+              <summary className={styles.summary}><span className={styles.summaryTitle}><Icon aria-hidden="true" size={22} strokeWidth={1.7} /><span>{title}</span></span><span aria-hidden="true" className={styles.plus}>+</span></summary>
               <p className="mt-4 leading-7 text-body">{text}</p>
             </details>)}
           </div>
-        </section>
-        <section aria-labelledby="become-a-stronger-leader" className="mt-12 border-t border-line pt-10">
-          <h3 id="become-a-stronger-leader" className={`scroll-mt-24 ${h3}`}>Become a stronger leader</h3>
-          <h4 className="mt-5 font-semibold text-ink">Grow alongside your company</h4>
-          <p className="mt-5 max-w-4xl leading-8 text-body">The business will challenge you personally as well as professionally. Our mentoring relationship also creates space to work on:</p>
-          <ul className="mt-6 grid gap-3 md:grid-cols-2">{founderGrowth.map((item, index) => <li key={item} className={`flex items-start gap-4 p-5 leading-7 text-body ${cardFlat}`}><span aria-hidden="true" className="font-semibold text-accent">0{index + 1}</span><span>{item}</span></li>)}</ul>
-        </section>
-        <section aria-labelledby="keep-moving-with-guidance" className="mt-12 border-t border-line pt-10">
-          <h3 id="keep-moving-with-guidance" className={`scroll-mt-24 ${h3}`}>Keep moving with guidance</h3>
-          <p className="mt-5 max-w-4xl leading-8 text-body">I share relevant experiences, recommend books and resources, and help you turn those lessons into practical action. Regular conversations and agreed support between sessions give you a continuing relationship as your business evolves.</p>
-          <dl className="mt-6 grid gap-5 md:grid-cols-2">{relationship.map(({title,text}) => <div key={title} className={`p-6 ${cardFlat}`}><dt className="font-semibold text-ink">{title}</dt><dd className="mt-3 leading-7 text-body">{text}</dd></div>)}</dl>
-        </section>
-      </div>
-    </section>
-
-    <section aria-labelledby="due-diligence-heading" className={section}>
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <h2 data-catalog-reveal id="due-diligence-heading" className={h2}>Your Entrepreneur Due Diligence Document</h2>
-        <p className="mt-5 leading-8 text-body">We bring your thinking and research together in a working document that helps you decide what to pursue, what to test, and where to invest your time and money.</p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-3" aria-label="Working document focus">
-          {["Make assumptions visible", "Gather real evidence", "Choose the next action"].map((item,index) => <div key={item} className={`p-5 ${cardFlat}`}><span className="text-sm font-semibold text-accent">0{index+1}</span><p className="mt-3 font-semibold text-ink">{item}</p></div>)}
         </div>
-        <details className={`mt-6 p-6 ${cardFlat} ${styles.disclosure}`}>
-          <summary className={styles.summary}>Explore the eight-part working outline<span aria-hidden="true" className={styles.plus}>+</span></summary>
-          <h3 className={`mt-6 ${h3}`}>A sample working outline</h3>
-          <p className="mt-4 leading-7 text-body">Your document captures:</p>
-          <ol className="mt-4 grid list-decimal gap-x-10 gap-y-3 pl-6 leading-8 text-body marker:text-accent md:grid-cols-2">{dueDiligenceContents.map(item => <li key={item}>{item}</li>)}</ol>
-        </details>
-        <p className="mt-6 leading-8 text-body">This document evolves as you learn, making your assumptions and evidence visible before you make larger commitments.</p>
+      </section>
+
+      <section aria-labelledby="become-a-stronger-leader" className={styles.sectionSpacing}>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className={styles.leadershipBoard}>
+            <div>
+              <span aria-hidden="true" className={styles.inverseNumber}>02 / Your leadership</span>
+              <h3 data-catalog-reveal id="become-a-stronger-leader" className={`mt-4 scroll-mt-24 ${styles.inverseHeading}`}>Become a stronger leader</h3>
+              <h4 className={`mt-5 text-lg font-medium ${styles.inverseText}`}>Grow alongside your company</h4>
+              <p className={`mt-5 leading-8 ${styles.inverseText}`}>The business will challenge you personally as well as professionally. Our mentoring relationship also creates space to work on:</p>
+              <div aria-hidden="true" className={styles.leadershipSymbol}><UserRound size={68} strokeWidth={1} /></div>
+            </div>
+            <ul className={styles.leadershipList}>{founderGrowth.map((item, index) => { const Icon = growthIcons[index] ?? Focus; return <li key={item}><span className={styles.inverseIcon}><Icon aria-hidden="true" size={22} strokeWidth={1.6} /></span><span>{item}</span></li>; })}</ul>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="keep-moving-with-guidance" className={`${styles.sectionSpacing} ${styles.guidanceBand}`}>
+        <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 sm:px-6 lg:grid-cols-2">
+          <div>
+            <span aria-hidden="true" className={styles.sectionNumber}>03 / Your support</span>
+            <h3 data-catalog-reveal id="keep-moving-with-guidance" className={`mt-4 scroll-mt-24 ${styles.pillarHeading}`}>Keep moving with guidance</h3>
+            <p className="mt-5 max-w-xl leading-8 text-body">I share relevant experiences, recommend books and resources, and help you turn those lessons into practical action. Regular conversations and agreed support between sessions give you a continuing relationship as your business evolves.</p>
+          </div>
+          <dl className={styles.supportTimeline}>{relationship.map(({title,text,icon: Icon}) => <div key={title} className={styles.supportStep}><dt className="font-semibold text-ink"><span aria-hidden="true" className={styles.timelineIcon}><Icon size={22} strokeWidth={1.7} /></span>{title}</dt><dd className="mt-2 leading-7 text-body">{text}</dd></div>)}</dl>
+        </div>
+      </section>
+    </section>
+
+    <section aria-labelledby="due-diligence-heading" className={`${styles.sectionSpacing} ${styles.documentBand}`}>
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
+        <div>
+          <span aria-hidden="true" className={styles.iconBadge}><FileText size={26} strokeWidth={1.5} /></span>
+          <h2 data-catalog-reveal id="due-diligence-heading" className={`mt-6 ${h2}`}>Your Entrepreneur Due Diligence Document</h2>
+          <p className="mt-5 leading-8 text-body">We bring your thinking and research together in a working document that helps you decide what to pursue, what to test, and where to invest your time and money.</p>
+          <ul className="mt-6 space-y-4" aria-label="Working document focus">{["Make assumptions visible", "Gather real evidence", "Choose the next action"].map(item => <li key={item} className="flex items-center gap-3 font-medium text-ink"><CheckCircle2 aria-hidden="true" className="shrink-0 text-accent" size={21} strokeWidth={1.7} /><span>{item}</span></li>)}</ul>
+          <p className="mt-6 leading-8 text-body">This document evolves as you learn, making your assumptions and evidence visible before you make larger commitments.</p>
+        </div>
+        <div className={styles.documentPreview} data-catalog-fade>
+          <div className={styles.documentTop}><FileText aria-hidden="true" size={22} /><span>Working document</span><span className={styles.sampleLabel}>Sample outline</span></div>
+          <div className="p-6 sm:p-8">
+            <p className="text-lg font-semibold text-ink">Entrepreneur Due Diligence</p>
+            <div aria-hidden="true" className={styles.documentLines}>
+              <div><span>01</span><span>Purpose &amp; problem</span></div><div><span>02</span><span>Customer evidence</span></div><div><span>03</span><span>Priorities &amp; actions</span></div>
+            </div>
+            <details className={`mt-6 border-t border-line pt-4 ${styles.disclosure}`}>
+              <summary className={styles.summary}>Explore the eight-part working outline<span aria-hidden="true" className={styles.plus}>+</span></summary>
+              <h3 className={`mt-6 ${h3}`}>A sample working outline</h3>
+              <p className="mt-4 leading-7 text-body">Your document captures:</p>
+              <ol className="mt-4 list-decimal space-y-3 pl-6 leading-7 text-body marker:text-accent">{dueDiligenceContents.map(item => <li key={item}>{item}</li>)}</ol>
+            </details>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section aria-labelledby="working-together-heading" className={sectionBand}>
+    <section aria-labelledby="working-together-heading" className={`${styles.sectionSpacing} ${styles.processBand}`}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 data-catalog-reveal id="working-together-heading" className={h2}>How working together works</h2>
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
-          <article data-catalog-card className={`p-6 ${cardFlat}`}><p aria-hidden="true" className="text-sm font-semibold tracking-widest text-accent">01</p><h3 className={`mt-4 ${h3}`}>Start with an introductory conversation</h3><p className="mt-4 leading-7 text-body">We discuss your business idea, current challenges, and what you want to develop as a leader. Together, we decide whether the mentoring relationship fits your needs.</p></article>
-          <article data-catalog-card className={`p-6 ${cardFlat}`}><p aria-hidden="true" className="text-sm font-semibold tracking-widest text-accent">02</p><h3 className={`mt-4 ${h3}`}>Agree priorities and actions</h3><p className="mt-4 leading-7 text-body">We identify the decisions and skills that need attention first, agree practical actions, and review what you learn as your business develops.</p></article>
-          <article data-catalog-card className={`p-6 ${cardFlat}`}><p aria-hidden="true" className="text-sm font-semibold tracking-widest text-accent">03</p><h3 className={`mt-4 ${h3}`}>Define the rhythm and support</h3><p className="mt-4 leading-7 text-body">We agree session frequency and duration, the scope and channels of support between sessions, and response expectations before the engagement begins.</p></article>
-        </div>
-        <div className={`mt-8 p-6 ${cardFlat}`}><h3 className={h3}>Mentoring, not done-for-you development</h3><p className="mt-4 leading-8 text-body">We help you strengthen your leadership while you retain ownership of business decisions and execution. Mentoring supports your judgment, plans, and actions; it is not done-for-you product development or outsourced operational delivery.</p></div>
+        <ol className={styles.processSteps} aria-label="Mentoring process">
+          <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><MessageSquare aria-hidden="true" size={24} /></span><span aria-hidden="true">01</span></div><h3 className={`mt-6 ${h3}`}>Start with an introductory conversation</h3><p className="mt-4 leading-7 text-body">We discuss your business idea, current challenges, and what you want to develop as a leader. Together, we decide whether the mentoring relationship fits your needs.</p></article></li>
+          <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><ClipboardList aria-hidden="true" size={24} /></span><span aria-hidden="true">02</span></div><h3 className={`mt-6 ${h3}`}>Agree priorities and actions</h3><p className="mt-4 leading-7 text-body">We identify the decisions and skills that need attention first, agree practical actions, and review what you learn as your business develops.</p></article></li>
+          <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><Compass aria-hidden="true" size={24} /></span><span aria-hidden="true">03</span></div><h3 className={`mt-6 ${h3}`}>Define the rhythm and support</h3><p className="mt-4 leading-7 text-body">We agree session frequency and duration, the scope and channels of support between sessions, and response expectations before the engagement begins.</p></article></li>
+        </ol>
+        <div className={styles.scopeNote}><ShieldCheck aria-hidden="true" size={32} strokeWidth={1.5} /><h3 className={h3}>Mentoring, not done-for-you development</h3><p className="leading-8 text-body">We help you strengthen your leadership while you retain ownership of business decisions and execution. Mentoring supports your judgment, plans, and actions; it is not done-for-you product development or outsourced operational delivery.</p></div>
       </div>
     </section>
 
