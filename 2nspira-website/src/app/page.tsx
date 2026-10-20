@@ -79,12 +79,12 @@ export default function Home() {
       linkLabel: "Explore digital platforms",
     },
     {
-      title: "Fractional CIO / Technology Leadership",
+      title: "Technology Leadership & Founder Advisory",
       description:
-        "Fractional CTO guidance, architecture reviews, and transformation pathways that align technology investment with business outcomes.",
-      benefit: "Outcome: technology decisions that follow your business priorities, not the other way around.",
+        "Experienced fractional technology leadership for organizations and practical advisory and coaching for founders strengthening their own leadership.",
+      benefit: "Outcome: clearer technology priorities, stronger leadership, and practical execution.",
       href: "/fractional-cio",
-      linkLabel: "Explore fractional leadership",
+      linkLabel: "Explore leadership & advisory",
     },
   ];
 
