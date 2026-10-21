@@ -1,11 +1,12 @@
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import ServiceConversation from "@/components/ServiceConversation";
+import ServiceFit from "@/components/ServiceFit";
+import ServiceQuestions from "@/components/ServiceQuestions";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
-  buttonPrimary,
   card,
   cardFlat,
   eyebrow,
@@ -134,7 +135,7 @@ export default function AutomationSystemsOptimizationPage() {
               <EyebrowPill>Automation &amp; Systems Optimization</EyebrowPill>
             </p>
             <h1 className="animate-rise mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-              Optimize the operating model first. Automate what makes sense.
+              Less repeated work. Better-connected systems.
             </h1>
             <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>
               Make your systems work together, not around each other. We help
@@ -145,15 +146,12 @@ export default function AutomationSystemsOptimizationPage() {
               className="animate-rise mt-5 max-w-3xl text-base leading-7 text-body"
               style={{ animationDelay: "120ms" }}
             >
-              Automation is not the starting point. We first understand how the
-              organization operates, then decide where systems should connect,
-              processes should simplify, data should move, infrastructure should
-              modernize, and AI can add practical value.
+              Keep the tools that serve you. We look at how work moves between
+              people and systems, then agree what to simplify, connect, or automate.
+              A new platform is not always the answer.
             </p>
             <div className="animate-rise mt-8" style={{ animationDelay: "160ms" }}>
-              <Link href="/contact" className={buttonPrimary}>
-                Request a consultation
-              </Link>
+              <ServiceConversation label="Talk through a workflow bottleneck" />
             </div>
           </div>
 
@@ -172,61 +170,11 @@ export default function AutomationSystemsOptimizationPage() {
         </div>
       </section>
 
-      <section className={section} aria-labelledby="lenses-heading">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <p className={eyebrow}>Eight connected lenses</p>
-            <h2 id="lenses-heading" className={`mt-4 ${h2}`}>
-              See the whole environment before changing the workflow
-            </h2>
-            <p className={`mt-4 ${lead}`}>
-              A workflow problem rarely belongs to one tool. We evaluate the
-              operating model across eight dimensions to understand root causes,
-              dependencies, ownership, and the safest path forward.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {operatingLenses.map((lens, index) => (
-              <Reveal key={lens.title} delay={index * 60} className="h-full">
-                <article className={`group h-full p-6 motion-safe:hover:-translate-y-1 ${card}`}>
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className={`mt-5 ${h3}`}>{lens.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-body">{lens.text}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal className="mt-8">
-            <div className="grid gap-8 overflow-hidden rounded-[2rem] border border-line bg-ink p-8 text-white shadow-[0_24px_70px_rgba(35,41,54,0.14)] sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">
-                  The 2Nspira difference
-                </p>
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
-                  One operating workflow, not a collection of automation steps
-                </h3>
-                <p className="mt-4 leading-7 text-white/70">
-                  We follow the work across teams, systems, decisions, and data.
-                  That reveals where automation will help—and where integration,
-                  process design, governance, or modernization must come first.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-3 text-sm sm:grid-cols-4" aria-label="Operating model lenses">
-                {operatingLenses.map((lens) => (
-                  <div key={lens.title} className="rounded-2xl border border-white/15 bg-white/5 px-3 py-4 text-center font-medium text-white/85">
-                    {lens.title}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
+      <ServiceFit intro="For teams whose day-to-day work is harder than it needs to be. Start with a real bottleneck, not a wish list of tools." items={[
+        { title: "The same data gets entered twice", text: "Your team copies information across apps or spreadsheets and has to check which version is right." },
+        { title: "Handoffs depend on chasing people", text: "Updates, approvals, and follow-ups get stuck because ownership or status is unclear." },
+        { title: "You’ve outgrown a workaround", text: "A process or legacy system still matters, but it needs a more reliable way to connect with the rest of the business." },
+      ]} />
       <section className={sectionBand} aria-labelledby="improvements-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-3xl">
@@ -302,6 +250,68 @@ export default function AutomationSystemsOptimizationPage() {
         </div>
       </section>
 
+      <section className={section} aria-labelledby="lenses-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="max-w-3xl">
+            <p className={eyebrow}>Eight connected lenses</p>
+            <h2 id="lenses-heading" className={`mt-4 ${h2}`}>
+              See the whole environment before changing the workflow
+            </h2>
+            <p className={`mt-4 ${lead}`}>
+              A workflow problem rarely belongs to one tool. We evaluate the
+              operating model across eight dimensions to understand root causes,
+              dependencies, ownership, and the safest path forward.
+            </p>
+          </div>
+
+          <details className="mt-8 rounded-2xl border border-line bg-surface p-5 sm:p-7"><summary className="cursor-pointer rounded font-semibold text-ink focus-visible:outline-2 focus-visible:outline-accent">Explore the eight connected lenses</summary>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {operatingLenses.map((lens, index) => (
+              <Reveal key={lens.title} delay={index * 60} className="h-full">
+                <article className={`group h-full p-6 motion-safe:hover:-translate-y-1 ${card}`}>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className={`mt-5 ${h3}`}>{lens.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-body">{lens.text}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          </details>
+          <Reveal className="mt-8">
+            <div className="grid gap-8 overflow-hidden rounded-[2rem] border border-line bg-ink p-8 text-white shadow-[0_24px_70px_rgba(35,41,54,0.14)] sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">
+                  The 2Nspira difference
+                </p>
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+                  One operating workflow, not a collection of automation steps
+                </h3>
+                <p className="mt-4 leading-7 text-white/70">
+                  We follow the work across teams, systems, decisions, and data.
+                  That reveals where automation will help—and where integration,
+                  process design, governance, or modernization must come first.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 text-sm sm:grid-cols-4" aria-label="Operating model lenses">
+                {operatingLenses.map((lens) => (
+                  <div key={lens.title} className="rounded-2xl border border-white/15 bg-white/5 px-3 py-4 text-center font-medium text-white/85">
+                    {lens.title}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <ServiceQuestions items={[
+        { question: "Will we need to replace our existing systems?", answer: "Not necessarily. We assess what works, what does not, and the available integrations before recommending changes. Platform constraints, data quality, and access requirements influence what is feasible." },
+        { question: "What will the engagement deliver?", answer: "The agreed scope may include workflow mapping, integration planning, process changes, or implementation. We define the priorities, responsibilities, dependencies, and acceptance criteria before committing to delivery." },
+        { question: "Can we start with one workflow?", answer: "Yes. Bring a specific example of repeated work or a difficult handoff. We consider its wider dependencies and agree a useful scope rather than assuming a full replacement or organization-wide automation program." },
+      ]} />
       <section className={section} aria-labelledby="automation-cta-heading">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 id="automation-cta-heading" className={h2}>
@@ -312,9 +322,7 @@ export default function AutomationSystemsOptimizationPage() {
             simplify, connect, modernize, automate, or leave alone.
           </p>
           <div className="mt-10">
-            <Link href="/contact" className={buttonPrimary}>
-              Start a conversation
-            </Link>
+            <ServiceConversation label="Talk through a workflow bottleneck" centered />
           </div>
         </div>
       </section>

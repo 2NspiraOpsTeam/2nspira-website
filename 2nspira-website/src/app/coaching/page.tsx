@@ -3,9 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { Clock, CalendarDays, Video, Compass, UserRound, Handshake, Lightbulb, Users, Search, Layers, Target, BriefcaseBusiness, Brain, Focus, MessageSquare, BookOpen, ClipboardList, FileText, CheckCircle2, ShieldCheck } from "lucide-react";
 import PageEffects from "./CoachingEffects";
+import ServiceConversation from "@/components/ServiceConversation";
+import ServiceQuestions from "@/components/ServiceQuestions";
 import styles from "./coaching.module.css";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
-import { buttonPrimary, cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section } from "@/components/ui";
+import { cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section } from "@/components/ui";
 
 const description = "Build your business and grow as a leader with one-on-one entrepreneur mentoring and business coaching, matched to your industry. Explore your next step.";
 export const metadata: Metadata = {
@@ -103,7 +105,7 @@ export default function EntrepreneurMentoringPage() {
             <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><CalendarDays aria-hidden="true" size={17} />Usually weekly</li>
             <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><Video aria-hidden="true" size={17} />Zoom · In person when possible</li>
           </ul>
-          <div className="mt-8"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Discuss your business idea or leadership challenge</Link></div>
+          <ServiceConversation label="Discuss your business idea or leadership challenge" mentoring />
         </div>
         <figure className={`relative ${styles.hero}`} data-catalog-fade>
           <Image src="/images/coaching/creative-mentoring-hero-v5.webp" alt="Illustrative scene of one entrepreneur and one mentor in an executive conversation in an industrial creative studio." width={1536} height={864} loading="eager" fetchPriority="high" className="h-auto w-full rounded-3xl border border-line" />
@@ -128,7 +130,7 @@ export default function EntrepreneurMentoringPage() {
         </ul>
         <div className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl leading-7 text-body">You don’t need a finished business plan or all the answers. Start with where you are and what you want to work through.</p>
-          <Link href="/contact" className={`${buttonPrimary} min-h-[44px] shrink-0`}>Discuss where you are now <span aria-hidden="true">→</span></Link>
+          <a href="#mentoring-cta-heading" className={`min-h-11 shrink-0 ${linkInline}`}>Discuss where you are now <span aria-hidden="true"> ↓</span></a>
         </div>
       </div>
     </section>
@@ -256,11 +258,17 @@ export default function EntrepreneurMentoringPage() {
       </div>
     </section>
 
+    <ServiceQuestions items={[
+      { question: "Do I need a business plan before we talk?", answer: "No. Start with your idea, current business, or a leadership challenge. We explore your priorities and stage of development before agreeing a mentoring relationship." },
+      { question: "How is my coach selected?", answer: "We discuss your industry, business priorities, and development needs, then match you with an available industry-aligned coach. The introductory conversation helps explore fit; it is not a promise that a particular individual will be assigned." },
+      { question: "Is the introductory call a mentoring session?", answer: "No. The booking link is for a 30-minute introductory conversation via Google Meet. Ongoing mentoring sessions are usually one hour weekly via Zoom or in person when possible. Schedule, support between sessions, and response expectations are agreed before the engagement begins." },
+      { question: "Will my coach build or run the business for me?", answer: "No. Your coach provides guidance, feedback, practical exercises, and accountability. You retain ownership of business decisions and execution; mentoring is not done-for-you product development or outsourced management." },
+    ]} />
     <section aria-labelledby="mentoring-cta-heading" className={section}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <h2 data-catalog-reveal id="mentoring-cta-heading" className={h2}>You don’t have to build it alone.</h2>
         <p className="mt-5 leading-8 text-body">Tell us what you’re building, where you feel stuck, and what you want to develop as a leader. We’ll explore the right next step together.</p>
-        <div className="mt-8"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Start a mentoring conversation</Link></div>
+        <ServiceConversation label="Start a mentoring conversation" centered mentoring />
       </div>
     </section>
     </PageEffects>

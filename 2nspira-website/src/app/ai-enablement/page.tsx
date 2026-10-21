@@ -19,7 +19,17 @@ export default function Page() {
     primaryActionLabel: "Discuss your AI priorities",
     intro: "AI should do more than create activity. It should support how your organization works. We help you identify worthwhile opportunities, establish practical guardrails, and equip your people to use AI with purpose, confidence, and accountability.",
     audience: "Executive teams, school and academic leaders, founders, nonprofits, and operators adopting AI without a clear framework for governance, training, or data privacy.",
-    outcomesTitle: "Measurable outcomes",
+    situations: [
+      { title: "AI use is growing without a plan", text: "People are experimenting, but priorities, ownership, and acceptable use are unclear." },
+      { title: "Your team needs confidence", text: "You want people to understand AI’s limits, protect information, and use it with judgment." },
+      { title: "You need a useful starting point", text: "You want to choose a manageable workflow to test rather than add another tool without a purpose." },
+    ],
+    questions: [
+      { question: "Do we need to choose an AI tool before we talk?", answer: "No. Start with the work you want to improve and any current experiments. Readiness, data, risks, and team capacity help determine whether a tool or a different change is appropriate." },
+      { question: "Is this strategy, training, or implementation?", answer: "The focus depends on your needs. We agree which strategy, governance, training, or implementation work is in scope. A roadmap does not automatically include every implementation or ongoing monitoring activity." },
+      { question: "What should we bring to the first conversation?", answer: "Bring your priorities, an example workflow, the tools already in use, and the decisions you need help making. You do not need to share sensitive records or credentials in the booking form." },
+    ],
+    outcomesTitle: "Practical outcomes to work toward",
     outcomes: [
       "A prioritized portfolio of AI opportunities tied to strategic goals.",
       "Clear ownership, acceptable-use guidance, and data privacy guardrails.",
@@ -92,7 +102,7 @@ export default function Page() {
     ],
     buildSection: {
       title: "What We Help Build",
-      intro: "A practical foundation your organization can operate, teach, and improve—not a strategy deck that sits on a shelf.",
+      intro: "Examples of deliverables we can scope around your priorities. We agree what to assess, teach, design, or implement before the work begins.",
       items: [
         { title: "AI strategy and roadmap", text: "A sequenced plan grounded in readiness, value, risk, and capacity." },
         { title: "Governance framework", text: "Decision rights, acceptable-use standards, review paths, and accountability." },
