@@ -34,14 +34,6 @@ export default function Footer() {
             <img src="/images/logo/2nspira-logo.png" alt="2Nspira" width={320} height={132} className="h-auto w-40" />
           </Link>
           <p className={styles.description}>Human-centered technology, practical AI adoption, and entrepreneur mentoring and coaching.</p>
-          <nav aria-labelledby="footer-social-heading" className={styles.social}>
-            <h2 id="footer-social-heading" className={styles.heading}>Follow 2Nspira</h2>
-            <ul className={styles.socialLinks}>{socialLinks.map(link => <li key={link.href}>
-              <a href={link.href} target="_blank" rel="noopener noreferrer" className={`${styles.link} ${styles.socialLink}`} aria-label={`2Nspira on ${link.name} (opens in a new tab)`}>
-                {link.name}<ArrowUpRight aria-hidden="true" size={16} />
-              </a>
-            </li>)}</ul>
-          </nav>
         </div>
         <nav aria-labelledby="footer-services-heading">
           <h2 id="footer-services-heading" className={styles.heading}>Services</h2>
@@ -55,6 +47,14 @@ export default function Footer() {
           <h2 id="footer-contact-heading" className={styles.heading}>Contact</h2>
           <p className={styles.description}>Questions about our services or ready to get started?</p>
           <Link href="/contact" className={styles.contact} aria-label="Get in touch with 2Nspira via contact page">Get in touch<ArrowUpRight aria-hidden="true" size={18} /></Link>
+          <nav aria-labelledby="footer-social-heading" className={styles.social}>
+            <h2 id="footer-social-heading" className={styles.heading}>Follow 2Nspira</h2>
+            <ul className={styles.socialLinks}>{socialLinks.map(link => <li key={link.href}>
+              <a href={link.href} target="_blank" rel="noopener noreferrer" className={`${styles.link} ${styles.socialLink}`} aria-label={`2Nspira on ${link.name} (opens in a new tab)`}>
+                {link.name}<ArrowUpRight aria-hidden="true" size={16} />
+              </a>
+            </li>)}</ul>
+          </nav>
         </div>
       </div>
       <div className={styles.bottom}>
