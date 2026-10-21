@@ -7,7 +7,7 @@ import styles from "./coaching.module.css";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { buttonPrimary, cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section } from "@/components/ui";
 
-const description = "Industry-aligned entrepreneur mentoring from 2Nspira. Develop your venture, strengthen leadership, and move forward with one-on-one business coaching.";
+const description = "Build your business and grow as a leader with one-on-one entrepreneur mentoring and business coaching, matched to your industry. Explore your next step.";
 export const metadata: Metadata = {
   title: { absolute: "Entrepreneur Mentoring & Business Coaching | 2Nspira" }, description,
   alternates: { canonical: "/coaching" },
@@ -79,7 +79,7 @@ const relationship = [
 ];
 
 export default function EntrepreneurMentoringPage() {
-  const schema = { "@context": "https://schema.org", "@type": "Service", name: "Entrepreneur Mentoring & Coaching", description,
+  const schema = { "@context": "https://schema.org", "@type": "Service", "@id": "https://2nspira.com/coaching#service", name: "Entrepreneur Mentoring & Coaching", serviceType: ["Entrepreneur mentoring", "Business coaching", "Mindset and leadership coaching"], description,
     url: "https://2nspira.com/coaching", provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide" };
   return <main id="main-content" className={pageMain}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
@@ -90,7 +90,7 @@ export default function EntrepreneurMentoringPage() {
         <div>
           <EyebrowPill>Entrepreneur Mentoring &amp; Coaching</EyebrowPill>
           <h1 className={h1}>Build your business. Grow into the leader it needs.</h1>
-          <p className={lead}>One-on-one mentoring for entrepreneurs—from validating a product idea to navigating the challenges of leading a growing company. Matched with a coach aligned with your industry.</p>
+          <p className={lead}>You don’t have to figure everything out alone. Work one-on-one with an experienced industry leader matched to your industry—someone to challenge your thinking, offer candid feedback, and help you turn uncertainty into practical next steps.</p>
           <ul aria-label="Typical mentoring sessions" className="mt-6 flex flex-wrap gap-2 text-sm text-body">
             <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><Clock aria-hidden="true" size={17} />Usually 1 hour</li>
             <li className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-2"><CalendarDays aria-hidden="true" size={17} />Usually weekly</li>
@@ -108,10 +108,10 @@ export default function EntrepreneurMentoringPage() {
     <section aria-labelledby="mentor-heading" className={`${styles.sectionSpacing} ${styles.mentorBand}`}>
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
         <div>
-          <p className={eyebrow}>Industry-aligned guidance</p>
-          <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>Matched to your business.</h2>
-          <p className="mt-5 leading-8 text-body">A handful of industry leaders are available to coach you. 2Nspira matches you with a coach aligned with your industry, business priorities, and stage of development.</p>
-          <p className="mt-5 leading-8 text-body">Our work combines practical business guidance with mindset and leadership coaching. You gain an experienced sounding board, honest feedback, and direction grounded in the challenges you face.</p>
+          <p className={eyebrow}>Industry-aligned. Personally focused.</p>
+          <h2 data-catalog-reveal id="mentor-heading" className={`mt-4 ${h2}`}>The right perspective for your next move.</h2>
+          <p className="mt-5 leading-8 text-body">We match you with an experienced coach aligned with your industry, business priorities, and stage of development. Bring the decisions you’re weighing, the ideas you want to test, and the challenges you’re ready to work through.</p>
+          <p className="mt-5 leading-8 text-body">From testing your business idea to making difficult decisions and leading a team, get ongoing guidance that develops your business, your mindset, and the way you lead.</p>
           <Link href="/about" className={`mt-6 min-h-[44px] ${linkInline}`}>About 2Nspira <span aria-hidden="true">&nbsp;→</span></Link>
         </div>
         <aside aria-labelledby="mentor-background-heading" className={styles.mentorNote} data-catalog-fade>
@@ -218,7 +218,7 @@ export default function EntrepreneurMentoringPage() {
 
     <section aria-labelledby="working-together-heading" className={`${styles.sectionSpacing} ${styles.processBand}`}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 data-catalog-reveal id="working-together-heading" className={h2}>How working together works</h2>
+        <h2 data-catalog-reveal id="working-together-heading" className={h2}>How your mentoring relationship works</h2>
         <ol className={styles.processSteps} aria-label="Mentoring process">
           <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><MessageSquare aria-hidden="true" size={24} /></span><span aria-hidden="true">01</span></div><h3 className={`mt-6 ${h3}`}>Start with an introductory conversation</h3><p className="mt-4 leading-7 text-body">We discuss your business idea, industry, current challenges, and what you want to develop as a leader. We then match you with a coach aligned with your industry and priorities.</p></article></li>
           <li><article data-catalog-card className={`p-6 sm:p-7 ${cardFlat}`}><div className={styles.stepTop}><span className={styles.iconBadge}><ClipboardList aria-hidden="true" size={24} /></span><span aria-hidden="true">02</span></div><h3 className={`mt-6 ${h3}`}>Agree priorities and actions</h3><p className="mt-4 leading-7 text-body">We identify the decisions and skills that need attention first, agree practical actions, and review what you learn as your business develops.</p></article></li>
@@ -230,7 +230,8 @@ export default function EntrepreneurMentoringPage() {
 
     <section aria-labelledby="mentoring-cta-heading" className={section}>
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-        <h2 data-catalog-reveal id="mentoring-cta-heading" className={h2}>An experienced mentor for the company you’re building—and the leader you’re becoming.</h2>
+        <h2 data-catalog-reveal id="mentoring-cta-heading" className={h2}>You don’t have to build it alone.</h2>
+        <p className="mt-5 leading-8 text-body">Tell us what you’re building, where you feel stuck, and what you want to develop as a leader. We’ll explore the right next step together.</p>
         <div className="mt-8"><Link href="/contact" className={`${buttonPrimary} min-h-[44px]`}>Start a mentoring conversation</Link></div>
       </div>
     </section>

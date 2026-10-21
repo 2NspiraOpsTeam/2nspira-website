@@ -21,8 +21,9 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Technology Services & Entrepreneur Mentoring",
-  "description": "Explore 2Nspira services for responsible AI adoption, systems optimization, workflow automation, digital platforms, fractional CIO leadership, and entrepreneur mentoring.",
+  "title": "AI, Technology Leadership & Coaching Services",
+  "shareTitle": "Clearer priorities. Practical support. Stronger execution.",
+  "description": "Find practical support for AI adoption, systems automation, digital platforms, fractional CIO leadership, and industry-aligned entrepreneur mentoring.",
   "path": "/services"
 });
 
@@ -32,10 +33,10 @@ const capabilities = [
     id: "service-heading-1",
     title: "AI Enablement",
     description:
-      "Pragmatic AI strategy and governance frameworks. We help organizations evaluate readiness, establish responsible workflows, and implement practical solutions — not hype-driven pilots.",
+      "Move beyond scattered AI experiments. Build a clear strategy, practical governance, and the skills your people need to use AI responsibly.",
     benefit:
-      "You get: a clear adoption path, guardrails your teams can follow, and AI work that supports your priorities.",
-    points: ["AI readiness assessment", "Governance frameworks", "Responsible implementation paths"],
+      "You get: prioritized use cases, clear ownership, and a practical adoption roadmap aligned with your organization.",
+    points: ["AI strategy & readiness", "AI governance & privacy", "Leadership & team training", "Responsible implementation"],
     href: "/ai-enablement",
     linkLabel: "Explore AI enablement",
   },
@@ -106,10 +107,10 @@ const servicesJsonLd = {
     },
     {
       "@type": "Service",
-      "@id": "https://2nspira.com/services#ai-enablement",
+      "@id": "https://2nspira.com/ai-enablement#service",
       name: "AI Enablement",
       description:
-        "Pragmatic AI strategy and governance frameworks. We help organizations evaluate readiness, establish responsible workflows, and implement practical solutions.",
+        "AI strategy, governance, team training, and responsible implementation grounded in your organization’s priorities.",
       url: "https://2nspira.com/ai-enablement",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
@@ -145,7 +146,7 @@ const servicesJsonLd = {
       areaServed: "Worldwide",
     },
     {
-      "@type": "Service", "@id": "https://2nspira.com/services#entrepreneur-mentoring",
+      "@type": "Service", "@id": "https://2nspira.com/coaching#service",
       name: "Entrepreneur Mentoring & Coaching",
       description: "Industry-aligned, one-on-one mentoring for entrepreneurs, combining venture guidance with mindset and leadership coaching.",
       url: "https://2nspira.com/coaching",

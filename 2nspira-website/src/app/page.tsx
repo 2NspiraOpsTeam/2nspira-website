@@ -21,13 +21,13 @@ import {
 } from "@/components/ui";
 
 const homepageDescription =
-  "Practical AI, systems optimization, digital platforms, fractional CIO leadership, and entrepreneur mentoring from 2Nspira. Turn priorities into execution.";
+  "AI consulting, systems automation, digital platforms, fractional CIO leadership, and one-on-one entrepreneur coaching. Turn priorities into practical action.";
 const homepageShareTitle =
-  "Technology that moves you forward. Leadership that grows with you.";
+  "Clearer technology decisions. Stronger business leadership.";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 
 export const metadata: Metadata = {
-  title: { absolute: "2Nspira | Technology Leadership, AI & Entrepreneur Coaching" },
+  title: { absolute: "2Nspira | AI Consulting, Technology & Business Coaching" },
   description: homepageDescription,
   alternates: { canonical: "https://2nspira.com/" },
   openGraph: {
@@ -60,8 +60,8 @@ export default function Home() {
       icon: Sparkles,
       title: "AI Enablement",
       description:
-        "Pragmatic AI strategy and governance frameworks for responsible implementation — readiness, guardrails, and workflows your people will actually use.",
-      benefit: "Outcome: a clear, responsible path to AI adoption your teams can follow.",
+        "Turn AI potential into practical work. We help you assess readiness, set clear guardrails, and equip your teams to adopt AI responsibly.",
+      benefit: "Outcome: clear priorities, accountable workflows, and a practical path from AI experiments to everyday use.",
       href: "/ai-enablement",
       linkLabel: "Explore AI enablement",
     },
