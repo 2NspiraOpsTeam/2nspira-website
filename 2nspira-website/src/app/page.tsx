@@ -1,19 +1,16 @@
 import ServiceEffects from "@/components/ServiceEffects";
-import { Sparkles, Workflow, PanelsTopLeft, Compass } from "lucide-react";
-import EntrepreneurMentoringCard from "@/components/EntrepreneurMentoringCard";
+import ClientServiceGrid from "@/components/ClientServiceGrid";
+import ServiceConversation from "@/components/ServiceConversation";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import Link from "next/link";
 import {
-  buttonPrimary,
   buttonSecondary,
-  card,
   cardFlat,
   caption,
   h2,
-  h3,
   lead,
   pageMain,
   section,
@@ -21,7 +18,7 @@ import {
 } from "@/components/ui";
 
 const homepageDescription =
-  "AI consulting, systems automation, digital platforms, fractional CIO leadership, and one-on-one entrepreneur coaching. Turn priorities into practical action.";
+  "Practical AI consulting, systems automation, website design, fractional CIO leadership, and entrepreneur coaching. Find support for your next business challenge.";
 const homepageShareTitle =
   "Clearer technology decisions. Stronger business leadership.";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
@@ -55,46 +52,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const services = [
-    {
-      icon: Sparkles,
-      title: "AI Enablement",
-      description:
-        "Turn AI potential into practical work. We help you assess readiness, set clear guardrails, and equip your teams to adopt AI responsibly.",
-      benefit: "Outcome: clear priorities, accountable workflows, and a practical path from AI experiments to everyday use.",
-      href: "/ai-enablement",
-      linkLabel: "Explore AI enablement",
-    },
-    {
-      icon: Workflow,
-      title: "Automation & Systems Optimization",
-      description:
-        "Optimize the operating model across systems, data, processes, people, and governance — then integrate, automate, and apply AI where it creates practical value.",
-      benefit: "Outcome: connected, governed operations with fewer workarounds and a foundation that can scale.",
-      href: "/automation-systems-optimization",
-      linkLabel: "Explore systems optimization",
-    },
-    {
-      icon: PanelsTopLeft,
-      title: "Websites & Digital Platforms",
-      description:
-        "Digital foundations that connect the customer experience to business data, workflows, automation, portals, payments, and future services.",
-      benefit:
-        "Outcome: a platform that can grow with the business instead of becoming another isolated site to replace.",
-      href: "/websites",
-      linkLabel: "Explore digital platforms",
-    },
-    {
-      icon: Compass,
-      title: "Fractional CIO / Technology Leadership",
-      description:
-        "Executive direction and accountability for technology decisions and execution, aligned with your business priorities.",
-      benefit: "Outcome: technology decisions that follow your business priorities, not the other way around.",
-      href: "/fractional-cio",
-      linkLabel: "Explore fractional leadership",
-    },
-  ];
-
   const values = [
     { title: "People First", text: "Technology serves people, never the reverse." },
     { title: "Process Clarity", text: "Work flows your team can follow without a manual." },
@@ -127,23 +84,13 @@ export default function Home() {
                 Technology that works the way your people do.
               </h1>
               <p className={`animate-rise mt-6 max-w-2xl ${lead}`} style={{ animationDelay: "240ms" }}>
-                2Nspira helps you turn technology change into durable outcomes —
-                practical AI enablement, process optimization, and fractional
-                technology leadership, built so your teams trust their systems
-                instead of managing them. We also support entrepreneurs through
-                practical mentoring and mindset and leadership coaching.
+                Connect your systems. Make clearer technology decisions. Build a
+                business you can lead with confidence. We help organizations and
+                entrepreneurs turn everyday challenges into practical next steps—
+                through AI, automation, websites, technology leadership, and coaching.
               </p>
-              <div
-                className="animate-rise mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-x-6"
-                style={{ animationDelay: "340ms" }}
-              >
-                <Link href="/contact" className={buttonPrimary}>
-                  Start a conversation <span aria-hidden="true">→</span>
-                </Link>
-                <Link href="/services" className={buttonSecondary}>
-                  Explore our services
-                </Link>
-              </div>
+              <ServiceConversation />
+              <a href="#find-the-right-service" className={`mt-3 ${buttonSecondary}`}>Find the right service <span aria-hidden="true">↓</span></a>
             </div>
 
             {/* Portrait composition keeps the people and workflow visible at every breakpoint. */}
@@ -170,7 +117,8 @@ export default function Home() {
       {/* Capabilities */}
       <ServiceEffects>
       <section
-        className={sectionBand}
+        id="find-the-right-service"
+        className={`${sectionBand} scroll-mt-24`}
         aria-labelledby="services-heading"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -179,44 +127,33 @@ export default function Home() {
               What we do
             </h2>
             <p className={`mt-4 max-w-2xl ${lead}`}>
-              Four technology capabilities, plus Entrepreneur Mentoring &amp;
-              Coaching to support the person building and leading the business.
+              Start with what you want to change. Find the support that fits your
+              organization—or the next stage of your business.
             </p>
           </div>
 
-          <div className="mt-14">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((feature) => (
-              <article data-catalog-card data-service-card
-                key={feature.title}
-                className={`group relative flex flex-col overflow-hidden p-8 ${card}`}
-              >
-                <span data-service-rule aria-hidden="true" />
-                <span data-service-icon><feature.icon aria-hidden="true" size={25} strokeWidth={1.6} /></span>
-                <h3 className={h3}>{feature.title}</h3>
-                <p className={`mt-3 flex-1 text-sm leading-7 text-body`}>
-                  {feature.description}
-                </p>
-                <p className="mt-3 text-sm font-medium leading-6 text-ink">
-                  {feature.benefit}
-                </p>
-                {feature.href && feature.linkLabel && (
-                  <Link
-                    href={feature.href}
-                    className="mt-6 inline-flex items-center rounded text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors duration-300 ease-gentle hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
-                  >
-                    {feature.linkLabel} <span data-service-arrow aria-hidden="true">→</span>
-                  </Link>
-                )}
-              </article>
-            ))}
-            </div>
-          </div>
-          <div className="mt-8"><EntrepreneurMentoringCard /></div>
+          <ClientServiceGrid />
+          <p className="mt-6 max-w-3xl text-sm leading-7 text-body">Start with what matters most. We agree the priorities, deliverables, and scope with you.</p>
         </div>
       </section>
       </ServiceEffects>
 
+      <section className={section} aria-labelledby="home-work-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="home-work-heading" className={h2}>A closer look at the work.</h2>
+          <p className={`max-w-2xl ${lead}`}>Different organizations need different things. See the scope of two published website projects.</p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {[
+              { title: "GeVitals", image: "gevitals", text: "A bilingual clinic website bringing content, video, publishing, and local discovery together." },
+              { title: "Open Goal Soccer", image: "open-goal", text: "An accessible archival redesign preserving a community program’s mission and story." },
+            ].map(project => <article key={project.title} className={`overflow-hidden ${cardFlat}`}>
+              <Image src={`/images/pages/${project.image}-website-preview-20261021.jpg`} alt={`${project.title} public website preview`} width={1440} height={1000} sizes="(min-width: 768px) 560px, 100vw" className="h-auto w-full border-b border-line" />
+              <div className="p-6"><h3 className="text-xl font-semibold text-ink">{project.title}</h3><p className="mt-3 leading-7 text-body">{project.text}</p></div>
+            </article>)}
+          </div>
+          <Link href="/websites#our-work" className={`mt-6 ${buttonSecondary}`}>Explore these website projects <span aria-hidden="true"> →</span></Link>
+        </div>
+      </section>
       {/* Approach */}
       <section className={section} aria-labelledby="approach-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -261,16 +198,13 @@ export default function Home() {
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
           <Reveal>
             <h2 id="cta-heading" className={h2}>
-              Ready to explore how 2Nspira can help?
+              What would you like to move forward?
             </h2>
             <p className={`mx-auto mt-6 max-w-xl ${lead}`}>
-              Schedule a discovery call. No commitments required.
+              Bring the challenge, idea, or decision in front of you. We’ll discuss
+              your priorities and whether our services are a fit.
             </p>
-            <div className="mt-10 flex justify-center">
-              <Link href="/contact" className={buttonPrimary}>
-                Get in touch
-              </Link>
-            </div>
+            <ServiceConversation centered />
           </Reveal>
         </div>
       </section>

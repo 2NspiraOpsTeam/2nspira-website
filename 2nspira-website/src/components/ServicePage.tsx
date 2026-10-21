@@ -1,10 +1,12 @@
 import Link from "next/link";
+import ServiceConversation from "./ServiceConversation";
+import ServiceFit from "./ServiceFit";
+import ServiceQuestions, { type ServiceQuestion } from "./ServiceQuestions";
 import Image from "next/image";
 import Reveal from "./Reveal";
 import { AccentRule, AmbientField, EyebrowPill } from "./VisualAccents";
 import {
   buttonPrimary,
-  buttonSecondary,
   card,
   cardFlat,
   caption,
@@ -22,6 +24,8 @@ type Props = {
   primaryActionLabel?: string;
   intro: string;
   audience: string;
+  situations?: { title: string; text: string }[];
+  questions?: ServiceQuestion[];
   outcomes: string[];
   outcomesTitle?: string;
   steps: { title: string; text: string }[];
@@ -71,6 +75,8 @@ export default function ServicePage({
   primaryActionLabel = "Start a conversation",
   intro,
   audience,
+  situations,
+  questions,
   outcomes,
   outcomesTitle = "What we help you achieve",
   steps,
@@ -108,12 +114,11 @@ export default function ServicePage({
             {title}
           </h1>
           <p className={`animate-rise ${lead}`} style={{ animationDelay: "90ms" }}>{intro}</p>
-          <Link href="/contact" className={`mt-8 ${buttonPrimary}`}>
-            {primaryActionLabel} →
-          </Link>
+          <ServiceConversation label={primaryActionLabel} />
         </div>
       </section>
 
+      {situations && <ServiceFit intro={audience} items={situations} />}
       <div className={`mx-auto max-w-6xl px-4 sm:px-6 sm:py-16 ${isEditorial ? "py-12" : "py-16"}`}>
         {image && (
           <figure className="hero-settle group relative overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
@@ -129,24 +134,32 @@ export default function ServicePage({
           </figure>
         )}
 
-        <section className={`${image ? "mt-16" : ""} grid gap-6 md:grid-cols-2`} aria-label="Who we help and outcomes">
-          <Reveal><div className="group h-full rounded-2xl border border-line bg-surface p-8 shadow-soft">
-            <AccentRule className="mb-6" />
-            <h2 className={h2}>Who this is for</h2>
-            <p className={`mt-4 ${lead}`}>
-              {audience}
-            </p>
-          </div></Reveal>
-          <Reveal delay={100}><div className="group h-full rounded-2xl border border-line bg-surface p-8 shadow-soft">
-            <AccentRule className="mb-6" />
-            <h2 className={h2}>{outcomesTitle}</h2>
-            <ul className="mt-4 list-disc space-y-3 pl-5 leading-8 text-body">
-              {outcomes.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div></Reveal>
+        <section className={`${image ? "mt-16" : ""} rounded-2xl border border-line bg-surface p-7 sm:p-10`} aria-labelledby="service-outcomes-heading">
+          <AccentRule className="mb-6" />
+          <h2 id="service-outcomes-heading" className={h2}>{outcomesTitle}</h2>
+          <ul className="mt-6 grid list-disc gap-x-10 gap-y-4 pl-5 leading-8 text-body md:grid-cols-2">
+            {outcomes.map(item => <li key={item}>{item}</li>)}
+          </ul>
         </section>
+
+        {buildSection && (
+          <section className={`mt-16 ${isEditorial ? "rounded-[2rem] bg-surface px-5 py-10 shadow-[0_20px_60px_rgba(35,41,54,0.06)] ring-1 ring-line sm:px-8 sm:py-12" : ""}`} aria-labelledby="build-section-heading">
+            <Reveal>
+              <h2 id="build-section-heading" className={h2}>{buildSection.title}</h2>
+              <p className={`max-w-3xl ${lead}`}>{buildSection.intro}</p>
+            </Reveal>
+            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {buildSection.items.map((item, index) => (
+                <Reveal key={item.title} delay={index * 60} variant={isEditorial && index % 2 === 1 ? "fade" : "rise"}>
+                  <article className={`h-full p-6 ${card} ${isEditorial ? "motion-safe:md:hover:-translate-y-1" : ""}`}>
+                    <h3 className={h3}>{item.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-body">{item.text}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+        )}
 
         {overview && (
           <Reveal className="mt-16">
@@ -161,27 +174,6 @@ export default function ServicePage({
           </Reveal>
         )}
 
-        {focusAreas && focusAreas.length > 0 && (
-          <section className={`mt-16 ${isEditorial ? "rounded-[2rem] border border-line bg-canvas-deep px-5 py-10 sm:px-8 sm:py-12" : ""}`} aria-labelledby="focus-areas-heading">
-            <Reveal>
-              {isEditorial && <AccentRule className="mb-5" />}
-              <h2 id="focus-areas-heading" className={h2}>The operating model for responsible AI</h2>
-              <p className={`max-w-3xl ${lead}`}>Eight connected areas turn isolated experiments into a capability the organization can govern, use, and improve.</p>
-            </Reveal>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {focusAreas.map((area, index) => (
-                <Reveal key={area.title} delay={index * 45} variant={isEditorial ? "scale" : "rise"}>
-                  <article className={`group h-full p-6 ${card} ${isEditorial ? "relative overflow-hidden border-t-2 border-t-accent/45 motion-safe:md:hover:-translate-y-1" : ""}`}>
-                    <p className={`${isEditorial ? "inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent-soft text-sm" : "text-xs tracking-widest"} font-semibold text-accent`}>{String(index + 1).padStart(2, "0")}</p>
-                    <h3 className={`${isEditorial ? "mt-5" : "mt-3"} ${h3}`}>{area.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-body">{area.text}</p>
-                    {isEditorial && <div className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-accent transition-transform duration-300 ease-gentle motion-safe:md:group-hover:scale-x-100" aria-hidden="true" />}
-                  </article>
-                </Reveal>
-              ))}
-            </div>
-          </section>
-        )}
 
         <section className={`mt-16 ${isEditorial ? "border-y border-line py-12" : ""}`} aria-labelledby="approach-heading">
           <Reveal><h2 id="approach-heading" className={h2}>
@@ -222,22 +214,28 @@ export default function ServicePage({
           </section>
         )}
 
-        {buildSection && (
-          <section className={`mt-16 ${isEditorial ? "rounded-[2rem] bg-surface px-5 py-10 shadow-[0_20px_60px_rgba(35,41,54,0.06)] ring-1 ring-line sm:px-8 sm:py-12" : ""}`} aria-labelledby="build-section-heading">
+
+        {focusAreas && focusAreas.length > 0 && (
+          <section className={`mt-16 ${isEditorial ? "rounded-[2rem] border border-line bg-canvas-deep px-5 py-10 sm:px-8 sm:py-12" : ""}`} aria-labelledby="focus-areas-heading">
             <Reveal>
-              <h2 id="build-section-heading" className={h2}>{buildSection.title}</h2>
-              <p className={`max-w-3xl ${lead}`}>{buildSection.intro}</p>
+              {isEditorial && <AccentRule className="mb-5" />}
+              <h2 id="focus-areas-heading" className={h2}>The operating model for responsible AI</h2>
+              <p className={`max-w-3xl ${lead}`}>Eight connected areas turn isolated experiments into a capability the organization can govern, use, and improve.</p>
             </Reveal>
-            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {buildSection.items.map((item, index) => (
-                <Reveal key={item.title} delay={index * 60} variant={isEditorial && index % 2 === 1 ? "fade" : "rise"}>
-                  <article className={`h-full p-6 ${card} ${isEditorial ? "motion-safe:md:hover:-translate-y-1" : ""}`}>
-                    <h3 className={h3}>{item.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-body">{item.text}</p>
+            <details className="mt-6 rounded-2xl border border-line bg-surface p-5 sm:p-7"><summary className="cursor-pointer rounded font-semibold text-ink focus-visible:outline-2 focus-visible:outline-accent">Explore our eight-area AI framework</summary>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {focusAreas.map((area, index) => (
+                <Reveal key={area.title} delay={index * 45} variant={isEditorial ? "scale" : "rise"}>
+                  <article className={`group h-full p-6 ${card} ${isEditorial ? "relative overflow-hidden border-t-2 border-t-accent/45 motion-safe:md:hover:-translate-y-1" : ""}`}>
+                    <p className={`${isEditorial ? "inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent-soft text-sm" : "text-xs tracking-widest"} font-semibold text-accent`}>{String(index + 1).padStart(2, "0")}</p>
+                    <h3 className={`${isEditorial ? "mt-5" : "mt-3"} ${h3}`}>{area.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-body">{area.text}</p>
+                    {isEditorial && <div className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-accent transition-transform duration-300 ease-gentle motion-safe:md:group-hover:scale-x-100" aria-hidden="true" />}
                   </article>
                 </Reveal>
               ))}
             </div>
+            </details>
           </section>
         )}
 
@@ -284,6 +282,8 @@ export default function ServicePage({
           )}
         </aside></Reveal>
 
+        {questions && <ServiceQuestions items={questions} />}
+
         {closingCta && (
           <Reveal className="mt-16" variant={isEditorial ? "scale" : "rise"}>
             <section className={`relative overflow-hidden rounded-[2rem] bg-ink px-6 py-12 text-center sm:px-10 sm:py-16 ${isEditorial ? "shadow-[0_24px_70px_rgba(31,36,48,0.20)]" : ""}`} aria-labelledby="closing-cta-heading">
@@ -292,12 +292,7 @@ export default function ServicePage({
                 {closingCta.eyebrow && <p className="text-sm font-semibold uppercase tracking-widest text-white/70">{closingCta.eyebrow}</p>}
                 <h2 id="closing-cta-heading" className="mx-auto mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">{closingCta.title}</h2>
                 <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/75">{closingCta.text}</p>
-                <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                  <Link href={closingCta.primary.href} className={buttonPrimary}>{closingCta.primary.label} →</Link>
-                  {closingCta.secondary && (
-                    <Link href={closingCta.secondary.href} className={`${buttonSecondary} text-white hover:text-white/80 focus-visible:ring-white focus-visible:ring-offset-ink`}>{closingCta.secondary.label} →</Link>
-                  )}
-                </div>
+                <ServiceConversation label={closingCta.primary.label} centered dark />
               </div>
             </section>
           </Reveal>

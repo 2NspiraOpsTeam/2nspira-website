@@ -1,18 +1,17 @@
 import { publicPageMetadata } from "@/lib/pageMetadata";
-import EntrepreneurMentoringCard from "@/components/EntrepreneurMentoringCard";
+import ClientServiceGrid from "@/components/ClientServiceGrid";
+import ServiceConversation from "@/components/ServiceConversation";
+import ServiceQuestions from "@/components/ServiceQuestions";
+import { serviceNeeds } from "@/lib/serviceNeeds";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ServiceEffects from "@/components/ServiceEffects";
-import { Sparkles, Workflow, PanelsTopLeft, Compass } from "lucide-react";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
-  buttonPrimary,
-  card,
   cardFlat,
   caption,
   h2,
-  h3,
   lead,
   linkInline,
   pageMain,
@@ -23,70 +22,9 @@ import {
 export const metadata: Metadata = publicPageMetadata({
   "title": "AI, Technology Leadership & Coaching Services",
   "shareTitle": "Clearer priorities. Practical support. Stronger execution.",
-  "description": "Find practical support for AI adoption, systems automation, digital platforms, fractional CIO leadership, and industry-aligned entrepreneur mentoring.",
+  "description": "Find help with AI adoption, disconnected systems, website design, technology decisions, and entrepreneur coaching. Explore services matched to your priorities.",
   "path": "/services"
 });
-
-const capabilities = [
-  {
-    icon: Sparkles,
-    id: "service-heading-1",
-    title: "AI Enablement",
-    description:
-      "Move beyond scattered AI experiments. Build a clear strategy, practical governance, and the skills your people need to use AI responsibly.",
-    benefit:
-      "You get: prioritized use cases, clear ownership, and a practical adoption roadmap aligned with your organization.",
-    points: ["AI strategy & readiness", "AI governance & privacy", "Leadership & team training", "Responsible implementation"],
-    href: "/ai-enablement",
-    linkLabel: "Explore AI enablement",
-  },
-  {
-    icon: Workflow,
-    id: "service-heading-2",
-    title: "Automation & Systems Optimization",
-    description:
-      "Operating-model improvement across strategy, infrastructure, platforms, systems, data, processes, people, and governance — followed by integration, automation, and AI where they add practical value.",
-    benefit:
-      "You get: connected, governed operations that reduce workarounds and scale without unnecessary rip-and-replace.",
-    points: [
-      "Process mapping & optimization",
-      "Workflow automation",
-      "Integration architecture",
-      "Build vs. buy guidance",
-    ],
-    href: "/automation-systems-optimization",
-    linkLabel: "Explore systems optimization",
-  },
-  {
-    icon: PanelsTopLeft,
-    id: "service-heading-3",
-    title: "Websites & Digital Platforms",
-    description:
-      "Digital foundations that connect the customer experience to business data, workflows, automation, portals, payments, and future services.",
-    benefit:
-      "You get: a platform that supports how your business operates now and can grow without being replaced later.",
-    points: [
-      "Customer-facing experiences",
-      "Portals, payments & integrations",
-      "Automation & AI-ready architecture",
-      "Performance, accessibility & discoverability",
-    ],
-    href: "/websites",
-    linkLabel: "Explore digital platforms",
-  },
-  {
-    icon: Compass,
-    id: "service-heading-4",
-    title: "Fractional CIO / Technology Leadership",
-    description:
-      "Executive direction and accountability for technology decisions and execution, aligned with your business priorities.",
-    benefit:
-      "You get: senior technology judgment on demand, aligned to your business outcomes — without a full-time executive hire.",
-    points: ["Technology strategy & planning", "Fractional leadership", "Team enablement & mentoring"],
-    href: "/fractional-cio",
-    linkLabel: "Explore fractional CIO advisory",
-  },
-];
 
 const servicesJsonLd = {
   "@context": "https://schema.org",
@@ -100,8 +38,7 @@ const servicesJsonLd = {
       mainEntity: {
         "@type": "ItemList",
         itemListElement: [
-          ...capabilities.map(item => ({ name: item.title, url: `https://2nspira.com${item.href}` })),
-          { name: "Entrepreneur Mentoring & Coaching", url: "https://2nspira.com/coaching" },
+          ...serviceNeeds.map(item => ({ name: item.name, url: `https://2nspira.com${item.href}` })),
         ].map((item, index) => ({ "@type": "ListItem", position: index + 1, ...item })),
       },
     },
@@ -195,21 +132,54 @@ export default function ServicesPage() {
             id="hero-heading"
             className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
           >
-            Transform your organization with practical technology
+            Find the right support for what comes next.
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
-            Human-centered solutions for AI adoption, systems optimization, and
-            technology leadership—alongside entrepreneur mentoring, mindset,
-            and leadership coaching.
+            Whether you’re navigating AI, disconnected systems, a website that
+            needs to work harder, or the challenges of leadership, start with
+            your priorities. We’ll help you identify a practical path forward.
           </p>
-          <div className="mt-10 flex justify-center">
-            <Link
-              href="/contact"
-              className={buttonPrimary}
-              aria-label="Discuss your needs with 2Nspira"
-            >
-              Discuss your needs
-            </Link>
+          <ServiceConversation centered />
+          <a href="#find-the-right-service" className={`mt-4 min-h-11 ${linkInline}`}>Find the right service <span aria-hidden="true"> ↓</span></a>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section id="find-the-right-service" className={`${section} scroll-mt-24`} aria-labelledby="services-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div><h2 data-catalog-reveal id="services-heading" className={h2}>
+            What would you like to change?
+          </h2>
+          <p className={`mt-4 max-w-2xl ${lead}`}>
+            Choose the situation that feels familiar. Our services can work
+            independently or together, depending on your priorities and agreed scope.
+          </p></div>
+
+          <ClientServiceGrid />
+          <p className="mt-6 max-w-3xl text-sm leading-7 text-body">These are examples of support, not fixed packages. We agree what to assess, advise on, or implement before the work begins.</p>
+        </div>
+      </section>
+
+      {/* Common Outcomes */}
+      <section className={`${sectionBand} relative overflow-hidden`} aria-labelledby="outcomes-heading">
+        <AmbientField />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 data-catalog-reveal id="outcomes-heading" className={h2}>
+            What to expect
+          </h2>
+          <p className={`mt-4 max-w-2xl ${lead}`}>
+            We begin with your situation—not a tool or a predetermined package.
+            Priorities, responsibilities, and next steps are agreed with you.
+          </p>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3" role="list">
+            {outcomes.map((item) => (
+              <div key={item.title} data-catalog-card className={`group h-full p-8 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
+                <AccentRule className="mb-5 w-8" />
+                <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
+                <p className={`mt-2 ${caption}`}>{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -227,104 +197,27 @@ export default function ServicesPage() {
       </figure>
       </div>
 
-      {/* Services Grid */}
-      <section className={section} aria-labelledby="services-heading">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div><h2 data-catalog-reveal id="services-heading" className={h2}>
-            Core Capabilities
-          </h2>
-          <p className={`mt-4 max-w-2xl ${lead}`}>
-            Four integrated capabilities designed to work together or
-            independently.
-          </p></div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {capabilities.map((item, index) => (
-              <article data-catalog-card data-service-card
-                key={item.id}
-                className={`group relative flex h-full flex-col overflow-hidden p-8 ${card}`}
-                aria-labelledby={item.id}
-              >
-                <span data-service-rule aria-hidden="true" />
-                <span data-service-icon><item.icon aria-hidden="true" size={25} strokeWidth={1.6} /></span>
-                <span className="mb-5 text-xs font-semibold tracking-[0.18em] text-accent">{String(index + 1).padStart(2, "0")}</span>
-                <h3 id={item.id} className={h3}>
-                  {item.title}
-                </h3>
-                <p className="mt-4 flex-1 text-sm leading-7 text-body">
-                  {item.description}
-                </p>
-                <p className="mt-3 text-sm font-medium leading-6 text-ink">
-                  {item.benefit}
-                </p>
-                <ul
-                  className="mt-6 space-y-2.5 text-sm text-body"
-                  aria-label={`${item.title} capabilities`}
-                >
-                  {item.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2">
-                      <span aria-hidden="true" className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-                {item.href && item.linkLabel && (
-                  <Link
-                    href={item.href}
-                    className={`mt-6 ${linkInline}`}
-                  >
-                    {item.linkLabel} <span data-service-arrow aria-hidden="true">→</span>
-                  </Link>
-                )}
-              </article>
-            ))}
-          </div>
-          <div className="mt-8"><EntrepreneurMentoringCard /></div>
-        </div>
+      <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6" aria-labelledby="examples-heading">
+        <h2 id="examples-heading" className={h2}>See what the work can look like.</h2>
+        <p className={lead}>Explore published digital experiences and operational initiatives, with their scope and status explained.</p>
+        <Link href="/work" className={`mt-5 min-h-11 ${linkInline}`}>Explore our work <span aria-hidden="true"> →</span></Link>
       </section>
-
-      {/* Common Outcomes */}
-      <section className={`${sectionBand} relative overflow-hidden`} aria-labelledby="outcomes-heading">
-        <AmbientField />
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 data-catalog-reveal id="outcomes-heading" className={h2}>
-            What to expect
-          </h2>
-          <p className={`mt-4 max-w-2xl ${lead}`}>
-            Our approach produces tangible outcomes that support long-term
-            success.
-          </p>
-
-          <div className="mt-12 grid gap-5 md:grid-cols-3" role="list">
-            {outcomes.map((item) => (
-              <div key={item.title} data-catalog-card className={`group h-full p-8 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
-                <AccentRule className="mb-5 w-8" />
-                <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-                <p className={`mt-2 ${caption}`}>{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <ServiceQuestions items={[
+        { question: "Do I need to know which service I need?", answer: "No. Start with your goals, current challenges, and the decisions you need to make. The introductory conversation helps us understand your situation and explore which service may fit." },
+        { question: "What happens after the introductory conversation?", answer: "If there is a fit, we agree the priorities, scope, responsibilities, and next steps before an engagement begins. The conversation itself does not commit you to a project or coaching relationship." },
+        { question: "Are implementation and ongoing support included?", answer: "They depend on the engagement. Mentoring is guidance rather than done-for-you delivery. Technical implementation and any ongoing support are separately defined in the agreed scope; no open-ended support commitment is implied." },
+      ]} />
       {/* CTA */}
       <section className={section} aria-labelledby="cta-heading">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 data-catalog-reveal id="cta-heading" className={h2}>
-            Ready to explore how 2Nspira can help?
+            Not sure which service fits?
           </h2>
           <p className={`mx-auto mt-4 max-w-xl ${lead}`}>
-            Schedule a discovery call. No commitments required.
+            You don’t need a technical brief. Tell us what feels stuck, what
+            you want to improve, and what you’ve tried. We’ll explore the fit together.
           </p>
-          <div className="mt-10 flex justify-center">
-            <Link
-              href="/contact"
-              className={buttonPrimary}
-              aria-label="Get in touch with 2Nspira"
-            >
-              Get in touch
-            </Link>
-          </div>
+          <ServiceConversation centered />
         </div>
       </section>
       </ServiceEffects>
