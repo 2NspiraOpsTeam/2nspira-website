@@ -1,9 +1,10 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import Link from "next/link";
 import { buttonPrimary } from "@/components/ui";
 
 export default function NotFound() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-canvas px-4 py-12 text-center" id="main-content">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-canvas px-4 py-12 text-center" id="main-content"><CatalogEffects headings>
       <div className="max-w-md">
         <h1 className="text-6xl font-semibold tracking-tight text-ink">404</h1>
         <h2 className="mt-4 text-2xl font-semibold text-ink">Page not found</h2>
@@ -22,6 +23,6 @@ export default function NotFound() {
           </Link>
         </div>
       </div>
-    </main>
+    </CatalogEffects></main>
   );
 }

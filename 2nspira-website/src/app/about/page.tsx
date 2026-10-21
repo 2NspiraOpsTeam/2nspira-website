@@ -1,3 +1,4 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import PageIdentity from "@/components/PageIdentity";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
@@ -34,7 +35,7 @@ const framework = [
 export default function AboutPage() {
   const story = source.blocks.slice(1, 12);
   return (
-    <main className={pageMain} id="main-content">
+    <main className={pageMain} id="main-content"><CatalogEffects headings>
       <PageIdentity type="AboutPage" name="Our Human-Centered Approach" path="/about" />
       <header className={`${pageHero} relative overflow-hidden text-center`}>
         <AmbientField />
@@ -123,6 +124,6 @@ export default function AboutPage() {
           </div>
         </section></Reveal>
       </div>
-    </main>
+    </CatalogEffects></main>
   );
 }

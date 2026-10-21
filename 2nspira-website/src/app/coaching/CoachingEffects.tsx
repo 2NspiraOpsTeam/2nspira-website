@@ -58,5 +58,5 @@ export default function CoachingEffects({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  return <div ref={root}><CatalogEffects>{children}</CatalogEffects></div>;
+  return <div ref={root}><CatalogEffects headings>{children}</CatalogEffects></div>;
 }

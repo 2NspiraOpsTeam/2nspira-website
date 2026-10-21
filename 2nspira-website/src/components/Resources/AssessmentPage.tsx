@@ -1,3 +1,4 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import { Compass, Lightbulb, Target, Route } from "lucide-react";
 import Reveal from "../Reveal";
 import Link from "next/link";
@@ -25,7 +26,7 @@ type Props = {
 export default function AssessmentPage({ title, intro, audience, highlights, href, action, breadcrumb }: Props) {
   const icons = [Compass, Lightbulb, Target, Route];
   return (
-    <main className={pageMain} id="main-content">
+    <main className={pageMain} id="main-content"><CatalogEffects headings>
       {breadcrumb && <BreadcrumbList items={breadcrumb} />}      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
         <Link href="/resources" className={linkInline}>
           ← All resources
@@ -59,6 +60,6 @@ export default function AssessmentPage({ title, intro, audience, highlights, hre
           .
         </p>
       </div>
-    </main>
+    </CatalogEffects></main>
   );
 }

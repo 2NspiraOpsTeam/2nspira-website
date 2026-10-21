@@ -1,3 +1,4 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import PageIdentity from "@/components/PageIdentity";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
@@ -35,7 +36,7 @@ function Benefits({ items }: { items: string[] }) {
 
 export default function ResourcesPage() {
   return (
-    <main id="main-content" className={styles.page}>
+    <main id="main-content" className={styles.page}><CatalogEffects headings>
       <PageIdentity type="CollectionPage" name="Assessments and Practical Tools" path="/resources" items={[{ name: "Professional Strengths Assessment", path: "/resources/strength-profile" }, { name: "AI Readiness Assessment for Organizations", path: "/resources/ai-readiness-scorecard" }]} />
       <section className={styles.hero} aria-labelledby="resources-title">
         <div className={`${styles.container} ${styles.heroInner}`}>
@@ -111,6 +112,6 @@ export default function ResourcesPage() {
           <Link href={readinessUrl} className={styles.secondary}>Explore AI Readiness <Arrow /></Link>
         </div>
       </section>
-    </main>
+    </CatalogEffects></main>
   );
 }

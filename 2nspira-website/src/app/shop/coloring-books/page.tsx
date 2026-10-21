@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function ColoringBooksPage() {
   return (
     <main id="main-content" className={pageMain}>
-      <CatalogEffects>
+      <CatalogEffects headings>
       <CatalogBreadcrumbs page="coloring" />
       <CatalogSchema page="coloring" />
       <header className={`${pageHero} relative overflow-hidden text-center`}>
