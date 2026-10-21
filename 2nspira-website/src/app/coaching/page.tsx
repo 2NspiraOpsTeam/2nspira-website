@@ -78,6 +78,13 @@ const relationship = [
   { icon: Handshake, title: "Defined support between sessions", text: "We agree the scope, channels, and boundaries of support between sessions at the start of the relationship." },
 ];
 
+const mentoringAudience = [
+  { icon: Lightbulb, title: "You have an idea worth exploring", text: "You see a problem worth solving and want to understand your customers, challenge your assumptions, and decide what to build next." },
+  { icon: Target, title: "You’re building an early-stage business", text: "You’re shaping your product, exploring your business model, or working toward your first customers—and want an experienced sounding board." },
+  { icon: Users, title: "You’re learning to lead a growing team", text: "You want to delegate with clarity, align your team, and build accountability without carrying every decision yourself." },
+  { icon: Compass, title: "You’re navigating a turning point", text: "You’re weighing a change in direction, facing a setback, or feeling stretched. You want space to think, candid feedback, and a practical next step." },
+];
+
 export default function EntrepreneurMentoringPage() {
   const schema = { "@context": "https://schema.org", "@type": "Service", "@id": "https://2nspira.com/coaching#service", name: "Entrepreneur Mentoring & Coaching", serviceType: ["Entrepreneur mentoring", "Business coaching", "Mindset and leadership coaching"], description,
     url: "https://2nspira.com/coaching", provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide" };
@@ -104,6 +111,27 @@ export default function EntrepreneurMentoringPage() {
         </figure>
       </div>
     </header>
+
+    <section aria-labelledby="mentoring-audience-heading" className={`${styles.sectionSpacing} border-b border-line bg-canvas-deep`}>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <p className={eyebrow}>Your business. Your next stage.</p>
+        <h2 data-catalog-reveal id="mentoring-audience-heading" className={`mt-4 ${h2}`}>Who is this for?</h2>
+        <p className="mt-5 max-w-2xl leading-8 text-body">For entrepreneurs and business owners who want to develop their business and the way they lead. You may recognize yourself in one—or more—of these moments.</p>
+        <ul className="mt-8 grid gap-5 md:grid-cols-2">
+          {mentoringAudience.map(({ icon: Icon, title, text }) => <li key={title}>
+            <article data-catalog-card className={`h-full p-6 sm:p-7 ${cardFlat}`}>
+              <span className={styles.iconBadge}><Icon aria-hidden="true" size={25} strokeWidth={1.6} /></span>
+              <h3 className={`mt-5 ${h3}`}>{title}</h3>
+              <p className="mt-4 leading-7 text-body">{text}</p>
+            </article>
+          </li>)}
+        </ul>
+        <div className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-xl leading-7 text-body">You don’t need a finished business plan or all the answers. Start with where you are and what you want to work through.</p>
+          <Link href="/contact" className={`${buttonPrimary} min-h-[44px] shrink-0`}>Discuss where you are now <span aria-hidden="true">→</span></Link>
+        </div>
+      </div>
+    </section>
 
     <section aria-labelledby="mentor-heading" className={`${styles.sectionSpacing} ${styles.mentorBand}`}>
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
