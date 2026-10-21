@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { BOOKING_URL } from "@/lib/booking";
 import {
   buttonPrimary,
   card,
@@ -199,10 +200,16 @@ export default function WebsitesPage() {
             className="animate-rise mt-8 flex flex-wrap gap-3"
             style={{ animationDelay: "150ms" }}
           >
-            <Link href="/contact" className={buttonPrimary}>
-              Request a consultation
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={buttonPrimary} aria-label="Book a conversation (Google Calendar, opens in a new tab)">
+              Book a conversation
+            </a>
+            <Link href="/contact" className={buttonSecondaryClasses}>
+              Send a message
             </Link>
-            <a href="#platform-model" className={buttonSecondaryClasses}>
+          </div>
+          <p className="mt-3 text-sm leading-6 text-muted">30-minute appointments via Google Meet. Booking opens Google Calendar in a new tab.</p>
+          <div className="mt-4">
+            <a href="#platform-model" className="text-sm font-medium text-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
               See the platform model
             </a>
           </div>
@@ -650,15 +657,15 @@ export default function WebsitesPage() {
             Tell us where the business is going. We’ll help define the simplest
             useful platform to support it now and evolve with it later.
           </p>
-          <div className="mt-10 flex justify-center">
-            <Link
-              href="/contact"
-              className={buttonPrimary}
-              aria-label="Get in touch with 2Nspira"
-            >
-              Request a consultation
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={buttonPrimary} aria-label="Book a conversation (Google Calendar, opens in a new tab)">
+              Book a conversation
+            </a>
+            <Link href="/contact" className={buttonSecondaryClasses}>
+              Send a message
             </Link>
           </div>
+          <p className="mt-3 text-sm leading-6 text-muted">30-minute appointments via Google Meet. Booking opens Google Calendar in a new tab.</p>
         </div>
       </section>
     </main>
