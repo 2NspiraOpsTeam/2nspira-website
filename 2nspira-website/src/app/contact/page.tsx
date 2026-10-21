@@ -22,6 +22,7 @@ import {
 } from "@/components/ui";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import { BOOKING_URL } from "@/lib/booking";
 
 /* ------------------------------------------------------------------ */
 /*  Enhanced field wrapper — label lift, ring, depth on focus         */
@@ -258,6 +259,17 @@ export default function ContactPage() {
               challenge, let&rsquo;s talk about the support you need.
             </p>
           </Reveal>
+          <Reveal delay={150}>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={buttonPrimary} aria-label="Book a conversation (Google Calendar, opens in a new tab)">
+                Book a conversation
+              </a>
+              <a href="#contact-message" className="inline-flex min-h-[44px] items-center rounded px-2 text-sm font-medium text-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                Prefer to send a message?
+              </a>
+            </div>
+            <p className="mt-3 text-sm leading-6 text-muted">30-minute appointments via Google Meet. Booking opens Google Calendar in a new tab.</p>
+          </Reveal>
         </div>
       </section>
 
@@ -280,7 +292,9 @@ export default function ContactPage() {
 
       {/* ── Contact section with ambient orbs (matching /websites sectionBand depth) ── */}
       <section
-        className="relative overflow-hidden bg-canvas-deep py-16 sm:py-24"
+        id="contact-message"
+        tabIndex={-1}
+        className="relative scroll-mt-24 overflow-hidden bg-canvas-deep py-16 sm:py-24"
         aria-labelledby="form-heading"
       >
         {/* Ambient background orbs — same treatment as /websites */}
