@@ -43,3 +43,6 @@ next-env.d.ts
 .vinext/
 .wrangler/
 /public/deployment.json
+
+# Derived article HTML and reading aids; regenerated before every build/dev run.
+/src/content/generated/

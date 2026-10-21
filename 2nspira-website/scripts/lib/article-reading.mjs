@@ -1,8 +1,8 @@
-import { articleSections } from "./articleSections";
+import { articleSections } from "./article-sections.mjs";
 import { load } from "cheerio/slim";
 
 /** Prepare authored HTML without changing its text, links, or publication dates. */
-export function articleReading(html: string, slug: string) {
+export function articleReading(html, slug) {
   const $ = load(html, null, false);
   $("figure").first().remove(); // The page already renders this image as its hero.
   // Restore explicit source headings; never guess headings from sentence length.
@@ -24,9 +24,9 @@ export function articleReading(html: string, slug: string) {
       heading.replaceWith($("<h2></h2>").attr(heading.attr() ?? {}).html(heading.html() ?? ""));
     });
   }
-  const used = new Set<string>();
+  const used = new Set();
   $("[id]").each((_, element) => { const id = $(element).attr("id"); if (id) used.add(id); });
-  const headings: { id: string; text: string }[] = [];
+  const headings = [];
   $("h2, h3").each((_, element) => {
     const heading = $(element);
     const text = heading.text().trim();
@@ -47,7 +47,7 @@ export function articleReading(html: string, slug: string) {
     if (anchor.text().trim() || anchor.find("img[alt], svg[aria-label]").length || anchor.attr("aria-label")) return;
     // Legacy imports include whitespace-only source links. Keep destinations intact.
     try {
-      const url = new URL(anchor.attr("href")!, "https://2nspira.com");
+      const url = new URL(anchor.attr("href"), "https://2nspira.com");
       anchor.attr("aria-label", `Supporting source: ${url.hostname.replace(/^www\./, "")}`);
     } catch { anchor.attr("aria-label", "Supporting source"); }
   });

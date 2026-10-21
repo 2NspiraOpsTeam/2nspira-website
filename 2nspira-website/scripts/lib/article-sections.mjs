@@ -1,5 +1,5 @@
 /** Existing section labels from legacy imports that arrived as styled paragraphs. */
-export const articleSections: Record<string, readonly string[]> = {
+export const articleSections = {
   "operational-ai-doesn-t-fail-because-of-technology-it-fails-because-of-how-organizations-think": [
     "Operational AI requires a different mindset.", "What I’ve seen actually work:", "The goal isn’t just to deploy AI.",
   ],

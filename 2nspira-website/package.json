@@ -13,7 +13,12 @@
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
     "deploy:production": "node scripts/deploy-production.mjs",
     "deploy:preview": "node scripts/deploy-preview.mjs",
-    "verify:release": "node scripts/verify-release.mjs"
+    "verify:release": "node scripts/verify-release.mjs",
+    "prepare:articles": "node scripts/prepare-articles.mjs",
+    "prebuild:vinext": "npm run prepare:articles",
+    "predev:vinext": "npm run prepare:articles",
+    "predev": "npm run prepare:articles",
+    "prebuild": "npm run prepare:articles"
   },
   "dependencies": {
     "@vinext/cloudflare": "^1.0.0-beta.6",
