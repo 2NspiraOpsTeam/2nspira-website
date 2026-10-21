@@ -18,6 +18,8 @@ import {
 
 type Props = {
   title: string;
+  eyebrowText?: string;
+  primaryActionLabel?: string;
   intro: string;
   audience: string;
   outcomes: string[];
@@ -65,6 +67,8 @@ type Props = {
 
 export default function ServicePage({
   title,
+  eyebrowText = "Advisory services",
+  primaryActionLabel = "Start a conversation",
   intro,
   audience,
   outcomes,
@@ -99,13 +103,13 @@ export default function ServicePage({
           <Link href="/services" className={linkInline}>
             ← All services
           </Link>
-          <div className="mt-8"><EyebrowPill>Advisory services</EyebrowPill></div>
+          <div className="mt-8"><EyebrowPill>{eyebrowText}</EyebrowPill></div>
           <h1 className="animate-rise mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             {title}
           </h1>
           <p className={`animate-rise ${lead}`} style={{ animationDelay: "90ms" }}>{intro}</p>
           <Link href="/contact" className={`mt-8 ${buttonPrimary}`}>
-            Start a conversation →
+            {primaryActionLabel} →
           </Link>
         </div>
       </section>

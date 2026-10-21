@@ -2,17 +2,22 @@ import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
 
+const description = "Build a practical AI strategy with 2Nspira. Assess readiness, establish AI governance, train your teams, and turn promising use cases into responsible workflows.";
+
 export const metadata: Metadata = publicPageMetadata({
-  "title": "AI Enablement, Training & Governance Advisory",
-  "description": "Build an AI strategy your team can use. 2Nspira helps leaders assess readiness, establish governance, train teams, and implement responsible AI workflows.",
+  "title": "AI Strategy, Training & Governance Consulting",
+  "shareTitle": "Put AI to work. Keep people in control.",
+  description,
   "path": "/ai-enablement"
 });
 
 export default function Page() {
   return <ServicePage {...{
     visualTreatment: "editorial" as const,
-    title: "AI Enablement, Training & Governance Advisory",
-    intro: "Move from fragmented AI experimentation to structured, responsible adoption. We help leaders build practical governance, equip their teams, and turn technology into operational capacity.",
+    title: "Put AI to work. Keep people in control.",
+    eyebrowText: "AI Strategy, Training & Governance",
+    primaryActionLabel: "Discuss your AI priorities",
+    intro: "AI should do more than create activity. It should support how your organization works. We help you identify worthwhile opportunities, establish practical guardrails, and equip your people to use AI with purpose, confidence, and accountability.",
     audience: "Executive teams, school and academic leaders, founders, nonprofits, and operators adopting AI without a clear framework for governance, training, or data privacy.",
     outcomesTitle: "Measurable outcomes",
     outcomes: [
@@ -42,8 +47,10 @@ export default function Page() {
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
+      "@id": "https://2nspira.com/ai-enablement#service",
+      serviceType: ["AI strategy consulting", "AI governance advisory", "AI literacy and team training", "Responsible AI implementation"],
       name: "AI Enablement, Training & Governance Advisory",
-      description: "Move from fragmented AI experimentation to structured, responsible adoption. We help leaders build practical governance, equip their teams, and turn technology into operational capacity.",
+      description,
       url: "https://2nspira.com/ai-enablement",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide"
@@ -113,9 +120,9 @@ export default function Page() {
     },
     closingCta: {
       eyebrow: "From readiness to roadmap",
-      title: "Build an AI roadmap your people can trust",
-      text: "We can help you turn priorities, guardrails, workflows, and measurement into a practical path forward.",
-      primary: { label: "Start a roadmap conversation", href: "/contact" },
+      title: "Move forward with AI you can explain, govern, and use.",
+      text: "Bring your priorities, current experiments, and the decisions holding you back. Together, we’ll define a practical next step for responsible AI adoption.",
+      primary: { label: "Discuss your AI priorities", href: "/contact" },
       secondary: { label: "Explore all services", href: "/services" }
     }
   }} />;

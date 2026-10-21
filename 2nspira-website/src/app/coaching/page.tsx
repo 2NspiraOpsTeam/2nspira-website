@@ -7,7 +7,7 @@ import styles from "./coaching.module.css";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { buttonPrimary, cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section } from "@/components/ui";
 
-const description = "Industry-aligned entrepreneur mentoring from 2Nspira. Develop your venture, strengthen leadership, and move forward with one-on-one business coaching.";
+const description = "Build your business and grow as a leader with one-on-one entrepreneur mentoring and business coaching, matched to your industry. Explore your next step.";
 export const metadata: Metadata = {
   title: { absolute: "Entrepreneur Mentoring & Business Coaching | 2Nspira" }, description,
   alternates: { canonical: "/coaching" },
@@ -79,7 +79,7 @@ const relationship = [
 ];
 
 export default function EntrepreneurMentoringPage() {
-  const schema = { "@context": "https://schema.org", "@type": "Service", name: "Entrepreneur Mentoring & Coaching", description,
+  const schema = { "@context": "https://schema.org", "@type": "Service", "@id": "https://2nspira.com/coaching#service", name: "Entrepreneur Mentoring & Coaching", serviceType: ["Entrepreneur mentoring", "Business coaching", "Mindset and leadership coaching"], description,
     url: "https://2nspira.com/coaching", provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide" };
   return <main id="main-content" className={pageMain}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
