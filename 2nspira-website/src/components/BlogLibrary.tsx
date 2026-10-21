@@ -31,8 +31,8 @@ export default function BlogLibrary({ category }: { category?: string }) {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filtered.map((post, index) => (
             <Reveal key={post.slug} delay={(index % 6) * 55} className="h-full">
-            <article className={`group relative flex h-full flex-col overflow-hidden hover:-translate-y-1 ${card}`}>
-              <AccentRule className="absolute inset-x-0 top-0 z-10 w-full scale-x-0 group-hover:scale-x-100" />
+            <article className={`group relative flex h-full flex-col overflow-hidden motion-safe:hover:-translate-y-1 ${card}`}>
+              <AccentRule className="absolute inset-x-0 top-0 z-10 w-full scale-x-0 motion-safe:group-hover:scale-x-100" />
               {post.image && (
                 <div className="overflow-hidden"><Image
                   src={post.image}
@@ -40,7 +40,7 @@ export default function BlogLibrary({ category }: { category?: string }) {
                   width={1200}
                   height={800}
                   unoptimized
-                  className="aspect-[3/2] w-full object-cover transition-transform duration-700 ease-gentle group-hover:scale-[1.025]"
+                  className="aspect-[3/2] w-full object-cover transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.025]"
                 /></div>
               )}
               <div className="flex flex-1 flex-col p-6">

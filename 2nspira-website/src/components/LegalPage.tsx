@@ -6,6 +6,7 @@ type Block = { tag: string; text: string };
 
 export default function LegalPage({ title, blocks }: { title: string; blocks: Block[] }) {
   const content: ReactNode[] = [];
+  const sections: { id: string; text: string }[] = [];
   for (let index = 0; index < blocks.length; index++) {
     const block = blocks[index];
     if (block.tag === "li") {
@@ -15,7 +16,9 @@ export default function LegalPage({ title, blocks }: { title: string; blocks: Bl
     } else if (/^h[1-4]$/.test(block.tag)) {
       // Preserve wording; normalize numbered top-level sections to H2.
       const Heading = /^\d+\./.test(block.text) && !/^\d+\.\d/.test(block.text) ? "h2" : block.tag === "h2" ? "h2" : "h3";
-      content.push(<Heading key={index} className="mb-4 mt-10 text-xl font-semibold text-ink">{block.text}</Heading>);
+      const id = `section-${index + 1}`;
+      if (Heading === "h2") sections.push({ id, text: block.text });
+      content.push(<Heading id={id} key={index} className="mb-4 mt-10 text-xl font-semibold text-ink">{block.text}</Heading>);
     } else {
       content.push(<p key={index} className="my-4 whitespace-pre-line">{block.text}</p>);
     }
@@ -24,6 +27,7 @@ export default function LegalPage({ title, blocks }: { title: string; blocks: Bl
     <main className={pageMain} id="main-content">
       <article className="mx-auto max-w-3xl px-4 py-16 text-base leading-8 text-body sm:px-6 sm:py-24">
         <h1 className="mb-10 text-4xl font-semibold tracking-tight text-ink">{title}</h1>
+        {sections.length > 1 && <nav aria-label="On this page" className="mb-10 rounded-2xl border border-line bg-canvas-deep p-5 sm:p-6"><details><summary className="cursor-pointer font-semibold text-ink">On this page</summary><ol className="mt-4 list-decimal space-y-2 pl-5">{sections.map((section) => <li key={section.id}><a href={`#${section.id}`} className={linkInline}>{section.text}</a></li>)}</ol></details></nav>}
         {content}
         <Link href="/contact" className={`mt-8 inline-block ${linkInline}`}>Contact 2Nspira</Link>
       </article>

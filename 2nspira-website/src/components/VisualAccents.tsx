@@ -12,7 +12,7 @@ export function AmbientField({ className = "" }: { className?: string }) {
 export function AccentRule({ className = "" }: { className?: string }) {
   return (
     <span
-      className={`block h-0.5 w-12 origin-left bg-accent transition-transform duration-500 ease-gentle group-hover:scale-x-125 ${className}`}
+      className={`block h-0.5 w-12 origin-left bg-accent transition-transform duration-500 ease-gentle motion-safe:group-hover:scale-x-125 ${className}`}
       aria-hidden="true"
     />
   );

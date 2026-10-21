@@ -119,7 +119,7 @@ export default function ServicePage({
               width={image.width ?? 1672}
               height={image.height ?? 941}
               priority
-              className={`h-auto w-full transition-transform duration-700 ease-gentle ${isEditorial ? "motion-safe:md:group-hover:scale-[1.015]" : "group-hover:scale-[1.015]"}`}
+              className={`h-auto w-full transition-transform duration-700 ease-gentle ${isEditorial ? "motion-safe:md:group-hover:scale-[1.015]" : "motion-safe:group-hover:scale-[1.015]"}`}
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-ink/10 via-transparent to-accent/10 opacity-60" aria-hidden="true" />
           </figure>
@@ -185,7 +185,7 @@ export default function ServicePage({
           </h2></Reveal>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {steps.map((step, index) => (
-              <Reveal key={step.title} delay={index * 80} variant={isEditorial && index === 1 ? "fade" : "rise"}><article className={`group h-full p-6 ${isEditorial ? "motion-safe:md:hover:-translate-y-1" : "hover:-translate-y-1"} ${card}`}>
+              <Reveal key={step.title} delay={index * 80} variant={isEditorial && index === 1 ? "fade" : "rise"}><article className={`group h-full p-6 ${isEditorial ? "motion-safe:md:hover:-translate-y-1" : "motion-safe:hover:-translate-y-1"} ${card}`}>
                 <p className="text-sm font-semibold tracking-widest text-accent">
                   {String(index + 1).padStart(2, "0")}
                 </p>
@@ -203,7 +203,7 @@ export default function ServicePage({
             {insightSections.map((section, index) => (
               <Reveal key={section.title} delay={index * 90} variant={isEditorial ? "scale" : "rise"}>
                 <article className={`relative h-full overflow-hidden p-8 ${cardFlat} ${isEditorial ? (index === 0 ? "border-accent/25 bg-gradient-to-br from-surface to-accent-soft/45" : "border-line-strong bg-canvas-deep") : ""}`}>
-                  {isEditorial && <span className="absolute right-6 top-4 text-6xl font-semibold leading-none text-accent/10" aria-hidden="true">0{index + 1}</span>}
+                  {isEditorial && <span className="absolute right-6 top-4 text-4xl font-semibold leading-none text-accent" aria-hidden="true">0{index + 1}</span>}
                   <AccentRule className="mb-6" />
                   <h2 className={`relative ${h2}`}>{section.title}</h2>
                   <p className="mt-4 leading-8 text-body">{section.text}</p>
@@ -245,16 +245,18 @@ export default function ServicePage({
             </Reveal>
             <ol className={`relative mt-8 grid gap-4 md:grid-cols-4 ${isEditorial ? "before:absolute before:bottom-0 before:left-[1.15rem] before:top-0 before:w-px before:bg-line-strong md:before:bottom-auto md:before:left-[12.5%] md:before:right-[12.5%] md:before:top-[1.15rem] md:before:h-px md:before:w-auto" : ""}`}>
               {journey.stages.map((stage, index) => (
-                <Reveal key={stage.title} delay={index * 70}>
-                  <li className={`relative h-full ${isEditorial ? "pl-14 md:pl-0 md:pt-14" : `p-6 ${cardFlat}`}`}>
+                <li key={stage.title} className="h-full">
+                <Reveal delay={index * 70} className="h-full">
+                  <div className={`relative h-full ${isEditorial ? "pl-14 md:pl-0 md:pt-14" : `p-6 ${cardFlat}`}`}>
                     {isEditorial && <span className="absolute left-0 top-0 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full border border-accent/30 bg-surface text-sm font-semibold text-accent shadow-soft md:left-1/2 md:-translate-x-1/2">{index + 1}</span>}
                     <div className={isEditorial ? `h-full p-6 ${cardFlat}` : ""}>
                       <p className="text-xs font-semibold uppercase tracking-widest text-accent">Stage {index + 1}</p>
                       <h3 className={`mt-3 ${h3}`}>{stage.title}</h3>
                       <p className="mt-3 text-sm leading-7 text-body">{stage.text}</p>
                     </div>
-                  </li>
+                  </div>
                 </Reveal>
+                </li>
               ))}
             </ol>
           </section>

@@ -57,7 +57,7 @@ export default function BooksPage() {
             width={1600}
             height={2560}
             unoptimized
-            className="mx-auto h-auto w-full max-w-xs rounded-xl shadow-[0_18px_45px_rgba(35,41,54,0.16)] transition-transform duration-500 ease-gentle hover:-translate-y-1"
+            className="mx-auto h-auto w-full max-w-xs rounded-xl shadow-[0_18px_45px_rgba(35,41,54,0.16)] transition-transform duration-500 ease-gentle motion-safe:hover:-translate-y-1"
           />
           <div>
             <h2 id="book-title" className={h2}>

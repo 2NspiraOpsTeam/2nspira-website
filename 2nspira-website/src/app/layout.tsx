@@ -20,11 +20,11 @@ const siteName = "2Nspira";
 const siteDomain = "https://2nspira.com";
 const siteDescription =
   "Practical AI, systems optimization, digital platforms, fractional CIO leadership, and entrepreneur mentoring from 2Nspira. Turn priorities into execution.";
-const socialTitle = "Human-centered technology transformation for the AI era";
+const socialTitle = "Technology that moves you forward. Leadership that grows with you.";
 const socialImageUrl = `${siteDomain}/images/logo/og-image-v2.png`;
 export const metadata: Metadata = {
   title: {
-    default: `${siteName} | Technology Transformation & AI`,
+    default: `${siteName} | Technology Leadership, AI & Entrepreneur Coaching`,
     template: `%s | ${siteName}`,
   },
   description: siteDescription,

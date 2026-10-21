@@ -1,3 +1,4 @@
+import PageIdentity from "@/components/PageIdentity";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -17,7 +18,7 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "About 2Nspira",
+  "title": "Our Human-Centered Approach",
   "description": "Meet 2Nspira. Discover our human-centered approach to technology strategy, responsible AI, systems, and entrepreneur mentoring and coaching.",
   "path": "/about"
 });
@@ -34,6 +35,7 @@ export default function AboutPage() {
   const story = source.blocks.slice(1, 12);
   return (
     <main className={pageMain} id="main-content">
+      <PageIdentity type="AboutPage" name="Our Human-Centered Approach" path="/about" />
       <header className={`${pageHero} relative overflow-hidden text-center`}>
         <AmbientField />
         <div className="relative">
@@ -56,18 +58,28 @@ export default function AboutPage() {
             alt="Conceptual visualization of a collaborative strategy discussion."
             width={1672}
             height={941}
-            className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.015]"
+            className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.015]"
           />
         </figure>
 
         <Reveal className="mt-12"><section className={`relative overflow-hidden p-6 sm:p-10 ${card}`}>
           <AccentRule className="mb-6" />
           <h2 className={h2}>Our ethos</h2>
-          {story.map((block, i) => (
-            <p key={i} className="mt-5 leading-8 text-body">
-              {block.text}
-            </p>
-          ))}
+          <p className="mt-5 leading-8 text-body">{story[0].text}</p>
+          <div className="mt-8 space-y-4">
+            {[
+              { title: "Our story and evolution", paragraphs: story.slice(1, 3) },
+              { title: "How we make technology practical", paragraphs: story.slice(3, 6) },
+              { title: "The difference we work toward", paragraphs: story.slice(6) },
+            ].map((section, index) => (
+              <details key={section.title} className="group rounded-2xl border border-line bg-canvas p-5 open:bg-surface sm:p-6">
+                <summary className="cursor-pointer text-lg font-semibold text-ink marker:text-accent">
+                  <span className="ml-2 mr-3 text-sm text-accent">0{index + 1}</span>{section.title}
+                </summary>
+                {section.paragraphs.map((block, i) => <p key={i} className="mt-5 leading-8 text-body">{block.text}</p>)}
+              </details>
+            ))}
+          </div>
         </section></Reveal>
 
         <section className={`mt-12 p-6 sm:p-10 ${card}`} aria-labelledby="about-coaching-heading">

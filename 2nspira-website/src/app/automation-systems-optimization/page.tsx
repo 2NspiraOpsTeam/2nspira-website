@@ -189,7 +189,7 @@ export default function AutomationSystemsOptimizationPage() {
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {operatingLenses.map((lens, index) => (
               <Reveal key={lens.title} delay={index * 60} className="h-full">
-                <article className={`group h-full p-6 hover:-translate-y-1 ${card}`}>
+                <article className={`group h-full p-6 motion-safe:hover:-translate-y-1 ${card}`}>
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent">
                     {String(index + 1).padStart(2, "0")}
                   </span>

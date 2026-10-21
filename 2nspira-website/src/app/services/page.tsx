@@ -221,7 +221,7 @@ export default function ServicesPage() {
           alt="Conceptual visualization of an advisory conversation between a consultant and a client."
           width={1344}
           height={768}
-          className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.015]"
+          className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.015]"
         />
       </figure>
       </div>

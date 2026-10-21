@@ -235,14 +235,14 @@ export default function WorkPage() {
             {supportingProjects.map((project, idx) => (
               <Reveal key={project.name} delay={idx * 0.1}>
                 <article
-                  className={`group p-0 ${card} rounded-xl border border-line transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent overflow-hidden`}
+                  className={`group p-0 ${card} rounded-xl border border-line transition-all duration-300 motion-safe:hover:-translate-y-1 hover:shadow-lg hover:border-accent overflow-hidden`}
                 >
                   <div className="relative aspect-video w-full overflow-hidden bg-canvas/50">
                     <Image
                       src={project.image}
                       alt={project.name}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
                     />
                   </div >
                   <div className="p-5">

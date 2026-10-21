@@ -51,3 +51,12 @@ vinext layout and reports spurious `AppRoutes`/`LayoutRoutes` errors.
 
 Production is Git-driven. Do not run `wrangler deploy`, `vinext-cloudflare deploy`,
 or a production deploy from a local checkout. See [DEPLOYMENT.md](DEPLOYMENT.md).
+
+### Article reading artifacts
+
+`npm run prepare:articles` derives article HTML, anchor navigation and reading times
+from the checked-in post JSON. It runs automatically before Next/Vinext builds and
+dev servers. Source words, authors and publication dates remain unchanged; the
+preparation step asserts text preservation. Generated JSON is ignored by Git.
+HTML parsing stays in the build, not in the Cloudflare Worker request path.
+On a clean checkout run this preparation (or the supported build) before TypeScript.
