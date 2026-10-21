@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { socialLinks } from "@/lib/socialLinks";
 import styles from "./Footer.module.css";
 
 const services = [
@@ -33,6 +34,14 @@ export default function Footer() {
             <img src="/images/logo/2nspira-logo.png" alt="2Nspira" width={320} height={132} className="h-auto w-40" />
           </Link>
           <p className={styles.description}>Human-centered technology, practical AI adoption, and entrepreneur mentoring and coaching.</p>
+          <nav aria-labelledby="footer-social-heading" className={styles.social}>
+            <h2 id="footer-social-heading" className={styles.heading}>Follow 2Nspira</h2>
+            <ul className={styles.socialLinks}>{socialLinks.map(link => <li key={link.href}>
+              <a href={link.href} target="_blank" rel="noopener noreferrer" className={`${styles.link} ${styles.socialLink}`} aria-label={`2Nspira on ${link.name} (opens in a new tab)`}>
+                {link.name}<ArrowUpRight aria-hidden="true" size={16} />
+              </a>
+            </li>)}</ul>
+          </nav>
         </div>
         <nav aria-labelledby="footer-services-heading">
           <h2 id="footer-services-heading" className={styles.heading}>Services</h2>
