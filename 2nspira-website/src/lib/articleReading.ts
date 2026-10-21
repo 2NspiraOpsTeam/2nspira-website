@@ -42,6 +42,15 @@ export function articleReading(html: string, slug: string) {
     }
     if (element.tagName === "h2") headings.push({ id, text });
   });
+  $("a[href]").each((_, element) => {
+    const anchor = $(element);
+    if (anchor.text().trim() || anchor.find("img[alt], svg[aria-label]").length || anchor.attr("aria-label")) return;
+    // Legacy imports include whitespace-only source links. Keep destinations intact.
+    try {
+      const url = new URL(anchor.attr("href")!, "https://2nspira.com");
+      anchor.attr("aria-label", `Supporting source: ${url.hostname.replace(/^www\./, "")}`);
+    } catch { anchor.attr("aria-label", "Supporting source"); }
+  });
   const words = $.root().text().trim().split(/\s+/).filter(Boolean).length;
   return { html: $.html(), headings, minutes: Math.max(1, Math.ceil(words / 220)) };
 }
