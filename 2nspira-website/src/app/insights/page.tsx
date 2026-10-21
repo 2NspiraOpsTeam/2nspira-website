@@ -1,3 +1,4 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import { posts } from "@/lib/posts";
 import PageIdentity from "@/components/PageIdentity";
 import { publicPageMetadata } from "@/lib/pageMetadata";
@@ -16,7 +17,7 @@ export const metadata: Metadata = publicPageMetadata({
 
 export default function InsightsPage() {
   return (
-    <main className={pageMain} id="main-content">
+    <main className={pageMain} id="main-content"><CatalogEffects headings>
       <PageIdentity type="CollectionPage" name="Executive Insights" path="/insights" items={posts.map((post) => ({ name: post.title, path: `/post/${post.slug}` }))} />
       <section className="relative overflow-hidden border-b border-line bg-surface">
         <AmbientField />
@@ -60,6 +61,6 @@ export default function InsightsPage() {
           <Link href="/coaching" className={`mt-6 min-h-11 ${buttonPrimary}`}>Explore Entrepreneur Mentoring &amp; Coaching →</Link>
         </div>
       </section>
-    </main>
+    </CatalogEffects></main>
   );
 }

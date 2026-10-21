@@ -61,6 +61,7 @@ export default function Home() {
 
   return (
     <main className={pageMain} id="main-content">
+      <ServiceEffects>
       {/* Hero — B2 Split Advisory prototype (WAVE3-B2-STATIC-HERO) */}
       {/* Reversible design checkpoint; no motion; conceptual visual slot per Maya's spec. */}
       <section
@@ -115,7 +116,6 @@ export default function Home() {
       </section>
 
       {/* Capabilities */}
-      <ServiceEffects>
       <section
         id="find-the-right-service"
         className={`${sectionBand} scroll-mt-24`}
@@ -136,7 +136,6 @@ export default function Home() {
           <p className="mt-6 max-w-3xl text-sm leading-7 text-body">Start with what matters most. We agree the priorities, deliverables, and scope with you.</p>
         </div>
       </section>
-      </ServiceEffects>
 
       <section className={section} aria-labelledby="home-work-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -146,7 +145,7 @@ export default function Home() {
             {[
               { title: "GeVitals", image: "gevitals", text: "A bilingual clinic website bringing content, video, publishing, and local discovery together." },
               { title: "Open Goal Soccer", image: "open-goal", text: "An accessible archival redesign preserving a community program’s mission and story." },
-            ].map(project => <article key={project.title} className={`overflow-hidden ${cardFlat}`}>
+            ].map(project => <article key={project.title} data-catalog-card className={`overflow-hidden ${cardFlat}`}>
               <Image src={`/images/pages/${project.image}-website-preview-20261021.jpg`} alt={`${project.title} public website preview`} width={1440} height={1000} sizes="(min-width: 768px) 560px, 100vw" className="h-auto w-full border-b border-line" />
               <div className="p-6"><h3 className="text-xl font-semibold text-ink">{project.title}</h3><p className="mt-3 leading-7 text-body">{project.text}</p></div>
             </article>)}
@@ -208,6 +207,7 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+      </ServiceEffects>
     </main>
   );
 }

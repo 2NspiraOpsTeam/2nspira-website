@@ -1,5 +1,7 @@
 "use client";
 
+import CatalogEffects from "@/components/catalog/CatalogEffects";
+
 import { useState, useRef, useCallback, type ReactNode } from "react";
 
 type SubmitState =
@@ -235,7 +237,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className={pageMain} id="main-content">
+    <main className={pageMain} id="main-content"><CatalogEffects headings>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -599,6 +601,6 @@ export default function ContactPage() {
           </Reveal>
         </div>
       </section>
-    </main>
+    </CatalogEffects></main>
   );
 }

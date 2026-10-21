@@ -1,3 +1,4 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { linkInline, pageMain } from "./ui";
@@ -24,13 +25,13 @@ export default function LegalPage({ title, blocks }: { title: string; blocks: Bl
     }
   }
   return (
-    <main className={pageMain} id="main-content">
+    <main className={pageMain} id="main-content"><CatalogEffects headings>
       <article className="mx-auto max-w-3xl px-4 py-16 text-base leading-8 text-body sm:px-6 sm:py-24">
         <h1 className="mb-10 text-4xl font-semibold tracking-tight text-ink">{title}</h1>
         {sections.length > 1 && <nav aria-label="On this page" className="mb-10 rounded-2xl border border-line bg-canvas-deep p-5 sm:p-6"><details><summary className="cursor-pointer font-semibold text-ink">On this page</summary><ol className="mt-4 list-decimal space-y-2 pl-5">{sections.map((section) => <li key={section.id}><a href={`#${section.id}`} className={linkInline}>{section.text}</a></li>)}</ol></details></nav>}
         {content}
         <Link href="/contact" className={`mt-8 inline-block ${linkInline}`}>Contact 2Nspira</Link>
       </article>
-    </main>
+    </CatalogEffects></main>
   );
 }

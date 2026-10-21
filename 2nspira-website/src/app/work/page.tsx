@@ -1,3 +1,4 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -91,7 +92,7 @@ const supportingProjects = [
 
 export default function WorkPage() {
   return (
-    <main id="main-content" className="min-h-screen bg-surface">
+    <main id="main-content" className="min-h-screen bg-surface"><CatalogEffects headings>
       {/* --- Hero Section --- */}
       <section className="relative overflow-hidden bg-ink py-24 sm:py-32">
         <div className="absolute inset-0 opacity-40">
@@ -286,6 +287,6 @@ export default function WorkPage() {
           </div >
         </Reveal>
       </div >
-    </main>
+    </CatalogEffects></main>
   );
 }

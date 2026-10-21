@@ -44,7 +44,7 @@ export default function ShopCollection({ title, description, current, products }
 }) {
   return (
     <main id="main-content" className={pageMain}>
-      <CatalogEffects>
+      <CatalogEffects headings>
       <CatalogBreadcrumbs page={current} />
       <CatalogSchema page={current} />
       <header className={`${pageHero} relative overflow-hidden text-center`}>

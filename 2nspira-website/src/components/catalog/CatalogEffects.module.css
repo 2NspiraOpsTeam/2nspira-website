@@ -60,3 +60,21 @@
 @media (prefers-reduced-motion: reduce) {
   .catalog details, .catalog summary [data-faq-icon] { transition: none; }
 }
+
+/* Long-form navigation stays quiet: emphasize the destination, never move text. */
+.catalog :is(nav[aria-label="In this article"], nav[aria-label="On this page"]) a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 180ms ease, color 180ms ease;
+}
+.catalog :is(nav[aria-label="In this article"], nav[aria-label="On this page"]) a:focus-visible {
+  text-decoration-thickness: 2px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .catalog :is(nav[aria-label="In this article"], nav[aria-label="On this page"]) a:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .catalog :is(nav[aria-label="In this article"], nav[aria-label="On this page"]) a { transition: none; }
+}

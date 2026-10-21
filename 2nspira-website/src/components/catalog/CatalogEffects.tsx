@@ -3,13 +3,13 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import styles from "./CatalogEffects.module.css";
 
-/** Catalog-page progressive enhancement: server-rendered content is never hidden. */
-export default function CatalogEffects({ children }: { children: ReactNode }) {
+/** Opt-in public-page polish. Content is never hidden; existing Reveal scopes retain ownership. */
+export default function CatalogEffects({ children, headings = false }: { children: ReactNode; headings?: boolean }) {
   const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = root.current;
-    if (!el || typeof IntersectionObserver === "undefined") return;
+    if (!el || typeof IntersectionObserver === "undefined" || typeof window.matchMedia !== "function") return;
 
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const animations = new Set<Animation>();
@@ -23,7 +23,7 @@ export default function CatalogEffects({ children }: { children: ReactNode }) {
         const target = entry.target as HTMLElement;
         if (typeof target.animate !== "function") continue;
         // Cards fade only, so entrance transforms never override hover feedback.
-        const heading = target.hasAttribute("data-catalog-reveal");
+        const heading = target.hasAttribute("data-catalog-reveal") || (headings && target.matches("h1, h2"));
         const animation = target.animate(
           heading
             ? [{ opacity: 0.6, transform: "translateY(10px)" }, { opacity: 1, transform: "none" }]
@@ -38,8 +38,17 @@ export default function CatalogEffects({ children }: { children: ReactNode }) {
     // No opacity/visibility gate: no-JS, unsupported APIs, and focused controls
     // remain usable. Each entrance runs once, without loops or layout shifts.
     if (!motion.matches) {
-      el.querySelectorAll('[data-catalog-reveal], [data-catalog-card], [data-catalog-fade]')
-        .forEach((target) => observer.observe(target));
+      const explicit = '[data-catalog-reveal], [data-catalog-card], [data-catalog-fade]';
+      el.querySelectorAll(headings ? `${explicit}, h1, h2` : explicit).forEach((target) => {
+        // Nested effects wrappers own their descendants. Never layer a heading
+        // entrance over an existing Reveal, CSS hero, card or grouped entrance.
+        if (target.closest("[data-page-effects]") !== el) return;
+        if (!target.matches(explicit) && (
+          target.closest(".reveal, .animate-rise, .hero-settle, [data-coaching-step]") ||
+          target.parentElement?.closest(explicit)
+        )) return;
+        observer.observe(target);
+      });
     }
     const stopMotion = () => {
       if (!motion.matches) return;
@@ -53,7 +62,7 @@ export default function CatalogEffects({ children }: { children: ReactNode }) {
       motion.removeEventListener("change", stopMotion);
       animations.forEach((animation) => animation.cancel());
     };
-  }, []);
+  }, [headings]);
 
-  return <div ref={root} className={styles.catalog}>{children}</div>;
+  return <div ref={root} className={styles.catalog} data-page-effects={headings ? "headings" : "catalog"}>{children}</div>;
 }

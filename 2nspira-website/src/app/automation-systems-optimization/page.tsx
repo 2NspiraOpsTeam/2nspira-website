@@ -1,3 +1,4 @@
+import ServiceEffects from "@/components/ServiceEffects";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -119,7 +120,7 @@ const automationJsonLd = {
 
 export default function AutomationSystemsOptimizationPage() {
   return (
-    <main className={pageMain} id="main-content">
+    <main className={pageMain} id="main-content"><ServiceEffects>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -326,6 +327,6 @@ export default function AutomationSystemsOptimizationPage() {
           </div>
         </div>
       </section>
-    </main>
+    </ServiceEffects></main>
   );
 }

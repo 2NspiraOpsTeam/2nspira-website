@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function ShopPage() {
   return (
     <main id="main-content" className={pageMain}>
-      <CatalogEffects>
+      <CatalogEffects headings>
       <CatalogBreadcrumbs page="shop" />
       <CatalogSchema page="shop" />
       <header className={`${pageHero} relative overflow-hidden text-center`}>

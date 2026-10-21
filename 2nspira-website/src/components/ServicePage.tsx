@@ -1,3 +1,4 @@
+import ServiceEffects from "@/components/ServiceEffects";
 import Link from "next/link";
 import ServiceConversation from "./ServiceConversation";
 import ServiceFit from "./ServiceFit";
@@ -94,7 +95,7 @@ export default function ServicePage({
   const isEditorial = visualTreatment === "editorial";
 
   return (
-    <main className={`${pageMain} ${isEditorial ? "overflow-hidden" : ""}`} id="main-content">
+    <main className={`${pageMain} ${isEditorial ? "overflow-hidden" : ""}`} id="main-content"><ServiceEffects>
       {jsonLd && (
         <script
           type="application/ld+json"
@@ -298,6 +299,6 @@ export default function ServicePage({
           </Reveal>
         )}
       </div>
-    </main>
+    </ServiceEffects></main>
   );
 }

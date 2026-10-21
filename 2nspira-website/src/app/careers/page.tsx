@@ -65,7 +65,7 @@ const relationships = [
 export default function CareersPage() {
   return (
     <main className={pageMain} id="main-content">
-      <CatalogEffects>
+      <CatalogEffects headings>
       <header className="relative overflow-hidden border-b border-line bg-surface py-24 sm:py-28">
         <AmbientField />
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
