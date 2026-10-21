@@ -1,3 +1,5 @@
+import { posts } from "@/lib/posts";
+import PageIdentity from "@/components/PageIdentity";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -15,6 +17,7 @@ export const metadata: Metadata = publicPageMetadata({
 export default function InsightsPage() {
   return (
     <main className={pageMain} id="main-content">
+      <PageIdentity type="CollectionPage" name="Executive Insights" path="/insights" items={posts.map((post) => ({ name: post.title, path: `/post/${post.slug}` }))} />
       <section className="relative overflow-hidden border-b border-line bg-surface">
         <AmbientField />
         <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
@@ -43,7 +46,7 @@ export default function InsightsPage() {
           alt="Conceptual editorial still life of a notebook, pen, and coffee beside a window."
           width={1344}
           height={768}
-          className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.015]"
+          className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.015]"
         />
       </figure>
       </div>

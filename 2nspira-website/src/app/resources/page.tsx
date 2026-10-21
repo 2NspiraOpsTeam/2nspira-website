@@ -1,3 +1,4 @@
+import PageIdentity from "@/components/PageIdentity";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -35,6 +36,7 @@ function Benefits({ items }: { items: string[] }) {
 export default function ResourcesPage() {
   return (
     <main id="main-content" className={styles.page}>
+      <PageIdentity type="CollectionPage" name="Assessments and Practical Tools" path="/resources" items={[{ name: "Professional Strengths Assessment", path: "/resources/strength-profile" }, { name: "AI Readiness Assessment for Organizations", path: "/resources/ai-readiness-scorecard" }]} />
       <section className={styles.hero} aria-labelledby="resources-title">
         <div className={`${styles.container} ${styles.heroInner}`}>
           <div>

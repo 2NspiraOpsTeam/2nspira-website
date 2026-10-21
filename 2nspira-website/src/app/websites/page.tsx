@@ -223,7 +223,7 @@ export default function WebsitesPage() {
               sizes="(min-width: 1024px) 1024px, calc(100vw - 32px)"
               unoptimized
               fetchPriority="high"
-              className="object-cover object-center transition-transform duration-700 ease-gentle group-hover:scale-[1.02]"
+              className="object-cover object-center transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.02]"
             />
           </figure>
         </div>
@@ -246,9 +246,9 @@ export default function WebsitesPage() {
             {platformConnections.map((item, index) => (
               <Reveal key={item.title} delay={index * 70} className="h-full">
                 <article
-                  className={`group h-full p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${card}`}
+                  className={`group h-full p-6 transition-all duration-300 motion-safe:hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${card}`}
                 >
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent transition-transform duration-300 group-hover:scale-110">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent transition-transform duration-300 motion-safe:group-hover:scale-110">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <h3 className={`mt-5 ${h3}`}>{item.title}</h3>
@@ -318,13 +318,13 @@ export default function WebsitesPage() {
           <Reveal className="mt-12">
             <article
               id="water-bear-mecca"
-              className="group overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.10)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(35,41,54,0.14)]"
+              className="group overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.10)] transition-all duration-500 motion-safe:hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(35,41,54,0.14)]"
               aria-labelledby="water-bear-mecca-heading"
             >
               <div className="grid lg:grid-cols-[0.82fr_1.18fr]">
                 <div className="relative flex flex-col justify-between overflow-hidden bg-ink p-8 text-white sm:p-10">
                   <div
-                    className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-accent/25 blur-3xl transition-transform duration-700 group-hover:scale-125"
+                    className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-accent/25 blur-3xl transition-transform duration-700 motion-safe:group-hover:scale-125"
                     aria-hidden="true"
                   />
                   <div className="relative">
@@ -415,13 +415,13 @@ export default function WebsitesPage() {
           <Reveal className="mt-8" delay={80}>
             <article
               id="manufacturing-pilot"
-              className="group overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_20px_60px_rgba(35,41,54,0.08)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(35,41,54,0.12)]"
+              className="group overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_20px_60px_rgba(35,41,54,0.08)] transition-all duration-500 motion-safe:hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(35,41,54,0.12)]"
               aria-labelledby="manufacturing-pilot-heading"
             >
               <div className="grid lg:grid-cols-[0.82fr_1.18fr]">
                 <div className="relative overflow-hidden bg-ink p-8 text-white sm:p-10">
                   <div
-                    className="absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl transition-transform duration-700 group-hover:scale-125"
+                    className="absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl transition-transform duration-700 motion-safe:group-hover:scale-125"
                     aria-hidden="true"
                   />
                   <div className="relative">
@@ -528,7 +528,7 @@ export default function WebsitesPage() {
                 className="h-full min-w-[82%] snap-start md:min-w-0"
               >
                 <article
-                  className={`group relative flex h-full flex-col overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${card}`}
+                  className={`group relative flex h-full flex-col overflow-hidden p-6 transition-all duration-300 motion-safe:hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${card}`}
                   aria-labelledby={`showcase-${site.name.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   <div

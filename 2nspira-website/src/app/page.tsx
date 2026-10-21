@@ -23,11 +23,11 @@ import {
 const homepageDescription =
   "Practical AI, systems optimization, digital platforms, fractional CIO leadership, and entrepreneur mentoring from 2Nspira. Turn priorities into execution.";
 const homepageShareTitle =
-  "Human-centered technology transformation for the AI era";
+  "Technology that moves you forward. Leadership that grows with you.";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 
 export const metadata: Metadata = {
-  title: { absolute: "2Nspira | Technology Transformation & AI" },
+  title: { absolute: "2Nspira | Technology Leadership, AI & Entrepreneur Coaching" },
   description: homepageDescription,
   alternates: { canonical: "https://2nspira.com/" },
   openGraph: {
@@ -159,7 +159,7 @@ export default function Home() {
                 sizes="(min-width: 1152px) 461px, (min-width: 1024px) 42vw, calc(100vw - 32px)"
                 unoptimized
                 fetchPriority="high"
-                className="object-cover object-center transition-transform duration-700 ease-gentle group-hover:scale-[1.02]"
+                className="object-cover object-center transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.02]"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-ink/10 via-transparent to-accent/15 opacity-70" aria-hidden="true" />
             </figure>
@@ -238,7 +238,7 @@ export default function Home() {
               aria-label="Our core values"
             >
             {values.map((value) => (
-              <div key={value.title} className={`group p-6 transition-all duration-300 hover:-translate-y-0.5 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
+              <div key={value.title} className={`group p-6 transition-all duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
                 <AccentRule className="mb-4 w-8" />
                 <p className="text-base font-semibold text-ink">{value.title}</p>
                 <p className={`mt-2 ${caption}`}>{value.text}</p>

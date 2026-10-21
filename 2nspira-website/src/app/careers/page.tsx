@@ -91,7 +91,7 @@ export default function CareersPage() {
             height={1024}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1024px"
             priority
-            className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.015] motion-reduce:transform-none"
+            className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.015] motion-reduce:transform-none"
           />
         </figure>
       </div>

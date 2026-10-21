@@ -273,7 +273,7 @@ export default function ContactPage() {
             alt="Conceptual visualization of a calm, minimal meeting corner beside a window."
             width={1344}
             height={768}
-            className="h-auto w-full transition-transform duration-700 ease-gentle group-hover:scale-[1.01]"
+            className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.01]"
           />
         </figure>
       </div>
@@ -509,13 +509,13 @@ export default function ContactPage() {
           {/* ---- Contact card (always visible) ── enhanced with badge + hover + accent line ── */}
           <Reveal delay={0}>
             <div
-              className={`group relative mt-12 overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${cardFlat}`}
+              className={`group relative mt-12 overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-300 motion-safe:hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${cardFlat}`}
               role="complementary"
               aria-label="Alternative contact methods"
             >
               {/* Accent top-line */}
               <div
-                className="absolute -top-px left-8 right-8 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 group-hover:scale-x-100"
+                className="absolute -top-px left-8 right-8 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 motion-safe:group-hover:scale-x-100"
                 aria-hidden="true"
               />
               <div className="p-8">
@@ -556,13 +556,13 @@ export default function ContactPage() {
           {/* ---- FAQ card ── enhanced with badge + hover + accent line ── */}
           <Reveal delay={100}>
             <div
-              className={`group relative mt-8 overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${cardFlat}`}
+              className={`group relative mt-8 overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-300 motion-safe:hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift ${cardFlat}`}
               role="complementary"
               aria-label="Frequently asked questions"
             >
               {/* Accent top-line */}
               <div
-                className="absolute -top-px left-8 right-8 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 group-hover:scale-x-100"
+                className="absolute -top-px left-8 right-8 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 motion-safe:group-hover:scale-x-100"
                 aria-hidden="true"
               />
               <div className="p-8">
