@@ -47,16 +47,16 @@ export default function Footer() {
           <h2 id="footer-contact-heading" className={styles.heading}>Contact</h2>
           <p className={styles.description}>Questions about our services or ready to get started?</p>
           <Link href="/contact" className={styles.contact} aria-label="Get in touch with 2Nspira via contact page">Get in touch<ArrowUpRight aria-hidden="true" size={18} /></Link>
-          <nav aria-labelledby="footer-social-heading" className={styles.social}>
-            <h2 id="footer-social-heading" className={styles.heading}>Follow 2Nspira</h2>
-            <ul className={styles.socialLinks}>{socialLinks.map(link => <li key={link.href}>
-              <a href={link.href} target="_blank" rel="noopener noreferrer" className={`${styles.link} ${styles.socialLink}`} aria-label={`2Nspira on ${link.name} (opens in a new tab)`}>
-                {link.name}<ArrowUpRight aria-hidden="true" size={16} />
-              </a>
-            </li>)}</ul>
-          </nav>
         </div>
       </div>
+      <nav aria-labelledby="footer-social-heading" className={styles.social}>
+        <h2 id="footer-social-heading" className={styles.heading}>Follow 2Nspira</h2>
+        <ul className={styles.socialLinks}>{socialLinks.map(link => <li key={link.href}>
+          <a href={link.href} target="_blank" rel="noopener noreferrer" className={`${styles.link} ${styles.socialLink}`} aria-label={`2Nspira on ${link.name} (opens in a new tab)`}>
+            {link.name}<ArrowUpRight aria-hidden="true" size={16} />
+          </a>
+        </li>)}</ul>
+      </nav>
       <div className={styles.bottom}>
         <p>&copy; {new Date().getFullYear()} 2Nspira. All rights reserved.</p>
         <nav aria-label="Legal" className={styles.legal}>{legal.map(link => <Link key={link.href} href={link.href} className={styles.link}>{link.name}</Link>)}</nav>
