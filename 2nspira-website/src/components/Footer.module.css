@@ -6,7 +6,7 @@
 .list { margin-top: 1rem; }
 .social { margin-top: 1.75rem; }
 .socialLinks { display: flex; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin-top: 0.75rem; }
-.socialLink { padding: 0.5rem 0.75rem; border: 1px solid #566170; border-radius: 999px; }
+.socialLinks .socialLink { padding: 0.5rem 0.75rem; border: 1px solid #566170; border-radius: 999px; }
 .link { display: inline-flex; align-items: center; justify-content: space-between; gap: 0.75rem; min-height: 44px; padding-block: 0.5rem; font-size: 0.875rem; line-height: 1.7; border-radius: 3px; color: #d3d8df; text-decoration: none; transition: color 200ms ease; }
 .list .link { width: 100%; }
 .link svg { flex-shrink: 0; color: #b3bfce; transition: transform 220ms ease; }
