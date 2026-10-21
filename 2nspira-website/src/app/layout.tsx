@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Analytics from "@/components/Analytics";
+import { socialLinks } from "@/lib/socialLinks";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -123,7 +124,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           contactType: "customer support",
         },
         sameAs: [
-          "https://www.linkedin.com/company/2nspira",
+          ...socialLinks.map(link => link.href),
           "https://www.instagram.com/2nspira/",
           "https://www.youtube.com/@2Nspira",
           "https://github.com/2NspiraOpsTeam",
