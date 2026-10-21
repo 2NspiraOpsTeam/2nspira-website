@@ -371,7 +371,7 @@ export default function WebsitesPage() {
                         <p className="text-xs font-semibold tracking-[0.18em] text-accent">
                           {item.number}
                         </p>
-                        <p className="mt-3 text-xs font-medium uppercase tracking-wide text-body/70 line-through decoration-line">
+                        <p className="mt-3 text-xs font-medium uppercase tracking-wide text-muted line-through decoration-line">
                           {item.before}
                         </p>
                         <p className="mt-2 font-semibold leading-6 text-ink">
@@ -517,7 +517,7 @@ export default function WebsitesPage() {
             </article>
           </Reveal>
 
-          <p className="mt-10 text-xs font-semibold uppercase tracking-[0.16em] text-body/60 md:hidden">
+          <p className="mt-10 text-xs font-semibold uppercase tracking-[0.16em] text-muted md:hidden">
             Swipe to explore more work →
           </p>
           <div className="mt-4 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-4 md:mt-10 md:grid md:grid-cols-2 md:overflow-visible md:pb-0 lg:grid-cols-3">
@@ -539,7 +539,7 @@ export default function WebsitesPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
                       {site.tag}
                     </p>
-                    <span className="text-xs font-semibold tracking-[0.18em] text-body/50">
+                    <span className="text-xs font-semibold tracking-[0.18em] text-muted">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>

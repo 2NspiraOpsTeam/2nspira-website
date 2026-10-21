@@ -203,7 +203,7 @@ export default function ServicePage({
             {insightSections.map((section, index) => (
               <Reveal key={section.title} delay={index * 90} variant={isEditorial ? "scale" : "rise"}>
                 <article className={`relative h-full overflow-hidden p-8 ${cardFlat} ${isEditorial ? (index === 0 ? "border-accent/25 bg-gradient-to-br from-surface to-accent-soft/45" : "border-line-strong bg-canvas-deep") : ""}`}>
-                  {isEditorial && <span className="absolute right-6 top-4 text-6xl font-semibold leading-none text-accent/10" aria-hidden="true">0{index + 1}</span>}
+                  {isEditorial && <span className="absolute right-6 top-4 text-4xl font-semibold leading-none text-accent" aria-hidden="true">0{index + 1}</span>}
                   <AccentRule className="mb-6" />
                   <h2 className={`relative ${h2}`}>{section.title}</h2>
                   <p className="mt-4 leading-8 text-body">{section.text}</p>
