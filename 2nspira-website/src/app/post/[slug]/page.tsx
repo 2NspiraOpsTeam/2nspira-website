@@ -45,7 +45,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 export default async function PostPage({params}:Props) {
   const post=getPost((await params).slug);
   if(!post) notFound();
-  const reading = articleReading(post.html);
+  const reading = articleReading(post.html, post.slug);
   const related = posts.filter((item) => item.slug !== post.slug).slice(0, 3);
   const articleUrl = `https://2nspira.com/post/${post.slug}`;
   const structured={"@context":"https://schema.org","@type":"BlogPosting","@id":`${articleUrl}#article`,headline:post.title,description:post.description,url:articleUrl,inLanguage:"en-US",datePublished:post.datePublished,dateModified:post.dateModified,author:{"@type":"Person",name:post.author},publisher:{"@id":"https://2nspira.com/#organization"},isPartOf:{"@id":"https://2nspira.com/#website"},mainEntityOfPage:{"@type":"WebPage","@id":articleUrl},image:post.image?`https://2nspira.com${post.image}`:undefined};

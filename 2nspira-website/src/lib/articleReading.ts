@@ -1,9 +1,29 @@
+import { articleSections } from "./articleSections";
 import { load } from "cheerio/slim";
 
 /** Prepare authored HTML without changing its text, links, or publication dates. */
-export function articleReading(html: string) {
+export function articleReading(html: string, slug: string) {
   const $ = load(html, null, false);
   $("figure").first().remove(); // The page already renders this image as its hero.
+  // Restore explicit source headings; never guess headings from sentence length.
+  const sectionLabels = articleSections[slug] ?? [];
+  $("p").each((_, element) => {
+    const paragraph = $(element);
+    const text = paragraph.text().trim();
+    if (sectionLabels.includes(text)) {
+      const heading = $("<h2></h2>").html(paragraph.html() ?? "");
+      paragraph.replaceWith(heading);
+    } else if (text.length >= 180 && paragraph.find("strong").text().trim() === text) {
+      // Older exports made entire body paragraphs bold, obscuring visual hierarchy.
+      paragraph.find("strong").each((_, strong) => { $(strong).replaceWith($(strong).html() ?? ""); });
+    }
+  });
+  if ($("h2").length === 0) {
+    $("h3").each((_, element) => {
+      const heading = $(element);
+      heading.replaceWith($("<h2></h2>").attr(heading.attr() ?? {}).html(heading.html() ?? ""));
+    });
+  }
   const used = new Set<string>();
   $("[id]").each((_, element) => { const id = $(element).attr("id"); if (id) used.add(id); });
   const headings: { id: string; text: string }[] = [];
