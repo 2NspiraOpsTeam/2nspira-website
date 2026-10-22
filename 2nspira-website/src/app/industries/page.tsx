@@ -81,7 +81,7 @@ export default function IndustriesPage() {
       <section id="industry-conversations" className={`${section} scroll-mt-24`} aria-labelledby="conversations-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 id="conversations-heading" className={h2}>Recognize your situation?</h2>
-          <p className={`max-w-3xl ${lead}`}>These are possible conversations we can explore together—not descriptions of past projects or a claim that every service has been delivered in every industry. The right support depends on your needs and the scope we agree.</p>
+          <p className={`max-w-3xl ${lead}`}>Explore the questions that may be relevant to your organization. We’ll understand your priorities and agree the right scope together.</p>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {industries.map(({ name, icon: Icon, conversation, focus }) => <article key={name} data-catalog-card className={`p-6 sm:p-8 ${cardFlat}`}>
               <Icon size={26} strokeWidth={1.5} aria-hidden="true" className="mb-5 text-accent" />

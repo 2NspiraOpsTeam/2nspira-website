@@ -1,0 +1,38 @@
+/* CIO-only feedback: existing Reveal owns entrances; these rules never hide content. */
+.page [data-cio-card] {
+  position: relative;
+  transition: border-color 240ms var(--ease-gentle), box-shadow 240ms var(--ease-gentle), transform 240ms var(--ease-gentle);
+}
+.page [data-cio-card]::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 240ms var(--ease-gentle);
+}
+.page [data-cio-card]:focus-within { border-color: var(--color-accent); }
+.page [data-cio-card]:focus-within::before { opacity: 1; }
+.page details { transition: border-color 220ms var(--ease-gentle), background-color 220ms var(--ease-gentle); }
+.page details:focus-within { border-color: var(--color-accent); }
+.page details[open] > summary { color: var(--color-accent-strong); }
+.page [data-cio-lenses] > summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 48px; list-style: none; }
+.page [data-cio-lenses] > summary::-webkit-details-marker { display: none; }
+.disclosureIcon { flex-shrink: 0; transition: transform 220ms var(--ease-gentle); }
+.page [data-cio-lenses][open] .disclosureIcon { transform: rotate(180deg); }
+@media (hover: hover) and (pointer: fine) {
+  .page [data-cio-card]:hover { border-color: var(--color-accent); box-shadow: 0 14px 34px rgb(35 41 54 / 8%); }
+  .page [data-cio-card]:hover::before { opacity: 1; }
+  .page details > summary:hover { color: var(--color-accent-strong); }
+}
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .page [data-cio-card]:hover { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page [data-cio-card], .page [data-cio-card]::before, .page details, .disclosureIcon { transition: none; }
+  .page [data-cio-card] { transform: none; }
+}
