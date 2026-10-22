@@ -15,6 +15,7 @@ const company = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
   { name: "Our work", href: "/work" },
+  { name: "Industry experience", href: "/industries" },
   { name: "About 2Nspira", href: "/about" },
   { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },

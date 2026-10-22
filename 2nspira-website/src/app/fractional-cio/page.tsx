@@ -1,3 +1,5 @@
+import { ChevronDown } from "lucide-react";
+import styles from "./page.module.css";
 import ServiceEffects from "@/components/ServiceEffects";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
@@ -63,7 +65,7 @@ const fractionalCioJsonLd = {
 
 export default function FractionalCioPage() {
   return (
-    <main className={pageMain} id="main-content"><ServiceEffects>
+    <main className={`${pageMain} ${styles.page}`} id="main-content"><ServiceEffects>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -93,7 +95,7 @@ export default function FractionalCioPage() {
       <section className={section} aria-labelledby="fit-heading">
         <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
-            <article className={`h-full p-7 sm:p-8 ${card}`}>
+            <article data-cio-card className={`h-full p-7 sm:p-8 ${card}`}>
               <AccentRule className="mb-6" />
               <h2 id="fit-heading" className={h2}>When Fractional CIO leadership makes sense</h2>
               <p className="mt-5 leading-8 text-body">
@@ -102,7 +104,7 @@ export default function FractionalCioPage() {
             </article>
           </Reveal>
           <Reveal delay={80}>
-            <article className={`h-full p-7 sm:p-8 ${card}`}>
+            <article data-cio-card className={`h-full p-7 sm:p-8 ${card}`}>
               <AccentRule className="mb-6" />
               <h2 className={h2}>Leadership that connects the organization</h2>
               <p className="mt-5 leading-8 text-body">
@@ -122,7 +124,7 @@ export default function FractionalCioPage() {
             <p className="mt-5 leading-8 text-body">
               We assess the environment, frame tradeoffs, establish a practical roadmap, guide vendors and initiatives, and strengthen leadership accountability. The work sits above day-to-day support while remaining close enough to execution to keep strategy grounded.
             </p>
-            <div className={`mt-8 p-6 sm:p-7 ${cardFlat}`}>
+            <div data-cio-card className={`mt-8 p-6 sm:p-7 ${cardFlat}`}>
               <AccentRule className="mb-5" />
               <h3 className={h3}>Independent judgment</h3>
               <p className="mt-3 leading-7 text-body">
@@ -148,7 +150,7 @@ export default function FractionalCioPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {approach.map((step, index) => (
               <Reveal key={step.title} delay={index * 80} className="h-full">
-                <article className={`h-full p-7 ${card}`}>
+                <article data-cio-card className={`h-full p-7 ${card}`}>
                   <p className="text-sm font-semibold tracking-widest text-accent">{String(index + 1).padStart(2, "0")}</p>
                   <h3 className={`mt-4 ${h3}`}>{step.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-body">{step.text}</p>
@@ -169,7 +171,7 @@ export default function FractionalCioPage() {
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
             {outcomes.map((outcome, index) => (
               <Reveal key={outcome.title} delay={index * 70}>
-                <article className={`h-full p-7 ${cardFlat}`}>
+                <article data-cio-card className={`h-full p-7 ${cardFlat}`}>
                   <h3 className={h3}>{outcome.title}</h3>
                   <p className="mt-3 leading-7 text-body">{outcome.text}</p>
                 </article>
@@ -186,11 +188,11 @@ export default function FractionalCioPage() {
             <h2 id="lenses-heading" className={`mt-4 ${h2}`}>See the whole environment before setting the agenda</h2>
             <p className={`mt-4 ${lead}`}>Technology leadership requires a connected view. We examine eight dimensions together so decisions account for dependencies, constraints, ownership, and business impact.</p>
           </div>
-          <details className="mt-8 rounded-2xl border border-line bg-surface p-5 sm:p-7"><summary className="cursor-pointer rounded font-semibold text-ink focus-visible:outline-2 focus-visible:outline-accent">Explore the eight executive lenses</summary>
+          <details data-cio-lenses className="mt-8 rounded-2xl border border-line bg-surface p-5 sm:p-7"><summary className="cursor-pointer rounded font-semibold text-ink focus-visible:outline-2 focus-visible:outline-accent">Explore the eight executive lenses<ChevronDown className={styles.disclosureIcon} aria-hidden="true" size={19} /></summary>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {executiveLenses.map((lens, index) => (
               <Reveal key={lens.title} delay={index * 60} className="h-full">
-                <article className={`group h-full p-6 motion-safe:hover:-translate-y-1 ${card}`}>
+                <article data-cio-card className={`group h-full p-6 ${card}`}>
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent">{String(index + 1).padStart(2, "0")}</span>
                   <h3 className={`mt-5 ${h3}`}>{lens.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-body">{lens.text}</p>
