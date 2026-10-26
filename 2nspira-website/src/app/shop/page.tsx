@@ -30,12 +30,17 @@ export default function ShopPage() {
       <header className={`${pageHero} relative overflow-hidden text-center`}>
         <AmbientField />
         <div className="relative" data-catalog-reveal>
-          <EyebrowPill>The 2Nspira shop</EyebrowPill>
+          <EyebrowPill>The 2Nspira creative shop</EyebrowPill>
           <h1 className={h1}>A little clarity.<br />A little creativity.</h1>
           <p className={lead}>Books to inspire. Games to gather around. Pages to color. Art to make space for what matters.</p>
         </div>
       </header>
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+        <aside className="mb-10 rounded-2xl border border-line bg-accent-soft p-6 sm:p-8" aria-labelledby="shop-bookstore-title">
+          <h2 id="shop-bookstore-title" className={h2}>Looking for our bookstore?</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-body">2Nspira Books is our dedicated home for collectible editions, published books, coloring books, and printable activities. This creative shop brings together our games, coloring collections, and art prints.</p>
+          <a href="https://books.2nspira.com" className={`mt-4 ${linkInline}`}>Visit 2Nspira Books <span aria-hidden="true" className="ml-1">→</span></a>
+        </aside>
         <CollectionNav current="shop" />
         <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-6 text-body">Explore printable family games, cozy coloring books and pages, and thoughtful wall art from 2Nspira. Choose a collection, then complete your purchase on Etsy or Amazon.</p>
         <section aria-labelledby="printables-title" className="mt-14">

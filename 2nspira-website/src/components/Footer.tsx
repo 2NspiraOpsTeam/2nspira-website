@@ -23,7 +23,8 @@ const ideas = [
   { name: "Insights", href: "/insights" },
   { name: "Resources", href: "/resources" },
   { name: "Leadership books", href: "/books" },
-  { name: "Shop", href: "/shop" },
+  { name: "Bookstore", href: "https://books.2nspira.com" },
+  { name: "Creative shop", href: "/shop" },
 ];
 const legal = [
   { name: "Privacy policy", href: "/privacy-policy" },
