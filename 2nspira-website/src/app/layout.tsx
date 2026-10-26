@@ -19,12 +19,12 @@ const geistMono = Geist_Mono({
 const siteName = "2Nspira";
 const siteDomain = "https://2nspira.com";
 const siteDescription =
-  "Technology expertise that solves real business problems. Simplify operations, connect systems, adopt AI responsibly, and build foundations for sustainable growth.";
-const socialTitle = "Technology expertise that solves real business problems.";
+  "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.";
+const socialTitle = "Your business, working better. Technology with purpose.";
 const socialImageUrl = `${siteDomain}/images/logo/og-image-v2.png`;
 export const metadata: Metadata = {
   title: {
-    default: `${siteName} | Technology Leadership, AI & Entrepreneur Coaching`,
+    default: `${siteName} | Business Transformation for Practical Results`,
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -107,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           height: 132,
         },
         description:
-          "Human-centered AI enablement, automation and systems optimization, websites and digital platforms, fractional CIO leadership, and entrepreneur mentoring.",
+          siteDescription,
         email: "hello@2nspira.com",
         telephone: "+1-646-543-0199",
         address: {

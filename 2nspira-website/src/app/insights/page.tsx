@@ -10,9 +10,10 @@ import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { buttonPrimary, h2, lead, linkInline, pageMain } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Executive Insights",
-  "description": "Read practical insights from Jeffrey Cortez on AI strategy, technology leadership, digital transformation, organizational trust, and human-centered change.",
-  "path": "/insights"
+  title: "Practical Insights for Better Business Operations",
+  shareTitle: "Ideas to help your business work better.",
+  description: "Explore practical perspectives on reducing operational friction, leading change, building trust, and using AI to support better business decisions.",
+  path: "/insights"
 });
 
 export default function InsightsPage() {

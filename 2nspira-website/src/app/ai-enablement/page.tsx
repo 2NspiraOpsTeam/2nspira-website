@@ -2,13 +2,13 @@ import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import ServicePage from "@/components/ServicePage";
 
-const description = "Build a practical AI strategy with 2Nspira. Assess readiness, establish AI governance, train your teams, and turn promising use cases into responsible workflows.";
+const description = "Find where AI can reduce repetitive work and help your team serve customers better. Get practical AI strategy, training, and governance from 2Nspira.";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "AI Strategy, Training & Governance Consulting",
-  "shareTitle": "Put AI to work. Keep people in control.",
+  title: "AI Consulting for Better Business Workflows",
+  shareTitle: "Less repetitive work. Responsible AI.",
   description,
-  "path": "/ai-enablement"
+  path: "/ai-enablement"
 });
 
 export default function Page() {
@@ -17,7 +17,7 @@ export default function Page() {
     title: "Put AI to work. Keep people in control.",
     eyebrowText: "AI Strategy, Training & Governance",
     primaryActionLabel: "Discuss AI Readiness",
-    intro: "When AI use grows without direction, consistency, or safeguards, experimentation can create more uncertainty than value. We help identify practical opportunities, establish responsible governance, and train your team to use AI with purpose and judgment.",
+    intro: "When AI use grows without direction, consistency, or safeguards, experimentation can create more uncertainty than value. We help your team reduce repetitive work and improve customer service by choosing useful AI workflows, establishing safeguards, and learning to use AI with judgment.",
     audience: "Executive teams, school and academic leaders, founders, nonprofits, and operators adopting AI without a clear framework for governance, training, or data privacy.",
     situations: [
       { title: "AI use is growing without a plan", text: "People are experimenting, but priorities, ownership, and acceptable use are unclear." },
