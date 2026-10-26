@@ -1,3 +1,4 @@
+import Openings from "@/components/careers/Openings";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -136,7 +137,7 @@ export default function CareersPage() {
         <div data-catalog-reveal className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Opportunities</p>
           <h2 id="opportunities-heading" className={`mt-4 ${h2}`}>Current Opportunities</h2>
-          <p className="mt-6 text-xl font-semibold text-ink">There are no open positions at this time.</p>
+          <Openings />
           <p className="mx-auto mt-4 max-w-2xl leading-8 text-body">
             2Nspira is growing its client portfolio and professional network. Employment, consulting, and project-based opportunities may become available as our work expands.
           </p>

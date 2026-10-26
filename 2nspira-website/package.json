@@ -18,7 +18,9 @@
     "prebuild:vinext": "npm run prepare:articles",
     "predev:vinext": "npm run prepare:articles",
     "predev": "npm run prepare:articles",
-    "prebuild": "npm run prepare:articles"
+    "prebuild": "npm run prepare:articles",
+    "test:careers": "node scripts/careers-test.mjs",
+    "deploy:careers:preview": "node scripts/deploy-careers-preview.mjs"
   },
   "dependencies": {
     "@vinext/cloudflare": "^1.0.0-beta.6",
@@ -39,6 +41,7 @@
     "@vitejs/plugin-react": "^6.1.1",
     "@vitejs/plugin-rsc": "^0.5.34",
     "cheerio": "^1.2.0",
+    "esbuild": "^0.28.1",
     "eslint": "^9",
     "eslint-config-next": "16.3.3",
     "sanitize-html": "^2.17.7",

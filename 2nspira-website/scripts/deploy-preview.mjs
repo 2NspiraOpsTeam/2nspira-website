@@ -14,6 +14,10 @@ config.name = "2nspira-website-preview";
 config.main = "preview-entry.js";
 config.workers_dev = true;
 config.routes = [];
+// Never let a preview write applicant data into the production Careers database.
+config.d1_databases = (config.d1_databases || []).map(binding => binding.binding === "CAREERS_DB"
+  ? { ...binding, database_name: "2nspira-careers-preview", database_id: "ef55122a-a6d5-4367-ab3b-ec0554a0a4f0" }
+  : binding);
 delete config.route;
 await writeFile(new URL("../dist/server/wrangler.preview.json", import.meta.url), JSON.stringify(config, null, 2));
 await writeFile(new URL("../dist/server/preview-entry.js", import.meta.url), `
