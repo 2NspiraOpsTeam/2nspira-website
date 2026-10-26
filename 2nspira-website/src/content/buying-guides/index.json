@@ -1,61 +1,5 @@
 [
   {
-    "slug": "paperless-office-scanner",
-    "title": "Do you need a document scanner\u2014or just a better workflow?",
-    "summary": "Choose between phone scanning and a dedicated scanner, then build an inbox you can actually keep clear.",
-    "category": "Paperless workflows",
-    "updated": "2026-10-26",
-    "sections": [
-      {
-        "title": "Start with the pile, not the product",
-        "paragraphs": [
-          "For one or two receipts at a time, start with the scanning feature already available on your phone. A dedicated scanner becomes worth considering when feeding, naming, and checking a recurring batch takes longer than the work the documents support. The right decision depends on your weekly volume, document types, and who needs access\u2014not the biggest speed number on a box.",
-          "Run a one-week trial before buying: collect incoming paperwork in one tray, count the sheets, and time a complete scanning session. Include naming files, correcting orientation, and checking that every page is readable. This gives you a baseline to compare against a purchase."
-        ]
-      },
-      {
-        "title": "Three situations, three starting points",
-        "paragraphs": [
-          "Occasional receipts: keep the phone workflow if it produces readable files and you can find them later. Improve lighting and file naming before buying hardware.",
-          "Weekly batches of loose pages: compare sheet-fed scanners with automatic document feeders and two-sided scanning. Check supported paper weights, small-document handling, and whether your computer operating system is supported.",
-          "Bound material, delicate originals, or irregular items: investigate a flatbed or overhead approach. A sheet feeder is not a universal replacement for those tools. Do not force valuable originals through a feeder that is not intended for them."
-        ]
-      },
-      {
-        "title": "A compact candidate: Brother ADS-1800W",
-        "paragraphs": [
-          "Brother lists the ADS-1800W as a compact wireless desktop scanner with single- and double-sided scanning up to 30 pages per minute. That makes it a candidate for a recurring loose-paper inbox, not an automatic recommendation for every small business.",
-          "We have not hands-on tested this scanner. Before choosing it, check Brother\u2019s current driver support, document-size limits, and the destination you actually need: local computer, shared folder, or another supported workflow. Check the exact Amazon model and condition; renewed listings and bundles are different offers. Its advertised throughput is not the same as your end-to-end processing speed."
-        ]
-      },
-      {
-        "title": "Build a filing routine before scanning the backlog",
-        "paragraphs": [
-          "Create three locations: an incoming folder, a reviewed archive, and an exceptions folder. Use a predictable name such as 2026-10-26_supplier_invoice-123. Avoid putting sensitive personal details into filenames that may be visible in search results or notifications.",
-          "Work in small batches. Open the saved file, inspect both sides, count pages, and test search if you rely on optical character recognition. Keep unclear scans in the exceptions folder. Back up the archive and test that a sample file can be restored.",
-          "Do not destroy originals just because a scan exists. Retention obligations and the need for original documents vary; establish your business\u2019s retention policy before shredding. Keep permissions narrow for employee, customer, and financial documents."
-        ]
-      },
-      {
-        "title": "A practical purchase test",
-        "paragraphs": [
-          "Buy only if the proposed scanner fits your actual paper and software workflow, and the time it could save is meaningful. If your measured manual process takes 30 minutes per week and you value that time at $30 per hour, eliminating all of it would be worth at most $15 per week. That is a ceiling, not an expected saving: scanning, review, and filing will still take time.",
-          "For the first month, measure minutes per completed batch and the number of files you must rescan. If hardware does not improve those outcomes, fix the workflow before adding more equipment."
-        ]
-      }
-    ],
-    "sources": [
-      {
-        "label": "Brother ADS-1800W specifications and support",
-        "url": "https://www.brother-usa.com/p/desktop-scanners/ADS1800W"
-      }
-    ],
-    "product": {
-      "label": "Brother ADS-1800W",
-      "url": "https://www.amazon.com/dp/B0D1T71W4R?&linkCode=ll2&tag=2nspira-20&linkId=eae06a66e29bcf44ee9bb1786a5de5af&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl"
-    }
-  },
-  {
     "slug": "usb-c-hub-buying-checklist",
     "title": "USB-C hub or dock? Check these five things before buying",
     "summary": "Avoid the wrong ports, display limitations, and charging surprises when connecting a home-office laptop.",
@@ -70,9 +14,9 @@
         ]
       },
       {
-        "title": "1. Confirm the laptop\u2019s port capabilities",
+        "title": "1. Confirm the laptop’s port capabilities",
         "paragraphs": [
-          "Look up the exact port specification in the manufacturer\u2019s manual. USB-C describes the connector, while the supported functions vary. Confirm video output support if you want an HDMI-connected monitor through a hub. Do not infer Thunderbolt capability from the connector shape.",
+          "Look up the exact port specification in the manufacturer’s manual. USB-C describes the connector, while the supported functions vary. Confirm video output support if you want an HDMI-connected monitor through a hub. Do not infer Thunderbolt capability from the connector shape.",
           "If you use a work-managed laptop, check whether a dock requires software that your organization allows. A device that depends on a driver may be unsuitable when you cannot install it."
         ]
       },
@@ -80,14 +24,14 @@
         "title": "2. Decide on displays before counting USB ports",
         "paragraphs": [
           "Choose how many independent screens you need, then verify the combination of laptop, operating system, dock, and monitor. Two sockets on a dock are not a promise of two extended displays on every laptop. Check the supported resolution and refresh rate for the exact connection path.",
-          "For a single external display and a few accessories, a portable hub can be enough. For multiple displays or a desk that stays permanently wired, compare docks against the laptop manufacturer\u2019s supported configurations."
+          "For a single external display and a few accessories, a portable hub can be enough. For multiple displays or a desk that stays permanently wired, compare docks against the laptop manufacturer’s supported configurations."
         ]
       },
       {
         "title": "3. Budget power, not just advertised wattage",
         "paragraphs": [
           "Compare the power delivered to the laptop with its requirements. Input power and laptop output are different numbers because a hub uses some power itself. Confirm the cable and charger requirements as well as the hub specification.",
-          "As a concrete example, Anker lists its 555 USB-C Hub (A8383) with up to 100W power input and 85W output to the laptop. That distinction matters more than an isolated \u201c100W\u201d headline. We have not tested this product; check your laptop\u2019s requirements before treating it as a candidate."
+          "As a concrete example, Anker lists its 555 USB-C Hub (A8383) with up to 100W power input and 85W output to the laptop. That distinction matters more than an isolated “100W” headline. We have not tested this product; check your laptop’s requirements before treating it as a candidate."
         ]
       },
       {
@@ -100,7 +44,7 @@
       {
         "title": "5. Test the complete setup while returns are possible",
         "paragraphs": [
-          "Connect every device you intend to use. Try a video call while accessing your external drive, then check display wake-up, charging behavior, and reconnecting after sleep. Save your work before disconnecting storage and follow the operating system\u2019s safe-removal process.",
+          "Connect every device you intend to use. Try a video call while accessing your external drive, then check display wake-up, charging behavior, and reconnecting after sleep. Save your work before disconnecting storage and follow the operating system’s safe-removal process.",
           "Keep a simple pass/fail checklist for your own setup. If your existing connections already work reliably, there may be no reason to upgrade. The goal is fewer connection problems, not a more elaborate desk."
         ]
       }
