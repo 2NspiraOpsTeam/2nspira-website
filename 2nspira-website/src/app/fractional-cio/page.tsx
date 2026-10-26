@@ -21,9 +21,10 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Fractional CIO & Technology Leadership",
-  "description": "Get experienced fractional CIO leadership to align technology strategy, investment, modernization, governance, and execution with your business goals.",
-  "path": "/fractional-cio"
+  title: "Fractional CIO Services for Business Growth",
+  shareTitle: "Clearer decisions. Technology that serves your goals.",
+  description: "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
+  path: "/fractional-cio"
 });
 
 const executiveLenses = [
@@ -55,7 +56,7 @@ const fractionalCioJsonLd = {
   "@type": "Service",
   name: "Fractional CIO / Technology Leadership",
   description:
-    "Executive technology leadership aligning strategy, investment, modernization, governance, people, and delivery with business priorities.",
+    "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
   url: "https://2nspira.com/fractional-cio",
   provider: { "@id": "https://2nspira.com/#organization" },
   areaServed: "Worldwide",

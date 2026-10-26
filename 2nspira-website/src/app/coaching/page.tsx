@@ -9,7 +9,7 @@ import styles from "./coaching.module.css";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section } from "@/components/ui";
 
-const description = "Build your business and grow as a leader with one-on-one entrepreneur mentoring and business coaching, matched to your industry. Explore your next step.";
+const description = "Work through business decisions, test your ideas, and lead with greater clarity. Get one-on-one entrepreneur mentoring and business coaching from 2Nspira.";
 export const metadata: Metadata = {
   title: { absolute: "Entrepreneur Mentoring & Business Coaching | 2Nspira" }, description,
   alternates: { canonical: "/coaching" },

@@ -19,13 +19,13 @@ import {
 } from "@/components/ui";
 
 const homepageDescription =
-  "Technology expertise that solves real business problems. Simplify operations, connect systems, adopt AI responsibly, and build foundations for sustainable growth.";
+  "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.";
 const homepageShareTitle =
-  "Technology expertise that solves real business problems.";
+  "Your business, working better. Technology with purpose.";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 
 export const metadata: Metadata = {
-  title: { absolute: "2Nspira | Technology Expertise for Real Business Problems" },
+  title: { absolute: "Business Transformation for Practical Results | 2Nspira" },
   description: homepageDescription,
   alternates: { canonical: "https://2nspira.com/" },
   openGraph: {
@@ -90,8 +90,9 @@ export default function Home() {
                 Technology decisions without a roadmap.
               </p>
               <p className="mt-4 max-w-2xl text-base leading-7 text-body">
-                2Nspira helps organizations simplify operations, connect technology,
-                adopt AI responsibly, and build systems that support growth.
+                2Nspira is your business transformation partner. We help reduce manual
+                work, improve operations, serve customers better, and support
+                growth—using technology to make practical improvements.
               </p>
               <div className="mt-8 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
                 <Link href="/contact#contact-message" className={buttonPrimary}>Let&apos;s Discuss Your Challenge</Link>

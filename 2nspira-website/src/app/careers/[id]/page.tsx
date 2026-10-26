@@ -1,3 +1,4 @@
+import { publicPageMetadata } from "@/lib/pageMetadata";
 import { buttonPrimary } from "@/components/ui";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -11,11 +12,11 @@ export async function generateMetadata({
 }) {
   try {
     const j = await job((await params).id, true);
-    return {
-      title: `${j.title} | Careers at 2Nspira`,
+    return publicPageMetadata({
+      title: `${j.title} — Careers`,
       description: `${j.location}. ${j.employmentType}. ${j.compensation}`,
-      alternates: { canonical: `/careers/${j.id}` },
-    };
+      path: `/careers/${j.id}`,
+    });
   } catch {
     return {
       title: "Opening unavailable",

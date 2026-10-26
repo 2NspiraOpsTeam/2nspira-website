@@ -9,9 +9,10 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Our Work — Projects & Operational Showcases",
-  "description": "Explore published websites and operational showcases. See the challenge, approach, demonstrated scope, and status without unsupported performance claims.",
-  "path": "/work"
+  title: "Business Challenges, Websites & Operational Showcases",
+  shareTitle: "See practical responses to real business challenges.",
+  description: "See how 2Nspira approaches disconnected workflows and customer-facing websites. Explore published projects and operational showcases with clear scope and status.",
+  path: "/work"
 });
 
 const manufacturingChallenge =

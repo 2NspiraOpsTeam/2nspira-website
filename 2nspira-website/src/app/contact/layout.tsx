@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Contact",
-  "description": "Tell 2Nspira about your business challenge. Start a practical conversation about simpler operations, connected systems, responsible AI, or technology leadership.",
-  "path": "/contact"
+  title: "Discuss Your Business Challenge",
+  shareTitle: "What would help your business work better?",
+  description: "Struggling with manual work, disconnected systems, or unclear priorities? Tell 2Nspira what needs to improve and discuss practical next steps for your business.",
+  path: "/contact"
 });
 
 export default function ContactLayout({ children }: { children: ReactNode }) {

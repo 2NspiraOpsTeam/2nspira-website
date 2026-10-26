@@ -10,8 +10,13 @@ import ServiceQuestions from "@/components/ServiceQuestions";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { card, cardFlat, eyebrow, h2, h3, lead, linkInline, pageMain, section, sectionBand } from "@/components/ui";
 
-const description = "Website design that helps customers understand your business and take action. Explore accessible websites, business system integrations, and scoped ongoing support.";
-export const metadata: Metadata = publicPageMetadata({ title: "Website Design & Business System Integration", shareTitle: "A better website. A more connected business.", description, path: "/websites" });
+const description = "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites connected to the way your business works.";
+export const metadata: Metadata = publicPageMetadata({
+  title: "Website Design for Customer Service & Business Growth",
+  shareTitle: "Help customers find you and take the next step.",
+  description,
+  path: "/websites"
+});
 
 type ShowcaseSite = {
   name: string;

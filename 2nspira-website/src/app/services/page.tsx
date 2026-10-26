@@ -20,10 +20,10 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "AI, Technology Leadership & Coaching Services",
-  "shareTitle": "Clearer priorities. Practical support. Stronger execution.",
-  "description": "Find help with AI adoption, disconnected systems, website design, technology decisions, and entrepreneur coaching. Explore services matched to your priorities.",
-  "path": "/services"
+  title: "Business Transformation & Operations Consulting",
+  shareTitle: "Make your business work better.",
+  description: "Reduce manual work, improve operations, and support growth with 2Nspira. Find practical help with automation, AI, websites, and technology decisions.",
+  path: "/services"
 });
 
 const servicesJsonLd = {
@@ -47,7 +47,7 @@ const servicesJsonLd = {
       "@id": "https://2nspira.com/ai-enablement#service",
       name: "AI Enablement",
       description:
-        "AI strategy, governance, team training, and responsible implementation grounded in your organization’s priorities.",
+        "Find where AI can reduce repetitive work and help your team serve customers better. Get practical AI strategy, training, and governance from 2Nspira.",
       url: "https://2nspira.com/ai-enablement",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
@@ -57,7 +57,7 @@ const servicesJsonLd = {
       "@id": "https://2nspira.com/automation-systems-optimization#service",
       name: "Automation & Systems Optimization",
       description:
-        "Operating-model optimization across strategy, infrastructure, platforms, systems, data, processes, people, and governance, followed by practical integration, automation, and AI implementation.",
+        "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
       url: "https://2nspira.com/automation-systems-optimization",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
@@ -67,7 +67,7 @@ const servicesJsonLd = {
       "@id": "https://2nspira.com/services#websites",
       name: "Websites & Digital Platforms",
       description:
-        "Digital foundations that connect customer-facing experiences to business systems, data, workflows, automation, APIs, AI, portals, and payments.",
+        "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites connected to the way your business works.",
       url: "https://2nspira.com/websites",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
@@ -77,7 +77,7 @@ const servicesJsonLd = {
       "@id": "https://2nspira.com/services#fractional-leadership",
       name: "Fractional CIO / Technology Leadership",
       description:
-        "Strategic technology leadership when you need it most. Fractional CIO guidance, architecture reviews, team enablement, and transformation pathways.",
+        "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
       url: "https://2nspira.com/fractional-cio",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
@@ -132,7 +132,7 @@ export default function ServicesPage() {
             id="hero-heading"
             className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
           >
-            Technology expertise that solves real business problems.
+            Practical improvements for the way your business works.
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
             Manual work, disconnected systems, unreliable reports, and unclear technology decisions can hold an organization back. We help businesses simplify operations, connect systems, adopt AI responsibly, and build technology foundations that support sustainable growth.

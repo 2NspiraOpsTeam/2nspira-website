@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import AssessmentPage from "@/components/Resources/AssessmentPage";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Strength Profile | Professional Strengths Assessment",
-  "description": "Take the free 2Nspira Strength Profile to discover how you create value, collaborate, find energizing work, and make clearer career and development decisions.",
-  "path": "/resources/strength-profile"
+  title: "Strength Profile for Better Work & Collaboration",
+  shareTitle: "Put your strengths to work.",
+  description: "Understand how you contribute, collaborate, and do your best work. Take the free 2Nspira Strength Profile to guide your development and career decisions.",
+  path: "/resources/strength-profile"
 });
 
 export default function Page() {

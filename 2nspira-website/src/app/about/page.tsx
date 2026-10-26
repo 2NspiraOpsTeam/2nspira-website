@@ -19,9 +19,10 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Our Human-Centered Approach",
-  "description": "Meet 2Nspira. Discover our human-centered approach to technology strategy, responsible AI, systems, and entrepreneur mentoring and coaching.",
-  "path": "/about"
+  title: "Your Business Transformation Partner",
+  shareTitle: "Your goals first. Practical change together.",
+  description: "Meet 2Nspira, your business transformation partner in New York City. We help simplify operations, serve customers better, and use technology with purpose.",
+  path: "/about"
 });
 
 const framework = [
@@ -42,13 +43,13 @@ export default function AboutPage() {
         <div className="relative">
         <p><EyebrowPill>Our story</EyebrowPill></p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-          Technology should inspire possibility—not pressure.
+          A partner in making your business work better.
         </h1>
         <p className={`mx-auto max-w-2xl ${lead}`}>
-          We help smaller organizations access the technology strategy, systems
-          thinking, and innovation support often reserved for larger
-          institutions. We also help entrepreneurs build their businesses and
-          strengthen their leadership through mentoring and coaching.
+          Your operations, customers, and growth goals come first. We work with
+          you to simplify how work gets done and choose technology that serves
+          those priorities. We also help entrepreneurs build their businesses
+          and strengthen their leadership through mentoring and coaching.
         </p></div>
       </header>
 

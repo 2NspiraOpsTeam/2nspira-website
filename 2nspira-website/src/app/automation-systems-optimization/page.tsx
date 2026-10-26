@@ -20,9 +20,10 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Automation & Systems Optimization",
-  "description": "Streamline operations with connected systems, trusted data, clearer workflows, and practical automation designed around how your organization actually works.",
-  "path": "/automation-systems-optimization"
+  title: "Business Process Automation & Connected Systems",
+  shareTitle: "Less manual work. Smoother operations.",
+  description: "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
+  path: "/automation-systems-optimization"
 });
 
 const operatingLenses = [
@@ -112,7 +113,7 @@ const automationJsonLd = {
   "@type": "Service",
   name: "Automation & Systems Optimization",
   description:
-    "Operating-model optimization across strategy, infrastructure, platforms, systems, data, processes, people, and governance, followed by practical integration, automation, and AI implementation.",
+    "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
   url: "https://2nspira.com/automation-systems-optimization",
   provider: { "@id": "https://2nspira.com/#organization" },
   areaServed: "Worldwide",

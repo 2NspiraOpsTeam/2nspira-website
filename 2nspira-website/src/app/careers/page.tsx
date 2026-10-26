@@ -16,9 +16,9 @@ import {
   sectionBand,
 } from "@/components/ui";
 
-const title = "Careers at 2Nspira | Technology, Consulting & Coaching";
+const title = "Careers at 2Nspira | Practical Business Transformation";
 const description =
-  "Join 2Nspira's talent network for future roles and project opportunities in technology, AI, consulting, and entrepreneur mentoring and coaching.";
+  "Help businesses work better through practical technology and consulting. Explore 2Nspira openings and connect about future roles and project opportunities.";
 const socialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 const introductionUrl = "mailto:hello@2nspira.com?subject=2Nspira%20Talent%20Network%20Introduction";
 
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/careers" },
   openGraph: {
-    title: "Build what's next with us",
+    title: "Help businesses work better with us",
     description,
     url: "/careers",
     siteName: "2Nspira",
     images: [{ url: socialImage, width: 1200, height: 630, alt: "2Nspira" }],
   },
-  twitter: { title: "Build what's next with us", description, images: [socialImage] },
+  twitter: { title: "Help businesses work better with us", description, images: [socialImage] },
 };
 
 const expertise = [

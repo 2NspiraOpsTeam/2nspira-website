@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import AssessmentPage from "@/components/Resources/AssessmentPage";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "AI Readiness Scorecard | Organizational Assessment",
-  "description": "Assess your organization's readiness for responsible AI across strategy, governance, workflows, data, trust, risk, and implementation—with practical next steps.",
-  "path": "/resources/ai-readiness-scorecard"
+  title: "AI Readiness Assessment for Your Organization",
+  shareTitle: "Find a practical starting point for AI.",
+  description: "Before investing in AI, assess your goals, workflows, data, and risks. Use the free 2Nspira AI Readiness Scorecard to identify gaps and practical next steps.",
+  path: "/resources/ai-readiness-scorecard"
 });
 
 export default function Page() {

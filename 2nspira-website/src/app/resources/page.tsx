@@ -8,9 +8,10 @@ import Reveal from "@/components/Reveal";
 import styles from "./resources.module.css";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Resources | Assessments and Practical Tools",
-  "description": "Use free 2Nspira assessments to identify professional strengths, evaluate organizational AI readiness, and turn insight into practical next steps.",
-  "path": "/resources"
+  title: "Business Assessments & Practical Planning Tools",
+  shareTitle: "Understand where you are. Decide what comes next.",
+  description: "Find a useful starting point for improvement. Explore free assessments to understand your strengths, evaluate AI readiness, and plan practical next steps.",
+  path: "/resources"
 });
 
 const strengthsUrl = "/resources/strength-profile";
