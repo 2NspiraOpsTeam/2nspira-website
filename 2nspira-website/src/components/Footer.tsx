@@ -22,6 +22,7 @@ const company = [
 const ideas = [
   { name: "Insights", href: "/insights" },
   { name: "Resources", href: "/resources" },
+    { name: "Buying guides", href: "/buying-guides" },
   { name: "Leadership books", href: "/books" },
   { name: "Bookstore", href: "https://books.2nspira.com" },
   { name: "Creative shop", href: "/shop" },
