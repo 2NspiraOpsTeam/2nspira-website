@@ -40,6 +40,8 @@
   "vars": {
     "CAREERS_HIRING_EMAILS": "jcortez@waterbearmecca.com,jcortez@2nspira.com",
     "CAREERS_REPLY_TO": "hiring@2nspira.com",
-    "CAREERS_EMAIL_VERIFIED": "false"
+    "CAREERS_EMAIL_VERIFIED": "true",
+    "CAREERS_FROM_EMAIL": "hiring@2nspira.com",
+    "CAREERS_SENDER_VERIFIED": "true"
   }
 }
