@@ -41,7 +41,10 @@ type Candidate = Summary & {
   answers: Record<string, string | string[]>;
   resume: boolean;
   coverFile: boolean;
-  expiresAt: string;
+  expiresAt: string | null;
+  legalHold?: boolean;
+  holdHistory?: { held: boolean; reason: string; at: string; actor: string }[];
+  decisionHistory?: { status: string; at: string; actor: string }[];
 };
 export default function CareersAdmin() {
   const router = useRouter();
@@ -51,9 +54,15 @@ export default function CareersAdmin() {
       privacyEmail: "",
       accommodationEmail: "",
       retentionDays: 0,
+      retentionStatus: "pending",
+      retentionBasis: "",
     }),
     [privacy, setPrivacy] = useState<Settings | null>(null),
-    [ready, setReady] = useState({ mail: false, uploads: false }),
+    [ready, setReady] = useState({
+      mail: false,
+      uploads: false,
+      emailVerified: false,
+    }),
     [loading, setLoading] = useState(true),
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
@@ -89,7 +98,11 @@ export default function CareersAdmin() {
       const d = await api();
       setJobs(d.jobs);
       setSettings(d.settings);
-      setReady({ mail: d.mailReady, uploads: d.uploadsReady });
+      setReady({
+        mail: d.mailReady,
+        uploads: d.uploadsReady,
+        emailVerified: d.emailVerified,
+      });
       setError("");
     } catch (e) {
       setError((e as Error).message);
@@ -172,7 +185,9 @@ export default function CareersAdmin() {
                 {ready.uploads ? "configured" : "not configured"} · Confirmation
                 emails:{" "}
                 {ready.mail
-                  ? "configured (delivery must be tested)"
+                  ? ready.emailVerified
+                    ? "external delivery and replies verified"
+                    : "configured — external delivery/replies NOT verified"
                   : "not configured"}
               </p>
               <p className="mt-3 text-sm">
@@ -230,13 +245,34 @@ export default function CareersAdmin() {
                     />
                   </label>
                   <label className="block">
-                    Approved retention period (days) *
+                    Retention policy status
+                    <select
+                      value={privacy.retentionStatus || "pending"}
+                      onChange={(e) =>
+                        setPrivacy({
+                          ...privacy,
+                          retentionStatus: e.target.value as
+                            "pending" | "approved",
+                        })
+                      }
+                      className={input}
+                    >
+                      <option value="pending">
+                        Pending — preserve records; no automatic deletion
+                      </option>
+                      <option value="approved">
+                        Approved after applicability review
+                      </option>
+                    </select>
+                  </label>
+                  <label className="block">
+                    Minimum retention period (days; leave 0 while pending)
                     <input
                       type="number"
                       required
-                      min={1}
-                      max={730}
-                      value={privacy.retentionDays || ""}
+                      min={0}
+                      max={3650}
+                      value={privacy.retentionDays}
                       onChange={(e) =>
                         setPrivacy({
                           ...privacy,
@@ -246,11 +282,28 @@ export default function CareersAdmin() {
                       className={input}
                     />
                   </label>
+                  <label className="block">
+                    Documented requirements and approval basis
+                    <textarea
+                      rows={5}
+                      maxLength={10000}
+                      value={privacy.retentionBasis || ""}
+                      onChange={(e) =>
+                        setPrivacy({
+                          ...privacy,
+                          retentionBasis: e.target.value,
+                        })
+                      }
+                      className={input}
+                    />
+                  </label>
                   <p className="text-sm">
-                    Choose a policy consistent with applicable hiring
-                    recordkeeping requirements. Applicant deletion is available
-                    from each candidate record. Expired records are flagged for
-                    review, not automatically deleted.
+                    Do not approve a period until employer coverage and
+                    federal/state requirements are determined. Pending policies
+                    block deletion and publication. Legal holds override
+                    deletion. Retention applies to applications, documents,
+                    answers and hiring decision history, measured from the later
+                    record/action. No automated deletion runs.
                   </p>
                   <button disabled={busy} className={button}>
                     Save applicant settings
@@ -805,6 +858,7 @@ export default function CareersAdmin() {
                             c.id === candidate.id ? { ...c, status } : c,
                           ),
                         );
+                        await show(candidate.id);
                         setNotice("Application status saved.");
                       });
                     }}
@@ -846,16 +900,71 @@ export default function CareersAdmin() {
                     Retry pending notifications
                   </button>
                 </div>
-                <p className="text-sm">
-                  Retention review date:{" "}
-                  {new Date(candidate.expiresAt).toLocaleDateString()}
-                  {new Date(candidate.expiresAt) < new Date()
-                    ? " — review retention and delete unless legally required."
-                    : ""}
-                </p>
+                <section className="space-y-3 border-t border-line pt-4">
+                  <h3 className="font-semibold">Retention and legal hold</h3>
+                  <p>
+                    {candidate.expiresAt
+                      ? `Earliest retention review: ${new Date(candidate.expiresAt).toLocaleDateString()}. Later hiring actions can extend this date.`
+                      : "Retention pending — preserve records; no automatic deletion."}
+                  </p>
+                  <p>
+                    {candidate.legalHold
+                      ? "LEGAL HOLD — deletion blocked"
+                      : "No legal hold recorded"}
+                  </p>
+                  <button
+                    className={button}
+                    disabled={busy}
+                    onClick={() => {
+                      const reason = window.prompt(
+                        candidate.legalHold
+                          ? "Reason for releasing this legal hold (do not include medical/accommodation details)"
+                          : "Legal hold reason (do not include medical/accommodation details)",
+                      );
+                      if (reason?.trim())
+                        void action(async () => {
+                          await api(`/applications/${candidate.id}/hold`, {
+                            method: "PATCH",
+                            body: JSON.stringify({
+                              legalHold: !candidate.legalHold,
+                              reason,
+                            }),
+                          });
+                          await show(candidate.id);
+                          setNotice("Legal hold updated.");
+                        });
+                    }}
+                  >
+                    {candidate.legalHold
+                      ? "Release legal hold"
+                      : "Place legal hold"}
+                  </button>
+                  <h4 className="font-semibold">Hiring decision history</h4>
+                  {(candidate.decisionHistory || []).map((event, i) => (
+                    <p key={i} className="text-sm">
+                      {event.status} · {new Date(event.at).toLocaleString()} ·{" "}
+                      {event.actor}
+                    </p>
+                  ))}
+                  {(candidate.holdHistory || []).map((event, i) => (
+                    <p key={`hold-${i}`} className="text-sm">
+                      {event.held ? "Hold placed" : "Hold released"} ·{" "}
+                      {new Date(event.at).toLocaleString()} · {event.actor}:{" "}
+                      {event.reason}
+                    </p>
+                  ))}
+                  <p className="text-sm">
+                    Accommodation requests belong in the private hiring mailbox,
+                    not in candidate evaluation records.
+                  </p>
+                </section>
                 <button
                   className={`${button} text-red-800`}
-                  disabled={busy}
+                  disabled={
+                    busy ||
+                    candidate.legalHold ||
+                    settings.retentionStatus !== "approved"
+                  }
                   onClick={() => {
                     if (
                       window.confirm(

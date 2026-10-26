@@ -19,7 +19,7 @@ import {
 import { emailValid, type Job, type Settings } from "./model";
 export async function handle(request: Request) {
   return route(async () => {
-    await admin(request);
+    const identity = await admin(request);
     if (request.method !== "GET") sameOrigin(request);
     const path = new URL(request.url).pathname
       .replace("/api/admin/careers", "")
@@ -31,6 +31,7 @@ export async function handle(request: Request) {
           jobs: await jobs(),
           settings: await settings(),
           mailReady: mailReady(),
+          emailVerified: config.CAREERS_EMAIL_VERIFIED === "true",
           uploadsReady: Boolean(config.CAREERS_DB),
         });
       if (request.method === "POST") {
@@ -43,13 +44,19 @@ export async function handle(request: Request) {
       if (
         !emailValid(s.privacyEmail) ||
         !emailValid(s.accommodationEmail) ||
+        !["pending", "approved"].includes(s.retentionStatus || "") ||
         !Number.isInteger(s.retentionDays) ||
-        s.retentionDays < 1 ||
-        s.retentionDays > 730
+        s.retentionDays < 0 ||
+        s.retentionDays > 3650 ||
+        (s.retentionStatus === "approved" &&
+          (!s.retentionDays ||
+            typeof s.retentionBasis !== "string" ||
+            !s.retentionBasis.trim() ||
+            s.retentionBasis.length > 10000))
       )
         fail(
           400,
-          "Provide privacy and accommodation emails and a retention period of 1–730 days.",
+          "Provide valid contacts. An approved retention policy needs a period and a documented legal basis; leave the policy pending while requirements are determined.",
         );
       await db()
         .prepare(
@@ -147,27 +154,128 @@ export async function handle(request: Request) {
           notifications: mail.results,
         });
       }
+      if (path[2] === "hold" && request.method === "PATCH") {
+        const body = (await readJson(request)) as {
+          legalHold: boolean;
+          reason: string;
+        };
+        if (
+          typeof body.legalHold !== "boolean" ||
+          typeof body.reason !== "string" ||
+          !body.reason.trim() ||
+          body.reason.length > 2000
+        )
+          fail(
+            400,
+            "A hold/release reason is required. Do not enter medical or accommodation details.",
+          );
+        data.legalHold = body.legalHold;
+        data.holdHistory = [
+          ...(data.holdHistory || []),
+          {
+            held: body.legalHold,
+            reason: body.reason,
+            at: new Date().toISOString(),
+            actor: identity.email,
+          },
+        ];
+        const holdResult = await db()
+          .prepare(
+            "UPDATE career_applications SET data=? WHERE id=? AND data=?",
+          )
+          .bind(JSON.stringify(data), a.id, a.data)
+          .run();
+        if (!holdResult.meta.changes)
+          fail(
+            409,
+            "Application changed; reload before changing its legal hold.",
+          );
+        return response({ ok: true });
+      }
       if (path.length === 2 && request.method === "PATCH") {
         const body = (await readJson(request)) as { status: string };
         if (
           !["New", "Reviewing", "Interviewing", "Closed"].includes(body.status)
         )
           fail(400, "Invalid application status.");
-        await db()
-          .prepare("UPDATE career_applications SET status=? WHERE id=?")
-          .bind(body.status, a.id)
-          .run();
+        if (body.status !== a.status) {
+          data.decisionHistory = [
+            ...(data.decisionHistory || []),
+            {
+              status: body.status,
+              at: new Date().toISOString(),
+              actor: identity.email,
+            },
+          ];
+          const result = await db()
+            .prepare(
+              "UPDATE career_applications SET status=?,data=? WHERE id=? AND status=? AND data=?",
+            )
+            .bind(body.status, JSON.stringify(data), a.id, a.status, a.data)
+            .run();
+          if (!result.meta.changes)
+            fail(409, "Application changed. Reload before updating.");
+        }
         return response({ ok: true });
       }
       if (path.length === 2 && request.method === "DELETE") {
-        if (data.resumeKey) await files.delete(data.resumeKey);
-        if (data.coverKey) await files.delete(data.coverKey);
+        const policy = await settings();
+        if (
+          policy.retentionStatus !== "approved" ||
+          !policy.retentionDays ||
+          !policy.retentionBasis?.trim()
+        )
+          fail(
+            409,
+            "Records are preserved while the retention policy is pending.",
+          );
+        if (data.legalHold)
+          fail(409, "This application is on legal hold and cannot be deleted.");
+        const events = [
+          a.created_at,
+          ...(data.decisionHistory || []).map((e: { at: string }) => e.at),
+        ];
+        const last = Math.max(...events.map((v) => new Date(v).getTime()));
+        if (
+          Date.now() <
+          last +
+            Math.max(
+              policy.retentionDays,
+              Number(data.privacy?.retentionDays) || 0,
+            ) *
+              86400000
+        )
+          fail(
+            409,
+            "The approved minimum retention period has not elapsed. Privacy requests require review against recordkeeping duties.",
+          );
+        const condition =
+          "EXISTS(SELECT 1 FROM career_applications WHERE id=? AND data=?)";
         await db().batch([
           db()
-            .prepare("DELETE FROM career_mail WHERE application_id=?")
-            .bind(a.id),
-          db().prepare("DELETE FROM career_applications WHERE id=?").bind(a.id),
+            .prepare(
+              `DELETE FROM career_files WHERE key IN (?,?) AND ${condition}`,
+            )
+            .bind(data.resumeKey || "", data.coverKey || "", a.id, a.data),
+          db()
+            .prepare(
+              `DELETE FROM career_mail WHERE application_id=? AND ${condition}`,
+            )
+            .bind(a.id, a.id, a.data),
+          db()
+            .prepare("DELETE FROM career_applications WHERE id=? AND data=?")
+            .bind(a.id, a.data),
         ]);
+        if (
+          await db()
+            .prepare("SELECT id FROM career_applications WHERE id=?")
+            .bind(a.id)
+            .first()
+        )
+          fail(
+            409,
+            "Application changed. No records were deleted; reload before reviewing retention.",
+          );
         return response({ ok: true });
       }
     }

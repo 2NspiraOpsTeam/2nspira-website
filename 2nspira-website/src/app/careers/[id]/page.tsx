@@ -1,7 +1,7 @@
 import { buttonPrimary } from "@/components/ui";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { job, settings, CareerError } from "@/lib/careers/server";
+import { job, publicPrivacy, CareerError } from "@/lib/careers/server";
 import ApplicationForm from "@/components/careers/ApplicationForm";
 export const dynamic = "force-dynamic";
 export async function generateMetadata({
@@ -35,7 +35,7 @@ export default async function Role({
     if (e instanceof CareerError && e.status === 404) notFound();
     throw e;
   }
-  const s = await settings();
+  const s = await publicPrivacy();
   return (
     <main id="main-content" className="mx-auto max-w-4xl px-4 py-24 sm:px-6">
       <Link className="underline" href="/careers">

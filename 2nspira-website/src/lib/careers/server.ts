@@ -26,6 +26,11 @@ export interface Bucket {
 }
 type Config = {
   CAREERS_DB?: Database;
+  CAREERS_AUTH_DB?: Database;
+  CAREERS_HIRING_EMAILS?: string;
+  CAREERS_REPLY_TO?: string;
+  CAREERS_EMAIL_VERIFIED?: string;
+  CAREERS_SENDER_VERIFIED?: string;
   PORTAL_URL?: string;
   GOOGLE_CLIENT_ID?: string;
   GOOGLE_CLIENT_SECRET?: string;
@@ -120,24 +125,31 @@ export function sameOrigin(request: Request) {
     fail(403, "Please submit from this website.");
 }
 export async function admin(request: Request) {
-  if (
-    !config.PORTAL_URL ||
-    !request.headers.get("cookie")?.includes("admin_session=")
-  )
+  const token = request.headers
+    .get("cookie")
+    ?.split(";")
+    .map((v) => v.trim())
+    .find((v) => v.startsWith("admin_session="))
+    ?.slice("admin_session=".length);
+  if (!token || !/^[a-f0-9]{64}$/.test(token))
     fail(401, "Please sign in as an administrator.");
-  const upstream = await fetch(`${config.PORTAL_URL}/api/admin/stats`, {
-    headers: { cookie: request.headers.get("cookie")! },
-    redirect: "manual",
-    signal: AbortSignal.timeout(10000),
-  });
-  if (!upstream.ok)
-    fail(
-      upstream.status === 401 || upstream.status === 403 ? 401 : 503,
-      "Admin session could not be verified.",
-    );
-  const value = (await upstream.json()) as { clients?: unknown };
-  if (typeof value.clients !== "number")
-    fail(503, "Admin session could not be verified.");
+  if (!config.CAREERS_AUTH_DB) fail(503, "Hiring access is not configured.");
+  // This binding is used only for this fixed SELECT. Reuse the portal's active, expiring, revocable session contract.
+  const identity = await config
+    .CAREERS_AUTH_DB!.prepare(
+      "SELECT a.email,a.role FROM admin_sessions s JOIN admins a ON a.id=s.admin_id WHERE s.token_hash=? AND s.expires_at>? AND a.is_active=1",
+    )
+    .bind(await digest(token!), new Date().toISOString())
+    .first<{ email: string; role: string }>();
+  if (!identity || identity.role !== "admin")
+    fail(401, "Please sign in as an administrator.");
+  const allowed = (config.CAREERS_HIRING_EMAILS || "")
+    .split(",")
+    .map((v) => v.trim().toLowerCase())
+    .filter(Boolean);
+  if (!allowed.includes(identity!.email.toLowerCase()))
+    fail(403, "Access is restricted to authorized hiring personnel.");
+  return identity!;
 }
 export async function jobs(publicOnly = false): Promise<Job[]> {
   const rows = await db()
@@ -169,16 +181,30 @@ export async function settings(): Promise<Settings> {
   const row = await db()
     .prepare("SELECT data FROM career_settings WHERE id=1")
     .first<{ data: string }>();
-  return row
-    ? JSON.parse(row.data)
-    : { privacyEmail: "", accommodationEmail: "", retentionDays: 0 };
+  return {
+    privacyEmail: "",
+    accommodationEmail: "",
+    retentionDays: 0,
+    retentionStatus: "pending",
+    retentionBasis: "",
+    ...(row ? JSON.parse(row.data) : {}),
+  };
+}
+export async function publicPrivacy() {
+  const s = await settings();
+  return {
+    privacyEmail: s.privacyEmail,
+    accommodationEmail: s.accommodationEmail,
+    retentionDays: s.retentionDays,
+    retentionStatus: s.retentionStatus,
+  };
 }
 export function mailReady() {
   return Boolean(
     config.GOOGLE_CLIENT_ID &&
     config.GOOGLE_CLIENT_SECRET &&
     config.GOOGLE_REFRESH_TOKEN &&
-    emailValid(config.CAREERS_FROM_EMAIL || ""),
+    emailValid(config.CAREERS_REPLY_TO || ""),
   );
 }
 export async function publicJobs() {
@@ -206,14 +232,20 @@ export async function saveJob(j: Job) {
     if (
       !emailValid(s.privacyEmail) ||
       !emailValid(s.accommodationEmail) ||
-      !s.retentionDays
+      !s.retentionDays ||
+      s.retentionStatus !== "approved" ||
+      !s.retentionBasis?.trim()
     )
       errors.push(
         "Set applicant privacy, retention and accommodation details.",
       );
-    if (!config.CAREERS_DB || !mailReady())
+    if (
+      !config.CAREERS_DB ||
+      !mailReady() ||
+      config.CAREERS_EMAIL_VERIFIED !== "true"
+    )
       errors.push(
-        "Private uploads and confirmation email delivery must be configured before publishing.",
+        "Private uploads and externally verified confirmation/reply delivery are required before publishing.",
       );
   }
   if (errors.length) fail(400, errors.join(" "));
@@ -339,7 +371,17 @@ async function limit(request: Request) {
 export async function apply(request: Request, id: string) {
   sameOrigin(request);
   const j = await job(id, true);
-  if (!config.CAREERS_DB || !mailReady())
+  const currentPolicy = await settings();
+  if (currentPolicy.retentionStatus !== "approved")
+    fail(
+      503,
+      "Applications are not open while the retention policy is pending.",
+    );
+  if (
+    !config.CAREERS_DB ||
+    !mailReady() ||
+    config.CAREERS_EMAIL_VERIFIED !== "true"
+  )
     fail(
       503,
       "Applications are temporarily unavailable. Please try again later.",
@@ -458,7 +500,14 @@ export async function apply(request: Request, id: string) {
     resumeKey,
     coverKey,
     privacy: { ...s, acknowledgedAt: now },
-    expiresAt: new Date(Date.now() + s.retentionDays * 86400000).toISOString(),
+    expiresAt:
+      s.retentionStatus === "approved" && s.retentionDays
+        ? new Date(Date.now() + s.retentionDays * 86400000).toISOString()
+        : null,
+    legalHold: false,
+    decisionHistory: [
+      { status: "New", at: now, actor: "Application received" },
+    ],
   };
   try {
     await db().batch([
@@ -490,7 +539,7 @@ export async function apply(request: Request, id: string) {
               ? `Application received — ${j.title}`
               : `New application — ${j.title}`,
             kind === "applicant"
-              ? `Thank you, ${name}. We received your application for ${j.title} at 2Nspira. Reference: ${applicationId}. This confirms receipt, not an offer or interview. We will contact you if there is a next step. For privacy or accessibility requests: ${s.privacyEmail}.`
+              ? `Thank you, ${name}. We received your application for ${j.title} at 2Nspira. Submitted: ${now} (UTC). Reference: ${applicationId}. This confirms receipt, not an offer or interview. We will contact you if there is a next step. For questions about your application or applicant privacy, or to request an accommodation during the application process, contact ${s.privacyEmail}.`
               : `A new application for ${j.title} is available in Admin. Sign in at https://2nspira.com/admin/careers . Reference: ${applicationId}. Applicant details and documents are only available after sign-in.`,
             now,
             applicationId,
@@ -562,7 +611,12 @@ export async function deliver(applicationId: string) {
           ).join(""),
         );
       const mime = [
-        `From: 2Nspira Careers <${config.CAREERS_FROM_EMAIL}>`,
+        ...(config.CAREERS_SENDER_VERIFIED === "true" &&
+        emailValid(config.CAREERS_FROM_EMAIL || "")
+          ? [`From: 2Nspira Careers <${config.CAREERS_FROM_EMAIL}>`]
+          : []),
+        `Reply-To: ${config.CAREERS_REPLY_TO}`,
+        `Message-ID: <careers-${row.id}@2nspira.com>`,
         `To: ${row.recipient}`,
         `Subject: =?UTF-8?B?${b64(row.subject)}?=`,
         "MIME-Version: 1.0",

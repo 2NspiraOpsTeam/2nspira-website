@@ -25,6 +25,8 @@ export type Job = {
   updatedAt?: string;
 };
 export type Settings = {
+  retentionStatus?: "pending" | "approved";
+  retentionBasis?: string;
   privacyEmail: string;
   accommodationEmail: string;
   retentionDays: number;

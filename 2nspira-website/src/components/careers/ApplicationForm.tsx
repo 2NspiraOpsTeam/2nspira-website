@@ -94,11 +94,17 @@ export default function ApplicationForm({
         personal information. We do not request unpaid custom strategy work.
       </p>
       <p className="mt-3">
-        Need an application accommodation?{" "}
-        <a className="underline" href={`mailto:${privacy.accommodationEmail}`}>
-          Contact our hiring team
+        For questions about your application or applicant privacy, or to request
+        an accommodation during the application process, contact{" "}
+        <a className="underline" href="mailto:hiring@2nspira.com">
+          hiring@2nspira.com
         </a>
         .
+      </p>
+      <p className="mt-3 text-sm">
+        Accommodation requests are handled privately, separately from candidate
+        evaluation. Please contact us directly rather than including medical or
+        accommodation details in your application or questionnaire.
       </p>
       <form className="mt-7 space-y-6" onSubmit={submit}>
         {error && (
@@ -266,12 +272,14 @@ export default function ApplicationForm({
             <p className="mt-3 text-sm leading-7">
               2Nspira uses your contact details, documents and answers to
               evaluate this application and communicate about recruitment.
-              Access is restricted to authorized administrators. Our website,
+              Access is restricted to authorized hiring personnel. Our website,
               storage and email providers process this information to support
-              recruitment. Application records are scheduled for retention
-              review after {privacy.retentionDays} days and deleted when no
-              longer needed, subject to applicable legal recordkeeping
-              requirements. We do not sell applicant information. For access,
+              recruitment.{" "}
+              {privacy.retentionStatus === "approved"
+                ? `Our approved policy requires retention for at least ${privacy.retentionDays} days after the later of the record or hiring decision. Records are then reviewed for secure deletion, subject to legal obligations and holds.`
+                : "Our final retention period is being determined under applicable recordkeeping requirements. In the meantime, applications and hiring records are preserved and are not automatically deleted."}{" "}
+              Records subject to a legal hold are preserved until the hold is
+              released. We do not sell applicant information. For access,
               correction or deletion requests, contact{" "}
               <a className="underline" href={`mailto:${privacy.privacyEmail}`}>
                 {privacy.privacyEmail}
