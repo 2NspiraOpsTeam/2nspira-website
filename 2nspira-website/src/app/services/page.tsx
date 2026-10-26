@@ -132,12 +132,10 @@ export default function ServicesPage() {
             id="hero-heading"
             className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
           >
-            Find the right support for what comes next.
+            Technology expertise that solves real business problems.
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
-            Whether you’re navigating AI, disconnected systems, a website that
-            needs to work harder, or the challenges of leadership, start with
-            your priorities. We’ll help you identify a practical path forward.
+            Manual work, disconnected systems, unreliable reports, and unclear technology decisions can hold an organization back. We help businesses simplify operations, connect systems, adopt AI responsibly, and build technology foundations that support sustainable growth.
           </p>
           <ServiceConversation centered />
           <a href="#find-the-right-service" className={`mt-4 min-h-11 ${linkInline}`}>Find the right service <span aria-hidden="true"> ↓</span></a>

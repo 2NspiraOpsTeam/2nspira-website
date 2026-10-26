@@ -139,9 +139,7 @@ export default function AutomationSystemsOptimizationPage() {
               Less repeated work. Better-connected systems.
             </h1>
             <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>
-              Make your systems work together, not around each other. We help
-              organizations move from fragmented tools and manual work toward a
-              connected, governed, and scalable technology environment.
+              Manual processes, duplicated work, and disconnected applications make growth harder. We help simplify operations, connect existing systems, and improve the reliability of the information your team uses.
             </p>
             <p
               className="animate-rise mt-5 max-w-3xl text-base leading-7 text-body"
@@ -200,6 +198,17 @@ export default function AutomationSystemsOptimizationPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6" aria-labelledby="operational-outcomes-heading">
+        <h2 id="operational-outcomes-heading" className={h2}>Start where the work breaks down.</h2>
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
+          {[
+            { id: "workflow-automation", title: "Operations & Workflow Automation", text: "Manual processes, duplicated work, and workflows that no longer scale create avoidable administration. Map the work, simplify handoffs, and automate appropriate steps." },
+            { id: "systems-integration", title: "Systems Integration & Modernization", text: "Disconnected applications and duplicated data make everyday work more complex. Connect the tools that still serve you, clarify ownership, and modernize where there is a practical reason." },
+            { id: "data-analytics", title: "Data & Analytics", text: "When nobody trusts the reports, another dashboard is not enough. Address data integrity, reporting definitions, and access to timely information so leaders have better decision support." },
+          ].map(item => <article key={item.id} id={item.id} className={`scroll-mt-28 p-6 ${cardFlat}`}><h3 className="text-xl font-semibold text-ink">{item.title}</h3><p className="mt-4 leading-7 text-body">{item.text}</p></article>)}
         </div>
       </section>
 

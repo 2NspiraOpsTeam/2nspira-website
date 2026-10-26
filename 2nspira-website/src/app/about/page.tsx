@@ -113,10 +113,7 @@ export default function AboutPage() {
           <div className="relative">
           <h2 className={h2}>When you grow, we all move forward.</h2>
           <p className={`mt-4 ${lead}`}>
-            We work with educational institutions, nonprofits, small businesses,
-            IT teams, creatives, professionals, and entrepreneurs developing their
-            ventures and leadership. Your success is a shared
-            mission.
+            We partner with growing businesses, established organizations, and mission-driven leaders who need practical technology expertise without unnecessary complexity. Based in New York City, we support clients nationally and internationally.
           </p>
           <Link href="/contact" className={`mt-6 ${buttonPrimary}`}>
             Start a conversation →

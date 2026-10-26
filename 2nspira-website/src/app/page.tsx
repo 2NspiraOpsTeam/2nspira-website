@@ -1,12 +1,13 @@
 import ServiceEffects from "@/components/ServiceEffects";
 import ClientServiceGrid from "@/components/ClientServiceGrid";
-import ServiceConversation from "@/components/ServiceConversation";
+import BusinessProblems from "@/components/BusinessProblems";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import Link from "next/link";
 import {
+  buttonPrimary,
   buttonSecondary,
   cardFlat,
   caption,
@@ -18,13 +19,13 @@ import {
 } from "@/components/ui";
 
 const homepageDescription =
-  "Practical AI consulting, systems automation, website design, fractional CIO leadership, and entrepreneur coaching. Find support for your next business challenge.";
+  "Technology expertise that solves real business problems. Simplify operations, connect systems, adopt AI responsibly, and build foundations for sustainable growth.";
 const homepageShareTitle =
-  "Clearer technology decisions. Stronger business leadership.";
+  "Technology expertise that solves real business problems.";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 
 export const metadata: Metadata = {
-  title: { absolute: "2Nspira | AI Consulting, Technology & Business Coaching" },
+  title: { absolute: "2Nspira | Technology Expertise for Real Business Problems" },
   description: homepageDescription,
   alternates: { canonical: "https://2nspira.com/" },
   openGraph: {
@@ -53,10 +54,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const values = [
-    { title: "People First", text: "Technology serves people, never the reverse." },
-    { title: "Process Clarity", text: "Work flows your team can follow without a manual." },
-    { title: "Data Integrity", text: "Decisions grounded in information you can trust." },
-    { title: "Practical AI", text: "Adoption measured in outcomes, not pilots." },
+    { title: "Understand", text: "Learn your business, workflows, constraints, and goals before recommending technology." },
+    { title: "Simplify", text: "Find unnecessary complexity, repeated work, and practical opportunities to improve." },
+    { title: "Implement", text: "Introduce the right technologies, integrations, automation, and AI for the agreed priorities." },
+    { title: "Improve", text: "Measure outcomes, refine processes, and support changing business needs within the agreed scope." },
   ];
 
   return (
@@ -75,23 +76,27 @@ export default function Home() {
             {/* Left: typography / value proposition */}
             <div>
               <p className="animate-rise" style={{ animationDelay: "60ms" }}>
-                <EyebrowPill>For leaders of small and mission-driven organizations</EyebrowPill>
+                <EyebrowPill>Practical technology expertise. Real business problems.</EyebrowPill>
               </p>
               <h1
                 id="hero-heading"
                 className="animate-rise mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-6xl"
                 style={{ animationDelay: "140ms" }}
               >
-                Technology that works the way your people do.
+                Your business has outgrown the way it works. Let&apos;s fix that.
               </h1>
               <p className={`animate-rise mt-6 max-w-2xl ${lead}`} style={{ animationDelay: "240ms" }}>
-                Connect your systems. Make clearer technology decisions. Build a
-                business you can lead with confidence. We help organizations and
-                entrepreneurs turn everyday challenges into practical next steps—
-                through AI, automation, websites, technology leadership, and coaching.
+                Disconnected systems. Manual processes. Unclear AI opportunities.
+                Technology decisions without a roadmap.
               </p>
-              <ServiceConversation />
-              <a href="#find-the-right-service" className={`mt-3 ${buttonSecondary}`}>Find the right service <span aria-hidden="true">↓</span></a>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-body">
+                2Nspira helps organizations simplify operations, connect technology,
+                adopt AI responsibly, and build systems that support growth.
+              </p>
+              <div className="mt-8 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
+                <Link href="/contact#contact-message" className={buttonPrimary}>Let&apos;s Discuss Your Challenge</Link>
+                <Link href="/work" className={buttonSecondary}>See Our Work <span aria-hidden="true">→</span></Link>
+              </div>
             </div>
 
             {/* Portrait composition keeps the people and workflow visible at every breakpoint. */}
@@ -115,6 +120,8 @@ export default function Home() {
         </div>
       </section>
 
+      <BusinessProblems />
+
       {/* Capabilities */}
       <section
         id="find-the-right-service"
@@ -124,11 +131,11 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div>
             <h2 data-catalog-reveal id="services-heading" className={h2}>
-              What we do
+              Practical expertise. Clear business outcomes.
             </h2>
             <p className={`mt-4 max-w-2xl ${lead}`}>
-              Start with what you want to change. Find the support that fits your
-              organization—or the next stage of your business.
+              We start with the operational challenge, then identify the right
+              combination of guidance, integration, automation, and implementation.
             </p>
           </div>
 
@@ -158,12 +165,11 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <h2 id="approach-heading" className={h2}>
-              Our approach
+              How We Work
             </h2>
             <p className={`mt-6 max-w-2xl ${lead}`}>
-              Technology must serve people — not the other way around. Our
-              human-centered philosophy ensures that AI systems, workflow changes,
-              and technology implementations are designed for actual use.
+              We understand how your organization works before recommending what
+              to change. Technology is a means to better operations—not the goal.
             </p>
           </Reveal>
 
@@ -171,12 +177,12 @@ export default function Home() {
             <div
               className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
               role="list"
-              aria-label="Our core values"
+              aria-label="How we work"
             >
             {values.map((value) => (
               <div key={value.title} className={`group p-6 transition-all duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
                 <AccentRule className="mb-4 w-8" />
-                <p className="text-base font-semibold text-ink">{value.title}</p>
+                <h3 className="text-base font-semibold text-ink">{value.title}</h3>
                 <p className={`mt-2 ${caption}`}>{value.text}</p>
               </div>
             ))}
@@ -197,13 +203,14 @@ export default function Home() {
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
           <Reveal>
             <h2 id="cta-heading" className={h2}>
-              What would you like to move forward?
+              What is getting in the way?
             </h2>
             <p className={`mx-auto mt-6 max-w-xl ${lead}`}>
               Bring the challenge, idea, or decision in front of you. We’ll discuss
               your priorities and whether our services are a fit.
             </p>
-            <ServiceConversation centered />
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-body">We partner with growing businesses, established organizations, and mission-driven leaders who need practical technology expertise without unnecessary complexity. Based in New York City, working with clients nationally and internationally.</p>
+            <Link href="/contact#contact-message" className={`mt-8 ${buttonPrimary}`}>Let&apos;s Discuss Your Challenge</Link>
           </Reveal>
         </div>
       </section>

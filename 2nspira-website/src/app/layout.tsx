@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 const siteName = "2Nspira";
 const siteDomain = "https://2nspira.com";
 const siteDescription =
-  "Practical AI, systems optimization, digital platforms, fractional CIO leadership, and entrepreneur mentoring from 2Nspira. Turn priorities into execution.";
-const socialTitle = "Technology that moves you forward. Leadership that grows with you.";
+  "Technology expertise that solves real business problems. Simplify operations, connect systems, adopt AI responsibly, and build foundations for sustainable growth.";
+const socialTitle = "Technology expertise that solves real business problems.";
 const socialImageUrl = `${siteDomain}/images/logo/og-image-v2.png`;
 export const metadata: Metadata = {
   title: {
