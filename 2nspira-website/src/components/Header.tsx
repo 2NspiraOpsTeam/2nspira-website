@@ -136,7 +136,7 @@ export default function Header() {
 
         <nav ref={navigationRef} className="hidden items-center gap-0.5 lg:flex" aria-label="Main navigation" onKeyDown={handleNavigationKeyDown}>
           {renderMenu("services", "Services", serviceLinks)}
-          <Link href={primaryLinks[0].href} aria-current={pathname === "/websites" ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+          <Link href={primaryLinks[0].href} aria-current={pathname === primaryLinks[0].href ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
             Work
           </Link>
           {renderMenu("ideas", "Ideas", ideaLinks)}

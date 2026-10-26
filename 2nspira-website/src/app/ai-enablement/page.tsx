@@ -16,8 +16,8 @@ export default function Page() {
     visualTreatment: "editorial" as const,
     title: "Put AI to work. Keep people in control.",
     eyebrowText: "AI Strategy, Training & Governance",
-    primaryActionLabel: "Discuss your AI priorities",
-    intro: "AI should do more than create activity. It should support how your organization works. We help you identify worthwhile opportunities, establish practical guardrails, and equip your people to use AI with purpose, confidence, and accountability.",
+    primaryActionLabel: "Discuss AI Readiness",
+    intro: "When AI use grows without direction, consistency, or safeguards, experimentation can create more uncertainty than value. We help identify practical opportunities, establish responsible governance, and train your team to use AI with purpose and judgment.",
     audience: "Executive teams, school and academic leaders, founders, nonprofits, and operators adopting AI without a clear framework for governance, training, or data privacy.",
     situations: [
       { title: "AI use is growing without a plan", text: "People are experimenting, but priorities, ownership, and acceptable use are unclear." },
@@ -132,7 +132,7 @@ export default function Page() {
       eyebrow: "From readiness to roadmap",
       title: "Move forward with AI you can explain, govern, and use.",
       text: "Bring your priorities, current experiments, and the decisions holding you back. Together, we’ll define a practical next step for responsible AI adoption.",
-      primary: { label: "Discuss your AI priorities", href: "/contact" },
+      primary: { label: "Discuss AI Readiness", href: "/contact" },
       secondary: { label: "Explore all services", href: "/services" }
     }
   }} />;

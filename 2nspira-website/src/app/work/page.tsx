@@ -9,8 +9,8 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  "title": "Our Work — Operating-System Case Studies",
-  "description": "Explore 2Nspira case studies in manufacturing, property operations, digital platforms, automation, and AI-enabled systems built for measurable impact.",
+  "title": "Our Work — Projects & Operational Showcases",
+  "description": "Explore published websites and operational showcases. See the challenge, approach, demonstrated scope, and status without unsupported performance claims.",
   "path": "/work"
 });
 
@@ -26,31 +26,28 @@ const manufacturingCapabilities = [
   "Quality & traceability: inspections, issues, evidence, ownership, job history",
   "Equipment & maintenance: downtime, service history, preventive maintenance, asset readiness",
   "Role‑based dashboards",
-  "Audit‑ready records",
+  "Structured records and ownership",
   "Workflow automation",
-  "Real‑time reporting",
+  "Reporting workspace",
 ];
 
-const manufacturingWhatThisDemonstrates =
-  "A connected operations workspace that gives manufacturing teams visibility across production, materials, quality, equipment, and accountability — without relying on disconnected spreadsheets, paper logs, and manual handoffs.";
+
 
 const waterbearChallenge =
-  "Property operations modernization: from listing to signed lease.";
+  "Property information, resident access, and operational records spread across disconnected processes.";
 
-const waterbearOperationalShift =
-  "AI‑assisted publishing (manual listings → AI‑assisted publishing), structured digital workflow (manual applicant review → structured digital workflow), digital lease generation and e‑signatures (paper lease agreements → digital lease generation and e‑signature), automated delivery (physical copies/manual distribution → automatic emailed signed copies).";
+
 
 const waterbearCapabilities = [
-  "AI‑assisted publishing",
-  "Applicant review",
-  "Digital leasing",
-  "E‑signatures",
-  "Automated delivery",
+  "Portfolio content and property media",
+  "Scoped administration",
+  "Resident portal access",
+  "Contacts and rent-roll records",
+  "Maintenance records",
   "Operational visibility",
 ];
 
-const waterbearWhatThisDemonstrates =
-  "Property operations modernization: from listing to signed lease, using AI‑assisted publishing, structured applicant review, digital lease generation, e‑signatures, and automated delivery — with fewer handoffs, clearer status, and standardized records.";
+
 
 const supportingProjects = [
   {
@@ -105,7 +102,7 @@ export default function WorkPage() {
         <div className="absolute inset-0 opacity-40">
           <Image
             src="/images/work/hero-new.png"
-            alt="Real Organizations. Measurable Progress."
+            alt="Illustrative connected operations workspace"
             fill
             className="object-cover object-center"
             priority
@@ -119,13 +116,10 @@ export default function WorkPage() {
             <Reveal>
               <span className="mb-6 text-accent">Case Studies & Evidence</span>
               <h1 className="mb-6 text-4xl font-semibold tracking-tight text-white sm:text-6xl">
-                Our Work: Operating‑System Case Studies
+                Our Work: Practical Problems, Connected Solutions
               </h1>
               <p className="text-xl leading-relaxed text-white/80">
-                2Nspira builds operating systems for organizations — not just websites.
-                The case studies below demonstrate how we connect systems, simplify
-                workflows, and create capabilities that organizations can operate and
-                scale.
+                Explore published digital projects alongside operational workflow showcases. Each describes the problem and approach; showcase features are not a claim of completed client deployment or measured business results.
               </p>
             </Reveal>
           </div >
@@ -137,7 +131,7 @@ export default function WorkPage() {
         <section className="mb-32">
           <Reveal>
             <div className="mb-12 flex flex-col gap-4">
-              <span>Featured Case Study</span>
+              <span>Operational Showcase</span>
               <h2 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Manufacturing Operations Command Center
               </h2>
@@ -146,10 +140,12 @@ export default function WorkPage() {
           
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="space-y-6">
-              <p className="text-xl text-body">{manufacturingChallenge}</p>
-              <p className="text-lg text-body/80">{manufacturingOperationalShift}</p>
+              <p className="text-sm font-semibold text-accent">Status: Concept showcase</p>
+              <p className="text-xl text-body"><strong>Challenge: </strong>{manufacturingChallenge}</p>
+              <p className="text-lg text-body/80"><strong>Approach: </strong>{manufacturingOperationalShift}</p>
+              <p className="leading-7 text-body">This visual concept explores a shared manufacturing workspace. The capabilities below describe the proposed scope, not a verified production deployment or client outcome.</p>
               <div className="rounded-2xl border border-line bg-canvas/50 p-6 backdrop-blur-sm">
-                <h3 className="mb-4 font-semibold text-ink">Core Capabilities</h3>
+                <h3 className="mb-4 font-semibold text-ink">Showcase Scope</h3>
                 <ul className="space-y-3 text-sm text-body">
                   {manufacturingCapabilities.map((cap) => (
                     <li key={cap} className="flex items-start gap-3">
@@ -174,7 +170,7 @@ export default function WorkPage() {
           
           <Reveal className="mt-8">
             <p className="text-sm text-body italic">
-              {manufacturingWhatThisDemonstrates}
+              The concept shows how production, materials, quality, and equipment information could share a common workspace. No quantified improvement or production adoption is claimed.
             </p>
           </Reveal>
         </section>
@@ -183,7 +179,7 @@ export default function WorkPage() {
         <section className="mb-32">
           <Reveal>
             <div className="mb-12 flex flex-col gap-4">
-              <span>Featured Case Study</span>
+              <span>Operational Showcase</span>
               <h2 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Water Bear Mecca
               </h2>
@@ -202,10 +198,12 @@ export default function WorkPage() {
               />
             </div >
             <div className="order-1 space-y-6 lg:order-2">
-              <p className="text-xl text-body">{waterbearChallenge}</p>
-              <p className="text-lg text-body/80">{waterbearOperationalShift}</p>
+              <p className="text-sm font-semibold text-accent">Status: Implemented in an isolated development environment</p>
+              <p className="text-xl text-body"><strong>Challenge: </strong>{waterbearChallenge}</p>
+              <p className="text-lg text-body/80"><strong>Approach: </strong>Connect portfolio content, scoped administration, resident access, and operational records in a phased property-operations platform.</p>
+              <p className="leading-7 text-body">The capabilities below have been implemented and tested in an isolated development environment. Production rollout and remaining acceptance checks are separate; this is not a claim of completed production adoption.</p>
               <div className="rounded-2xl border border-line bg-canvas/50 p-6 backdrop-blur-sm">
-                <h3 className="mb-4 font-semibold text-ink">Core Capabilities</h3>
+                <h3 className="mb-4 font-semibold text-ink">Showcase Scope</h3>
                 <ul className="space-y-3 text-sm text-body">
                   {waterbearCapabilities.map((cap) => (
                     <li key={cap} className="flex items-start gap-3">
@@ -220,7 +218,7 @@ export default function WorkPage() {
 
           <Reveal className="mt-8">
             <p className="text-sm text-body italic">
-              {waterbearWhatThisDemonstrates}
+              The development platform brings property information and operational records into a shared workflow with scoped access. It creates a foundation for clearer ownership and fewer disconnected handoffs; no measured efficiency improvement is claimed.
             </p>
           </Reveal>
         </section>
@@ -286,7 +284,7 @@ export default function WorkPage() {
                 Let&apos;s discuss how we can build the systems your organization needs to scale.
               </p>
               <Link href="/contact" className="inline-block rounded-full bg-ink px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-ink/90">
-                Get in touch
+                Let&apos;s Discuss Your Challenge
               </Link>
             </div >
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />

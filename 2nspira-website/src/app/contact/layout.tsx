@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = publicPageMetadata({
   "title": "Contact",
-  "description": "Discuss AI enablement, automation, digital platforms, fractional CIO leadership, or entrepreneur mentoring with 2Nspira. Start a practical conversation.",
+  "description": "Tell 2Nspira about your business challenge. Start a practical conversation about simpler operations, connected systems, responsible AI, or technology leadership.",
   "path": "/contact"
 });
 

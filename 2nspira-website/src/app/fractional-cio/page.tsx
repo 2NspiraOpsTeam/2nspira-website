@@ -79,7 +79,7 @@ export default function FractionalCioPage() {
             Technology leadership without the full-time executive overhead
           </h1>
           <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>
-            Senior, independent leadership to connect technology decisions with business priorities, investment, operations, people, and risk.
+            When you need senior technology judgment but not a full-time CIO, we help set priorities, build a practical roadmap, hold vendors accountable, and guide technology decisions around your business goals.
           </p>
           <p className="animate-rise mt-5 max-w-3xl text-base leading-7 text-body" style={{ animationDelay: "120ms" }}>
             This is not outsourced IT support or generic technical consulting. It is executive judgment for organizations that need clarity, direction, and accountable execution without hiring a full-time CIO.

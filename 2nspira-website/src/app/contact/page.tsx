@@ -126,6 +126,7 @@ export default function ContactPage() {
   } | null>(null);
 
   const formRef = useRef<HTMLFormElement>(null);
+  const submittingRef = useRef(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -157,7 +158,8 @@ export default function ContactPage() {
   const handleSubmit = useCallback(
     async (e: React.FormEvent) => {
       e.preventDefault();
-      if (state.kind === "sending") return;
+      if (submittingRef.current) return;
+      submittingRef.current = true;
       setState({ kind: "sending" });
       try {
         const res = await fetch("/api/contact", {
@@ -176,6 +178,10 @@ export default function ContactPage() {
         if (res.ok && data.status === "delivered") {
           setSubmitted({ ...formState });
           setState({ kind: "delivered" });
+          return;
+        }
+        if (res.status === 422 || res.status === 400) {
+          setState({ kind: "error", detail: "Please check your name, email, and business challenge, then try again." });
           return;
         }
         if (data.status === "draft" && data.subject && data.body) {
@@ -198,9 +204,11 @@ export default function ContactPage() {
         setSubmitted({ ...formState });
         setState({ kind: "draft", to: CONTACT_EMAIL, subject, body });
         openMailto(subject, body);
+      } finally {
+        submittingRef.current = false;
       }
     },
-    [state.kind, formState, compose],
+    [formState, compose],
   );
 
   const handleReset = useCallback(() => {
@@ -222,7 +230,7 @@ export default function ContactPage() {
     {
       q: "What regions do you serve?",
       a:
-        "We work with organizations globally, with a focus on mission-driven institutions.",
+        "Based in New York City, we work with growing businesses, established organizations, and mission-driven leaders nationally and internationally.",
     },
   ];
 
@@ -252,13 +260,12 @@ export default function ContactPage() {
               id="contact-hero-heading"
               className="text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
             >
-              Get in touch
+              Let&apos;s Discuss Your Challenge
             </h1>
           </Reveal>
           <Reveal delay={100}>
             <p className={`mx-auto mt-6 max-w-xl ${lead}`}>
-              From technology priorities to your next business or leadership
-              challenge, let&rsquo;s talk about the support you need.
+              Tell us what is getting in the way and what you want to improve. You do not need a technical brief or a service selection to start.
             </p>
           </Reveal>
           <Reveal delay={150}>
@@ -369,10 +376,10 @@ export default function ContactPage() {
               <div className="mt-6">
                 <button
                   type="button"
-                  onClick={handleReset}
+                  onClick={() => { setState({ kind: "idle" }); setSubmitted(null); }}
                   className={`${buttonPrimary} bg-ink text-white hover:bg-ink/90 focus-visible:ring-offset-canvas`}
                 >
-                  Try again
+                  Edit your message
                 </button>
               </div>
             </div>
@@ -401,6 +408,7 @@ export default function ContactPage() {
                 your email app — review and press send there.
               </p>
 
+              {state.kind === "error" && <p role="alert" className="mt-5 text-sm text-red-700">{state.detail}</p>}
               <div className="mt-6">
                 <FieldGroup
                   label="Your name"
@@ -459,6 +467,7 @@ export default function ContactPage() {
                     autoComplete="organization"
                     value={formState.organization}
                     onChange={handleChange}
+                    aria-describedby="organization-hint"
                     aria-required={false}
                     className={field}
                     placeholder="Your organization name"
@@ -468,10 +477,10 @@ export default function ContactPage() {
 
               <div className="mt-6">
                 <FieldGroup
-                  label="How can we help?"
+                  label="Business challenge"
                   required
                   id="message"
-                  hint="Tell us about your project, business idea, mentoring goals, or leadership challenge."
+                  hint="What feels stuck, what would you like to improve, and what have you tried? No technical terminology needed."
                   delay={300}
                 >
                   <textarea
@@ -484,7 +493,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     aria-required="true"
                     className={field}
-                    placeholder="Tell us about your needs..."
+                    placeholder="What is getting in the way of your goals?"
                   />
                 </FieldGroup>
               </div>
@@ -509,13 +518,7 @@ export default function ContactPage() {
                         "Send message"
                       )}
                     </button>
-                    {/* Accessibility: visible hint for button */}
-                    <span
-                      className="text-xs text-muted"
-                      aria-hidden="true"
-                    >
-                      (or use Ctrl+Enter to submit)
-                    </span>
+
                   </div>
                 </Reveal>
               </div>

@@ -86,7 +86,7 @@ export default function WebsitesPage() {
         <div>
           <EyebrowPill>Websites &amp; Digital Platforms</EyebrowPill>
           <h1 className="mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">A better website. A more connected business.</h1>
-          <p className={lead}>Help customers understand what you do and take the next step. We design clear, accessible websites and, where needed, connect them to the systems and workflows behind your business.</p>
+          <p className={lead}>A professional website should not leave your team managing every inquiry by hand. We build clear, accessible digital experiences and, where needed, connect them to internal systems and operational workflows that support growth.</p>
           <ServiceConversation label="Discuss your website project" />
           <a href="#our-work" className={`mt-4 min-h-11 ${linkInline}`}>See selected work <span aria-hidden="true"> ↓</span></a>
         </div>
