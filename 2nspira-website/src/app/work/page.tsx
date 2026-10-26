@@ -54,6 +54,13 @@ const waterbearWhatThisDemonstrates =
 
 const supportingProjects = [
   {
+    name: "2Nspira Books",
+    description:
+      "A collector-focused bookstore bringing together collectible editions, original books, coloring books, and printable activities.",
+    url: "https://books.2nspira.com",
+    image: "/images/work/project-books.png",
+  },
+  {
     name: "2Nspira",
     description:
       "Technology leadership, AI readiness, insights, and practical assessment tools in one clear digital home.",
@@ -232,7 +239,7 @@ export default function WorkPage() {
               </p>
             </div >
           </Reveal>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {supportingProjects.map((project, idx) => (
               <Reveal key={project.name} delay={idx * 0.1}>
                 <article
@@ -259,7 +266,7 @@ export default function WorkPage() {
                       rel="noopener noreferrer"
                       className="mt-4 inline-flex items-center text-xs font-medium text-accent underline underline-offset-4 hover:text-accent/80 transition-colors"
                     >
-                      Visit Project →
+                      <span className="sr-only">{project.name}: </span>Visit Project →
                     </a>
                   </div >
                 </article>
