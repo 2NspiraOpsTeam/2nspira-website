@@ -6,6 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 const NAV_ITEMS = [
   { path: "/admin/dashboard", label: "Dashboard" },
   { path: "/admin/clients", label: "Clients" },
+  { path: "/admin/careers", label: "Careers" },
 ];
 
 export default function AdminShell({

@@ -2,8 +2,13 @@
   "name": "2nspira-website",
   "account_id": "36a7807b2d8726b889873bab8b572113",
   "compatibility_date": "2024-12-01",
-  "compatibility_flags": ["nodejs_compat"],
-  "routes": ["2nspira.com/*", "www.2nspira.com/*"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "routes": [
+    "2nspira.com/*",
+    "www.2nspira.com/*"
+  ],
   "main": "vinext/server/fetch-handler",
   "assets": {
     "directory": "dist/client",
@@ -18,5 +23,13 @@
   },
   "images": {
     "binding": "IMAGES"
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "CAREERS_DB",
+      "database_name": "2nspira-careers",
+      "database_id": "3b5d967e-4ab5-484e-acdd-89097b01e098",
+      "migrations_dir": "migrations/careers"
+    }
+  ]
 }
