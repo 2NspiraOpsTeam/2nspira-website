@@ -30,3 +30,17 @@ Existing accessibility foundations: document `lang=en`, global visible keyboard 
 ## Pending release gate
 
 Rendered candidate head/body, keyboard/focus/mobile navigation, contrast, internal fragment targets, image loading, preview non-indexability, and final production retrieval still require independent deployed-preview verification. This source review is not a WCAG-conformance or search-indexing claim. No Google Search Console/Business Profile actions performed.
+
+## Hosted preview independent disposition — PASS
+
+Candidate: `https://2nspira-website-preview.jcortez-36a.workers.dev`, served `X-Deployment-Commit: 9d5aff94192f8d69f0f8ff7a79adf0d282f95cb9`. Read-only Playwright/Chrome browser checks against nine routes (the eight baseline routes plus `/about`):
+
+- All return 200; one H1 each; route-owned titles/descriptions; canonical stays on the correct production route; rendered description, OG description and Twitter description agree on every route. New homepage title and approved hero wording are present. Work metadata now avoids the baseline “measurable impact” claim and distinguishes projects/showcases.
+- Every JSON-LD block parses; no completed image has zero natural width. This is functional image-loading evidence, not a timed performance score or comprehensive offscreen asset audit.
+- Preview response has `X-Robots-Tag: noindex, nofollow`; its robots.txt is `User-agent: * / Disallow: /`. Correct production canonicals remain intact. This verifies review indexing restrictions, not production search indexing.
+- Contact inputs/textarea all have native labels. Organization and business-challenge hints resolve through `aria-describedby`.
+- All six problem links and the service-overview link measure 44px tall. Descriptive text identifies each destination. Homepage has no horizontal overflow at 390, 768 or 1440px (document scroll width equals viewport width).
+- Keyboard: first Tab reaches skip link, visible at top 0 with 2px accent outline after its transition. Enter then Tab advances directly to the main primary CTA, bypassing header navigation. Desktop Services opens by Enter; Escape closes and returns focus to Services. Mobile menu focuses Close menu when opened; Escape returns focus to Open menu.
+- Calculated WCAG contrast from established opaque brand tokens: accent `#4a6fa5` on white 5.11:1; accent on canvas `#fafaf9` 4.89:1; muted `#596575` on canvas 5.67:1; body `#46505f` 7.81:1; headings `#1f2430` 14.86:1. New card text uses these existing passing pairs.
+
+No SEO/accessibility release-blocking defect identified in this bounded review. No routing/indexing/schema/global-style regression detected. Not a comprehensive WCAG conformance certification, measured Core Web Vitals result, or guarantee of search indexing. Final production retrieval remains a post-promotion gate owned by Adam.

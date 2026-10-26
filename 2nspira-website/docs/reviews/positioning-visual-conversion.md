@@ -50,3 +50,16 @@ Latest relevant source: `teams-waterbear-development/docs/operations/README.md` 
 Recommended public wording: **A phased property-operations platform connecting portfolio content, scoped administration, resident access, and operational records. Implemented and tested in an isolated development environment; production rollout and remaining acceptance checks are separate.**
 
 No reviewed evidence substantiates AI-assisted publishing, lease generation, e-signatures, or automatic delivery of signed leases as completed production capabilities. Present those only as proposed future scope if an authoritative approved roadmap supports them; otherwise remove them from this case study. Keep private data, resource IDs and operational credentials out of public copy.
+
+## Final hosted rendered review — PASS
+
+Preview: https://2nspira-website-preview.jcortez-36a.workers.dev (reviewed release `9d5aff94`). Automated Chrome rendering plus manual screenshot inspection, 26 October 2026.
+
+- Homepage inspected at 1440×1000, 768×1024, 390×844 and 320×700. All four reported no horizontal overflow. Cards use three desktop columns, two tablet columns and one mobile column. Clear quote/support/link hierarchy, restrained existing palette/cards, no added decorative complexity.
+- Hero exact headline and problem statement are immediately readable. Filled challenge action and secondary work action are distinct and precede photograph on mobile. At 390 px primary CTA is visibly above fold; at 320×700 it reaches viewport bottom, acceptable with normal scrolling.
+- Challenge actions target `/contact#contact-message`; mobile contact anchor places form heading near y183. Labels are Name, Email, optional Organization, Business challenge. The visitor does not have to identify a service.
+- Work page now labels manufacturing Concept showcase and explicitly says proposed scope/no verified production adoption. Water Bear is explicitly isolated-development implementation with production/acceptance separate. Those statuses match reviewed evidence and avoid unsupported metrics.
+- Both homepage published-project screenshots successfully lazy-load on hosted preview (`complete=true`, naturalWidth 559); manual screenshot shows GeVitals and Open Goal Soccer correctly. A local-only optimizer failure was not reproduced hosted and is not a product defect. No optimizer/infrastructure change recommended.
+- No blocking visual/conversion issue remains. Nonblocking consideration: long homepage repeats recognition and service cards; retained intentionally to preserve established service paths and complete scope.
+
+Evidence screenshots: `/tmp/hosted-positioning-desktop.png`, `tablet.png`, `mobile.png`, `narrow.png` (all with `hosted-positioning-` prefix), plus `hosted-positioning-mobile-hero.png`, `hosted-positioning-work-cards.png`, `hosted-positioning-contact-mobile.png`, `hosted-positioning-work-mobile.png`. This is visual/conversion approval, not a replacement for independent QA/form-delivery or SEO/accessibility signoff.

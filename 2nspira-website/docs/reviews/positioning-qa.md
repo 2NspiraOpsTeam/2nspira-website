@@ -31,4 +31,22 @@ Reviewer scope: read-only application/source/live review; report ownership only.
 
 ## Preview results
 
-Pending built-worker/hosted preview availability. Baseline checks are not represented as post-change QA.
+Hosted preview independently tested: `https://2nspira-website-preview.jcortez-36a.workers.dev` (lead identifies release commit `9d5aff94`, Worker version `1216de13`).
+
+- **45/45 recorded browser checks passed** in `/tmp/positioning-preview-results.json`.
+- Exact requested hero and six cards present; all six card routes HTTP 200 and all three integration/reporting/workflow anchors resolve to unique IDs.
+- Preserved services/work/contact/about/coaching/resources/careers/shop/books/portal login routes HTTP 200.
+- No horizontal overflow at 320/390/768/1440px. Screenshots `/tmp/positioning-preview-{width}.png` captured after scrolling for lazy content. Narrow-width card flow and CTA wrapping reviewed. Follow-up 390px capture `/tmp/positioning-preview-390-loaded.png` waits for all images; all five image elements report complete and nonzero naturalWidth.
+- Mobile drawer opens with focus on Close menu; Services expands; selecting AI Enablement navigates and dismisses drawer.
+- Contact native empty/invalid-email/partial validation prevented submission. Rapid double click yielded exactly one intercepted POST; delivered state and reset passed.
+- Mocked draft and network-error paths honestly display fallback; Edit your message preserves typed challenge. Refresh returns clean idle form.
+- Mocked HTTP 400 and 422 independently show inline alert, retain typed message, leave submit enabled, and do not launch draft fallback. Evidence `/tmp/positioning-validation-results.json`.
+- QA-01 retest passed: inaccurate Ctrl+Enter hint absent.
+- Zero JavaScript page errors and zero unexpected HTTP errors. One failed request is the deliberately aborted contact network-error test, not a real failed backend call.
+- No production email sent; real relay delivery and mailbox receipt remain **unverified**, explicitly not inferred from mocked success.
+
+Local Worker checks were superseded by hosted artifact testing because local preview required proxy-protocol headers and exhibited a viewport-resize overlay not reproduced on hosted preview. No unrelated server evidence is included.
+
+## Release assessment
+
+No critical/major regression found in independently tested hosted preview scope. Production post-deployment artifact verification is pending release. Authenticated billing/admin workflows and real email delivery are outside this messaging release test scope.
