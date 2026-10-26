@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import AdminShell from "@/components/admin/AdminShell";
+import OpeningEditor from "@/components/careers/OpeningEditor";
 import type { Job, Settings, Question } from "@/lib/careers/model";
 const blankJob: Job = {
   id: "",
@@ -371,6 +372,8 @@ export default function CareersAdmin() {
                         onClick={() => {
                           if (dirty()) {
                             setDraft(structuredClone(j));
+                            setError("");
+                            setNotice("");
                             setCandidate(null);
                           }
                         }}
@@ -400,334 +403,38 @@ export default function CareersAdmin() {
               </ul>
             </section>
             {draft && (
-              <section className="rounded-xl border border-line p-5">
-                <h2 className="text-2xl font-semibold">
-                  {draft.revision ? "Edit opening" : "New opening"}
-                </h2>
-                <p className="mt-3">
-                  Save unfinished content as a draft. To publish, complete every
-                  job detail and the posting review.
-                </p>
-                <form
-                  className="mt-6 space-y-5"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    void action(async () => {
-                      const d = await api("/jobs", {
-                        method: "PUT",
-                        body: JSON.stringify(draft),
-                      });
-                      setDraft(d.job);
-                      await load();
-                      setNotice("Opening saved.");
+              <OpeningEditor
+                job={draft}
+                onChange={(next) => {
+                  setDraft(next);
+                  setNotice("");
+                }}
+                busy={busy}
+                settings={settings}
+                ready={ready}
+                error={error}
+                notice={notice}
+                onCancel={() => {
+                  if (dirty()) setDraft(null);
+                }}
+                onSave={() =>
+                  void action(async () => {
+                    const d = await api("/jobs", {
+                      method: "PUT",
+                      body: JSON.stringify(draft),
                     });
-                  }}
-                >
-                  {(
-                    [
-                      "title",
-                      "location",
-                      "employmentType",
-                      "compensation",
-                      "hiringEmail",
-                    ] as const
-                  ).map((k) => (
-                    <label key={k} className="block font-medium">
-                      {
-                        {
-                          title: "Job title",
-                          location:
-                            "Location / remote arrangement and eligible locations",
-                          employmentType: "Employment / engagement type",
-                          compensation:
-                            "Compensation range, currency and pay period",
-                          hiringEmail: "Hiring notification email",
-                        }[k]
-                      }{" "}
-                      {k === "title" ? "*" : "(required to publish)"}
-                      <input
-                        required={k === "title"}
-                        type={k === "hiringEmail" ? "email" : "text"}
-                        value={draft[k]}
-                        maxLength={300}
-                        onChange={(e) =>
-                          setDraft({ ...draft, [k]: e.target.value })
-                        }
-                        className={input}
-                      />
-                    </label>
-                  ))}
-                  {(
-                    [
-                      "description",
-                      "responsibilities",
-                      "qualifications",
-                    ] as const
-                  ).map((k) => (
-                    <label className="block font-medium capitalize" key={k}>
-                      {k} (required to publish)
-                      <textarea
-                        rows={7}
-                        maxLength={20000}
-                        value={draft[k]}
-                        onChange={(e) =>
-                          setDraft({ ...draft, [k]: e.target.value })
-                        }
-                        className={input}
-                      />
-                    </label>
-                  ))}
-                  <label className="block font-medium">
-                    Additional role details (success measures, benefits,
-                    compensation plan)
-                    <textarea
-                      rows={10}
-                      maxLength={30000}
-                      value={draft.additionalDetails || ""}
-                      onChange={(e) =>
-                        setDraft({
-                          ...draft,
-                          additionalDetails: e.target.value,
-                        })
-                      }
-                      className={input}
-                    />
-                  </label>
-                  <label className="flex gap-3">
-                    <input
-                      type="checkbox"
-                      checked={Boolean(draft.resumeOrProfile)}
-                      onChange={(e) =>
-                        setDraft({
-                          ...draft,
-                          resumeOrProfile: e.target.checked,
-                        })
-                      }
-                    />
-                    Accept a professional profile URL instead of a résumé PDF
-                  </label>
-                  <label className="flex gap-3">
-                    <input
-                      type="checkbox"
-                      checked={draft.coverRequired}
-                      onChange={(e) =>
-                        setDraft({ ...draft, coverRequired: e.target.checked })
-                      }
-                    />
-                    Require a cover letter (text or PDF)
-                  </label>
-                  <fieldset className="space-y-5">
-                    <legend className="mb-3 text-xl font-semibold">
-                      Role questionnaire
-                    </legend>
-                    <p className="text-sm">
-                      Ask only job-relevant questions. Do not request
-                      confidential client details, protected characteristics or
-                      unpaid custom strategy work.
-                    </p>
-                    {draft.questions.map((q, i) => (
-                      <fieldset
-                        className="space-y-3 rounded-xl border border-line p-4"
-                        key={q.id}
-                      >
-                        <legend className="px-2">Question {i + 1}</legend>
-                        <label className="block">
-                          Question text *
-                          <textarea
-                            required
-                            value={q.label}
-                            maxLength={1500}
-                            className={input}
-                            onChange={(e) =>
-                              setDraft({
-                                ...draft,
-                                questions: draft.questions.map((x) =>
-                                  x.id === q.id
-                                    ? { ...x, label: e.target.value }
-                                    : x,
-                                ),
-                              })
-                            }
-                          />
-                        </label>
-                        <label className="block">
-                          Response type
-                          <select
-                            value={q.type}
-                            className={input}
-                            onChange={(e) =>
-                              setDraft({
-                                ...draft,
-                                questions: draft.questions.map((x) =>
-                                  x.id === q.id
-                                    ? {
-                                        ...x,
-                                        type: e.target
-                                          .value as Question["type"],
-                                      }
-                                    : x,
-                                ),
-                              })
-                            }
-                          >
-                            <option value="short">Short answer</option>
-                            <option value="long">Long response</option>
-                            <option value="choice">
-                              Multiple choice (one selection)
-                            </option>
-                            <option value="checkbox">
-                              Checkboxes (multiple selections)
-                            </option>
-                          </select>
-                        </label>
-                        {["choice", "checkbox"].includes(q.type) && (
-                          <label className="block">
-                            Choices (one per line; at least two)
-                            <textarea
-                              required
-                              value={q.options.join("\n")}
-                              className={input}
-                              onChange={(e) =>
-                                setDraft({
-                                  ...draft,
-                                  questions: draft.questions.map((x) =>
-                                    x.id === q.id
-                                      ? {
-                                          ...x,
-                                          options: e.target.value.split("\n"),
-                                        }
-                                      : x,
-                                  ),
-                                })
-                              }
-                            />
-                          </label>
-                        )}
-                        <label className="flex gap-3">
-                          <input
-                            type="checkbox"
-                            checked={q.required}
-                            onChange={(e) =>
-                              setDraft({
-                                ...draft,
-                                questions: draft.questions.map((x) =>
-                                  x.id === q.id
-                                    ? { ...x, required: e.target.checked }
-                                    : x,
-                                ),
-                              })
-                            }
-                          />
-                          Required answer
-                        </label>
-                        <button
-                          className={button}
-                          type="button"
-                          onClick={() =>
-                            setDraft({
-                              ...draft,
-                              questions: draft.questions.filter(
-                                (x) => x.id !== q.id,
-                              ),
-                            })
-                          }
-                        >
-                          Remove question
-                        </button>
-                      </fieldset>
-                    ))}
-                    <button
-                      type="button"
-                      disabled={draft.questions.length >= 25}
-                      className={button}
-                      onClick={() =>
-                        setDraft({
-                          ...draft,
-                          questions: [
-                            ...draft.questions,
-                            {
-                              id: crypto.randomUUID(),
-                              label: "",
-                              type: "long",
-                              required: false,
-                              options: [],
-                            },
-                          ],
-                        })
-                      }
-                    >
-                      Add question
-                    </button>
-                  </fieldset>
-                  <aside className="rounded-xl border border-line bg-surface p-4">
-                    <h3 className="font-semibold">
-                      Location-specific posting review
-                    </h3>
-                    <p className="mt-3 text-sm">
-                      Before publishing, finalize eligible work locations and
-                      check applicable pay transparency (range, benefits and
-                      other compensation), contractor classification, equal
-                      opportunity/accommodation wording, privacy notices,
-                      application deadlines and record-retention requirements.
-                      Remote roles can trigger requirements where applicants may
-                      work. Do not request salary history or protected personal
-                      information.
-                    </p>
-                    <label className="mt-4 flex gap-3">
-                      <input
-                        type="checkbox"
-                        checked={draft.postingReviewed}
-                        onChange={(e) =>
-                          setDraft({
-                            ...draft,
-                            postingReviewed: e.target.checked,
-                          })
-                        }
-                      />
-                      <span>
-                        I have confirmed the posting meets requirements for its
-                        eligible locations.
-                      </span>
-                    </label>
-                  </aside>
-                  <label className="block font-medium">
-                    Opening status
-                    <select
-                      value={draft.status}
-                      className={input}
-                      onChange={(e) =>
-                        setDraft({
-                          ...draft,
-                          status: e.target.value as Job["status"],
-                        })
-                      }
-                    >
-                      <option value="draft">Draft — private</option>
-                      <option value="published">
-                        Published — accepts applications
-                      </option>
-                      <option value="closed">
-                        Closed — no new applications
-                      </option>
-                    </select>
-                  </label>
-                  <div className="flex flex-wrap gap-3">
-                    <button disabled={busy} className={button}>
-                      {busy ? "Saving…" : "Save opening"}
-                    </button>
-                    <button
-                      disabled={busy}
-                      type="button"
-                      className={button}
-                      onClick={() => {
-                        if (dirty()) setDraft(null);
-                      }}
-                    >
-                      Cancel / close editor
-                    </button>
-                  </div>
-                </form>
-              </section>
+                    setDraft(d.job);
+                    await load();
+                    setNotice(
+                      d.job.status === "draft"
+                        ? "Draft saved. This opening is not visible to visitors."
+                        : d.job.status === "published"
+                          ? "Opening saved and published."
+                          : "Opening saved as closed.",
+                    );
+                  })
+                }
+              />
             )}
             {role && (
               <section className="rounded-xl border border-line p-5">
