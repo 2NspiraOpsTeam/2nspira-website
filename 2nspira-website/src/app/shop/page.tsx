@@ -42,7 +42,7 @@ export default function ShopPage() {
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-body">The collector’s shelf · 2Nspira Books</p>
             <h2 id="shop-bookstore-title" className={h2}>Rare books. Remarkable editions.</h2>
             <p className="mt-3 leading-7 text-body">Discover our collection of rare collectible books, including signed and limited editions. Explore photographs of the actual copies, individual condition details, and the stories behind each edition at 2Nspira Books.</p>
-            <a href="https://books.2nspira.com" className={`mt-5 ${buttonPrimary}`}>Explore rare collectibles <span aria-hidden="true" className="ml-2">→</span></a>
+            <a href="https://books.2nspira.com" className={`mt-5 min-h-[48px] ${buttonPrimary}`}>Explore rare collectibles <span aria-hidden="true" className="ml-2">→</span></a>
           </div>
           <a href="https://books.2nspira.com" className="block overflow-hidden rounded-xl border border-line bg-white shadow-lg transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-label="Visit 2Nspira Books rare collectible bookstore">
             <div className="flex items-center gap-2 border-b border-line bg-white px-4 py-3 text-xs text-body" aria-hidden="true">
