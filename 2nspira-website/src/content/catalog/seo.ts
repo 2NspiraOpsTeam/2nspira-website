@@ -30,8 +30,8 @@ export type CatalogPage = keyof typeof catalogPages;
 export type CatalogQuestion = { question: string; answer: string; link?: { label: string; href: string } };
 export const catalogQuestions: Record<CatalogPage, readonly CatalogQuestion[]> = {
   shop: [
-    { question: "Where do I buy 2Nspira books and designs?", answer: "Browse the collections here, then use the product’s purchase button. Etsy handles purchases of digital printables and art prints; Amazon handles purchases of the paperback coloring books." },
-    { question: "How do I tell digital downloads from physical products?", answer: "Each card shows its format. Digital downloads are files you print yourself; no physical item is shipped. Paperback coloring books and the physical art print are shipped products. Check the marketplace listing for current options and fulfillment details." },
+    { question: "Where do I buy 2Nspira books and designs?", answer: "Browse the collections here, then use the product’s purchase button. Etsy handles purchases of digital printables and art prints; Amazon handles purchases of paperback activity and coloring books." },
+    { question: "How do I tell digital downloads from physical products?", answer: "Each card shows its format. Digital downloads are files you print yourself; no physical item is shipped. Paperback activity and coloring books and the physical art print are shipped products. Check the marketplace listing for current options and fulfillment details." },
   ],
   printables: [
     { question: "Are the games and coloring pages digital downloads?", answer: "Yes. These are printable files purchased through Etsy, not items shipped to you. Check each product’s details for its activities, paper sizes, and suggested audience before printing." },

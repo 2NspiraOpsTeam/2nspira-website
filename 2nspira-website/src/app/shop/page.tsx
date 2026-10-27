@@ -9,7 +9,7 @@ import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { CollectionNav, EtsyShopLink, ProductGrid } from "@/components/shop/ShopCollection";
 import LittleCocoaCard from "@/components/shop/LittleCocoaCard";
 import LittleHauntsCard from "@/components/shop/LittleHauntsCard";
-import { artPrints, printables } from "@/content/shop/products";
+import { activityBooks, artPrints, printables } from "@/content/shop/products";
 import { h1, h2, lead, linkInline, pageHero, pageMain } from "@/components/ui";
 
 const description = catalogPages.shop.description;
@@ -43,7 +43,14 @@ export default function ShopPage() {
         </aside>
         <CollectionNav current="shop" />
         <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-6 text-body">Explore printable family games, cozy coloring books and pages, and thoughtful wall art from 2Nspira. Choose a collection, then complete your purchase on Etsy or Amazon.</p>
-        <section aria-labelledby="printables-title" className="mt-14">
+        <section aria-labelledby="family-activity-books-title" className="mt-14">
+          <div data-catalog-reveal className="mb-8">
+            <h2 id="family-activity-books-title" className={h2}>Family Activity Books</h2>
+            <p className="mt-3 max-w-2xl leading-7 text-body">Make a little time for play. Share stories, solve puzzles, and draw together with paperback activity books for ages 8+ and adults. Order on Amazon—no printing required.</p>
+          </div>
+          <ProductGrid products={activityBooks} headingLevel="h3" />
+        </section>
+        <section aria-labelledby="printables-title" className="mt-20 border-t border-line pt-14">
           <div data-catalog-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="printables-title" className={h2}>Printables &amp; Games</h2>
