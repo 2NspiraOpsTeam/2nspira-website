@@ -1,5 +1,5 @@
 import { catalogPages, type CatalogPage } from "@/content/catalog/seo";
-import { printables, artPrints, type ShopProduct } from "@/content/shop/products";
+import { activityBooks, printables, artPrints, type ShopProduct } from "@/content/shop/products";
 import { coloringBooks, type ColoringBook } from "@/content/shop/coloring-books";
 
 const site = "https://2nspira.com";
@@ -27,7 +27,13 @@ function paperback(book: ColoringBook) {
 export default function CatalogSchema({ page }: { page: CatalogPage }) {
   const seo = catalogPages[page];
   const items = page === "shop"
-    ? [...printables.map(p => artworkOrPrintable(p, "printables")), ...coloringBooks.map(paperback), ...artPrints.map(p => artworkOrPrintable(p, "art"))]
+    ? [...activityBooks.map(book => ({
+        "@type": "Book", "@id": `${site}/shop#${book.id}`, url: `${site}/shop#${book.id}`,
+        name: book.title, description: `${book.description} ${book.details}`,
+        image: `${site}${book.image}`, sameAs: book.href,
+        author: { "@type": "Organization", name: "2Nspira" },
+        bookFormat: "https://schema.org/Paperback", inLanguage: "en",
+      })), ...printables.map(p => artworkOrPrintable(p, "printables")), ...coloringBooks.map(paperback), ...artPrints.map(p => artworkOrPrintable(p, "art"))]
     : page === "printables" ? printables.map(p => artworkOrPrintable(p, "printables"))
     : page === "art" ? artPrints.map(p => artworkOrPrintable(p, "art"))
     : page === "coloring" ? coloringBooks.map(paperback) : [];

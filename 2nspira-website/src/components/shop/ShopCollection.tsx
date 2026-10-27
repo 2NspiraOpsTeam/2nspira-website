@@ -73,7 +73,7 @@ export default function ShopCollection({ title, description, current, products }
 export function ProductGrid({ products, headingLevel = "h2" }: { products: ShopProduct[]; headingLevel?: "h2" | "h3" }) {
   const Heading = headingLevel;
   return (
-    <div className={`grid gap-8 ${products.length > 1 ? "md:grid-cols-2 lg:grid-cols-3" : "mx-auto max-w-4xl"}`}>
+    <div className={`grid gap-8 ${products.length > 1 ? (products.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3") : "mx-auto max-w-4xl"}`}>
           {products.map((product) => (
             <article id={product.id} data-catalog-card key={product.id} aria-labelledby={`${product.id}-title`}
               className={`${card} overflow-hidden ${products.length === 1 ? "grid md:grid-cols-2" : "flex flex-col"}`}>
@@ -87,8 +87,8 @@ export function ProductGrid({ products, headingLevel = "h2" }: { products: ShopP
                 <p className="mt-4 leading-7 text-body">{product.description}</p>
                 <p className="mt-4 text-sm leading-6 text-body">{product.details}</p>
                 <div className="mt-auto pt-6">
-                  <a href={product.href} className={`${buttonPrimary} min-h-[44px] w-full sm:w-auto`} aria-label={`Shop on Etsy: ${product.title}`}>
-                    Shop on Etsy <span aria-hidden="true" className="ml-2">↗</span>
+                  <a href={product.href} className={`${buttonPrimary} min-h-[44px] w-full sm:w-auto`} aria-label={`Shop on ${product.marketplace ?? "Etsy"}: ${product.title}`}>
+                    Shop on {product.marketplace ?? "Etsy"} <span aria-hidden="true" className="ml-2">↗</span>
                   </a>
                 </div>
               </div>

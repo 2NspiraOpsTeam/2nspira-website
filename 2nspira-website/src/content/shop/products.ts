@@ -6,7 +6,8 @@ export type ShopProduct = {
   id: string;
   title: string;
   description: string;
-  format: "Digital download" | "Physical print · Multiple sizes";
+  format: "Digital download" | "Physical print · Multiple sizes" | "Paperback · Amazon";
+  marketplace?: "Etsy" | "Amazon";
   details: string;
   image: string;
   imageWidth?: number;
@@ -140,5 +141,35 @@ export const artPrints: ShopProduct[] = [
     image: "/images/shop/reduce-the-noise.jpg",
     imageAlt: "Minimalist art print with a cloud of soft abstract marks resolving into a single vertical line",
     href: "https://2nspira.etsy.com/listing/4437231821",
+  },
+];
+
+// Published paperback details confirmed against the Amazon listings on 2026-10-26.
+export const activityBooks: ShopProduct[] = [
+  {
+    id: "holiday-family-challenge-book",
+    title: "Holiday Family Challenge Book",
+    description: "A little less scrolling. A little more together. Bring 100 quick games, word puzzles, drawing prompts, and team challenges to holiday gatherings and cozy family afternoons.",
+    format: "Paperback · Amazon",
+    marketplace: "Amazon",
+    details: "Ages 8+ and adults · 110 pages · 7 × 10 inches · Physical book—no printing required",
+    image: "/images/shop/holiday-family-challenge-book.jpg",
+    imageWidth: 1312,
+    imageHeight: 1873,
+    imageAlt: "Holiday Family Challenge Book cover with cream lettering, gold stars, and a coral banner on a green background",
+    href: "https://www.amazon.com/dp/B0HPB5VSL6",
+  },
+  {
+    id: "grandparents-grandkids-table-challenges",
+    title: "Grandparents & Grandkids Table Challenges",
+    description: "Two generations. Plenty to share. Enjoy 60 shared games, story prompts, and drawing activities that turn an ordinary visit into time to talk, laugh, and create together.",
+    format: "Paperback · Amazon",
+    marketplace: "Amazon",
+    details: "Ages 8+ and adults · 66 pages · 7 × 10 inches · Physical book—no printing required",
+    image: "/images/shop/grandparents-grandkids-table-challenges.jpg",
+    imageWidth: 1312,
+    imageHeight: 1873,
+    imageAlt: "Grandparents and Grandkids Table Challenges cover with cream lettering, a gold banner, and two speech bubbles on a blue background",
+    href: "https://www.amazon.com/dp/B0HP83DSV9",
   },
 ];
