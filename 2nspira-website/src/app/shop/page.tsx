@@ -5,12 +5,13 @@ import CatalogFaq from "@/components/catalog/CatalogFaq";
 import { catalogPages } from "@/content/catalog/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { CollectionNav, EtsyShopLink, ProductGrid } from "@/components/shop/ShopCollection";
 import LittleCocoaCard from "@/components/shop/LittleCocoaCard";
 import LittleHauntsCard from "@/components/shop/LittleHauntsCard";
 import { activityBooks, artPrints, printables } from "@/content/shop/products";
-import { h1, h2, lead, linkInline, pageHero, pageMain } from "@/components/ui";
+import { buttonPrimary, h1, h2, lead, linkInline, pageHero, pageMain } from "@/components/ui";
 
 const description = catalogPages.shop.description;
 export const metadata: Metadata = {
@@ -36,10 +37,23 @@ export default function ShopPage() {
         </div>
       </header>
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
-        <aside className="mb-10 rounded-2xl border border-line bg-accent-soft p-6 sm:p-8" aria-labelledby="shop-bookstore-title">
-          <h2 id="shop-bookstore-title" className={h2}>Looking for our bookstore?</h2>
-          <p className="mt-3 max-w-3xl leading-7 text-body">2Nspira Books is our dedicated home for collectible editions, published books, coloring books, and printable activities. This creative shop brings together our games, coloring collections, and art prints.</p>
-          <a href="https://books.2nspira.com" className={`mt-4 ${linkInline}`}>Visit 2Nspira Books <span aria-hidden="true" className="ml-1">→</span></a>
+        <aside className="mb-10 grid items-center gap-7 rounded-2xl border border-line bg-accent-soft p-6 sm:p-8 lg:grid-cols-2 lg:gap-10" aria-labelledby="shop-bookstore-title">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-body">The collector’s shelf · 2Nspira Books</p>
+            <h2 id="shop-bookstore-title" className={h2}>Rare books. Remarkable editions.</h2>
+            <p className="mt-3 leading-7 text-body">Discover our collection of rare collectible books, including signed and limited editions. Explore photographs of the actual copies, individual condition details, and the stories behind each edition at 2Nspira Books.</p>
+            <a href="https://books.2nspira.com" className={`mt-5 min-h-[48px] ${buttonPrimary}`}>Explore rare collectibles <span aria-hidden="true" className="ml-2">→</span></a>
+          </div>
+          <a href="https://books.2nspira.com" className="block overflow-hidden rounded-xl border border-line bg-white shadow-lg transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-label="Visit 2Nspira Books rare collectible bookstore">
+            <div className="flex items-center gap-2 border-b border-line bg-white px-4 py-3 text-xs text-body" aria-hidden="true">
+              <span className="h-2 w-2 rounded-full bg-slate-300" />
+              <span className="h-2 w-2 rounded-full bg-slate-300" />
+              <span className="h-2 w-2 rounded-full bg-slate-300" />
+              <span className="ml-2">books.2nspira.com</span>
+            </div>
+            <Image src="/images/shop/rare-books-website.webp" alt="2Nspira Books website featuring a signed limited edition of Stephen King’s Bag of Bones" width={1440} height={724} sizes="(min-width: 1024px) 500px, 100vw" className="h-auto w-full" />
+            <p className="border-t border-line px-4 py-3 text-sm font-semibold text-body">Preview our collectible bookstore <span aria-hidden="true">↗</span></p>
+          </a>
         </aside>
         <CollectionNav current="shop" />
         <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-6 text-body">Explore printable family games, cozy coloring books and pages, and thoughtful wall art from 2Nspira. Choose a collection, then complete your purchase on Etsy or Amazon.</p>
