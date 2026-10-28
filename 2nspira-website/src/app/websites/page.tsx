@@ -2,7 +2,7 @@ import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, ShoppingBag, LayoutDashboard, ChartNoAxesCombined, Languages, ShieldCheck } from "lucide-react";
+import { CalendarDays, ShoppingBag, LayoutDashboard, ChartNoAxesCombined, Languages, ShieldCheck, MapPin } from "lucide-react";
 import ServiceEffects from "@/components/ServiceEffects";
 import ServiceConversation from "@/components/ServiceConversation";
 import ServiceFit from "@/components/ServiceFit";
@@ -10,7 +10,7 @@ import ServiceQuestions from "@/components/ServiceQuestions";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { card, cardFlat, eyebrow, h2, h3, lead, linkInline, pageMain, section, sectionBand } from "@/components/ui";
 
-const description = "AI-native website development, grounded in real business needs. Explore multilingual websites, booking integrations, ecommerce, analytics, secure portals, and backend operations.";
+const description = "AI-native website development, grounded in real business needs. Explore multilingual websites, booking integrations, Google Maps, ecommerce, analytics, secure portals, and backend operations.";
 export const metadata: Metadata = publicPageMetadata({
   title: "AI-Native Website Development & Digital Platforms",
   shareTitle: "AI-native development. Websites built for real business.",
@@ -36,7 +36,7 @@ const projects = [
     need: "Connect property discovery with the information and workflows a property team manages behind the scenes.",
     work: "Property pages and media management, tenant access, maintenance workflows, and an Admin analytics workspace.",
     enables: "A customer-facing property experience connected to structured records and staff tools.",
-    tags: ["Property discovery", "Tenant portal", "Backend operations", "Analytics"],
+    tags: ["Property discovery", "Tenant portal", "Backend operations", "Analytics", "Maps & directions"],
     journey: ["Discover a property", "Make an inquiry", "Staff manage follow-up"],
     behind: "The backend includes property and unit records, photo assignments, tenant maintenance requests, and website analytics. Private tools require authorized access; the public preview is not a tenant or Admin demo.",
     note: "Public-facing preview shown. Backend workflows are in development; no tenant records are displayed.",
@@ -67,6 +67,7 @@ const projects = [
 
 const capabilities = [
   { icon: CalendarDays, title: "Booking & calendars", text: "Help visitors choose a time and book through the scheduling tools you already use.", proof: "Google Calendar at 2Nspira", href: "#2nspira" },
+  { icon: MapPin, title: "Google Maps & locations", text: "Help visitors explore locations, view property maps, and open Google Maps directions to the right address.", proof: "Teams property discovery · preview", href: "#teams-management" },
   { icon: ShoppingBag, title: "Online stores", text: "Bring product details, photographs, checkout, inventory, and order management into one considered journey.", proof: "2Nspira Books · preview", href: "#2nspira-books" },
   { icon: ShieldCheck, title: "Client & tenant portals", text: "Give authorized users a secure place for service information, requests, and updates.", proof: "2Nspira & Teams workflows", href: "#teams-management" },
   { icon: LayoutDashboard, title: "Backend operations", text: "Equip your team to manage content, records, inquiries, notifications, and the work that follows.", proof: "Teams property operations · preview", href: "#teams-management" },
