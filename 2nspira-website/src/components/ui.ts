@@ -17,10 +17,10 @@ export const buttonSecondary =
 
 /* Cards */
 export const card =
-  "rounded-2xl border border-line bg-surface shadow-soft transition-[transform,box-shadow,border-color] duration-300 ease-gentle hover:border-accent/20 hover:shadow-lift";
+  "effect-card rounded-2xl border border-line bg-surface shadow-soft transition-[transform,box-shadow,border-color] duration-300 ease-gentle hover:border-accent/20 hover:shadow-lift";
 
 export const cardFlat =
-  "rounded-2xl border border-line bg-surface transition-colors duration-300 ease-gentle hover:border-line-strong";
+  "effect-card rounded-2xl border border-line bg-surface transition-colors duration-300 ease-gentle hover:border-line-strong";
 
 /* Page shells */
 export const pageMain = "flex-1 bg-canvas";

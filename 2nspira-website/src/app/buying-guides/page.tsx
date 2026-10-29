@@ -1,3 +1,4 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import type { Metadata } from "next";
 import Link from "next/link";
 import guides from "@/content/buying-guides/index.json";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/buying-guides" },
 };
 export default function BuyingGuides() {
-  return <main id="main-content" className={pageMain}>
+  return <main id="main-content" className={pageMain}><CatalogEffects headings>
     <section className={pageHero}>
       <p className={eyebrow}>Tools that earn their place</p>
       <h1 className={h1}>Buy for the work.<br />Not the hype.</h1>
@@ -31,5 +32,5 @@ export default function BuyingGuides() {
         <p className="mt-4 leading-8 text-body">Product details can change. Each guide includes its review date and sources. Check the exact model, condition, compatibility, and current seller terms before ordering.</p>
       </div>
     </section>
-  </main>;
+  </CatalogEffects></main>;
 }

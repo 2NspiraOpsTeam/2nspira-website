@@ -2,10 +2,11 @@ import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, ShoppingBag, LayoutDashboard, ChartNoAxesCombined, Languages, ShieldCheck, MapPin } from "lucide-react";
+import { CalendarDays, ShoppingBag, LayoutDashboard, ChartNoAxesCombined, Languages, ShieldCheck, MapPin, MousePointer2, ArrowRight, Network, UserRoundCheck } from "lucide-react";
 import ServiceEffects from "@/components/ServiceEffects";
 import ServiceConversation from "@/components/ServiceConversation";
 import ServiceFit from "@/components/ServiceFit";
+import styles from "./websites.module.css";
 import ServiceQuestions from "@/components/ServiceQuestions";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { card, cardFlat, eyebrow, h2, h3, lead, linkInline, pageMain, section, sectionBand } from "@/components/ui";
@@ -104,7 +105,7 @@ export default function WebsitesPage() {
             <a href="#our-work" className={`mt-4 min-h-11 ${linkInline}`}>See the work <span aria-hidden="true"> ↓</span></a>
           </div>
           <div className="grid grid-cols-2 gap-3" aria-label="Selected project screenshots">
-            {projects.map(project => <a key={project.id} href={`#${project.id}`} className="group overflow-hidden rounded-2xl border border-line bg-canvas shadow-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+            {projects.map(project => <a key={project.id} href={`#${project.id}`} data-catalog-card className="group overflow-hidden rounded-2xl border border-line bg-canvas shadow-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
               <Image src={`/images/pages/${project.image}-showcase-20261028.jpg`} alt={`${project.name} public ${project.status.includes("preview") ? "preview" : "website"}`} width={1440} height={1000} sizes="(min-width: 1024px) 240px, (min-width: 640px) 290px, 45vw" className="aspect-[4/3] w-full object-cover object-top" priority={project.id === "gevitals" || project.id === "teams-management"} />
               <div className="p-3"><p className="text-sm font-semibold text-ink group-hover:text-accent">{project.name}</p><p className="mt-1 text-xs leading-5 text-muted">{project.status}</p></div>
             </a>)}
@@ -126,12 +127,13 @@ export default function WebsitesPage() {
               <div className="p-6 sm:p-8">
                 <div className="flex flex-wrap items-center justify-between gap-2"><p className="text-sm font-medium text-accent">{project.category}</p><span className="rounded-full border border-line bg-canvas px-3 py-1 text-xs font-semibold text-body">{project.status}</span></div>
                 <h3 id={`${project.id}-heading`} className="mt-4 text-2xl font-semibold tracking-tight text-ink">{project.name}</h3>
-                <dl className="mt-5 space-y-4 text-sm leading-7 text-body">
-                  {[["The need", project.need], ["What we built", project.work], ["What it enables", project.enables]].map(([label, text]) => <div key={label}><dt className="font-semibold text-ink">{label}</dt><dd>{text}</dd></div>)}
-                </dl>
+                <p className="mt-4 text-sm leading-7 text-body">{project.enables}</p>
                 <ul className="mt-5 flex flex-wrap gap-2" aria-label={`${project.name} capabilities`}>{project.tags.map(tag => <li key={tag} className="rounded-full bg-accent-soft px-3 py-1.5 text-xs font-medium text-ink">{tag}</li>)}</ul>
                 <details className="mt-5 border-y border-line">
-                  <summary className="cursor-pointer rounded py-4 font-semibold text-ink focus-visible:outline-2 focus-visible:outline-accent">Explore the customer journey</summary>
+                  <summary className="cursor-pointer rounded py-4 font-semibold text-ink focus-visible:outline-2 focus-visible:outline-accent">Inside the project &amp; customer journey</summary>
+                  <dl className="my-5 space-y-4 text-sm leading-7 text-body">
+                  {[["The need", project.need], ["What we built", project.work], ["What it enables", project.enables]].map(([label, text]) => <div key={label}><dt className="font-semibold text-ink">{label}</dt><dd>{text}</dd></div>)}
+                  </dl>
                   <ol className="space-y-3 pb-4" aria-label={`${project.name} journey`}>{project.journey.map((step, index) => <li key={step} className="flex items-center gap-3 text-sm text-body"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent">{index + 1}</span>{step}</li>)}</ol>
                   <p className="pb-5 text-sm leading-7 text-body">{project.behind}</p>
                 </details>
@@ -152,10 +154,19 @@ export default function WebsitesPage() {
 
       <section id="capabilities" className={sectionBand} aria-labelledby="capabilities-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className={eyebrow}>Choose what your business needs</p>
-          <h2 data-catalog-reveal id="capabilities-heading" className={`mt-4 ${h2}`}>What should your website make possible?</h2>
-          <p className={`max-w-3xl ${lead}`}>Start with your customer’s next action and your team’s next task. We help you decide what to build, buy, connect, or defer—not add features for their own sake.</p>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{capabilities.map(({ icon: Icon, title, text, proof, href }) => <article key={title} data-catalog-card data-service-card className={`flex flex-col p-6 sm:p-7 ${card}`}>
+          <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+            <div>
+              <p className={eyebrow}>Choose what your business needs</p>
+              <h2 data-catalog-reveal id="capabilities-heading" className={`mt-4 ${h2}`}>Designed around people.<br />Connected to your business.</h2>
+              <p className={lead}>An easier booking. A clearer purchase. A better handoff to your team. Start with the moments that matter, then choose the capabilities to support them.</p>
+              <a href="#platform-model" className={`mt-5 min-h-11 ${linkInline}`}>See how the pieces connect <span aria-hidden="true" className="ml-2">↓</span></a>
+            </div>
+            <figure data-catalog-fade className="overflow-hidden rounded-[1.5rem] border border-line bg-surface shadow-soft">
+              <Image src="/images/pages/websites-business-journey-20261028.webp" alt="Illustrative scene of two small-business colleagues reviewing a tablet and planning work together in a studio." width={1536} height={1024} sizes="(min-width: 1024px) 520px, 100vw" className="aspect-[3/2] w-full object-cover" />
+              <figcaption className="px-5 py-3 text-sm leading-6 text-body">Less friction for your customers. More clarity for your team.</figcaption>
+            </figure>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{capabilities.map(({ icon: Icon, title, text, proof, href }) => <article key={title} data-catalog-card data-service-card className={`flex flex-col p-6 sm:p-7 ${card} ${styles.capability}`}>
             <span data-service-icon><Icon size={25} strokeWidth={1.6} aria-hidden="true" /></span><h3 className={h3}>{title}</h3><p className="mt-4 flex-1 leading-7 text-body">{text}</p><a href={href} className={`mt-5 min-h-11 text-sm ${linkInline}`}>{proof} <span aria-hidden="true"> ↑</span></a>
           </article>)}</div>
           <p className="mt-6 text-sm leading-7 text-muted">Capabilities are scoped to each engagement. Preview examples demonstrate development work, not a promise that every feature is live or included in every website.</p>
@@ -164,15 +175,25 @@ export default function WebsitesPage() {
 
       <section id="ai-native" className={section} aria-labelledby="ai-native-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div><p className={eyebrow}>Our development approach</p><h2 data-catalog-reveal id="ai-native-heading" className={`mt-4 ${h2}`}>AI-native development. Human product judgment.</h2><p className={lead}>AI supports how we explore, implement, and review. People remain responsible for the decisions: what to build, how it should work, and whether it is ready to launch.</p><p className="mt-4 leading-7 text-body">AI-native is how we build. AI-powered is a feature choice. Your website does not need a chatbot to benefit from our approach.</p><Link href="/ai-enablement" className={`mt-6 min-h-11 ${linkInline}`}>Explore AI enablement →</Link></div>
-            <ol className="grid gap-4 sm:grid-cols-2" aria-label="Our AI-native development approach">{[
-              ["Understand the business", "Define the audience, useful outcomes, existing tools, and constraints before choosing features."],
-              ["Build with AI assistance", "Use AI alongside engineering and design work to explore options and implement the agreed experience."],
-              ["Review the real journeys", "Check content, access boundaries, integrations, accessibility, and responsive behavior—not just the generated code."],
-              ["Verify and hand over", "Check the deployed experience, document the agreed scope, and define ownership and ongoing support."],
-            ].map(([title, text], index) => <li key={title} className={`p-6 ${cardFlat}`}><p className="text-sm font-semibold text-accent">0{index + 1}</p><h3 className={`mt-4 ${h3}`}>{title}</h3><p className="mt-3 text-sm leading-7 text-body">{text}</p></li>)}</ol>
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <figure data-catalog-fade className="overflow-hidden rounded-[1.5rem] border border-line shadow-soft">
+              <Image src="/images/advisory/focused-collaboration.webp" alt="Illustrative scene of three colleagues reviewing work together on a laptop." width={1672} height={941} sizes="(min-width: 1024px) 540px, 100vw" className="aspect-[4/3] w-full object-cover" />
+              <figcaption className="bg-canvas-deep px-5 py-3 text-sm leading-6 text-body">Technology assists. People decide.</figcaption>
+            </figure>
+            <div>
+              <p className={eyebrow}>Our development approach</p>
+              <h2 data-catalog-reveal id="ai-native-heading" className={`mt-4 ${h2}`}>AI-native development.<br />Human product judgment.</h2>
+              <p className={lead}>AI helps us explore, implement, and review. People stay responsible for what we build, how it works, and whether it is ready to launch.</p>
+              <p className="mt-4 leading-7 text-body">AI-native is how we build. AI-powered is a feature choice. Your website does not need a chatbot to benefit from our approach.</p>
+              <Link href="/ai-enablement" className={`mt-6 min-h-11 ${linkInline}`}>Explore AI enablement →</Link>
+            </div>
           </div>
+          <ol className={`mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 ${styles.approach}`} aria-label="Our AI-native development approach">{[
+            ["Understand", "Define the audience, outcomes, existing tools, and constraints."],
+            ["Build", "Combine AI assistance with engineering and design judgment."],
+            ["Review", "Check real journeys, access, accessibility, and responsive behavior."],
+            ["Hand over", "Verify the deployed experience and agree ownership and support."],
+          ].map(([title, text], index) => <li key={title} data-catalog-fade className="relative border-t border-line pt-6"><span className={styles.stepNumber}>0{index + 1}</span><h3 className={`mt-5 ${h3}`}>{title}</h3><p className="mt-3 text-sm leading-7 text-body">{text}</p></li>)}</ol>
         </div>
       </section>
 
@@ -181,12 +202,23 @@ export default function WebsitesPage() {
         { title: "Connect the next step", text: "Booking, inquiries, commerce, or information that needs a better handoff to your team." },
         { title: "Extend your operations", text: "A portal, Admin workspace, or integration when the business has outgrown disconnected tools." },
       ]} />
-      <section id="platform-model" className={section} aria-labelledby="platform-model-heading">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6"><h2 data-catalog-reveal id="platform-model-heading" className={h2}>One journey. Connected where it matters.</h2><p className={`max-w-3xl ${lead}`}>A booking, purchase, or request should have a clear next step. We scope the connections around the systems and processes your team actually uses.</p><ol className="mt-8 grid gap-4 md:grid-cols-3" aria-label="Illustrative connected business workflow">{[
-          ["01", "A customer takes action", "They book, buy, inquire, or submit a request."],
-          ["02", "The right context follows", "The agreed integration passes relevant information into the appropriate tools."],
-          ["03", "Your team can act", "Staff can review records, manage status, and follow up."],
-        ].map(([number, title, text]) => <li key={number} className={`p-6 ${cardFlat}`}><p className="text-sm font-semibold text-accent">{number}</p><h3 className={`mt-4 ${h3}`}>{title}</h3><p className="mt-3 leading-7 text-body">{text}</p></li>)}</ol><p className="mt-4 text-sm leading-7 text-muted">Illustrative workflow. Integrations, payments, automation, and portals are agreed separately for each project.</p><Link href="/automation-systems-optimization" className={`mt-6 min-h-11 ${linkInline}`}>Explore systems integration →</Link></div>
+      <section id="platform-model" className="px-4 py-12 sm:px-6 sm:py-16" aria-labelledby="platform-model-heading">
+        <div className={`mx-auto max-w-6xl overflow-hidden rounded-[2rem] p-6 sm:p-10 lg:p-14 ${styles.journey}`}>
+          <div className="max-w-2xl">
+            <p className={styles.lightEyebrow}>From first click to follow-through</p>
+            <h2 data-catalog-reveal id="platform-model-heading" className={`mt-4 ${styles.lightHeading}`}>One journey.<br />Connected where it matters.</h2>
+            <p className="mt-5 text-lg leading-8 text-white/85">A booking, purchase, or request should have a clear next step—for the customer and the people doing the work.</p>
+          </div>
+          <ol className={`mt-10 grid gap-5 md:grid-cols-3 ${styles.flow}`} aria-label="Illustrative connected business workflow">{[
+            { Icon: MousePointer2, title: "Your customer takes action", text: "They book, buy, inquire, or submit a request.", label: "The experience" },
+            { Icon: Network, title: "The right context follows", text: "An agreed integration passes relevant information to the appropriate tools.", label: "The connection" },
+            { Icon: UserRoundCheck, title: "Your team can act", text: "Staff review records, manage status, and follow up.", label: "The follow-through" },
+          ].map(({Icon, title, text, label}, index) => <li key={title} data-catalog-fade className={styles.flowStep}><div className="flex items-center justify-between"><span className={styles.flowIcon}><Icon size={26} strokeWidth={1.6} aria-hidden="true" /></span><span className="text-sm font-medium text-white/70">0{index+1}</span></div><p className="mt-6 text-xs font-semibold uppercase tracking-widest text-white/70">{label}</p><h3 className="mt-3 text-xl font-semibold leading-7 text-white">{title}</h3><p className="mt-3 text-sm leading-7 text-white/85">{text}</p>{index<2 && <ArrowRight className={styles.flowArrow} size={24} aria-hidden="true" />}</li>)}</ol>
+          <div className="mt-8 flex flex-wrap items-start justify-between gap-5 border-t border-white/20 pt-6">
+            <p className="max-w-xl text-sm leading-7 text-white/75">Illustrative workflow. Integrations, payments, automation, and portals are agreed separately for each project.</p>
+            <Link href="/automation-systems-optimization" className={styles.lightLink}>Explore systems integration <ArrowRight size={18} aria-hidden="true" /></Link>
+          </div>
+        </div>
       </section>
       <ServiceQuestions items={websiteQuestions} />
       <section className={sectionBand} aria-labelledby="website-cta-heading"><div className="mx-auto max-w-3xl px-4 text-center sm:px-6"><h2 data-catalog-reveal id="website-cta-heading" className={h2}>What should your website make easier?</h2><p className={lead}>Bring your current site, a new idea, or a customer journey that isn’t working. We’ll discuss what matters now and the simplest useful next step.</p><ServiceConversation label="Discuss your website project" centered /></div></section>

@@ -1,0 +1,15 @@
+/* Editorial contrast and connected steps, using the existing brand palette. */
+.capability:last-child { grid-column: 1 / -1; }
+.stepNumber { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border: 1px solid var(--color-line); border-radius: 50%; background: var(--color-accent-soft); color: var(--color-accent-strong); font-size: .875rem; font-weight: 600; }
+.journey { background: var(--color-ink); color: white; }
+.lightEyebrow { color: #b8ccef; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.lightHeading { color: white; font-size: clamp(1.875rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -.025em; line-height: 1.18; }
+.flowStep { position: relative; border: 1px solid rgb(255 255 255 / 20%); background: rgb(255 255 255 / 5%); border-radius: 1rem; padding: 1.5rem; }
+.flowIcon { display: inline-flex; align-items: center; justify-content: center; width: 3.25rem; height: 3.25rem; border-radius: 1rem; background: rgb(184 204 239 / 15%); color: #cbdaf3; }
+.flowArrow { display: none; }
+.lightLink { display: inline-flex; align-items: center; gap: .625rem; min-height: 2.75rem; color: white; font-weight: 500; text-decoration: underline; text-underline-offset: .3em; text-decoration-color: #8499b9; transition: text-decoration-color 220ms ease; }
+.lightLink:hover { text-decoration-color: white; }
+.lightLink:focus-visible { outline: 2px solid #b8ccef; outline-offset: 4px; border-radius: .25rem; }
+@media (min-width: 768px) { .flowArrow { display: block; position: absolute; right: -1.45rem; top: 2.5rem; z-index: 1; color: #b8ccef; background: var(--color-ink); border-radius: 50%; padding: .125rem; } }
+@media (min-width: 1024px) { .capability:last-child { grid-column: span 3; display: grid; grid-template-columns: auto 1fr 2fr auto; align-items: center; column-gap: 1.5rem; } .capability:last-child > span { margin: 0; } .capability:last-child > p, .capability:last-child > a { margin-top: 0; } }
+@media (prefers-reduced-motion: reduce) { .lightLink { transition: none; } }
