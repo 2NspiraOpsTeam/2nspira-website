@@ -104,7 +104,7 @@ export default function WebsitesPage() {
             <a href="#our-work" className={`mt-4 min-h-11 ${linkInline}`}>See the work <span aria-hidden="true"> ↓</span></a>
           </div>
           <div className="grid grid-cols-2 gap-3" aria-label="Selected project screenshots">
-            {projects.map(project => <a key={project.id} href={`#${project.id}`} className="group overflow-hidden rounded-2xl border border-line bg-canvas shadow-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+            {projects.map(project => <a key={project.id} href={`#${project.id}`} data-catalog-card className="group overflow-hidden rounded-2xl border border-line bg-canvas shadow-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
               <Image src={`/images/pages/${project.image}-showcase-20261028.jpg`} alt={`${project.name} public ${project.status.includes("preview") ? "preview" : "website"}`} width={1440} height={1000} sizes="(min-width: 1024px) 240px, (min-width: 640px) 290px, 45vw" className="aspect-[4/3] w-full object-cover object-top" priority={project.id === "gevitals" || project.id === "teams-management"} />
               <div className="p-3"><p className="text-sm font-semibold text-ink group-hover:text-accent">{project.name}</p><p className="mt-1 text-xs leading-5 text-muted">{project.status}</p></div>
             </a>)}

@@ -135,7 +135,7 @@ export default function BooksPage() {
             alt="Conceptual visualization of an open book and tea beside a soft window."
             width={1344}
             height={768}
-            className="h-auto w-full rounded-xl transition-transform duration-700 ease-gentle hover:scale-[1.015]"
+            className="h-auto w-full rounded-xl transition-transform duration-700 ease-gentle motion-safe:hover:scale-[1.015]"
           />
           <div className="self-center">
             <p><EyebrowPill>The practice of reading</EyebrowPill></p>

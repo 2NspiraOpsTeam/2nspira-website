@@ -1,15 +1,13 @@
-/* Scoped progressive effects for catalog pages and the coaching service. */
-.catalog [data-catalog-card] {
+/* Shared public-page polish. Card tokens automatically include new sections. */
+.catalog :is([data-catalog-card], .effect-card) {
   transition: transform 280ms var(--ease-gentle), box-shadow 280ms var(--ease-gentle), border-color 280ms var(--ease-gentle);
 }
 
-.catalog [data-catalog-card] img {
-  transform: none;
-  translate: none;
+.catalog :is([data-catalog-card], .effect-card) img {
   transition: transform 450ms var(--ease-gentle);
 }
 
-.catalog [data-catalog-card]:focus-within {
+.catalog :is([data-catalog-card], .effect-card):is(:hover, :focus-within) {
   border-color: var(--color-accent);
   box-shadow: 0 14px 34px rgb(35 41 54 / 9%);
 }
@@ -29,12 +27,12 @@
 }
 
 @media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
-  .catalog [data-catalog-card]:hover {
+  .catalog :is([data-catalog-card], .effect-card):not(details):not(:has(.effect-card)):hover {
     transform: translateY(-4px);
     box-shadow: 0 18px 42px rgb(35 41 54 / 10%);
   }
 
-  .catalog [data-catalog-card]:hover img {
+  .catalog :is([data-catalog-card], .effect-card):not(:has(.effect-card)):hover img {
     transform: scale(1.018);
   }
 
@@ -44,7 +42,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .catalog :is([data-catalog-card], img, a) {
+  .catalog :is([data-catalog-card], .effect-card, img, a) {
     transform: none !important;
     translate: none !important;
     scale: none !important;

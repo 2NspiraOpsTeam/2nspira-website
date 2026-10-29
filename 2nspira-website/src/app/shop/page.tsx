@@ -37,14 +37,14 @@ export default function ShopPage() {
         </div>
       </header>
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
-        <aside className="mb-10 grid items-center gap-7 rounded-2xl border border-line bg-accent-soft p-6 sm:p-8 lg:grid-cols-2 lg:gap-10" aria-labelledby="shop-bookstore-title">
+        <aside data-catalog-fade className="mb-10 grid items-center gap-7 rounded-2xl border border-line bg-accent-soft p-6 sm:p-8 lg:grid-cols-2 lg:gap-10" aria-labelledby="shop-bookstore-title">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-body">The collector’s shelf · 2Nspira Books</p>
             <h2 id="shop-bookstore-title" className={h2}>Rare books. Remarkable editions.</h2>
             <p className="mt-3 leading-7 text-body">Discover our collection of rare collectible books, including signed and limited editions. Explore photographs of the actual copies, individual condition details, and the stories behind each edition at 2Nspira Books.</p>
             <a href="https://books.2nspira.com" className={`mt-5 min-h-[48px] ${buttonPrimary}`}>Explore rare collectibles <span aria-hidden="true" className="ml-2">→</span></a>
           </div>
-          <a href="https://books.2nspira.com" className="block overflow-hidden rounded-xl border border-line bg-white shadow-lg transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-label="Visit 2Nspira Books rare collectible bookstore">
+          <a href="https://books.2nspira.com" data-catalog-card className="block overflow-hidden rounded-xl border border-line bg-white shadow-lg transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-label="Visit 2Nspira Books rare collectible bookstore">
             <div className="flex items-center gap-2 border-b border-line bg-white px-4 py-3 text-xs text-body" aria-hidden="true">
               <span className="h-2 w-2 rounded-full bg-slate-300" />
               <span className="h-2 w-2 rounded-full bg-slate-300" />
