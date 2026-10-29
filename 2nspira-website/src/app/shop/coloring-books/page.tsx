@@ -6,8 +6,8 @@ import { catalogPages } from "@/content/catalog/seo";
 import type { Metadata } from "next";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { CollectionNav } from "@/components/shop/ShopCollection";
-import LittleCocoaCard from "@/components/shop/LittleCocoaCard";
-import LittleHauntsCard from "@/components/shop/LittleHauntsCard";
+import ColoringBookCard from "@/components/shop/ColoringBookCard";
+import { coloringBooks } from "@/content/shop/coloring-books";
 import { h1, lead, pageHero, pageMain } from "@/components/ui";
 
 const description = catalogPages.coloring.description;
@@ -42,9 +42,9 @@ export default function ColoringBooksPage() {
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
         <CollectionNav current="coloring" />
         <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-6 text-body">
-          Physical paperback coloring books, not digital downloads. Purchases and fulfillment are handled on Amazon.
+          Physical paperback coloring books, not digital downloads. Released titles are sold and fulfilled on Amazon; upcoming books are marked Coming soon.
         </p>
-        <div className="mt-10 space-y-10"><LittleHauntsCard headingLevel="h2" /><LittleCocoaCard headingLevel="h2" /></div>
+        <div className="mt-10 space-y-10">{coloringBooks.map(book => <ColoringBookCard key={book.id} {...book} headingLevel="h2" />)}</div>
         <CatalogFaq page="coloring" />
       </div>
       </CatalogEffects>

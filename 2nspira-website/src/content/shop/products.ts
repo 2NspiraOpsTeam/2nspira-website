@@ -6,7 +6,7 @@ export type ShopProduct = {
   id: string;
   title: string;
   description: string;
-  format: "Digital download" | "Physical print · Multiple sizes" | "Paperback · Amazon";
+  format: "Digital download" | "Physical print · Multiple sizes" | "Paperback · Amazon" | "Paperback & Kindle · Amazon";
   marketplace?: "Etsy" | "Amazon";
   details: string;
   image: string;
@@ -171,5 +171,22 @@ export const activityBooks: ShopProduct[] = [
     imageHeight: 1873,
     imageAlt: "Grandparents and Grandkids Table Challenges cover with cream lettering, a gold banner, and two speech bubbles on a blue background",
     href: "https://www.amazon.com/dp/B0HP83DSV9",
+  },
+];
+
+
+export const leadershipBooks: ShopProduct[] = [
+  {
+    id: "trust-is-the-operating-system",
+    title: "Trust Is the Operating System",
+    description: "Explore how human-centered leaders build organizations that endure in an AI-saturated world—and why trust, judgment, and meaning matter as automation increases.",
+    format: "Paperback & Kindle · Amazon",
+    marketplace: "Amazon",
+    details: "By Jeffrey Cortez · Leadership, trust, and AI · Choose your edition on Amazon",
+    image: "/images/books/trust-is-the-operating-system.jpg",
+    imageWidth: 1600,
+    imageHeight: 2560,
+    imageAlt: "Cover of Trust Is the Operating System by Jeffrey Cortez",
+    href: "https://www.amazon.com/dp/B0GDQG1XBL",
   },
 ];

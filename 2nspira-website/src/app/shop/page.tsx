@@ -8,9 +8,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { CollectionNav, EtsyShopLink, ProductGrid } from "@/components/shop/ShopCollection";
-import LittleCocoaCard from "@/components/shop/LittleCocoaCard";
-import LittleHauntsCard from "@/components/shop/LittleHauntsCard";
-import { activityBooks, artPrints, printables } from "@/content/shop/products";
+import ColoringBookCard from "@/components/shop/ColoringBookCard";
+import { coloringBooks } from "@/content/shop/coloring-books";
+import { activityBooks, artPrints, leadershipBooks, printables } from "@/content/shop/products";
 import { buttonPrimary, h1, h2, lead, linkInline, pageHero, pageMain } from "@/components/ui";
 
 const description = catalogPages.shop.description;
@@ -56,7 +56,14 @@ export default function ShopPage() {
           </a>
         </aside>
         <CollectionNav current="shop" />
-        <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-6 text-body">Explore printable family games, cozy coloring books and pages, and thoughtful wall art from 2Nspira. Choose a collection, then complete your purchase on Etsy or Amazon.</p>
+        <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-6 text-body">Explore all our books in one place: leadership, family activities, and cozy coloring—plus printable games and thoughtful wall art. Choose a collection, then complete your purchase on Etsy or Amazon.</p>
+        <section aria-labelledby="leadership-books-title" className="mt-14">
+          <div data-catalog-reveal className="mb-8">
+            <h2 id="leadership-books-title" className={h2}>Leadership Books</h2>
+            <p className="mt-3 max-w-2xl leading-7 text-body">Ideas for human-centered leadership in an AI-saturated world. <Link href="/books" className={linkInline}>Explore the book and selected excerpts →</Link></p>
+          </div>
+          <ProductGrid products={leadershipBooks} headingLevel="h3" />
+        </section>
         <section aria-labelledby="family-activity-books-title" className="mt-14">
           <div data-catalog-reveal className="mb-8">
             <h2 id="family-activity-books-title" className={h2}>Family Activity Books</h2>
@@ -78,11 +85,11 @@ export default function ShopPage() {
           <div data-catalog-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="coloring-books-title" className={h2}>Coloring Books</h2>
-              <p className="mt-3 max-w-2xl leading-7 text-body">Cozy worlds to make your own. Paperback coloring books from 2Nspira Books, available on Amazon.</p>
+              <p className="mt-3 max-w-2xl leading-7 text-body">Cozy worlds to make your own. Paperback coloring books from 2Nspira Books. Shop released titles on Amazon and preview what’s coming next.</p>
             </div>
             <Link href="/shop/coloring-books" className={`${linkInline} min-h-[44px]`}>Explore Coloring Books <span aria-hidden="true" className="ml-1">→</span></Link>
           </div>
-          <div className="space-y-10"><LittleHauntsCard /><LittleCocoaCard /></div>
+          <div className="space-y-10">{coloringBooks.map(book => <ColoringBookCard key={book.id} {...book} />)}</div>
         </section>
         <section aria-labelledby="art-title" className="mt-20 border-t border-line pt-14">
           <div data-catalog-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">

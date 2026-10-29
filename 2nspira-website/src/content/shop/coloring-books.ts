@@ -3,7 +3,8 @@ export type ColoringBook = {
   title: string;
   image: string;
   imageAlt: string;
-  href: string;
+  href?: string;
+  comingSoon?: boolean;
   paragraphs: readonly string[];
 };
 
@@ -33,4 +34,32 @@ export const littleCocoa: ColoringBook = {
   ]
 };
 
-export const coloringBooks: readonly ColoringBook[] = [littleHaunts, littleCocoa];
+// KDP Bookshelf verified 2026-10-28: both companions remain Draft.
+// Add purchase URLs only after their public Amazon listings are verified live.
+export const cozyNooks: ColoringBook = {
+  id: "little-haunts-cozy-nooks",
+  title: "Little Haunts & Cozy Nooks",
+  image: "/images/books/little-haunts-cozy-nooks.webp",
+  imageAlt: "Little Haunts and Cozy Nooks cover with a friendly ghost reading in an armchair beside a sleeping cat",
+  comingSoon: true,
+  paragraphs: [
+    "Cozy rooms. Happy little haunts. Explore snug reading corners, pillow forts, cheerful craft rooms, and moonlit hideaways with friendly ghosts and curious cats.",
+    "40 original illustrations pair bold outlines with a short rhyme beneath every scene. This 88-page, 8.5 × 8.5-inch paperback includes blank reverse pages and a color-swatch page.",
+    "Use colored pencils, or place a protective sheet behind the page when using markers; blank backs do not prevent bleed-through."
+  ]
+};
+
+export const woodlandWonders: ColoringBook = {
+  id: "little-haunts-woodland-wonders",
+  title: "Little Haunts & Woodland Wonders",
+  image: "/images/books/little-haunts-woodland-wonders.webp",
+  imageAlt: "Little Haunts and Woodland Wonders cover with a friendly ghost and woodland animals in an enchanted forest",
+  comingSoon: true,
+  paragraphs: [
+    "Small adventures. Woodland magic. Wander past mushroom cottages, hollow-tree libraries, woodland picnics, and lantern-lit paths with friendly ghosts and forest neighbors.",
+    "40 original illustrations pair bold outlines with a short rhyme beneath every scene. This 88-page, 8.5 × 8.5-inch paperback includes blank reverse pages and a color-swatch page.",
+    "Use colored pencils, or place a protective sheet behind the page when using markers; blank backs do not prevent bleed-through."
+  ]
+};
+
+export const coloringBooks: readonly ColoringBook[] = [littleHaunts, littleCocoa, cozyNooks, woodlandWonders];
