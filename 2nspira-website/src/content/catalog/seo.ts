@@ -1,8 +1,8 @@
 export const catalogPages = {
   shop: {
     path: "/shop", name: "Shop",
-    title: "Shop Printable Games, Coloring Books & Art Prints",
-    description: "Explore 2Nspira printable family games, cozy coloring books and pages, and thoughtful wall art. Discover digital downloads on Etsy and paperbacks on Amazon.",
+    title: "Shop Books, Printable Games & Art Prints",
+    description: "Explore all 2Nspira books: leadership, family activities, released and upcoming coloring titles, plus printable games and thoughtful wall art. Discover digital downloads on Etsy and paperbacks on Amazon.",
   },
   printables: {
     path: "/shop/printables-games", name: "Printables & Games",
@@ -12,7 +12,7 @@ export const catalogPages = {
   coloring: {
     path: "/shop/coloring-books", name: "Coloring Books",
     title: "Cozy Coloring Books for Adults & Teens",
-    description: "Discover Little Haunts & Happy Plants and The Little Cocoa Club: cozy paperback coloring books for adults and teens from 2Nspira Books, available on Amazon.",
+    description: "Discover cozy coloring books for adults and teens: shop Little Haunts & Happy Plants and The Little Cocoa Club, and preview Cozy Nooks and Woodland Wonders.",
   },
   art: {
     path: "/shop/art-prints", name: "Art Prints",
@@ -38,8 +38,8 @@ export const catalogQuestions: Record<CatalogPage, readonly CatalogQuestion[]> =
     { question: "Does the Christmas Gathering Bundle include extra activities?", answer: "The bundle contains the same PDFs as Christmas Table Rescue and The Cozy Elf Workshop: eight group challenges and sixteen individual activities. It does not include additional or exclusive activities." },
   ],
   coloring: [
-    { question: "Are these coloring books paperbacks or printable files?", answer: "These two titles are physical paperback coloring books for adults and teens, purchased on Amazon. The Cocoa Club printable PDF is a separate Etsy product in Printables & Games.", link: { label: "Browse printable games and coloring pages", href: "/shop/printables-games" } },
-    { question: "Can I use markers in the coloring books?", answer: "Both books have artwork with blank reverse pages. Use a protective sheet behind your page when using markers: blank backs do not prevent ink from bleeding through. Each book also includes a color-swatch page." },
+    { question: "Are these coloring books paperbacks or printable files?", answer: "These are physical paperback coloring books for adults and teens. Released titles are purchased on Amazon; upcoming titles are marked Coming soon and cannot yet be ordered. The Cocoa Club printable PDF is a separate Etsy product in Printables & Games.", link: { label: "Browse printable games and coloring pages", href: "/shop/printables-games" } },
+    { question: "Can I use markers in the coloring books?", answer: "The coloring books have artwork with blank reverse pages. Use a protective sheet behind your page when using markers: blank backs do not prevent ink from bleeding through. Each book also includes a color-swatch page." },
   ],
   art: [
     { question: "Which Art Prints are digital downloads?", answer: "Build the bridge, Leave room, Own the next step, and Help others rise are digital artwork downloads. Each includes one design in 5 × 7-inch, 8 × 10-inch, and A4 PDF sizes, plus a printing guide. Reduce the Noise. Strengthen the Signal. is the physical print." },

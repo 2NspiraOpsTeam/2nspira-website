@@ -7,7 +7,7 @@ type ColoringBookCardProps = ColoringBook & {
   headingLevel?: "h2" | "h3";
 };
 
-export default function ColoringBookCard({ id, title, image, imageAlt, paragraphs, href, headingLevel = "h3" }: ColoringBookCardProps) {
+export default function ColoringBookCard({ id, title, image, imageAlt, paragraphs, href, comingSoon, headingLevel = "h3" }: ColoringBookCardProps) {
   const Heading = headingLevel;
   return (
     <section id={id} data-coloring-book data-catalog-card aria-labelledby={`${id}-title`}
@@ -21,8 +21,17 @@ export default function ColoringBookCard({ id, title, image, imageAlt, paragraph
         <div className="mt-6 space-y-4 leading-8 text-body">
           {paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
-        <a href={href} rel="sponsored" className={`mt-6 min-h-[44px] ${buttonPrimary}`}>Buy on Amazon</a>
-        <p className={`mt-3 ${caption}`}>As an Amazon Associate I earn from qualifying purchases.</p>
+        {comingSoon ? (
+          <div className="mt-6 rounded-xl border border-line bg-accent-soft p-4">
+            <p className="font-semibold text-ink">Coming soon</p>
+            <p className="mt-1 text-sm leading-6 text-body">Not yet available to order. The Amazon purchase link will appear here after release.</p>
+          </div>
+        ) : href ? (
+          <>
+            <a href={href} rel="sponsored" className={`mt-6 min-h-[44px] ${buttonPrimary}`}>Buy on Amazon</a>
+            <p className={`mt-3 ${caption}`}>As an Amazon Associate I earn from qualifying purchases.</p>
+          </>
+        ) : null}
       </div>
     </section>
   );
