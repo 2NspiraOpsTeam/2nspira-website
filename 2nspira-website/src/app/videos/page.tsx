@@ -15,7 +15,7 @@ export const metadata: Metadata = publicPageMetadata({
 });
 
 function VideoCard({ video }: { video: typeof videos[number] }) {
-  return <article className={`min-w-0 p-4 sm:p-5 ${card}`}>
+  return <article data-catalog-card className={`min-w-0 p-4 sm:p-5 ${card}`}>
     <VideoPlayer id={video.id} title={video.title} duration={video.duration} />
     <h3 className="mt-5 text-xl font-semibold leading-snug text-ink">{video.title}</h3>
     <p className="mt-3 leading-7 text-body">{video.description}</p>
@@ -49,7 +49,7 @@ export default function VideosPage() {
         <p className={`max-w-2xl ${lead}`}>Rain and café ambience to accompany reading, rest, or a slower moment in your day.</p>
         <div className="mt-8 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">{videos.filter(video => video.category === "ambience").map(video => <VideoCard key={video.id} video={video} />)}</div>
       </section>
-      <aside className={`mt-16 p-7 sm:p-10 ${cardFlat}`}>
+      <aside data-catalog-card className={`mt-16 p-7 sm:p-10 ${cardFlat}`}>
         <h2 className="text-2xl font-semibold text-ink">More from 2Nspira</h2>
         <p className="mt-3 max-w-2xl leading-7 text-body">Visit our channel for new releases, and subscribe on YouTube if you’d like to follow along.</p>
         <a href={youtubeChannel} target="_blank" rel="noopener noreferrer" className={`mt-4 min-h-11 gap-2 ${linkInline}`} aria-label="Follow 2Nspira on YouTube (opens in a new tab)">Follow 2Nspira on YouTube <ArrowUpRight size={16} aria-hidden="true" /></a>
