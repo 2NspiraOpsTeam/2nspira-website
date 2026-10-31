@@ -18,6 +18,7 @@ const serviceLinks = [
 
 const ideaLinks = [
   { name: "Insights", href: "/insights" },
+  { name: "Videos", href: "/videos" },
   { name: "Resources", href: "/resources" },
   { name: "Leadership Books", href: "/books" },
   { name: "Bookstore", href: "https://books.2nspira.com" },
