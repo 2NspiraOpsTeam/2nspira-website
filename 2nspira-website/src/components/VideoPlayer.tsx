@@ -21,7 +21,7 @@ export default function VideoPlayer({ id, title, duration }: { id: string; title
         className="h-full w-full object-cover" />
       <span className="absolute inset-0 bg-black/15" />
       <span className="absolute inset-0 flex items-center justify-center">
-        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-black/75 ring-1 ring-white/60 transition-colors group-hover:bg-black/90"><Play size={26} fill="currentColor" aria-hidden="true" /></span>
+        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-black/75 ring-1 ring-white/60 transition-[background-color,transform,box-shadow] duration-300 ease-gentle group-hover:bg-black/90 group-focus-visible:bg-black/90 motion-safe:group-hover:scale-105 motion-safe:group-focus-visible:scale-105 group-hover:shadow-[0_0_0_8px_rgb(255_255_255_/_12%)] motion-reduce:transition-none"><Play size={26} fill="currentColor" aria-hidden="true" /></span>
       </span>
       <span className="absolute bottom-3 right-3 rounded bg-black/85 px-2 py-1 text-xs font-semibold">{duration}</span>
     </button>}
