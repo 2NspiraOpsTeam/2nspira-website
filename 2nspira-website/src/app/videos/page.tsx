@@ -78,7 +78,7 @@ export default function VideosPage() {
             <p className={eyebrow}>Technology &amp; people</p>
             <h2 id="leadership-videos" className={`mt-3 scroll-mt-28 ${h2}`}>A fresh perspective.</h2>
             <p className={lead}>Good ideas deserve more than a headline. Explore the human side of AI adoption, trust, and leadership through a different kind of storytelling.</p>
-            <Link href="/blog" className={`mt-5 min-h-11 gap-2 ${linkInline}`}>Explore more ideas <ArrowUpRight size={16} aria-hidden="true" /></Link>
+            <Link href="/insights" className={`mt-5 min-h-11 gap-2 ${linkInline}`}>Explore more ideas <ArrowUpRight size={16} aria-hidden="true" /></Link>
           </div>
           <div className="min-w-0">{videos.filter(video => video.category === "leadership").map(video => <VideoCard key={video.id} video={video} />)}</div>
         </div>
