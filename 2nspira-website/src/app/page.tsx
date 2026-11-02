@@ -1,6 +1,7 @@
 import ServiceEffects from "@/components/ServiceEffects";
 import ClientServiceGrid from "@/components/ClientServiceGrid";
 import BusinessProblems from "@/components/BusinessProblems";
+import HomeHeroMedia from "@/components/HomeHeroMedia";
 import Image from "next/image";
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
@@ -64,7 +65,6 @@ export default function Home() {
     <main className={pageMain} id="main-content">
       <ServiceEffects>
       {/* Hero — B2 Split Advisory prototype (WAVE3-B2-STATIC-HERO) */}
-      {/* Reversible design checkpoint; no motion; conceptual visual slot per Maya's spec. */}
       <section
         className="relative overflow-hidden border-b border-line bg-surface py-24 sm:py-32"
         aria-labelledby="hero-heading"
@@ -100,23 +100,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Portrait composition keeps the people and workflow visible at every breakpoint. */}
-            <figure
-              className="hero-settle group relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-line bg-canvas shadow-[0_24px_70px_rgba(35,41,54,0.12)] lg:aspect-[4/5]"
-              style={{ animationDelay: "220ms" }}
-              aria-label="Strategy planning at the whiteboard"
-            >
-              <Image
-                src="/images/advisory/whiteboard-strategy-4x5.webp"
-                alt="A professional pointing at a whiteboard of charts and strategy notes while a client looks on."
-                fill
-                sizes="(min-width: 1152px) 461px, (min-width: 1024px) 42vw, calc(100vw - 32px)"
-                unoptimized
-                fetchPriority="high"
-                className="object-cover object-center transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.02]"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-ink/10 via-transparent to-accent/15 opacity-70" aria-hidden="true" />
-            </figure>
+            <HomeHeroMedia />
           </div>
         </div>
       </section>
@@ -126,15 +110,16 @@ export default function Home() {
       {/* Capabilities */}
       <section
         id="find-the-right-service"
-        className={`${sectionBand} scroll-mt-24`}
+        className={`${section} scroll-mt-24 bg-surface`}
         aria-labelledby="services-heading"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div>
+          <EyebrowPill>The expertise</EyebrowPill>
+          <div className="mt-5 grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-16">
             <h2 data-catalog-reveal id="services-heading" className={h2}>
               Practical expertise. Clear business outcomes.
             </h2>
-            <p className={`mt-4 max-w-2xl ${lead}`}>
+            <p className={`max-w-2xl ${lead}`}>
               We start with the operational challenge, then identify the right
               combination of guidance, integration, automation, and implementation.
             </p>
