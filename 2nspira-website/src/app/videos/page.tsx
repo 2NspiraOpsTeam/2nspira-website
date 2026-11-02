@@ -44,10 +44,10 @@ export default function VideosPage() {
               <a href="#latest-videos" className={`gap-2 ${buttonPrimary}`}>Discover the latest <ArrowDown size={17} aria-hidden="true" /></a>
               <a href={youtubeChannel} target="_blank" rel="noopener noreferrer" className={buttonSecondary} aria-label="Explore 2Nspira on YouTube (opens in a new tab)">Our YouTube channel <ArrowUpRight size={17} aria-hidden="true" /></a>
             </div>
-            <p className="mt-7 text-sm leading-6 text-body">{videos.length} original videos · Five new soundscapes · One creative studio</p>
+            <p className="mt-7 text-sm leading-6 text-body">{videos.length} public videos · Original soundscapes &amp; leadership · One creative studio</p>
           </div>
           <article data-catalog-card className={`min-w-0 p-4 sm:p-5 ${card}`}>
-            <p className={`mb-4 ${eyebrow}`}>Featured release · A little space to exhale</p>
+            <p className={`mb-4 ${eyebrow}`}>Featured soundscape · A little space to exhale</p>
             <VideoPlayer id={featuredVideo.id} title={featuredVideo.title} duration={featuredVideo.duration} />
             <h2 className="mt-5 text-2xl font-semibold leading-snug text-ink">Step into the rain.</h2>
             <p className="mt-2 text-sm font-semibold text-ink">{featuredVideo.title}</p>
@@ -59,7 +59,7 @@ export default function VideosPage() {
     </section>
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
       <nav aria-label="Browse video collections" className="flex flex-wrap gap-2 border-b border-line pb-7">
-        <a href="#latest-videos" className={buttonSecondary}>New soundscapes</a>
+        <a href="#latest-videos" className={buttonSecondary}>More soundscapes</a>
         <a href="#leadership-videos" className={buttonSecondary}>Ideas &amp; leadership</a>
         <a href="#ambience-videos" className={buttonSecondary}>Quiet favorites</a>
         <a href="#creative-range" className={buttonSecondary}>Behind the creativity</a>
@@ -68,9 +68,9 @@ export default function VideosPage() {
       <section aria-labelledby="latest-videos">
         <p className={eyebrow}>Fresh from the studio</p>
         <h2 id="latest-videos" className={`mt-3 scroll-mt-28 ${h2}`}>Find your next quiet place.</h2>
-        <p className={`max-w-3xl ${lead}`}>Beyond our featured forest: a sheltered cabin, rain on canvas, an attic reading room, and a garden washed in rain. Pick the atmosphere that meets your moment.</p>
+        <p className={`max-w-3xl ${lead}`}>Beyond our featured attic: a Japanese-inspired moss courtyard, washed in gentle rain. Pick an atmosphere for reading, relaxing, or a quiet moment.</p>
         <div className="mt-8 grid gap-8 md:grid-cols-2">{latestVideos.map(video => <VideoCard key={video.id} video={video} />)}</div>
-        <p className="mt-6 max-w-3xl text-sm leading-6 text-body">These five new releases are original, sound-designed environments with imagined visual settings—not field recordings of real locations. The cabin includes distant thunder; the other four have none.</p>
+        <p className="mt-6 max-w-3xl text-sm leading-6 text-body">Our public rain soundscapes are original, sound-designed environments with imagined visual settings—not field recordings of real locations. These scenes stay visible throughout, without thunder or music.</p>
       </section>
       <section aria-labelledby="leadership-videos" className="mt-16 border-t border-line pt-14">
         <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12">
@@ -86,7 +86,7 @@ export default function VideosPage() {
       <section aria-labelledby="ambience-videos" className="mt-16 border-t border-line pt-14">
         <p className={eyebrow}>Return to a slower rhythm</p>
         <h2 id="ambience-videos" className={`mt-3 scroll-mt-28 ${h2}`}>Quiet favorites.</h2>
-        <p className={`max-w-2xl ${lead}`}>Greenhouse rain, gentle window rain, and a cozy café. Revisit the original collection for reading, rest, or a pause between things.</p>
+        <p className={`max-w-2xl ${lead}`}>A warm seat, a book, and gentle rain beyond the window. Return to the Cocoa Lounge for reading, rest, or a pause between things.</p>
         <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">{quietClassics.map(video => <VideoCard key={video.id} video={video} />)}</div>
       </section>
       <section aria-labelledby="creative-range" className="mt-16 border-t border-line pt-14">

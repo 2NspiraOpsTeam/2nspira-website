@@ -85,7 +85,7 @@ export default function ShopPage() {
           <div data-catalog-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="coloring-books-title" className={h2}>Coloring Books</h2>
-              <p className="mt-3 max-w-2xl leading-7 text-body">Cozy worlds to make your own. Paperback coloring books from 2Nspira Books. Shop released titles on Amazon and preview what’s coming next.</p>
+              <p className="mt-3 max-w-2xl leading-7 text-body">Cozy worlds to make your own. Explore all four paperback coloring books from 2Nspira Books, available on Amazon.</p>
             </div>
             <Link href="/shop/coloring-books" className={`${linkInline} min-h-[44px]`}>Explore Coloring Books <span aria-hidden="true" className="ml-1">→</span></Link>
           </div>
@@ -101,6 +101,12 @@ export default function ShopPage() {
           </div>
           <ProductGrid products={artPrints} headingLevel="h3" />
         </section>
+        <aside data-catalog-card className="mt-16 rounded-2xl border border-line bg-accent-soft p-7 sm:p-10" aria-labelledby="shop-video-title">
+          <p className="text-sm font-semibold uppercase tracking-widest text-body">Watch &amp; unwind · Free on YouTube</p>
+          <h2 id="shop-video-title" className={`mt-3 ${h2}`}>A little atmosphere. A fresh perspective.</h2>
+          <p className="mt-4 max-w-2xl leading-7 text-body">Discover original rain soundscapes and ideas on leadership. Explore our public video collection, with previews and direct YouTube links.</p>
+          <Link href="/videos" className={`mt-6 ${buttonPrimary}`}>Explore our videos <span aria-hidden="true" className="ml-2">→</span></Link>
+        </aside>
         <CatalogFaq page="shop" />
         <EtsyShopLink />
       </div>

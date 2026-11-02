@@ -6,7 +6,7 @@ export type ShopProduct = {
   id: string;
   title: string;
   description: string;
-  format: "Digital download" | "Physical print · Multiple sizes" | "Paperback · Amazon" | "Paperback & Kindle · Amazon";
+  format: "Digital download" | "Physical print · Multiple sizes" | "Paperback · Amazon" | "Paperback & Kindle · Amazon" | "Kindle eBook · Amazon";
   marketplace?: "Etsy" | "Amazon";
   details: string;
   image: string;
@@ -17,6 +17,26 @@ export type ShopProduct = {
 };
 
 export const printables: ShopProduct[] = [
+  {
+    id: "lantern-lodge-star",
+    title: "The Lantern Lodge Star — Christmas Mystery Game",
+    description: "Find a missing Christmas star through eight connected family puzzles. Follow the lodge records together, with progressive hints and complete answers when you need them. No app, locks, cutting, or purchased props required.",
+    format: "Digital download",
+    details: "One 18-page adventure · 4 equivalent PDFs: color + low-ink, US Letter + A4 · Suggested ages 8+ with an adult reader · 2–6 players · Personal use",
+    image: "/images/shop/lantern-lodge-star.jpg",
+    imageAlt: "The Family Case Files: The Lantern Lodge Star listing cover for an eight-puzzle Christmas mystery",
+    href: "https://2nspira.etsy.com/listing/4600359405",
+  },
+  {
+    id: "vanishing-birthday-wish",
+    title: "The Vanishing Birthday Wish — Birthday Mystery Game",
+    description: "A golden wish envelope has vanished. Work together through eight connected detective puzzles to uncover a birthday surprise, with a host guide, progressive hints, and full answer explanations. A standalone, screen-free mystery.",
+    format: "Digital download",
+    details: "One 18-page adventure · 4 equivalent PDFs: color + low-ink, US Letter + A4 · Suggested ages 8+ with an adult reader · 2–6 players · Personal use",
+    image: "/images/shop/vanishing-birthday-wish.jpg",
+    imageAlt: "The Family Case Files: The Vanishing Birthday Wish listing cover for an eight-puzzle birthday mystery",
+    href: "https://2nspira.etsy.com/listing/4600362587",
+  },
   {
     id: "christmas-gathering-bundle",
     title: "Christmas Gathering Bundle",
@@ -188,5 +208,16 @@ export const leadershipBooks: ShopProduct[] = [
     imageHeight: 2560,
     imageAlt: "Cover of Trust Is the Operating System by Jeffrey Cortez",
     href: "https://www.amazon.com/dp/B0GDQG1XBL",
+  },
+  {
+    id: "trust-learn-adapt-kindle",
+    title: "Trust Is the Operating System — Learn, Adapt, and Endure",
+    description: "How Leaders Design Organizations That Learn, Adapt, and Endure in an AI-Saturated World. Explore this separately listed Kindle edition by Jeffrey Cortez.",
+    format: "Kindle eBook · Amazon",
+    marketplace: "Amazon",
+    details: "Digital book · Separate Amazon listing from the Human-Centered Leaders edition above · Check the subtitle and sample to choose your edition",
+    image: "/images/books/trust-learn-adapt-kindle.jpg",
+    imageAlt: "Amazon listing cover for Trust Is the Operating System, Learn, Adapt, and Endure Kindle edition by Jeffrey Cortez",
+    href: "https://www.amazon.com/dp/B0HN9B296F",
   },
 ];
