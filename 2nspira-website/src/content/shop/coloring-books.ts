@@ -41,7 +41,7 @@ export const cozyNooks: ColoringBook = {
   title: "Little Haunts & Cozy Nooks",
   image: "/images/books/little-haunts-cozy-nooks.webp",
   imageAlt: "Little Haunts and Cozy Nooks cover with a friendly ghost reading in an armchair beside a sleeping cat",
-  href: "https://www.amazon.com/dp/B0HQ1KLMH6?tag=2nspira-20",
+  href: "https://link.amazon/B0hHVgTQ1",
   paragraphs: [
     "Cozy rooms. Happy little haunts. Explore snug reading corners, pillow forts, cheerful craft rooms, and moonlit hideaways with friendly ghosts and curious cats.",
     "40 original illustrations pair bold outlines with a short rhyme beneath every scene. This 88-page, 8.5 × 8.5-inch paperback includes blank reverse pages and a color-swatch page.",
@@ -54,7 +54,7 @@ export const woodlandWonders: ColoringBook = {
   title: "Little Haunts & Woodland Wonders",
   image: "/images/books/little-haunts-woodland-wonders.webp",
   imageAlt: "Little Haunts and Woodland Wonders cover with a friendly ghost and woodland animals in an enchanted forest",
-  href: "https://www.amazon.com/dp/B0HQ1M5T4W?tag=2nspira-20",
+  href: "https://link.amazon/B022mQGn7",
   paragraphs: [
     "Small adventures. Woodland magic. Wander past mushroom cottages, hollow-tree libraries, woodland picnics, and lantern-lit paths with friendly ghosts and forest neighbors.",
     "40 original illustrations pair bold outlines with a short rhyme beneath every scene. This 88-page, 8.5 × 8.5-inch paperback includes blank reverse pages and a color-swatch page.",
