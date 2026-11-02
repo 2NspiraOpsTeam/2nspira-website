@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import guides from "@/content/buying-guides/index.json";
 import posts from "@/content/posts/index.json";
 
 const siteDomain = process.env.NEXT_PUBLIC_SITE_URL || "https://2nspira.com";
@@ -9,8 +8,6 @@ const pages: Array<{
   priority: number;
   changeFrequency: NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 }> = [
-  { path: "/buying-guides", priority: 0.7, changeFrequency: "weekly" },
-  ...guides.map(guide => ({ path: `/buying-guides/${guide.slug}`, priority: 0.6, changeFrequency: "monthly" as const })),
   { path: "/", priority: 1, changeFrequency: "weekly" },
   { path: "/ai-enablement", priority: 0.8, changeFrequency: "monthly" },
   { path: "/automation-systems-optimization", priority: 0.8, changeFrequency: "monthly" },
