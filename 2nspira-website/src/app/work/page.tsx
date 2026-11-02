@@ -129,54 +129,6 @@ export default function WorkPage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-24">
-        {/* --- Featured: Manufacturing Operations Command Center --- */}
-        <section className="mb-32">
-          <Reveal>
-            <div className="mb-12 flex flex-col gap-4">
-              <span>Operational Showcase</span>
-              <h2 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
-                Manufacturing Operations Command Center
-              </h2>
-            </div >
-          </Reveal>
-          
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="space-y-6">
-              <p className="text-sm font-semibold text-accent">Status: Concept showcase</p>
-              <p className="text-xl text-body"><strong>Challenge: </strong>{manufacturingChallenge}</p>
-              <p className="text-lg text-body/80"><strong>Approach: </strong>{manufacturingOperationalShift}</p>
-              <p className="leading-7 text-body">This visual concept explores a shared manufacturing workspace. The capabilities below describe the proposed scope, not a verified production deployment or client outcome.</p>
-              <div className="rounded-2xl border border-line bg-canvas/50 p-6 backdrop-blur-sm">
-                <h3 className="mb-4 font-semibold text-ink">Showcase Scope</h3>
-                <ul className="space-y-3 text-sm text-body">
-                  {manufacturingCapabilities.map((cap) => (
-                    <li key={cap} className="flex items-start gap-3">
-                      <span className="mt-1 text-accent">•</span>
-                      <span>{cap}</span>
-                    </li >
-                  ))}
-                </ul >
-              </div >
-            </div >
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/work/manufacturing-command-center.png"
-                alt="Manufacturing Operations Command Center"
-                width={1600}
-                height={900}
-                className="w-full h-auto rounded-2xl border border-line shadow-sm"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div >
-          </div >
-          
-          <Reveal className="mt-8">
-            <p className="text-sm text-body italic">
-              The concept shows how production, materials, quality, and equipment information could share a common workspace. No quantified improvement or production adoption is claimed.
-            </p>
-          </Reveal>
-        </section>
-
         {/* --- Featured: Teams Management --- */}
         <section id="teams-management" className="mb-32 scroll-mt-24" aria-labelledby="teams-management-heading">
           <Reveal>
@@ -222,6 +174,54 @@ export default function WorkPage() {
           <Reveal className="mt-8">
             <p className="text-sm text-body italic">
               Explore the published public website. Tenant and Admin workflows require authorized access and are not public demos.
+            </p>
+          </Reveal>
+        </section>
+
+        {/* --- Featured: Manufacturing Operations Command Center --- */}
+        <section className="mb-32">
+          <Reveal>
+            <div className="mb-12 flex flex-col gap-4">
+              <span>Operational Showcase</span>
+              <h2 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+                Manufacturing Operations Command Center
+              </h2>
+            </div >
+          </Reveal>
+
+          <div className="grid gap-12 lg:grid-cols-2">
+            <div className="space-y-6">
+              <p className="text-sm font-semibold text-accent">Status: Concept showcase</p>
+              <p className="text-xl text-body"><strong>Challenge: </strong>{manufacturingChallenge}</p>
+              <p className="text-lg text-body/80"><strong>Approach: </strong>{manufacturingOperationalShift}</p>
+              <p className="leading-7 text-body">This visual concept explores a shared manufacturing workspace. The capabilities below describe the proposed scope, not a verified production deployment or client outcome.</p>
+              <div className="rounded-2xl border border-line bg-canvas/50 p-6 backdrop-blur-sm">
+                <h3 className="mb-4 font-semibold text-ink">Showcase Scope</h3>
+                <ul className="space-y-3 text-sm text-body">
+                  {manufacturingCapabilities.map((cap) => (
+                    <li key={cap} className="flex items-start gap-3">
+                      <span className="mt-1 text-accent">•</span>
+                      <span>{cap}</span>
+                    </li >
+                  ))}
+                </ul >
+              </div >
+            </div >
+            <div className="flex items-center justify-center">
+              <Image
+                src="/images/work/manufacturing-command-center.png"
+                alt="Manufacturing Operations Command Center"
+                width={1600}
+                height={900}
+                className="w-full h-auto rounded-2xl border border-line shadow-sm"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div >
+          </div >
+
+          <Reveal className="mt-8">
+            <p className="text-sm text-body italic">
+              The concept shows how production, materials, quality, and equipment information could share a common workspace. No quantified improvement or production adoption is claimed.
             </p>
           </Reveal>
         </section>
