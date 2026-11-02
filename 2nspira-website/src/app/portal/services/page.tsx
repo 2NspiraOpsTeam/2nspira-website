@@ -44,7 +44,7 @@ export default function ServicesPage() {
 
   if (loading) return (
     <div className="min-h-screen flex items-center justify-center">
-      <p className="text-foreground/50">Loading...</p>
+      <p className="text-foreground/70">Loading...</p>
     </div>
   );
 
@@ -53,18 +53,18 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen flex">
-      <Sidebar onLogout={handleLogout} client={client} />
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} onLogout={handleLogout} client={client} />
       {sidebarOpen && (
         <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={() => setSidebarOpen(false)} />
       )}
       <main className="flex-1 min-w-0">
         <header className="lg:hidden flex items-center gap-3 p-4 border-b border-border">
-          <button onClick={() => setSidebarOpen(true)} className="text-foreground/60 text-xl">☰</button>
-          <span className="font-semibold text-accent-500">2Nspira</span>
+          <button aria-label="Open account menu" aria-expanded={sidebarOpen} aria-controls="account-menu" onClick={() => setSidebarOpen(true)} className="text-foreground/70 text-xl">☰</button>
+          <span className="font-semibold text-accent">2Nspira</span>
         </header>
         <div className="p-4 lg:p-8 space-y-6">
           <div className="flex items-center gap-2">
-            <Briefcase size={24} className="text-accent-500" />
+            <Briefcase size={24} className="text-accent" />
             <h1 className="text-2xl font-bold">Your Services</h1>
           </div>
           <div className="grid gap-4">
@@ -76,8 +76,8 @@ export default function ServicesPage() {
                       <h3 className="font-semibold text-lg">{svc.name}</h3>
                       <StatusBadge status={svc.status} />
                     </div>
-                    <p className="text-foreground/60 mb-3">{svc.description}</p>
-                    <div className="flex flex-wrap gap-4 text-sm text-foreground/50">
+                    <p className="text-foreground/70 mb-3">{svc.description}</p>
+                    <div className="flex flex-wrap gap-4 text-sm text-foreground/70">
                       <span className="flex items-center gap-1.5"><Clock size={14} />${svc.price.toLocaleString()}</span>
                       <span className="flex items-center gap-1.5"><Clock size={14} />{svc.billingCycle}</span>
                       {svc.nextBillingDate && (
@@ -90,7 +90,7 @@ export default function ServicesPage() {
             ))}
           </div>
           {services.length === 0 && (
-            <div className="rounded-2xl border border-line bg-canvas text-center py-12 text-foreground/40">
+            <div className="rounded-2xl border border-line bg-canvas text-center py-12 text-foreground/70">
               <Plus size={32} className="mx-auto mb-3 text-foreground/20" />
               <p>No services yet. Contact 2Nspira to set up services for your account.</p>
             </div>

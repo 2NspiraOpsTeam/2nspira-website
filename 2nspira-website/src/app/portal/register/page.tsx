@@ -63,16 +63,16 @@ export default function RegisterPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Image src="/images/logo/2nspira-logo.png" alt="2Nspira" width={320} height={132} className="h-9 w-auto mx-auto mb-2" priority />
-          <div className="text-foreground/60">Create Your Account</div>
+          <div className="text-foreground/70">Create Your Account</div>
         </div>
 
         <div className="rounded-2xl border border-line bg-canvas p-6">
           <form onSubmit={handleRegister} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+              <label htmlFor="account-field-1" className="block text-sm font-medium text-foreground/80 mb-1.5">
                 Full Name
               </label>
-              <input
+              <input id="account-field-1"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -84,10 +84,10 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+              <label htmlFor="account-field-2" className="block text-sm font-medium text-foreground/80 mb-1.5">
                 Email
               </label>
-              <input
+              <input id="account-field-2"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -99,10 +99,10 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+              <label htmlFor="account-field-3" className="block text-sm font-medium text-foreground/80 mb-1.5">
                 Company
               </label>
-              <input
+              <input id="account-field-3"
                 type="text"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
@@ -113,10 +113,10 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+              <label htmlFor="account-field-4" className="block text-sm font-medium text-foreground/80 mb-1.5">
                 Password
               </label>
-              <input
+              <input id="account-field-4"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -129,10 +129,10 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+              <label htmlFor="account-field-5" className="block text-sm font-medium text-foreground/80 mb-1.5">
                 Confirm Password
               </label>
-              <input
+              <input id="account-field-5"
                 type="password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
@@ -164,11 +164,11 @@ export default function RegisterPage() {
             </button>
 
             <div className="text-center text-sm">
-              <span className="text-foreground/50">Already have an account?</span>{" "}
+              <span className="text-foreground/70">Already have an account?</span>{" "}
               <button
                 type="button"
                 onClick={() => router.push("/portal/login")}
-                className="text-accent-500 hover:text-accent-600"
+                className="text-accent hover:text-accent-600"
               >
                 Sign In
               </button>

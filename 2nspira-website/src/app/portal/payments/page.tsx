@@ -49,25 +49,25 @@ export default function PaymentsPage() {
 
   return (
     <div className="min-h-screen flex">
-      <Sidebar onLogout={handleLogout} client={client ?? undefined} />
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} onLogout={handleLogout} client={client ?? undefined} />
       {sidebarOpen && (
         <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={() => setSidebarOpen(false)} />
       )}
       <main className="flex-1 min-w-0">
         <header className="lg:hidden flex items-center gap-3 p-4 border-b border-border">
-          <button onClick={() => setSidebarOpen(true)} className="text-foreground/60 text-xl">☰</button>
-          <span className="font-semibold text-accent-500">2Nspira</span>
+          <button aria-label="Open account menu" aria-expanded={sidebarOpen} aria-controls="account-menu" onClick={() => setSidebarOpen(true)} className="text-foreground/70 text-xl">☰</button>
+          <span className="font-semibold text-accent">2Nspira</span>
         </header>
         <div className="p-4 lg:p-8 space-y-6">
           <div className="flex items-center gap-2">
-            <DollarSign size={24} className="text-accent-500" />
+            <DollarSign size={24} className="text-accent" />
             <h1 className="text-2xl font-bold">Payment History</h1>
           </div>
           <div className="flex gap-2 flex-wrap">
             {allStatuses.map((s) => (
               <button key={s} onClick={() => setFilter(s)}
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors capitalize ${
-                  filter === s ? "bg-accent-500 text-white" : "bg-surface text-foreground/60 hover:bg-surface/50"
+                  filter === s ? "bg-accent text-white" : "bg-surface text-foreground/70 hover:bg-surface/50"
                 } text-xs`}>
                 {s}
               </button>
@@ -75,22 +75,22 @@ export default function PaymentsPage() {
           </div>
           <div className="space-y-3">
             {loading ? (
-              <div className="text-center py-8 text-foreground/50">Loading...</div>
+              <div className="text-center py-8 text-foreground/70">Loading...</div>
             ) : (
               payments.map((pay) => (
                 <div key={pay.id} className="rounded-2xl border border-line bg-canvas p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       {pay.status === "succeeded" ? (
-                        <CheckCircle size={20} className="text-emerald-500" />
+                        <CheckCircle size={20} className="text-emerald-700" />
                       ) : pay.status === "failed" || pay.status === "canceled" ? (
-                        <XCircle size={20} className="text-red-500" />
+                        <XCircle size={20} className="text-red-700" />
                       ) : (
                         <Clock size={20} className="text-amber-500" />
                       )}
                       <div>
                         <div className="font-semibold">${pay.amount.toLocaleString()}</div>
-                        <div className="text-xs text-foreground/50 mt-0.5">
+                        <div className="text-xs text-foreground/70 mt-0.5">
                           {pay.createdAt?.split("T")[0]} · #{pay.id.slice(0, 8)}
                           {pay.stripePaymentIntentId && (
                             <span className="ml-2 font-mono text-foreground/30">{pay.stripePaymentIntentId.slice(0, 12)}…</span>
@@ -105,7 +105,7 @@ export default function PaymentsPage() {
             )}
           </div>
           {payments.length === 0 && !loading && (
-            <div className="rounded-2xl border border-line bg-canvas text-center py-12 text-foreground/40">
+            <div className="rounded-2xl border border-line bg-canvas text-center py-12 text-foreground/70">
               <CreditCard size={32} className="mx-auto mb-3 text-foreground/20" />
               <p>No payments recorded yet.</p>
             </div>

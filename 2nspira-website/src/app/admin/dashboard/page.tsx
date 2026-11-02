@@ -53,7 +53,7 @@ export default function AdminDashboardPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-foreground/50">Loading…</p>
+        <p className="text-foreground/70">Loading…</p>
       </div>
     );
   }
@@ -76,13 +76,13 @@ export default function AdminDashboardPage() {
       <div className="space-y-6">
         <div>
           <h1 className="text-2xl font-bold">Dashboard</h1>
-          <p className="text-foreground/50 mt-1">Portfolio overview</p>
+          <p className="text-foreground/70 mt-1">Portfolio overview</p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {cards.map((c) => (
             <div key={c.label} className="rounded-2xl border border-line bg-canvas p-4">
-              <div className="text-xs text-foreground/60 mb-1">{c.label}</div>
+              <div className="text-xs text-foreground/70 mb-1">{c.label}</div>
               <div className="text-xl font-bold">{c.value}</div>
             </div>
           ))}
@@ -102,7 +102,7 @@ export default function AdminDashboardPage() {
               </div>
             ))}
             {(stats.recentPayments || []).length === 0 && (
-              <div className="text-center py-6 text-foreground/40">No payments yet</div>
+              <div className="text-center py-6 text-foreground/70">No payments yet</div>
             )}
           </div>
         </div>
