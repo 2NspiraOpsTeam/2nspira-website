@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import {
+  buttonPrimary,
   card,
 } from "@/components/ui";
 
@@ -34,18 +35,18 @@ const manufacturingCapabilities = [
 
 
 
-const waterbearChallenge =
-  "Property information, resident access, and operational records spread across disconnected processes.";
+const teamsChallenge =
+  "Help prospective residents and businesses discover the right property and reach the right team.";
 
 
 
-const waterbearCapabilities = [
-  "Portfolio content and property media",
-  "Scoped administration",
-  "Resident portal access",
-  "Contacts and rent-roll records",
-  "Maintenance records",
-  "Operational visibility",
+const teamsCapabilities = [
+  "Residential and retail property discovery",
+  "Property galleries and media management",
+  "Maps, locations, and directions",
+  "Rental inquiries and contact journeys",
+  "Tenant service entry points",
+  "Authorized content and property administration",
 ];
 
 
@@ -176,13 +177,13 @@ export default function WorkPage() {
           </Reveal>
         </section>
 
-        {/* --- Featured: Water Bear Mecca --- */}
-        <section className="mb-32">
+        {/* --- Featured: Teams Management --- */}
+        <section id="teams-management" className="mb-32 scroll-mt-24" aria-labelledby="teams-management-heading">
           <Reveal>
             <div className="mb-12 flex flex-col gap-4">
-              <span>Operational Showcase</span>
-              <h2 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
-                Water Bear Mecca
+              <span>Featured Website</span>
+              <h2 id="teams-management-heading" className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+                Teams Management
               </h2>
             </div >
           </Reveal>
@@ -190,23 +191,24 @@ export default function WorkPage() {
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="order-2 lg:order-1 flex items-center justify-center">
               <Image
-                src="/images/work/water-bear-mecca.png"
-                alt="Water Bear Mecca"
-                width={1600}
-                height={900}
+                src="/images/pages/teams-showcase-20261028.jpg"
+                alt="Teams Management public website with property discovery and tenant services"
+                width={1440}
+                height={1000}
                 className="w-full h-auto rounded-2xl border border-line shadow-sm"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div >
             <div className="order-1 space-y-6 lg:order-2">
-              <p className="text-sm font-semibold text-accent">Status: Implemented in an isolated development environment</p>
-              <p className="text-xl text-body"><strong>Challenge: </strong>{waterbearChallenge}</p>
-              <p className="text-lg text-body/80"><strong>Approach: </strong>Connect portfolio content, scoped administration, resident access, and operational records in a phased property-operations platform.</p>
-              <p className="leading-7 text-body">The capabilities below have been implemented and tested in an isolated development environment. Production rollout and remaining acceptance checks are separate; this is not a claim of completed production adoption.</p>
+              <p className="text-sm font-semibold text-accent">Status: Published website</p>
+              <a href="https://www.teamsmanagement.com/" target="_blank" rel="noopener noreferrer" className={`${buttonPrimary} focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent`}>Visit Teams Management <span className="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+              <p className="text-xl text-body"><strong>Challenge: </strong>{teamsChallenge}</p>
+              <p className="text-lg text-body/80"><strong>Approach: </strong>Bring property pages, photography, maps, inquiries, and tenant service entry points into one clear website.</p>
+              <p className="leading-7 text-body">A public-facing property experience for Teams Management, supported by structured content and authorized staff tools.</p>
               <div className="rounded-2xl border border-line bg-canvas/50 p-6 backdrop-blur-sm">
-                <h3 className="mb-4 font-semibold text-ink">Showcase Scope</h3>
+                <h3 className="mb-4 font-semibold text-ink">Website Highlights</h3>
                 <ul className="space-y-3 text-sm text-body">
-                  {waterbearCapabilities.map((cap) => (
+                  {teamsCapabilities.map((cap) => (
                     <li key={cap} className="flex items-start gap-3">
                       <span className="mt-1 text-accent">•</span>
                       <span>{cap}</span>
@@ -219,7 +221,7 @@ export default function WorkPage() {
 
           <Reveal className="mt-8">
             <p className="text-sm text-body italic">
-              The development platform brings property information and operational records into a shared workflow with scoped access. It creates a foundation for clearer ownership and fewer disconnected handoffs; no measured efficiency improvement is claimed.
+              Explore the published public website. Tenant and Admin workflows require authorized access and are not public demos.
             </p>
           </Reveal>
         </section>

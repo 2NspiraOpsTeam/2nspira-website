@@ -21,17 +21,6 @@ export const metadata: Metadata = publicPageMetadata({
 
 const projects = [
   {
-    id: "gevitals", name: "GeVitals", category: "Multilingual service website", status: "Published website",
-    url: "https://gevitals.com/", link: "Visit GeVitals", image: "gevitals",
-    need: "Help a clinic explain its services to Spanish- and English-speaking visitors.",
-    work: "A bilingual website with language switching, migrated content, video, and service pages.",
-    enables: "Visitors can explore the clinic’s approach and find the next step in their preferred language.",
-    tags: ["Language switching", "Content migration", "Local discovery"],
-    journey: ["Explore services", "Choose a language", "Find contact options"],
-    behind: "Content structure, publishing, and technical search foundations support the public experience. Moving an existing site includes preserving useful content—not simply changing its appearance.",
-    note: "Public website shown. No patient information is included.",
-  },
-  {
     id: "teams-management", name: "Teams Management", category: "Property website & operations", status: "Published website",
     url: "https://www.teamsmanagement.com/", link: "Visit Teams Management", image: "teams",
     need: "Connect property discovery with the information and workflows a property team manages behind the scenes.",
@@ -41,6 +30,17 @@ const projects = [
     journey: ["Discover a property", "Make an inquiry", "Staff manage follow-up"],
     behind: "The backend includes property and unit records, photo assignments, tenant maintenance requests, and website analytics. Private tools require authorized access; the public website is not a tenant or Admin demo.",
     note: "Public website linked. Private workflows require authorized access; no tenant records are displayed.",
+  },
+  {
+    id: "gevitals", name: "GeVitals", category: "Multilingual service website", status: "Published website",
+    url: "https://gevitals.com/", link: "Visit GeVitals", image: "gevitals",
+    need: "Help a clinic explain its services to Spanish- and English-speaking visitors.",
+    work: "A bilingual website with language switching, migrated content, video, and service pages.",
+    enables: "Visitors can explore the clinic’s approach and find the next step in their preferred language.",
+    tags: ["Language switching", "Content migration", "Local discovery"],
+    journey: ["Explore services", "Choose a language", "Find contact options"],
+    behind: "Content structure, publishing, and technical search foundations support the public experience. Moving an existing site includes preserving useful content—not simply changing its appearance.",
+    note: "Public website shown. No patient information is included.",
   },
   {
     id: "2nspira", name: "2Nspira", category: "Advisory website & client services", status: "Published website",
