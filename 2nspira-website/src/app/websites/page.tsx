@@ -32,15 +32,15 @@ const projects = [
     note: "Public website shown. No patient information is included.",
   },
   {
-    id: "teams-management", name: "Teams Management", category: "Property website & operations", status: "Development preview",
-    url: "https://teams-management-preview.pages.dev/", link: "Explore the Teams preview", image: "teams",
+    id: "teams-management", name: "Teams Management", category: "Property website & operations", status: "Published website",
+    url: "https://www.teamsmanagement.com/", link: "Visit Teams Management", image: "teams",
     need: "Connect property discovery with the information and workflows a property team manages behind the scenes.",
     work: "Property pages and media management, tenant access, maintenance workflows, and an Admin analytics workspace.",
     enables: "A customer-facing property experience connected to structured records and staff tools.",
     tags: ["Property discovery", "Tenant portal", "Backend operations", "Analytics", "Maps & directions"],
     journey: ["Discover a property", "Make an inquiry", "Staff manage follow-up"],
-    behind: "The backend includes property and unit records, photo assignments, tenant maintenance requests, and website analytics. Private tools require authorized access; the public preview is not a tenant or Admin demo.",
-    note: "Public-facing preview shown. Backend workflows are in development; no tenant records are displayed.",
+    behind: "The backend includes property and unit records, photo assignments, tenant maintenance requests, and website analytics. Private tools require authorized access; the public website is not a tenant or Admin demo.",
+    note: "Public website linked. Private workflows require authorized access; no tenant records are displayed.",
   },
   {
     id: "2nspira", name: "2Nspira", category: "Advisory website & client services", status: "Published website",
@@ -68,7 +68,7 @@ const projects = [
 
 const capabilities = [
   { icon: CalendarDays, title: "Booking & calendars", text: "Help visitors choose a time and book through the scheduling tools you already use.", proof: "Google Calendar at 2Nspira", href: "#2nspira" },
-  { icon: MapPin, title: "Google Maps & locations", text: "Help visitors explore locations, view property maps, and open Google Maps directions to the right address.", proof: "Teams property discovery · preview", href: "#teams-management" },
+  { icon: MapPin, title: "Google Maps & locations", text: "Help visitors explore locations, view property maps, and open Google Maps directions to the right address.", proof: "Teams property discovery", href: "#teams-management" },
   { icon: ShoppingBag, title: "Online stores", text: "Bring product details, photographs, checkout, inventory, and order management into one considered journey.", proof: "2Nspira Books · preview", href: "#2nspira-books" },
   { icon: ShieldCheck, title: "Client & tenant portals", text: "Give authorized users a secure place for service information, requests, and updates.", proof: "2Nspira & Teams workflows", href: "#teams-management" },
   { icon: LayoutDashboard, title: "Backend operations", text: "Equip your team to manage content, records, inquiries, notifications, and the work that follows.", proof: "Teams property operations · preview", href: "#teams-management" },
