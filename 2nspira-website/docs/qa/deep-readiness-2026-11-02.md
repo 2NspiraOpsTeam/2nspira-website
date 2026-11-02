@@ -15,6 +15,7 @@ Clean independent worktrees preserved unrelated unfinished changes. Local built 
 - Fixed client navigation that remained over mobile page content. Shared responsive account navigation now supports an inert closed state, focus placement/containment, Escape dismissal, focus restoration and background inertness. Public and account menu triggers have distinct accessible names.
 - Corrected recurring-payment card reflow under narrow widths and increased text spacing.
 - Patched website Next/React/vinext/Cloudflare dependencies and a scoped compatible `satori > fflate` override. Patched portal Next/OpenNext/Wrangler/workers-types within the adapter's published peer ranges, without forced/legacy peer installation.
+- Preserved the upgraded vinext Worker's named entrypoints in the preview wrapper. The first hosted upload failed with an unknown cache entrypoint; the corrected wrapper passed its dry run and Cloudflare build.
 - Fixed a reproduced portal build failure by enabling TypeScript extension imports under its existing `noEmit` configuration; reminder-worker source uses explicit `.ts` imports. Added the TypeScript/React types required by the actual clean build rather than relying on build-time auto-installation.
 
 ## Verification completed locally
@@ -55,8 +56,14 @@ Mixed read-only public pages, authenticated website proxy reads and direct Admin
 
 Four 15-second increasing-concurrency steps were followed by a 120-second paced endurance stage (eight workers, 200ms pacing) and a five-second paced recovery check. No load requests were sent to production. No live payment/email provider was exercised.
 
+## Final clean-install and public preview evidence
+
+Both pushed repositories passed fresh `npm ci` checks. Website `verify:release` passed lint, canonical build/smoke checks and TypeScript at `4c818b50`; the later preview-wrapper correction changes deployment glue only. Portal tests, reminder tests, OpenNext build and TypeScript passed from a clean install at `e2b0d38`.
+
+Cloudflare preview build `d92f6883-571f-4e9b-9936-ccc32ab6f0ee` passed at `baf3b3334ec072e05ef6aea3672f308d15d6427e`. The stable preview's deployment manifest matched that exact SHA. Twelve additional anonymous hosted scans (home, contact, Careers and login at 1440/768/390) passed with 200 responses, noindex headers, no detected WCAG-rule violations, overflow, page errors or missing JS/CSS. Mobile contact and desktop login screenshots were inspected. No hosted login, applicant submission or provider mutation was performed.
+
 ## Release status and remaining work
 
-**Fixed and locally verified; not hosted-preview or production verified.** Review PRs remain unmerged. Runtime/binding/schema checkpoints, hosted preview verification and explicit owner release authorization remain prerequisites to production promotion.
+**Public preview spot checks verified; authenticated fixes locally verified; not production verified.** Website PR #132 and portal PR #31 remain open drafts and unmerged. Runtime/binding/schema checkpoints, hosted preview verification and explicit owner release authorization remain prerequisites to production promotion.
 
 Actual VoiceOver/NVDA/TalkBack use, physical mobile devices, complete manual WCAG audit, external-service accessibility, hosted load/edge CPU/quota behavior, multi-hour endurance, provider payment/webhook execution, production account/WAF/rate-limit controls and off-device recovery were not established here. Client-managed service-field permissions/data classification remain a separate business-policy review; this task did not silently change financial permissions. Detailed raw evidence and synthetic fixture material remain private, outside Git.
