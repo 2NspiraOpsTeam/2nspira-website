@@ -1,0 +1,38 @@
+/* Static ambient color keeps the page quiet; interaction is opt-in and bounded. */
+.section {
+  position: relative;
+  isolation: isolate;
+  border-block: 1px solid var(--color-line);
+  background: radial-gradient(ellipse at 100% 10%, rgb(78 115 168 / 5%), transparent 55%), #eef2f8;
+}
+
+.headingRule {
+  width: 4rem;
+  height: 3px;
+  margin-top: 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-accent), #e8be57);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at top left, rgb(78 115 168 / 8%), transparent 70%);
+  opacity: 0;
+  transition: opacity 280ms var(--ease-gentle);
+}
+
+.card { isolation: isolate; }
+.card:focus-within::before { opacity: 1; }
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover::before { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card::before { transition: none; }
+}
