@@ -34,14 +34,14 @@ export const littleCocoa: ColoringBook = {
   ]
 };
 
-// KDP Bookshelf verified 2026-10-28: both companions remain Draft.
-// Add purchase URLs only after their public Amazon listings are verified live.
+// Public Amazon product pages verified in stock 2026-11-02.
+// Affiliate tracking ID matches the existing 2Nspira Associates links.
 export const cozyNooks: ColoringBook = {
   id: "little-haunts-cozy-nooks",
   title: "Little Haunts & Cozy Nooks",
   image: "/images/books/little-haunts-cozy-nooks.webp",
   imageAlt: "Little Haunts and Cozy Nooks cover with a friendly ghost reading in an armchair beside a sleeping cat",
-  comingSoon: true,
+  href: "https://www.amazon.com/dp/B0HQ1KLMH6?tag=2nspira-20",
   paragraphs: [
     "Cozy rooms. Happy little haunts. Explore snug reading corners, pillow forts, cheerful craft rooms, and moonlit hideaways with friendly ghosts and curious cats.",
     "40 original illustrations pair bold outlines with a short rhyme beneath every scene. This 88-page, 8.5 × 8.5-inch paperback includes blank reverse pages and a color-swatch page.",
@@ -54,7 +54,7 @@ export const woodlandWonders: ColoringBook = {
   title: "Little Haunts & Woodland Wonders",
   image: "/images/books/little-haunts-woodland-wonders.webp",
   imageAlt: "Little Haunts and Woodland Wonders cover with a friendly ghost and woodland animals in an enchanted forest",
-  comingSoon: true,
+  href: "https://www.amazon.com/dp/B0HQ1M5T4W?tag=2nspira-20",
   paragraphs: [
     "Small adventures. Woodland magic. Wander past mushroom cottages, hollow-tree libraries, woodland picnics, and lantern-lit paths with friendly ghosts and forest neighbors.",
     "40 original illustrations pair bold outlines with a short rhyme beneath every scene. This 88-page, 8.5 × 8.5-inch paperback includes blank reverse pages and a color-swatch page.",

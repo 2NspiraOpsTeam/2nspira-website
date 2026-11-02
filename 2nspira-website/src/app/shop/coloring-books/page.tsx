@@ -42,7 +42,7 @@ export default function ColoringBooksPage() {
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
         <CollectionNav current="coloring" />
         <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-6 text-body">
-          Physical paperback coloring books, not digital downloads. Released titles are sold and fulfilled on Amazon; upcoming books are marked Coming soon.
+          Physical paperback coloring books, not digital downloads. All four titles are available on Amazon. Check each Amazon listing for current availability and delivery options.
         </p>
         <div className="mt-10 space-y-10">{coloringBooks.map(book => <ColoringBookCard key={book.id} {...book} headingLevel="h2" />)}</div>
         <CatalogFaq page="coloring" />
