@@ -197,6 +197,22 @@ export default function WebsitesPage() {
         </div>
       </section>
 
+      <section id="website-standards" className={sectionBand} aria-labelledby="website-standards-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className={eyebrow}>Built into every website</p>
+          <h2 id="website-standards-heading" className={`mt-4 ${h2}`}>Accessibility, Security, and Compliance</h2>
+          <p className={`max-w-3xl ${lead}`}>We design and develop all our websites with these commitments from the start.</p>
+          <ul className="mt-8 grid gap-x-10 gap-y-6 md:grid-cols-2">
+            {[
+              ["Accessibility", "Design and develop the site to conform with the WCAG 2.2 Level AA accessibility standard."],
+              ["Security & data protection", "Follow secure development practices and protect user data submitted through the website and webstore."],
+              ["Privacy & consent", "Support privacy notice, cookie, consent, and data handling requirements as applicable."],
+              ["Pre-launch testing", "Conduct accessibility, performance, security, and quality assurance testing before launch."],
+            ].map(([title, text]) => <li key={title} className="border-t border-line pt-5"><h3 className={h3}>{title}</h3><p className="mt-3 leading-7 text-body">{text}</p></li>)}
+          </ul>
+        </div>
+      </section>
+
       <ServiceFit title="A website for the stage you’re at." intro="You don’t have to know the technology. Bring the customer journey you want to improve, and we’ll agree the simplest useful scope." items={[
         { title: "Launch or refresh", text: "A clear offer, useful content, and a credible place to send prospective customers." },
         { title: "Connect the next step", text: "Booking, inquiries, commerce, or information that needs a better handoff to your team." },
