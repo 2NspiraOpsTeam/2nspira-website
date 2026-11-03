@@ -83,9 +83,26 @@ export default function Home() {
 
     <section className={styles.audience} aria-labelledby="audience-heading">
       <div className={styles.audienceImage}><Photo src="/images/homepage/tech-community.jpg" alt="Two developers reviewing code together on a laptop" /></div>
-      <div className={styles.bandCopy}><p className={styles.eyebrow}>Who we serve</p><h2 id="audience-heading">For the people<br />moving things forward.</h2><p>Growing businesses. Schools. Nonprofits. Mission-driven leaders. We partner with people ready to make their operations work better—and their next step clearer.</p>
-        <ul><li>Business owners & entrepreneurs</li><li>Operations & technology leaders</li><li>Schools & educational organizations</li><li>Nonprofits & community organizations</li></ul><Link href="/contact#contact-message" className={styles.textLink}>Find your next step <span aria-hidden="true">↗</span></Link>
+      <div className={styles.bandCopy}>
+        <p className={styles.eyebrow}>Who we serve</p>
+        <h2 id="audience-heading">For leaders who know something could work better.</h2>
+        <p>Every organization reaches a point where the old way of working no longer supports where it wants to go.</p>
+        <p>We partner with growing businesses, operations and technology leaders, schools, nonprofits, and entrepreneurs to turn everyday challenges into meaningful progress.</p>
+        <p>We understand the business problem first. Then we bring the right combination of leadership, technology, and execution to help solve it.</p>
+        <Link href="/contact#contact-message" className={styles.textLink}>Let’s talk about your challenge <span aria-hidden="true">↗</span></Link>
       </div>
+    </section>
+
+    <section className={`${styles.section} ${styles.challenges}`} aria-labelledby="challenges-heading">
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What brings you here?</p><h2 id="challenges-heading">Where do you need<br />to make progress?</h2></div><p className={styles.challengeIntro}>You don’t need to know which service to ask for. Start with the challenge you’re facing.</p></div>
+      <div className={styles.challengeGrid}>{[
+        { title: "Our operations have become too complicated.", text: "Simplify repetitive work and connect the systems your business relies on.", href: "/automation-systems-optimization", link: "Explore operations solutions" },
+        { title: "We want to use AI, but need direction.", text: "Find valuable opportunities, prepare your people, and establish responsible practices.", href: "/ai-enablement", link: "Explore AI enablement" },
+        { title: "Our website no longer meets our needs.", text: "Build a better customer experience with useful digital capabilities behind it.", href: "/websites", link: "Explore website solutions" },
+        { title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
+      ].map(challenge => <Link key={challenge.href} href={challenge.href} className={styles.challengeCard}><h3>{challenge.title}</h3><p>{challenge.text}</p><span className={styles.challengeLink}>{challenge.link} <span aria-hidden="true">↗</span></span></Link>)}</div>
+      <div className={styles.challengeNext}><p>Building a new venture? <Link href="/coaching" className={styles.textLink}>Explore entrepreneur mentoring <span aria-hidden="true">↗</span></Link></p><Link href="/services" className={styles.textLink}>Explore how we can help <span aria-hidden="true">↗</span></Link></div>
+      <p className={styles.readiness}>Considering AI? <Link href="/resources/ai-readiness-scorecard" className={styles.textLink}>Start with the AI Readiness Scorecard <span aria-hidden="true">↗</span></Link></p>
     </section>
 
     <section className={`${styles.section} ${styles.purpose}`} aria-labelledby="purpose-heading">
@@ -110,6 +127,6 @@ export default function Home() {
       {name:"Open Goal Soccer",image:"open-goal",text:"An accessible archival redesign preserving a community program’s mission and story."}
     ].map(project=><Link key={project.name} href="/websites#our-work" className={styles.workCard}><div><Photo src={`/images/pages/${project.image}-website-preview-20261021.jpg`} alt={`${project.name} public website preview`} /></div><h3>{project.name} <span aria-hidden="true">↗</span></h3><p>{project.text}</p></Link>)}</div></section>
 
-    <section className={styles.contact} aria-labelledby="contact-heading"><p className={styles.eyebrow}>Your next chapter starts with a conversation</p><h2 id="contact-heading">What could we<br />make possible together?</h2><Link href="/contact#contact-message" className={styles.lightButton}>Let’s talk about it <span aria-hidden="true">↗</span></Link><p>Based in New York City. Working with clients nationally and internationally.</p></section>
+    <section className={styles.contact} aria-labelledby="contact-heading"><p className={styles.eyebrow}>Your next chapter starts with a conversation</p><h2 id="contact-heading">What could we<br />make possible together?</h2><Link href="/contact#contact-message" className={styles.lightButton}>Talk through your challenge <span aria-hidden="true">↗</span></Link><p>Based in New York City. Working with clients nationally and internationally.</p></section>
   </main>;
 }
