@@ -25,7 +25,7 @@ export const serviceNeeds = [
     link: "Explore AI enablement",
   },
   {
-    name: "Fractional CIO / Technology Leadership",
+    name: "Fractional CIO & Technology Leadership",
     need: "We need stronger technology direction.",
     help: "Bring experienced judgment to technology priorities, investment, vendors, and delivery without a full-time CIO hire.",
     example: "A practical roadmap, clearer decision ownership, and executive oversight.",

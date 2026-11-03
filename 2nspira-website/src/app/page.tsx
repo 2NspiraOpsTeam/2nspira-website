@@ -7,13 +7,13 @@ import styles from "./homepage.module.css";
 import ImpactTimeline from "./ImpactTimeline";
 
 const homepageDescription =
-  "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.";
+  "2Nspira helps businesses adopt AI, automate workflows, build websites and apps, and strengthen technology leadership with fractional CIO services.";
 const homepageShareTitle =
-  "Your business, working better. Technology with purpose.";
+  "AI, Automation & Technology Consulting | 2Nspira";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 
 export const metadata: Metadata = {
-  title: { absolute: "Business Transformation for Practical Results | 2Nspira" },
+  title: { absolute: homepageShareTitle },
   description: homepageDescription,
   alternates: { canonical: "https://2nspira.com/" },
   openGraph: {
@@ -53,10 +53,45 @@ function Photo({ src, alt, className = "", priority = false }: { src: string; al
   return <Image src={src} alt={alt} fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 70vw" priority={priority} className={className} />;
 }
 
+const homepageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://2nspira.com/#webpage",
+      url: "https://2nspira.com/",
+      name: homepageShareTitle,
+      description: homepageDescription,
+      inLanguage: "en-US",
+      isPartOf: { "@id": "https://2nspira.com/#website" },
+      about: { "@id": "https://2nspira.com/#organization" },
+      mainEntity: { "@id": "https://2nspira.com/#services" },
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://2nspira.com/#services",
+      name: "2Nspira services",
+      numberOfItems: serviceNeeds.length,
+      itemListElement: serviceNeeds.map((service, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Service",
+          name: service.name,
+          description: service.help,
+          url: `https://2nspira.com${service.href}`,
+          provider: { "@id": "https://2nspira.com/#organization" },
+        },
+      })),
+    },
+  ],
+};
+
 export default function Home() {
   return <main id="main-content" className={styles.home}>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd).replace(/</g, "\\u003c") }} />
     <section className={styles.hero} aria-labelledby="hero-heading">
-      <Photo src="/images/homepage/tech-hero.jpg" alt="Technology professional using a portable computer beside server racks" priority />
+      <Photo src="/images/homepage/tech-hero.webp" alt="Technology professional using a portable computer beside server racks" priority />
       <div className={styles.heroShade} />
       <div className={styles.heroContent}>
         <p className={styles.eyebrow}>People. Purpose. Possibility.</p>

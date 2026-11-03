@@ -10,7 +10,7 @@ const serviceLinks = [
   { name: "Websites, Apps & Digital Platforms", href: "/websites" },
   { name: "Automation & Systems Optimization", href: "/automation-systems-optimization" },
   { name: "AI Enablement", href: "/ai-enablement" },
-  { name: "Fractional CIO / Technology Leadership", href: "/fractional-cio" },
+  { name: "Fractional CIO & Technology Leadership", href: "/fractional-cio" },
   { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
 ];
 

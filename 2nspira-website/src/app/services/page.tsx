@@ -75,7 +75,7 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#fractional-leadership",
-      name: "Fractional CIO / Technology Leadership",
+      name: "Fractional CIO & Technology Leadership",
       description:
         "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
       url: "https://2nspira.com/fractional-cio",

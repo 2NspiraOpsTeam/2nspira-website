@@ -48,3 +48,7 @@ Resume when Jeffrey supplies record locations accessible to this runtime and act
 ## Owner direction superseding holds
 
 Jeffrey explicitly waived further verification and instructed publication in this conversation. Proceed with the approved story/five milestones on the existing isolated homepage preview. No claim of independent numeric verification or Brian/Cleo sign-off. Keep production unchanged under the established design-preview scope.
+
+## Production authorization — 2026-11-03
+
+Jeffrey explicitly requested homepage SEO improvements and promotion of the approved preview changes to the production URL. This supersedes the preview-only release restriction above. Earlier verification and named-review holds remain historical, superseded by his direction to publish without further verification. Figures remain owner-provided, not independently verified; the excluded 80-client count remains excluded. No database mutation or DNS change is required.
