@@ -74,7 +74,7 @@ export default function Home() {
     </section>
 
     <section className={styles.section} id="find-the-right-service" aria-labelledby="services-heading">
-      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Best Practices</p><h2 id="services-heading">Expertise that moves<br />your business forward.</h2></div><Link href="/services" className={styles.textLink}>Explore our services</Link></div>
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What we do</p><h2 id="services-heading">Expertise that moves<br />your business forward.</h2></div><Link href="/services" className={styles.textLink}>Explore our services</Link></div>
       <div className={styles.services}>{serviceNeeds.map((service, i) => <article key={service.href} className={styles.service}>
         <Link href={service.href} className={styles.serviceImage} aria-label={service.name}><Photo src={serviceImages[i]} alt={serviceAlts[i]} /></Link>
         <h3><Link href={service.href}>{service.name}</Link></h3><p>{service.help}</p>
