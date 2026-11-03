@@ -5,7 +5,7 @@
 .eyebrow, .kicker, .sectionLabel, .heroNote, .visual figcaption, .miniCard > span, .artCaption { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 .eyebrow { display: flex; gap: 12px; align-items: center; color: var(--gold); margin-bottom: 27px; }
 .eyebrow > span { width: 28px; height: 1px; background: currentColor; }
-.page h1, .page h2, .miniCard p { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -.035em; }
+.page h1, .page h2, .miniCard p { font-family: var(--font-heading); font-weight: 500; letter-spacing: -.035em; }
 .page h1 { font-size: clamp(44px, 4.8vw, 68px); line-height: 1.09; }
 .page h1 em { color: var(--gold); font-weight: 400; }
 .intro { font-size: 17px; line-height: 1.8; max-width: 470px; color: #555a54; margin-top: 26px; }

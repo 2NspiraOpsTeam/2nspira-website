@@ -90,3 +90,9 @@ New local assets (Pexels License https://www.pexels.com/license/):
 These depict stock subjects, not identified employees, clients or actual engagements. Layout, copy, service destinations, timeline and production remain unchanged.
 
 Verified release `801b6e7`: lint, canonical build/routing smoke and TypeScript passed. Hosted desktop/tablet/mobile checks at 1440/1024/768/390/320px passed; all homepage image source paths are unique and all hosted homepage asset checksums match local files. Service and challenge crops inspected; keyboard, touch, destinations, refresh and reduced motion passed with no page errors or horizontal overflow. Production separately remains `991df6a69fda171cca922dc5eb4028d83a3fe9cc`.
+
+## Cohesive editorial typography — November 3
+
+Jeffrey requested a more tasteful, synchronized site-wide type system and an Apple-inspired treatment using the existing homepage content. Retained the existing self-hosted Geist family and Tailwind/shared UI primitives rather than adding fonts or dependencies. Shared display/section/card tokens, medium-weight headings, balanced heading wraps, restrained tracking and consistent line-height now connect public pages. Removed the resource-page serif heading exception and homepage serif accents. Restored a full 16px mobile root, increased homepage small body/link text, and reduced oversized feature headings. Content, destinations and approved history remain unchanged.
+
+Jeffrey also specified exactly two distinct people engaged in a high-level mentoring conversation in a modern office. New generated illustrative photography is not presented as an actual client engagement. Preview only.

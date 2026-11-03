@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   title: { absolute: "Entrepreneur Mentoring & Business Coaching | 2Nspira" }, description,
   alternates: { canonical: "/coaching" },
   openGraph: { type: "website", siteName: "2Nspira", title: "Build your business. Grow into the leader it needs.", description,
-    url: "https://2nspira.com/coaching", images: [{ url: "https://2nspira.com/images/coaching/coaching-social-v5.jpg", width: 1200, height: 630, alt: "One-on-one entrepreneur mentoring in an industrial creative studio — illustrative scene" }] },
-  twitter: { card: "summary_large_image", title: "Build your business. Grow into the leader it needs.", description, images: ["https://2nspira.com/images/coaching/coaching-social-v5.jpg"] },
+    url: "https://2nspira.com/coaching", images: [{ url: "https://2nspira.com/images/coaching/mentoring-office-social-v2.jpg", width: 1200, height: 630, alt: "One-on-one entrepreneur mentoring in an modern office — illustrative scene" }] },
+  twitter: { card: "summary_large_image", title: "Build your business. Grow into the leader it needs.", description, images: ["https://2nspira.com/images/coaching/mentoring-office-social-v2.jpg"] },
 };
 
 const ventureFoundations = [
@@ -108,7 +108,7 @@ export default function EntrepreneurMentoringPage() {
           <ServiceConversation label="Discuss your business idea or leadership challenge" mentoring />
         </div>
         <figure className={`relative ${styles.hero}`} data-catalog-fade>
-          <Image src="/images/coaching/creative-mentoring-hero-v5.webp" alt="Illustrative scene of one entrepreneur and one mentor in an executive conversation in an industrial creative studio." width={1536} height={864} loading="eager" fetchPriority="high" className="h-auto w-full rounded-3xl border border-line" />
+          <Image src="/images/homepage/mentoring-office-v2.webp" alt="Two distinct professionals engaged in a thoughtful mentoring conversation in a modern office." width={1536} height={864} loading="eager" fetchPriority="high" className="h-auto w-full rounded-3xl border border-line" />
           <figcaption className="mt-4 text-sm tracking-wide text-muted">Space to think. Support to move forward.</figcaption>
         </figure>
       </div>

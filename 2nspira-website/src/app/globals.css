@@ -9,6 +9,10 @@
   --background: #fafaf9;
   --foreground: #232936;
   --header-height: 4rem;
+  --font-heading: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --type-display: clamp(2.75rem, 5.5vw, 5.5rem);
+  --type-section: clamp(2rem, 3.6vw, 3.5rem);
+  --type-card: clamp(1.25rem, 1.8vw, 1.5rem);
 
   /* Palette */
   --color-canvas: #fafaf9;        /* warm off-white foundation */
@@ -64,7 +68,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.6;
-  letter-spacing: 0.005em;
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-optical-sizing: auto;
@@ -110,7 +114,7 @@ body {
 /* Mobile responsive typography */
 @media (max-width: 640px) {
   html {
-    font-size: 95%;
+    font-size: 100%;
   }
 }
 
@@ -201,3 +205,11 @@ body {
 .article-body :is(ul,ol) { border-radius: 1rem; background: var(--color-canvas-deep); padding: 1rem 1.5rem 1rem 2.75rem; }
 .reading-contents a { line-height: 1.65; }
 main details > summary { min-height: 2.75rem; padding-block: .5rem; }
+
+/* Shared editorial hierarchy: one family, restrained weight, readable rhythm. */
+:where(h1, h2, h3, h4) { font-family: var(--font-heading); text-wrap: balance; }
+:where(h1) { line-height: 1.08; letter-spacing: -.04em; }
+:where(h2) { line-height: 1.15; letter-spacing: -.035em; }
+:where(h3, h4) { line-height: 1.3; letter-spacing: -.02em; }
+:where(p, li, dd) { text-wrap: pretty; }
+button, input, select, textarea { font-family: inherit; }
