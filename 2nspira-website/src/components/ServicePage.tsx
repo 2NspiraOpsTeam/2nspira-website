@@ -111,7 +111,7 @@ export default function ServicePage({
             ← All services
           </Link>
           <div className="mt-8"><EyebrowPill>{eyebrowText}</EyebrowPill></div>
-          <h1 className="animate-rise mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          <h1 className="animate-rise mt-5  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
             {title}
           </h1>
           <p className={`animate-rise ${lead}`} style={{ animationDelay: "90ms" }}>{intro}</p>

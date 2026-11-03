@@ -31,7 +31,7 @@ export default function AssessmentPage({ title, intro, audience, highlights, hre
         <Link href="/resources" className={linkInline}>
           ← All resources
         </Link>
-        <h1 className="mt-8 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+        <h1 className="mt-8  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
           {title}
         </h1>
         <p className={lead}>{intro}</p>

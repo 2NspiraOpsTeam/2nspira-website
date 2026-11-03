@@ -76,7 +76,7 @@ export default function FractionalCioPage() {
         <AmbientField />
         <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
           <p><EyebrowPill>Fractional CIO / Technology Leadership</EyebrowPill></p>
-          <h1 className="animate-rise mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          <h1 className="animate-rise mt-6  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
             Technology leadership without the full-time executive overhead
           </h1>
           <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>

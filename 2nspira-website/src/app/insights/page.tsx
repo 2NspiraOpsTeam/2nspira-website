@@ -24,7 +24,7 @@ export default function InsightsPage() {
         <AmbientField />
         <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
           <p><EyebrowPill>Ideas for leaders</EyebrowPill></p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          <h1 className="mt-4  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
             Executive Insights
           </h1>
           <p className={lead}>

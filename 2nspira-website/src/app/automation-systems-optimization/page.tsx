@@ -136,7 +136,7 @@ export default function AutomationSystemsOptimizationPage() {
             <p>
               <EyebrowPill>Automation &amp; Systems Optimization</EyebrowPill>
             </p>
-            <h1 className="animate-rise mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+            <h1 className="animate-rise mt-6  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
               Less repeated work. Better-connected systems.
             </h1>
             <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>

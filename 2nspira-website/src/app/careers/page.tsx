@@ -71,7 +71,7 @@ export default function CareersPage() {
         <AmbientField />
         <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
           <p><EyebrowPill>Careers at 2Nspira</EyebrowPill></p>
-          <h1 className="mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          <h1 className="mt-5  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
             Build what&apos;s next with us.
           </h1>
           <p className={`mx-auto max-w-2xl ${lead}`}>

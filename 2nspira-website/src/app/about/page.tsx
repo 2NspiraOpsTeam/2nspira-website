@@ -43,7 +43,7 @@ export default function AboutPage() {
         <AmbientField />
         <div className="relative">
         <p><EyebrowPill>Our story</EyebrowPill></p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+        <h1 className="mt-4  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
           {companyStory.headline}
         </h1>
         <p className={`mx-auto max-w-2xl ${lead}`}>

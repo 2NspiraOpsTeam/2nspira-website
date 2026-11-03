@@ -117,7 +117,7 @@ export default function WorkPage() {
           <div className="max-w-3xl">
             <Reveal>
               <span className="mb-6 text-accent">Case Studies & Evidence</span>
-              <h1 className="mb-6 text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+              <h1 className="mb-6  font-medium tracking-tight text-white  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
                 Our Work: Practical Problems, Connected Solutions
               </h1>
               <p className="text-xl leading-relaxed text-white/80">

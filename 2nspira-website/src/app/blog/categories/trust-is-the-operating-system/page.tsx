@@ -21,7 +21,7 @@ export default function Page() {
         <Link href="/insights" className={linkInline}>
           ← All insights
         </Link>
-        <h1 className="mt-6 text-4xl font-semibold tracking-tight text-ink">
+        <h1 className="mt-6  font-medium tracking-tight text-ink text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
           Trust Is the Operating System
         </h1>
         <p className={lead}>
