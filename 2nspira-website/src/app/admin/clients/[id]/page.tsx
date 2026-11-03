@@ -291,7 +291,7 @@ export default function AdminClientDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-foreground/50">Loading…</p>
+        <p className="text-foreground/70">Loading…</p>
       </div>
     );
   }
@@ -313,7 +313,7 @@ export default function AdminClientDetailPage() {
       <div className="space-y-6">
         <button
           onClick={() => router.push("/admin/clients")}
-          className="text-sm text-foreground/50 hover:text-foreground transition-colors"
+          className="text-sm text-foreground/70 hover:text-foreground transition-colors"
         >
           ← Back to Clients
         </button>
@@ -321,10 +321,10 @@ export default function AdminClientDetailPage() {
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
             <h1 className="text-2xl font-bold">{client.name}</h1>
-            <p className="text-foreground/50 mt-1">
+            <p className="text-foreground/70 mt-1">
               {client.email} {client.company ? `· ${client.company}` : ""}
             </p>
-            <p className="text-foreground/40 text-sm mt-1">
+            <p className="text-foreground/70 text-sm mt-1">
               MRR {activeMrr.toLocaleString("en-US", { style: "currency", currency: "USD" })} · {services.length} services · {invoices.length} invoices
             </p>
           </div>
@@ -336,9 +336,9 @@ export default function AdminClientDetailPage() {
             <h2 className="font-semibold mb-4">Client Details</h2>
             <form onSubmit={saveClient} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">Name</label>
+                <label htmlFor="client-edit-name" className="block text-sm font-medium text-foreground/80 mb-1.5">Name</label>
                 <input
-                  value={edit.name}
+                  id="client-edit-name" value={edit.name}
                   onChange={(e) => setEdit({ ...edit, name: e.target.value })}
                   className="w-full rounded-lg border border-line bg-canvas px-3 py-2.5 text-sm"
                   required
@@ -349,9 +349,9 @@ export default function AdminClientDetailPage() {
                 Account active
               </label>
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">Company</label>
+                <label htmlFor="client-edit-company" className="block text-sm font-medium text-foreground/80 mb-1.5">Company</label>
                 <input
-                  value={edit.company}
+                  id="client-edit-company" value={edit.company}
                   onChange={(e) => setEdit({ ...edit, company: e.target.value })}
                   className="w-full rounded-lg border border-line bg-canvas px-3 py-2.5 text-sm"
                 />
@@ -381,12 +381,12 @@ export default function AdminClientDetailPage() {
           {data.invitationEligibility === "provisioned" ? (
             <div className="rounded-2xl border border-line bg-canvas p-6">
               <h2 className="font-semibold mb-4">Portal Access</h2>
-              <p className="text-sm text-foreground/60">This client already has a portal password. Use the password reset below if access needs to be restored.</p>
+              <p className="text-sm text-foreground/70">This client already has a portal password. Use the password reset below if access needs to be restored.</p>
             </div>
           ) : data.invitationEligibility === "new" || data.invitationEligibility === "pending" ? (
           <div className="rounded-2xl border border-line bg-canvas p-6">
             <h2 className="font-semibold mb-4">Welcome Email</h2>
-            <p className="text-sm text-foreground/60 mb-4">
+            <p className="text-sm text-foreground/70 mb-4">
               Sends {client.email} a notification with their assigned services and a one-time link to set their own password, log in, and add a payment method.
             </p>
             {inviteMsg && (
@@ -411,7 +411,7 @@ export default function AdminClientDetailPage() {
           ) : data.invitationEligibility === "inactive" || data.invitationEligibility === "email_conflict" ? (
             <div className="rounded-2xl border border-line bg-canvas p-6">
               <h2 className="font-semibold mb-4">Welcome Email Unavailable</h2>
-              <p className="text-sm text-foreground/60">{data.invitationEligibility === "inactive" ? "Activate this client before sending an invitation." : "This email is already associated with another client identity."}</p>
+              <p className="text-sm text-foreground/70">{data.invitationEligibility === "inactive" ? "Activate this client before sending an invitation." : "This email is already associated with another client identity."}</p>
             </div>
           ) : null}
 
@@ -420,10 +420,10 @@ export default function AdminClientDetailPage() {
             <h2 className="font-semibold mb-4">Portal Access</h2>
             <form onSubmit={resetPassword} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+                <label htmlFor="account-field-2" className="block text-sm font-medium text-foreground/80 mb-1.5">
                   New Portal Password
                 </label>
-                <input
+                <input id="account-field-2"
                   type="password"
                   value={resetPw}
                   onChange={(e) => setResetPw(e.target.value)}
@@ -462,15 +462,15 @@ export default function AdminClientDetailPage() {
               className="rounded-full bg-accent px-4 py-2.5 text-sm font-medium text-white disabled:opacity-50">
               {sendingNotification ? "Sending…" : "Send Service Notification"}
             </button>
-            <span className="text-xs text-foreground/60">Sends the currently active payable services after you finish editing. Requires portal access.</span>
+            <span className="text-xs text-foreground/70">Sends the currently active payable services after you finish editing. Requires portal access.</span>
           </div>
           {notificationMsg && <p role="status" className={`mb-4 text-sm ${notificationMsg.ok ? "text-green-700" : "text-red-600"}`}>{notificationMsg.text}</p>}
 
           <form onSubmit={addService} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 p-4 rounded-xl bg-surface/40">
             <div className="col-span-2">
-              <label className="block text-xs font-medium text-foreground/60 mb-1">Service name *</label>
+              <label htmlFor="client-svc-name" className="block text-xs font-medium text-foreground/70 mb-1">Service name *</label>
               <input
-                value={svc.name}
+                id="client-svc-name" value={svc.name}
                 onChange={(e) => setSvc({ ...svc, name: e.target.value })}
                 className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
                 required
@@ -478,30 +478,30 @@ export default function AdminClientDetailPage() {
               />
             </div>
             <div>
-              <label className="block text-xs font-medium text-foreground/60 mb-1">Price (USD)</label>
+              <label htmlFor="client-svc-price" className="block text-xs font-medium text-foreground/70 mb-1">Price (USD)</label>
               <input
                 type="number"
                 min="0"
                 step="0.01"
-                value={svc.price}
+                id="client-svc-price" value={svc.price}
                 onChange={(e) => setSvc({ ...svc, price: e.target.value })}
                 className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
               />
             </div>
             <div>
-              <label className="block text-xs font-medium text-foreground/60 mb-1">Due date</label>
+              <label htmlFor="client-svc-nextBillingDate" className="block text-xs font-medium text-foreground/70 mb-1">Due date</label>
               <input
                 type="date"
                 min="1900-01-01"
                 max="2100-12-31"
-                value={svc.nextBillingDate}
+                id="client-svc-nextBillingDate" value={svc.nextBillingDate}
                 onChange={(e) => setSvc(current => ({ ...current, nextBillingDate: e.target.value }))}
                 className="w-full rounded-lg border border-line bg-canvas px-3 py-2 text-sm"
               />
             </div>
             <div className="flex flex-col gap-2">
               <select
-                value={svc.billingCycle}
+                aria-label="Billing cycle" value={svc.billingCycle}
                 onChange={(e) => setSvc({ ...svc, billingCycle: e.target.value })}
                 className="rounded-lg border border-line bg-canvas px-2 py-2 text-sm"
               >
@@ -545,7 +545,7 @@ export default function AdminClientDetailPage() {
               <div key={s.id} className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl border border-border/60">
                 <div className="min-w-0">
                   <div className="font-medium text-sm">{s.name}</div>
-                  <div className="text-xs text-foreground/50">
+                  <div className="text-xs text-foreground/70">
                     ${Number(s.price || 0).toLocaleString()} / {s.billingCycle}
                     {s.nextBillingDate ? ` · due ${s.nextBillingDate}` : " · no due date set"}
                     {s.description ? ` — ${s.description}` : ""}
@@ -574,7 +574,7 @@ export default function AdminClientDetailPage() {
                   )}
                   {dateErrors[s.id] && <span role="alert" className="text-xs text-red-600">{dateErrors[s.id]}</span>}
                   <select
-                    value={s.status}
+                    aria-label={`Status for ${s.name}`} value={s.status}
                     onChange={(e) => updateServiceStatus(s.id, e.target.value)}
                     className="rounded-lg border border-line bg-canvas px-2 py-1.5 text-xs"
                   >
@@ -586,7 +586,7 @@ export default function AdminClientDetailPage() {
                   </select>
                   <button
                     onClick={() => deleteService(s.id)}
-                    className="rounded-lg px-3 py-1.5 text-xs text-red-500 hover:bg-red-500/10 transition-colors"
+                    className="rounded-lg px-3 py-1.5 text-xs text-red-700 hover:bg-red-500/10 transition-colors"
                   >
                     Delete
                   </button>
@@ -594,7 +594,7 @@ export default function AdminClientDetailPage() {
               </div>
             ))}
             {services.length === 0 && (
-              <div className="text-center py-6 text-foreground/40 text-sm">
+              <div className="text-center py-6 text-foreground/70 text-sm">
                 No services assigned yet.
               </div>
             )}
@@ -614,7 +614,7 @@ export default function AdminClientDetailPage() {
                 </div>
               ))}
               {invoices.length === 0 && (
-                <div className="text-center py-4 text-foreground/40 text-sm">No invoices yet</div>
+                <div className="text-center py-4 text-foreground/70 text-sm">No invoices yet</div>
               )}
             </div>
           </div>
@@ -631,7 +631,7 @@ export default function AdminClientDetailPage() {
                 </div>
               ))}
               {payments.length === 0 && (
-                <div className="text-center py-4 text-foreground/40 text-sm">No payments yet</div>
+                <div className="text-center py-4 text-foreground/70 text-sm">No payments yet</div>
               )}
             </div>
           </div>

@@ -60,18 +60,18 @@ export default function BillingPage() {
 
   return (
     <div className="min-h-screen flex">
-      <Sidebar onLogout={handleLogout} client={client ?? undefined} />
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} onLogout={handleLogout} client={client ?? undefined} />
       {sidebarOpen && (
         <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={() => setSidebarOpen(false)} />
       )}
       <main className="flex-1 min-w-0">
         <header className="lg:hidden flex items-center gap-3 p-4 border-b border-border">
-          <button onClick={() => setSidebarOpen(true)} className="text-foreground/60 text-xl">☰</button>
-          <span className="font-semibold text-accent-500">2Nspira</span>
+          <button aria-label="Open account menu" aria-expanded={sidebarOpen} aria-controls="account-menu" onClick={() => setSidebarOpen(true)} className="text-foreground/70 text-xl">☰</button>
+          <span className="font-semibold text-accent">2Nspira</span>
         </header>
         <div className="p-4 lg:p-8 space-y-6">
           <div className="flex items-center gap-2">
-            <FileText size={24} className="text-accent-500" />
+            <FileText size={24} className="text-accent" />
             <h1 className="text-2xl font-bold">Billing History</h1>
           </div>
           <div className="flex gap-2 flex-wrap">
@@ -80,7 +80,7 @@ export default function BillingPage() {
                 key={f}
                 onClick={() => setFilter(f)}
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                  filter === f ? "bg-accent-500 text-white" : "bg-surface text-foreground/60 hover:bg-surface/50"
+                  filter === f ? "bg-accent text-white" : "bg-surface text-foreground/70 hover:bg-surface/50"
                 } capitalize`}
               >
                 {f}{statusCounts[f as keyof typeof statusCounts] > 0 && ` (${statusCounts[f as keyof typeof statusCounts]})`}
@@ -90,26 +90,26 @@ export default function BillingPage() {
           </div>
           <div className="space-y-3">
             {loading ? (
-              <div className="text-center py-8 text-foreground/50">Loading...</div>
+              <div className="text-center py-8 text-foreground/70">Loading...</div>
             ) : (
               invoices.map((inv) => (
-                <div key={inv.id} className="rounded-2xl border border-line bg-canvas p-4 hover:border-accent-500/30 transition-colors">
+                <div key={inv.id} className="rounded-2xl border border-line bg-canvas p-4 hover:border-accent/30 transition-colors">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-semibold">${inv.amount.toLocaleString()}</div>
-                      <div className="text-sm text-foreground/50 mt-1">
+                      <div className="text-sm text-foreground/70 mt-1">
                         Issued: {inv.issueDate} · Due: {inv.dueDate}
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <StatusBadge status={inv.status} />
-                      <span className="text-xs text-foreground/40 font-mono">{inv.id.slice(0, 8)}</span>
+                      <span className="text-xs text-foreground/70 font-mono">{inv.id.slice(0, 8)}</span>
                     </div>
                   </div>
                   {inv.lineItems && inv.lineItems.length > 0 && (
                     <div className="mt-3 space-y-1">
                       {inv.lineItems.map((item, i) => (
-                        <div key={i} className="text-sm flex justify-between text-foreground/60">
+                        <div key={i} className="text-sm flex justify-between text-foreground/70">
                           <span>{item.description}</span>
                           <span>${item.total.toLocaleString()}</span>
                         </div>
@@ -126,7 +126,7 @@ export default function BillingPage() {
             )}
           </div>
           {invoices.length === 0 && !loading && (
-            <div className="rounded-2xl border border-line bg-canvas text-center py-12 text-foreground/40">
+            <div className="rounded-2xl border border-line bg-canvas text-center py-12 text-foreground/70">
               <p>No invoices found for this filter.</p>
             </div>
           )}

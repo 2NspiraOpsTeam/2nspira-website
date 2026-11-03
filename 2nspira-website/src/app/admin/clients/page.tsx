@@ -77,7 +77,7 @@ export default function AdminClientsPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-foreground/50">Loading…</p>
+        <p className="text-foreground/70">Loading…</p>
       </div>
     );
   }
@@ -88,7 +88,7 @@ export default function AdminClientsPage() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">Clients</h1>
-            <p className="text-foreground/50 mt-1">{clients.length} total</p>
+            <p className="text-foreground/70 mt-1">{clients.length} total</p>
           </div>
           <button
             onClick={() => setShowCreate((v) => !v)}
@@ -102,8 +102,8 @@ export default function AdminClientsPage() {
           <div className="rounded-2xl border border-line bg-canvas p-6">
             <form onSubmit={handleCreate} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">Name *</label>
-                <input
+                <label htmlFor="account-field-1" className="block text-sm font-medium text-foreground/80 mb-1.5">Name *</label>
+                <input id="account-field-1"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   className="w-full rounded-lg border border-line bg-canvas px-3 py-2.5 text-sm"
@@ -111,8 +111,8 @@ export default function AdminClientsPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">Email *</label>
-                <input
+                <label htmlFor="account-field-2" className="block text-sm font-medium text-foreground/80 mb-1.5">Email *</label>
+                <input id="account-field-2"
                   type="email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -121,8 +121,8 @@ export default function AdminClientsPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">Company *</label>
-                <input
+                <label htmlFor="account-field-3" className="block text-sm font-medium text-foreground/80 mb-1.5">Company *</label>
+                <input id="account-field-3"
                   value={form.company}
                   onChange={(e) => setForm({ ...form, company: e.target.value })}
                   className="w-full rounded-lg border border-line bg-canvas px-3 py-2.5 text-sm"
@@ -130,10 +130,10 @@ export default function AdminClientsPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+                <label htmlFor="account-field-4" className="block text-sm font-medium text-foreground/80 mb-1.5">
                   Portal Password (optional)
                 </label>
-                <input
+                <input id="account-field-4"
                   type="password"
                   value={form.password}
                   onChange={(e) => setForm({ ...form, password: e.target.value })}
@@ -176,7 +176,7 @@ export default function AdminClientsPage() {
         <div className="rounded-2xl border border-line bg-canvas overflow-hidden">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-line text-left text-xs text-foreground/50 uppercase tracking-wide">
+              <tr className="border-b border-line text-left text-xs text-foreground/70 uppercase tracking-wide">
                 <th className="px-4 py-3">Client</th>
                 <th className="px-4 py-3 hidden sm:table-cell">Company</th>
                 <th className="px-4 py-3 hidden md:table-cell">Services</th>
@@ -192,7 +192,7 @@ export default function AdminClientsPage() {
                 >
                   <td className="px-4 py-3">
                     <div className="font-medium">{c.name}</div>
-                    <div className="text-xs text-foreground/50">{c.email}</div>
+                    <div className="text-xs text-foreground/70">{c.email}</div>
                   </td>
                   <td className="px-4 py-3 hidden sm:table-cell text-foreground/70">{c.company || "—"}</td>
                   <td className="px-4 py-3 hidden md:table-cell text-foreground/70">
@@ -205,7 +205,7 @@ export default function AdminClientsPage() {
               ))}
               {clients.length === 0 && (
                 <tr>
-                  <td className="px-4 py-8 text-center text-foreground/40" colSpan={4}>
+                  <td className="px-4 py-8 text-center text-foreground/70" colSpan={4}>
                     No clients yet. Create one to get started.
                   </td>
                 </tr>

@@ -49,16 +49,16 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Image src="/images/logo/2nspira-logo.png" alt="2Nspira" width={320} height={132} className="h-9 w-auto mx-auto mb-2" priority />
-          <div className="text-foreground/60">Sign in to 2Nspira</div>
+          <div className="text-foreground/70">Sign in to 2Nspira</div>
         </div>
 
         <div className="rounded-2xl border border-line bg-canvas p-6">
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+              <label htmlFor="account-field-1" className="block text-sm font-medium text-foreground/80 mb-1.5">
                 Email
               </label>
-              <input
+              <input id="account-field-1"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -70,10 +70,10 @@ export default function LoginPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-foreground/80 mb-1.5">
+              <label htmlFor="account-field-2" className="block text-sm font-medium text-foreground/80 mb-1.5">
                 Password
               </label>
-              <input
+              <input id="account-field-2"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -85,7 +85,7 @@ export default function LoginPage() {
             </div>
 
             {error && (
-              <div className="p-3 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 text-sm">
+              <div role="alert" className="p-3 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 text-sm">
                 {error}
               </div>
             )}
@@ -98,7 +98,7 @@ export default function LoginPage() {
               {loading ? "Signing in…" : "Sign In"}
             </button>
 
-            <div className="text-center text-xs text-foreground/40 pt-2">
+            <div className="text-center text-xs text-foreground/70 pt-2">
               Single sign-in for admin and client accounts
             </div>
           </form>

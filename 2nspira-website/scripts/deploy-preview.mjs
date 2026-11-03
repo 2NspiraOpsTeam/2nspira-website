@@ -22,6 +22,7 @@ delete config.route;
 await writeFile(new URL("../dist/server/wrangler.preview.json", import.meta.url), JSON.stringify(config, null, 2));
 await writeFile(new URL("../dist/server/preview-entry.js", import.meta.url), `
 import app from "./index.js";
+export * from "./index.js";
 export default {
   async fetch(request, env, ctx) {
     if (new URL(request.url).pathname === "/robots.txt") {

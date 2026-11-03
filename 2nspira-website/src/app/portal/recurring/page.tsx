@@ -67,43 +67,43 @@ export default function RecurringPage() {
 
   return (
     <div className="min-h-screen flex">
-      <Sidebar onLogout={handleLogout} client={client ?? undefined} />
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} onLogout={handleLogout} client={client ?? undefined} />
       {sidebarOpen && (
         <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={() => setSidebarOpen(false)} />
       )}
       <main className="flex-1 min-w-0">
         <header className="lg:hidden flex items-center gap-3 p-4 border-b border-border">
-          <button onClick={() => setSidebarOpen(true)} className="text-foreground/60 text-xl">☰</button>
-          <span className="font-semibold text-accent-500">2Nspira</span>
+          <button aria-label="Open account menu" aria-expanded={sidebarOpen} aria-controls="account-menu" onClick={() => setSidebarOpen(true)} className="text-foreground/70 text-xl">☰</button>
+          <span className="font-semibold text-accent">2Nspira</span>
         </header>
         <div className="p-4 lg:p-8 space-y-6">
           <div className="flex items-center gap-2">
-            <Repeat size={24} className="text-accent-500" />
+            <Repeat size={24} className="text-accent" />
             <h1 className="text-2xl font-bold">Recurring Payments</h1>
           </div>
           <div className="grid gap-4">
             {loading ? (
-              <div className="text-center py-8 text-foreground/50">Loading...</div>
+              <div className="text-center py-8 text-foreground/70">Loading...</div>
             ) : (
               auths.map((auth) => (
                 <div key={auth.id} className="rounded-2xl border border-line bg-canvas p-4">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
+                  <div className="flex flex-col items-start justify-between gap-4 sm:flex-row">
+                    <div className="min-w-0 flex-1">
+                      <div className="mb-2 flex flex-wrap items-center gap-3">
                         <h3 className="font-semibold text-lg">
                           {auth.billingCycle === "monthly" ? "Monthly" : auth.billingCycle === "quarterly" ? "Quarterly" : "Annual"} — ${auth.amount.toLocaleString()}
                         </h3>
                         <StatusBadge status={auth.status} />
                       </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-foreground/60">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-foreground/70">
                         <div className="flex items-center gap-1.5"><Calendar size={14} />Next charge: {auth.nextChargeDate?.split("T")[0] ?? "—"}</div>
                         <div className="flex items-center gap-1.5"><DollarSign size={14} />${auth.amount.toLocaleString()} per {auth.billingCycle}</div>
-                        <div className="text-xs text-foreground/40 font-mono">{auth.id.slice(0, 8)}</div>
+                        <div className="text-xs text-foreground/70 font-mono">{auth.id.slice(0, 8)}</div>
                       </div>
                     </div>
                     <div className="flex gap-2">
                       {auth.status === "active" && (
-                        <button onClick={() => handleToggle(auth.id, "active")} className="px-3 py-1.5 rounded-lg text-sm font-medium bg-surface text-foreground/60 hover:bg-surface/50 transition-colors flex items-center gap-1" title="Pause">
+                        <button onClick={() => handleToggle(auth.id, "active")} className="px-3 py-1.5 rounded-lg text-sm font-medium bg-surface text-foreground/70 hover:bg-surface/50 transition-colors flex items-center gap-1" title="Pause">
                           <Pause size={14} /> Pause
                         </button>
                       )}
@@ -113,7 +113,7 @@ export default function RecurringPage() {
                         </button>
                       )}
                       {auth.status !== "revoked" && auth.status !== "expired" && (
-                        <button onClick={() => handleRevoke(auth.id)} className="px-3 py-1.5 rounded-lg text-sm font-medium text-red-500 hover:bg-red-500/10 transition-colors flex items-center gap-1" title="Revoke">
+                        <button onClick={() => handleRevoke(auth.id)} className="px-3 py-1.5 rounded-lg text-sm font-medium text-red-700 hover:bg-red-500/10 transition-colors flex items-center gap-1" title="Revoke">
                           <RotateCcw size={14} /> Revoke
                         </button>
                       )}
@@ -124,7 +124,7 @@ export default function RecurringPage() {
             )}
           </div>
           {auths.length === 0 && !loading && (
-            <div className="rounded-2xl border border-line bg-canvas text-center py-12 text-foreground/40">
+            <div className="rounded-2xl border border-line bg-canvas text-center py-12 text-foreground/70">
               <Repeat size={32} className="mx-auto mb-3 text-foreground/20" />
               <p>No recurring payment authorizations yet.</p>
             </div>
