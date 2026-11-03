@@ -1,0 +1,38 @@
+/* Opt-in editorial polish; decorations never sit above content or controls. */
+.page [data-service-hero] {
+  background-image: radial-gradient(ellipse at 85% 15%, rgb(76 112 165 / 10%), transparent 58%);
+}
+.page figure {
+  box-shadow: 0 20px 60px rgb(35 41 54 / 11%);
+}
+.page :is(article, aside):focus-within {
+  border-color: var(--color-accent);
+}
+.page [data-process-step] {
+  position: relative;
+  border-top: 2px solid var(--color-line);
+  transition: border-color 240ms ease;
+}
+.page [data-process-step]:focus-within {
+  border-top-color: var(--color-accent);
+}
+@media (hover: hover) and (pointer: fine) {
+  .page [data-process-step]:hover { border-top-color: var(--color-accent); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .page figure { animation: image-settle 850ms cubic-bezier(.2,.7,.2,1) both; }
+  .page [data-process-step] > span:first-child {
+    display: inline-flex;
+    transition: color 240ms ease, transform 240ms ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .page [data-process-step]:hover > span:first-child { transform: translateX(4px); }
+  }
+}
+@keyframes image-settle {
+  from { opacity: .75; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page [data-process-step], .page [data-process-step] > span:first-child { transition: none; }
+}

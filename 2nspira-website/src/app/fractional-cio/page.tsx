@@ -1,3 +1,4 @@
+import polish from "@/components/ServicePolish.module.css";
 import ServiceEffects from "@/components/ServiceEffects";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
@@ -64,7 +65,7 @@ const fractionalCioJsonLd = {
 
 export default function FractionalCioPage() {
   return (
-    <main className={pageMain} id="main-content"><ServiceEffects>
+    <main className={`${pageMain} ${polish.page}`} id="main-content"><ServiceEffects>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -72,7 +73,7 @@ export default function FractionalCioPage() {
         }}
       />
 
-      <section className="relative overflow-hidden border-b border-line bg-surface">
+      <section data-service-hero className="relative overflow-hidden border-b border-line bg-surface">
         <AmbientField />
         <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
           <p><EyebrowPill>Fractional CIO & Technology Leadership</EyebrowPill></p>
@@ -149,7 +150,7 @@ export default function FractionalCioPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {approach.map((step, index) => (
               <Reveal key={step.title} delay={index * 80} className="h-full">
-                <article className={`h-full p-7 ${card}`}>
+                <article data-process-step className={`h-full p-7 ${card}`}>
                   <p className="text-sm font-semibold tracking-widest text-accent">{String(index + 1).padStart(2, "0")}</p>
                   <h3 className={`mt-4 ${h3}`}>{step.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-body">{step.text}</p>

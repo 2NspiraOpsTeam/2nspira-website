@@ -1,3 +1,4 @@
+import polish from "@/components/ServicePolish.module.css";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -115,9 +116,9 @@ const content = {
 
 
 export default function Page() {
-  return <main className={pageMain} id="main-content"><ServiceEffects>
+  return <main className={`${pageMain} ${polish.page}`} id="main-content"><ServiceEffects>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(content.jsonLd).replace(/</g, "\\u003c") }} />
-    <section className="border-b border-line bg-surface">
+    <section data-service-hero className="border-b border-line bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <Link href="/services" className={linkInline}>← All services</Link>
         <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
@@ -142,6 +143,22 @@ export default function Page() {
         <details className="mt-5 border-t border-line pt-2"><summary className="min-h-11 cursor-pointer rounded py-3 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">What this can include</summary><ul className="list-disc space-y-2 pb-3 pl-5 text-sm leading-7 text-body">{item.details.map(d => <li key={d}>{d}</li>)}</ul></details>
       </article>)}</div>
     </div></section>
+    <section className={sectionBand} aria-labelledby="personal-agent-heading" id="personal-ai-assistant">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <EyebrowPill>AI that works with you</EyebrowPill>
+        <h2 id="personal-agent-heading" className={`mt-5 max-w-3xl ${h2}`}>Your own AI assistant. Set up around the way you work.</h2>
+        <p className={`max-w-3xl ${lead}`}>Go beyond a blank chat window. We help you choose, set up, and personalize an AI agent assistant for your priorities, everyday tasks, and preferred tools.</p>
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {[
+            { title: "Start with your day", text: "Choose a useful first job: research a topic, organize information, draft content, or prepare for a meeting. Define what a helpful result looks like." },
+            { title: "Make it yours", text: "Shape its instructions, tone, and working context. Connect selected tools and knowledge sources where supported, with permissions matched to the task." },
+            { title: "Build confidence", text: "Test real examples together, refine the workflow, and learn how to review its work. Keep approval in your hands for messages, purchases, and important changes." }
+          ].map(item => <article key={item.title} className={`p-6 sm:p-7 ${cardFlat}`}><h3 className={h3}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p></article>)}
+        </div>
+        <p className="mt-6 max-w-3xl text-sm leading-7 text-muted">We’ll agree the setup, training, access boundaries, and any ongoing support before work begins. Platform capabilities, subscriptions, and integrations depend on the tools you choose.</p>
+        <ServiceConversation label="Plan my personal AI assistant" />
+      </div>
+    </section>
     <section className={sectionBand} aria-labelledby="ai-work-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <p className="text-sm font-semibold uppercase tracking-widest text-accent">From ideas to working systems</p>
       <h2 id="ai-work-heading" className={`mt-3 ${h2}`}>Explore the thinking. See the work.</h2>
@@ -158,7 +175,7 @@ export default function Page() {
     </div></section>
     <section className={section} aria-labelledby="approach-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <h2 id="approach-heading" className={h2}>One useful starting point. A clear path forward.</h2>
-      <ol className="mt-8 grid gap-7 md:grid-cols-3">{content.steps.map((step, i) => <li key={step.title} className="border-t border-line pt-5"><span className="text-sm font-semibold text-accent">0{i+1}</span><h3 className={`mt-3 ${h3}`}>{step.title}</h3><p className="mt-3 leading-7 text-body">{step.text}</p></li>)}</ol>
+      <ol className="mt-8 grid gap-7 md:grid-cols-3">{content.steps.map((step, i) => <li data-process-step key={step.title} className="border-t border-line pt-5"><span className="text-sm font-semibold text-accent">0{i+1}</span><h3 className={`mt-3 ${h3}`}>{step.title}</h3><p className="mt-3 leading-7 text-body">{step.text}</p></li>)}</ol>
       <details className="mt-10 rounded-2xl border border-line bg-surface p-5 sm:p-7"><summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">Explore our eight-area AI framework</summary><div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{content.focusAreas.map(item => <div key={item.title}><h3 className="font-semibold text-ink">{item.title}</h3><p className="mt-2 text-sm leading-6 text-body">{item.text}</p></div>)}</div></details>
       <aside className="mt-10 rounded-2xl border border-line bg-accent-soft p-6 sm:flex sm:items-center sm:justify-between sm:gap-8"><div><h2 className={h3}>{content.assessmentCta.title}</h2><p className="mt-3 max-w-xl leading-7 text-body">{content.assessmentCta.text}</p></div><Link href={content.assessmentCta.href} className={`mt-5 shrink-0 sm:mt-0 ${buttonPrimary}`}>Take the free scorecard →</Link></aside>
     </div></section>
