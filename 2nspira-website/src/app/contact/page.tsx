@@ -65,11 +65,7 @@ function FieldGroup({
 
         <div className="relative mt-1">
           {children}
-          {/* Subtle background fill on focus — brand tint */}
-          <span
-            className="pointer-events-none absolute inset-0 rounded-lg bg-accent-soft opacity-0 transition-opacity duration-300 ease-gentle group-focus-within/field:opacity-100"
-            aria-hidden="true"
-          />
+
         </div>
 
         {hint && (
@@ -400,13 +396,7 @@ export default function ContactPage() {
               <h2 id="form-heading" className="text-2xl font-bold text-ink">
                 Send us a message
               </h2>
-              <p
-                className={`mt-3 ${caption}`}
-              >
-                Your inquiry is delivered to our team. If direct delivery is
-                temporarily unavailable, we will open a pre-composed draft in
-                your email app — review and press send there.
-              </p>
+
 
               {state.kind === "error" && <p role="alert" className="mt-5 text-sm text-red-700">{state.detail}</p>}
               <div className="mt-6">
