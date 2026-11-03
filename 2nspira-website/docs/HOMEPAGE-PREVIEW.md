@@ -88,3 +88,5 @@ New local assets (Pexels License https://www.pexels.com/license/):
 - `challenge-operations.jpg`: fauxels, https://www.pexels.com/photo/3184639/
 
 These depict stock subjects, not identified employees, clients or actual engagements. Layout, copy, service destinations, timeline and production remain unchanged.
+
+Verified release `801b6e7`: lint, canonical build/routing smoke and TypeScript passed. Hosted desktop/tablet/mobile checks at 1440/1024/768/390/320px passed; all homepage image source paths are unique and all hosted homepage asset checksums match local files. Service and challenge crops inspected; keyboard, touch, destinations, refresh and reduced motion passed with no page errors or horizontal overflow. Production separately remains `991df6a69fda171cca922dc5eb4028d83a3fe9cc`.
