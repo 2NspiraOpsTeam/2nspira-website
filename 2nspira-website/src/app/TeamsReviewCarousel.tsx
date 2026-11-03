@@ -19,14 +19,14 @@ export default function TeamsReviewCarousel() {
   return <div className={styles.reviewCarousel} role="region" aria-roledescription="carousel" aria-label="Teams Management resident reviews" onKeyDown={event => {
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") { event.preventDefault(); move(event.key === "ArrowLeft" ? -1 : 1); }
   }}>
-    <div aria-live="polite" aria-atomic="true">
-      {reviews.map((review, position) => <div key={review.name} hidden={position !== index} role="group" aria-roledescription="slide" aria-label={`${position + 1} of ${reviews.length}`}>
+    <div className={styles.reviewWindow}>
+      {reviews.map((_, offset) => { const position = (index + offset) % reviews.length; const review = reviews[position]; return <div key={review.name} role="group" aria-roledescription="slide" aria-label={`${position + 1} of ${reviews.length}`}>
         <figure className={styles.reviewCard}><blockquote>“{review.quote}”</blockquote><figcaption><strong>{review.name}</strong><span>Teams Management resident · Google review excerpt</span></figcaption></figure>
-      </div>)}
+      </div>; })}
     </div>
     <div className={styles.reviewControls}>
       <button type="button" onClick={() => move(-1)} aria-label="Previous review">←</button>
-      <span>{index + 1} / {reviews.length}</span>
+      <span aria-live="polite" aria-atomic="true">{index + 1} / {reviews.length}<span className={styles.reviewSrOnly}> · First visible review by {reviews[index].name}</span></span>
       <button type="button" onClick={() => move(1)} aria-label="Next review">→</button>
     </div>
   </div>;
