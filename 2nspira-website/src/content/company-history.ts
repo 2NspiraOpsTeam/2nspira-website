@@ -26,7 +26,7 @@ export const companyMilestones = [
     title: "Helping Communities Reinvent Themselves",
     subtitle: "Supporting over 20 local community organizations following COVID-19.",
     paragraphs: ["Following the pandemic, we partnered with more than 20 local community organizations to help them adapt to a changing operating environment. Through digital modernization, workflow improvements, and technology guidance, we supported their efforts to rebuild services, strengthen community engagement, and establish more resilient operations. Working across organizations with different missions and resource constraints sharpened our ability to deliver practical solutions that addressed real operational needs."],
-    image: "history-community", alt: "Bookshelves in an empty community library",
+    image: "history-community-organizations", alt: "Community volunteers distributing supplies at a local aid event",
   },
   {
     year: "2024",
