@@ -82,8 +82,8 @@ export default function Home() {
 
     <section className={styles.audience} aria-labelledby="audience-heading">
       <div className={styles.audienceImage}><Photo src="/images/homepage/digital-team.jpg" alt="A group collaborating around a shared workspace" /></div>
-      <div className={styles.bandCopy}><p className={styles.eyebrow}>Who we serve</p><h2 id="audience-heading">For the people<br />moving things forward.</h2><p>Growing businesses. Established organizations. Mission-driven leaders. We partner with people ready to make their operations work better—and their next step clearer.</p>
-        <ul><li>Business owners & entrepreneurs</li><li>Operations & technology leaders</li><li>Community & mission-driven organizations</li></ul><Link href="/contact#contact-message" className={styles.textLink}>Find your next step <span aria-hidden="true">↗</span></Link>
+      <div className={styles.bandCopy}><p className={styles.eyebrow}>Who we serve</p><h2 id="audience-heading">For the people<br />moving things forward.</h2><p>Growing businesses. Schools. Nonprofits. Mission-driven leaders. We partner with people ready to make their operations work better—and their next step clearer.</p>
+        <ul><li>Business owners & entrepreneurs</li><li>Operations & technology leaders</li><li>Schools & educational organizations</li><li>Nonprofits & community organizations</li></ul><Link href="/contact#contact-message" className={styles.textLink}>Find your next step <span aria-hidden="true">↗</span></Link>
       </div>
     </section>
 

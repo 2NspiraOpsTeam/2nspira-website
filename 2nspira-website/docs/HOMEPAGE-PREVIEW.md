@@ -23,3 +23,5 @@ Design direction: image-led services, authentic human visuals, explicit audience
 All five expertise cards now use real people photography, with no Learn more labels, numbered markers, or arrow overlays. Image and title links remain keyboard accessible. Hero and audience imagery also replaced. Photos by fauxels on Pexels, downloaded and served locally under the free commercial-use Pexels License (https://www.pexels.com/license/). These are stock subjects, not identified 2Nspira employees or clients.
 
 Asset source IDs (https://www.pexels.com/photo/<id>/): strategy 3184291; ai-collaboration 3184339; systems-team 3184423; digital-team 3184293; leadership 3184306; mentoring 3184287. Sources reviewed November 3, 2026; no AI generation used for replacements.
+
+Who we serve explicitly includes schools and educational organizations, and nonprofits and community organizations, per Jeffrey’s request.
