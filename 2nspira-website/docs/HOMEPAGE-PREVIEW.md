@@ -73,3 +73,5 @@ Hosted verification passed at 1440/1024/768/390/320px: all four cards and seven 
 ## Visual challenge cards — November 3
 
 Redesigned the four challenge paths as image-led cards using the existing licensed technology photography documented above (no new dependencies or assets). Each has a photographic header, a short category label, a white copy panel and a circular directional affordance. The complete card remains one native link; all copy is visible without hover. Decorative images use empty alternative text to avoid duplicating the link content. Keyboard focus, touch navigation and reduced-motion preferences are retained. No other homepage sections or production configuration changed.
+
+Jeffrey additionally requested that the mentoring, service-exploration and AI Scorecard links become their own section. Added “More ways to move forward” with three distinct native-link cards and icons from the existing lucide-react dependency. These are removed from the challenge section; no new form or submission behavior is introduced.

@@ -54,3 +54,12 @@
 @media(min-width:1600px){.challenges{padding-left:max(6vw,calc((100vw - 1400px)/2));padding-right:max(6vw,calc((100vw - 1400px)/2))}}
 @media(max-width:760px){.challenges{padding:60px 24px}.challengeGrid{grid-template-columns:1fr;gap:24px}.challengeCopy{padding:24px}.challengePhoto{aspect-ratio:1.9}.challengeCategory{left:20px;bottom:16px;font-size:.62rem}.challengeNext{align-items:flex-start;flex-direction:column}.bandCopy h2{font-size:clamp(2.1rem,6vw,3rem)}}
 @media(prefers-reduced-motion:reduce){.challengeCard,.challengeArrow{transition:none}.challengeCard:hover img{transform:none}}
+
+/* Separate discovery section for mentoring, services and self-assessment. */
+.nextSteps{padding-top:80px;padding-bottom:80px}.nextSteps h2{font-size:clamp(2.25rem,3.7vw,3.6rem)}
+.nextStepGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.nextStepCard{display:flex;flex-direction:column;padding:28px;border:1px solid #dce0da;background:#fff;transition:background .2s,border-color .2s}
+.nextStepIcon{display:grid;place-items:center;width:54px;height:54px;background:#e7ece3;color:#172b3a;border-radius:50%;margin-bottom:26px}
+.nextStepCard h3{font-size:1.6rem;line-height:1.2}.nextStepCard p{font-size:.92rem;color:#49555d;margin:18px 0 24px}.nextStepCard .challengeLink{line-height:1.6;gap:12px}.nextStepCard:hover{background:#f5f6f2;border-color:#82947c}
+@media(max-width:900px){.nextStepGrid{grid-template-columns:1fr}.nextStepCard{padding:26px}.nextStepIcon{margin-bottom:20px}.nextSteps{padding-top:60px;padding-bottom:60px}}
+@media(prefers-reduced-motion:reduce){.nextStepCard{transition:none}}

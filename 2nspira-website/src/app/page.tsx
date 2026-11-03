@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Compass, Rocket, ClipboardCheck } from "lucide-react";
 import type { Metadata } from "next";
 import { serviceNeeds } from "@/lib/serviceNeeds";
 import styles from "./homepage.module.css";
@@ -101,8 +102,15 @@ export default function Home() {
         { image: "tech-websites", category: "Better digital experiences", title: "Our website no longer meets our needs.", text: "Build a better customer experience with useful digital capabilities behind it.", href: "/websites", link: "Explore website solutions" },
         { image: "tech-leadership", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
       ].map(challenge => <Link key={challenge.href} href={challenge.href} className={styles.challengeCard}><div className={styles.challengePhoto}><Photo src={`/images/homepage/${challenge.image}.jpg`} alt="" /><span className={styles.challengeCategory}>{challenge.category}</span></div><div className={styles.challengeCopy}><h3>{challenge.title}</h3><p>{challenge.text}</p><span className={styles.challengeLink}>{challenge.link} <span className={styles.challengeArrow} aria-hidden="true">↗</span></span></div></Link>)}</div>
-      <div className={styles.challengeNext}><p>Building a new venture? <Link href="/coaching" className={styles.textLink}>Explore entrepreneur mentoring <span aria-hidden="true">↗</span></Link></p><Link href="/services" className={styles.textLink}>Explore how we can help <span aria-hidden="true">↗</span></Link></div>
-      <p className={styles.readiness}>Considering AI? <Link href="/resources/ai-readiness-scorecard" className={styles.textLink}>Start with the AI Readiness Scorecard <span aria-hidden="true">↗</span></Link></p>
+    </section>
+
+    <section className={`${styles.section} ${styles.nextSteps}`} aria-labelledby="next-steps-heading">
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Find your next step</p><h2 id="next-steps-heading">More ways to move forward.</h2></div></div>
+      <div className={styles.nextStepGrid}>{[
+        { icon: Rocket, title: "Building a new venture?", text: "Make room for a clearer direction, practical guidance, and your next chapter as a founder.", href: "/coaching", link: "Explore entrepreneur mentoring" },
+        { icon: Compass, title: "Exploring what’s possible?", text: "Discover how our services connect your goals with the right expertise and support.", href: "/services", link: "Explore how we can help" },
+        { icon: ClipboardCheck, title: "Considering AI?", text: "Take a first look at your organization’s readiness before deciding where to begin.", href: "/resources/ai-readiness-scorecard", link: "Start with the AI Readiness Scorecard" },
+      ].map(({ icon: Icon, ...step }) => <Link key={step.href} href={step.href} className={styles.nextStepCard}><span className={styles.nextStepIcon}><Icon size={26} strokeWidth={1.5} aria-hidden="true" /></span><h3>{step.title}</h3><p>{step.text}</p><span className={styles.challengeLink}>{step.link}<span aria-hidden="true">↗</span></span></Link>)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.purpose}`} aria-labelledby="purpose-heading">
