@@ -6,7 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
-import source from "@/content/our-story.json";
+import { companyStory } from "@/content/company-history";
+import ImpactTimeline from "../ImpactTimeline";
+import historyStyles from "../homepage.module.css";
 import {
   buttonPrimary,
   card,
@@ -34,7 +36,6 @@ const framework = [
 ];
 
 export default function AboutPage() {
-  const story = source.blocks.slice(1, 12);
   return (
     <main className={pageMain} id="main-content"><CatalogEffects headings>
       <PageIdentity type="AboutPage" name="Our Human-Centered Approach" path="/about" />
@@ -43,13 +44,10 @@ export default function AboutPage() {
         <div className="relative">
         <p><EyebrowPill>Our story</EyebrowPill></p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-          A partner in making your business work better.
+          {companyStory.headline}
         </h1>
         <p className={`mx-auto max-w-2xl ${lead}`}>
-          Your operations, customers, and growth goals come first. We work with
-          you to simplify how work gets done and choose technology that serves
-          those priorities. We also help entrepreneurs build their businesses
-          and strengthen their leadership through mentoring and coaching.
+          {companyStory.paragraphs[0]}
         </p></div>
       </header>
 
@@ -64,25 +62,18 @@ export default function AboutPage() {
           />
         </figure>
 
-        <Reveal className="mt-12"><section className={`relative overflow-hidden p-6 sm:p-10 ${card}`}>
+        <Reveal className="mt-12"><section className={`relative overflow-hidden p-6 sm:p-10 ${card}`} aria-labelledby="our-story-heading">
           <AccentRule className="mb-6" />
-          <h2 className={h2}>Our ethos</h2>
-          <p className="mt-5 leading-8 text-body">{story[0].text}</p>
-          <div className="mt-8 space-y-4">
-            {[
-              { title: "Our story and evolution", paragraphs: story.slice(1, 3) },
-              { title: "How we make technology practical", paragraphs: story.slice(3, 6) },
-              { title: "The difference we work toward", paragraphs: story.slice(6) },
-            ].map((section, index) => (
-              <details key={section.title} className="group rounded-2xl border border-line bg-canvas p-5 open:bg-surface sm:p-6">
-                <summary className="cursor-pointer text-lg font-semibold text-ink marker:text-accent">
-                  <span className="ml-2 mr-3 text-sm text-accent">0{index + 1}</span>{section.title}
-                </summary>
-                {section.paragraphs.map((block, i) => <p key={i} className="mt-5 leading-8 text-body">{block.text}</p>)}
-              </details>
-            ))}
+          <h2 id="our-story-heading" className={h2}>{companyStory.title}</h2>
+          <div className="mt-5 space-y-5">
+            {companyStory.paragraphs.slice(1).map(paragraph => <p key={paragraph} className="leading-8 text-body">{paragraph}</p>)}
           </div>
         </section></Reveal>
+
+        <section className={`mt-16 ${historyStyles.storyHistory}`} aria-labelledby="company-history-heading">
+          <h2 id="company-history-heading" className={`${h2} mb-8`}>Our company milestones</h2>
+          <ImpactTimeline idPrefix="story" />
+        </section>
 
         <section className={`mt-12 p-6 sm:p-10 ${card}`} aria-labelledby="about-coaching-heading">
           <AccentRule className="mb-6" />
