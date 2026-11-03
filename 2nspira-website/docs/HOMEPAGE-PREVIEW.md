@@ -153,3 +153,7 @@ Jeffrey requested a more powerful AI Enablement image and a more engaging image-
 - Dedicated page composition consolidates repeated promises: compact hero, three pathways, two image-led work stories, short process, optional framework, scorecard, FAQs and conversation CTA. Metadata, Service schema, shared navigation and other routes preserved.
 - Lint, canonical build/routing smoke and TypeScript passed. Hosted QA passed 16 route/width combinations across AI, Services, Websites and Fractional CIO at 1440/768/390/320px. Disclosures mouse/keyboard, framework visibility, refresh defaults, reduced motion, JSON-LD parsing, no overflow/page errors, release marker, noindex and mutation guard passed. Three source/staged/hosted image hashes match. All three evidence/resource destinations return 200. Desktop/tablet/mobile full-page screenshots inspected. Preview forms/accounts remain intentionally blocked and untested.
 - Production marker independently remains `991df6a69fda171cca922dc5eb4028d83a3fe9cc`. No production release.
+
+## AI hero anatomy correction — 2026-11-03
+
+Jeffrey identified the woman's awkward generated pointing hand. Used built-in image editing on the existing hero: replace the pointing gesture with a relaxed forearm and anatomically natural hand resting on the notebook; preserve the three people, office, monitor, lighting and framing. Inspected the result at full size. Saved `public/images/hero/ai-human-led-v3.webp`; retained original generated PNG and previous asset. Page copy, layout, alt text and other imagery unchanged. Preview only.

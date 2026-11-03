@@ -127,7 +127,7 @@ export default function Page() {
             <ServiceConversation label="Find your AI starting point" />
           </div>
           <figure className="overflow-hidden rounded-[2rem] border border-line shadow-xl">
-            <Image src="/images/hero/ai-human-led-v2.webp" alt="Three professionals reviewing connected digital workflows together in an AI operations workspace." width={1536} height={1024} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" />
+            <Image src="/images/hero/ai-human-led-v3.webp" alt="Three professionals reviewing connected digital workflows together in an AI operations workspace." width={1536} height={1024} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" />
           </figure>
         </div>
         <p className="mt-8 border-t border-line pt-5 text-sm font-medium text-muted">Useful workflows. Confident people. Responsible decisions.</p>
