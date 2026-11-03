@@ -40,3 +40,16 @@ Pexels sources, covered by https://www.pexels.com/license/:
 - `history-web-development.jpg`: https://www.pexels.com/photo/546819/
 - `history-technology.jpg`: https://www.pexels.com/photo/325229/
 - `history-architecture.jpg`: https://www.pexels.com/photo/325185/
+
+## Technology-at-work imagery — November 3
+
+Jeffrey requested different people photos throughout the homepage: hands-on technology rather than business meetings, taking visual direction from Marketing Alliance’s desaturated photography and muted colors. Replaced the hero, five expertise images, and audience image with seven distinct local Pexels assets. Applied restrained desaturation only to these people photos; project screenshots, non-people timeline images, page layout and service copy are unchanged. “What we do” is now “Best Practices” per Jeffrey.
+
+Pexels License: https://www.pexels.com/license/ . Stock subjects are not represented as employees, clients or endorsements.
+- `tech-hero.jpg`: https://www.pexels.com/photo/1181316/
+- `tech-ai.jpg`: https://www.pexels.com/photo/3861958/
+- `tech-automation.jpg`: https://www.pexels.com/photo/3862632/
+- `tech-websites.jpg`: https://www.pexels.com/photo/1181472/
+- `tech-leadership.jpg`: https://www.pexels.com/photo/3862618/
+- `tech-mentoring.jpg`: https://www.pexels.com/photo/3861973/
+- `tech-community.jpg`: https://www.pexels.com/photo/1181263/
