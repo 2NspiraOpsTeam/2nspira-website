@@ -69,3 +69,7 @@ Commercial prioritization is a hypothesis, not a validated market finding. No ou
 Implementation `44bdd62`; preview Worker version `dcd0a43e-1881-438b-9831-c0ae43a94cba`. Lint, canonical build/routing smoke, TypeScript and source/staged image checksum checks passed.
 
 Hosted verification passed at 1440/1024/768/390/320px: all four cards and seven destinations, keyboard activation and visible focus, refresh persistence, no horizontal overflow or browser errors. Twelve hosted photo checksums match the source manifest. Desktop/mobile rendered screenshots inspected. Preview noindex and mutation-blocking guards passed. Production manifest remains `991df6a69fda171cca922dc5eb4028d83a3fe9cc`. Inquiry conversion performance is not yet measured; preview forms intentionally cannot send.
+
+## Visual challenge cards — November 3
+
+Redesigned the four challenge paths as image-led cards using the existing licensed technology photography documented above (no new dependencies or assets). Each has a photographic header, a short category label, a white copy panel and a circular directional affordance. The complete card remains one native link; all copy is visible without hover. Decorative images use empty alternative text to avoid duplicating the link content. Keyboard focus, touch navigation and reduced-motion preferences are retained. No other homepage sections or production configuration changed.

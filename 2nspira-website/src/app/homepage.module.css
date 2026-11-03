@@ -32,6 +32,25 @@
 
 .timelinePanel[data-year="2025"] .timelinePhoto img{object-position:left center}
 
-/* Problem-led navigation reuses the site’s editorial palette and native links. */
-.challenges{padding-top:80px;padding-bottom:80px}.challengeIntro{max-width:380px;margin:0;color:#49555d}.challengeGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.challengeCard{display:flex;flex-direction:column;align-items:flex-start;padding:32px;background:#f6f5f2;border:1px solid #e2e4df;transition:background .2s}.challengeCard:hover{background:var(--sand)}.challengeCard h3{font-size:clamp(1.35rem,2.2vw,1.85rem);line-height:1.25;max-width:26ch}.challengeCard p{color:#49555d;margin:20px 0 24px;max-width:46ch}.challengeLink{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:.82rem;font-weight:600;margin-top:auto;width:100%;min-height:44px;border-top:1px solid #c4cbc4;padding-top:14px}.challengeNext{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 28px;margin-top:24px}.challengeNext p{margin:0}.readiness{margin:12px 0 0;color:#49555d}.challengeNext .textLink,.readiness .textLink{font-size:.85rem}
-@media(max-width:760px){.challenges{padding:60px 24px}.challengeGrid{grid-template-columns:1fr;gap:16px}.challengeCard{padding:24px}.challengeNext{align-items:flex-start;flex-direction:column}.bandCopy h2{font-size:clamp(2.1rem,6vw,3rem)}}
+/* Image-led challenge paths retain native navigation and always-visible copy. */
+.challenges{padding-top:88px;padding-bottom:88px;background:#f5f4f0;max-width:none}
+.challengeIntro{max-width:380px;margin:0;color:#49555d}
+.challengeGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.challengeCard{display:flex;flex-direction:column;background:#fff;border:1px solid #dce0da;overflow:hidden;transition:box-shadow .25s,border-color .25s}
+.challengePhoto{position:relative;aspect-ratio:2.3;overflow:hidden;background:var(--sand)}
+.challengePhoto img{filter:grayscale(.25) saturate(.75);transition:transform .5s;object-position:center 52%}
+.challengeCard:first-child img{object-position:center 60%}
+.challengeCard:nth-child(4) img{object-position:right center}
+.challengeCategory{position:absolute;left:24px;bottom:20px;background:#172b3a;color:white;padding:9px 14px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;line-height:1.5}
+.challengeCopy{display:flex;flex-direction:column;align-items:flex-start;padding:28px 30px 24px;flex:1}
+.challengeCard h3{font-size:clamp(1.4rem,2.15vw,1.9rem);line-height:1.2;max-width:28ch}
+.challengeCard p{color:#49555d;margin:16px 0 22px;max-width:46ch}
+.challengeLink{display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:.82rem;font-weight:600;margin-top:auto;width:100%;min-height:48px;border-top:1px solid #dce0da;padding-top:16px}
+.challengeArrow{display:grid;place-items:center;flex-shrink:0;width:40px;height:40px;border-radius:50%;background:#e7ece3;color:#172b3a;font-size:1.2rem;transition:background .25s,color .25s}
+.challengeCard:hover,.challengeCard:focus-visible{border-color:#82947c;box-shadow:0 12px 32px #172b3a12}
+.challengeCard:hover img{transform:scale(1.035)}
+.challengeCard:hover .challengeArrow,.challengeCard:focus-visible .challengeArrow{background:#172b3a;color:#fff}
+.challengeNext{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 28px;margin-top:28px}.challengeNext p{margin:0}.readiness{margin:12px 0 0;color:#49555d}.challengeNext .textLink,.readiness .textLink{font-size:.85rem}
+@media(min-width:1600px){.challenges{padding-left:max(6vw,calc((100vw - 1400px)/2));padding-right:max(6vw,calc((100vw - 1400px)/2))}}
+@media(max-width:760px){.challenges{padding:60px 24px}.challengeGrid{grid-template-columns:1fr;gap:24px}.challengeCopy{padding:24px}.challengePhoto{aspect-ratio:1.9}.challengeCategory{left:20px;bottom:16px;font-size:.62rem}.challengeNext{align-items:flex-start;flex-direction:column}.bandCopy h2{font-size:clamp(2.1rem,6vw,3rem)}}
+@media(prefers-reduced-motion:reduce){.challengeCard,.challengeArrow{transition:none}.challengeCard:hover img{transform:none}}
