@@ -23,9 +23,9 @@
 /* A restrained editorial treatment ties the technology photography together. */
 .hero>img,.serviceImage img,.audienceImage img{filter:grayscale(.35) saturate(.72)}
 .hero>img{object-position:70% center}
-.service:nth-child(1) img{object-position:72% center}
+.service:nth-child(1) img{object-position:right center}
 .service:nth-child(2) img{object-position:60% center}
 .service:nth-child(3) img{object-position:68% center}
-.service:nth-child(4) img{object-position:60% center}
+.service:nth-child(4) img{object-position:right center}
 .service:nth-child(5) img{object-position:center 48%}
 @media(max-width:760px){.hero>img{object-position:72% center}}
