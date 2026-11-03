@@ -43,11 +43,11 @@ export const metadata: Metadata = {
 const serviceImages = [
   "/images/homepage/tech-ai.jpg",
   "/images/homepage/tech-automation.jpg",
-  "/images/homepage/tech-websites.jpg",
-  "/images/homepage/tech-leadership.jpg",
-  "/images/homepage/tech-mentoring.jpg",
+  "/images/homepage/service-website.jpg",
+  "/images/homepage/service-cio.jpg",
+  "/images/homepage/mentoring.jpg",
 ];
-const serviceAlts = ["Developer working with code across multiple screens", "Engineer programming a laptop beside automated equipment", "Two developers working together at a computer", "Engineers reviewing a laptop beside technical equipment", "Two engineers working through a technical prototype together"];
+const serviceAlts = ["Developer working with code across multiple screens", "Engineer programming a laptop beside automated equipment", "Person reviewing a visual website on a laptop", "Business leader guiding a technology planning meeting", "Two professionals discussing business plans and goals"];
 
 function Photo({ src, alt, className = "", priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
   return <Image src={src} alt={alt} fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 70vw" priority={priority} className={className} />;
@@ -97,10 +97,10 @@ export default function Home() {
     <section className={`${styles.section} ${styles.challenges}`} aria-labelledby="challenges-heading">
       <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What brings you here?</p><h2 id="challenges-heading">Where do you need<br />to make progress?</h2></div><p className={styles.challengeIntro}>You don’t need to know which service to ask for. Start with the challenge you’re facing.</p></div>
       <div className={styles.challengeGrid}>{[
-        { image: "tech-automation", category: "Simpler operations", title: "Our operations have become too complicated.", text: "Simplify repetitive work and connect the systems your business relies on.", href: "/automation-systems-optimization", link: "Explore operations solutions" },
-        { image: "tech-ai", category: "AI with purpose", title: "We want to use AI, but need direction.", text: "Find valuable opportunities, prepare your people, and establish responsible practices.", href: "/ai-enablement", link: "Explore AI enablement" },
+        { image: "challenge-operations", category: "Simpler operations", title: "Our operations have become too complicated.", text: "Simplify repetitive work and connect the systems your business relies on.", href: "/automation-systems-optimization", link: "Explore operations solutions" },
+        { image: "digital-team", category: "AI with purpose", title: "We want to use AI, but need direction.", text: "Find valuable opportunities, prepare your people, and establish responsible practices.", href: "/ai-enablement", link: "Explore AI enablement" },
         { image: "tech-websites", category: "Better digital experiences", title: "Our website no longer meets our needs.", text: "Build a better customer experience with useful digital capabilities behind it.", href: "/websites", link: "Explore website solutions" },
-        { image: "tech-leadership", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
+        { image: "ai-collaboration", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
       ].map(challenge => <Link key={challenge.href} href={challenge.href} className={styles.challengeCard}><div className={styles.challengePhoto}><Photo src={`/images/homepage/${challenge.image}.jpg`} alt="" /><span className={styles.challengeCategory}>{challenge.category}</span></div><div className={styles.challengeCopy}><h3>{challenge.title}</h3><p>{challenge.text}</p><span className={styles.challengeLink}>{challenge.link} <span className={styles.challengeArrow} aria-hidden="true">↗</span></span></div></Link>)}</div>
     </section>
 

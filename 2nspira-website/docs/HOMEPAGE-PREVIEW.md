@@ -77,3 +77,14 @@ Redesigned the four challenge paths as image-led cards using the existing licens
 Jeffrey additionally requested that the mentoring, service-exploration and AI Scorecard links become their own section. Added “More ways to move forward” with three distinct native-link cards and icons from the existing lucide-react dependency. These are removed from the challenge section; no new form or submission behavior is introduced.
 
 Verified preview release `73274f05d376896366e6610be99e15233f3b836b`, Worker version `b2c52835-db8c-4971-97d7-a5a4e28b8795`. Lint, TypeScript, canonical build and routing smoke passed. Hosted checks passed at 1440/1024/768/390/320px for four image-led challenge cards, three dedicated next-step cards, loaded section images, all seven destination HTTP responses and zero horizontal overflow. Keyboard activation/visible focus, touch mentoring navigation, refresh persistence and reduced-motion handling passed; no browser page errors observed. Desktop, tablet and mobile screenshots inspected; photo focal positions refined to preserve faces. Preview noindex/no-store and blocked mutation behavior verified. Production manifest separately remains `991df6a69fda171cca922dc5eb4028d83a3fe9cc`; production was not released.
+
+## Service-aligned, unique homepage photography — November 3
+
+Jeffrey requested service-specific subjects and no duplicated homepage photos. Expertise keeps distinct AI/development and automation imagery; websites now shows a person viewing a website, Fractional CIO shows a leader guiding a planning meeting, and mentoring uses the existing business-guidance photo. Challenge cards use four separate photographs, not the expertise images. Existing licensed assets were preferred; no new library or generated imagery was required.
+
+New local assets (Pexels License https://www.pexels.com/license/):
+- `service-cio.jpg`: Christina Morillo, https://www.pexels.com/photo/1181396/
+- `service-website.jpg`: Antoni Shkraba, https://www.pexels.com/photo/4348404/
+- `challenge-operations.jpg`: fauxels, https://www.pexels.com/photo/3184639/
+
+These depict stock subjects, not identified employees, clients or actual engagements. Layout, copy, service destinations, timeline and production remain unchanged.
