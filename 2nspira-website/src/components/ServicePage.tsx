@@ -44,6 +44,7 @@ type Props = {
   };
   focusAreas?: { title: string; text: string }[];
   insightSections?: { title: string; text: string; items?: string[] }[];
+  credibility?: { title: string; intro: string; items: { title: string; text: string; href: string; label: string }[] };
   buildSection?: {
     title: string;
     intro: string;
@@ -87,6 +88,7 @@ export default function ServicePage({
   focusAreas,
   insightSections,
   buildSection,
+  credibility,
   journey,
   assessmentCta,
   closingCta,
@@ -142,6 +144,23 @@ export default function ServicePage({
             {outcomes.map(item => <li key={item}>{item}</li>)}
           </ul>
         </section>
+
+        {credibility && (
+          <section className="mt-16" aria-labelledby="service-credibility-heading">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Experience you can explore</p>
+            <h2 id="service-credibility-heading" className={`mt-3 ${h2}`}>{credibility.title}</h2>
+            <p className={`mt-4 max-w-3xl ${lead}`}>{credibility.intro}</p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {credibility.items.map(item => (
+                <article key={item.title} className={`flex flex-col p-6 ${cardFlat}`}>
+                  <h3 className={h3}>{item.title}</h3>
+                  <p className="mb-6 mt-3 leading-7 text-body">{item.text}</p>
+                  <Link href={item.href} className={`mt-auto inline-flex min-h-11 items-center ${linkInline}`}>{item.label} →</Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
         {buildSection && (
           <section className={`mt-16 ${isEditorial ? "rounded-[2rem] bg-surface px-5 py-10 shadow-[0_20px_60px_rgba(35,41,54,0.06)] ring-1 ring-line sm:px-8 sm:py-12" : ""}`} aria-labelledby="build-section-heading">

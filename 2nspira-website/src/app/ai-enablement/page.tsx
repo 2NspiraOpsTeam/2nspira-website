@@ -75,6 +75,15 @@ export default function Page() {
       { title: "Implementation", text: "Move from experiments to controlled, supportable operating practices." },
       { title: "Measurement", text: "Track quality, risk, adoption, time saved, and mission-level value." }
     ],
+    credibility: {
+      title: "Practical experience. Visible thinking.",
+      intro: "Explore the work and thinking behind our approach—from hands-on AI experiments to the systems organizations use every day.",
+      items: [
+        { title: "Hands-on AI practice", text: "Jeffrey Cortez shares lessons from building a multi-agent AI workflow: coordination, local and cloud models, and human oversight.", href: "/post/building-ai-team-multi-agent-workflow-lessons", label: "Read the field notes" },
+        { title: "Technology leadership", text: "Led by Jeffrey Cortez, whose background spans technology leadership, education, and operational systems, with an Executive Master’s in Technology Management from Columbia University.", href: "/post/building-ai-team-multi-agent-workflow-lessons", label: "Explore Jeffrey’s perspective" },
+        { title: "Systems you can explore", text: "Explore selected digital platforms and operational systems to see how we turn business needs into working tools.", href: "/work", label: "Explore selected work" }
+      ]
+    },
     buildSection: {
       title: "Three ways to move AI forward",
       intro: "Start where you need help. We agree the scope before work begins.",
