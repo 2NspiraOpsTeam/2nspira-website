@@ -129,3 +129,5 @@ Hosted QA passed 12 route/width checks across Home, About and AI at 1440/768/390
 ## Executive leadership imagery — 2026-11-03
 
 Jeffrey requested two replacements: executives in a boardroom for the Fractional CIO service card, and seven staff listening to one executive for the leadership challenge panel. Built-in image generation produced illustrative editorial photography, not actual staff or client engagements. Local assets: `public/images/homepage/executive-boardroom-v1.jpg` and `public/images/homepage/executive-staff-briefing-v1.jpg`. Prompts: realistic professional boardroom with five senior executives; wide professional workplace with exactly seven seated staff listening to one standing executive, all heads within the central band. No logos or embedded copy. Preview only; content and links unchanged.
+
+Jeffrey additionally requested a slightly larger homepage logo/name. Increased the combined header artwork from 36px to 44px tall on the homepage only; other routes retain their existing size. The executive briefing uses its native 3:1 ratio so all seven listeners remain visible at narrow widths.
