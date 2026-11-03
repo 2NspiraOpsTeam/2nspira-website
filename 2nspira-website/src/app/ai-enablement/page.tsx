@@ -1,6 +1,12 @@
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
-import ServicePage from "@/components/ServicePage";
+import Image from "next/image";
+import Link from "next/link";
+import ServiceEffects from "@/components/ServiceEffects";
+import ServiceConversation from "@/components/ServiceConversation";
+import ServiceQuestions from "@/components/ServiceQuestions";
+import { EyebrowPill } from "@/components/VisualAccents";
+import { h2, h3, lead, linkInline, pageMain, section, sectionBand, cardFlat, buttonPrimary } from "@/components/ui";
 
 const description = "Find where AI can reduce repetitive work and help your team serve customers better. Get practical AI strategy, training, and governance from 2Nspira.";
 
@@ -11,8 +17,7 @@ export const metadata: Metadata = publicPageMetadata({
   path: "/ai-enablement"
 });
 
-export default function Page() {
-  return <ServicePage {...{
+const content = {
     visualTreatment: "editorial" as const,
     title: "Put AI to work. Keep people in control.",
     eyebrowText: "AI Strategy, Training & Governance",
@@ -106,5 +111,58 @@ export default function Page() {
       primary: { label: "Discuss AI Readiness", href: "/contact" },
       secondary: { label: "Explore all services", href: "/services" }
     }
-  }} />;
+};
+
+
+export default function Page() {
+  return <main className={pageMain} id="main-content"><ServiceEffects>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(content.jsonLd).replace(/</g, "\\u003c") }} />
+    <section className="border-b border-line bg-surface">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+        <Link href="/services" className={linkInline}>← All services</Link>
+        <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
+          <div><EyebrowPill>{content.eyebrowText}</EyebrowPill>
+            <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Put AI to work.<br />Keep people in control.</h1>
+            <p className={lead}>Less repetitive work. More confident teams. Turn scattered AI experiments into useful workflows—with clear safeguards and human judgment built in.</p>
+            <ServiceConversation label="Find your AI starting point" />
+          </div>
+          <figure className="overflow-hidden rounded-[2rem] border border-line shadow-xl">
+            <Image src="/images/hero/ai-human-led-v2.webp" alt="Three professionals reviewing connected digital workflows together in an AI operations workspace." width={1536} height={1024} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" />
+          </figure>
+        </div>
+        <p className="mt-8 border-t border-line pt-5 text-sm font-medium text-muted">Useful workflows. Confident people. Responsible decisions.</p>
+      </div>
+    </section>
+    <section className={section} aria-labelledby="ai-pathways-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <p className="text-sm font-semibold uppercase tracking-widest text-accent">Sound familiar?</p>
+      <h2 id="ai-pathways-heading" className={`mt-3 ${h2}`}>AI is everywhere. Where does it help you?</h2>
+      <div className="mt-8 grid gap-5 md:grid-cols-3">{content.buildSection.items.map((item, i) => <article key={item.title} className={`p-6 ${cardFlat}`}>
+        <p className="mb-4 text-sm font-medium text-accent">{["Too many experiments?", "Unsure what to trust?", "Worried about the risks?"][i]}</p>
+        <h3 className={h3}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p>
+        <details className="mt-5 border-t border-line pt-2"><summary className="min-h-11 cursor-pointer rounded py-3 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">What this can include</summary><ul className="list-disc space-y-2 pb-3 pl-5 text-sm leading-7 text-body">{item.details.map(d => <li key={d}>{d}</li>)}</ul></details>
+      </article>)}</div>
+    </div></section>
+    <section className={sectionBand} aria-labelledby="ai-work-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <p className="text-sm font-semibold uppercase tracking-widest text-accent">From ideas to working systems</p>
+      <h2 id="ai-work-heading" className={`mt-3 ${h2}`}>Explore the thinking. See the work.</h2>
+      <p className={`max-w-2xl ${lead}`}>Our AI approach connects hands-on experimentation with the operational realities of running a business.</p>
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
+        {[
+          { image: "/images/posts/ai-agents-human-accountability-20261030.webp", width: 1672, height: 941, alt: "Illustration of a human overseeing many connected AI workspaces.", eyebrow: "Hands-on AI practice", title: "An AI team still needs a human lead.", text: "Jeffrey shares lessons from building a multi-agent workflow: coordination, model choices, and human oversight.", href: "/post/building-ai-team-multi-agent-workflow-lessons", label: "Read the field notes" },
+          { image: "/images/work/manufacturing-command-center-card.webp", width: 1100, height: 503, alt: "Manufacturing operations concept showing connected production, quality, and inventory dashboards.", eyebrow: "Operational systems showcase", title: "Useful AI starts with connected work.", text: "Explore our manufacturing operations showcase—a view of the workflows, records, and accountability that technology needs to support.", href: "/work", label: "Explore selected work" }
+        ].map(item => <article key={item.title} className={`overflow-hidden ${cardFlat}`}>
+          <Link href={item.href} className="block focus-visible:outline-2 focus-visible:outline-accent"><Image src={item.image} alt={item.alt} width={item.width} height={item.height} sizes="(min-width: 768px) 540px, calc(100vw - 32px)" unoptimized className="aspect-[16/9] w-full object-cover" /></Link>
+          <div className="p-6 sm:p-8"><p className="text-xs font-semibold uppercase tracking-widest text-accent">{item.eyebrow}</p><h3 className={`mt-3 ${h3}`}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p><Link href={item.href} className={`mt-4 inline-flex min-h-11 items-center ${linkInline}`}>{item.label} →</Link></div>
+        </article>)}
+      </div>
+    </div></section>
+    <section className={section} aria-labelledby="approach-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <h2 id="approach-heading" className={h2}>One useful starting point. A clear path forward.</h2>
+      <ol className="mt-8 grid gap-7 md:grid-cols-3">{content.steps.map((step, i) => <li key={step.title} className="border-t border-line pt-5"><span className="text-sm font-semibold text-accent">0{i+1}</span><h3 className={`mt-3 ${h3}`}>{step.title}</h3><p className="mt-3 leading-7 text-body">{step.text}</p></li>)}</ol>
+      <details className="mt-10 rounded-2xl border border-line bg-surface p-5 sm:p-7"><summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">Explore our eight-area AI framework</summary><div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{content.focusAreas.map(item => <div key={item.title}><h3 className="font-semibold text-ink">{item.title}</h3><p className="mt-2 text-sm leading-6 text-body">{item.text}</p></div>)}</div></details>
+      <aside className="mt-10 rounded-2xl border border-line bg-accent-soft p-6 sm:flex sm:items-center sm:justify-between sm:gap-8"><div><h2 className={h3}>{content.assessmentCta.title}</h2><p className="mt-3 max-w-xl leading-7 text-body">{content.assessmentCta.text}</p></div><Link href={content.assessmentCta.href} className={`mt-5 shrink-0 sm:mt-0 ${buttonPrimary}`}>Take the free scorecard →</Link></aside>
+    </div></section>
+    <ServiceQuestions items={content.questions} />
+    <section className="mx-auto mb-16 max-w-6xl px-4 sm:px-6" aria-labelledby="ai-cta-heading"><div className="rounded-[2rem] bg-ink px-6 py-12 text-center sm:px-10"><h2 id="ai-cta-heading" className="mx-auto max-w-2xl text-3xl font-medium tracking-tight text-white sm:text-4xl">What could your team do with less busywork?</h2><p className="mx-auto mt-4 max-w-xl leading-7 text-white/80">Bring one workflow, one question, or one experiment. Let’s find a practical next step.</p><ServiceConversation label="Discuss AI readiness" centered dark /></div></section>
+  </ServiceEffects></main>;
 }
