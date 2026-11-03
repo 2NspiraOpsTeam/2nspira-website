@@ -130,7 +130,7 @@ export default function ServicesPage() {
           <p><EyebrowPill>What we do</EyebrowPill></p>
           <h1
             id="hero-heading"
-            className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
+            className="mt-4 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink"
           >
             Practical improvements for the way your business works.
           </h1>
