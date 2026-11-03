@@ -1,32 +1,19 @@
-import ServiceEffects from "@/components/ServiceEffects";
-import ClientServiceGrid from "@/components/ClientServiceGrid";
-import BusinessProblems from "@/components/BusinessProblems";
-import HomeHeroMedia from "@/components/HomeHeroMedia";
 import Image from "next/image";
-import type { Metadata } from "next";
-import Reveal from "@/components/Reveal";
-import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import Link from "next/link";
-import {
-  buttonPrimary,
-  buttonSecondary,
-  cardFlat,
-  caption,
-  h2,
-  lead,
-  pageMain,
-  section,
-  sectionBand,
-} from "@/components/ui";
+import { Compass, Rocket, ClipboardCheck } from "lucide-react";
+import type { Metadata } from "next";
+import { serviceNeeds } from "@/lib/serviceNeeds";
+import styles from "./homepage.module.css";
+import ImpactTimeline from "./ImpactTimeline";
 
 const homepageDescription =
-  "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.";
+  "2Nspira helps businesses adopt AI, automate workflows, build websites and apps, and strengthen technology leadership with fractional CIO services.";
 const homepageShareTitle =
-  "Your business, working better. Technology with purpose.";
+  "AI, Automation & Technology Consulting | 2Nspira";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
 
 export const metadata: Metadata = {
-  title: { absolute: "Business Transformation for Practical Results | 2Nspira" },
+  title: { absolute: homepageShareTitle },
   description: homepageDescription,
   alternates: { canonical: "https://2nspira.com/" },
   openGraph: {
@@ -53,154 +40,140 @@ export const metadata: Metadata = {
   },
 };
 
+const serviceImages = [
+  "/images/homepage/service-website.jpg",
+  "/images/homepage/tech-automation.jpg",
+  "/images/homepage/tech-ai.jpg",
+  "/images/homepage/executive-boardroom-v1.jpg",
+  "/images/homepage/mentoring-office-v2.webp",
+];
+const serviceAlts = ["Person reviewing a visual website on a laptop", "Engineer programming a laptop beside automated equipment", "Developer working with code across multiple screens", "Executives discussing strategy in a modern boardroom", "Two professionals engaged in a thoughtful one-to-one conversation in a modern office"];
+
+function Photo({ src, alt, className = "", priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
+  return <Image src={src} alt={alt} fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 70vw" priority={priority} className={className} />;
+}
+
+const homepageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://2nspira.com/#webpage",
+      url: "https://2nspira.com/",
+      name: homepageShareTitle,
+      description: homepageDescription,
+      inLanguage: "en-US",
+      isPartOf: { "@id": "https://2nspira.com/#website" },
+      about: { "@id": "https://2nspira.com/#organization" },
+      mainEntity: { "@id": "https://2nspira.com/#services" },
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://2nspira.com/#services",
+      name: "2Nspira services",
+      numberOfItems: serviceNeeds.length,
+      itemListElement: serviceNeeds.map((service, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Service",
+          name: service.name,
+          description: service.help,
+          url: `https://2nspira.com${service.href}`,
+          provider: { "@id": "https://2nspira.com/#organization" },
+        },
+      })),
+    },
+  ],
+};
+
 export default function Home() {
-  const values = [
-    { title: "Understand", text: "Learn your business, workflows, constraints, and goals before recommending technology." },
-    { title: "Simplify", text: "Find unnecessary complexity, repeated work, and practical opportunities to improve." },
-    { title: "Implement", text: "Introduce the right technologies, integrations, automation, and AI for the agreed priorities." },
-    { title: "Improve", text: "Measure outcomes, refine processes, and support changing business needs within the agreed scope." },
-  ];
+  return <main id="main-content" className={styles.home}>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd).replace(/</g, "\\u003c") }} />
+    <section className={styles.hero} aria-labelledby="hero-heading">
+      <Photo src="/images/homepage/tech-hero.webp" alt="Technology professional using a portable computer beside server racks" priority />
+      <div className={styles.heroShade} />
+      <div className={styles.heroContent}>
+        <p className={styles.eyebrow}>People. Purpose. Possibility.</p>
+        <h1 id="hero-heading">A clearer vision.<br />A stronger business.</h1>
+        <p>Improve operations, make clearer technology decisions, adopt AI with purpose, and build digital experiences that serve your customers.</p>
+        <Link className={styles.lightButton} href="/contact#contact-message">Let’s build what’s next <span aria-hidden="true">↗</span></Link>
+      </div>
+      <a href="#our-purpose" className={styles.heroFoot}>Independent thinking. Practical change. Since 2019. <span aria-hidden="true">↓</span></a>
+    </section>
 
-  return (
-    <main className={pageMain} id="main-content">
-      <ServiceEffects>
-      {/* Hero — B2 Split Advisory prototype (WAVE3-B2-STATIC-HERO) */}
-      <section
-        className="relative overflow-hidden border-b border-line bg-surface py-24 sm:py-32"
-        aria-labelledby="hero-heading"
-        data-prototype="B2-SPLIT-ADVISORY"
-      >
-        <AmbientField />
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[55fr_45fr] lg:items-center lg:gap-16">
-            {/* Left: typography / value proposition */}
-            <div>
-              <p className="animate-rise" style={{ animationDelay: "60ms" }}>
-                <EyebrowPill>Practical technology expertise. Real business problems.</EyebrowPill>
-              </p>
-              <h1
-                id="hero-heading"
-                className="animate-rise mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-6xl"
-                style={{ animationDelay: "140ms" }}
-              >
-                Your business has outgrown the way it works. Let&apos;s fix that.
-              </h1>
-              <p className={`animate-rise mt-6 max-w-2xl ${lead}`} style={{ animationDelay: "240ms" }}>
-                Disconnected systems. Manual processes. Unclear AI opportunities.
-                Technology decisions without a roadmap.
-              </p>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-body">
-                2Nspira is your business transformation partner. We help reduce manual
-                work, improve operations, serve customers better, and support
-                growth—using technology to make practical improvements.
-              </p>
-              <div className="mt-8 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
-                <Link href="/contact#contact-message" className={buttonPrimary}>Let&apos;s Discuss Your Challenge</Link>
-                <Link href="/work" className={buttonSecondary}>See Our Work <span aria-hidden="true">→</span></Link>
-              </div>
-            </div>
+    <section className={`${styles.section} ${styles.intro}`} id="our-purpose" aria-labelledby="intro-heading">
+      <p className={styles.eyebrow}>Your business transformation partner</p>
+      <h2 id="intro-heading">Good technology starts<br />with understanding people.</h2>
+      <p>Behind every business challenge are people trying to do their best work. We help you see what’s getting in the way, simplify the complex, and move forward with purpose.</p>
+      <Link href="/about" className={styles.textLink}>Get to know 2Nspira <span aria-hidden="true">↗</span></Link>
+    </section>
 
-            <HomeHeroMedia />
-          </div>
-        </div>
-      </section>
+    <section className={styles.section} id="find-the-right-service" aria-labelledby="services-heading">
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What we do</p><h2 id="services-heading">Expertise that moves<br />your business forward.</h2></div><Link href="/services" className={styles.textLink}>Explore our services</Link></div>
+      <div className={styles.services}>{serviceNeeds.map((service, i) => <article key={service.href} className={styles.service}>
+        <Link href={service.href} className={styles.serviceImage} aria-label={service.name}><Photo src={serviceImages[i]} alt={serviceAlts[i]} /></Link>
+        <h3><Link href={service.href}>{service.name}</Link></h3><p>{service.help}</p>
+      </article>)}</div>
+    </section>
 
-      <BusinessProblems />
+    <section className={styles.audience} aria-labelledby="audience-heading">
+      <div className={styles.audienceImage}><Photo src="/images/homepage/tech-community.jpg" alt="Two developers reviewing code together on a laptop" /></div>
+      <div className={styles.bandCopy}>
+        <p className={styles.eyebrow}>Who we serve</p>
+        <h2 id="audience-heading">For organizations ready to move beyond what’s holding them back.</h2>
+        <p>Whether you’re growing a business, leading a team, serving a community, or building something new, we help you overcome what stands between where you are and where you want to go.</p>
+        <ul className={styles.audienceNeeds}>{[
+          { title: "Growing businesses", text: "Build the systems and digital experiences your next stage of growth demands." },
+          { title: "Operations & technology leaders", text: "Bring clarity to technology decisions, simplify complexity, and make better use of AI." },
+          { title: "Schools & nonprofits", text: "Make limited resources go further through practical technology and stronger operations." },
+          { title: "Entrepreneurs & founders", text: "Gain the perspective and guidance to build confidently and lead effectively." },
+        ].map(audience => <li key={audience.title}><h3>{audience.title}</h3><p>{audience.text}</p></li>)}</ul>
+        <Link href="/contact#contact-message" className={styles.textLink}>Let’s discuss your challenge <span aria-hidden="true">↗</span></Link>
+      </div>
+    </section>
 
-      {/* Capabilities */}
-      <section
-        id="find-the-right-service"
-        className={`${section} scroll-mt-24 bg-surface`}
-        aria-labelledby="services-heading"
-      >
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <EyebrowPill>The expertise</EyebrowPill>
-          <div className="mt-5 grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-16">
-            <h2 data-catalog-reveal id="services-heading" className={h2}>
-              Practical expertise. Clear business outcomes.
-            </h2>
-            <p className={`max-w-2xl ${lead}`}>
-              We start with the operational challenge, then identify the right
-              combination of guidance, integration, automation, and implementation.
-            </p>
-          </div>
+    <section className={`${styles.section} ${styles.challenges}`} aria-labelledby="challenges-heading">
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What brings you here?</p><h2 id="challenges-heading">Where do you need<br />to make progress?</h2></div><p className={styles.challengeIntro}>You don’t need to know which service to ask for. Start with the challenge you’re facing.</p></div>
+      <div className={styles.challengeGrid}>{[
+        { image: "challenge-operations", category: "Simpler operations", title: "Our operations have become too complicated.", text: "Simplify repetitive work and connect the systems your business relies on.", href: "/automation-systems-optimization", link: "Explore operations solutions" },
+        { image: "digital-team", category: "AI with purpose", title: "We want to use AI, but need direction.", text: "Find valuable opportunities, prepare your people, and establish responsible practices.", href: "/ai-enablement", link: "Explore AI enablement" },
+        { image: "tech-websites", category: "Better digital experiences", title: "Our website no longer meets our needs.", text: "Build a better customer experience with useful digital capabilities behind it.", href: "/websites", link: "Explore website solutions" },
+        { image: "executive-staff-briefing-v1", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
+      ].map(challenge => <Link key={challenge.href} href={challenge.href} className={styles.challengeCard}><div className={`${styles.challengePhoto} ${challenge.image === "executive-staff-briefing-v1" ? styles.staffBriefing : ""}`}><Photo src={`/images/homepage/${challenge.image}.jpg`} alt="" /><span className={styles.challengeCategory}>{challenge.category}</span></div><div className={styles.challengeCopy}><h3>{challenge.title}</h3><p>{challenge.text}</p><span className={styles.challengeLink}>{challenge.link} <span className={styles.challengeArrow} aria-hidden="true">↗</span></span></div></Link>)}</div>
+    </section>
 
-          <ClientServiceGrid />
-          <p className="mt-6 max-w-3xl text-sm leading-7 text-body">Start with what matters most. We agree the priorities, deliverables, and scope with you.</p>
-        </div>
-      </section>
+    <section className={`${styles.section} ${styles.nextSteps}`} aria-labelledby="next-steps-heading">
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Find your next step</p><h2 id="next-steps-heading">More ways to move forward.</h2></div></div>
+      <div className={styles.nextStepGrid}>{[
+        { icon: Rocket, title: "Building a new venture?", text: "Make room for a clearer direction, practical guidance, and your next chapter as a founder.", href: "/coaching", link: "Explore entrepreneur mentoring" },
+        { icon: Compass, title: "Exploring what’s possible?", text: "Discover how our services connect your goals with the right expertise and support.", href: "/services", link: "Explore how we can help" },
+        { icon: ClipboardCheck, title: "Considering AI?", text: "Take a first look at your organization’s readiness before deciding where to begin.", href: "/resources/ai-readiness-scorecard", link: "Start with the AI Readiness Scorecard" },
+      ].map(({ icon: Icon, ...step }) => <Link key={step.href} href={step.href} className={styles.nextStepCard}><span className={styles.nextStepIcon}><Icon size={26} strokeWidth={1.5} aria-hidden="true" /></span><h3>{step.title}</h3><p>{step.text}</p><span className={styles.challengeLink}>{step.link}<span aria-hidden="true">↗</span></span></Link>)}</div>
+    </section>
 
-      <section className={section} aria-labelledby="home-work-heading">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 id="home-work-heading" className={h2}>A closer look at the work.</h2>
-          <p className={`max-w-2xl ${lead}`}>Different organizations need different things. See the scope of two published website projects.</p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {[
-              { title: "GeVitals", image: "gevitals", text: "A bilingual clinic website bringing content, video, publishing, and local discovery together." },
-              { title: "Open Goal Soccer", image: "open-goal", text: "An accessible archival redesign preserving a community program’s mission and story." },
-            ].map(project => <article key={project.title} data-catalog-card className={`overflow-hidden ${cardFlat}`}>
-              <Image src={`/images/pages/${project.image}-website-preview-20261021.jpg`} alt={`${project.title} public website preview`} width={1440} height={1000} sizes="(min-width: 768px) 560px, 100vw" className="h-auto w-full border-b border-line" />
-              <div className="p-6"><h3 className="text-xl font-semibold text-ink">{project.title}</h3><p className="mt-3 leading-7 text-body">{project.text}</p></div>
-            </article>)}
-          </div>
-          <Link href="/websites#our-work" className={`mt-6 ${buttonSecondary}`}>Explore these website projects <span aria-hidden="true"> →</span></Link>
-        </div>
-      </section>
-      {/* Approach */}
-      <section className={section} aria-labelledby="approach-heading">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 id="approach-heading" className={h2}>
-              How We Work
-            </h2>
-            <p className={`mt-6 max-w-2xl ${lead}`}>
-              We understand how your organization works before recommending what
-              to change. Technology is a means to better operations—not the goal.
-            </p>
-          </Reveal>
+    <section className={`${styles.section} ${styles.purpose}`} aria-labelledby="purpose-heading">
+      <div><p className={styles.eyebrow}>Our purpose</p><h2 id="purpose-heading">Make work better.<br />Make room for<br /><em>what matters.</em></h2></div>
+      <div><p>Technology should create possibility, not more complexity. Our purpose is to help organizations work with greater clarity, confidence, and connection.</p><p>Experienced technology leadership. Hands-on implementation. A people-first approach. We connect strategic decisions with the work of building and improving systems, alongside the people who use them.</p><Link href="/our-story" className={styles.textLink}>Discover our story <span aria-hidden="true">↗</span></Link></div>
+    </section>
 
-          <Reveal delay={120}>
-            <div
-              className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
-              role="list"
-              aria-label="How we work"
-            >
-            {values.map((value) => (
-              <div key={value.title} className={`group p-6 transition-all duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
-                <AccentRule className="mb-4 w-8" />
-                <h3 className="text-base font-semibold text-ink">{value.title}</h3>
-                <p className={`mt-2 ${caption}`}>{value.text}</p>
-              </div>
-            ))}
-            </div>
-          </Reveal>
+    <section className={styles.feature} aria-labelledby="feature-heading">
+      <div className={styles.featureCopy}><p className={styles.eyebrow}>Published project / Digital platforms</p><h2 id="feature-heading">Teams<br />Management.</h2><p className={styles.featureLead}>A connected property experience.<br />Built around the people who use it.</p>
+        <dl><div><dt>The challenge</dt><dd>Help prospective residents and businesses discover the right property and reach the right team.</dd></div><div><dt>The solution</dt><dd>Property discovery, galleries, maps, rental inquiries, tenant service entry points, and authorized staff tools.</dd></div><div><dt>Explore the delivered experience</dt><dd>Browse residential and retail properties, view galleries and locations, and follow inquiry paths on the published website. See the project overview for the wider scope.</dd></div></dl>
+        <Link href="/work#teams-management" className={styles.lightButton}>Explore the project <span aria-hidden="true">↗</span></Link>
+      </div><div className={styles.featureImage}><Image src="/images/pages/teams-showcase-20261028.jpg" alt="Teams Management public website with property discovery and tenant services" width={1440} height={1000} unoptimized sizes="(max-width: 800px) 100vw, 55vw" /><a href="https://www.teamsmanagement.com/" target="_blank" rel="noopener noreferrer" className={styles.projectVisit}>Visit Teams Management <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a></div>
+    </section>
 
-          <Reveal delay={200} className="mt-12">
-            <Link href="/about" className={buttonSecondary}>
-              Learn more about 2Nspira <span aria-hidden="true">→</span>
-            </Link>
-          </Reveal>
-        </div>
-      </section>
+    <section className={`${styles.section} ${styles.impact}`} aria-labelledby="impact-heading">
+      <h2 id="impact-heading">Making an impact since 2019.</h2>
+      <ImpactTimeline />
+    </section>
 
-      {/* CTA */}
-      <section className={`${sectionBand} relative overflow-hidden`} aria-labelledby="cta-heading">
-        <AmbientField />
-        <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <Reveal>
-            <h2 id="cta-heading" className={h2}>
-              What is getting in the way?
-            </h2>
-            <p className={`mx-auto mt-6 max-w-xl ${lead}`}>
-              Bring the challenge, idea, or decision in front of you. We’ll discuss
-              your priorities and whether our services are a fit.
-            </p>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-body">We partner with growing businesses, established organizations, and mission-driven leaders who need practical technology expertise without unnecessary complexity. Based in New York City, working with clients nationally and internationally.</p>
-            <Link href="/contact#contact-message" className={`mt-8 ${buttonPrimary}`}>Let&apos;s Discuss Your Challenge</Link>
-          </Reveal>
-        </div>
-      </section>
-      </ServiceEffects>
-    </main>
-  );
+    <section className={`${styles.section} ${styles.work}`} aria-labelledby="work-heading"><div className={styles.sectionHead}><div><p className={styles.eyebrow}>More perspectives. More possibility.</p><h2 id="work-heading">A closer look at our work.</h2></div><Link href="/work" className={styles.textLink}>View our work <span aria-hidden="true">↗</span></Link></div><div className={styles.workGrid}>{[
+      {name:"GeVitals", image:"gevitals",text:"A bilingual clinic website connecting content, video, publishing, and local discovery."},
+      {name:"Open Goal Soccer",image:"open-goal",text:"An accessible archival redesign preserving a community program’s mission and story."}
+    ].map(project=><Link key={project.name} href="/websites#our-work" className={styles.workCard}><div><Photo src={`/images/pages/${project.image}-website-preview-20261021.jpg`} alt={`${project.name} public website preview`} /></div><h3>{project.name} <span aria-hidden="true">↗</span></h3><p>{project.text}</p></Link>)}</div></section>
+
+
+  </main>;
 }

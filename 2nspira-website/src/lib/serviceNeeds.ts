@@ -1,12 +1,12 @@
 /** Buyer situations, not fixed packages or promises of results. */
 export const serviceNeeds = [
   {
-    name: "AI Enablement",
-    need: "Where should we start with AI?",
-    help: "Identify useful opportunities, set practical guardrails, and help your people use AI responsibly.",
-    example: "Readiness review, prioritized use cases, and role-aware training.",
-    href: "/ai-enablement",
-    link: "Explore AI enablement",
+    name: "Websites, Apps & Digital Platforms",
+    need: "We need a better website or app.",
+    help: "Build websites, web apps, and mobile apps around your customers—with business connections where needed.",
+    example: "Website and app development, accessible customer journeys, and scoped integrations.",
+    href: "/websites",
+    link: "Explore websites and apps",
   },
   {
     name: "Automation & Systems Optimization",
@@ -17,15 +17,15 @@ export const serviceNeeds = [
     link: "Explore systems optimization",
   },
   {
-    name: "Websites & Digital Platforms",
-    need: "Our website isn’t helping customers take action.",
-    help: "Make your offer easier to understand and the next step easier to take—with business connections where needed.",
-    example: "Website design, accessible customer journeys, and scoped integrations.",
-    href: "/websites",
-    link: "Explore website services",
+    name: "AI Enablement",
+    need: "Where should we start with AI?",
+    help: "Identify useful opportunities, set practical guardrails, and help your people use AI responsibly.",
+    example: "Readiness review, prioritized use cases, and role-aware training.",
+    href: "/ai-enablement",
+    link: "Explore AI enablement",
   },
   {
-    name: "Fractional CIO / Technology Leadership",
+    name: "Fractional CIO & Technology Leadership",
     need: "We need stronger technology direction.",
     help: "Bring experienced judgment to technology priorities, investment, vendors, and delivery without a full-time CIO hire.",
     example: "A practical roadmap, clearer decision ownership, and executive oversight.",

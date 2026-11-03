@@ -65,9 +65,9 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#websites",
-      name: "Websites & Digital Platforms",
+      name: "Websites, Apps & Digital Platforms",
       description:
-        "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites connected to the way your business works.",
+        "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites, web apps, and mobile apps connected to the way your business works.",
       url: "https://2nspira.com/websites",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
@@ -75,7 +75,7 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#fractional-leadership",
-      name: "Fractional CIO / Technology Leadership",
+      name: "Fractional CIO & Technology Leadership",
       description:
         "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
       url: "https://2nspira.com/fractional-cio",
@@ -130,7 +130,7 @@ export default function ServicesPage() {
           <p><EyebrowPill>What we do</EyebrowPill></p>
           <h1
             id="hero-heading"
-            className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
+            className="mt-4 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink"
           >
             Practical improvements for the way your business works.
           </h1>

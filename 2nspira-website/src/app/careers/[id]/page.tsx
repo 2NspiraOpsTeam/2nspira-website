@@ -42,7 +42,7 @@ export default async function Role({
       <Link className="underline" href="/careers">
         ← All opportunities
       </Link>
-      <h1 className="mt-6 text-3xl font-semibold sm:text-4xl">{j.title}</h1>
+      <h1 className="mt-6  font-medium  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">{j.title}</h1>
       <p className="mt-5">
         {j.location} · {j.employmentType}
       </p>

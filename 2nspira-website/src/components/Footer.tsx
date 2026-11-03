@@ -5,10 +5,10 @@ import { BOOKING_URL } from "@/lib/booking";
 import styles from "./Footer.module.css";
 
 const services = [
-  { name: "AI Enablement", href: "/ai-enablement" },
+  { name: "Websites, Apps & Digital Platforms", href: "/websites" },
   { name: "Automation & Systems Optimization", href: "/automation-systems-optimization" },
-  { name: "Websites & Digital Platforms", href: "/websites" },
-  { name: "Fractional CIO / Technology Leadership", href: "/fractional-cio" },
+  { name: "AI Enablement", href: "/ai-enablement" },
+  { name: "Fractional CIO & Technology Leadership", href: "/fractional-cio" },
   { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
 ];
 const company = [
@@ -62,6 +62,15 @@ export default function Footer() {
             <li><a href="mailto:hello@2nspira.com" className={styles.link}><Mail aria-hidden="true" size={17} />hello@2nspira.com</a></li>
             <li><a href="tel:+16465430199" className={styles.link}><Phone aria-hidden="true" size={17} />+1 (646) 543-0199</a></li>
           </ul>
+          <nav aria-label="2Nspira social media" className={styles.social}>
+            <ul className={styles.socialLinks}>{socialLinks.map(link => <li key={link.href}>
+              <a href={link.href} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label={`2Nspira on ${link.name} (opens in a new tab)`}>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                  {link.name === "YouTube" ? <path d="M23 7s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C16.4 3.4 12 3.4 12 3.4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1C1.2 5.3 1 7 1 7S.8 9 .8 11v2c0 2 .2 4 .2 4s.2 1.7.9 2.4c.9.9 2.1.9 2.6 1 1.9.2 7.5.2 7.5.2s4.4 0 7.7-.3c.5 0 1.5 0 2.4-.9.7-.7.9-2.4.9-2.4s.2-2 .2-4v-2c0-2-.2-4-.2-4ZM9.7 15.5v-7l6 3.5-6 3.5Z" /> : link.name === "LinkedIn" ? <path d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6ZM8 19H5V9.5h3V19ZM6.5 8.2a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.7 1.2-1.7 2.4V19h-3V9.5h2.9v1.3c.4-.8 1.4-1.6 2.8-1.6 3 0 3.5 2 3.5 4.5V19Z" /> : <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.7-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z" />}
+                </svg>
+              </a>
+            </li>)}</ul>
+          </nav>
         </div>
         <nav className={styles.services} aria-labelledby="footer-services-heading">
           <h2 id="footer-services-heading" className={styles.heading}>Services</h2>
@@ -77,14 +86,6 @@ export default function Footer() {
         </nav>
       </div>
 
-      <nav aria-labelledby="footer-social-heading" className={styles.social}>
-        <div><h2 id="footer-social-heading" className={styles.heading}>Follow 2Nspira</h2><p className={styles.socialNote}>Ideas, perspectives, and what we’re working on.</p></div>
-        <ul className={styles.socialLinks}>{socialLinks.map(link => <li key={link.href}>
-          <a href={link.href} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label={`2Nspira on ${link.name} (opens in a new tab)`}>
-            {link.name}<ArrowUpRight aria-hidden="true" size={17} />
-          </a>
-        </li>)}</ul>
-      </nav>
       <div className={styles.bottom}>
         <p>&copy; {new Date().getFullYear()} 2Nspira. All rights reserved.</p>
         <nav aria-label="Legal" className={styles.legal}>{legal.map(link => <Link key={link.href} href={link.href} className={styles.link}>{link.name}</Link>)}</nav>

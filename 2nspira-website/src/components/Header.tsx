@@ -9,10 +9,10 @@ import MobileMenu from "./MobileMenu";
 type MenuName = "services" | "ideas";
 
 const serviceLinks = [
-  { name: "AI Enablement", href: "/ai-enablement" },
+  { name: "Websites, Apps & Digital Platforms", href: "/websites" },
   { name: "Automation & Systems Optimization", href: "/automation-systems-optimization" },
-  { name: "Websites & Digital Platforms", href: "/websites" },
-  { name: "Fractional CIO / Technology Leadership", href: "/fractional-cio" },
+  { name: "AI Enablement", href: "/ai-enablement" },
+  { name: "Fractional CIO & Technology Leadership", href: "/fractional-cio" },
   { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
 ];
 
@@ -132,7 +132,7 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="group flex items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas" aria-label="2Nspira home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo/2nspira-logo.png" alt="2Nspira" className="h-9 w-auto" width={320} height={132} />
+          <img src="/images/logo/2nspira-logo.png" alt="2Nspira" className="h-11 w-auto" width={320} height={132} />
         </Link>
 
         <nav ref={navigationRef} className="hidden items-center gap-0.5 lg:flex" aria-label="Main navigation" onKeyDown={handleNavigationKeyDown}>

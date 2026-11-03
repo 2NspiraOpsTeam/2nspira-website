@@ -36,12 +36,12 @@ export const pageHero =
 
 /* Type scale */
 export const eyebrow =
-  "text-sm font-semibold uppercase tracking-widest text-accent";
+  "text-xs font-semibold uppercase tracking-[0.1em] text-accent";
 export const h1 =
-  "mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl";
+  "mt-4 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink";
 export const h2 =
-  "text-3xl font-semibold tracking-tight text-ink sm:text-4xl";
-export const h3 = "text-xl font-semibold tracking-tight text-ink";
+  "text-[length:var(--type-section)] font-medium leading-[1.15] tracking-[-0.035em] text-ink";
+export const h3 = "text-[length:var(--type-card)] font-medium leading-[1.3] tracking-[-0.02em] text-ink";
 export const lead = "mt-6 text-lg leading-8 text-body";
 export const body = "text-base leading-8 text-body";
 export const caption = "text-sm text-muted";

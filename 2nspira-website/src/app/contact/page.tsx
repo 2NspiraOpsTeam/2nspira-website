@@ -258,7 +258,7 @@ export default function ContactPage() {
           <Reveal>
             <h1
               id="contact-hero-heading"
-              className="text-4xl font-semibold tracking-tight text-ink sm:text-5xl"
+              className="text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink"
             >
               Let&apos;s Discuss Your Challenge
             </h1>

@@ -37,7 +37,7 @@ export default function BooksPage() {
         <AmbientField />
         <div className="relative" data-catalog-reveal>
         <p><EyebrowPill>From the author</EyebrowPill></p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+        <h1 className="mt-4  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
           Leadership Books
         </h1>
         <p className={`mx-auto max-w-2xl ${lead}`}>

@@ -44,10 +44,11 @@ type Props = {
   };
   focusAreas?: { title: string; text: string }[];
   insightSections?: { title: string; text: string; items?: string[] }[];
+  credibility?: { title: string; intro: string; items: { title: string; text: string; href: string; label: string }[] };
   buildSection?: {
     title: string;
     intro: string;
-    items: { title: string; text: string }[];
+    items: { title: string; text: string; details?: string[] }[];
   };
   journey?: {
     title: string;
@@ -87,6 +88,7 @@ export default function ServicePage({
   focusAreas,
   insightSections,
   buildSection,
+  credibility,
   journey,
   assessmentCta,
   closingCta,
@@ -111,7 +113,7 @@ export default function ServicePage({
             ← All services
           </Link>
           <div className="mt-8"><EyebrowPill>{eyebrowText}</EyebrowPill></div>
-          <h1 className="animate-rise mt-5 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          <h1 className="animate-rise mt-5  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
             {title}
           </h1>
           <p className={`animate-rise ${lead}`} style={{ animationDelay: "90ms" }}>{intro}</p>
@@ -143,6 +145,23 @@ export default function ServicePage({
           </ul>
         </section>
 
+        {credibility && (
+          <section className="mt-16" aria-labelledby="service-credibility-heading">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Experience you can explore</p>
+            <h2 id="service-credibility-heading" className={`mt-3 ${h2}`}>{credibility.title}</h2>
+            <p className={`mt-4 max-w-3xl ${lead}`}>{credibility.intro}</p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {credibility.items.map(item => (
+                <article key={item.title} className={`flex flex-col p-6 ${cardFlat}`}>
+                  <h3 className={h3}>{item.title}</h3>
+                  <p className="mb-6 mt-3 leading-7 text-body">{item.text}</p>
+                  <Link href={item.href} className={`mt-auto inline-flex min-h-11 items-center ${linkInline}`}>{item.label} →</Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
         {buildSection && (
           <section className={`mt-16 ${isEditorial ? "rounded-[2rem] bg-surface px-5 py-10 shadow-[0_20px_60px_rgba(35,41,54,0.06)] ring-1 ring-line sm:px-8 sm:py-12" : ""}`} aria-labelledby="build-section-heading">
             <Reveal>
@@ -155,6 +174,10 @@ export default function ServicePage({
                   <article className={`h-full p-6 ${card} ${isEditorial ? "motion-safe:md:hover:-translate-y-1" : ""}`}>
                     <h3 className={h3}>{item.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-body">{item.text}</p>
+                    {item.details && <details className="mt-5 border-t border-line pt-4">
+                      <summary className="min-h-11 cursor-pointer rounded py-2 text-sm font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">What this can include</summary>
+                      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-body">{item.details.map(detail => <li key={detail}>{detail}</li>)}</ul>
+                    </details>}
                   </article>
                 </Reveal>
               ))}

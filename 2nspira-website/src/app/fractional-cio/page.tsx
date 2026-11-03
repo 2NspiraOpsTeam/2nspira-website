@@ -54,7 +54,7 @@ const outcomes = [
 const fractionalCioJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Fractional CIO / Technology Leadership",
+  name: "Fractional CIO & Technology Leadership",
   description:
     "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
   url: "https://2nspira.com/fractional-cio",
@@ -75,8 +75,8 @@ export default function FractionalCioPage() {
       <section className="relative overflow-hidden border-b border-line bg-surface">
         <AmbientField />
         <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
-          <p><EyebrowPill>Fractional CIO / Technology Leadership</EyebrowPill></p>
-          <h1 className="animate-rise mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          <p><EyebrowPill>Fractional CIO & Technology Leadership</EyebrowPill></p>
+          <h1 className="animate-rise mt-6  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
             Technology leadership without the full-time executive overhead
           </h1>
           <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>
