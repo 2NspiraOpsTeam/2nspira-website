@@ -55,3 +55,7 @@ Pexels License: https://www.pexels.com/license/ . Stock subjects are not represe
 - `tech-community.jpg`: https://www.pexels.com/photo/1181263/
 
 Photography credits: Christina Morillo (1181316, 1181472, 1181263) and ThisIsEngineering (3861958, 3862632, 3862618, 3861973). Source images inspected before assignment.
+
+## Published verification — technology photography
+
+Preview code commit `c9961a05741bddf7357177c36ff72338ca256f55`; Worker version `dde2b05d-4c5a-4920-90aa-b1ab9df93de1`. Lint, canonical build plus routing smoke, TypeScript and diff checks passed. All 12 new photo files match their staged and hosted SHA-256 bytes. Fresh hosted rendering passed 35 people-photo/viewport and 25 homepage timeline/viewport checks at 1440/1024/768/390/320px, with no page overflow or browser errors. Desktop/tablet/mobile screenshots inspected; focal crops adjusted for two service photos and the server-rack timeline photo. Shared About timeline also passed its 30-panel homepage/About regression run, including keyboard, focus, double-click, refresh, touch, redirect and unchanged copy/metadata. Service destination links and the Best Practices label are present. Production manifest separately remains `991df6a69fda171cca922dc5eb4028d83a3fe9cc`. No production release or layout redesign.
