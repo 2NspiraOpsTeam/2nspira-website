@@ -80,7 +80,7 @@ Verified preview release `73274f05d376896366e6610be99e15233f3b836b`, Worker vers
 
 ## Service-aligned, unique homepage photography — November 3
 
-Jeffrey requested service-specific subjects and no duplicated homepage photos. Expertise keeps distinct AI/development and automation imagery; websites now shows a person viewing a website, Fractional CIO shows a leader guiding a planning meeting, and mentoring uses the existing business-guidance photo. Challenge cards use four separate photographs, not the expertise images. Existing licensed assets were preferred; no new library or generated imagery was required.
+Jeffrey requested service-specific subjects and no duplicated homepage photos. Expertise keeps distinct AI/development and automation imagery; websites now shows a person viewing a website, Fractional CIO shows a close-up leader guiding a laptop discussion, and mentoring uses the existing business-guidance photo. Challenge cards use four separate photographs, not the expertise images; the wider planning-meeting photograph is reserved for the leadership challenge. Existing licensed assets were preferred; no new library or generated imagery was required.
 
 New local assets (Pexels License https://www.pexels.com/license/):
 - `service-cio.jpg`: Christina Morillo, https://www.pexels.com/photo/1181396/
