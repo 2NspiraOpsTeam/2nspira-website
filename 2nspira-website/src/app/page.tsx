@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { serviceNeeds } from "@/lib/serviceNeeds";
 import styles from "./homepage.module.css";
 import ImpactTimeline from "./ImpactTimeline";
+import TeamsReviewCarousel from "./TeamsReviewCarousel";
 
 const homepageDescription =
   "2Nspira helps businesses adopt AI, automate workflows, build websites and apps, and strengthen technology leadership with fractional CIO services.";
@@ -167,11 +168,7 @@ export default function Home() {
     <section className={`${styles.section} ${styles.projectReviews}`} aria-labelledby="teams-reviews-heading">
       <div className={styles.sectionHead}><div><p className={styles.eyebrow}>The people behind the property experience</p><h2 id="teams-reviews-heading">Real voices. Meaningful connections.</h2></div></div>
       <p className={styles.reviewIntro}>The digital experience we built for Teams Management puts people first. These resident reviews reflect the responsive, human service at the heart of their business.</p>
-      <div className={styles.reviewGrid}>{[
-        { name: "Pat Gunn", quote: "Over my time there they've been responsive, open to negotiation, and good at communication." },
-        { name: "Asia Lu", quote: "We just moved to NYC into a new build and the people at Teams Management have been great to work with." },
-        { name: "Francesca Ling", quote: "They are very human, very reasonable, quick to address any building issues, and you can always speak to someone who cares about how things are going." },
-      ].map(review => <figure key={review.name} className={styles.reviewCard}><blockquote>“{review.quote}”</blockquote><figcaption><strong>{review.name}</strong><span>Teams Management resident · Google review excerpt</span></figcaption></figure>)}</div>
+      <TeamsReviewCarousel />
       <div className={styles.reviewFoot}><p>Selected positive Google review excerpts about Teams Management’s property-management service.</p><a href="https://www.google.com/maps/place/Teams+Management+LLC/data=!4m2!3m1!1s0x89c258c0e0b65e2d:0xa24510b57f3f6d39" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Read all Google reviews <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a></div>
     </section>
 
