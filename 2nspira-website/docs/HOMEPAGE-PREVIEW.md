@@ -29,3 +29,14 @@ Who we serve explicitly includes schools and educational organizations, and nonp
 ## Impact timeline — November 3
 
 Replaced the foundation/value list with a reference-matched photo/story panel and vertical year markers. Jeffrey supplied the 2019 EKM founding, 2022 community reinvention after COVID, 2025 2Nspira reinvention, and 2026 competitive positioning. Native grouped radios provide click/touch and arrow-key selection without hydration or third-party paid widgets; the first milestone is the default on a fresh visit. Existing licensed stock imagery illustrates milestones, not archival event photos. Mobile places the year controls before the selected story.
+
+## Non-people timeline imagery — November 3
+
+At Jeffrey’s request, all five shared homepage/About timeline images now depict places and technology, with no people: New York skyline (2019), empty library (2022), development code (2024), server racks (2025), and cloud-layer architecture (2026). Expertise photos, layout, and editorial copy remain unchanged. Stock illustrations do not portray actual client facilities or company events. Local 1600px JPEG assets avoid hotlink dependencies.
+
+Pexels sources, covered by https://www.pexels.com/license/:
+- `history-new-york.jpg`: https://www.pexels.com/photo/466685/
+- `history-community.jpg`: https://www.pexels.com/photo/256541/
+- `history-web-development.jpg`: https://www.pexels.com/photo/546819/
+- `history-technology.jpg`: https://www.pexels.com/photo/325229/
+- `history-architecture.jpg`: https://www.pexels.com/photo/325185/
