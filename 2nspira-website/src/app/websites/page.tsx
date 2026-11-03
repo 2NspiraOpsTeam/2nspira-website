@@ -2,19 +2,19 @@ import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, ShoppingBag, LayoutDashboard, ChartNoAxesCombined, Languages, ShieldCheck, MapPin, MousePointer2, ArrowRight, Network, UserRoundCheck } from "lucide-react";
+import { Globe, AppWindow, Smartphone, CalendarDays, ShoppingBag, LayoutDashboard, ChartNoAxesCombined, Languages, ShieldCheck, MapPin, MousePointer2, ArrowRight, Network, UserRoundCheck } from "lucide-react";
 import ServiceEffects from "@/components/ServiceEffects";
 import ServiceConversation from "@/components/ServiceConversation";
 import ServiceFit from "@/components/ServiceFit";
 import styles from "./websites.module.css";
 import ServiceQuestions from "@/components/ServiceQuestions";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
-import { card, cardFlat, eyebrow, h2, h3, lead, linkInline, pageMain, section, sectionBand } from "@/components/ui";
+import { card, cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section, sectionBand } from "@/components/ui";
 
-const description = "AI-native website development, grounded in real business needs. Explore multilingual websites, booking integrations, Google Maps, ecommerce, analytics, secure portals, and backend operations.";
+const description = "Website and app development grounded in real business needs. Explore business websites, web applications, mobile apps, secure portals, and connected operations.";
 export const metadata: Metadata = publicPageMetadata({
-  title: "AI-Native Website Development & Digital Platforms",
-  shareTitle: "AI-native development. Websites built for real business.",
+  title: "Website & App Development",
+  shareTitle: "Websites and apps built for real business.",
   description,
   path: "/websites",
 });
@@ -77,6 +77,7 @@ const capabilities = [
 ];
 
 const websiteQuestions = [
+  { question: "Do you develop apps as well as websites?", answer: "Yes. We scope web applications and mobile apps around a defined user need. We help choose between a browser-based experience and an iOS or Android app, then agree the first release, integrations, testing, and support. App-store submission and review are separate from development; approval is controlled by the relevant store." },
   { question: "What does AI-native development mean?", answer: "AI is part of our development workflow, supporting exploration, implementation, and review. Human judgment remains responsible for the product, architecture, content, and release decisions. We verify the resulting experience. It does not mean every website needs a chatbot or customer-facing AI." },
   { question: "Can we start with a simple website?", answer: "Yes. Start with a clear offer, useful content, and an easy next step. Portals, payments, integrations, automation, and AI-powered features are separately scoped when they serve a real need. You do not need everything at once." },
   { question: "Can you improve or migrate an existing website?", answer: "We review the existing content, platform, customer journeys, and integrations before recommending what to keep, improve, connect, or replace. Language requirements, content migration, and redirects are considered in the agreed scope." },
@@ -88,7 +89,7 @@ export default function WebsitesPage() {
   return <main id="main-content" className={pageMain}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       "@context": "https://schema.org", "@type": "Service", "@id": "https://2nspira.com/websites#service",
-      name: "AI-Native Websites & Digital Platforms", serviceType: ["Website development", "Business system integration"], description,
+      name: "Websites, Apps & Digital Platforms", serviceType: ["Website development", "Web application development", "Mobile app development", "Business system integration"], description,
       url: "https://2nspira.com/websites", provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide",
     }).replace(/</g, "\\u003c") }} />
     <ServiceEffects>
@@ -96,12 +97,12 @@ export default function WebsitesPage() {
         <AmbientField />
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <EyebrowPill>Websites &amp; Digital Platforms</EyebrowPill>
+            <EyebrowPill>Websites, Apps &amp; Digital Platforms</EyebrowPill>
             <p className={`mt-6 ${eyebrow}`}>AI-native development</p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Websites built for real business.</h1>
-            <p className={lead}>From multilingual websites and online stores to booking systems and secure portals, we connect the customer experience with the work behind it.</p>
-            <p className="mt-4 leading-7 text-body">AI-native in how we build. Human-led in what we deliver. Start with the website you need; connect more when it adds value.</p>
-            <ServiceConversation label="Discuss your website project" />
+            <h1 className={h1}>Websites and apps.<br />Built for real business.</h1>
+            <p className={lead}>From business websites and online stores to web applications and mobile apps, we design digital experiences around the people who use them and the work they need to do.</p>
+            <p className="mt-4 leading-7 text-body">AI-native in how we build. Human-led in what we deliver. Start with the experience you need; add capabilities when they serve a clear purpose.</p>
+            <ServiceConversation label="Discuss your website or app" />
             <a href="#our-work" className={`mt-4 min-h-11 ${linkInline}`}>See the work <span aria-hidden="true"> ↓</span></a>
           </div>
           <div className="grid grid-cols-2 gap-3" aria-label="Selected project screenshots">
@@ -110,6 +111,20 @@ export default function WebsitesPage() {
               <div className="p-3"><p className="text-sm font-semibold text-ink group-hover:text-accent">{project.name}</p><p className="mt-1 text-xs leading-5 text-muted">{project.status}</p></div>
             </a>)}
           </div>
+        </div>
+      </section>
+
+      <section id="website-and-app-development" className={sectionBand} aria-labelledby="development-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className={eyebrow}>The right experience for the job</p>
+          <h2 id="development-heading" className={`mt-4 max-w-3xl ${h2}`}>A website. A web app.<br />Or something made for mobile.</h2>
+          <p className={`max-w-3xl ${lead}`}>We start with your audience and the problem to solve, then agree the right platform and a useful first release.</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">{[
+            { Icon: Globe, title: "Business websites", text: "Help people understand your offer, explore your work, and take the next step—with content, booking, or commerce where needed." },
+            { Icon: AppWindow, title: "Web applications", text: "Turn a business workflow into an interactive tool: a customer portal, an internal dashboard, or a service people use in their browser." },
+            { Icon: Smartphone, title: "Mobile apps", text: "Create focused iOS and Android experiences for tasks people need on the go. We plan device capabilities, accessibility, and release requirements around the agreed scope." },
+          ].map(({Icon, title, text}) => <article key={title} className={`p-6 sm:p-8 ${cardFlat}`}><Icon aria-hidden="true" size={28} strokeWidth={1.5} className="mb-6 text-accent" /><h3 className={h3}>{title}</h3><p className="mt-4 leading-7 text-body">{text}</p></article>)}</div>
+          <p className="mt-6 max-w-3xl text-sm leading-7 text-muted">Platform choice, integrations, testing, hosting, app-store submission, and ongoing support are agreed for each project. The work below shows our website and web-platform experience.</p>
         </div>
       </section>
 
@@ -237,7 +252,7 @@ export default function WebsitesPage() {
         </div>
       </section>
       <ServiceQuestions items={websiteQuestions} />
-      <section className={sectionBand} aria-labelledby="website-cta-heading"><div className="mx-auto max-w-3xl px-4 text-center sm:px-6"><h2 data-catalog-reveal id="website-cta-heading" className={h2}>What should your website make easier?</h2><p className={lead}>Bring your current site, a new idea, or a customer journey that isn’t working. We’ll discuss what matters now and the simplest useful next step.</p><ServiceConversation label="Discuss your website project" centered /></div></section>
+      <section className={sectionBand} aria-labelledby="website-cta-heading"><div className="mx-auto max-w-3xl px-4 text-center sm:px-6"><h2 data-catalog-reveal id="website-cta-heading" className={h2}>What should your website or app make easier?</h2><p className={lead}>Bring your current site, an app idea, or a customer journey that isn’t working. We’ll discuss what matters now and the simplest useful next step.</p><ServiceConversation label="Discuss your website or app" centered /></div></section>
     </ServiceEffects>
   </main>;
 }

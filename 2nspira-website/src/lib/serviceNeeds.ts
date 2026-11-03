@@ -17,10 +17,10 @@ export const serviceNeeds = [
     link: "Explore systems optimization",
   },
   {
-    name: "Websites & Digital Platforms",
+    name: "Websites, Apps & Digital Platforms",
     need: "Our website isn’t helping customers take action.",
     help: "Make your offer easier to understand and the next step easier to take—with business connections where needed.",
-    example: "Website design, accessible customer journeys, and scoped integrations.",
+    example: "Website and app development, accessible customer journeys, and scoped integrations.",
     href: "/websites",
     link: "Explore website services",
   },

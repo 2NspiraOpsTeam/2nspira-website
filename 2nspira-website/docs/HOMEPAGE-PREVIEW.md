@@ -96,3 +96,7 @@ Verified release `801b6e7`: lint, canonical build/routing smoke and TypeScript p
 Jeffrey requested a more tasteful, synchronized site-wide type system and an Apple-inspired treatment using the existing homepage content. Retained the existing self-hosted Geist family and Tailwind/shared UI primitives rather than adding fonts or dependencies. Shared display/section/card tokens, medium-weight headings, balanced heading wraps, restrained tracking and consistent line-height now connect public pages. Removed the resource-page serif heading exception and homepage serif accents. Restored a full 16px mobile root, increased homepage small body/link text, and reduced oversized feature headings. Content, destinations and approved history remain unchanged.
 
 Jeffrey also specified exactly two distinct people engaged in a high-level mentoring conversation in a modern office. New generated illustrative photography is not presented as an actual client engagement. Preview only.
+
+### Website and app development
+
+Jeffrey additionally requested app development on `/websites`. Added three clear website/web-app/mobile-app pathways, updated the hero, service name, metadata and Service schema, and added an app-development FAQ. Existing website/web-platform proof is explicitly distinguished from the prospective mobile offering; no shipped mobile project or app-store approval is claimed. No app implementation or release is part of this change.
