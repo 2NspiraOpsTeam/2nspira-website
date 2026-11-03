@@ -148,6 +148,9 @@ export default function Page() {
         <EyebrowPill>AI that works with you</EyebrowPill>
         <h2 id="personal-agent-heading" className={`mt-5 max-w-3xl ${h2}`}>Your own AI assistant. Set up around the way you work.</h2>
         <p className={`max-w-3xl ${lead}`}>Go beyond a blank chat window. We help you choose, set up, and personalize an AI agent assistant for your priorities, everyday tasks, and preferred tools.</p>
+        <figure className="mt-8 overflow-hidden rounded-[2rem] border border-line bg-ink">
+          <Image src="/images/advisory/personal-ai-workspace-v1.webp" alt="A professional directing a personal AI assistant that connects research, scheduling, writing, and task planning in one workspace." width={1672} height={941} sizes="(min-width: 1152px) 1104px, calc(100vw - 32px)" unoptimized className="aspect-[16/9] h-auto w-full object-cover" />
+        </figure>
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {[
             { title: "Start with your day", text: "Choose a useful first job: research a topic, organize information, draft content, or prepare for a meeting. Define what a helpful result looks like." },
