@@ -1,12 +1,12 @@
 /** Buyer situations, not fixed packages or promises of results. */
 export const serviceNeeds = [
   {
-    name: "AI Enablement",
-    need: "Where should we start with AI?",
-    help: "Identify useful opportunities, set practical guardrails, and help your people use AI responsibly.",
-    example: "Readiness review, prioritized use cases, and role-aware training.",
-    href: "/ai-enablement",
-    link: "Explore AI enablement",
+    name: "Websites, Apps & Digital Platforms",
+    need: "We need a better website or app.",
+    help: "Build websites, web apps, and mobile apps around your customers—with business connections where needed.",
+    example: "Website and app development, accessible customer journeys, and scoped integrations.",
+    href: "/websites",
+    link: "Explore websites and apps",
   },
   {
     name: "Automation & Systems Optimization",
@@ -17,12 +17,12 @@ export const serviceNeeds = [
     link: "Explore systems optimization",
   },
   {
-    name: "Websites, Apps & Digital Platforms",
-    need: "We need a better website or app.",
-    help: "Build websites, web apps, and mobile apps around your customers—with business connections where needed.",
-    example: "Website and app development, accessible customer journeys, and scoped integrations.",
-    href: "/websites",
-    link: "Explore websites and apps",
+    name: "AI Enablement",
+    need: "Where should we start with AI?",
+    help: "Identify useful opportunities, set practical guardrails, and help your people use AI responsibly.",
+    example: "Readiness review, prioritized use cases, and role-aware training.",
+    href: "/ai-enablement",
+    link: "Explore AI enablement",
   },
   {
     name: "Fractional CIO / Technology Leadership",

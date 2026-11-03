@@ -41,13 +41,13 @@ export const metadata: Metadata = {
 };
 
 const serviceImages = [
-  "/images/homepage/tech-ai.jpg",
-  "/images/homepage/tech-automation.jpg",
   "/images/homepage/service-website.jpg",
+  "/images/homepage/tech-automation.jpg",
+  "/images/homepage/tech-ai.jpg",
   "/images/homepage/ai-collaboration.jpg",
   "/images/homepage/mentoring-office-v2.webp",
 ];
-const serviceAlts = ["Developer working with code across multiple screens", "Engineer programming a laptop beside automated equipment", "Person reviewing a visual website on a laptop", "Technology leader guiding a discussion around laptops", "Two professionals engaged in a thoughtful one-to-one conversation in a modern office"];
+const serviceAlts = ["Person reviewing a visual website on a laptop", "Engineer programming a laptop beside automated equipment", "Developer working with code across multiple screens", "Technology leader guiding a discussion around laptops", "Two professionals engaged in a thoughtful one-to-one conversation in a modern office"];
 
 function Photo({ src, alt, className = "", priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
   return <Image src={src} alt={alt} fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 70vw" priority={priority} className={className} />;

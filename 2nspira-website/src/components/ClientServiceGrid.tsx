@@ -3,7 +3,7 @@ import { Sparkles, Workflow, PanelsTopLeft, Compass, MessagesSquare } from "luci
 import { serviceNeeds } from "@/lib/serviceNeeds";
 import { card, h3, linkInline } from "./ui";
 
-const icons = [Sparkles, Workflow, PanelsTopLeft, Compass, MessagesSquare];
+const icons = [PanelsTopLeft, Workflow, Sparkles, Compass, MessagesSquare];
 
 export default function ClientServiceGrid() {
   return <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-6">

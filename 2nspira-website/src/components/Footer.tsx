@@ -5,9 +5,9 @@ import { BOOKING_URL } from "@/lib/booking";
 import styles from "./Footer.module.css";
 
 const services = [
-  { name: "AI Enablement", href: "/ai-enablement" },
-  { name: "Automation & Systems Optimization", href: "/automation-systems-optimization" },
   { name: "Websites, Apps & Digital Platforms", href: "/websites" },
+  { name: "Automation & Systems Optimization", href: "/automation-systems-optimization" },
+  { name: "AI Enablement", href: "/ai-enablement" },
   { name: "Fractional CIO / Technology Leadership", href: "/fractional-cio" },
   { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
 ];
