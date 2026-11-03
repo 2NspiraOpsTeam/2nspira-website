@@ -24,7 +24,9 @@ export default {
     if (!['GET', 'HEAD'].includes(request.method) || /^\\/(api|admin|portal)(\\/|$)/.test(path)) {
       return new Response(JSON.stringify({ error: 'This design preview does not submit forms or access accounts.' }), { status: 403, headers: { ...headers, 'Content-Type': 'application/json' } });
     }
-    const original = await app.fetch(request, env, ctx);
+    // Worker-first keeps safety headers on assets too; serve the asset binding explicitly.
+    const asset = await env.ASSETS.fetch(request);
+    const original = asset.status !== 404 ? asset : await app.fetch(request, env, ctx);
     const response = new Response(original.body, original);
     for (const [key, value] of Object.entries(headers)) response.headers.set(key, value);
     return response;
