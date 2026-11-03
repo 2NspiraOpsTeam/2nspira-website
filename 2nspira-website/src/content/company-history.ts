@@ -47,8 +47,8 @@ export const companyMilestones = [
   },
   {
     year: "2026",
-    title: "More Competitive Than Ever",
-    subtitle: "Experience meets innovation. Helping organizations compete in the AI era.",
+    title: "Bringing AI and Executive Technology Leadership Together",
+    subtitle: "Practical guidance and hands-on implementation for your next stage of growth.",
     paragraphs: [
       "Today, 2Nspira builds on more than seven years of experience supporting businesses and community organizations through technological change. Our work across organizations of different sizes, industries, and operational needs has strengthened our understanding of the challenges businesses face in an increasingly digital and AI-driven economy.",
       "Combining executive-level technology leadership, modern cloud infrastructure, AI capabilities, automation, and hands-on implementation, we help organizations modernize their operations and respond to evolving market demands.",
