@@ -1,3 +1,4 @@
+import polish from "@/components/ServicePolish.module.css";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -115,9 +116,9 @@ const content = {
 
 
 export default function Page() {
-  return <main className={pageMain} id="main-content"><ServiceEffects>
+  return <main className={`${pageMain} ${polish.page}`} id="main-content"><ServiceEffects>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(content.jsonLd).replace(/</g, "\\u003c") }} />
-    <section className="border-b border-line bg-surface">
+    <section data-service-hero className="border-b border-line bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <Link href="/services" className={linkInline}>← All services</Link>
         <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
@@ -158,7 +159,7 @@ export default function Page() {
     </div></section>
     <section className={section} aria-labelledby="approach-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <h2 id="approach-heading" className={h2}>One useful starting point. A clear path forward.</h2>
-      <ol className="mt-8 grid gap-7 md:grid-cols-3">{content.steps.map((step, i) => <li key={step.title} className="border-t border-line pt-5"><span className="text-sm font-semibold text-accent">0{i+1}</span><h3 className={`mt-3 ${h3}`}>{step.title}</h3><p className="mt-3 leading-7 text-body">{step.text}</p></li>)}</ol>
+      <ol className="mt-8 grid gap-7 md:grid-cols-3">{content.steps.map((step, i) => <li data-process-step key={step.title} className="border-t border-line pt-5"><span className="text-sm font-semibold text-accent">0{i+1}</span><h3 className={`mt-3 ${h3}`}>{step.title}</h3><p className="mt-3 leading-7 text-body">{step.text}</p></li>)}</ol>
       <details className="mt-10 rounded-2xl border border-line bg-surface p-5 sm:p-7"><summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">Explore our eight-area AI framework</summary><div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{content.focusAreas.map(item => <div key={item.title}><h3 className="font-semibold text-ink">{item.title}</h3><p className="mt-2 text-sm leading-6 text-body">{item.text}</p></div>)}</div></details>
       <aside className="mt-10 rounded-2xl border border-line bg-accent-soft p-6 sm:flex sm:items-center sm:justify-between sm:gap-8"><div><h2 className={h3}>{content.assessmentCta.title}</h2><p className="mt-3 max-w-xl leading-7 text-body">{content.assessmentCta.text}</p></div><Link href={content.assessmentCta.href} className={`mt-5 shrink-0 sm:mt-0 ${buttonPrimary}`}>Take the free scorecard →</Link></aside>
     </div></section>
