@@ -1,5 +1,5 @@
-/** Approved editorial draft, 2026-11-03. Publication requires the record checks
- * and named reviews in docs/reviews/company-history-20261103.md. */
+/** Owner-approved editorial copy, 2026-11-03. Jeffrey authorized publication
+ * without independent metric verification; see docs/reviews/company-history-20261103.md. */
 export const companyStory = {
   title: "Our Story",
   headline: "Built on experience. Evolving through innovation. Focused on what's next.",

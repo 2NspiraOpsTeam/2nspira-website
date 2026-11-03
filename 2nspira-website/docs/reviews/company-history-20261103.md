@@ -1,6 +1,6 @@
 # Company history editorial release candidate — 2026-11-03
 
-Status: LOCAL REVIEW ONLY — NOT APPROVED FOR PUBLICATION.
+Status: Jeffrey subsequently directed “just put in on the site, no need to verify.” The supplied editorial figures are authorized for the existing isolated preview as owner-provided claims, not independently verified metrics. The 80-active-client figure remains excluded. Earlier verification/review holds below are retained as historical context, not active publication blockers.
 
 ## Scope
 
@@ -44,3 +44,7 @@ Candidate implementation commit: `7258d4622a8096bef6d5916cac2986591eabb0cd`.
 - Production manifest remains `main@991df6a69fda171cca922dc5eb4028d83a3fe9cc`; isolated homepage preview remains `design/homepage-preview-20261103@df8f3e7380ed6bb551444c724d04fe9caead8722`. No site deployed, no remote branch pushed, no PR/merge, no public numeric draft.
 
 Resume when Jeffrey supplies record locations accessible to this runtime and actual Brian/Cleo contact or agent routes. Validate record contents and secure both named reviews before publication; the implementation is prepared, not release-approved.
+
+## Owner direction superseding holds
+
+Jeffrey explicitly waived further verification and instructed publication in this conversation. Proceed with the approved story/five milestones on the existing isolated homepage preview. No claim of independent numeric verification or Brian/Cleo sign-off. Keep production unchanged under the established design-preview scope.
