@@ -42,7 +42,7 @@ export default function VideosPage() {
             <p className={lead}>From thought-provoking perspectives to immersive rain soundscapes, explore how we bring stories, sound, and imagined worlds to life.</p>
             <div className="mt-7 flex flex-wrap gap-2">
               <a href="#latest-videos" className={`gap-2 ${buttonPrimary}`}>Discover the latest <ArrowDown size={17} aria-hidden="true" /></a>
-              <a href={youtubeChannel} target="_blank" rel="noopener noreferrer" className={buttonSecondary} aria-label="Explore 2Nspira on YouTube (opens in a new tab)">Our YouTube channel <ArrowUpRight size={17} aria-hidden="true" /></a>
+              <a href={youtubeChannel} target="_blank" rel="noopener noreferrer" className={buttonSecondary} aria-label="Our YouTube channel (opens in a new tab)">Our YouTube channel <ArrowUpRight size={17} aria-hidden="true" /></a>
             </div>
             <p className="mt-7 text-sm leading-6 text-body">{videos.length} public videos · Original soundscapes &amp; leadership · One creative studio</p>
           </div>
@@ -113,7 +113,7 @@ export default function VideosPage() {
           </div>
           <Link href="/contact" className={`shrink-0 gap-2 ${buttonPrimary}`}>Let’s talk <ArrowUpRight size={17} aria-hidden="true" /></Link>
         </div>
-        <a href={youtubeChannel} target="_blank" rel="noopener noreferrer" className={`mt-6 min-h-11 gap-2 ${linkInline}`} aria-label="Follow 2Nspira on YouTube (opens in a new tab)">Subscribe on YouTube for new releases <ArrowUpRight size={16} aria-hidden="true" /></a>
+        <a href={youtubeChannel} target="_blank" rel="noopener noreferrer" className={`mt-6 min-h-11 gap-2 ${linkInline}`} aria-label="Subscribe on YouTube for new releases (opens in a new tab)">Subscribe on YouTube for new releases <ArrowUpRight size={16} aria-hidden="true" /></a>
       </aside>
     </div>
   </CatalogEffects></main>;

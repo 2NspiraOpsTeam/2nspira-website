@@ -15,7 +15,7 @@ export default function VideoPlayer({ id, title, duration }: { id: string; title
       allowFullScreen
       referrerPolicy="strict-origin-when-cross-origin"
     /> : <button type="button" onClick={() => setLoaded(true)}
-      aria-label={`Load video: ${title}`}
+      aria-label={`Load video: ${title} (${duration})`}
       className="group absolute inset-0 h-full w-full cursor-pointer text-white focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-white">
       <Image src={`/images/videos/${id}.jpg`} alt="" width={640} height={360}
         className="h-full w-full object-cover" />
