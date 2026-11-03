@@ -93,10 +93,12 @@ export default function AboutPage() {
 
         <section className={`mt-12 p-6 sm:p-10 ${card}`} aria-labelledby="about-coaching-heading">
           <AccentRule className="mb-6" />
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">People as well as platforms</p>
-          <h2 id="about-coaching-heading" className={`mt-4 ${h2}`}>Support for the business—and the person leading it.</h2>
-          <p className={`mt-4 ${lead}`}>Technology leadership helps organizations make better decisions about their systems. Entrepreneur Mentoring &amp; Coaching creates space for the decisions, mindset, and leadership habits of the person building the business.</p>
-          <p className="mt-4 leading-8 text-body">We have proven entrepreneurs and industry leaders available to coach you. We match you with a coach aligned with your industry to work through customer discovery, product development, delegation, and accountability.</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">People, not just platforms</p>
+          <h2 id="about-coaching-heading" className={`mt-4 ${h2}`}>Building a stronger business starts with the person leading it.</h2>
+          <p className={`mt-4 ${lead}`}>Technology can transform how a business operates. But behind every growing business is someone making difficult decisions, navigating uncertainty, and learning what it takes to lead.</p>
+          <p className="mt-4 leading-8 text-body">You don&apos;t have to figure it all out alone.</p>
+          <p className="mt-4 leading-8 text-body">At 2Nspira, we believe investing in the person is just as important as investing in the business. That&apos;s why we connect entrepreneurs and business owners with experienced, industry-aligned mentors who offer real-world perspective, honest feedback, and practical guidance.</p>
+          <p className="mt-4 leading-8 text-body">Whether you&apos;re validating an idea, finding your first customers, developing a product, or learning to lead a growing team, our mentoring relationships help you turn challenges into clearer decisions—and decisions into meaningful progress.</p>
           <Link href="/coaching" className={`mt-6 min-h-11 ${buttonPrimary}`}>Explore Entrepreneur Mentoring &amp; Coaching →</Link>
         </section>
 
