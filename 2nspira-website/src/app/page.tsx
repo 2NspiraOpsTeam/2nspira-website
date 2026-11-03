@@ -39,13 +39,13 @@ export const metadata: Metadata = {
 };
 
 const serviceImages = [
-  "/images/advisory/focused-collaboration.webp",
-  "/images/hero/automation-systems-optimization-hero.png",
-  "/images/pages/websites-hero.webp",
-  "/images/pages/fractional-cio-focus.webp",
-  "/images/coaching/purpose-to-progress.webp",
+  "/images/homepage/ai-collaboration.jpg",
+  "/images/homepage/systems-team.jpg",
+  "/images/homepage/digital-team.jpg",
+  "/images/homepage/leadership.jpg",
+  "/images/homepage/mentoring.jpg",
 ];
-const serviceAlts = ["People exploring ideas together", "Connected systems and operational workflows", "Digital design and website planning", "Focused technology planning", "A conversation about purpose and progress"];
+const serviceAlts = ["Colleagues discussing ideas with laptops", "Colleagues bringing their hands together", "People reviewing digital work around a table", "Colleagues meeting around a shared table", "Two colleagues discussing plans and notes"];
 
 function Photo({ src, alt, className = "", priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
   return <Image src={src} alt={alt} fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 70vw" priority={priority} className={className} />;
@@ -54,7 +54,7 @@ function Photo({ src, alt, className = "", priority = false }: { src: string; al
 export default function Home() {
   return <main id="main-content" className={styles.home}>
     <section className={styles.hero} aria-labelledby="hero-heading">
-      <Photo src="/images/advisory/collaborative-strategy.webp" alt="People gathered around a table for a strategy discussion" priority />
+      <Photo src="/images/homepage/strategy.jpg" alt="People gathered around a table for a strategy discussion" priority />
       <div className={styles.heroShade} />
       <div className={styles.heroContent}>
         <p className={styles.eyebrow}>People. Purpose. Possibility.</p>
@@ -73,15 +73,15 @@ export default function Home() {
     </section>
 
     <section className={styles.section} id="find-the-right-service" aria-labelledby="services-heading">
-      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What we do</p><h2 id="services-heading">Expertise that moves<br />your business forward.</h2></div><Link href="/services" className={styles.textLink}>Explore our services <span aria-hidden="true">↗</span></Link></div>
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What we do</p><h2 id="services-heading">Expertise that moves<br />your business forward.</h2></div><Link href="/services" className={styles.textLink}>Explore our services</Link></div>
       <div className={styles.services}>{serviceNeeds.map((service, i) => <article key={service.href} className={styles.service}>
-        <Link href={service.href} className={styles.serviceImage} aria-label={service.name}><Photo src={serviceImages[i]} alt={serviceAlts[i]} /><span aria-hidden="true">↗</span></Link>
-        <p className={styles.number}>0{i+1}</p><h3><Link href={service.href}>{service.name}</Link></h3><p>{service.help}</p><Link href={service.href} className={styles.textLink}>Learn more <span className="sr-only">about {service.name}</span><span aria-hidden="true">↗</span></Link>
+        <Link href={service.href} className={styles.serviceImage} aria-label={service.name}><Photo src={serviceImages[i]} alt={serviceAlts[i]} /></Link>
+        <h3><Link href={service.href}>{service.name}</Link></h3><p>{service.help}</p>
       </article>)}</div>
     </section>
 
     <section className={styles.audience} aria-labelledby="audience-heading">
-      <div className={styles.audienceImage}><Photo src="/images/pages/careers-collaboration.jpg" alt="A group collaborating around a shared workspace" /></div>
+      <div className={styles.audienceImage}><Photo src="/images/homepage/digital-team.jpg" alt="A group collaborating around a shared workspace" /></div>
       <div className={styles.bandCopy}><p className={styles.eyebrow}>Who we serve</p><h2 id="audience-heading">For the people<br />moving things forward.</h2><p>Growing businesses. Established organizations. Mission-driven leaders. We partner with people ready to make their operations work better—and their next step clearer.</p>
         <ul><li>Business owners & entrepreneurs</li><li>Operations & technology leaders</li><li>Community & mission-driven organizations</li></ul><Link href="/contact#contact-message" className={styles.textLink}>Find your next step <span aria-hidden="true">↗</span></Link>
       </div>

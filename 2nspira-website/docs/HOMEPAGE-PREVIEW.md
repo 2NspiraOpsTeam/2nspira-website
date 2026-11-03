@@ -17,3 +17,9 @@ Do not merge to main or run deploy:production to update the design preview.
 Initial baseline: current production commit `991df6a69fda171cca922dc5eb4028d83a3fe9cc` (2026-11-03). Homepage redesigned on the dedicated design branch: photographic hero, five image-led services, audiences, purpose, Teams Management, founding-year credibility, supporting work, and conversation CTA. Existing approved site assets reused; no invented numerical results or team identities.
 
 Design direction: image-led services, authentic human visuals, explicit audiences, purpose, featured Teams Management story, and “Since 2019” founding credibility (confirmed by Jeffrey). Use verified outcomes only.
+
+## Photography and minimalism revision — November 3
+
+All five expertise cards now use real people photography, with no Learn more labels, numbered markers, or arrow overlays. Image and title links remain keyboard accessible. Hero and audience imagery also replaced. Photos by fauxels on Pexels, downloaded and served locally under the free commercial-use Pexels License (https://www.pexels.com/license/). These are stock subjects, not identified 2Nspira employees or clients.
+
+Asset source IDs (https://www.pexels.com/photo/<id>/): strategy 3184291; ai-collaboration 3184339; systems-team 3184423; digital-team 3184293; leadership 3184306; mentoring 3184287. Sources reviewed November 3, 2026; no AI generation used for replacements.
