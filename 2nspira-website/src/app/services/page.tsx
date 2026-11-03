@@ -4,13 +4,13 @@ import ServiceConversation from "@/components/ServiceConversation";
 import ServiceQuestions from "@/components/ServiceQuestions";
 import { serviceNeeds } from "@/lib/serviceNeeds";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import ServiceEffects from "@/components/ServiceEffects";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
   cardFlat,
-  caption,
+  buttonPrimary,
+  eyebrow,
   h2,
   lead,
   linkInline,
@@ -20,9 +20,9 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: "Business Transformation & Operations Consulting",
-  shareTitle: "Make your business work better.",
-  description: "Reduce manual work, improve operations, and support growth with 2Nspira. Find practical help with automation, AI, websites, and technology decisions.",
+  title: "Technology Consulting, AI & Entrepreneur Mentoring",
+  shareTitle: "Move your business forward—with people and technology.",
+  description: "Explore AI enablement, automation, websites and apps, fractional CIO leadership, and entrepreneur mentoring. Find a practical starting point for your business.",
   path: "/services"
 });
 
@@ -92,22 +92,10 @@ const servicesJsonLd = {
   ],
 };
 
-const outcomes = [
-  {
-    title: "Clear Strategic Direction",
-    description:
-      "Actionable roadmaps and prioritized next steps based on your organization's actual needs.",
-  },
-  {
-    title: "Practical Implementation Paths",
-    description:
-      "Realistic timelines, appropriate technology choices, and achievable milestones.",
-  },
-  {
-    title: "Sustainable Processes",
-    description:
-      "Workflows that endure beyond any single project or vendor relationship.",
-  },
+const steps = [
+  { title: "Start with the challenge", description: "Tell us what is slowing you down, the decision ahead, or the opportunity you want to explore. You do not need a technical brief." },
+  { title: "Agree a focused path", description: "Together, we define priorities, scope, responsibilities, and what progress should look like before an engagement begins." },
+  { title: "Build, learn, and adapt", description: "Move through the agreed work in manageable steps, review what is working, and make informed decisions about what comes next." },
 ];
 
 export default function ServicesPage() {
@@ -127,17 +115,17 @@ export default function ServicesPage() {
       >
         <AmbientField />
         <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <p><EyebrowPill>What we do</EyebrowPill></p>
+          <p><EyebrowPill>People. Strategy. Technology.</EyebrowPill></p>
           <h1
             id="hero-heading"
             className="mt-4 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink"
           >
-            Practical improvements for the way your business works.
+            A stronger business starts with your next right move.
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
-            Manual work, disconnected systems, unreliable reports, and unclear technology decisions can hold an organization back. We help businesses simplify operations, connect systems, adopt AI responsibly, and build technology foundations that support sustainable growth.
+            Turn technology uncertainty, disconnected operations, and growing pains into a clearer path forward. From responsible AI and connected systems to digital experiences and personal leadership, we help you move from what’s holding you back to what comes next.
           </p>
-          <ServiceConversation centered />
+          <ServiceConversation centered label="Let’s talk about your next step" />
           <a href="#find-the-right-service" className={`mt-4 min-h-11 ${linkInline}`}>Find the right service <span aria-hidden="true"> ↓</span></a>
         </div>
       </section>
@@ -146,13 +134,15 @@ export default function ServicesPage() {
       <section id="find-the-right-service" className={`${section} scroll-mt-24`} aria-labelledby="services-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div><h2 data-catalog-reveal id="services-heading" className={h2}>
-            What would you like to change?
+            Where do you need to make progress?
           </h2>
           <p className={`mt-4 max-w-2xl ${lead}`}>
-            Choose the situation that feels familiar. Our services can work
-            independently or together, depending on your priorities and agreed scope.
+            Start with the challenge that feels familiar. Explore one area or combine the right support around your priorities.
           </p></div>
 
+          <nav aria-label="Jump to a service" className="mt-7 flex flex-wrap gap-3">
+            {serviceNeeds.map((service, index) => <a key={service.href} href={`#service-${index + 1}`} className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">{["Websites & apps", "Automation", "AI enablement", "Technology leadership", "Mentoring & coaching"][index]}</a>)}
+          </nav>
           <ClientServiceGrid />
           <p className="mt-6 max-w-3xl text-sm leading-7 text-body">These are examples of support, not fixed packages. We agree what to assess, advise on, or implement before the work begins.</p>
         </div>
@@ -163,57 +153,58 @@ export default function ServicesPage() {
         <AmbientField />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <h2 data-catalog-reveal id="outcomes-heading" className={h2}>
-            What to expect
+            From a first conversation to a focused path.
           </h2>
           <p className={`mt-4 max-w-2xl ${lead}`}>
-            We begin with your situation—not a tool or a predetermined package.
-            Priorities, responsibilities, and next steps are agreed with you.
+            Advice, implementation, or mentoring: the right engagement starts with understanding your situation, not prescribing a tool.
           </p>
 
           <div className="mt-12 grid gap-5 md:grid-cols-3" role="list">
-            {outcomes.map((item) => (
+            {steps.map((item, index) => (
               <div key={item.title} data-catalog-card className={`group h-full p-8 hover:bg-surface hover:shadow-soft ${cardFlat}`} role="listitem">
+                <p className={`${eyebrow} mb-4`}>Step {index + 1}</p>
                 <AccentRule className="mb-5 w-8" />
                 <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-                <p className={`mt-2 ${caption}`}>{item.description}</p>
+                <p className="mt-3 text-base leading-7 text-body">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Advisory visual — conceptual, not an actual client or engagement */}
-      <div className="mx-auto max-w-5xl px-4 pt-10 sm:px-6">
-      <figure data-catalog-fade className="group relative overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
-        <Image
-          src="/images/pages/services-advisory.webp"
-          alt="Conceptual visualization of an advisory conversation between a consultant and a client."
-          width={1344}
-          height={768}
-          className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.015]"
-        />
-      </figure>
-      </div>
-
-      <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6" aria-labelledby="examples-heading">
-        <h2 id="examples-heading" className={h2}>See what the work can look like.</h2>
-        <p className={lead}>Explore published digital experiences and operational initiatives, with their scope and status explained.</p>
-        <Link href="/work" className={`mt-5 min-h-11 ${linkInline}`}>Explore our work <span aria-hidden="true"> →</span></Link>
+      <section className={section} aria-labelledby="explore-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className={eyebrow}>Explore before we talk</p>
+          <h2 id="explore-heading" className={`mt-4 ${h2}`}>Get a clearer picture of what’s possible.</h2>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <article className={`flex flex-col p-7 sm:p-9 ${cardFlat}`}>
+              <p className={eyebrow}>See the work</p>
+              <h3 className="mt-4 text-2xl font-medium text-ink">From public websites to connected operations.</h3>
+              <p className="mt-4 flex-1 leading-7 text-body">Explore published digital experiences, including Teams Management and GeVitals. See the needs, delivered capabilities, and project status behind the work.</p>
+              <Link href="/work" className={`mt-6 min-h-11 ${linkInline}`}>Explore our work <span aria-hidden="true"> →</span></Link>
+            </article>
+            <article className={`flex flex-col p-7 sm:p-9 ${cardFlat}`}>
+              <p className={eyebrow}>Find your starting point</p>
+              <h3 className="mt-4 text-2xl font-medium text-ink">Thinking about AI? Start with readiness.</h3>
+              <p className="mt-4 flex-1 leading-7 text-body">Use our free AI Readiness Scorecard to reflect on your organization’s strengths and gaps before deciding where to begin.</p>
+              <Link href="/resources/ai-readiness-scorecard" className={`mt-6 self-start ${buttonPrimary}`}>Take the free scorecard <span aria-hidden="true"> →</span></Link>
+            </article>
+          </div>
+        </div>
       </section>
       <ServiceQuestions items={[
         { question: "Do I need to know which service I need?", answer: "No. Start with your goals, current challenges, and the decisions you need to make. The introductory conversation helps us understand your situation and explore which service may fit." },
         { question: "What happens after the introductory conversation?", answer: "If there is a fit, we agree the priorities, scope, responsibilities, and next steps before an engagement begins. The conversation itself does not commit you to a project or coaching relationship." },
-        { question: "Are implementation and ongoing support included?", answer: "They depend on the engagement. Mentoring is guidance rather than done-for-you delivery. Technical implementation and any ongoing support are separately defined in the agreed scope; no open-ended support commitment is implied." },
+        { question: "Can services work together?", answer: "Yes. For example, a technology roadmap may identify an automation priority or an AI workflow to explore. We agree which advisory, implementation, training, or ongoing support activities are included. Mentoring remains guidance rather than done-for-you delivery." },
       ]} />
       {/* CTA */}
       <section className={section} aria-labelledby="cta-heading">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 data-catalog-reveal id="cta-heading" className={h2}>
-            Not sure which service fits?
+            Let’s make your next step clearer.
           </h2>
           <p className={`mx-auto mt-4 max-w-xl ${lead}`}>
-            You don’t need a technical brief. Tell us what feels stuck, what
-            you want to improve, and what you’ve tried. We’ll explore the fit together.
+            Bring one challenge, an idea you want to test, or a decision you need to make. We’ll explore where the right support could help—and whether we’re a fit.
           </p>
           <ServiceConversation centered />
         </div>

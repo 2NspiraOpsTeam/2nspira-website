@@ -167,3 +167,7 @@ Jeffrey requested improved homepage SEO and production publication of the approv
 Release scope: promote existing design branch, including corrected AI hero and image-only Automation restoration, through PR/main/Workers Builds; no database, account, billing, DNS or secret changes. Historical preview-only restriction is superseded by Jeffrey's explicit production request.
 
 Repository has no GitHub Actions workflows (only a PR template). Optional dependency audit reports eight existing findings on the unchanged production lockfile (including Next.js); no dependency delta is introduced here. This is not a passing audit or a security-remediation release. Runtime dependencies are preserved per validation workflow; canonical build and live checks remain required.
+
+## 2022 milestone image refresh — 2026-11-03
+
+Jeffrey requested community organizations instead of the library. `history-community-organizations.jpg`: community volunteers distributing supplies, Pexels photo 6646918, https://www.pexels.com/photo/6646918/ under https://www.pexels.com/license/. Served locally; illustrative stock, not a photograph of a 2Nspira engagement. Shared milestone data updates both homepage and About. Original library asset retained for recovery.
