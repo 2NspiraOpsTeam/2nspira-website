@@ -143,6 +143,22 @@ export default function Page() {
         <details className="mt-5 border-t border-line pt-2"><summary className="min-h-11 cursor-pointer rounded py-3 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">What this can include</summary><ul className="list-disc space-y-2 pb-3 pl-5 text-sm leading-7 text-body">{item.details.map(d => <li key={d}>{d}</li>)}</ul></details>
       </article>)}</div>
     </div></section>
+    <section className={sectionBand} aria-labelledby="personal-agent-heading" id="personal-ai-assistant">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <EyebrowPill>AI that works with you</EyebrowPill>
+        <h2 id="personal-agent-heading" className={`mt-5 max-w-3xl ${h2}`}>Your own AI assistant. Set up around the way you work.</h2>
+        <p className={`max-w-3xl ${lead}`}>Go beyond a blank chat window. We help you choose, set up, and personalize an AI agent assistant for your priorities, everyday tasks, and preferred tools.</p>
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {[
+            { title: "Start with your day", text: "Choose a useful first job: research a topic, organize information, draft content, or prepare for a meeting. Define what a helpful result looks like." },
+            { title: "Make it yours", text: "Shape its instructions, tone, and working context. Connect selected tools and knowledge sources where supported, with permissions matched to the task." },
+            { title: "Build confidence", text: "Test real examples together, refine the workflow, and learn how to review its work. Keep approval in your hands for messages, purchases, and important changes." }
+          ].map(item => <article key={item.title} className={`p-6 sm:p-7 ${cardFlat}`}><h3 className={h3}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p></article>)}
+        </div>
+        <p className="mt-6 max-w-3xl text-sm leading-7 text-muted">We’ll agree the setup, training, access boundaries, and any ongoing support before work begins. Platform capabilities, subscriptions, and integrations depend on the tools you choose.</p>
+        <ServiceConversation label="Plan my personal AI assistant" />
+      </div>
+    </section>
     <section className={sectionBand} aria-labelledby="ai-work-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <p className="text-sm font-semibold uppercase tracking-widest text-accent">From ideas to working systems</p>
       <h2 id="ai-work-heading" className={`mt-3 ${h2}`}>Explore the thinking. See the work.</h2>
