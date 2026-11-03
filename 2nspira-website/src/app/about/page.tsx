@@ -96,7 +96,7 @@ export default function AboutPage() {
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">People as well as platforms</p>
           <h2 id="about-coaching-heading" className={`mt-4 ${h2}`}>Support for the business—and the person leading it.</h2>
           <p className={`mt-4 ${lead}`}>Technology leadership helps organizations make better decisions about their systems. Entrepreneur Mentoring &amp; Coaching creates space for the decisions, mindset, and leadership habits of the person building the business.</p>
-          <p className="mt-4 leading-8 text-body">A handful of industry leaders are available to coach you. We match you with a coach aligned with your industry to work through customer discovery, product development, delegation, and accountability.</p>
+          <p className="mt-4 leading-8 text-body">We have proven entrepreneurs and industry leaders available to coach you. We match you with a coach aligned with your industry to work through customer discovery, product development, delegation, and accountability.</p>
           <Link href="/coaching" className={`mt-6 min-h-11 ${buttonPrimary}`}>Explore Entrepreneur Mentoring &amp; Coaching →</Link>
         </section>
 
