@@ -65,9 +65,9 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#websites",
-      name: "Websites & Digital Platforms",
+      name: "Websites, Apps & Digital Platforms",
       description:
-        "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites connected to the way your business works.",
+        "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites, web apps, and mobile apps connected to the way your business works.",
       url: "https://2nspira.com/websites",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",

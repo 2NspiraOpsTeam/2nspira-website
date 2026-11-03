@@ -18,11 +18,11 @@ export const serviceNeeds = [
   },
   {
     name: "Websites, Apps & Digital Platforms",
-    need: "Our website isn’t helping customers take action.",
-    help: "Make your offer easier to understand and the next step easier to take—with business connections where needed.",
+    need: "We need a better website or app.",
+    help: "Build websites, web apps, and mobile apps around your customers—with business connections where needed.",
     example: "Website and app development, accessible customer journeys, and scoped integrations.",
     href: "/websites",
-    link: "Explore website services",
+    link: "Explore websites and apps",
   },
   {
     name: "Fractional CIO / Technology Leadership",

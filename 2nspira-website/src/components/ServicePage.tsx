@@ -47,7 +47,7 @@ type Props = {
   buildSection?: {
     title: string;
     intro: string;
-    items: { title: string; text: string }[];
+    items: { title: string; text: string; details?: string[] }[];
   };
   journey?: {
     title: string;
@@ -155,6 +155,10 @@ export default function ServicePage({
                   <article className={`h-full p-6 ${card} ${isEditorial ? "motion-safe:md:hover:-translate-y-1" : ""}`}>
                     <h3 className={h3}>{item.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-body">{item.text}</p>
+                    {item.details && <details className="mt-5 border-t border-line pt-4">
+                      <summary className="min-h-11 cursor-pointer rounded py-2 text-sm font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">What this can include</summary>
+                      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-body">{item.details.map(detail => <li key={detail}>{detail}</li>)}</ul>
+                    </details>}
                   </article>
                 </Reveal>
               ))}
