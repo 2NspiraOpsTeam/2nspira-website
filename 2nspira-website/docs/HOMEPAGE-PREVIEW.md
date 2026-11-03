@@ -14,6 +14,6 @@ node scripts/deploy-homepage-preview.mjs
 
 Do not merge to main or run deploy:production to update the design preview.
 
-Initial baseline: current production commit `991df6a69fda171cca922dc5eb4028d83a3fe9cc` (2026-11-03). No homepage redesign applied yet.
+Initial baseline: current production commit `991df6a69fda171cca922dc5eb4028d83a3fe9cc` (2026-11-03). Homepage redesigned on the dedicated design branch: photographic hero, five image-led services, audiences, purpose, Teams Management, founding-year credibility, supporting work, and conversation CTA. Existing approved site assets reused; no invented numerical results or team identities.
 
 Design direction: image-led services, authentic human visuals, explicit audiences, purpose, featured Teams Management story, and “Since 2019” founding credibility (confirmed by Jeffrey). Use verified outcomes only.
