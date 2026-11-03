@@ -44,10 +44,10 @@ const serviceImages = [
   "/images/homepage/service-website.jpg",
   "/images/homepage/tech-automation.jpg",
   "/images/homepage/tech-ai.jpg",
-  "/images/homepage/ai-collaboration.jpg",
+  "/images/homepage/executive-boardroom-v1.jpg",
   "/images/homepage/mentoring-office-v2.webp",
 ];
-const serviceAlts = ["Person reviewing a visual website on a laptop", "Engineer programming a laptop beside automated equipment", "Developer working with code across multiple screens", "Technology leader guiding a discussion around laptops", "Two professionals engaged in a thoughtful one-to-one conversation in a modern office"];
+const serviceAlts = ["Person reviewing a visual website on a laptop", "Engineer programming a laptop beside automated equipment", "Developer working with code across multiple screens", "Executives discussing strategy in a modern boardroom", "Two professionals engaged in a thoughtful one-to-one conversation in a modern office"];
 
 function Photo({ src, alt, className = "", priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
   return <Image src={src} alt={alt} fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 70vw" priority={priority} className={className} />;
@@ -104,7 +104,7 @@ export default function Home() {
         { image: "challenge-operations", category: "Simpler operations", title: "Our operations have become too complicated.", text: "Simplify repetitive work and connect the systems your business relies on.", href: "/automation-systems-optimization", link: "Explore operations solutions" },
         { image: "digital-team", category: "AI with purpose", title: "We want to use AI, but need direction.", text: "Find valuable opportunities, prepare your people, and establish responsible practices.", href: "/ai-enablement", link: "Explore AI enablement" },
         { image: "tech-websites", category: "Better digital experiences", title: "Our website no longer meets our needs.", text: "Build a better customer experience with useful digital capabilities behind it.", href: "/websites", link: "Explore website solutions" },
-        { image: "service-cio", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
+        { image: "executive-staff-briefing-v1", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
       ].map(challenge => <Link key={challenge.href} href={challenge.href} className={styles.challengeCard}><div className={styles.challengePhoto}><Photo src={`/images/homepage/${challenge.image}.jpg`} alt="" /><span className={styles.challengeCategory}>{challenge.category}</span></div><div className={styles.challengeCopy}><h3>{challenge.title}</h3><p>{challenge.text}</p><span className={styles.challengeLink}>{challenge.link} <span className={styles.challengeArrow} aria-hidden="true">↗</span></span></div></Link>)}</div>
     </section>
 

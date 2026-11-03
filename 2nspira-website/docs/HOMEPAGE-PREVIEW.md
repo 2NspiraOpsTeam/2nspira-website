@@ -124,3 +124,8 @@ Teams Management is explicitly labeled a published project, with inspectable pub
 Implementation `d233446`; isolated preview Worker `129ff649-91f6-4a57-a885-c7f83ec05c85`. Lint, TypeScript, canonical build and routing smoke checks passed. Production release is outside this change's scope.
 
 Hosted QA passed 12 route/width checks across Home, About and AI at 1440/768/390/320px, without overflow or browser errors. Audience links, visible keyboard focus/activation, refresh persistence, single closing invitation and reduced-motion rendering passed. Desktop/mobile audience screenshots inspected. Teams Management public destination returned 200 with residential/retail content. Preview commit, noindex/no-store and mutation block verified. Production manifest independently remains `991df6a69fda171cca922dc5eb4028d83a3fe9cc`. Booking was not submitted and preview form/account submissions remain intentionally blocked; conversion impact and measured client outcomes are unverified.
+
+
+## Executive leadership imagery — 2026-11-03
+
+Jeffrey requested two replacements: executives in a boardroom for the Fractional CIO service card, and seven staff listening to one executive for the leadership challenge panel. Built-in image generation produced illustrative editorial photography, not actual staff or client engagements. Local assets: `public/images/homepage/executive-boardroom-v1.jpg` and `public/images/homepage/executive-staff-briefing-v1.jpg`. Prompts: realistic professional boardroom with five senior executives; wide professional workplace with exactly seven seated staff listening to one standing executive, all heads within the central band. No logos or embedded copy. Preview only; content and links unchanged.
