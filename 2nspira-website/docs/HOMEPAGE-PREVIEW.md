@@ -53,3 +53,5 @@ Pexels License: https://www.pexels.com/license/ . Stock subjects are not represe
 - `tech-leadership.jpg`: https://www.pexels.com/photo/3862618/
 - `tech-mentoring.jpg`: https://www.pexels.com/photo/3861973/
 - `tech-community.jpg`: https://www.pexels.com/photo/1181263/
+
+Photography credits: Christina Morillo (1181316, 1181472, 1181263) and ThisIsEngineering (3861958, 3862632, 3862618, 3861973). Source images inspected before assignment.

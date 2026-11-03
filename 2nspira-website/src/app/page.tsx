@@ -55,7 +55,7 @@ function Photo({ src, alt, className = "", priority = false }: { src: string; al
 export default function Home() {
   return <main id="main-content" className={styles.home}>
     <section className={styles.hero} aria-labelledby="hero-heading">
-      <Photo src="/images/homepage/tech-hero.jpg" alt="Technology professional using a tablet beside server racks" priority />
+      <Photo src="/images/homepage/tech-hero.jpg" alt="Technology professional using a portable computer beside server racks" priority />
       <div className={styles.heroShade} />
       <div className={styles.heroContent}>
         <p className={styles.eyebrow}>People. Purpose. Possibility.</p>
