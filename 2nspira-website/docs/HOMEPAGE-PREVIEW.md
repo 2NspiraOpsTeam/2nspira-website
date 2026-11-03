@@ -25,3 +25,7 @@ All five expertise cards now use real people photography, with no Learn more lab
 Asset source IDs (https://www.pexels.com/photo/<id>/): strategy 3184291; ai-collaboration 3184339; systems-team 3184423; digital-team 3184293; leadership 3184306; mentoring 3184287. Sources reviewed November 3, 2026; no AI generation used for replacements.
 
 Who we serve explicitly includes schools and educational organizations, and nonprofits and community organizations, per Jeffrey’s request.
+
+## Impact timeline — November 3
+
+Replaced the foundation/value list with a reference-matched photo/story panel and vertical year markers. Jeffrey supplied the 2019 EKM founding, 2022 community reinvention after COVID, 2025 2Nspira reinvention, and 2026 competitive positioning. Native grouped radios provide click/touch and arrow-key selection without hydration or third-party paid widgets; the first milestone is the default on a fresh visit. Existing licensed stock imagery illustrates milestones, not archival event photos. Mobile places the year controls before the selected story.

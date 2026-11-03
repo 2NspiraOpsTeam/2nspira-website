@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { serviceNeeds } from "@/lib/serviceNeeds";
 import styles from "./homepage.module.css";
+import ImpactTimeline from "./ImpactTimeline";
 
 const homepageDescription =
   "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.";
@@ -99,8 +100,9 @@ export default function Home() {
       </div><div className={styles.featureImage}><Image src="/images/pages/teams-showcase-20261028.jpg" alt="Teams Management public website with property discovery and tenant services" width={1440} height={1000} unoptimized sizes="(max-width: 800px) 100vw, 55vw" /><a href="https://www.teamsmanagement.com/" target="_blank" rel="noopener noreferrer" className={styles.projectVisit}>Visit Teams Management <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a></div>
     </section>
 
-    <section className={`${styles.section} ${styles.impact}`} aria-labelledby="impact-heading"><div><p className={styles.eyebrow}>Our foundation. Your future.</p><h2 id="impact-heading">Making an impact<br />since <em>2019.</em></h2><p>Founded in 2019. Built around people.<br />Focused on what’s next.</p><Link href="/about" className={styles.textLink}>The thinking behind our work <span aria-hidden="true">↗</span></Link></div>
-      <div className={styles.impactValues}><div><span>2019</span><h3>Where our story began</h3><p>A belief that business and technology should work better together.</p></div><div><span>People</span><h3>Always at the center</h3><p>The way your team works matters as much as the tools they use.</p></div><div><span>What’s next</span><h3>Progress with purpose</h3><p>Clear priorities. Thoughtful execution. Practical improvements.</p></div></div>
+    <section className={`${styles.section} ${styles.impact}`} aria-labelledby="impact-heading">
+      <h2 id="impact-heading">Making an impact since 2019.</h2>
+      <ImpactTimeline />
     </section>
 
     <section className={`${styles.section} ${styles.work}`} aria-labelledby="work-heading"><div className={styles.sectionHead}><div><p className={styles.eyebrow}>More perspectives. More possibility.</p><h2 id="work-heading">A closer look at our work.</h2></div><Link href="/work" className={styles.textLink}>View our work <span aria-hidden="true">↗</span></Link></div><div className={styles.workGrid}>{[
