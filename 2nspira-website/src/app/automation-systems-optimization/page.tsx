@@ -84,7 +84,7 @@ export default function AutomationSystemsOptimizationPage() {
             <ServiceConversation label="Let’s simplify your operations" />
           </div>
           <figure className="overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
-            <Image src="/images/hero/automation-people-v2.webp" alt="Three colleagues discussing a workflow together with a laptop and notebook in a naturally lit office." width={1536} height={1024} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" />
+            <Image src="/images/hero/automation-systems-optimization-hero.png" alt="A team collaborating around connected operations dashboards in a modern technology workspace." width={1855} height={848} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" />
           </figure>
         </div>
       </div>
