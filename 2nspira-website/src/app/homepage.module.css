@@ -40,7 +40,9 @@
 .challengePhoto{position:relative;aspect-ratio:2.3;overflow:hidden;background:var(--sand)}
 .challengePhoto img{filter:grayscale(.25) saturate(.75);transition:transform .5s;object-position:center 52%}
 .challengeCard:first-child img{object-position:center 60%}
-.challengeCard:nth-child(4) img{object-position:right center}
+.challengeCard:nth-child(2) img{object-position:center 24%}
+.challengeCard:nth-child(3) img{object-position:center 30%}
+.challengeCard:nth-child(4) img{object-position:right 32%}
 .challengeCategory{position:absolute;left:24px;bottom:20px;background:#172b3a;color:white;padding:9px 14px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;line-height:1.5}
 .challengeCopy{display:flex;flex-direction:column;align-items:flex-start;padding:28px 30px 24px;flex:1}
 .challengeCard h3{font-size:clamp(1.4rem,2.15vw,1.9rem);line-height:1.2;max-width:28ch}
