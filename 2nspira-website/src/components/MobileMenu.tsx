@@ -128,7 +128,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
         <div className="flex h-16 items-center justify-between border-b border-line">
           <Link href="/" onClick={handleClose} className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="2Nspira home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo/2nspira-logo.png" alt="2Nspira" className="h-8 w-auto" width={320} height={132} />
+            <img src="/images/logo/2nspira-logo.png" alt="2Nspira" className="h-11 w-auto" width={320} height={132} />
           </Link>
           <button ref={closeButtonRef} onClick={handleClose} className="grid h-11 w-11 place-items-center rounded-full bg-canvas-deep text-body transition-colors hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Close menu">
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
