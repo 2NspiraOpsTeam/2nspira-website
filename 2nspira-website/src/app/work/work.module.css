@@ -6,7 +6,10 @@
 .projectLink span[aria-hidden] { transition: transform 240ms ease; }
 .engineeringCard:focus-within .projectLink { text-decoration-thickness: 2px; }
 @media (min-width: 768px) {
-  .featured { grid-column: 1 / -1; grid-template-columns: 1.15fr 1fr; }
+  .featured { grid-column: 1 / -1; }
+}
+@media (min-width: 1024px) {
+  .featured { grid-template-columns: 1.15fr 1fr; }
   .featuredImage { aspect-ratio: auto; min-height: 340px; }
 }
 @media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
