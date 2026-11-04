@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import posts from "@/content/posts/index.json";
+import { jobs } from "@/lib/careers/server";
+export const dynamic = "force-dynamic";
 
 const siteDomain = process.env.NEXT_PUBLIC_SITE_URL || "https://2nspira.com";
 
@@ -36,8 +38,9 @@ const pages: Array<{
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [...pages.map(({ path, priority, changeFrequency }) => ({
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const openings = await jobs(true).catch(() => []);
+  return [...openings.map(job => ({ url: `${siteDomain}/careers/${job.id}`, ...(job.updatedAt ? { lastModified: job.updatedAt } : {}), changeFrequency: "weekly" as const, priority: 0.6 })), ...pages.map(({ path, priority, changeFrequency }) => ({
     url: `${siteDomain}${path}`,
     changeFrequency,
     priority,

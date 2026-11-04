@@ -1,0 +1,16 @@
+# Crawl discovery and platform retirement follow-up — 2026-11-04
+
+## Discovery changes
+Published careers links now render in initial server HTML using the existing public-field projection. Client refresh/retry remains available. Sitemap includes only published careers records with real database updatedAt values, and retains the existing static/article inventory when Careers storage is temporarily unavailable. No unpublished IDs enter HTML or sitemap. Missing JobPosting-specific publication/location fields were not invented; rich-job schema remains a separately scoped improvement.
+
+Breadcrumb's Vercel demo was intentionally paused under the owner retirement request. Preserve its portfolio description/artwork but show “Demo currently offline” without an inactive CTA; remove the link from the live website examples. CalmLoop remains linked and live, per the owner's corrected retention instruction.
+
+Validation: lint/canonical build/Worker smoke/TypeScript passed. Isolated local D1 uses three public-data fixtures plus one private draft; sitemap has 55 URLs/three job details, initial HTML contains all three published job links, private/unknown job URLs return 404. Twelve rendered route/viewport checks cover Careers/Work/Websites at 1440/768/390/320. No actual application submitted.
+
+## Completed notification release
+PR158 merged cf4d7475322322061b3aaa130983ab09ae35b630; production Workers Build 97a2e052-6ed4-47f1-96da-77e49531c5fe succeeded, live deployment marker matched. Real labeled owner-only contact submission returned delivered; success persisted after refresh. Exact-payload retry returned the existing accepted result; D1 contains one sent delivery and one provider ID. Matching QA inquiry confirmed in owner Inbox at 7:56 AM. Hosted mocked-flow regression (eight scenarios) and contrast rescan passed. Bookstore notification independently confirmed in owner Inbox at 7:50 AM after existing sender grant restoration. No order, payment or inventory transition was created. Calendar email settings saved and reloaded; no test booking/invitation created.
+
+## Vercel and Supabase
+Owner first requested all Vercel projects offline, then explicitly retained strength-profile, ai-readiness-scorecard and calmloop after live headers showed they still use Vercel. Their public URLs remain 200. Eight other production projects paused: sma-pq3t, sma, sma-jitq, operations-pilot-showcase, breadcrumb-challenge, corkhill-operations-pilot, breadcrumb, executive-job-search-intelligence. Each default production URL independently returned 503/DEPLOYMENT_PAUSED. before-we-go has no active production deployment and its default URL returns 404/DEPLOYMENT_NOT_FOUND; pause is inapplicable. No project, repository, deployment, env var or database was deleted. Corkhill GitHub repository independently confirmed present at https://github.com/2NspiraOpsTeam/corkhill-operations-pilot. Private pre-pause project/domain inventory retained; unpause is the recovery mechanism.
+
+Supabase CLI live inventory found all four projects already INACTIVE: 2NspiraOpsTeam's Project, Calm Loop, corkhill-operations-pilot, and the Waterbear account project. No Supabase mutation or deletion performed. Historical database contents/backups were not opened or independently verified; pause status is not indefinite-backup proof.

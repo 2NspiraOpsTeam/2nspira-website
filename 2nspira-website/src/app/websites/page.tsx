@@ -167,10 +167,9 @@ export default function WebsitesPage() {
           </div>
           <details className={`mt-8 px-6 py-2 ${cardFlat}`}>
             <summary className="cursor-pointer rounded py-4 font-semibold text-ink focus-visible:outline-2 focus-visible:outline-accent">More published digital experiences</summary>
-            <div className="grid gap-6 border-t border-line py-6 md:grid-cols-3">{[
+            <div className="grid gap-6 border-t border-line py-6 md:grid-cols-2">{[
               { name: "Open Goal Soccer", text: "An archival redesign preserving a community program’s content, mission, and inclusive youth soccer story.", url: "https://opengoalsoccer.com/" },
               { name: "CalmLoop", text: "A low-pressure web companion offering gentle routine ideas for neurodivergent children and their families.", url: "https://calmloop.vercel.app/" },
-              { name: "Breadcrumb", text: "An interactive OSINT challenge engineered to run without a server or database.", url: "https://breadcrumb-challenge.vercel.app/" },
             ].map(site => <article key={site.name}><h3 className={h3}>{site.name}</h3><p className="mt-3 leading-7 text-body">{site.text}</p><a href={site.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${site.name} (opens in a new tab)`} className={`mt-4 min-h-11 ${linkInline}`}>Visit {site.name} ↗</a></article>)}</div>
           </details>
         </div>

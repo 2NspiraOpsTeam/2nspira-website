@@ -1,9 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import type { Job } from "@/lib/careers/model";
-export default function Openings() {
-  const [jobs, setJobs] = useState<Job[] | null>(null);
+import type { publicJobs } from "@/lib/careers/server";
+type PublicJob = Awaited<ReturnType<typeof publicJobs>>[number];
+export default function Openings({ initialJobs = null }: { initialJobs?: PublicJob[] | null }) {
+  const [jobs, setJobs] = useState<PublicJob[] | null>(initialJobs);
   const [error, setError] = useState(false);
   const [retry, setRetry] = useState(0);
   useEffect(() => {
