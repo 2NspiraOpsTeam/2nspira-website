@@ -21,17 +21,15 @@ const manufacturingChallenge =
   "Reducing reliance on disconnected spreadsheets, paper logs, and manual handoffs in production control.";
 
 const manufacturingOperationalShift =
-  "Connected operations workspace giving manufacturing teams visibility across production, materials, quality, equipment, and accountability.";
+  "Connected operations workspace giving manufacturing teams visibility across production, materials, quality, fulfillment, and accountability.";
 
 const manufacturingCapabilities = [
-  "Production control: schedules, priorities, work queues, blockers, throughput",
-  "Materials & inventory: stock levels, shortages, purchasing, job readiness",
-  "Quality & traceability: inspections, issues, evidence, ownership, job history",
-  "Equipment & maintenance: downtime, service history, preventive maintenance, asset readiness",
-  "Role‑based dashboards",
-  "Structured records and ownership",
-  "Workflow automation",
-  "Reporting workspace",
+  "Connected customer orders and production work orders",
+  "Controlled production stages and material consumption",
+  "Inventory thresholds, purchase approvals, and goods receipt",
+  "Quality inspections, corrective actions, and fulfillment release",
+  "Executive dashboards, filterable reports, and shared activity",
+  "Private, resettable demo state and transparent rules-based assistance",
 ];
 
 
@@ -273,7 +271,7 @@ export default function WorkPage() {
         <section id="concepts-prototypes" className="mb-24 scroll-mt-24" aria-labelledby="concepts-heading">
           <Reveal>
             <div className="mb-12 flex flex-col gap-4">
-              <span>Concepts &amp; prototypes · Not a client deployment</span>
+              <span>Internal Engineering Showcase / Interactive Prototype</span>
               <h2 id="concepts-heading" className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Manufacturing Operations Command Center
               </h2>
@@ -282,12 +280,12 @@ export default function WorkPage() {
 
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="space-y-6">
-              <p className="text-sm font-semibold text-accent">Status: Concept showcase</p>
+              <p className="text-sm font-semibold text-accent">Status: Live interactive prototype · Fictional demonstration company</p>
               <p className="text-xl text-body"><strong>Challenge: </strong>{manufacturingChallenge}</p>
               <p className="text-lg text-body/80"><strong>Approach: </strong>{manufacturingOperationalShift}</p>
-              <p className="leading-7 text-body">This visual concept explores a shared manufacturing workspace. The capabilities below describe the proposed scope, not a verified production deployment or client outcome.</p>
+              <p className="leading-7 text-body">A connected manufacturing operations platform demonstrating how production, inventory, procurement, quality control, workforce coordination, and executive reporting can work together in one operational environment.</p>
               <div className="rounded-2xl border border-line bg-canvas/50 p-6 backdrop-blur-sm">
-                <h3 className="mb-4 font-semibold text-ink">Showcase Scope</h3>
+                <h3 className="mb-4 font-semibold text-ink">Explore connected operations</h3>
                 <ul className="space-y-3 text-sm text-body">
                   {manufacturingCapabilities.map((cap) => (
                     <li key={cap} className="flex items-start gap-3">
@@ -297,13 +295,22 @@ export default function WorkPage() {
                   ))}
                 </ul >
               </div >
+              <div className="flex flex-wrap gap-3">
+                <a href="https://demo.2nspira.com/manufacturing/" className={buttonPrimary}>
+                  Explore the Interactive Demo
+                </a>
+                <Link href="/contact?interest=operations-platform" className="inline-flex items-center justify-center rounded-full border border-line px-5 py-3 text-sm font-medium text-ink hover:bg-canvas">
+                  Discuss an Operations Platform for Your Business
+                </Link>
+              </div>
+              <p className="text-sm text-body/80">No account required. Your changes stay in your own browser tab, with a clear reset option.</p>
             </div >
             <div className="flex items-center justify-center">
               <Image
-                src="/images/work/manufacturing-command-center.png"
-                alt="Manufacturing Operations Command Center"
+                src="/images/work/northstar-manufacturing-demo.webp"
+                alt="Northstar Manufacturing interactive demonstration with production cells, order pipeline, inventory alerts, and quality holds"
                 width={1600}
-                height={900}
+                height={1000}
                 className="w-full h-auto rounded-2xl border border-line shadow-sm"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
@@ -312,7 +319,7 @@ export default function WorkPage() {
 
           <Reveal className="mt-8">
             <p className="text-sm text-body italic">
-              The concept shows how production, materials, quality, and equipment information could share a common workspace. No quantified improvement or production adoption is claimed.
+              Built by 2Nspira to showcase how custom digital platforms can reduce operational fragmentation and improve business visibility. Northstar Manufacturing is fictional; this is an internally developed demonstration, not a deployed client solution. All data is synthetic. The operational assistant uses local rules, not a live AI model.
             </p>
           </Reveal>
         </section>
