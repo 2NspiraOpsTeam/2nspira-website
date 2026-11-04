@@ -1,3 +1,4 @@
+import ManufacturingDemo from "@/components/ManufacturingDemo";
 import Image from "next/image";
 import Link from "next/link";
 import { Compass, Rocket, ClipboardCheck } from "lucide-react";
@@ -183,5 +184,6 @@ export default function Home() {
     ].map(project=><Link key={project.name} href="/websites#our-work" className={styles.workCard}><div><Photo src={`/images/pages/${project.image}-website-preview-20261021.jpg`} alt={`${project.name} public website preview`} /></div><h3>{project.name} <span aria-hidden="true">↗</span></h3><p>{project.text}</p></Link>)}</div></section>
 
 
-  </main>;
+  <ManufacturingDemo />
+    </main>;
 }

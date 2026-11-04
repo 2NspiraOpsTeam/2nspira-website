@@ -1,3 +1,4 @@
+import ManufacturingDemo from "@/components/ManufacturingDemo";
 import styles from "./FractionalCio.module.css";
 import polish from "@/components/ServicePolish.module.css";
 import ServiceEffects from "@/components/ServiceEffects";
@@ -138,6 +139,7 @@ export default function FractionalCioPage() {
           </div>
         </div>
       </section>
+    <ManufacturingDemo />
     </ServiceEffects></main>
   );
 }

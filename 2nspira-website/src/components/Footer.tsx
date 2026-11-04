@@ -25,6 +25,7 @@ const ideas = [
   { name: "Videos", href: "/videos" },
   { name: "Resources", href: "/resources" },
   { name: "Leadership books", href: "/books" },
+  { name: "Manufacturing demo", href: "https://demo.2nspira.com/manufacturing/" },
   { name: "Bookstore", href: "https://books.2nspira.com" },
   { name: "Creative shop", href: "/shop" },
 ];
@@ -83,7 +84,7 @@ export default function Footer() {
         </nav>
         <nav className={styles.ideas} aria-labelledby="footer-ideas-heading">
           <h2 id="footer-ideas-heading" className={styles.heading}>Ideas &amp; resources</h2>
-          <ul className={styles.list}>{ideas.map(link => <li key={link.href}><Link href={link.href} className={styles.link}>{link.name}</Link></li>)}</ul>
+          <ul className={styles.list}>{ideas.map(link => <li key={link.href}><a href={link.href} className={styles.link}>{link.name}</a></li>)}</ul>
         </nav>
       </div>
 

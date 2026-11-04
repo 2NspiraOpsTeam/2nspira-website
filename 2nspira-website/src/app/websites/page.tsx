@@ -1,3 +1,4 @@
+import ManufacturingDemo from "@/components/ManufacturingDemo";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -261,6 +262,7 @@ export default function WebsitesPage() {
       </section>
       <ServiceQuestions items={websiteQuestions} />
       <section className={sectionBand} aria-labelledby="website-cta-heading"><div className="mx-auto max-w-3xl px-4 text-center sm:px-6"><h2 data-catalog-reveal id="website-cta-heading" className={h2}>What should your website or app make easier?</h2><p className={lead}>Bring your current site, an app idea, or a customer journey that isn’t working. We’ll discuss what matters now and the simplest useful next step.</p><ServiceConversation label="Discuss your website or app" centered /></div></section>
+    <ManufacturingDemo />
     </ServiceEffects>
   </main>;
 }
