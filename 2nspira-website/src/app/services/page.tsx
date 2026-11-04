@@ -20,7 +20,7 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: "Technology Consulting, AI & Entrepreneur Mentoring",
+  title: "Business Technology Consulting & Modernization",
   shareTitle: "Move your business forward—with people and technology.",
   description: "Explore AI enablement, automation, websites and apps, fractional CIO leadership, and entrepreneur mentoring. Find a practical starting point for your business.",
   path: "/services"
@@ -172,6 +172,11 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className={section} aria-labelledby="connected-services-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <h2 id="connected-services-heading" className={h2}>One challenge. The right combination of support.</h2>
+        <p className="mt-4 max-w-3xl leading-8 text-body">A growing business might begin with <Link className={linkInline} href="/fractional-cio">technology leadership</Link>, identify a disconnected handoff, then prioritize <Link className={linkInline} href="/automation-systems-optimization">workflow automation</Link> or a <Link className={linkInline} href="/websites">customer portal</Link>. Each step is scoped around the need—not a requirement to buy every service.</p>
+        <p className="mt-4 font-medium text-ink">Understand the challenge. Set the direction. Make it work.</p>
+      </div></section>
       <section className={section} aria-labelledby="explore-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className={eyebrow}>Explore before we talk</p>

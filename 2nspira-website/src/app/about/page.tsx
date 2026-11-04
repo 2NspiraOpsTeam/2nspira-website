@@ -1,3 +1,4 @@
+import LeadershipProfile from "@/components/LeadershipProfile";
 import styles from "./about.module.css";
 import { ArrowUpRight, Compass, HeartHandshake, Wrench } from "lucide-react";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
@@ -64,6 +65,7 @@ export default function AboutPage() {
         <div><strong>100th</strong><span>Website launch reached in 2024</span></div>
       </div>
 
+      <LeadershipProfile />
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
         <Reveal className="mt-20"><section className={styles.story} aria-labelledby="our-story-heading">
           <div><AccentRule className="mb-6" /><p className={styles.eyebrow}>Our story</p><h2 id="our-story-heading" className={`mt-4 ${h2}`}>Built through experience.<br />Driven by possibility.</h2></div>

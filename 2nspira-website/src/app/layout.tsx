@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Analytics from "@/components/Analytics";
+import MarketingEvents from "@/components/MarketingEvents";
 import { socialLinks } from "@/lib/socialLinks";
 import "./globals.css";
 
@@ -147,6 +148,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col"><Analytics>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <Header />
+        <MarketingEvents />
         {children}
         <Footer />
       </Analytics>

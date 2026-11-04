@@ -39,6 +39,7 @@ export async function POST(request: NextRequest) {
   const email = clean(payload.email, 200);
   const organization = clean(payload.organization, 160);
   const message = clean(payload.message, MAX_BODY);
+  const organizationType = clean(payload.organizationType, 80);
 
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -58,6 +59,7 @@ export async function POST(request: NextRequest) {
     `Name: ${name}`,
     `Email: ${email}`,
     `Organization: ${organization || "Not provided"}`,
+    `Organization type: ${organizationType || "Not provided"}`,
     "",
     message,
     "",

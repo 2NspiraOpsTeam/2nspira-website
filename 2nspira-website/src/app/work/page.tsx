@@ -10,7 +10,7 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: "Business Challenges, Websites & Operational Showcases",
+  title: "Technology Consulting Projects & Engineering Portfolio",
   shareTitle: "See practical responses to real business challenges.",
   description: "See how 2Nspira approaches disconnected workflows and customer-facing websites. Explore published projects and operational showcases with clear scope and status.",
   path: "/work"
@@ -55,8 +55,8 @@ const supportingProjects = [
   {
     name: "2Nspira Books",
     description:
-      "A collector-focused bookstore bringing together collectible editions, original books, coloring books, and printable activities.",
-    url: "https://books.2nspira.com",
+      "An in-house storefront preview for collectible books. Checkout and operational features remain development scope, not a claim of live payment readiness.",
+    url: "https://2nspira-books-preview.jcortez-36a.workers.dev/",
     image: "/images/work/project-books.png",
   },
   {
@@ -129,11 +129,14 @@ export default function WorkPage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-24">
+        <nav aria-label="Explore evidence by type" className="mb-12 flex flex-wrap gap-3">
+          {[['#teams-management', 'Client projects'], ['#internal-engineering', '2Nspira engineering'], ['#concepts-prototypes', 'Concepts & prototypes']].map(([href, label]) => <a key={href} href={href} className="inline-flex min-h-11 items-center rounded-full border border-line px-5 py-3 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">{label}</a>)}
+        </nav>
         {/* --- Featured: Teams Management --- */}
         <section id="teams-management" className="mb-32 scroll-mt-24" aria-labelledby="teams-management-heading">
           <Reveal>
             <div className="mb-12 flex flex-col gap-4">
-              <span>Featured Website</span>
+              <span>Client projects · Published website</span>
               <h2 id="teams-management-heading" className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Teams Management
               </h2>
@@ -178,12 +181,70 @@ export default function WorkPage() {
           </Reveal>
         </section>
 
+        {/* --- Supporting projects grid --- */}
+        <section id="digital-projects" className="mb-24 scroll-mt-24">
+          <Reveal>
+            <div className="mb-12">
+              <h2 className="mb-4 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+                More published digital work
+              </h2>
+              <p className="text-lg text-body max-w-2xl">
+                Explore a bilingual clinic website and a community archive. These published experiences demonstrate delivery scope; no measured client outcome is implied.
+              </p>
+            </div >
+          </Reveal>
+          <div className="grid gap-6 md:grid-cols-2">
+            {supportingProjects.filter(project => ["GeVitals", "Open Goal Soccer"].includes(project.name)).map((project, idx) => (
+              <Reveal key={project.name} delay={idx * 0.1}>
+                <article
+                  className={`group p-0 ${card} rounded-xl border border-line transition-all duration-300 motion-safe:hover:-translate-y-1 hover:shadow-lg hover:border-accent overflow-hidden`}
+                >
+                  <div className="relative aspect-video w-full overflow-hidden bg-canvas/50">
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      fill
+                      sizes="(min-width: 768px) 540px, calc(100vw - 32px)"
+                      className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
+                    />
+                  </div >
+                  <div className="p-5">
+                    <h3 className="text-sm font-semibold tracking-tight text-ink">
+                      {project.name}
+                    </h3>
+                    <p className="mt-2 text-xs text-body leading-relaxed">
+                      {project.description}
+                    </p>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center text-xs font-medium text-accent underline underline-offset-4 hover:text-accent/80 transition-colors"
+                    >
+                      <span className="sr-only">{project.name}: </span>Visit Project →
+                    </a>
+                  </div >
+                </article>
+              </Reveal>
+            ))}
+          </div >
+        </section>
+
+        <section id="internal-engineering" className="mb-24 scroll-mt-24" aria-labelledby="engineering-heading">
+          <h2 id="engineering-heading" className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">2Nspira engineering</h2>
+          <p className="mt-4 max-w-3xl leading-8 text-body">Our own platforms and engineering experiments make our approach inspectable. They are internal work, not independent client endorsements or evidence of client return on investment.</p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <article className={`p-6 ${card}`}><h3 className="text-xl font-semibold text-ink">Multi-agent AI workflow</h3><p className="mt-3 leading-7 text-body">Jeffrey’s field notes examine coordination, local and cloud models, and the importance of human oversight in an internal AI environment.</p><Link href="/post/building-ai-team-multi-agent-workflow-lessons" className="mt-5 inline-flex min-h-11 items-center text-accent underline underline-offset-4">Explore the engineering lessons →</Link></article>
+            {supportingProjects.filter(project => ["2Nspira", "2Nspira Books", "Breadcrumb", "CalmLoop"].includes(project.name)).map(project => <article key={project.name} className={`p-6 ${card}`}><p className="text-sm font-semibold text-accent">Internal platform / engineering project</p><h3 className="mt-3 text-xl font-semibold text-ink">{project.name}</h3><p className="mt-3 leading-7 text-body">{project.description}</p><a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center text-accent underline underline-offset-4">Explore {project.name}<span className="sr-only"> (opens in a new tab)</span> ↗</a></article>)}
+          </div>
+          <p className="mt-6 text-sm leading-7 text-body">Relevant to <Link href="/ai-enablement" className="text-accent underline">AI enablement</Link>, <Link href="/websites" className="text-accent underline">digital platforms</Link>, and <Link href="/fractional-cio" className="text-accent underline">technology leadership</Link>. Scope and applicability differ by engagement.</p>
+        </section>
         {/* --- Featured: Manufacturing Operations Command Center --- */}
-        <section className="mb-32">
+        <section id="concepts-prototypes" className="mb-24 scroll-mt-24" aria-labelledby="concepts-heading">
           <Reveal>
             <div className="mb-12 flex flex-col gap-4">
-              <span>Operational Showcase</span>
-              <h2 className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+              <span>Concepts &amp; prototypes · Not a client deployment</span>
+              <h2 id="concepts-heading" className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                 Manufacturing Operations Command Center
               </h2>
             </div >
@@ -224,56 +285,6 @@ export default function WorkPage() {
               The concept shows how production, materials, quality, and equipment information could share a common workspace. No quantified improvement or production adoption is claimed.
             </p>
           </Reveal>
-        </section>
-
-        {/* --- Supporting projects grid --- */}
-        <section className="mb-32">
-          <Reveal>
-            <div className="mb-12">
-              <h2 className="mb-4 text-3xl font-medium tracking-tight text-ink sm:text-4xl">
-                Supporting work
-              </h2>
-              <p className="text-lg text-body max-w-2xl">
-                The following projects demonstrate the range of digital platforms
-                2Nspira has built — from mission‑driven archives to bilingual
-                experiences and interactive tools.
-              </p>
-            </div >
-          </Reveal>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {supportingProjects.map((project, idx) => (
-              <Reveal key={project.name} delay={idx * 0.1}>
-                <article
-                  className={`group p-0 ${card} rounded-xl border border-line transition-all duration-300 motion-safe:hover:-translate-y-1 hover:shadow-lg hover:border-accent overflow-hidden`}
-                >
-                  <div className="relative aspect-video w-full overflow-hidden bg-canvas/50">
-                    <Image
-                      src={project.image}
-                      alt={project.name}
-                      fill
-                      className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
-                    />
-                  </div >
-                  <div className="p-5">
-                    <h3 className="text-sm font-semibold tracking-tight text-ink">
-                      {project.name}
-                    </h3>
-                    <p className="mt-2 text-xs text-body leading-relaxed">
-                      {project.description}
-                    </p>
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center text-xs font-medium text-accent underline underline-offset-4 hover:text-accent/80 transition-colors"
-                    >
-                      <span className="sr-only">{project.name}: </span>Visit Project →
-                    </a>
-                  </div >
-                </article>
-              </Reveal>
-            ))}
-          </div >
         </section>
 
         {/* --- CTA Band --- */}

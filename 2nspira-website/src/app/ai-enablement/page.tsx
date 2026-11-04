@@ -134,6 +134,13 @@ export default function Page() {
         <p className="mt-8 border-t border-line pt-5 text-sm font-medium text-muted">Useful workflows. Confident people. Responsible decisions.</p>
       </div>
     </section>
+    <section className={section} aria-labelledby="ai-audience-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <h2 id="ai-audience-heading" className={h2}>For your organization. Or for the way you work.</h2>
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <article className={`p-6 ${cardFlat}`}><h3 className={h3}>Organizational AI enablement</h3><p className="mt-3 leading-7 text-body">For leaders responsible for strategy, team training, governance, and workflow change.</p><Link href="/resources/ai-readiness-scorecard" className={`mt-5 inline-flex min-h-11 items-center ${linkInline}`}>Assess our organization’s AI readiness →</Link></article>
+        <article className={`p-6 ${cardFlat}`}><h3 className={h3}>Personal AI assistant setup</h3><p className="mt-3 leading-7 text-body">For owners and professionals seeking personalized help with their own tasks and tools.</p><a href="#personal-ai-assistant" className={`mt-5 inline-flex min-h-11 items-center ${linkInline}`}>Explore a personalized AI assistant ↓</a></article>
+      </div>
+    </div></section>
     <section className={section} aria-labelledby="ai-pathways-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <p className="text-sm font-semibold uppercase tracking-widest text-accent">Sound familiar?</p>
       <h2 id="ai-pathways-heading" className={`mt-3 ${h2}`}>AI is everywhere. Where does it help you?</h2>

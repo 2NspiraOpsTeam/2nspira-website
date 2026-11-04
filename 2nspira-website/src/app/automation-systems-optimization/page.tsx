@@ -126,6 +126,18 @@ export default function AutomationSystemsOptimizationPage() {
       </div>
     </section>
 
+    <section className={section} aria-labelledby="workflow-example-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <p className="text-sm font-semibold uppercase tracking-widest text-accent">Business process automation in practice</p>
+      <h2 id="workflow-example-heading" className={`mt-3 ${h2}`}>From a request to a coordinated handoff.</h2>
+      <p className="mt-4 max-w-3xl leading-7 text-body">Imagine customer onboarding spread across an inbox, a spreadsheet, and separate follow-up reminders. Workflow automation and systems integration can make ownership and the next step clearer.</p>
+      <ol className="mt-8 grid gap-5 md:grid-cols-3">{[
+        ["Capture once", "A structured request records the information needed to start, with validation and a clear acknowledgement."],
+        ["Assign and follow through", "Route the work to an owner, make approval points visible, and send reminders when a defined action is due."],
+        ["See what needs attention", "Track status in a shared record and surface exceptions for human review rather than hiding them in another inbox."]
+      ].map(([title, text], i) => <li className={`p-6 ${cardFlat}`} key={title}><p className="text-sm font-semibold text-accent">0{i+1}</p><h3 className={`mt-3 ${h3}`}>{title}</h3><p className="mt-3 leading-7 text-body">{text}</p></li>)}</ol>
+      <p className="mt-5 text-sm leading-7 text-muted">Illustrative application, not a completed client engagement. Integrations, permissions, failure handling, and success measures are assessed before implementation.</p>
+      <Link href="/work#concepts-prototypes" className={`mt-5 inline-flex min-h-11 items-center ${linkInline}`}>Explore a connected-operations concept →</Link>
+    </div></section>
     <ServiceQuestions items={[
       { question: "Do we need to replace our existing systems?", answer: "Not necessarily. We start with what works and check integration options before recommending a replacement." },
       { question: "Can we start with one workflow?", answer: "Yes. Bring one repeated task or difficult handoff. We’ll agree a useful scope and check its dependencies." },

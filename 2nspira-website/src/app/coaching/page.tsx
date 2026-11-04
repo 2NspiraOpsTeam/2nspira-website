@@ -146,12 +146,12 @@ export default function EntrepreneurMentoringPage() {
         </div>
         <aside aria-labelledby="mentor-background-heading" className={styles.mentorNote} data-catalog-fade>
           <span className={styles.iconBadge}><Handshake aria-hidden="true" size={28} strokeWidth={1.6} /></span>
-          <h3 id="mentor-background-heading" className={`mt-6 ${h3}`}>Example coach background</h3>
-          <p className="mt-5 leading-8 text-body">One of our coaches brings experience in:</p>
+          <h3 id="mentor-background-heading" className={`mt-6 ${h3}`}>A considered match, not a directory</h3>
+          <p className="mt-5 leading-8 text-body">Before you commit, the introductory conversation helps establish:</p>
           <ul className="mt-4 space-y-3 text-sm leading-7 text-body">
-            {["Building four companies from the ground up.", "Moving from an initial idea to developing a product.", "Leading a growing business."].map(item => <li key={item} className="flex items-start gap-3"><CheckCircle2 aria-hidden="true" size={19} className="mt-1 shrink-0 text-accent" /><span>{item}</span></li>)}
+            {["Your business stage, priorities, and the decisions you need to make.", "The relevant experience and availability of a proposed mentor.", "Mutual fit, scope, and expectations before ongoing sessions."].map(item => <li key={item} className="flex items-start gap-3"><CheckCircle2 aria-hidden="true" size={19} className="mt-1 shrink-0 text-accent" /><span>{item}</span></li>)}
           </ul>
-          <p className="mt-4 text-sm leading-7 text-body">This is one example of the experience available. We match support to your industry and priorities.</p>
+          <p className="mt-4 text-sm leading-7 text-body">Matching depends on fit and availability. Discuss the proposed mentor’s background and approach before agreeing a relationship.</p>
         </aside>
       </div>
     </section>

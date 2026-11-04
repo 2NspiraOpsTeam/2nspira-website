@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FooterInvitation from "./FooterInvitation";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { socialLinks } from "@/lib/socialLinks";
 import { BOOKING_URL } from "@/lib/booking";
@@ -36,7 +37,7 @@ const legal = [
 export default function Footer() {
   return <footer className={styles.footer}>
     <div className={styles.container}>
-      <section className={styles.invitation} aria-labelledby="footer-invitation-heading">
+      <FooterInvitation><section className={styles.invitation} aria-labelledby="footer-invitation-heading">
         <div>
           <p className={styles.eyebrow}>Let’s move forward</p>
           <h2 id="footer-invitation-heading" className={styles.title}>A clearer next step starts with a conversation.</h2>
@@ -48,7 +49,7 @@ export default function Footer() {
           <Link href="/contact#contact-message" className={styles.message}>Prefer to send a message? <span aria-hidden="true">→</span></Link>
           <p className={styles.bookingNote}>Introductory call via Google Meet. Share how we can help when you book. Google Calendar opens in a new tab.</p>
         </div>
-      </section>
+      </section></FooterInvitation>
 
       <div className={styles.columns}>
         <div className={styles.brandColumn}>
