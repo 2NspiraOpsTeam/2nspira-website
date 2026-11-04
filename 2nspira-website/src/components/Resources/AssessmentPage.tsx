@@ -28,7 +28,7 @@ export default function AssessmentPage({ title, intro, audience, highlights, hre
   const icons = [Compass, Lightbulb, Target, Route];
   return (
     <main className={pageMain} id="main-content"><CatalogEffects headings>
-      {breadcrumb && <BreadcrumbList items={breadcrumb} />}      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+      {breadcrumb && <BreadcrumbList items={breadcrumb} />}      <div className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-24">
         <Link href="/resources" className={linkInline}>
           ← All resources
         </Link>
