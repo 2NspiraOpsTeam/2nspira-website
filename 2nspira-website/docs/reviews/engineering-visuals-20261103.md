@@ -1,0 +1,5 @@
+# Engineering section visual refresh
+
+Scope: `/work#internal-engineering` only. Reuse existing locally hosted project artwork and the existing AI workspace illustration, with explicit illustrative alt text; these images are not new client evidence or actual screenshots unless described as such. Original assets remain unchanged. Four 1200px-wide WebP derivatives use quality 84 and preserve the full composition. No new image provider, paid service, animation library or runtime dependency is required: existing CatalogEffects already supplies one-time progressive entrances, pointer hover lift/zoom, keyboard border feedback and reduced-motion cancellation.
+
+Featured internal AI field-notes card and four project cards retain descriptions, destinations and internal/preview status. New image containers reserve space, lazy-load below the fold and use responsive sizes. Links retain 44px targets, external-tab announcements and explicit focus outlines. Motion never gates visibility; reduced motion disables transitions and transforms.

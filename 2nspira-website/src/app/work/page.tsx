@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import styles from "./work.module.css";
 import {
   buttonPrimary,
   card,
@@ -233,9 +234,38 @@ export default function WorkPage() {
         <section id="internal-engineering" className="mb-24 scroll-mt-24" aria-labelledby="engineering-heading">
           <h2 id="engineering-heading" className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">2Nspira engineering</h2>
           <p className="mt-4 max-w-3xl leading-8 text-body">Our own platforms and engineering experiments make our approach inspectable. They are internal work, not independent client endorsements or evidence of client return on investment.</p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <article className={`p-6 ${card}`}><h3 className="text-xl font-semibold text-ink">Multi-agent AI workflow</h3><p className="mt-3 leading-7 text-body">Jeffrey’s field notes examine coordination, local and cloud models, and the importance of human oversight in an internal AI environment.</p><Link href="/post/building-ai-team-multi-agent-workflow-lessons" className="mt-5 inline-flex min-h-11 items-center text-accent underline underline-offset-4">Explore the engineering lessons →</Link></article>
-            {supportingProjects.filter(project => ["2Nspira", "2Nspira Books", "Breadcrumb", "CalmLoop"].includes(project.name)).map(project => <article key={project.name} className={`p-6 ${card}`}><p className="text-sm font-semibold text-accent">Internal platform / engineering project</p><h3 className="mt-3 text-xl font-semibold text-ink">{project.name}</h3><p className="mt-3 leading-7 text-body">{project.description}</p><a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center text-accent underline underline-offset-4">Explore {project.name}<span className="sr-only"> (opens in a new tab)</span> ↗</a></article>)}
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <article data-catalog-card className={`${styles.engineeringCard} ${styles.featured} overflow-hidden rounded-2xl border border-line bg-canvas`}>
+              <div className={styles.featuredImage}>
+                <Image src="/images/advisory/personal-ai-workspace-v1.webp" alt="Illustration of a human-guided AI workspace connecting research, planning and tasks" fill sizes="(min-width: 768px) 55vw, 100vw" className="object-cover" />
+              </div>
+              <div className="flex flex-col justify-center p-6 sm:p-8">
+                <p className="text-sm font-semibold text-accent">Field notes · Internal AI experiment</p>
+                <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Multi-agent AI workflow</h3>
+                <p className="mt-4 leading-7 text-body">Jeffrey’s field notes examine coordination, local and cloud models, and the importance of human oversight in an internal AI environment.</p>
+                <Link href="/post/building-ai-team-multi-agent-workflow-lessons" className={styles.projectLink}>Explore the engineering lessons <span aria-hidden="true">→</span></Link>
+              </div>
+            </article>
+            {supportingProjects.filter(project => ["2Nspira", "2Nspira Books", "Breadcrumb", "CalmLoop"].includes(project.name)).map(project => {
+              const visuals: Record<string, { image: string; alt: string; label: string }> = {
+                "2Nspira Books": { image: "books", alt: "2Nspira Books storefront preview featuring collectible editions", label: "Storefront preview" },
+                "2Nspira": { image: "2nspira", alt: "2Nspira project artwork connecting people, technology and possibility", label: "Our digital platform" },
+                "Breadcrumb": { image: "breadcrumb", alt: "Breadcrumb illustrative project artwork with maps and investigation tools", label: "OSINT challenge game" },
+                "CalmLoop": { image: "calmloop", alt: "CalmLoop illustrative project artwork showing a parent and child learning together", label: "Family-focused companion" },
+              };
+              const visual = visuals[project.name];
+              return <article key={project.name} data-catalog-card className={`${styles.engineeringCard} flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-canvas`}>
+                <div className="relative aspect-video overflow-hidden bg-surface">
+                  <Image src={`/images/work/engineering-${visual.image}-v1.webp`} alt={visual.alt} fill sizes="(min-width: 1152px) 548px, (min-width: 768px) 48vw, calc(100vw - 32px)" className="object-contain" />
+                </div>
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
+                  <p className="text-sm font-semibold text-accent">{visual.label} · Internal project</p>
+                  <h3 className="mt-3 text-xl font-semibold text-ink">{project.name}</h3>
+                  <p className="mt-3 flex-1 leading-7 text-body">{project.description}</p>
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>Explore {project.name}<span className="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+                </div>
+              </article>;
+            })}
           </div>
           <p className="mt-6 text-sm leading-7 text-body">Relevant to <Link href="/ai-enablement" className="text-accent underline">AI enablement</Link>, <Link href="/websites" className="text-accent underline">digital platforms</Link>, and <Link href="/fractional-cio" className="text-accent underline">technology leadership</Link>. Scope and applicability differ by engagement.</p>
         </section>
