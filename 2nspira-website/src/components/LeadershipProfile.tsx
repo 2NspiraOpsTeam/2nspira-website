@@ -15,10 +15,10 @@ export default function LeadershipProfile({ mentoring = false }: { mentoring?: b
     <div className="grid gap-8 rounded-3xl border border-line bg-canvas-deep p-6 sm:p-10 lg:grid-cols-2">
       <div><p className="text-sm font-semibold uppercase tracking-widest text-accent">{mentoring ? "Leadership & mentoring perspective" : "The person behind the direction"}</p>
         <h2 id="executive-profile-heading" className={`mt-4 ${h2}`}>{mentoring ? "Real experience. A practical perspective." : "Experienced leadership for decisions that matter."}</h2>
-        <p className="mt-5 leading-8 text-body">Executive judgment. Hands-on implementation. People-first change.</p>
+        <p className="mt-5 leading-8 text-body">Trust, sound judgment, and operational clarity.</p>
       </div>
       <div><h3 className={h3}>Jeffrey V. Cortez</h3>
-        <p className="mt-4 leading-8 text-body">Jeffrey brings 20+ years of technology leadership across education, financial services, conservation, and enterprise operations. His experience connects strategy, modernization, data, responsible AI, and the people who make change work.</p>
+        <p className="mt-4 leading-8 text-body">Jeffrey brings 20+ years of technology leadership across education, financial services, conservation, and enterprise operations. His hands-on, collaborative approach starts with listening—then connects modernization, responsible AI, cybersecurity, and the people who make change work.</p>
         <ul className="mt-5 space-y-3 text-sm leading-7 text-body">
           <li><strong className="text-ink">Executive leadership:</strong> Former CIO at 2Nspira and VP of Technology at Amur Capital Management; Director of Business Services Technology at Wildlife Conservation Society.</li>
           <li><strong className="text-ink">Education &amp; implementation:</strong> Enterprise systems, data modernization, and AI education at The School at Columbia University.</li>

@@ -40,3 +40,6 @@ Results will be recorded after canonical checks and rendered QA. No search-ranki
 - Mocked unavailable-mail draft/edit flow passed and preserves selected organization type. No actual delivery tested.
 - All six externally linked project destinations returned 200, including the explicitly labeled Books preview.
 - Pre-change live Work mobile Lighthouse lab: Performance 94, Accessibility 100, Best Practices 100, SEO 100; LCP 3.1 s, transfer 459,934 bytes. Lab baseline, not field CWV or search ranking evidence.
+
+- Owner subsequently supplied his LinkedIn profile text. It corroborates the selected executive roles, 20+ years, both degrees and hands-on/listening approach. Biography now emphasizes trust, judgment and operational clarity. Recruiter-only status, private analytics, follower counts, personal contact details, and third-party recommendations are not republished. No direct logged-in LinkedIn verification is claimed.
+- Public homepage HTML has Cloudflare analytics beacon but no GA/GTM script. Intent hooks are not yet routed to a verified GA/GTM reporting destination; completion and qualification tracking remain an integration/business-definition prerequisite. Event hooks are allowlisted to public marketing pages and do not attach on private Admin/portal routes.
