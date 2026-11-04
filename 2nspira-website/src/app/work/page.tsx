@@ -90,7 +90,7 @@ const supportingProjects = [
     name: "Breadcrumb",
     description:
       "A fast OSINT challenge game engineered to run anywhere without a server or database.",
-    url: "https://breadcrumb-challenge.vercel.app",
+    url: "",
     image: "/images/work/project-breadcrumb.png",
   },
 ];
@@ -260,7 +260,7 @@ export default function WorkPage() {
                   <p className="text-sm font-semibold text-accent">{visual.label} · Internal project</p>
                   <h3 className="mt-3 text-xl font-semibold text-ink">{project.name}</h3>
                   <p className="mt-3 flex-1 leading-7 text-body">{project.description}</p>
-                  <a href={project.url} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>Explore {project.name}<span className="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+                  {project.url ? <a href={project.url} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>Explore {project.name}<span className="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a> : <p className="mt-4 text-sm text-muted">Demo currently offline.</p>}
                 </div>
               </article>;
             })}

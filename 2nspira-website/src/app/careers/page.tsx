@@ -1,4 +1,6 @@
 import Openings from "@/components/careers/Openings";
+import { publicJobs } from "@/lib/careers/server";
+export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -65,7 +67,8 @@ const relationships = [
   { title: "Project partners", text: "Individuals or organizations may collaborate where complementary capabilities create stronger client outcomes." },
 ];
 
-export default function CareersPage() {
+export default async function CareersPage() {
+  const initialJobs = await publicJobs().catch(() => null);
   return (
     <main className={`${pageMain} ${styles.careers}`} id="main-content">
       <CatalogEffects headings>
@@ -99,7 +102,7 @@ export default function CareersPage() {
         <div data-catalog-reveal className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Opportunities</p>
           <h2 id="opportunities-heading" tabIndex={-1} className={`mt-4 ${h2}`}>Current Opportunities</h2>
-          <Openings />
+          <Openings initialJobs={initialJobs} />
 
         </div>
       </section>
