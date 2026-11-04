@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { h2, h3, linkInline } from "@/components/ui";
 
 /** Owner-approved public biography, sourced from Jeffrey's supplied resume (2026-11-03). */
 export default function LeadershipProfile({ mentoring = false }: { mentoring?: boolean }) {
   const person = {
     "@context": "https://schema.org", "@type": "Person", "@id": "https://2nspira.com/about#jeffrey-cortez",
+    image: "https://2nspira.com/images/leadership/jeffrey-cortez-linkedin-20261103.jpg",
     name: "Jeffrey V. Cortez", url: "https://2nspira.com/about#executive-profile",
     worksFor: { "@id": "https://2nspira.com/#organization" },
     alumniOf: [{ "@type": "CollegeOrUniversity", name: "Columbia University" }, { "@type": "CollegeOrUniversity", name: "Queens College, City University of New York" }],
@@ -17,7 +19,7 @@ export default function LeadershipProfile({ mentoring = false }: { mentoring?: b
         <h2 id="executive-profile-heading" className={`mt-4 ${h2}`}>{mentoring ? "Real experience. A practical perspective." : "Experienced leadership for decisions that matter."}</h2>
         <p className="mt-5 leading-8 text-body">Trust, sound judgment, and operational clarity.</p>
       </div>
-      <div><h3 className={h3}>Jeffrey V. Cortez</h3>
+      <div><div className="flex flex-wrap items-center gap-5"><Image src="/images/leadership/jeffrey-cortez-linkedin-20261103.jpg" alt="Portrait of Jeffrey V. Cortez" width={128} height={128} sizes="112px" className="h-24 w-24 rounded-2xl border border-line object-cover sm:h-28 sm:w-28" /><div><h3 className={h3}>Jeffrey V. Cortez</h3><p className="mt-2 text-sm font-medium text-muted">Technology executive</p></div></div>
         <p className="mt-4 leading-8 text-body">Jeffrey brings 20+ years of technology leadership across education, financial services, conservation, and enterprise operations. His hands-on, collaborative approach starts with listening—then connects modernization, responsible AI, cybersecurity, and the people who make change work.</p>
         <ul className="mt-5 space-y-3 text-sm leading-7 text-body">
           <li><strong className="text-ink">Executive leadership:</strong> Former CIO at 2Nspira and VP of Technology at Amur Capital Management; Director of Business Services Technology at Wildlife Conservation Society.</li>
