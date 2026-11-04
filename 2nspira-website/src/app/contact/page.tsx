@@ -5,11 +5,12 @@ import EditorialHero from "@/components/EditorialHero";
 
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 
-import { useState, useRef, useCallback, type ReactNode } from "react";
+import { useState, useRef, useCallback, useEffect, type ReactNode } from "react";
 
 type SubmitState =
   | { kind: "idle" }
   | { kind: "sending" }
+  | { kind: "unknown" }
   | { kind: "delivered" }
   | { kind: "draft"; to: string; subject: string; body: string }
   | { kind: "error"; detail: string };
@@ -125,6 +126,32 @@ export default function ContactPage() {
     message: string;
   } | null>(null);
 
+  const [draftLoaded, setDraftLoaded] = useState(false);
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+    try {
+      const raw = sessionStorage.getItem("2nspira-contact-draft");
+      if (raw) {
+        const saved = JSON.parse(raw);
+        if (["name", "email", "organization", "organizationType", "message"].every(key => typeof saved.form?.[key] === "string")) {
+          setFormState(saved.form);
+          if (saved.status === "delivered") { setSubmitted(saved.form); setState({ kind: "delivered" }); }
+          if (saved.status === "sending" || saved.status === "unknown") setState({ kind: "unknown" });
+        }
+      }
+    } catch { /* Storage unavailable: keep the editable in-memory draft. */ }
+    setDraftLoaded(true);
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, []);
+  useEffect(() => {
+    if (!draftLoaded) return;
+    try {
+      if (Object.values(formState).some(Boolean)) sessionStorage.setItem("2nspira-contact-draft", JSON.stringify({ form: formState, status: state.kind }));
+      else sessionStorage.removeItem("2nspira-contact-draft");
+    } catch { /* No submission depends on browser storage. */ }
+  }, [draftLoaded, formState, state.kind]);
+
   const formRef = useRef<HTMLFormElement>(null);
   const submittingRef = useRef(false);
 
@@ -170,7 +197,7 @@ export default function ContactPage() {
         });
         const data = (await res.json()) as {
           ok: boolean;
-          status?: "delivered" | "draft";
+          status?: "delivered" | "draft" | "unknown";
           to?: string;
           subject?: string;
           body?: string;
@@ -179,6 +206,14 @@ export default function ContactPage() {
         if (res.ok && data.status === "delivered") {
           setSubmitted({ ...formState });
           setState({ kind: "delivered" });
+          return;
+        }
+        if (data.status === "unknown") {
+          setState({ kind: "unknown" });
+          return;
+        }
+        if (res.status === 429) {
+          setState({ kind: "error", detail: "Please wait before sending another message, or contact us directly." });
           return;
         }
         if (res.status === 422 || res.status === 400) {
@@ -201,10 +236,7 @@ export default function ContactPage() {
         setState({ kind: "draft", to: CONTACT_EMAIL, subject, body });
         openMailto(subject, body);
       } catch {
-        const { subject, body } = compose(formState);
-        setSubmitted({ ...formState });
-        setState({ kind: "draft", to: CONTACT_EMAIL, subject, body });
-        openMailto(subject, body);
+        setState({ kind: "unknown" });
       } finally {
         submittingRef.current = false;
       }
@@ -301,6 +333,7 @@ export default function ContactPage() {
         />
 
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          {state.kind === "unknown" && <p role="alert" className="mb-6 rounded-xl border border-line bg-surface p-5 text-body">We could not confirm whether your message was sent. Please contact us at <a className="underline" href="mailto:hello@2nspira.com">hello@2nspira.com</a> before resubmitting, to avoid a duplicate.</p>}
           {/* ---- Success / Draft states ---- */}
           {state.kind === "delivered" && submitted ? (
             <div
@@ -311,8 +344,7 @@ export default function ContactPage() {
                 Message sent
               </h2>
               <p className="mt-3 text-sm leading-6 text-green-800">
-                Thanks, {submitted.name}. Your inquiry was delivered to{" "}
-                {CONTACT_EMAIL}. We typically respond within one business day.
+                Thanks, {submitted.name}. Your inquiry has been sent to our team. We typically respond within one business day.
               </p>
               <div className="mt-6 rounded-lg border border-green-200 bg-white p-5 text-sm text-zinc-700">
                 <p>
@@ -487,7 +519,7 @@ export default function ContactPage() {
                   <div className="flex items-center gap-3">
                     <button
                       type="submit"
-                      disabled={state.kind === "sending"}
+                      disabled={state.kind === "sending" || state.kind === "unknown"}
                       className={`${buttonPrimary} disabled:cursor-not-allowed disabled:opacity-60`}
                     >
                       {state.kind === "sending" ? (

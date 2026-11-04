@@ -1,21 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { deliverContact } from "@/lib/contactDelivery";
 
-/**
- * Production inquiry delivery (release candidate, 2026-09-09).
- *
- * Delivery strategy (honest, fail-closed):
- * 1. If CONTACT_API_URL is set (Cloudflare Worker Secret, e.g. Resend/SES
- *    relay endpoint), the inquiry is POSTed there and the client receives a
- *    "delivered" confirmation.
- * 2. Otherwise (or if the relay fails) the route returns status "draft" with
- *    the composed subject/body so the client falls back to mailto:.
- *    The site never claims a message was sent when it was not.
- *
- * No secrets in the repo. Configure via `wrangler secret put CONTACT_API_URL`
- * (+ optional CONTACT_API_KEY). Inbox: hello@2nspira.com (Wix-published,
- * matches legal pages).
- */
-
+/** Owner notifications use the existing Gmail sender; no public recipient control. */
 const CONTACT_EMAIL = "hello@2nspira.com";
 const MAX_BODY = 8000;
 
@@ -28,9 +14,14 @@ function clean(value: unknown, max: number): string {
 }
 
 export async function POST(request: NextRequest) {
+  if (request.headers.get("origin") !== new URL(request.url).origin) return NextResponse.json({ ok: false, error: "Invalid request origin" }, { status: 403 });
+  if (!request.headers.get("content-type")?.startsWith("application/json")) return NextResponse.json({ ok: false, error: "JSON required" }, { status: 415 });
   let payload: Record<string, unknown>;
   try {
-    payload = (await request.json()) as Record<string, unknown>;
+    const raw = await request.text();
+    if (raw.length > 12000) return NextResponse.json({ ok: false, error: "Message too large" }, { status: 413 });
+    payload = JSON.parse(raw) as Record<string, unknown>;
+    if (!payload || typeof payload !== "object" || Array.isArray(payload)) throw new Error("Invalid payload");
   } catch {
     return NextResponse.json({ ok: false, error: "Invalid JSON body" }, { status: 400 });
   }
@@ -66,39 +57,16 @@ export async function POST(request: NextRequest) {
     `— Submitted via 2nspira.com on ${new Date().toISOString()}`,
   ].join("\n");
 
-  const relayUrl = process.env.CONTACT_API_URL as string | undefined;
-  const relayKey = process.env.CONTACT_API_KEY as string | undefined;
-
-  if (relayUrl) {
-    try {
-      const res = await fetch(relayUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...(relayKey ? { Authorization: `Bearer ${relayKey}` } : {}),
-        },
-        body: JSON.stringify({
-          to: CONTACT_EMAIL,
-          from: email,
-          replyTo: email,
-          subject,
-          text: body,
-          source: "2nspira-website",
-        }),
-      });
-      if (!res.ok) throw new Error(`relay responded ${res.status}`);
-      return NextResponse.json({ ok: true, status: "delivered" });
-    } catch {
-      return NextResponse.json({
-        ok: false,
-        status: "draft",
-        error: "Relay unavailable — draft fallback provided",
-        to: CONTACT_EMAIL,
-        subject,
-        body,
-      });
-    }
+  try {
+    const status = await deliverContact({ email, subject, body,
+      fingerprint: JSON.stringify([name, email.toLowerCase(), organization, organizationType, message]),
+      ip: request.headers.get("cf-connecting-ip") || "local",
+    });
+    if (status === "delivered") return NextResponse.json({ ok: true, status });
+    if (status === "unknown") return NextResponse.json({ ok: false, status }, { status: 202 });
+    if (status === "limited") return NextResponse.json({ ok: false, error: "Too many messages. Please try later." }, { status: 429 });
+  } catch {
+    return NextResponse.json({ ok: false, status: "unknown" }, { status: 503 });
   }
-
-  return NextResponse.json({ ok: true, status: "draft", to: CONTACT_EMAIL, subject, body });
+  return NextResponse.json({ ok: false, status: "draft", to: CONTACT_EMAIL, subject, body });
 }
