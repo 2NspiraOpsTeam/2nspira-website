@@ -1,3 +1,4 @@
+import LeadershipProfile from "@/components/LeadershipProfile";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -134,6 +135,8 @@ export default function EntrepreneurMentoringPage() {
         </div>
       </div>
     </section>
+
+    <LeadershipProfile mentoring />
 
     <section aria-labelledby="mentor-heading" className={`${styles.sectionSpacing} ${styles.mentorBand}`}>
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
