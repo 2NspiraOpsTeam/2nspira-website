@@ -30,7 +30,7 @@ function ActivationForm() {
     } finally { setBusy(false); }
   }
 
-  return <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center p-6">
+  return <main id="main-content" tabIndex={-1} className="mx-auto flex min-h-screen max-w-md flex-col justify-center p-6">
     <h1 className="mb-3 text-2xl font-semibold">Activate your 2Nspira account</h1>
     {done ? <p>Your account is ready. <Link className="underline" href="/portal/login">Sign in</Link></p> :
       token ? <form onSubmit={activate} className="space-y-4">
@@ -44,5 +44,5 @@ function ActivationForm() {
 }
 
 export default function ActivatePage() {
-  return <Suspense fallback={<main className="p-6">Loading activation…</main>}><ActivationForm /></Suspense>;
+  return <Suspense fallback={<main id="main-content" tabIndex={-1} className="p-6">Loading activation…</main>}><ActivationForm /></Suspense>;
 }
