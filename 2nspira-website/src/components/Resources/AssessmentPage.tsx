@@ -1,3 +1,4 @@
+import EditorialHero from "@/components/EditorialHero";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import { Compass, Lightbulb, Target, Route } from "lucide-react";
 import Reveal from "../Reveal";
@@ -27,15 +28,16 @@ export default function AssessmentPage({ title, intro, audience, highlights, hre
   const icons = [Compass, Lightbulb, Target, Route];
   return (
     <main className={pageMain} id="main-content"><CatalogEffects headings>
-      {breadcrumb && <BreadcrumbList items={breadcrumb} />}      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
+      {breadcrumb && <BreadcrumbList items={breadcrumb} />}      <div className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-24">
         <Link href="/resources" className={linkInline}>
           ← All resources
         </Link>
-        <h1 className="mt-8  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
+        <EditorialHero image={title.includes("Strength") ? "/images/pages/resources-strengths.svg" : "/images/pages/resources-ai-readiness.svg"} alt={title.includes("Strength") ? "Framework connecting natural strengths, work style, and role fit." : "AI readiness framework connecting strategy, governance, workflows, and trust."} contain>        <h1 className="mt-8  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
           {title}
         </h1>
         <p className={lead}>{intro}</p>
 
+</EditorialHero>
         <section className="mt-12" aria-labelledby="explore-heading">
           <Reveal><h2 id="explore-heading" className={h2}>What you can explore</h2></Reveal>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2">

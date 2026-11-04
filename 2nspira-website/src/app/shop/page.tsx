@@ -1,3 +1,4 @@
+import EditorialHero from "@/components/EditorialHero";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import CatalogBreadcrumbs from "@/components/catalog/CatalogBreadcrumbs";
 import CatalogSchema from "@/components/catalog/CatalogSchema";
@@ -11,7 +12,7 @@ import { CollectionNav, EtsyShopLink, ProductGrid } from "@/components/shop/Shop
 import ColoringBookCard from "@/components/shop/ColoringBookCard";
 import { coloringBooks } from "@/content/shop/coloring-books";
 import { activityBooks, artPrints, leadershipBooks, printables } from "@/content/shop/products";
-import { buttonPrimary, h1, h2, lead, linkInline, pageHero, pageMain } from "@/components/ui";
+import { buttonPrimary, h1, h2, lead, linkInline, pageMain } from "@/components/ui";
 
 const description = catalogPages.shop.description;
 export const metadata: Metadata = {
@@ -28,13 +29,13 @@ export default function ShopPage() {
       <CatalogEffects headings>
       <CatalogBreadcrumbs page="shop" />
       <CatalogSchema page="shop" />
-      <header className={`${pageHero} relative overflow-hidden text-center`}>
+      <header className="relative overflow-hidden border-b border-line bg-surface mb-10">
         <AmbientField />
-        <div className="relative" data-catalog-reveal>
+        <EditorialHero image="/images/shop/reduce-the-noise.jpg" alt="Reduce the Noise. Strengthen the Signal. art print." contain>
           <EyebrowPill>The 2Nspira creative shop</EyebrowPill>
           <h1 className={h1}>A little clarity.<br />A little creativity.</h1>
           <p className={lead}>Books to inspire. Games to gather around. Pages to color. Art to make space for what matters.</p>
-        </div>
+        </EditorialHero>
       </header>
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
         <aside data-catalog-fade className="mb-10 grid items-center gap-7 rounded-2xl border border-line bg-accent-soft p-6 sm:p-8 lg:grid-cols-2 lg:gap-10" aria-labelledby="shop-bookstore-title">

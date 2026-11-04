@@ -1,3 +1,4 @@
+import EditorialHero from "@/components/EditorialHero";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import PageIdentity from "@/components/PageIdentity";
 import { publicPageMetadata } from "@/lib/pageMetadata";
@@ -40,20 +41,12 @@ export default function ResourcesPage() {
     <main id="main-content" className={styles.page}><CatalogEffects headings>
       <PageIdentity type="CollectionPage" name="Assessments and Practical Tools" path="/resources" items={[{ name: "Professional Strengths Assessment", path: "/resources/strength-profile" }, { name: "AI Readiness Assessment for Organizations", path: "/resources/ai-readiness-scorecard" }]} />
       <section className={styles.hero} aria-labelledby="resources-title">
-        <div className={`${styles.container} ${styles.heroInner}`}>
-          <div>
+        <EditorialHero image="/images/pages/resources-decision-support.webp" alt="Illustrative workspace for reflection, assessment, and planning.">
             <p className={styles.eyebrow}><span aria-hidden="true" />Resources</p>
             <h1 id="resources-title">Practical tools.<br /><em>Clearer next steps.</em></h1>
             <p className={styles.intro}>Assess where you are, understand what matters,<br className={styles.desktopBreak} /> and move forward with greater clarity.</p>
             <p className={styles.heroNote}>Two free assessments. A more informed starting point.</p>
-          </div>
-          <div className={styles.heroArt} aria-hidden="true">
-            <div className={styles.orbit} />
-            <div className={`${styles.miniCard} ${styles.backCard}`}><span>02 / ORGANIZATIONS</span><p>Readiness<br />before scale.</p><div className={styles.nodePath}><i /><i /><i /></div></div>
-            <div className={`${styles.miniCard} ${styles.frontCard}`}><span>01 / PROFESSIONALS</span><div className={styles.compass}>✦</div><p>Clarity starts<br />with you.</p><div className={styles.cardRule} /></div>
-            <span className={styles.artCaption}>REFLECT · UNDERSTAND · MOVE FORWARD</span>
-          </div>
-        </div>
+          </EditorialHero>
       </section>
 
       <div className={styles.container}>

@@ -1,4 +1,4 @@
-import LeadershipProfile from "@/components/LeadershipProfile";
+import styles from "./FractionalCio.module.css";
 import polish from "@/components/ServicePolish.module.css";
 import ServiceEffects from "@/components/ServiceEffects";
 import { publicPageMetadata } from "@/lib/pageMetadata";
@@ -8,7 +8,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import ServiceConversation from "@/components/ServiceConversation";
 import ServiceQuestions from "@/components/ServiceQuestions";
-import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
+import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
   card,
   cardFlat,
@@ -66,166 +66,64 @@ const fractionalCioJsonLd = {
 
 export default function FractionalCioPage() {
   return (
-    <main className={`${pageMain} ${polish.page}`} id="main-content"><ServiceEffects>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(fractionalCioJsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
-
+    <main className={`${pageMain} ${polish.page} ${styles.page}`} id="main-content"><ServiceEffects>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fractionalCioJsonLd).replace(/</g, "\\u003c") }} />
       <section data-service-hero className="relative overflow-hidden border-b border-line bg-surface">
         <AmbientField />
-        <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
-          <p><EyebrowPill>Fractional CIO & Technology Leadership</EyebrowPill></p>
-          <h1 className="animate-rise mt-6  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
-            Technology leadership without the full-time executive overhead
-          </h1>
-          <p className={`animate-rise ${lead}`} style={{ animationDelay: "80ms" }}>
-            When you need senior technology judgment but not a full-time CIO, we help set priorities, build a practical roadmap, hold vendors accountable, and guide technology decisions around your business goals.
-          </p>
-          <p className="animate-rise mt-5 max-w-3xl text-base leading-7 text-body" style={{ animationDelay: "120ms" }}>
-            This is not outsourced IT support or generic technical consulting. It is executive judgment for organizations that need clarity, direction, and accountable execution without hiring a full-time CIO.
-          </p>
-          <div className="animate-rise mt-8" style={{ animationDelay: "160ms" }}>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-14">
+          <div>
+            <p><EyebrowPill>Fractional CIO &amp; Technology Leadership</EyebrowPill></p>
+            <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Technology leadership without the full-time executive overhead</h1>
+            <p className={`mt-6 ${lead}`}>Clear priorities. Smarter investment. Accountable execution. Senior technology judgment, shaped around your business.</p>
             <ServiceConversation label="Discuss your technology decisions" />
           </div>
-        </div>
-      </section>
-
-      <LeadershipProfile />
-      <section className={section} aria-labelledby="fit-heading">
-        <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 lg:grid-cols-2">
-          <Reveal>
-            <article className={`h-full p-7 sm:p-8 ${card}`}>
-              <AccentRule className="mb-6" />
-              <h2 id="fit-heading" className={h2}>When Fractional CIO leadership makes sense</h2>
-              <p className="mt-5 leading-8 text-body">
-                The organization has reached a point where technology decisions carry executive consequences, but the need or budget does not justify a full-time CIO. Growth, modernization, technical debt, vendor complexity, unclear ownership, or a stalled initiative often make the leadership gap visible.
-              </p>
-            </article>
-          </Reveal>
-          <Reveal delay={80}>
-            <article className={`h-full p-7 sm:p-8 ${card}`}>
-              <AccentRule className="mb-6" />
-              <h2 className={h2}>Leadership that connects the organization</h2>
-              <p className="mt-5 leading-8 text-body">
-                Effective technology direction connects business ambition, financial discipline, operational reality, IT capability, and vendor delivery. We create a common decision frame so those groups can move together instead of optimizing in isolation.
-              </p>
-            </article>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className={section} aria-labelledby="leadership-heading">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
-            <p className={eyebrow}>Executive technology leadership</p>
-            <h2 id="leadership-heading" className={`mt-4 ${h2}`}>What a Fractional CIO actually does</h2>
-            <p className={`mt-4 ${lead}`}>A Fractional CIO turns business priorities into technology decisions the organization can fund, own, and execute.</p>
-            <p className="mt-5 leading-8 text-body">
-              We assess the environment, frame tradeoffs, establish a practical roadmap, guide vendors and initiatives, and strengthen leadership accountability. The work sits above day-to-day support while remaining close enough to execution to keep strategy grounded.
-            </p>
-            <div className={`mt-8 p-6 sm:p-7 ${cardFlat}`}>
-              <AccentRule className="mb-5" />
-              <h3 className={h3}>Independent judgment</h3>
-              <p className="mt-3 leading-7 text-body">
-                2Nspira is not tied to selling a particular platform, license, or implementation. Recommendations are shaped by organizational needs, existing investments, risk, and the simplest responsible path forward.
-              </p>
-            </div>
-          </div>
-          <Reveal>
-            <figure className="group relative overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
-              <Image src="/images/advisory/advisory-ideas-to-impact.webp" alt="Conceptual visualization of an executive advisory and mentoring conversation at a strategy wall." width={1672} height={941} className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.015]" />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-ink/10 via-transparent to-accent/10 opacity-60" aria-hidden="true" />
+          <Reveal variant="scale">
+            <figure className={`${styles.heroImage} relative overflow-hidden rounded-[2rem] border border-line`}>
+              <Image src="/images/advisory/collaborative-strategy.webp" alt="Illustrative executive strategy conversation around a shared table." width={1672} height={941} sizes="(min-width: 1024px) 560px, calc(100vw - 32px)" priority className="aspect-[4/3] w-full object-cover" />
+              <figcaption className={styles.imageCaption}>Business goals. Technology direction. One shared agenda.</figcaption>
             </figure>
           </Reveal>
         </div>
       </section>
-
+      <nav aria-label="Explore Fractional CIO services" className={styles.sectionNav}>
+        <div className="mx-auto flex max-w-6xl flex-wrap gap-x-6 gap-y-1 px-4 py-4 sm:px-6">
+          {[["#fit-heading", "Is this for you?"], ["#approach-heading", "How we work"], ["#deliverables-heading", "What you take away"], ["#executive-profile", "Your technology partner"]].map(([href, label]) => <a key={href} href={href} className={`inline-flex min-h-11 items-center text-sm ${linkInline}`}>{label} <span aria-hidden="true" className="ml-2">↗</span></a>)}
+        </div>
+      </nav>
+      <section className={section} aria-labelledby="fit-heading">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
+          <Reveal><figure className={styles.editorialImage}><Image src="/images/pages/fractional-cio-focus.webp" alt="Illustrative business leader reviewing technology information at a workstation." width={600} height={674} sizes="(min-width: 1024px) 520px, calc(100vw - 32px)" className="aspect-[4/3] w-full object-cover object-[center_35%]" /></figure></Reveal>
+          <div><p className={eyebrow}>When the decisions get bigger</p><h2 id="fit-heading" className={`mt-4 ${h2}`}>Growing complexity. A leadership gap.</h2>
+            <p className={`mt-4 ${lead}`}>You don’t need another tool. You need a clear way forward.</p>
+            <ul className="mt-6 space-y-4">{["Technology spending is growing, but priorities are unclear.", "Vendors, systems, and teams are pulling in different directions.", "Modernization has stalled—or risk is getting harder to ignore."].map(text => <li key={text} className={styles.signal}><span aria-hidden="true">↗</span><p>{text}</p></li>)}</ul>
+            <p className="mt-6 text-sm leading-7 text-muted">Executive direction and accountability—not outsourced help-desk support. Your team and vendors remain part of the picture.</p>
+          </div>
+        </div>
+      </section>
       <section className={sectionBand} aria-labelledby="approach-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <p className={eyebrow}>Clarity → Direction → Execution</p>
-            <h2 id="approach-heading" className={`mt-4 ${h2}`}>A disciplined path from complexity to progress</h2>
+          <p className={eyebrow}>Clarity → Direction → Execution</p><h2 id="approach-heading" className={`mt-4 max-w-3xl ${h2}`}>From competing priorities to coordinated progress</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">{approach.map((step, index) => <Reveal key={step.title} delay={index * 80} className="h-full"><article data-process-step className={`h-full p-7 ${card} ${styles.step}`}><span className={styles.stepNumber}>{String(index + 1).padStart(2, "0")}</span><h3 className={`mt-5 ${h3}`}>{step.title}</h3><p className="mt-3 text-sm leading-7 text-body">{step.text}</p></article></Reveal>)}</div>
+        </div>
+      </section>
+      <section className={section} aria-labelledby="deliverables-heading">
+        <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 sm:px-6 lg:grid-cols-2">
+          <div><p className={eyebrow}>Practical direction, not shelfware</p><h2 id="deliverables-heading" className={`mt-4 ${h2}`}>Know what to do next—and why.</h2><p className={`mt-4 ${lead}`}>A shared roadmap connects your goals, investment, people, and delivery.</p>
+            <Reveal><figure className={`mt-8 ${styles.editorialImage}`}><Image src="/images/advisory/advisory-ideas-to-impact.webp" alt="Conceptual illustration of an advisory conversation at a strategy wall." width={1672} height={941} sizes="(min-width: 1024px) 520px, calc(100vw - 32px)" className="aspect-[4/3] w-full object-cover" /></figure></Reveal>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {approach.map((step, index) => (
-              <Reveal key={step.title} delay={index * 80} className="h-full">
-                <article data-process-step className={`h-full p-7 ${card}`}>
-                  <p className="text-sm font-semibold tracking-widest text-accent">{String(index + 1).padStart(2, "0")}</p>
-                  <h3 className={`mt-4 ${h3}`}>{step.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-body">{step.text}</p>
-                </article>
-              </Reveal>
-            ))}
+          <div><div className="grid gap-4">{outcomes.map((outcome, index) => <Reveal key={outcome.title} delay={index * 60}><article className={`p-6 ${cardFlat}`}><h3 className={h3}>{outcome.title}</h3><p className="mt-2 text-sm leading-7 text-body">{outcome.text}</p></article></Reveal>)}</div>
+            <details className={styles.disclosure}><summary>Explore example working documents</summary><p className="mt-4 text-sm leading-7 text-muted">Depending on agreed scope; examples, not published client artifacts.</p><ul className="mt-4 space-y-4">{[["Technology roadmap", "Priorities, dependencies, owners, and delivery sequence."], ["Vendor assessment", "Service fit, responsibilities, and renewal questions."], ["Investment priorities", "Options weighed against value, cost, capacity, and risk."], ["Governance structure", "Decision rights, checkpoints, and escalation routes."]].map(([title, text]) => <li key={title}><h4 className="font-semibold text-ink">{title}</h4><p className="mt-1 text-sm leading-6 text-body">{text}</p></li>)}</ul></details>
           </div>
         </div>
       </section>
-
-      <section className={section} aria-labelledby="deliverables-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 id="deliverables-heading" className={h2}>Clear decisions. Tangible working documents.</h2>
-        <p className="mt-4 max-w-3xl leading-7 text-body">Depending on the agreed scope, a fractional or virtual CIO engagement can include these deliverables. These are examples of what we can prepare, not published client artifacts.</p>
-        <ul className="mt-8 grid gap-5 sm:grid-cols-2">{[
-          ["Technology roadmap", "Priorities, dependencies, accountable owners, and a practical delivery sequence."],
-          ["Vendor assessment", "Service fit, responsibilities, contract considerations, and questions for renewal."],
-          ["Investment priorities", "Options compared against business value, cost, capacity, and risk."],
-          ["Governance structure", "Decision rights, review checkpoints, escalation routes, and measures of progress."]
-        ].map(([title, text]) => <li key={title} className={`p-6 ${cardFlat}`}><h3 className={h3}>{title}</h3><p className="mt-3 leading-7 text-body">{text}</p></li>)}</ul>
-        <Link href="/work#internal-engineering" className={`mt-6 inline-flex min-h-11 items-center ${linkInline}`}>Explore our internal engineering practice →</Link>
+      <section className={sectionBand} aria-labelledby="lenses-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6"><p className={eyebrow}>The connected view</p><h2 id="lenses-heading" className={`mt-4 ${h2}`}>See the whole business. Not just the technology.</h2><p className="mt-4 max-w-2xl leading-7 text-body">Eight executive lenses help reveal dependencies, clarify ownership, and put business impact first.</p>
+        <details className={styles.disclosure}><summary>Explore the eight executive lenses</summary><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{executiveLenses.map((lens, index) => <article key={lens.title} className={`p-5 ${cardFlat}`}><span className="text-sm font-semibold text-accent">{String(index + 1).padStart(2, "0")}</span><h3 className={`mt-3 ${h3}`}>{lens.title}</h3><p className="mt-2 text-sm leading-6 text-body">{lens.text}</p></article>)}</div></details>
       </div></section>
-      <section className={section} aria-labelledby="outcomes-heading">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <p className={eyebrow}>Tangible outcomes</p>
-            <h2 id="outcomes-heading" className={`mt-4 ${h2}`}>Leadership that improves decisions and execution</h2>
-            <p className={`mt-4 ${lead}`}>The objective is not a strategy document. It is an organization better equipped to make, fund, and carry out technology decisions.</p>
-          </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
-            {outcomes.map((outcome, index) => (
-              <Reveal key={outcome.title} delay={index * 70}>
-                <article className={`h-full p-7 ${cardFlat}`}>
-                  <h3 className={h3}>{outcome.title}</h3>
-                  <p className="mt-3 leading-7 text-body">{outcome.text}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={sectionBand} aria-labelledby="lenses-heading">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <p className={eyebrow}>Eight executive lenses</p>
-            <h2 id="lenses-heading" className={`mt-4 ${h2}`}>See the whole environment before setting the agenda</h2>
-            <p className={`mt-4 ${lead}`}>Technology leadership requires a connected view. We examine eight dimensions together so decisions account for dependencies, constraints, ownership, and business impact.</p>
-          </div>
-          <details className="mt-8 rounded-2xl border border-line bg-surface p-5 sm:p-7"><summary className="cursor-pointer rounded font-semibold text-ink focus-visible:outline-2 focus-visible:outline-accent">Explore the eight executive lenses</summary>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {executiveLenses.map((lens, index) => (
-              <Reveal key={lens.title} delay={index * 60} className="h-full">
-                <article className={`group h-full p-6 motion-safe:hover:-translate-y-1 ${card}`}>
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-soft text-xs font-semibold text-accent">{String(index + 1).padStart(2, "0")}</span>
-                  <h3 className={`mt-5 ${h3}`}>{lens.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-body">{lens.text}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-          </details>
-        </div>
-      </section>
-
-      <section className={section} aria-labelledby="mentoring-intro-heading" id="entrepreneur-mentoring">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <span id="founder-coaching-heading" className="block scroll-mt-24" aria-hidden="true" />
-          <h2 id="mentoring-intro-heading" className={`scroll-mt-24 ${h2}`}>Looking for personal guidance as an entrepreneur?</h2>
-          <p className="mt-5 leading-8 text-body">Entrepreneur Mentoring &amp; Coaching combines practical business guidance with mindset and leadership coaching as you build and lead your business. You retain ownership of your decisions and execution.</p>
-          <Link href="/coaching" className={`mt-6 min-h-[44px] ${linkInline}`}>Explore Entrepreneur Mentoring &amp; Coaching <span aria-hidden="true">&nbsp;→</span></Link>
-        </div>
-      </section>
-
+      <section id="executive-profile" className={section} aria-labelledby="executive-profile-heading"><div className="mx-auto grid max-w-6xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[0.65fr_1.35fr]">
+        <Reveal><Image src="/images/leadership/jeffrey-cortez-linkedin-20261103.jpg" alt="Jeffrey V. Cortez" width={400} height={400} sizes="(min-width: 1024px) 320px, 240px" className="mx-auto aspect-square w-60 rounded-[2rem] object-cover lg:w-80" /></Reveal>
+        <div><p className={eyebrow}>Your technology partner</p><h2 id="executive-profile-heading" className={`mt-4 ${h2}`}>Experienced judgment. Independent perspective.</h2><p className="mt-5 leading-7 text-body">Jeffrey V. Cortez brings 20+ years of technology leadership across education, financial services, conservation, and enterprise operations. His collaborative approach connects executive direction with practical implementation.</p><p className="mt-4 leading-7 text-body">Our recommendations follow your needs—not a platform or license we need to sell.</p><div className="mt-5 flex flex-wrap gap-x-6 gap-y-2"><Link href="/about#executive-profile" className={`inline-flex min-h-11 items-center ${linkInline}`}>Meet Jeffrey →</Link><Link href="/work#internal-engineering" className={`inline-flex min-h-11 items-center ${linkInline}`}>Explore our engineering practice →</Link></div></div>
+      </div></section>
+      <section id="entrepreneur-mentoring" className="mx-auto max-w-6xl px-4 pb-12 sm:px-6" aria-labelledby="mentoring-intro-heading"><span id="founder-coaching-heading" /><div className={`p-6 ${cardFlat}`}><h2 id="mentoring-intro-heading" className={h3}>Building your business as an entrepreneur?</h2><p className="mt-3 leading-7 text-body">For personal business and leadership guidance, explore our complementary mentoring service.</p><Link href="/coaching" className={`mt-3 inline-flex min-h-11 items-center ${linkInline}`}>Explore Entrepreneur Mentoring &amp; Coaching →</Link></div></section>
       <ServiceQuestions items={[
         { question: "Is this the same as outsourced IT support?", answer: "No. Fractional CIO work provides executive direction, decision support, and accountability. Day-to-day technical support and hands-on implementation are different responsibilities and are not automatically included." },
         { question: "What does a starting engagement look like?", answer: "We begin with your priorities, current environment, and decisions that need attention. We agree the leadership scope, authority, responsibilities, and way of working before the engagement begins." },

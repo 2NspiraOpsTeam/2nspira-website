@@ -1,3 +1,4 @@
+import EditorialHero from "@/components/EditorialHero";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import CatalogBreadcrumbs from "@/components/catalog/CatalogBreadcrumbs";
 import CatalogSchema from "@/components/catalog/CatalogSchema";
@@ -8,7 +9,7 @@ import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { CollectionNav } from "@/components/shop/ShopCollection";
 import ColoringBookCard from "@/components/shop/ColoringBookCard";
 import { coloringBooks } from "@/content/shop/coloring-books";
-import { h1, lead, pageHero, pageMain } from "@/components/ui";
+import { h1, lead, pageMain } from "@/components/ui";
 
 const description = catalogPages.coloring.description;
 const image = "https://2nspira.com/images/books/little-haunts-happy-plants.jpg";
@@ -31,13 +32,13 @@ export default function ColoringBooksPage() {
       <CatalogEffects headings>
       <CatalogBreadcrumbs page="coloring" />
       <CatalogSchema page="coloring" />
-      <header className={`${pageHero} relative overflow-hidden text-center`}>
+      <header className="relative overflow-hidden border-b border-line bg-surface mb-10">
         <AmbientField />
-        <div className="relative" data-catalog-reveal>
+        <EditorialHero image="/images/books/little-haunts-happy-plants.jpg" alt="Little Haunts and Happy Plants coloring book cover." contain>
           <EyebrowPill>The 2Nspira shop</EyebrowPill>
           <h1 className={h1}>Coloring Books</h1>
           <p className={lead}>Friendly little worlds, a few favorite colors, and room for your imagination.</p>
-        </div>
+        </EditorialHero>
       </header>
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
         <CollectionNav current="coloring" />
