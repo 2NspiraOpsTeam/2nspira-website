@@ -8,6 +8,8 @@ const services = new Set(["/services", "/websites", "/automation-systems-optimiz
 export default function MarketingEvents() {
   const pathname = usePathname();
   useEffect(() => {
+    const publicPage = services.has(pathname) || ["/", "/work", "/about", "/resources", "/contact"].includes(pathname) || pathname.startsWith("/post/") || pathname.startsWith("/resources/");
+    if (!publicPage) return;
     const emit = (event: string, destination?: string) => {
       const target = window as MarketingWindow;
       (target.dataLayer ??= []).push({ event, page_path: pathname, ...(destination ? { destination } : {}) });
@@ -19,7 +21,7 @@ export default function MarketingEvents() {
       const url = new URL(anchor.href, location.href);
       if (url.hostname === "calendar.google.com" || url.hostname === "calendar.app.google") emit("booking_click", "booking");
       else if (url.pathname.includes("ai-readiness") || url.hostname === "scorecard.2nspira.com") emit("assessment_click", "ai_readiness");
-      else if (url.hostname === "strength.2nspira.com") emit("assessment_click", "professional_strengths");
+      else if (url.hostname === "strength.2nspira.com" || url.pathname.includes("professional-strengths")) emit("assessment_click", "professional_strengths");
       else if (pathname === "/work" && url.origin !== location.origin && ["http:", "https:"].includes(url.protocol)) emit("project_outbound_click", url.hostname);
     };
     document.addEventListener("click", click);
