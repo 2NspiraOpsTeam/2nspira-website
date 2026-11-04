@@ -1,3 +1,4 @@
+import ManufacturingDemo from "@/components/ManufacturingDemo";
 import EditorialHero from "@/components/EditorialHero";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import ClientServiceGrid from "@/components/ClientServiceGrid";
@@ -215,7 +216,8 @@ export default function ServicesPage() {
           <ServiceConversation centered />
         </div>
       </section>
-      </ServiceEffects>
+      <ManufacturingDemo />
+    </ServiceEffects>
     </main>
   );
 }

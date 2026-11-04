@@ -1,3 +1,4 @@
+import ManufacturingDemo from "@/components/ManufacturingDemo";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -150,5 +151,6 @@ export default function AutomationSystemsOptimizationPage() {
         <ServiceConversation label="Talk through your challenge" centered dark />
       </div>
     </section>
-  </ServiceEffects></main>;
+  <ManufacturingDemo />
+    </ServiceEffects></main>;
 }
