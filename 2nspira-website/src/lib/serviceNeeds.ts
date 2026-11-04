@@ -17,12 +17,12 @@ export const serviceNeeds = [
     link: "Explore systems optimization",
   },
   {
-    name: "AI Enablement",
-    need: "Where should we start with AI?",
-    help: "Identify useful opportunities, set practical guardrails, and help your people use AI responsibly.",
-    example: "Readiness review, prioritized use cases, and role-aware training.",
+    name: "Organizational AI Enablement",
+    need: "How do we become an AI-enabled organization?",
+    help: "Build the strategy, skills, workflows, and governance your organization needs to thrive with AI.",
+    example: "Organizational readiness, a phased transformation roadmap, and responsible AI-enabled workflows.",
     href: "/ai-enablement",
-    link: "Explore AI enablement",
+    link: "Explore organizational AI enablement",
   },
   {
     name: "Fractional CIO & Technology Leadership",
