@@ -2,11 +2,13 @@ import Openings from "@/components/careers/Openings";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./careers.module.css";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import {
   body,
   buttonPrimary,
+  buttonSecondary,
   cardFlat,
   h2,
   h3,
@@ -65,82 +67,40 @@ const relationships = [
 
 export default function CareersPage() {
   return (
-    <main className={pageMain} id="main-content">
+    <main className={`${pageMain} ${styles.careers}`} id="main-content">
       <CatalogEffects headings>
-      <header className="relative overflow-hidden border-b border-line bg-surface py-24 sm:py-28">
+      <header className="relative overflow-hidden border-b border-line bg-surface py-16 sm:py-24">
         <AmbientField />
-        <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <p><EyebrowPill>Careers at 2Nspira</EyebrowPill></p>
-          <h1 className="mt-5  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
-            Build what&apos;s next with us.
-          </h1>
-          <p className={`mx-auto max-w-2xl ${lead}`}>
-            We build relationships with technologists, strategists, designers, coaches, and industry leaders who help organizations and the people leading them become stronger and more capable.
-          </p>
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-body">
-            Our flexible model combines core leadership with specialized professionals and project partners as each client engagement requires.
-          </p>
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14">
+          <div data-catalog-reveal>
+            <p><EyebrowPill>Careers at 2Nspira</EyebrowPill></p>
+            <h1 className="mt-5 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">
+              Build what&apos;s next with us.
+            </h1>
+            <p className={`max-w-xl ${lead}`}>Bring your expertise. Help businesses and the people leading them work better.</p>
+            <nav aria-label="Career paths" className="mt-8 flex flex-wrap items-center gap-3">
+              <a href="#opportunities-heading" className={`min-h-11 ${buttonPrimary}`}>Explore open roles <span aria-hidden="true" className="ml-2">↗</span></a>
+              <a href="#network-heading" className={`min-h-11 border border-line ${buttonSecondary}`}>Join our talent network <span aria-hidden="true">→</span></a>
+            </nav>
+            <p className="mt-5 text-sm leading-6 text-muted">Employment · Consulting · Project collaboration</p>
+          </div>
+          <div data-catalog-reveal className={styles.visual}>
+            <figure className="group overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
+              <Image src="/images/pages/careers-collaboration.png"
+                alt="Illustrative scene of professionals collaborating around laptops in a technology workspace."
+                width={1536} height={1024} sizes="(max-width: 1023px) 100vw, 560px" priority
+                className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.025] motion-reduce:transform-none" />
+            </figure>
+          </div>
         </div>
       </header>
-
-      <div data-catalog-reveal className="mx-auto max-w-5xl px-4 pt-10 sm:px-6">
-        <figure className="group overflow-hidden rounded-[2rem] border border-line shadow-[0_20px_60px_rgba(35,41,54,0.10)]">
-          <Image
-            src="/images/pages/careers-collaboration.png"
-            alt="Illustrative scene of professionals collaborating around laptops in a technology workspace."
-            width={1536}
-            height={1024}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1024px"
-            priority
-            className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.015] motion-reduce:transform-none"
-          />
-        </figure>
-      </div>
-
-      <section className={section} aria-labelledby="talent-model-heading">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
-          <div data-catalog-reveal>
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-accent">Our talent model</p>
-              <h2 id="talent-model-heading" className={`mt-4 ${h2}`}>Expertise that scales with the work</h2>
-              <p className={`mt-5 ${body}`}>
-                We shape each engagement around the expertise it actually needs. Core leadership provides continuity; independent specialists and partners can be brought together for the work at hand.
-              </p>
-              <p className={`mt-4 ${body}`}>
-                Our Entrepreneur Mentoring &amp; Coaching service matches clients with coaches aligned with their industry. We welcome introductions from experienced industry leaders interested in supporting entrepreneurs with practical business guidance, mindset, and leadership coaching.
-              </p>
-              <Link href="/coaching" className="mt-4 inline-flex min-h-11 items-center rounded font-medium text-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Explore our mentoring approach →</Link>
-              <p className="mt-4 font-medium leading-8 text-ink">
-                The right expertise for each engagement, with a delivery model designed to remain focused, adaptable, and responsive to client needs.
-              </p>
-            </div>
-          </div>
-          <div data-catalog-reveal>
-            <div data-catalog-card className={`p-6 sm:p-8 ${cardFlat}`}>
-              <AccentRule className="mb-5" />
-              <h3 className={h3}>Areas of expertise</h3>
-              <p className="mt-2 text-sm leading-6 text-muted">Capabilities we may seek as client needs evolve:</p>
-              <ul className="mt-6 grid gap-x-5 gap-y-3 sm:grid-cols-2">
-                {expertise.map((item) => (
-                  <li key={item} className="flex gap-3 text-sm leading-6 text-body">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className={sectionBand} aria-labelledby="opportunities-heading">
         <div data-catalog-reveal className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Opportunities</p>
-          <h2 id="opportunities-heading" className={`mt-4 ${h2}`}>Current Opportunities</h2>
+          <h2 id="opportunities-heading" tabIndex={-1} className={`mt-4 ${h2}`}>Current Opportunities</h2>
           <Openings />
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-body">
-            2Nspira is growing its client portfolio and professional network. Employment, consulting, and project-based opportunities may become available as our work expands.
-          </p>
+
         </div>
       </section>
 
@@ -150,9 +110,9 @@ export default function CareersPage() {
             <AmbientField />
             <div className="relative">
               <p className="text-sm font-semibold uppercase tracking-widest text-accent">Future collaboration</p>
-              <h2 id="network-heading" className={`mt-4 ${h2}`}>Join the 2Nspira Talent Network</h2>
+              <h2 id="network-heading" tabIndex={-1} className={`mt-4 ${h2}`}>Join the 2Nspira Talent Network</h2>
               <p className={`mt-5 max-w-2xl ${body}`}>
-                We welcome introductions from experienced professionals interested in future employment, independent consulting, or project collaboration opportunities. We value relevant industry experience, sound business judgment, and the ability to help others develop.
+                Let’s connect about future roles, consulting, or project collaboration. Tell us what you do best and the kind of work you’re looking for.
               </p>
               <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">
                 Introduce yourself by email. A brief note about your expertise and a link to your professional profile is a good place to start.
@@ -160,6 +120,20 @@ export default function CareersPage() {
               <a href={introductionUrl} className={`mt-7 min-h-11 ${buttonPrimary}`}>Introduce Yourself →</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className={sectionBand} aria-labelledby="expertise-heading">
+        <div data-catalog-reveal className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">Bring your strengths</p>
+          <h2 id="expertise-heading" className={`mt-4 ${h2}`}>Where you could contribute</h2>
+          <p className="mt-4 max-w-2xl leading-8 text-body">Skills we connect with as client needs evolve—not a list of current vacancies.</p>
+          <ul className="mt-7 flex flex-wrap gap-3">
+            {expertise.map((item) => (
+              <li key={item} className={styles.expertise}><span aria-hidden="true" />{item}</li>
+            ))}
+          </ul>
+          <Link href="/coaching" className="mt-6 inline-flex min-h-11 items-center rounded font-medium text-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Explore our mentoring approach →</Link>
         </div>
       </section>
 
