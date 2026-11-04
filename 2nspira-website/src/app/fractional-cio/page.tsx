@@ -1,3 +1,4 @@
+import LeadershipProfile from "@/components/LeadershipProfile";
 import polish from "@/components/ServicePolish.module.css";
 import ServiceEffects from "@/components/ServiceEffects";
 import { publicPageMetadata } from "@/lib/pageMetadata";
@@ -92,6 +93,7 @@ export default function FractionalCioPage() {
         </div>
       </section>
 
+      <LeadershipProfile />
       <section className={section} aria-labelledby="fit-heading">
         <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
@@ -161,6 +163,17 @@ export default function FractionalCioPage() {
         </div>
       </section>
 
+      <section className={section} aria-labelledby="deliverables-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <h2 id="deliverables-heading" className={h2}>Clear decisions. Tangible working documents.</h2>
+        <p className="mt-4 max-w-3xl leading-7 text-body">Depending on the agreed scope, a fractional or virtual CIO engagement can include these deliverables. These are examples of what we can prepare, not published client artifacts.</p>
+        <ul className="mt-8 grid gap-5 sm:grid-cols-2">{[
+          ["Technology roadmap", "Priorities, dependencies, accountable owners, and a practical delivery sequence."],
+          ["Vendor assessment", "Service fit, responsibilities, contract considerations, and questions for renewal."],
+          ["Investment priorities", "Options compared against business value, cost, capacity, and risk."],
+          ["Governance structure", "Decision rights, review checkpoints, escalation routes, and measures of progress."]
+        ].map(([title, text]) => <li key={title} className={`p-6 ${cardFlat}`}><h3 className={h3}>{title}</h3><p className="mt-3 leading-7 text-body">{text}</p></li>)}</ul>
+        <Link href="/work#internal-engineering" className={`mt-6 inline-flex min-h-11 items-center ${linkInline}`}>Explore our internal engineering practice →</Link>
+      </div></section>
       <section className={section} aria-labelledby="outcomes-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-3xl">

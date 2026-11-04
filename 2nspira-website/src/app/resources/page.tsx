@@ -110,7 +110,7 @@ export default function ResourcesPage() {
         <div className={styles.closingActions}>
           <Link href="/coaching" className={styles.secondary}>Explore mentoring &amp; coaching <Arrow /></Link>
           <Link href={strengthsUrl} className={styles.secondary}>Explore Professional Strengths <Arrow /></Link>
-          <Link href={readinessUrl} className={styles.secondary}>Explore AI Readiness <Arrow /></Link>
+          <Link href="/ai-enablement" className={styles.secondary}>Discuss organizational AI enablement <Arrow /></Link>
         </div>
       </section>
     </CatalogEffects></main>

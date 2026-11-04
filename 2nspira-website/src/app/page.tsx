@@ -125,11 +125,11 @@ export default function Home() {
         <h2 id="audience-heading">For organizations ready to move beyond what’s holding them back.</h2>
         <p>Whether you’re growing a business, leading a team, serving a community, or building something new, we help you overcome what stands between where you are and where you want to go.</p>
         <ul className={styles.audienceNeeds}>{[
-          { title: "Growing businesses", text: "Build the systems and digital experiences your next stage of growth demands." },
-          { title: "Operations & technology leaders", text: "Bring clarity to technology decisions, simplify complexity, and make better use of AI." },
-          { title: "Schools & nonprofits", text: "Make limited resources go further through practical technology and stronger operations." },
-          { title: "Entrepreneurs & founders", text: "Gain the perspective and guidance to build confidently and lead effectively." },
-        ].map(audience => <li key={audience.title}><h3>{audience.title}</h3><p>{audience.text}</p></li>)}</ul>
+          { title: "Established & growing businesses", text: "Build the systems and digital experiences your next stage of growth demands.", href: "/services", action: "Find your starting point" },
+          { title: "Operations & technology leaders", text: "Bring clarity to technology decisions, simplify complexity, and make better use of AI.", href: "/fractional-cio", action: "Explore executive technology leadership" },
+          { title: "Schools & nonprofits", text: "Make limited resources go further through accessible digital services, practical technology, and stronger operations.", href: "/automation-systems-optimization", action: "Explore better ways of working" },
+          { title: "Entrepreneurs & founders", text: "Gain the perspective and guidance to build confidently and lead effectively.", href: "/coaching", action: "Explore mentoring—not outsourced delivery" },
+        ].map(audience => <li key={audience.title}><h3>{audience.title}</h3><p>{audience.text}</p><Link href={audience.href} className={styles.textLink}>{audience.action} <span aria-hidden="true">→</span></Link></li>)}</ul>
         <Link href="/contact#contact-message" className={styles.textLink}>Let’s discuss your challenge <span aria-hidden="true">↗</span></Link>
       </div>
     </section>

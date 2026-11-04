@@ -111,6 +111,7 @@ export default function ContactPage() {
     name: "",
     email: "",
     organization: "",
+    organizationType: "",
     message: "",
   });
   const [state, setState] = useState<SubmitState>({ kind: "idle" });
@@ -118,6 +119,7 @@ export default function ContactPage() {
     name: string;
     email: string;
     organization: string;
+    organizationType: string;
     message: string;
   } | null>(null);
 
@@ -125,7 +127,7 @@ export default function ContactPage() {
   const submittingRef = useRef(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
   ) => {
     setFormState((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -138,6 +140,7 @@ export default function ContactPage() {
       `Name: ${f.name}`,
       `Email: ${f.email}`,
       `Organization: ${f.organization || "Not provided"}`,
+      `Organization type: ${f.organizationType || "Not provided"}`,
       "",
       f.message,
       "",
@@ -208,7 +211,7 @@ export default function ContactPage() {
   );
 
   const handleReset = useCallback(() => {
-    setFormState({ name: "", email: "", organization: "", message: "" });
+    setFormState({ name: "", email: "", organization: "", organizationType: "", message: "" });
     setSubmitted(null);
     setState({ kind: "idle" });
     formRef.current?.focus();
@@ -216,8 +219,8 @@ export default function ContactPage() {
 
   const faqs = [
     {
-      q: "How soon do you respond to inquiries?",
-      a: "We typically respond within one business day.",
+      q: "What happens after I send a message?",
+      a: "We review what you’re trying to accomplish and help determine whether there’s a practical fit. If so, we agree a useful next step together.",
     },
     {
       q: "Do you offer free consultations?",
@@ -465,6 +468,12 @@ export default function ContactPage() {
                 </FieldGroup>
               </div>
 
+              <div className="mt-6"><FieldGroup label="Type of organization (optional)" id="organizationType">
+                <select id="organizationType" name="organizationType" value={formState.organizationType} onChange={handleChange} className={field}>
+                  <option value="">Prefer not to say</option>
+                  {["Business", "School or education organization", "Nonprofit or community organization", "Entrepreneur or founder", "Other"].map(value => <option key={value} value={value}>{value}</option>)}
+                </select>
+              </FieldGroup></div>
               <div className="mt-6">
                 <FieldGroup
                   label="Business challenge"
