@@ -1,3 +1,4 @@
+import EditorialHero from "@/components/EditorialHero";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import CatalogBreadcrumbs from "@/components/catalog/CatalogBreadcrumbs";
 import CatalogSchema from "@/components/catalog/CatalogSchema";
@@ -15,7 +16,6 @@ import {
   lead,
   linkInline,
   pageMain,
-  pageHero,
 } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -33,9 +33,9 @@ export default function BooksPage() {
       <CatalogEffects headings>
       <CatalogBreadcrumbs page="books" />
       <CatalogSchema page="books" />
-      <header className={`${pageHero} relative overflow-hidden text-center`}>
+      <header className="relative overflow-hidden border-b border-line bg-surface mb-10">
         <AmbientField />
-        <div className="relative" data-catalog-reveal>
+        <EditorialHero image="/images/books/trust-is-the-operating-system.jpg" alt="Cover of Trust Is the Operating System by Jeffrey Cortez." contain>
         <p><EyebrowPill>From the author</EyebrowPill></p>
         <h1 className="mt-4  font-medium tracking-tight text-ink  text-[length:var(--type-display)] leading-[1.08] tracking-[-0.04em]">
           Leadership Books
@@ -43,7 +43,7 @@ export default function BooksPage() {
         <p className={`mx-auto max-w-2xl ${lead}`}>
           Explore clarity, restraint, and leadership through reading and reflection.
           Consider how trust, judgment, and meaning shape modern organizations.
-        </p></div>
+        </p></EditorialHero>
       </header>
 
       <div className="mx-auto max-w-6xl space-y-10 px-4 pb-20 sm:px-6">

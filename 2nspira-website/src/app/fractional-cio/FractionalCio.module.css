@@ -1,0 +1,18 @@
+.page { overflow: clip; }
+.page :is(h2, section[id]) { scroll-margin-top: 7rem; }
+.heroImage { isolation: isolate; }
+.imageCaption { position: absolute; inset: auto 0 0; padding: 3rem 1.5rem 1.5rem; background: linear-gradient(transparent, rgb(14 26 38 / 92%)); color: white; font-size: .875rem; line-height: 1.6; }
+.editorialImage { overflow: hidden; border: 1px solid var(--color-line); border-radius: 1.75rem; }
+.sectionNav { border-bottom: 1px solid var(--color-line); background: var(--color-surface); }
+.signal { display: flex; gap: 1rem; align-items: flex-start; color: var(--color-body); line-height: 1.75; }
+.signal > span { display: grid; place-items: center; flex: 0 0 2rem; height: 2rem; border-radius: 50%; background: var(--color-accent-soft); color: var(--color-accent); }
+.stepNumber { font-size: 2.75rem; line-height: 1; letter-spacing: -.05em; color: var(--color-accent); opacity: .8; }
+.disclosure { margin-top: 1.5rem; padding: 1.25rem; border: 1px solid var(--color-line); border-radius: 1rem; background: var(--color-surface); }
+.disclosure summary { cursor: pointer; font-weight: 600; color: var(--color-ink); min-height: 2rem; align-content: center; }
+.disclosure summary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; border-radius: .25rem; }
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .editorialImage img, .heroImage img { transition: transform 700ms cubic-bezier(.2,.7,.2,1); }
+  .editorialImage:hover img, .heroImage:hover img { transform: scale(1.025); }
+  .step { transition: transform 240ms ease, box-shadow 240ms ease; }
+  .step:hover { transform: translateY(-5px); box-shadow: 0 16px 36px rgb(35 41 54 / 8%); }
+}

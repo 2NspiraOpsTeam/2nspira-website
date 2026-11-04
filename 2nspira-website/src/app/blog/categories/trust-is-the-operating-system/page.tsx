@@ -1,3 +1,4 @@
+import EditorialHero from "@/components/EditorialHero";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import { posts } from "@/lib/posts";
 import PageIdentity from "@/components/PageIdentity";
@@ -17,7 +18,7 @@ export default function Page() {
   return (
     <main className={pageMain} id="main-content"><CatalogEffects headings>
       <PageIdentity type="CollectionPage" name="Trust Is the Operating System" path="/blog/categories/trust-is-the-operating-system" items={posts.filter((post) => post.categories.includes("trust-is-the-operating-system")).map((post) => ({ name: post.title, path: `/post/${post.slug}` }))} />
-      <header className="mx-auto max-w-4xl px-4 pt-16 sm:px-6">
+<header className="border-b border-line bg-surface"><EditorialHero image="/images/books/trust-is-the-operating-system.jpg" alt="Trust Is the Operating System book cover by Jeffrey Cortez." contain>
         <Link href="/insights" className={linkInline}>
           ← All insights
         </Link>
@@ -27,8 +28,7 @@ export default function Page() {
         <p className={lead}>
           Selected essays on the invisible infrastructure of leadership.
         </p>
-      </header>
-      <BlogLibrary category="trust-is-the-operating-system" />
+      </EditorialHero></header>      <BlogLibrary category="trust-is-the-operating-system" />
     </CatalogEffects></main>
   );
 }

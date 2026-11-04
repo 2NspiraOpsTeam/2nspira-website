@@ -1,3 +1,4 @@
+import EditorialHero from "@/components/EditorialHero";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import CatalogBreadcrumbs from "@/components/catalog/CatalogBreadcrumbs";
 import CatalogSchema from "@/components/catalog/CatalogSchema";
@@ -5,7 +6,7 @@ import CatalogFaq from "@/components/catalog/CatalogFaq";
 import Image from "next/image";
 import Link from "next/link";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
-import { buttonPrimary, card, h1, lead, pageHero, pageMain } from "@/components/ui";
+import { buttonPrimary, card, h1, lead, pageMain } from "@/components/ui";
 import { etsyShopUrl, type ShopProduct } from "@/content/shop/products";
 
 export function CollectionNav({ current }: { current: "shop" | "printables" | "coloring" | "art" }) {
@@ -47,13 +48,13 @@ export default function ShopCollection({ title, description, current, products }
       <CatalogEffects headings>
       <CatalogBreadcrumbs page={current} />
       <CatalogSchema page={current} />
-      <header className={`${pageHero} relative overflow-hidden text-center`}>
+      <header className="relative overflow-hidden border-b border-line bg-surface mb-10">
         <AmbientField />
-        <div className="relative" data-catalog-reveal>
+        <EditorialHero image={products[0].image} alt={products[0].imageAlt} contain>
           <EyebrowPill>The 2Nspira shop</EyebrowPill>
           <h1 className={h1}>{title}</h1>
           <p className={lead}>{description}</p>
-        </div>
+        </EditorialHero>
       </header>
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
         <CollectionNav current={current} />

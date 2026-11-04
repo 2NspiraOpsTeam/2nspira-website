@@ -1,3 +1,4 @@
+import EditorialHero from "@/components/EditorialHero";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import ClientServiceGrid from "@/components/ClientServiceGrid";
 import ServiceConversation from "@/components/ServiceConversation";
@@ -110,11 +111,11 @@ export default function ServicesPage() {
       <ServiceEffects>
       {/* Hero */}
       <section
-        className="relative overflow-hidden border-b border-line bg-surface py-24 sm:py-28"
+        className="relative overflow-hidden border-b border-line bg-surface"
         aria-labelledby="hero-heading"
       >
         <AmbientField />
-        <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <EditorialHero image="/images/pages/services-advisory.webp" alt="Illustrative technology advisory discussion connecting business priorities and practical decisions.">
           <p><EyebrowPill>People. Strategy. Technology.</EyebrowPill></p>
           <h1
             id="hero-heading"
@@ -125,9 +126,9 @@ export default function ServicesPage() {
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
             Turn technology uncertainty, disconnected operations, and growing pains into a clearer path forward. From responsible AI and connected systems to digital experiences and personal leadership, we help you move from what’s holding you back to what comes next.
           </p>
-          <ServiceConversation centered label="Let’s talk about your next step" />
+          <ServiceConversation label="Let’s talk about your next step" />
           <a href="#find-the-right-service" className={`mt-4 min-h-11 ${linkInline}`}>Find the right service <span aria-hidden="true"> ↓</span></a>
-        </div>
+        </EditorialHero>
       </section>
 
       {/* Services Grid */}

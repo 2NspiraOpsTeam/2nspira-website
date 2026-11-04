@@ -1,5 +1,8 @@
 "use client";
 
+import EditorialHero from "@/components/EditorialHero";
+
+
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 
 import { useState, useRef, useCallback, type ReactNode } from "react";
@@ -22,7 +25,6 @@ import {
   lead,
   pageMain,
 } from "@/components/ui";
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { BOOKING_URL } from "@/lib/booking";
 
@@ -253,7 +255,7 @@ export default function ContactPage() {
       />
       {/* ── Hero section ── */}
       <section className="border-b border-line bg-surface">
-        <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
+        <EditorialHero image="/images/pages/contact-environmental.webp" alt="Conceptual visualization of a calm meeting corner beside a window.">
           <Reveal>
             <h1
               id="contact-hero-heading"
@@ -268,7 +270,7 @@ export default function ContactPage() {
             </p>
           </Reveal>
           <Reveal delay={150}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center justify-start gap-4">
               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={buttonPrimary} aria-label="Book a conversation (Google Calendar, opens in a new tab)">
                 Book a conversation
               </a>
@@ -278,25 +280,8 @@ export default function ContactPage() {
             </div>
             <p className="mt-3 text-sm leading-6 text-muted">30-minute appointments via Google Meet. Booking opens Google Calendar in a new tab.</p>
           </Reveal>
-        </div>
+        </EditorialHero>
       </section>
-
-      {/* ── Hero image with gradient overlay (matches /websites treatment) ── */}
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <figure className="group relative overflow-hidden sm:-mx-6 lg:-mx-8">
-          <div
-            className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-tr from-white/10 via-transparent to-accent/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-            aria-hidden="true"
-          />
-          <Image
-            src="/images/pages/contact-environmental.webp"
-            alt="Conceptual visualization of a calm, minimal meeting corner beside a window."
-            width={1344}
-            height={768}
-            className="h-auto w-full transition-transform duration-700 ease-gentle motion-safe:group-hover:scale-[1.01]"
-          />
-        </figure>
-      </div>
 
       {/* ── Contact section with ambient orbs (matching /websites sectionBand depth) ── */}
       <section
