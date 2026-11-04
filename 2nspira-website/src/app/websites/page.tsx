@@ -11,9 +11,9 @@ import ServiceQuestions from "@/components/ServiceQuestions";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
 import { card, cardFlat, eyebrow, h1, h2, h3, lead, linkInline, pageMain, section, sectionBand } from "@/components/ui";
 
-const description = "Website and app development grounded in real business needs. Explore business websites, web applications, mobile apps, secure portals, and connected operations.";
+const description = "Business website design, redesign, and custom app development. 2Nspira builds online stores, booking experiences, and secure portals around your business.";
 export const metadata: Metadata = publicPageMetadata({
-  title: "Website & App Development",
+  title: "Business Website Design & App Development",
   shareTitle: "Websites and apps built for real business.",
   description,
   path: "/websites",
@@ -43,7 +43,7 @@ const projects = [
     note: "Public website shown. No patient information is included.",
   },
   {
-    id: "2nspira", name: "2Nspira", category: "Advisory website & client services", status: "Published website",
+    id: "2nspira", name: "2Nspira", category: "Advisory website & client services", status: "In-house platform",
     url: "https://2nspira.com/", link: "Explore 2Nspira", image: "2nspira",
     need: "Make it easy to understand the services, book a conversation, and support ongoing client relationships.",
     work: "Google Calendar booking links, assessment tools, a secure client portal, service management, and due-date reminders.",
@@ -54,7 +54,7 @@ const projects = [
     note: "Public website shown. Client records and private dashboards are not displayed.",
   },
   {
-    id: "2nspira-books", name: "2Nspira Books", category: "Specialist bookstore ecommerce", status: "Storefront preview",
+    id: "2nspira-books", name: "2Nspira Books", category: "Specialist bookstore ecommerce", status: "In-house storefront preview",
     url: "https://2nspira-books-preview.jcortez-36a.workers.dev/", link: "Explore the bookstore preview", image: "books",
     need: "Give collectors the photographs, edition details, and condition information needed to evaluate an individual book.",
     work: "A searchable catalog, actual-copy galleries, inventory and order tools, plus Stripe and PayPal checkout development.",
@@ -71,8 +71,8 @@ const capabilities = [
   { icon: MapPin, title: "Google Maps & locations", text: "Help visitors explore locations, view property maps, and open Google Maps directions to the right address.", proof: "Teams property discovery", href: "#teams-management" },
   { icon: ShoppingBag, title: "Online stores", text: "Bring product details, photographs, checkout, inventory, and order management into one considered journey.", proof: "2Nspira Books · preview", href: "#2nspira-books" },
   { icon: ShieldCheck, title: "Client & tenant portals", text: "Give authorized users a secure place for service information, requests, and updates.", proof: "2Nspira & Teams workflows", href: "#teams-management" },
-  { icon: LayoutDashboard, title: "Backend operations", text: "Equip your team to manage content, records, inquiries, notifications, and the work that follows.", proof: "Teams property operations · preview", href: "#teams-management" },
-  { icon: ChartNoAxesCombined, title: "Analytics & insights", text: "Understand website traffic and property interest with reporting scoped to the business and its privacy needs.", proof: "Teams analytics workspace · preview", href: "#teams-management" },
+  { icon: LayoutDashboard, title: "Backend operations", text: "Equip your team to manage content, records, inquiries, notifications, and the work that follows.", proof: "Teams private property operations", href: "#teams-management" },
+  { icon: ChartNoAxesCombined, title: "Analytics & insights", text: "Understand website traffic and property interest with reporting scoped to the business and its privacy needs.", proof: "Teams private analytics workspace", href: "#teams-management" },
   { icon: Languages, title: "Multilingual & migration", text: "Help people navigate in their preferred language, and preserve useful content when moving an existing site.", proof: "GeVitals bilingual website", href: "#gevitals" },
 ];
 
@@ -89,7 +89,7 @@ export default function WebsitesPage() {
   return <main id="main-content" className={pageMain}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       "@context": "https://schema.org", "@type": "Service", "@id": "https://2nspira.com/websites#service",
-      name: "Websites, Apps & Digital Platforms", serviceType: ["Website development", "Web application development", "Mobile app development", "Business system integration"], description,
+      name: "Websites, Apps & Digital Platforms", serviceType: ["Website design", "Website redesign", "Website development", "Web application development", "Mobile app development", "Business system integration"], description,
       url: "https://2nspira.com/websites", provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide",
     }).replace(/</g, "\\u003c") }} />
     <ServiceEffects>
@@ -98,10 +98,10 @@ export default function WebsitesPage() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <EyebrowPill>Websites, Apps &amp; Digital Platforms</EyebrowPill>
-            <p className={`mt-6 ${eyebrow}`}>AI-native development</p>
+            <p className={`mt-6 ${eyebrow}`}>Website design, redesign &amp; app development</p>
             <h1 className={h1}>Websites and apps.<br />Built for real business.</h1>
-            <p className={lead}>From business websites and online stores to web applications and mobile apps, we design digital experiences around the people who use them and the work they need to do.</p>
-            <p className="mt-4 leading-7 text-body">AI-native in how we build. Human-led in what we deliver. Start with the experience you need; add capabilities when they serve a clear purpose.</p>
+            <p className={lead}>Your website should help customers find you, understand what you offer, and take the next step. We design, redesign, and develop business websites, online stores, and custom applications around your customer experience and the systems behind your business.</p>
+            <p className="mt-4 leading-7 text-body">Start with what you need today. Build with tomorrow in mind. AI-native in how we build. Human-led in what we deliver.</p>
             <ServiceConversation label="Discuss your website or app" />
             <a href="#our-work" className={`mt-4 min-h-11 ${linkInline}`}>See the work <span aria-hidden="true"> ↓</span></a>
           </div>
@@ -114,17 +114,25 @@ export default function WebsitesPage() {
         </div>
       </section>
 
+      <section aria-label="Our website development experience" className="border-b border-line bg-canvas">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-10 gap-y-3 px-4 py-6 text-sm leading-6 text-body sm:px-6">
+          <p><strong className="text-ink">Established in New York in 2019</strong></p>
+          <p><strong className="text-ink">100th website launched in 2024</strong></p>
+          <Link href="/about#company-history-heading" className={linkInline}>Explore our story →</Link>
+        </div>
+      </section>
+
       <section id="website-and-app-development" className={sectionBand} aria-labelledby="development-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className={eyebrow}>The right experience for the job</p>
           <h2 id="development-heading" className={`mt-4 max-w-3xl ${h2}`}>A website. A web app.<br />Or something made for mobile.</h2>
           <p className={`max-w-3xl ${lead}`}>We start with your audience and the problem to solve, then agree the right platform and a useful first release.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">{[
-            { Icon: Globe, title: "Business websites", text: "Help people understand your offer, explore your work, and take the next step—with content, booking, or commerce where needed." },
+            { Icon: Globe, title: "Business website design & redesign", text: "Launch a small business website or improve an existing one. Help customers understand your offer and take the next step, with content, booking, or commerce where needed." },
             { Icon: AppWindow, title: "Web applications", text: "Turn a business workflow into an interactive tool: a customer portal, an internal dashboard, or a service people use in their browser." },
-            { Icon: Smartphone, title: "Mobile apps", text: "Create focused iOS and Android experiences for tasks people need on the go. We plan device capabilities, accessibility, and release requirements around the agreed scope." },
+            { Icon: Smartphone, title: "Mobile apps", text: "Begin with discovery, platform selection, and a defined first release for iOS or Android. We scope device capabilities, accessibility, and release requirements before development." },
           ].map(({Icon, title, text}) => <article key={title} className={`p-6 sm:p-8 ${cardFlat}`}><Icon aria-hidden="true" size={28} strokeWidth={1.5} className="mb-6 text-accent" /><h3 className={h3}>{title}</h3><p className="mt-4 leading-7 text-body">{text}</p></article>)}</div>
-          <p className="mt-6 max-w-3xl text-sm leading-7 text-muted">Platform choice, integrations, testing, hosting, app-store submission, and ongoing support are agreed for each project. The work below shows our website and web-platform experience.</p>
+          <p className="mt-6 max-w-3xl text-sm leading-7 text-muted">Platform choice, integrations, testing, hosting, app-store submission, and ongoing support are agreed for each project. The work below shows website and web-platform experience, not published native mobile apps.</p>
         </div>
       </section>
 
@@ -132,7 +140,7 @@ export default function WebsitesPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className={eyebrow}>Real projects. Practical capabilities.</p>
           <h2 data-catalog-reveal id="selected-work-heading" className={`mt-4 ${h2}`}>See the experience. Understand what’s behind it.</h2>
-          <p className={`max-w-3xl ${lead}`}>A website is what your customers see. Booking, publishing, payments, and operations are what make it useful. These projects show how the two connect.</p>
+          <p className={`max-w-3xl ${lead}`}>A website is what your customers see. Booking, publishing, payments, and operations are what make it useful. Published client websites lead the selection below, followed by our in-house platform and storefront preview. Private operational tools are not public demos.</p>
           <div className="mt-10 grid items-start gap-6 lg:grid-cols-2">
             {projects.map(project => <article key={project.id} id={project.id} data-catalog-card className={`scroll-mt-24 overflow-hidden ${card}`} aria-labelledby={`${project.id}-heading`}>
               <figure>
@@ -199,7 +207,7 @@ export default function WebsitesPage() {
               <p className={eyebrow}>Our development approach</p>
               <h2 data-catalog-reveal id="ai-native-heading" className={`mt-4 ${h2}`}>AI-native development.<br />Human product judgment.</h2>
               <p className={lead}>AI helps us explore, implement, and review. People stay responsible for what we build, how it works, and whether it is ready to launch.</p>
-              <p className="mt-4 leading-7 text-body">AI-native is how we build. AI-powered is a feature choice. Your website does not need a chatbot to benefit from our approach.</p>
+              <p className="mt-4 leading-7 text-body">For your business, that means clear accountability for design and engineering decisions, testing of agreed customer journeys before launch, and an agreed handover and support plan. AI-powered features are a separate choice; your website does not need a chatbot.</p>
               <Link href="/ai-enablement" className={`mt-6 min-h-11 ${linkInline}`}>Explore AI enablement →</Link>
             </div>
           </div>
@@ -214,12 +222,12 @@ export default function WebsitesPage() {
 
       <section id="website-standards" className={sectionBand} aria-labelledby="website-standards-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className={eyebrow}>Built into every website</p>
+          <p className={eyebrow}>Standards & project-specific requirements</p>
           <h2 id="website-standards-heading" className={`mt-4 ${h2}`}>Accessibility, Security, and Compliance</h2>
-          <p className={`max-w-3xl ${lead}`}>We design and develop all our websites with these commitments from the start.</p>
+          <p className={`max-w-3xl ${lead}`}>We design with accessibility, security, and privacy in mind from the beginning. We agree testing, compliance requirements, and responsibilities for each project.</p>
           <ul className="mt-8 grid gap-x-10 gap-y-6 md:grid-cols-2">
             {[
-              ["Accessibility", "Design and develop the site to conform with the WCAG 2.2 Level AA accessibility standard."],
+              ["Accessibility", "Target WCAG 2.2 Level AA accessibility, test agreed user journeys, and document limitations and remediation needs."],
               ["Security & data protection", "Follow secure development practices and protect user data submitted through the website and webstore."],
               ["Privacy & consent", "Support privacy notice, cookie, consent, and data handling requirements as applicable."],
               ["Pre-launch testing", "Conduct accessibility, performance, security, and quality assurance testing before launch."],
