@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {hasPublishedTeam} from "@/lib/team/server";
 import FooterInvitation from "./FooterInvitation";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { socialLinks } from "@/lib/socialLinks";
@@ -35,7 +36,8 @@ const legal = [
   { name: "Copyright", href: "/copyright" },
 ];
 
-export default function Footer() {
+export default async function Footer() {
+  const teamPublished = await hasPublishedTeam();
   return <footer className={styles.footer}>
     <div className={styles.container}>
       <FooterInvitation><section className={styles.invitation} aria-labelledby="footer-invitation-heading">
@@ -80,7 +82,7 @@ export default function Footer() {
         </nav>
         <nav className={styles.company} aria-labelledby="footer-company-heading">
           <h2 id="footer-company-heading" className={styles.heading}>Company</h2>
-          <ul className={styles.list}>{company.map(link => <li key={link.href}><Link href={link.href} className={styles.link}>{link.name}</Link></li>)}</ul>
+          <ul className={styles.list}>{[...company, ...(teamPublished ? [{ name: "Team & Delivery", href: "/team-delivery" }] : [])].map(link => <li key={link.href}><Link href={link.href} className={styles.link}>{link.name}</Link></li>)}</ul>
         </nav>
         <nav className={styles.ideas} aria-labelledby="footer-ideas-heading">
           <h2 id="footer-ideas-heading" className={styles.heading}>Ideas &amp; resources</h2>

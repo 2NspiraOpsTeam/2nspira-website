@@ -1,12 +1,27 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
+
+const narrowSnapshot = () => window.matchMedia("(max-width: 1023px)").matches;
+const narrowServerSnapshot = () => true;
+const subscribeViewport = (notify: () => void) => {
+  const query = window.matchMedia("(max-width: 1023px)");
+  query.addEventListener("change", notify);
+  return () => query.removeEventListener("change", notify);
+};
 import { useRouter, usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
   { path: "/admin/dashboard", label: "Dashboard" },
   { path: "/admin/clients", label: "Clients" },
   { path: "/admin/careers", label: "Careers" },
+  { path: "/admin/team-delivery", label: "Team & Delivery" },
 ];
 
 export default function AdminShell({
@@ -19,6 +34,51 @@ export default function AdminShell({
   const router = useRouter();
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const narrow = useSyncExternalStore(
+    subscribeViewport,
+    narrowSnapshot,
+    narrowServerSnapshot,
+  );
+  const sidebar = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (!narrow || !sidebarOpen) return;
+    const previous = document.activeElement as HTMLElement | null;
+    const panel = sidebar.current;
+    const controls = () =>
+      Array.from(
+        panel?.querySelectorAll<HTMLElement>(
+          'button:not([disabled]),a[href],[tabindex="0"]',
+        ) || [],
+      );
+    controls()[0]?.focus();
+    const oldOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const keydown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setSidebarOpen(false);
+      }
+      if (event.key === "Tab") {
+        const items = controls();
+        const first = items[0],
+          last = items.at(-1);
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+    document.addEventListener("keydown", keydown);
+    return () => {
+      document.removeEventListener("keydown", keydown);
+      document.body.style.overflow = oldOverflow;
+      if (previous?.isConnected && previous.getClientRects().length)
+        previous.focus();
+    };
+  }, [narrow, sidebarOpen]);
 
   const handleLogout = useCallback(async () => {
     await fetch("/api/admin/auth/logout", { method: "POST" });
@@ -33,6 +93,13 @@ export default function AdminShell({
     <div className="min-h-screen flex bg-background">
       {/* Sidebar */}
       <aside
+        ref={sidebar}
+        id="admin-navigation"
+        role={narrow ? "dialog" : undefined}
+        aria-label="Admin navigation"
+        aria-modal={narrow && sidebarOpen ? true : undefined}
+        aria-hidden={narrow && !sidebarOpen ? true : undefined}
+        inert={narrow && !sidebarOpen}
         className={`fixed lg:static inset-y-0 left-0 z-50 w-64 bg-canvas border-r border-line flex flex-col transition-transform duration-200 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         }`}
@@ -44,16 +111,18 @@ export default function AdminShell({
               <div className="text-xs text-foreground/50">Admin Console</div>
             </div>
             <button
-              className="lg:hidden text-foreground/50"
+              className="lg:hidden min-h-11 min-w-11 text-foreground/70"
               onClick={() => setSidebarOpen(false)}
               aria-label="Close menu"
             >
-              <span aria-hidden="true" className="text-xl">✕</span>
+              <span aria-hidden="true" className="text-xl">
+                ✕
+              </span>
             </button>
           </div>
           <button
             onClick={handleLogout}
-            className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-red-500/10 px-3 py-2.5 text-sm font-semibold text-red-500 hover:bg-red-500/20 transition-colors"
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-red-500/10 px-3 py-2.5 text-sm font-semibold text-red-700 hover:bg-red-500/20 transition-colors"
           >
             <span aria-hidden="true">↩</span>
             Sign Out
@@ -64,7 +133,11 @@ export default function AdminShell({
           {NAV_ITEMS.map((item) => (
             <button
               key={item.path}
-              onClick={() => router.push(item.path)}
+              onClick={() => {
+                setSidebarOpen(false);
+                router.push(item.path);
+              }}
+              aria-current={isActive(item.path) ? "page" : undefined}
               className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 isActive(item.path)
                   ? "bg-accent-500/10 text-accent-500"
@@ -102,12 +175,14 @@ export default function AdminShell({
       )}
 
       {/* Main */}
-      <main className="flex-1 min-w-0">
+      <main className="flex-1 min-w-0" inert={narrow && sidebarOpen}>
         <header className="lg:hidden flex items-center justify-between gap-3 p-4 border-b border-line bg-canvas">
           <div className="flex items-center gap-3">
             <button
               onClick={() => setSidebarOpen(true)}
-              className="text-foreground/60 text-xl"
+              className="min-h-11 min-w-11 text-foreground/80 text-xl"
+              aria-expanded={sidebarOpen}
+              aria-controls="admin-navigation"
               aria-label="Open menu"
             >
               ☰
@@ -116,7 +191,7 @@ export default function AdminShell({
           </div>
           <button
             onClick={handleLogout}
-            className="rounded-lg bg-red-500/10 px-3 py-1.5 text-xs font-semibold text-red-500"
+            className="min-h-11 rounded-lg bg-red-500/10 px-3 py-2 text-xs font-semibold text-red-700"
           >
             Sign Out
           </button>
