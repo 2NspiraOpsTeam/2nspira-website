@@ -57,7 +57,7 @@ export default function TeamContent({
           {c.people
             .filter((p) => preview || p.approved)
             .map((p) => (
-              <article key={p.id} className={`${card} p-6 sm:p-8`}>
+              <article id={p.id} key={p.id} className={`${card} scroll-mt-24 p-6 sm:p-8`}>
                 <div className="flex flex-wrap items-center gap-5">
                   {p.photo ? (
                     <img
