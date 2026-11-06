@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import SchoolVision from "./SchoolVision";
+import ManufacturingVision from "./ManufacturingVision";
 import {
   ArrowUpRight,
   GraduationCap,
@@ -21,6 +22,7 @@ import {
   pageMain,
 } from "@/components/ui";
 export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
+  if (kind === "manufacturing") return <ManufacturingVision />;
   const demo = demos[kind],
     Icon = kind === "education" ? GraduationCap : Factory;
   return (
