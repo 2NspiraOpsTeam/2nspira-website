@@ -148,6 +148,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
         <nav className="space-y-1 py-5" aria-label="Mobile navigation">
           {accordion("services", "Services", serviceLinks, serviceButtonRef)}
           <Link href="/work" onClick={handleClose} aria-current={pathname === "/work" ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Work</Link>
+          <Link href="/demos" onClick={handleClose} aria-current={isCurrent("/demos") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Demos</Link>
           {accordion("ideas", "Ideas", ideaLinks, ideasButtonRef)}
           {accordion("about", "About", aboutLinks, aboutButtonRef)}
           <Link href="/contact" onClick={handleClose} aria-current={isCurrent("/contact") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Contact</Link>

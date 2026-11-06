@@ -17,23 +17,6 @@ export const metadata: Metadata = publicPageMetadata({
   path: "/work"
 });
 
-const manufacturingChallenge =
-  "Reducing reliance on disconnected spreadsheets, paper logs, and manual handoffs in production control.";
-
-const manufacturingOperationalShift =
-  "Connected operations workspace giving manufacturing teams visibility across production, materials, quality, fulfillment, and accountability.";
-
-const manufacturingCapabilities = [
-  "Connected customer orders and production work orders",
-  "Controlled production stages and material consumption",
-  "Inventory thresholds, purchase approvals, and goods receipt",
-  "Quality inspections, corrective actions, and fulfillment release",
-  "Executive dashboards, filterable reports, and shared activity",
-  "Private, resettable demo state and transparent rules-based assistance",
-];
-
-
-
 const teamsChallenge =
   "Help prospective residents and businesses discover the right property and reach the right team.";
 
@@ -129,7 +112,7 @@ export default function WorkPage() {
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-24">
         <nav aria-label="Explore evidence by type" className="mb-12 flex flex-wrap gap-3">
-          {[['#teams-management', 'Client projects'], ['#internal-engineering', '2Nspira engineering'], ['#concepts-prototypes', 'Concepts & prototypes']].map(([href, label]) => <a key={href} href={href} className="inline-flex min-h-11 items-center rounded-full border border-line px-5 py-3 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">{label}</a>)}
+          {[['#teams-management', 'Client projects'], ['#internal-engineering', '2Nspira engineering'], ['#concepts-prototypes', 'Platform engineering']].map(([href, label]) => <a key={href} href={href} className="inline-flex min-h-11 items-center rounded-full border border-line px-5 py-3 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">{label}</a>)}
         </nav>
         {/* --- Featured: Teams Management --- */}
         <section id="teams-management" className="mb-32 scroll-mt-24" aria-labelledby="teams-management-heading">
@@ -267,61 +250,13 @@ export default function WorkPage() {
           </div>
           <p className="mt-6 text-sm leading-7 text-body">Relevant to <Link href="/ai-enablement" className="text-accent underline">AI enablement</Link>, <Link href="/websites" className="text-accent underline">digital platforms</Link>, and <Link href="/fractional-cio" className="text-accent underline">technology leadership</Link>. Scope and applicability differ by engagement.</p>
         </section>
-        {/* --- Featured: Manufacturing Operations Command Center --- */}
         <section id="concepts-prototypes" className="mb-24 scroll-mt-24" aria-labelledby="concepts-heading">
-          <Reveal>
-            <div className="mb-12 flex flex-col gap-4">
-              <span>Internal Engineering Showcase / Interactive Prototype</span>
-              <h2 id="concepts-heading" className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">
-                Manufacturing Operations Command Center
-              </h2>
-            </div >
-          </Reveal>
-
-          <div className="flex flex-col gap-10">
-            <div className={styles.showcaseDetails}>
-              <p className="text-sm font-semibold text-accent">Status: Live interactive prototype · Fictional demonstration company</p>
-              <p className="text-xl text-body"><strong>Challenge: </strong>{manufacturingChallenge}</p>
-              <p className="text-lg text-body/80"><strong>Approach: </strong>{manufacturingOperationalShift}</p>
-              <p className="leading-7 text-body">A connected manufacturing operations platform demonstrating how production, inventory, procurement, quality control, workforce coordination, and executive reporting can work together in one operational environment.</p>
-              <div className="rounded-2xl border border-line bg-canvas/50 p-6 backdrop-blur-sm">
-                <h3 className="mb-4 font-semibold text-ink">Explore connected operations</h3>
-                <ul className="space-y-3 text-sm text-body">
-                  {manufacturingCapabilities.map((cap) => (
-                    <li key={cap} className="flex items-start gap-3">
-                      <span className="mt-1 text-accent">•</span>
-                      <span>{cap}</span>
-                    </li >
-                  ))}
-                </ul >
-              </div >
-              <div className="flex flex-wrap gap-3">
-                <a href="https://demo.2nspira.com/manufacturing/" className={buttonPrimary}>
-                  Explore the Interactive Demo
-                </a>
-                <Link href="/contact?interest=operations-platform" className="inline-flex items-center justify-center rounded-full border border-line px-5 py-3 text-sm font-medium text-ink hover:bg-canvas">
-                  Discuss an Operations Platform for Your Business
-                </Link>
-              </div>
-              <p className="text-sm text-body/80">No account required. Your changes stay in your own browser tab, with a clear reset option.</p>
-            </div >
-            <div className="order-first">
-              <Image
-                src="/images/work/northstar-manufacturing-demo.webp"
-                alt="Northstar Manufacturing interactive demonstration with production cells, order pipeline, inventory alerts, and quality holds"
-                width={1600}
-                height={1000}
-                className="w-full h-auto rounded-2xl border border-line shadow-sm"
-                sizes="(min-width: 1152px) 1104px, calc(100vw - 32px)"
-              />
-            </div >
-          </div >
-
-          <Reveal className="mt-8">
-            <p className="text-sm text-body italic">
-              Built by 2Nspira to showcase how custom digital platforms can reduce operational fragmentation and improve business visibility. Northstar Manufacturing is fictional; this is an internally developed demonstration, not a deployed client solution. All data is synthetic. The operational assistant uses local rules, not a live AI model.
-            </p>
-          </Reveal>
+          <p className="text-sm font-semibold text-accent">2Nspira platform engineering · Internal project</p>
+          <h2 id="concepts-heading" className="mt-4 text-3xl font-medium tracking-tight text-ink sm:text-4xl">Connected manufacturing operations</h2>
+          <div className="mt-8 grid items-center gap-8 lg:grid-cols-2">
+            <Image src="/images/work/northstar-manufacturing-demo.webp" alt="2Nspira’s fictional manufacturing platform showing linked operational dashboards" width={1600} height={1000} className="h-auto w-full rounded-2xl border border-line" sizes="(min-width: 1024px) 540px, calc(100vw - 32px)" />
+            <div><p className="leading-8 text-body">An internal engineering build connecting order intake, production stages, material movements, quality gates, and fulfillment through one transactional workflow.</p><p className="mt-4 text-sm leading-7 text-muted">Built with fictional data to demonstrate implementation choices—not a client deployment or a claim of measured business outcomes. Interactive workflows and their limitations now live in Demos.</p><Link href="/demos/manufacturing" className={`mt-6 ${buttonPrimary}`}>View the demo overview →</Link></div>
+          </div>
         </section>
 
         {/* --- CTA Band --- */}
