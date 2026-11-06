@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import SchoolVision from "./SchoolVision";
 import {
   ArrowUpRight,
@@ -67,6 +68,32 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
             </div>
           </aside>
         </div>
+        <figure className="mt-12">
+          <a
+            href={kind === "education" ? `${demo.url}?role=Parent` : demo.url}
+            className={`group block overflow-hidden rounded-2xl border border-line p-2 shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:p-4 ${kind === "education" ? "bg-[#efe4fa]" : "bg-[#dceee3]"}`}
+            aria-label={`Explore the ${kind === "education" ? "school family" : "manufacturing command center"} demo`}
+          >
+            <Image
+              src={`/images/demos/${kind}-workspace.webp`}
+              alt={kind === "education"
+                ? "Learning Grove school demo: family overview with Riley’s science learning, enrolled classes, and published feedback."
+                : "Northstar manufacturing demo: command center with production cells, material alerts, quality holds, and performance charts."}
+              width={1440}
+              height={1000}
+              sizes="(max-width: 1152px) 100vw, 1120px"
+              unoptimized
+              className="h-auto w-full rounded-xl"
+            />
+            <span className="flex min-h-11 items-center justify-between gap-3 px-2 pt-3 text-sm font-semibold text-ink">
+              {kind === "education" ? "A window into the school day" : "Your operations, in one connected view"}
+              <ArrowUpRight aria-hidden="true" className="h-5 w-5 shrink-0" />
+            </span>
+          </a>
+          <figcaption className="mt-3 text-sm leading-6 text-muted">
+            {kind === "education" ? "Learning Grove Academy · Family overview" : "Northstar Manufacturing · Command center"}. Select the preview to explore the interactive demo.
+          </figcaption>
+        </figure>
       </section>
       {kind === "education" && (
         <section className="border-y border-line bg-canvas-deep py-14">
