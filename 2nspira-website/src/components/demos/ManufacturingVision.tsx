@@ -3,7 +3,7 @@ import DemoTrust from "./DemoTrust";
 import Image from "next/image";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { demos } from "@/lib/demos";
-import { buttonPrimary, eyebrow, h2, pageMain } from "@/components/ui";
+import { eyebrow, h2, pageMain } from "@/components/ui";
 
 const scenes = [
   {
