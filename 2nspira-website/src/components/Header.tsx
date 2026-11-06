@@ -6,7 +6,7 @@ import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileMenu from "./MobileMenu";
 
-type MenuName = "services" | "ideas";
+type MenuName = "services" | "ideas" | "about";
 
 const serviceLinks = [
   { name: "Websites, Apps & Digital Platforms", href: "/websites" },
@@ -25,10 +25,15 @@ const ideaLinks = [
   { name: "Creative Shop", href: "/shop" },
 ];
 
+const aboutLinks = [
+  { name: "Our Story", href: "/about" },
+  { name: "Team & Delivery", href: "/team-delivery" },
+  { name: "AI Team", href: "/ai-team" },
+  { name: "Careers", href: "/careers" },
+];
+
 const primaryLinks = [
   { name: "Work", href: "/work" },
-  { name: "About", href: "/about" },
-  { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -36,7 +41,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<MenuName | null>(null);
   const navigationRef = useRef<HTMLElement>(null);
-  const menuButtonRefs = useRef<Record<MenuName, HTMLButtonElement | null>>({ services: null, ideas: null });
+  const menuButtonRefs = useRef<Record<MenuName, HTMLButtonElement | null>>({ services: null, ideas: null, about: null });
   const pinnedMenuRef = useRef<MenuName | null>(null);
   const pathname = usePathname();
 
@@ -46,7 +51,7 @@ export default function Header() {
     return path === "/" ? pathname === "/" : pathname.startsWith(path);
   };
   const menuIsCurrent = (menu: MenuName) =>
-    (menu === "services" ? serviceLinks : ideaLinks).some((link) => isCurrent(link.href));
+    (menu === "services" ? serviceLinks : menu === "ideas" ? ideaLinks : aboutLinks).some((link) => isCurrent(link.href));
 
   const closeMenu = (returnFocus = false) => {
     const previousMenu = openMenu;
@@ -141,6 +146,7 @@ export default function Header() {
             Work
           </Link>
           {renderMenu("ideas", "Ideas", ideaLinks)}
+          {renderMenu("about", "About", aboutLinks)}
           {primaryLinks.slice(1).map((link) => (
             <Link key={link.name} href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
               {link.name}

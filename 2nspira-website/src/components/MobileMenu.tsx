@@ -23,12 +23,20 @@ const ideaLinks = [
   { name: "Creative Shop", href: "/shop" },
 ];
 
+const aboutLinks = [
+  { name: "Our Story", href: "/about" },
+  { name: "Team & Delivery", href: "/team-delivery" },
+  { name: "AI Team", href: "/ai-team" },
+  { name: "Careers", href: "/careers" },
+];
+
 export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const serviceButtonRef = useRef<HTMLButtonElement>(null);
+  const aboutButtonRef = useRef<HTMLButtonElement>(null);
   const ideasButtonRef = useRef<HTMLButtonElement>(null);
-  const [openSection, setOpenSection] = useState<"services" | "ideas" | null>(null);
+  const [openSection, setOpenSection] = useState<"services" | "ideas" | "about" | null>(null);
   const pathname = usePathname();
 
   const isCurrent = (href: string) => {
@@ -45,7 +53,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
     if (event.key !== "Escape") return;
     event.preventDefault();
     if (openSection) {
-      const activeButton = openSection === "services" ? serviceButtonRef.current : ideasButtonRef.current;
+      const activeButton = openSection === "services" ? serviceButtonRef.current : openSection === "ideas" ? ideasButtonRef.current : aboutButtonRef.current;
       setOpenSection(null);
       activeButton?.focus();
       return;
@@ -84,7 +92,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
   if (!isOpen) return null;
 
   const accordion = (
-    key: "services" | "ideas",
+    key: "services" | "ideas" | "about",
     label: string,
     links: typeof serviceLinks,
     buttonRef: RefObject<HTMLButtonElement | null>,
@@ -141,8 +149,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           {accordion("services", "Services", serviceLinks, serviceButtonRef)}
           <Link href="/work" onClick={handleClose} aria-current={pathname === "/work" ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Work</Link>
           {accordion("ideas", "Ideas", ideaLinks, ideasButtonRef)}
-          <Link href="/about" onClick={handleClose} aria-current={isCurrent("/about") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">About</Link>
-          <Link href="/careers" onClick={handleClose} aria-current={isCurrent("/careers") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Careers</Link>
+          {accordion("about", "About", aboutLinks, aboutButtonRef)}
           <Link href="/contact" onClick={handleClose} aria-current={isCurrent("/contact") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Contact</Link>
           <div className="my-3 border-t border-line" />
           <Link href="/portal/login" onClick={handleClose} className="mt-2 block rounded-xl bg-accent px-4 py-3.5 text-center text-base font-medium text-white transition-colors hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas">Login</Link>
