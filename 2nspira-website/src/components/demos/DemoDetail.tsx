@@ -68,6 +68,48 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
           </aside>
         </div>
       </section>
+      {kind === "education" && (
+        <section className="border-y border-line bg-canvas-deep py-14">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <p className={eyebrow}>Choose your perspective</p>
+            <h2 className={`mt-4 ${h2}`}>
+              Four experiences. One shared student record.
+            </h2>
+            <p className="mt-5 max-w-3xl leading-8 text-body">
+              Choose your K–12 day. Families start with published fictional learning; staff and students can load an enrolled classroom example. Existing tab changes are kept when switching roles.
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                [
+                  "Administrator",
+                  "Review, admit, enroll, and follow the record.",
+                ],
+                [
+                  "Teacher",
+                  "Plan learning, give feedback, and publish a learning report.",
+                ],
+                ["Student", "Submit work, reflect on learning, and see feedback."],
+                ["Parent", "See Riley’s published learning, reflection, and feedback."],
+              ].map(([role, text], i) => (
+                <a
+                  href={`${demo.url}?role=${role}`}
+                  key={role}
+                  className={`${cardFlat} block p-6 focus-visible:outline-2 focus-visible:outline-accent ${["!bg-[#fff0d9]", "!bg-[#e0f4ef]", "!bg-[#efe4fa]", "!bg-[#fff1b8]"][i]}`}
+                >
+                  <h3 className="font-semibold text-ink">
+                    {{Administrator: "School office · Review admissions", Teacher: "Teacher · Open my classroom", Student: "Student · Continue my learning", Parent: "Family · See Riley’s learning"}[role]} <span aria-hidden="true">→</span>
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-body">{text}</p>
+                </a>
+              ))}
+            </div>
+            <p className="mt-5 text-xs leading-6 text-muted">
+              Role switching demonstrates appropriate views; it is not
+              production authentication or a secure multi-user system.
+            </p>
+          </div>
+        </section>
+      )}
       {kind === "education" && <SchoolVision />}
       {kind !== "education" && <><section className="border-y border-line bg-canvas-deep py-14 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-2">
@@ -103,50 +145,6 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
         </div>
       </section>
       </>}
-      {kind === "education" && (
-        <section className="border-y border-line bg-canvas-deep py-14">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <p className={eyebrow}>Choose your perspective</p>
-            <h2 className={`mt-4 ${h2}`}>
-              Four experiences. One shared student record.
-            </h2>
-            <p className="mt-5 max-w-3xl leading-8 text-body">
-              Start the full journey as Parent, or choose an experience and load
-              the enrolled example inside the demo. Switch roles without losing
-              the changes in your current tab.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                [
-                  "Administrator",
-                  "Review, admit, enroll, and follow the record.",
-                ],
-                [
-                  "Teacher",
-                  "Plan learning, give feedback, and publish a learning report.",
-                ],
-                ["Student", "Submit work, reflect on learning, and see feedback."],
-                ["Parent", "Apply, follow progress, and try sample tuition."],
-              ].map(([role, text]) => (
-                <a
-                  href={`${demo.url}?role=${role}`}
-                  key={role}
-                  className={`${cardFlat} block p-6 focus-visible:outline-2 focus-visible:outline-accent`}
-                >
-                  <h3 className="font-semibold text-ink">
-                    {role} <span aria-hidden="true">→</span>
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-body">{text}</p>
-                </a>
-              ))}
-            </div>
-            <p className="mt-5 text-xs leading-6 text-muted">
-              Role switching demonstrates appropriate views; it is not
-              production authentication or a secure multi-user system.
-            </p>
-          </div>
-        </section>
-      )}
       <section
         id="walkthrough"
         className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20"
