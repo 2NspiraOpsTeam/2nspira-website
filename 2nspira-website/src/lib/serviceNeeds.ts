@@ -2,9 +2,9 @@
 export const serviceNeeds = [
   {
     name: "Websites, Apps & Digital Platforms",
-    need: "We need a better website or app.",
-    help: "Build websites, web apps, and mobile apps around your customers—with business connections where needed.",
-    example: "Website and app development, accessible customer journeys, and scoped integrations.",
+    need: "We need a website, app, or internal workspace.",
+    help: "Build websites, web and mobile apps, and custom internal operations solutions around your customers and team.",
+    example: "Website and app development, internal operations workspaces, and scoped integrations.",
     href: "/websites",
     link: "Explore websites and apps",
   },

@@ -1,118 +1,151 @@
+import Image from "next/image";
 import Link from "next/link";
-import { GraduationCap, Factory, Building2, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import DemoHero from "@/components/demos/DemoHero";
+import DemoTrust from "@/components/demos/DemoTrust";
+import DemoSchema from "@/components/demos/DemoSchema";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import { demos, PROPERTY_DEMO_URL } from "@/lib/demos";
-import {
-  buttonPrimary,
-  cardFlat,
-  eyebrow,
-  h1,
-  h2,
-  lead,
-  pageMain,
-} from "@/components/ui";
+import { buttonPrimary, eyebrow, h2, pageMain } from "@/components/ui";
+const description =
+  "Explore interactive school, manufacturing and property management software demos. See connected workflows, clearer handoffs and practical possibilities with 2Nspira.";
 export const metadata = publicPageMetadata({
-  title: "Interactive Demos for Schools, Manufacturing & Property Operations",
-  shareTitle: "Explore a more connected way to work.",
-  description:
-    "Try connected school, manufacturing, and property-management workflows with fictional data. Explore practical ways to reduce repeated work and improve operational visibility.",
+  title: "Interactive Software Demos | Schools, Manufacturing & Property",
+  shareTitle: "Less friction. More possibility. See connected work in action.",
+  description,
   path: "/demos",
+  image: "/images/demos/manufacturing-workspace.webp",
 });
+const experiences = [
+  {
+    slug: "education",
+    category: "Education",
+    title: "More room for the moments that matter.",
+    text: "From a family’s first application to a teacher’s published feedback. One connected learning journey.",
+    image: "education-workspace",
+    alt: "Learning Grove school family overview with classroom learning and published feedback.",
+    url: demos.education.url,
+    steps: "Admissions → Classroom → Family",
+  },
+  {
+    slug: "manufacturing",
+    category: "Manufacturing",
+    title: "Keep work moving. Keep everyone in the picture.",
+    text: "See the shortage. Move the order. Clear the quality gate. Follow the handoffs across a fictional factory.",
+    image: "manufacturing-workspace",
+    alt: "Northstar manufacturing command center with production cells and material alerts.",
+    url: demos.manufacturing.url,
+    steps: "Materials → Production → Quality",
+  },
+  {
+    slug: "property-management",
+    category: "Property management",
+    title: "A better day for your office. And your residents.",
+    text: "Connect rent records, repairs and updates. See the same handoff from the office and resident sides.",
+    image: "property-workspace",
+    alt: "Harborstone property office showing portfolio balances and maintenance activity.",
+    url: PROPERTY_DEMO_URL,
+    steps: "Portfolio → Office → Resident",
+  },
+];
 export default function Demos() {
   return (
     <main className={pageMain}>
-      <section className="mx-auto max-w-6xl px-4 pb-14 pt-20 sm:px-6 sm:pt-24">
-        <p className={eyebrow}>Interactive demos</p>
-        <h1 className={`${h1} max-w-4xl`}>
-          See what better-connected work could feel like.
-        </h1>
-        <p className={`${lead} max-w-3xl`}>
-          Try everyday workflows from the perspective of the people using them.
-          Explore how your organization could reduce repeated tasks, make
-          clearer handoffs, and see what needs attention.
-        </p>
-        <p className="mt-6 text-sm leading-7 text-muted">
-          Fictional organizations. Sample data. No account required. These are
-          interactive demonstrations—not client systems or claims of measured
-          results.
-        </p>
-      </section>
+      <DemoSchema
+        path="/demos"
+        title="Interactive software demos"
+        description={description}
+        image="/images/demos/manufacturing-workspace.webp"
+      />
+      <DemoHero
+        overview
+        category="The 2Nspira interactive collection"
+        title="Less friction. More possibility."
+        text="Imagine your people spending less time chasing information—and more time moving things forward. Step inside connected experiences built around the work that matters."
+        image="/images/demos/manufacturing-workspace.webp"
+        alt="Actual Northstar demo workspace with a connected view of production, materials and quality."
+        href="#experiences"
+        steps={[
+          "Choose your world",
+          "Follow a real workflow",
+          "Imagine your next step",
+        ]}
+      />
       <section
-        className="mx-auto grid max-w-6xl gap-7 px-4 pb-20 sm:px-6 lg:grid-cols-2"
-        aria-label="Available demos"
+        id="experiences"
+        className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20"
       >
-        {(["education", "manufacturing"] as const).map((kind) => {
-          const d = demos[kind],
-            Icon = kind === "education" ? GraduationCap : Factory;
-          return (
+        <p className={eyebrow}>Choose your world</p>
+        <h2 className={`mt-4 max-w-3xl ${h2}`}>
+          Different industries.
+          <br />
+          The same possibility: better-connected work.
+        </h2>
+        <div className="mt-10 space-y-8">
+          {experiences.map((d, i) => (
             <article
-              className={`${cardFlat} flex flex-col overflow-hidden`}
-              key={kind}
+              key={d.slug}
+              className="demo-story-card grid overflow-hidden rounded-3xl border border-line bg-white lg:grid-cols-2"
             >
-              <div className="border-b border-line bg-accent-soft p-8 sm:p-10">
-                <Icon className="h-12 w-12 text-accent" strokeWidth={1.3} />
-                <p className={`mt-7 ${eyebrow}`}>
-                  {d.category} · Ready to explore
+              <Link
+                href={`/demos/${d.slug}`}
+                className={`block min-w-0 border-b border-line p-4 focus-visible:outline-2 focus-visible:outline-accent sm:p-6 lg:border-b-0 ${["bg-[#eee7f6]", "bg-[#e0eee6]", "bg-[#f0e9da]"][i]}`}
+                aria-label={`Discover the ${d.category} experience`}
+              >
+                <Image
+                  src={`/images/demos/${d.image}.webp`}
+                  alt={d.alt}
+                  width={1440}
+                  height={1000}
+                  sizes="(max-width:1024px) 100vw, 560px"
+                  unoptimized
+                  className="h-auto w-full rounded-xl border border-line shadow-sm"
+                />
+              </Link>
+              <div className="flex flex-col justify-center p-6 sm:p-9">
+                <p className={eyebrow}>{d.category}</p>
+                <h3 className="mt-4 text-2xl font-medium leading-tight tracking-tight text-ink sm:text-3xl">
+                  {d.title}
+                </h3>
+                <p className="mt-4 leading-7 text-body">{d.text}</p>
+                <p className="mt-5 text-xs font-semibold tracking-wide text-accent">
+                  {d.steps}
                 </p>
-                <h2 className={`mt-4 ${h2}`}>{d.title}</h2>
-              </div>
-              <div className="flex flex-1 flex-col p-8 sm:p-10">
-                <p className="leading-8 text-body">
-                  {kind === "education"
-                    ? "Connect registration, admissions, enrollment, schedules, attendance, coursework, assignments, and student progress. Explore administrator, teacher, student, and parent perspectives."
-                    : "Connect customer orders, production work orders, materials, procurement, quality checks, fulfillment, and reporting. Follow a batch through the factory and see each handoff."}
-                </p>
-                <p className="mt-4 text-sm leading-7 text-muted">
-                  {kind === "education"
-                    ? "Start with a family’s application and finish with published classroom feedback."
-                    : "Start with a customer order and finish with a quality-approved simulated shipment."}
-                </p>
-                <div className="mt-auto flex flex-wrap items-center gap-5 pt-8">
-                  <a href={d.url} className={buttonPrimary}>
-                    Explore Demo <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
-                  <Link
-                    href={`/demos/${kind}`}
+                <div className="mt-7 flex flex-wrap items-center gap-4">
+                  <Link href={`/demos/${d.slug}`} className={buttonPrimary}>
+                    Discover the experience{" "}
+                    <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" />
+                  </Link>
+                  <a
+                    href={d.url}
                     className="inline-flex min-h-11 items-center text-sm font-medium text-accent underline underline-offset-4"
                   >
-                    Overview & guided path
-                  </Link>
+                    Launch workspace ↗
+                  </a>
                 </div>
               </div>
             </article>
-          );
-        })}
-        <article className={`${cardFlat} overflow-hidden lg:col-span-2`}>
-          <div className="grid lg:grid-cols-2"><div className="bg-[#dceee3] p-8 sm:p-10"><Building2 className="h-12 w-12 text-accent" strokeWidth={1.3}/><p className={`mt-7 ${eyebrow}`}>Property management · Ready to explore</p><h2 className={`mt-4 ${h2}`}>Property Operations Workspace</h2><p className="mt-5 leading-8 text-body">Rent rolls, contacts, simulated rent collection, maintenance, and targeted resident updates. One connected fictional portfolio.</p></div><div className="flex flex-col justify-center p-8 sm:p-10"><p className="leading-8 text-body">Try the office and resident experiences: record a demo payment, complete a repair, and see the handoff from both sides.</p><div className="mt-7 flex flex-wrap items-center gap-5"><a href={PROPERTY_DEMO_URL} className={buttonPrimary}>Explore Demo <ArrowRight className="ml-2 h-4 w-4"/></a><Link href="/demos/property-management" className="inline-flex min-h-11 items-center text-sm font-medium text-accent underline underline-offset-4">Overview & guided path</Link></div></div></div>
-        </article>
-      </section>
-      <section className="border-y border-line bg-canvas-deep py-14">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className={h2}>Explore freely. Keep real work separate.</h2>
-          <p className="mt-5 max-w-3xl leading-8 text-body">
-            Changes belong to your browser tab, not a shared client database.
-            Demo actions don’t send messages, collect payments, create purchase
-            commitments, or dispatch shipments. Use Reset demo to restore the
-            original examples.
-          </p>
-          <p className="mt-6 text-sm leading-7 text-body">
-            Looking for project examples?{" "}
-            <Link
-              href="/work"
-              className="font-medium text-accent underline underline-offset-4"
-            >
-              Visit Work
-            </Link>
-            . Exploring how we can help?{" "}
-            <Link
-              href="/services"
-              className="font-medium text-accent underline underline-offset-4"
-            >
-              See our services
-            </Link>
-            .
-          </p>
+          ))}
         </div>
+      </section>
+      <DemoTrust />
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <details className="rounded-2xl border border-line p-6">
+          <summary className="min-h-11 cursor-pointer font-medium text-ink">
+            About these interactive experiences
+          </summary>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-body">
+            Fictional organizations and sample data, not client deployments or
+            measured client outcomes. Actions are simulated in your browser tab;
+            no real payments, messages, purchasing or shipments. Confirm Reset
+            demo to restore the examples. Do not enter personal information.
+            Explore{" "}
+            <Link href="/work" className="text-accent underline">
+              our project work
+            </Link>{" "}
+            for implementation examples.
+          </p>
+        </details>
       </section>
     </main>
   );

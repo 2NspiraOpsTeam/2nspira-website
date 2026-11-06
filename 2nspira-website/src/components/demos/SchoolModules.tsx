@@ -1,29 +1,219 @@
 import { ArrowRight, BookOpen, GraduationCap, Users } from "lucide-react";
 import { EDUCATION_DEMO_URL } from "@/lib/demos";
 const groups = [
- {title:"School operations",icon:GraduationCap,description:"One record from first enquiry to the school day.",modules:[
-  ["Registration & admissions","Capture student and guardian details, review sample documents, and track admission.","Try in demo"],
-  ["Enrollment & class capacity","Enroll into classes, check prerequisites, and explore a full elective’s waitlist.","Try in demo"],
-  ["Student & guardian records","Keep the same fictional learner and family connected throughout the journey.","Try in demo"],
-  ["Scheduling & attendance","See the enrollment-generated timetable and record a sample class attendance mark.","Try in demo"],
-  ["Tuition & payment status","View illustrative charges and create a simulated receipt. No money moves.","Try in demo"],
- ]},
- {title:"Teaching & learning",icon:BookOpen,description:"Connect the plan, the work, and the next step.",modules:[
-  ["Unit & lesson planning","Browse a three-step inquiry unit, learning intentions, and access strategies.","Read-only preview"],
-  ["Coursework & assignments","Publish materials and a learning task, then submit sample student work.","Try in demo"],
-  ["Assessment & feedback","Save a private grading draft and publish a score with actionable feedback.","Try in demo"],
-  ["Portfolio & student reflection","Bring a work sample, teacher feedback, and an editable student reflection together.","Try in demo"],
-  ["Learning reports","Review and publish a learning snapshot with feedback, reflection, and attendance.","Try in demo"],
- ]},
- {title:"Family & school community",icon:Users,description:"Make progress easier to understand and act on.",modules:[
-  ["Family progress view","Follow a child’s learning evidence and teacher-published feedback.","Try in demo"],
-  ["School communication","Explore announcements and a shared fictional school conversation. Nothing is sent.","Try in demo"],
-  ["Curriculum mapping & wider portfolios","Connect standards, subjects, media, and growth across school years.","Future option"],
-  ["Learning support & school insight","Explore coordinated support and richer reporting around school-specific needs.","Future option"],
-  ["Teacher-led AI & multilingual engagement","Consider reviewed assistance, translated updates, and family conferences.","Future option"],
- ]},
+  {
+    title: "School operations",
+    icon: GraduationCap,
+    description: "One record from first enquiry to the school day.",
+    modules: [
+      [
+        "Registration & admissions",
+        "Capture student and guardian details, review sample documents, and track admission.",
+        "Try in demo",
+      ],
+      [
+        "Enrollment & class capacity",
+        "Enroll into classes, check prerequisites, and explore a full elective’s waitlist.",
+        "Try in demo",
+      ],
+      [
+        "Student & guardian records",
+        "Keep the same fictional learner and family connected throughout the journey.",
+        "Try in demo",
+      ],
+      [
+        "Scheduling & attendance",
+        "See the enrollment-generated timetable and record a sample class attendance mark.",
+        "Try in demo",
+      ],
+      [
+        "Tuition & payment status",
+        "View illustrative charges and create a simulated receipt. No money moves.",
+        "Try in demo",
+      ],
+    ],
+  },
+  {
+    title: "Teaching & learning",
+    icon: BookOpen,
+    description: "Connect the plan, the work, and the next step.",
+    modules: [
+      [
+        "Unit & lesson planning",
+        "Browse a three-step inquiry unit, learning intentions, and access strategies.",
+        "Read-only preview",
+      ],
+      [
+        "Coursework & assignments",
+        "Publish materials and a learning task, then submit sample student work.",
+        "Try in demo",
+      ],
+      [
+        "Assessment & feedback",
+        "Save a private grading draft and publish a score with actionable feedback.",
+        "Try in demo",
+      ],
+      [
+        "Portfolio & student reflection",
+        "Bring a work sample, teacher feedback, and an editable student reflection together.",
+        "Try in demo",
+      ],
+      [
+        "Learning reports",
+        "Review and publish a learning snapshot with feedback, reflection, and attendance.",
+        "Try in demo",
+      ],
+    ],
+  },
+  {
+    title: "Family & school community",
+    icon: Users,
+    description: "Make progress easier to understand and act on.",
+    modules: [
+      [
+        "Family progress view",
+        "Follow a child’s learning evidence and teacher-published feedback.",
+        "Try in demo",
+      ],
+      [
+        "School communication",
+        "Explore announcements and a shared fictional school conversation. Nothing is sent.",
+        "Try in demo",
+      ],
+      [
+        "Curriculum mapping & wider portfolios",
+        "Connect standards, subjects, media, and growth across school years.",
+        "Future option",
+      ],
+      [
+        "Learning support & school insight",
+        "Explore coordinated support and richer reporting around school-specific needs.",
+        "Future option",
+      ],
+      [
+        "Teacher-led AI & multilingual engagement",
+        "Consider reviewed assistance, translated updates, and family conferences.",
+        "Future option",
+      ],
+    ],
+  },
 ];
 const destinations: Record<string, [string, string]> = {
- "Registration & admissions": ["Administrator", "Admissions"], "Enrollment & class capacity": ["Administrator", "Enrollment"], "Student & guardian records": ["Administrator", "Student record"], "Scheduling & attendance": ["Teacher", "Schedule & attendance"], "Tuition & payment status": ["Parent", "Tuition"], "Unit & lesson planning": ["Teacher", "Learning"], "Coursework & assignments": ["Teacher", "Learning"], "Assessment & feedback": ["Teacher", "Learning"], "Portfolio & student reflection": ["Student", "Learning"], "Learning reports": ["Parent", "Learning"], "Family progress view": ["Parent", "Learning"], "School communication": ["Parent", "Communication"]
+  "Registration & admissions": ["Administrator", "Admissions"],
+  "Enrollment & class capacity": ["Administrator", "Enrollment"],
+  "Student & guardian records": ["Administrator", "Student record"],
+  "Scheduling & attendance": ["Teacher", "Schedule & attendance"],
+  "Tuition & payment status": ["Parent", "Tuition"],
+  "Unit & lesson planning": ["Teacher", "Learning"],
+  "Coursework & assignments": ["Teacher", "Learning"],
+  "Assessment & feedback": ["Teacher", "Learning"],
+  "Portfolio & student reflection": ["Student", "Learning"],
+  "Learning reports": ["Parent", "Learning"],
+  "Family progress view": ["Parent", "Learning"],
+  "School communication": ["Parent", "Communication"],
 };
-export default function SchoolModules(){return <section id="school-modules" className="scroll-mt-28 bg-white py-16 sm:py-24" aria-labelledby="school-modules-title"><div className="mx-auto max-w-6xl px-4 sm:px-6"><div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[.18em] text-accent">Explore the modules</p><h2 id="school-modules-title" className="mt-4 text-3xl font-medium tracking-tight text-ink sm:text-4xl">A connected school.<br/>A clearer view of every part.</h2><p className="mt-5 leading-8 text-body">Start with the workflows your school needs most. Explore what works in this demonstration, what you can preview, and where a tailored platform could grow.</p></div><div className="mt-7 flex flex-wrap gap-3 text-xs font-medium"><span className="rounded-full border border-accent/30 bg-accent-soft px-4 py-2 text-ink">Try in demo · working simulation</span><span className="rounded-full border border-line bg-canvas-deep px-4 py-2 text-ink">Read-only preview · browse an example</span><span className="rounded-full border border-line px-4 py-2 text-body">Future option · not built</span></div><div className="mt-12 grid items-start gap-6 lg:grid-cols-3">{groups.map(({title,icon:Icon,description,modules})=><article key={title} className="overflow-hidden rounded-3xl border border-line"><div className="border-b border-line bg-canvas-deep p-6 sm:p-7"><Icon aria-hidden="true" className="text-accent" size={28}/><h3 className="mt-5 text-xl font-medium text-ink">{title}</h3><p className="mt-2 text-sm leading-7 text-body">{description}</p></div><ul className="divide-y divide-line px-6 sm:px-7">{modules.map(([name,description,status])=><li key={name} className="py-6"><p className="text-[11px] font-semibold uppercase tracking-wide text-accent">{status}</p><h4 className="mt-2 font-medium text-ink">{destinations[name] ? <a className="inline-flex min-h-11 items-center gap-2 underline underline-offset-4" href={`${EDUCATION_DEMO_URL}?role=${destinations[name][0]}&section=${encodeURIComponent(destinations[name][1])}`}>{name}<ArrowRight size={14} aria-hidden="true"/></a> : name}</h4><p className="mt-2 text-sm leading-7 text-body">{description}</p></li>)}</ul></article>)}</div><div className="mt-10 flex flex-col justify-between gap-5 rounded-2xl border border-line bg-canvas-deep p-6 sm:flex-row sm:items-center"><p className="max-w-2xl text-sm leading-7 text-body"><strong className="text-ink">Try one connected story:</strong> load the enrolled example, submit field notes as a student, add a reflection, then publish feedback and a learning report as a teacher. Switch to Parent to see the result.</p><a href={EDUCATION_DEMO_URL} className="inline-flex min-h-12 shrink-0 items-center gap-2 font-medium text-accent underline underline-offset-4">Explore Demo <ArrowRight size={16}/></a></div><p className="mt-5 text-xs leading-6 text-muted">Fictional data, tab-local changes, and reset controls. Role switching illustrates experiences; it is not production authentication. No real messages, charges, uploads, or AI services.</p></div></section>}
+export default function SchoolModules() {
+  return (
+    <section
+      id="school-modules"
+      className="scroll-mt-28 bg-white py-16 sm:py-24"
+      aria-labelledby="school-modules-title"
+    >
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[.18em] text-accent">
+            Explore the modules
+          </p>
+          <h2
+            id="school-modules-title"
+            className="mt-4 text-3xl font-medium tracking-tight text-ink sm:text-4xl"
+          >
+            A connected school.
+            <br />A clearer view of every part.
+          </h2>
+          <p className="mt-5 leading-8 text-body">
+            Start with the workflows your school needs most. Explore what works
+            in this demonstration, what you can preview, and where a tailored
+            platform could grow.
+          </p>
+        </div>
+        <div className="mt-7 flex flex-wrap gap-3 text-xs font-medium">
+          <span className="rounded-full border border-accent/30 bg-accent-soft px-4 py-2 text-ink">
+            Try in demo · working simulation
+          </span>
+          <span className="rounded-full border border-line bg-canvas-deep px-4 py-2 text-ink">
+            Read-only preview · browse an example
+          </span>
+          <span className="rounded-full border border-line px-4 py-2 text-body">
+            Future option · not built
+          </span>
+        </div>
+        <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
+          {groups.map(({ title, icon: Icon, description, modules }) => (
+            <article
+              key={title}
+              className="overflow-hidden rounded-3xl border border-line"
+            >
+              <div className="border-b border-line bg-canvas-deep p-6 sm:p-7">
+                <Icon aria-hidden="true" className="text-accent" size={28} />
+                <h3 className="mt-5 text-xl font-medium text-ink">{title}</h3>
+                <p className="mt-2 text-sm leading-7 text-body">
+                  {description}
+                </p>
+              </div>
+              <details className="px-6 sm:px-7">
+                <summary className="min-h-12 cursor-pointer py-4 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">
+                  Explore the workflows
+                </summary>
+                <ul className="divide-y divide-line">
+                  {modules.map(([name, description, status]) => (
+                    <li key={name} className="py-6">
+                      <p className="text-[11px] font-semibold uppercase tracking-wide text-accent">
+                        {status}
+                      </p>
+                      <h4 className="mt-2 font-medium text-ink">
+                        {destinations[name] ? (
+                          <a
+                            className="inline-flex min-h-11 items-center gap-2 underline underline-offset-4"
+                            href={`${EDUCATION_DEMO_URL}?role=${destinations[name][0]}&section=${encodeURIComponent(destinations[name][1])}`}
+                          >
+                            {name}
+                            <ArrowRight size={14} aria-hidden="true" />
+                          </a>
+                        ) : (
+                          name
+                        )}
+                      </h4>
+                      <p className="mt-2 text-sm leading-7 text-body">
+                        {description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </article>
+          ))}
+        </div>
+        <div className="mt-10 flex flex-col justify-between gap-5 rounded-2xl border border-line bg-canvas-deep p-6 sm:flex-row sm:items-center">
+          <p className="max-w-2xl text-sm leading-7 text-body">
+            <strong className="text-ink">Try one connected story:</strong> load
+            the enrolled example, submit field notes as a student, add a
+            reflection, then publish feedback and a learning report as a
+            teacher. Switch to Parent to see the result.
+          </p>
+          <a
+            href={EDUCATION_DEMO_URL}
+            className="inline-flex min-h-12 shrink-0 items-center gap-2 font-medium text-accent underline underline-offset-4"
+          >
+            Explore Demo <ArrowRight size={16} />
+          </a>
+        </div>
+        <p className="mt-5 text-xs leading-6 text-muted">
+          Fictional data, tab-local changes, and reset controls. Role switching
+          illustrates experiences; it is not production authentication. No real
+          messages, charges, uploads, or AI services.
+        </p>
+      </div>
+    </section>
+  );
+}

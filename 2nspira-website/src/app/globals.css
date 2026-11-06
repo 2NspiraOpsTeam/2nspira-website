@@ -213,3 +213,16 @@ main details > summary { min-height: 2.75rem; padding-block: .5rem; }
 :where(h3, h4) { line-height: 1.3; letter-spacing: -.02em; }
 :where(p, li, dd) { text-wrap: pretty; }
 button, input, select, textarea { font-family: inherit; }
+
+/* Product stories: visible without JavaScript; motion never hides content. */
+.demo-hero { background: radial-gradient(ellipse at 85% 20%, #dfe9f4 0, transparent 55%), radial-gradient(ellipse at 10% 90%, #e9eee4 0, transparent 55%), #f7f7f3; }
+.demo-screen { transition: transform 300ms ease, box-shadow 300ms ease; }
+@media (prefers-reduced-motion: no-preference) {
+  .demo-arrive { animation: demo-arrive 650ms ease-out both; }
+  .demo-preview { animation-delay: 100ms; }
+  .demo-screen:hover { transform: translateY(-4px); box-shadow: 0 20px 40px #273c581c; }
+  .demo-story-card { transition: transform 300ms ease, box-shadow 300ms ease; }
+  .demo-story-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+  @keyframes demo-arrive { from { transform: translateY(12px); } to { transform: translateY(0); } }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
