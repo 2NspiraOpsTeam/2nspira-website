@@ -17,6 +17,7 @@ const company = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
   { name: "Our work", href: "/work" },
+  { name: "Interactive demos", href: "/demos" },
   { name: "About 2Nspira", href: "/about" },
   { name: "Meet our AI team", href: "/ai-team" },
   { name: "Careers", href: "/careers" },
@@ -27,7 +28,8 @@ const ideas = [
   { name: "Videos", href: "/videos" },
   { name: "Resources", href: "/resources" },
   { name: "Leadership books", href: "/books" },
-  { name: "Manufacturing demo", href: "https://demo.2nspira.com/manufacturing/" },
+  { name: "School platform demo", href: "/demos/education" },
+  { name: "Manufacturing demo", href: "/demos/manufacturing" },
   { name: "Bookstore", href: "https://books.2nspira.com" },
   { name: "Creative shop", href: "/shop" },
 ];

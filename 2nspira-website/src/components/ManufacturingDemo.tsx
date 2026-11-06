@@ -12,8 +12,8 @@ export default function ManufacturingDemo() {
         <p className="mt-4 leading-7 text-body">Explore production, inventory, procurement, quality, and executive reporting in the Northstar Manufacturing Operations Command Center.</p>
         <p className="mt-3 text-sm leading-6 text-muted">Fictional company and synthetic data—not a client deployment. The operational assistant uses local rules, not a live AI model.</p>
         <div className="mt-6 flex flex-wrap items-center gap-4">
-          <a href="https://demo.2nspira.com/manufacturing/" className={buttonPrimary}>Explore the manufacturing demo →</a>
-          <Link href="/work#concepts-prototypes" className={`min-h-11 ${linkInline}`}>Read the project overview</Link>
+          <a href="/demos/manufacturing" className={buttonPrimary}>Explore the manufacturing demo →</a>
+          <Link href="/demos" className={`min-h-11 ${linkInline}`}>See all interactive demos</Link>
         </div>
       </div>
     </div>

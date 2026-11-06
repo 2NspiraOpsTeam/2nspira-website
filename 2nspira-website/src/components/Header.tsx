@@ -145,6 +145,7 @@ export default function Header() {
           <Link href={primaryLinks[0].href} aria-current={pathname === primaryLinks[0].href ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
             Work
           </Link>
+          <Link href="/demos" aria-current={isCurrent("/demos") ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">Demos</Link>
           {renderMenu("ideas", "Ideas", ideaLinks)}
           {renderMenu("about", "About", aboutLinks)}
           {primaryLinks.slice(1).map((link) => (
