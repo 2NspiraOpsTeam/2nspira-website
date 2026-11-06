@@ -43,6 +43,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
               <a href={demo.url} className={buttonPrimary}>
                 Explore Demo <ArrowUpRight className="ml-2 h-4 w-4" />
               </a>
+              {kind === "education" && <a href="#school-modules" className={buttonSecondary}>Browse modules</a>}
               <a href="#walkthrough" className={buttonSecondary}>
                 What should I try first?
               </a>
@@ -68,7 +69,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
         </div>
       </section>
       {kind === "education" && <SchoolVision />}
-      <section className="border-y border-line bg-canvas-deep py-14 sm:py-20">
+      {kind !== "education" && <><section className="border-y border-line bg-canvas-deep py-14 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-2">
           <div>
             <p className={eyebrow}>The challenge</p>
@@ -101,6 +102,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
           ))}
         </div>
       </section>
+      </>}
       {kind === "education" && (
         <section className="border-y border-line bg-canvas-deep py-14">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -121,9 +123,9 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
                 ],
                 [
                   "Teacher",
-                  "Publish learning, take attendance, and give feedback.",
+                  "Plan learning, give feedback, and publish a learning report.",
                 ],
-                ["Student", "Find classes, submit work, and see feedback."],
+                ["Student", "Submit work, reflect on learning, and see feedback."],
                 ["Parent", "Apply, follow progress, and try sample tuition."],
               ].map(([role, text]) => (
                 <a
