@@ -27,3 +27,7 @@
 @media(max-width:1000px) { .hero { gap:2rem; padding-inline:1.5rem; } .heroVisual { min-height:480px; } .framework { grid-template-columns:repeat(3,1fr); } .dimension { border-bottom:1px solid var(--color-line); } }
 @media(max-width:900px) { .hero { grid-template-columns:1fr; padding:3rem 1.25rem; } .heroVisual { min-height:380px; border-radius:1.5rem 1.5rem 4rem 1.5rem; } .proofBand { margin-inline:1.25rem; } .proofBand div { padding:0 .75rem; } .proofBand strong { font-size:2rem; } .proofBand span { font-size:.78rem; } .story { grid-template-columns:1fr; gap:2rem; } .partners { grid-template-columns:1fr; } .framework { grid-template-columns:1fr 1fr; } .photoCaption { bottom:2rem; left:1.5rem; } }
 @media(max-width:380px) { .headline { font-size:2.65rem; } .framework { grid-template-columns:1fr; } .dimension { border-right:0; } .proofBand div { padding:0 .5rem; } }
+
+.compass { background:#050505; padding:clamp(2rem,5vw,4rem); border-radius:1.5rem; --color-ink:#ffffff; --color-body:#d4d4d8; --color-accent:#a5c9ff; --color-line:#ffffff30; }
+.compass h2, .compass h3 { color:#fff; }
+@media(max-width:600px) { .compass { padding:2rem 1.25rem; } }

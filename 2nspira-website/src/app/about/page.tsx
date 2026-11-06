@@ -104,7 +104,7 @@ export default function AboutPage() {
           <Link href="/coaching" className={`mt-6 min-h-11 ${buttonPrimary}`}>Explore Entrepreneur Mentoring &amp; Coaching →</Link>
         </section>
 
-        <section className="mt-20" aria-labelledby="framework-heading">
+        <section className={`mt-20 ${styles.compass}`} aria-labelledby="framework-heading">
           <Reveal><p className={styles.eyebrow}>Our compass</p><h2 id="framework-heading" className={`mt-4 ${h2}`}>Good technology works on a human level.</h2><p className={`mt-4 max-w-2xl ${lead}`}>The 2Nspira Framework asks five questions that keep every decision connected to your people and purpose.</p></Reveal>
           <div className={styles.framework}>
             {framework.map((item, index) => <Reveal key={item.title} delay={index * 40}><div className={styles.dimension}><span className={styles.eyebrow}>{String(index + 1).padStart(2, "0")} / {item.title}</span><h3 className={`mt-5 ${h3}`}>{["Does it make work easier?", "Is it a sound investment?", "Does it build confidence?", "Does it feel like you?", "Does it serve your mission?"][index]}</h3><p className="mt-4 leading-7 text-body">{item.text}</p></div></Reveal>)}

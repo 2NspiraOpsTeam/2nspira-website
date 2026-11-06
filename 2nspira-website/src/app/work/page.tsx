@@ -56,35 +56,35 @@ const supportingProjects = [
     description:
       "An in-house storefront preview for collectible books. Checkout and operational features remain development scope, not a claim of live payment readiness.",
     url: "https://2nspira-books-preview.jcortez-36a.workers.dev/",
-    image: "/images/work/project-books.png",
+    image: "/images/work/live-books-20261105.jpg",
   },
   {
     name: "2Nspira",
     description:
       "Technology leadership, AI readiness, insights, and practical assessment tools in one clear digital home.",
     url: "https://2nspira.com",
-    image: "/images/work/project-2nspira.png",
+    image: "/images/work/live-2nspira-20261105.jpg",
   },
   {
     name: "GeVitals",
     description:
       "A bilingual clinic website combining migrated content, video, publishing, and local discovery.",
     url: "https://gevitals.com",
-    image: "/images/work/project-gevitals.png",
+    image: "/images/work/live-gevitals-20261105.jpg",
   },
   {
     name: "Open Goal Soccer",
     description:
       "An accessible digital archive preserving an inclusive youth soccer program's mission and community story.",
     url: "https://opengoalsoccer.com",
-    image: "/images/work/project-soccer.png",
+    image: "/images/work/live-soccer-20261105.jpg",
   },
   {
     name: "CalmLoop",
     description:
       "A low‑pressure companion offering gentle routine ideas for neurodivergent children and their families.",
     url: "https://calmloop.vercel.app",
-    image: "/images/work/project-calmloop.png",
+    image: "/images/work/live-calmloop-20261105.jpg",
   },
   {
     name: "Breadcrumb",
@@ -102,8 +102,8 @@ export default function WorkPage() {
       <section className="relative overflow-hidden bg-ink py-24 sm:py-32">
         <div className="absolute inset-0 opacity-40">
           <Image
-            src="/images/work/hero-new.png"
-            alt="Illustrative connected operations workspace"
+            src="/images/advisory/focused-collaboration.webp"
+            alt="Professionals reviewing a digital project together"
             fill
             className="object-cover object-center"
             priority
@@ -142,18 +142,18 @@ export default function WorkPage() {
             </div >
           </Reveal>
 
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="order-2 lg:order-1 flex items-center justify-center">
+          <div className="grid gap-10">
+            <div>
               <Image
-                src="/images/pages/teams-showcase-20261028.jpg"
+                src="/images/work/live-teams-20261105.jpg"
                 alt="Teams Management public website with property discovery and tenant services"
                 width={1440}
-                height={1000}
+                height={900}
                 className="w-full h-auto rounded-2xl border border-line shadow-sm"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(min-width: 1152px) 1104px, calc(100vw - 32px)"
               />
             </div >
-            <div className="order-1 space-y-6 lg:order-2">
+            <div className={styles.showcaseDetails}>
               <p className="text-sm font-semibold text-accent">Status: Published website</p>
               <a href="https://www.teamsmanagement.com/" target="_blank" rel="noopener noreferrer" className={`${buttonPrimary} focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent`}>Visit Teams Management <span className="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
               <p className="text-xl text-body"><strong>Challenge: </strong>{teamsChallenge}</p>
@@ -235,7 +235,7 @@ export default function WorkPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <article data-catalog-card className={`${styles.engineeringCard} ${styles.featured} overflow-hidden rounded-2xl border border-line bg-canvas`}>
               <div className={styles.featuredImage}>
-                <Image src="/images/advisory/personal-ai-workspace-v1.webp" alt="Illustration of a human-guided AI workspace connecting research, planning and tasks" fill sizes="(min-width: 768px) 55vw, 100vw" className="object-cover" />
+                <Image src="/images/advisory/focused-collaboration.webp" alt="Professionals reviewing work together at a laptop" fill sizes="(min-width: 768px) 55vw, 100vw" className="object-cover" />
               </div>
               <div className="flex flex-col justify-center p-6 sm:p-8">
                 <p className="text-sm font-semibold text-accent">Field notes · Internal AI experiment</p>
@@ -246,15 +246,15 @@ export default function WorkPage() {
             </article>
             {supportingProjects.filter(project => ["2Nspira", "2Nspira Books", "Breadcrumb", "CalmLoop"].includes(project.name)).map(project => {
               const visuals: Record<string, { image: string; alt: string; label: string }> = {
-                "2Nspira Books": { image: "books", alt: "2Nspira Books storefront preview featuring collectible editions", label: "Storefront preview" },
-                "2Nspira": { image: "2nspira", alt: "2Nspira project artwork connecting people, technology and possibility", label: "Our digital platform" },
-                "Breadcrumb": { image: "breadcrumb", alt: "Breadcrumb illustrative project artwork with maps and investigation tools", label: "OSINT challenge game" },
-                "CalmLoop": { image: "calmloop", alt: "CalmLoop illustrative project artwork showing a parent and child learning together", label: "Family-focused companion" },
+                "2Nspira Books": { image: "/images/work/live-books-20261105.jpg", alt: "2Nspira Books storefront preview featuring collectible editions", label: "Storefront preview" },
+                "2Nspira": { image: "/images/work/live-2nspira-20261105.jpg", alt: "2Nspira public website homepage", label: "Our digital platform" },
+                "Breadcrumb": { image: "/images/work/project-breadcrumb.png", alt: "Breadcrumb project artwork featuring an investigation workspace", label: "OSINT challenge game" },
+                "CalmLoop": { image: "/images/work/live-calmloop-20261105.jpg", alt: "CalmLoop companion application start screen", label: "Family-focused companion" },
               };
               const visual = visuals[project.name];
               return <article key={project.name} data-catalog-card className={`${styles.engineeringCard} flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-canvas`}>
                 <div className="relative aspect-video overflow-hidden bg-surface">
-                  <Image src={`/images/work/engineering-${visual.image}-v1.webp`} alt={visual.alt} fill sizes="(min-width: 1152px) 548px, (min-width: 768px) 48vw, calc(100vw - 32px)" className="object-contain" />
+                  <Image src={visual.image} alt={visual.alt} fill sizes="(min-width: 1152px) 548px, (min-width: 768px) 48vw, calc(100vw - 32px)" className="object-contain" />
                 </div>
                 <div className="flex flex-1 flex-col p-6 sm:p-8">
                   <p className="text-sm font-semibold text-accent">{visual.label} · Internal project</p>
@@ -278,8 +278,8 @@ export default function WorkPage() {
             </div >
           </Reveal>
 
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="space-y-6">
+          <div className="flex flex-col gap-10">
+            <div className={styles.showcaseDetails}>
               <p className="text-sm font-semibold text-accent">Status: Live interactive prototype · Fictional demonstration company</p>
               <p className="text-xl text-body"><strong>Challenge: </strong>{manufacturingChallenge}</p>
               <p className="text-lg text-body/80"><strong>Approach: </strong>{manufacturingOperationalShift}</p>
@@ -305,14 +305,14 @@ export default function WorkPage() {
               </div>
               <p className="text-sm text-body/80">No account required. Your changes stay in your own browser tab, with a clear reset option.</p>
             </div >
-            <div className="flex items-center justify-center">
+            <div className="order-first">
               <Image
                 src="/images/work/northstar-manufacturing-demo.webp"
                 alt="Northstar Manufacturing interactive demonstration with production cells, order pipeline, inventory alerts, and quality holds"
                 width={1600}
                 height={1000}
                 className="w-full h-auto rounded-2xl border border-line shadow-sm"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(min-width: 1152px) 1104px, calc(100vw - 32px)"
               />
             </div >
           </div >
