@@ -27,6 +27,18 @@ export default function TeamContent({
           <span className="text-accent">Delivery you can follow.</span>
         </h1>
         <p className={`${lead} max-w-3xl`}>{c.intro}</p>
+        <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
+          <img
+            src="/images/leadership/team-specialties-owner-20261105.png"
+            alt="2Nspira human team: Joaquin — Research, Strategy & Communications; Sebastian — Engineering & AI Development; Ethan — Operations & Automation; Valentina — Digital Experience & Creative Design; Mason — Quality Assurance & Validation; Ashley — Client Engagement & Partnerships."
+            width={1200}
+            height={600}
+            className="h-auto w-full"
+          />
+          <figcaption className="px-4 py-3 text-sm text-body">
+            Six human specialties. Explore individual profiles below for names and roles.
+          </figcaption>
+        </figure>
         <nav aria-label="On this page" className="mt-8 flex flex-wrap gap-3">
           {[
             ["people", "Our people"],

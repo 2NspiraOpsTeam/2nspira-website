@@ -90,3 +90,6 @@ visually reviewed. These are local checks, not production verification.
 The shared ChatGPT URL returned only a generic share shell; the direct briefing
 is the content source. The larger Team & Delivery publication still requires
 human delivery ownership and its existing profile/evidence publication gates.
+
+## Owner-approved banner and role alignment — 2026-11-05
+Jeffrey approved the supplied six-person banner as the main Team & Delivery banner and its displayed specialties as the six matching human profile roles. Preserved existing biographies and separate profile/publication approvals; this approval does not establish engagement-specific delivery ownership. Banner uses its full aspect ratio without cropping; accessible text lists all six specialties.

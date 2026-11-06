@@ -17,7 +17,7 @@
     {
       "id": "mason-jefferson",
       "name": "Mason Jefferson",
-      "role": "AI Engineer — AI labs & agent orchestration",
+      "role": "Quality Assurance & Validation",
       "bio": "Mason focuses on evaluating AI models and agent development environments, and coordinating AI-assisted websites and business operations modules. His work connects practical experimentation with repeatable development workflows.",
       "photo": "/images/leadership/mason-jefferson-owner-20261105.jpg",
       "linkedin": "https://www.linkedin.com/in/mason-jefferson-a7767b446/",
@@ -28,7 +28,7 @@
     {
       "id": "sebastian-leandro",
       "name": "Sebastian Leandro",
-      "role": "Lead Developer",
+      "role": "Engineering & AI Development",
       "bio": "Sebastian connects software engineering with business priorities, considering scope, maintenance, reliability, and team coordination. His approach focuses on understanding the problem before choosing what to build.",
       "photo": "/images/leadership/sebastian-leandro-owner-20261105.jpg",
       "linkedin": "https://www.linkedin.com/in/sebastian-leandro-0a4986446/",
@@ -39,7 +39,7 @@
     {
       "id": "ethan-alexander",
       "name": "Ethan Alexander",
-      "role": "AI Engineer — integration & automation",
+      "role": "Operations & Automation",
       "bio": "Ethan connects AI models, knowledge, and tools into practical workflows using retrieval-augmented generation, automation, and agent-based systems. His background spans technical support and network infrastructure, informing his focus on troubleshooting, reliability, and integration.",
       "photo": "/images/leadership/ethan-alexander-owner-20261105.jpg",
       "linkedin": "https://www.linkedin.com/in/ethan-alexander-2nspira/",
@@ -50,7 +50,7 @@
     {
       "id": "ashley-galum",
       "name": "Ashley Galum",
-      "role": "Marketing & Operations Specialist",
+      "role": "Client Engagement & Partnerships",
       "bio": "Ashley works across marketing and business operations, helping keep priorities visible, information organized, and follow-up clear. Her role connects marketing coordination with the day-to-day support that helps a growing team move work forward.",
       "photo": "/images/leadership/ashley-galum-owner-20261105.jpg",
       "linkedin": "https://www.linkedin.com/in/ashley-galum-817690446/",
@@ -61,8 +61,8 @@
     {
       "id": "valentina-maria",
       "name": "Valentina Maria",
-      "role": "Head of Business Development",
-      "bio": "Valentina leads business development at 2Nspira, bringing strengths in leadership, teamwork, and collaboration. Her background includes undergraduate studies at Hofstra University and a master’s degree in Biology from Columbia University.",
+      "role": "Digital Experience & Creative Design",
+      "bio": "Valentina leads business development at 2Nspira, bringing strengths in leadership, teamwork, and collaboration. Her background includes undergraduate studies at Hofstra University and a master\u2019s degree in Biology from Columbia University.",
       "photo": "/images/leadership/valentina-maria-owner-20261105.jpg",
       "linkedin": "",
       "skills": "Business development; leadership; teamwork; collaboration",
@@ -72,8 +72,8 @@
     {
       "id": "joaquin-nicolas",
       "name": "Joaquin Nicolas",
-      "role": "Bioengineering · Biology & Technology",
-      "bio": "Joaquin works at the intersection of bioengineering, biology, and technology. His background includes undergraduate studies at Johns Hopkins University and a master’s degree in Biology from Columbia University, bringing a life-sciences foundation to his technical focus.",
+      "role": "Research, Strategy & Communications",
+      "bio": "Joaquin works at the intersection of bioengineering, biology, and technology. His background includes undergraduate studies at Johns Hopkins University and a master\u2019s degree in Biology from Columbia University, bringing a life-sciences foundation to his technical focus.",
       "photo": "/images/leadership/joaquin-nicolas-owner-20261105.jpg",
       "linkedin": "",
       "skills": "Bioengineering; biology and technology",
