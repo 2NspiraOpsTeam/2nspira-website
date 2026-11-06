@@ -28,12 +28,12 @@ export default function TeamContent({
         </h1>
         <p className={`${lead} max-w-3xl`}>{c.intro}</p>
         <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
-          <div className="aspect-[1774/680] overflow-hidden">
+          <div className="aspect-[2/1] overflow-hidden">
             <img
-              src="/images/leadership/team-professional-owner-20261105.png"
+              src="/images/leadership/team-realistic-owner-20261105.png"
               alt="2Nspira team, left to right: Joaquin, Sebastian, Ethan, Valentina, Mason, and Ashley."
-              width={1200}
-              height={600}
+              width={1774}
+              height={887}
               className="h-full w-full object-cover object-top"
             />
           </div>
