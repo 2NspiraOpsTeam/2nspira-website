@@ -96,3 +96,9 @@ Jeffrey approved the supplied six-person banner as the main Team & Delivery bann
 
 ## Updated owner banner — 2026-11-05
 Replaced the main banner with Jeffrey’s supplied Six-Person Professional Portrait Banner. Existing roles, individual portraits, accessible description and uncropped responsive layout are unchanged. Draft only; no production publication.
+
+## LinkedIn title alignment (2026-11-05)
+
+Jeffrey requested titles match LinkedIn rather than the supplied banner specialties. Read the signed-in LinkedIn profiles live: Mason and Ethan — AI Engineer; Sebastian — Lead Developer; Ashley — Marketing & Operations Specialist; Jeffrey — Technology Executive. Keep specializations in the existing skills/biographies rather than substituting them for job titles. Valentina and Joaquin have no LinkedIn profiles per Jeffrey: restore owner-supplied Head of Business Development for Valentina and descriptive Bioengineering · Biology & Technology for Joaquin (not a verified company title). The banner source is unchanged; a presentation-only top-aligned crop omits its conflicting embedded names/specialty strip. Accessible text no longer repeats outdated roles. This supersedes the earlier banner-role assignments; draft only.
+
+Title-alignment QA: lint, canonical build/route smoke and TypeScript passed. Local rendered Admin draft preview at 1440/768/390/320 verified all seven exact role labels, decoded portraits, banner crop ratio, no horizontal overflow, and no page errors. Hosted preview and production not verified for this revision.

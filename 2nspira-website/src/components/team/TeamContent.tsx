@@ -28,15 +28,17 @@ export default function TeamContent({
         </h1>
         <p className={`${lead} max-w-3xl`}>{c.intro}</p>
         <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
-          <img
-            src="/images/leadership/team-professional-owner-20261105.png"
-            alt="2Nspira human team: Joaquin — Research, Strategy & Communications; Sebastian — Engineering & AI Development; Ethan — Operations & Automation; Valentina — Digital Experience & Creative Design; Mason — Quality Assurance & Validation; Ashley — Client Engagement & Partnerships."
-            width={1200}
-            height={600}
-            className="h-auto w-full"
-          />
+          <div className="aspect-[1774/680] overflow-hidden">
+            <img
+              src="/images/leadership/team-professional-owner-20261105.png"
+              alt="2Nspira team, left to right: Joaquin, Sebastian, Ethan, Valentina, Mason, and Ashley."
+              width={1200}
+              height={600}
+              className="h-full w-full object-cover object-top"
+            />
+          </div>
           <figcaption className="px-4 py-3 text-sm text-body">
-            Six human specialties. Explore individual profiles below for names and roles.
+            Explore individual profiles below for current roles and professional backgrounds.
           </figcaption>
         </figure>
         <nav aria-label="On this page" className="mt-8 flex flex-wrap gap-3">
