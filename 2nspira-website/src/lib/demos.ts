@@ -125,3 +125,12 @@ export const demos = {
       "One product and bill of materials, full-batch quality acceptance, illustrative capacity and shifts, and synthetic historical charts. Multi-product planning, resource calendars, partial batches, traceability, real carrier events, enterprise role controls, forecasting, and live integrations are not included. These are follow-on gaps for a broader manufacturing solution, not available demo features.",
   },
 } as const;
+
+// Shared navigation registry: add future published demos here.
+export const demoNavigationLinks = [
+  { name: "All demos", href: "/demos" },
+  ...Object.entries(demos).map(([slug, demo]) => ({
+    name: demo.title,
+    href: `/demos/${slug}`,
+  })),
+];

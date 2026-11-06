@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileMenu from "./MobileMenu";
+import { demoNavigationLinks } from "@/lib/demos";
 
-type MenuName = "services" | "ideas" | "about";
+type MenuName = "services" | "ideas" | "about" | "demos";
 
 const serviceLinks = [
   { name: "Websites, Apps & Digital Platforms", href: "/websites" },
@@ -41,7 +42,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<MenuName | null>(null);
   const navigationRef = useRef<HTMLElement>(null);
-  const menuButtonRefs = useRef<Record<MenuName, HTMLButtonElement | null>>({ services: null, ideas: null, about: null });
+  const menuButtonRefs = useRef<Record<MenuName, HTMLButtonElement | null>>({ services: null, ideas: null, about: null, demos: null });
   const pinnedMenuRef = useRef<MenuName | null>(null);
   const pathname = usePathname();
 
@@ -51,7 +52,7 @@ export default function Header() {
     return path === "/" ? pathname === "/" : pathname.startsWith(path);
   };
   const menuIsCurrent = (menu: MenuName) =>
-    (menu === "services" ? serviceLinks : menu === "ideas" ? ideaLinks : aboutLinks).some((link) => isCurrent(link.href));
+    (menu === "services" ? serviceLinks : menu === "ideas" ? ideaLinks : menu === "demos" ? demoNavigationLinks : aboutLinks).some((link) => isCurrent(link.href));
 
   const closeMenu = (returnFocus = false) => {
     const previousMenu = openMenu;
@@ -114,7 +115,7 @@ export default function Header() {
           </svg>
         </button>
 
-        <div id={`${menu}-navigation`} className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "services" ? "w-80" : "w-48"}`}>
+        <div id={`${menu}-navigation`} className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "services" || menu === "demos" ? "w-80" : "w-48"}`}>
           <div className="rounded-2xl border border-line bg-canvas p-2 shadow-[0_16px_40px_rgba(35,41,54,0.14)]">
             {menu === "services" && (
               <Link href="/services" onClick={() => closeMenu()} className="mb-1 block rounded-xl px-3 py-2.5 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
@@ -122,7 +123,7 @@ export default function Header() {
               </Link>
             )}
             {links.map((link) => (
-              <Link key={link.name} href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined} onClick={() => closeMenu()} className="block rounded-xl px-3 py-2.5 text-sm font-medium text-body transition-colors duration-200 hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+              <Link key={link.name} href={link.href} aria-current={(link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} onClick={() => closeMenu()} className="block rounded-xl px-3 py-2.5 text-sm font-medium text-body transition-colors duration-200 hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
                 {link.name}
               </Link>
             ))}
@@ -145,11 +146,11 @@ export default function Header() {
           <Link href={primaryLinks[0].href} aria-current={pathname === primaryLinks[0].href ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
             Work
           </Link>
-          <Link href="/demos" aria-current={isCurrent("/demos") ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">Demos</Link>
+          {renderMenu("demos", "Demos", demoNavigationLinks)}
           {renderMenu("ideas", "Ideas", ideaLinks)}
           {renderMenu("about", "About", aboutLinks)}
           {primaryLinks.slice(1).map((link) => (
-            <Link key={link.name} href={link.href} aria-current={isCurrent(link.href) ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+            <Link key={link.name} href={link.href} aria-current={(link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
               {link.name}
             </Link>
           ))}

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import type { KeyboardEvent as ReactKeyboardEvent, RefObject } from "react";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { demoNavigationLinks } from "@/lib/demos";
 
 const serviceLinks = [
   { name: "Websites, Apps & Digital Platforms", href: "/websites" },
@@ -35,8 +36,9 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const serviceButtonRef = useRef<HTMLButtonElement>(null);
   const aboutButtonRef = useRef<HTMLButtonElement>(null);
+  const demosButtonRef = useRef<HTMLButtonElement>(null);
   const ideasButtonRef = useRef<HTMLButtonElement>(null);
-  const [openSection, setOpenSection] = useState<"services" | "ideas" | "about" | null>(null);
+  const [openSection, setOpenSection] = useState<"services" | "ideas" | "about" | "demos" | null>(null);
   const pathname = usePathname();
 
   const isCurrent = (href: string) => {
@@ -53,7 +55,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
     if (event.key !== "Escape") return;
     event.preventDefault();
     if (openSection) {
-      const activeButton = openSection === "services" ? serviceButtonRef.current : openSection === "ideas" ? ideasButtonRef.current : aboutButtonRef.current;
+      const activeButton = openSection === "services" ? serviceButtonRef.current : openSection === "ideas" ? ideasButtonRef.current : openSection === "demos" ? demosButtonRef.current : aboutButtonRef.current;
       setOpenSection(null);
       activeButton?.focus();
       return;
@@ -92,7 +94,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
   if (!isOpen) return null;
 
   const accordion = (
-    key: "services" | "ideas" | "about",
+    key: "services" | "ideas" | "about" | "demos",
     label: string,
     links: typeof serviceLinks,
     buttonRef: RefObject<HTMLButtonElement | null>,
@@ -120,7 +122,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
             </Link>
           )}
           {links.map((link) => (
-            <Link key={link.name} href={link.href} onClick={handleClose} aria-current={isCurrent(link.href) ? "page" : undefined} className="flex min-h-12 items-center rounded-xl px-4 py-3 text-base font-medium leading-6 text-body transition-colors hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+            <Link key={link.name} href={link.href} onClick={handleClose} aria-current={(link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} className="flex min-h-12 items-center rounded-xl px-4 py-3 text-base font-medium leading-6 text-body transition-colors hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
               {link.name}
             </Link>
           ))}
@@ -148,7 +150,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
         <nav className="space-y-1 py-5" aria-label="Mobile navigation">
           {accordion("services", "Services", serviceLinks, serviceButtonRef)}
           <Link href="/work" onClick={handleClose} aria-current={pathname === "/work" ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Work</Link>
-          <Link href="/demos" onClick={handleClose} aria-current={isCurrent("/demos") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Demos</Link>
+          {accordion("demos", "Demos", demoNavigationLinks, demosButtonRef)}
           {accordion("ideas", "Ideas", ideaLinks, ideasButtonRef)}
           {accordion("about", "About", aboutLinks, aboutButtonRef)}
           <Link href="/contact" onClick={handleClose} aria-current={isCurrent("/contact") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Contact</Link>
