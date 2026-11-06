@@ -1,0 +1,16 @@
+.collaborators {
+  --color-canvas: #050505;
+  --color-canvas-deep: #050505;
+  --color-surface: #13171d;
+  --color-ink: #ffffff;
+  --color-body: #cbd3df;
+  --color-muted: #b6c2d2;
+  --color-line: #343d49;
+  --color-line-strong: #526174;
+  --color-accent: #a9d4ff;
+  --color-accent-strong: #d6eaff;
+  --color-accent-soft: #172637;
+  color: var(--color-ink);
+  background: #050505;
+  color-scheme: dark;
+}
