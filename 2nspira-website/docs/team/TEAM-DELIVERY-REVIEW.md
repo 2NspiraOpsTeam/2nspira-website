@@ -65,3 +65,28 @@ On-site profile correction QA: lint, canonical build and route smoke, and typech
 ## Fully labeled owner portrait batch (2026-11-05)
 
 Assigned the files explicitly named Sebastian, Valentina, Joaquin, Ashley, and Mason; retained the previously labeled Ethan portrait and Jeffrey’s existing portrait. Owner uploads are resized to a maximum 800-pixel edge without generative changes. All seven portraits decoded in the isolated authenticated local draft preview at 1440/768/390; no page errors or horizontal overflow. Mobile screenshot reviewed. No identities inferred from unlabeled images. This verifies local draft presentation only; hosted preview and production publication remain unverified.
+
+## AI Team briefing — 2026-11-05
+
+Jeffrey supplied the five-agent role brief directly. Added a dedicated `/ai-team`
+page with symbolic initial avatars, individual specialties, personas, taglines,
+expandable responsibilities, working styles, and agent-specific boundaries.
+Role scope is explicitly distinguished from operational verification. Brian's
+checks do not replace professional security auditing; Dax is not presented as
+an autonomous production operator. Human direction and accountability remain
+central. No human profile approval or delivery-lead assignment is inferred.
+
+Updated the existing draft's five agent descriptions and marked the supplied
+role descriptions approved. No production content snapshot was written.
+Discovery links: AI Enablement, footer, sitemap, and Team & Delivery section.
+Reuses site components and native HTML details/summary; no CMS, package, paid
+service, generated portrait, or schema change added for this request.
+
+Validation: lint, canonical build:ci and route smoke, TypeScript, and 37 existing
+Team & Delivery handler/D1 checks passed. Built Worker browser QA passed at
+1440, 768, 390, and 320px: five profiles, pointer and keyboard disclosure toggles,
+refresh reset, no horizontal overflow or page exceptions. Mobile screenshot
+visually reviewed. These are local checks, not production verification.
+The shared ChatGPT URL returned only a generic share shell; the direct briefing
+is the content source. The larger Team & Delivery publication still requires
+human delivery ownership and its existing profile/evidence publication gates.

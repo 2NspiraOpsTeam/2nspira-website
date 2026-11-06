@@ -55,7 +55,7 @@ export default function Page() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     <section data-service-hero className="border-b border-line bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-        <Link href="/services" className={linkInline}>← All services</Link>
+        <div className="flex flex-wrap gap-6"><Link href="/services" className={linkInline}>← All services</Link><Link href="/ai-team" className={linkInline}>Meet our human-led AI team →</Link></div>
         <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
           <div><EyebrowPill>AI Enablement &amp; Organizational Transformation</EyebrowPill>
             <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Move beyond using AI. Become an AI-enabled organization.</h1>

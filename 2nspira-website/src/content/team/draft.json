@@ -85,37 +85,37 @@
     {
       "id": "adam",
       "name": "Adam",
-      "role": "Research, engineering & coordination",
-      "bio": "Supports research, development, testing, documentation, and coordination of authorized work. Reports verification gaps and requires human decisions for business commitments.",
-      "approved": false
+      "role": "AI Lead Engineer and Technical Architect",
+      "bio": "Supports architecture, software development, AI integrations, automation, troubleshooting, and authorized deployment. Reports test evidence and verification gaps; people authorize critical decisions.",
+      "approved": true
     },
     {
       "id": "maya",
       "name": "Maya",
-      "role": "Clarity, experience & communication",
-      "bio": "Supports clear explanations, user experience, and audience-aligned documentation. Human review remains necessary.",
-      "approved": false
+      "role": "AI Research and Strategic Communications Specialist",
+      "bio": "Supports research, strategy, proposals, messaging, and communications development. Sources and outward-facing claims require human review; outreach requires authorization.",
+      "approved": true
     },
     {
       "id": "brian",
       "name": "Brian",
-      "role": "Execution safety & reliability",
-      "bio": "Supports implementation planning, delivery consistency, and operational integrity. Does not independently guarantee safety or business outcomes.",
-      "approved": false
+      "role": "AI Quality Assurance and Validation Specialist",
+      "bio": "Supports functional and regression testing, defect documentation, user journey validation, risk reviews, and release-readiness recommendations. Security-related checks do not replace professional security auditing; people approve releases.",
+      "approved": true
     },
     {
       "id": "dax",
       "name": "Dax",
-      "role": "",
-      "bio": "",
-      "approved": false
+      "role": "AI Operations and Infrastructure Specialist",
+      "bio": "Intended scope includes workflow coordination, automation, operational analysis, readiness support, and repeatable process documentation. Does not imply autonomous production management or validated continuous monitoring.",
+      "approved": true
     },
     {
       "id": "cleo",
       "name": "Cleo",
-      "role": "",
-      "bio": "",
-      "approved": false
+      "role": "AI Creative Designer and Front-End Experience Specialist",
+      "bio": "Supports user journeys, visual design, front-end components, and accessible responsive experiences. Designs require rendered validation and human review; accessibility certification is not implied.",
+      "approved": true
     }
   ],
   "projects": [

@@ -12,6 +12,7 @@ const pages: Array<{
   changeFrequency: NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 }> = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/ai-team", priority: 0.7, changeFrequency: "monthly" },
   { path: "/ai-enablement", priority: 0.8, changeFrequency: "monthly" },
   { path: "/automation-systems-optimization", priority: 0.8, changeFrequency: "monthly" },
   { path: "/websites", priority: 0.8, changeFrequency: "monthly" },

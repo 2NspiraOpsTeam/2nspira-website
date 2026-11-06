@@ -205,6 +205,7 @@ export default function TeamContent({
             Human-led. AI-assisted.
           </h2>
           <p className={`${lead} max-w-4xl`}>{c.ai}</p>
+          <Link href="/ai-team" className="mt-5 inline-flex min-h-11 items-center text-accent underline">Meet our AI team: roles, workflow &amp; boundaries →</Link>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {c.agents
               .filter((a) => preview || a.approved)
