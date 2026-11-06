@@ -124,7 +124,7 @@ export function sameOrigin(request: Request) {
   if (request.headers.get("origin") !== new URL(request.url).origin)
     fail(403, "Please submit from this website.");
 }
-export async function admin(request: Request) {
+export async function admin(request: Request, hiringOnly = true) {
   const token = request.headers
     .get("cookie")
     ?.split(";")
@@ -147,7 +147,7 @@ export async function admin(request: Request) {
     .split(",")
     .map((v) => v.trim().toLowerCase())
     .filter(Boolean);
-  if (!allowed.includes(identity!.email.toLowerCase()))
+  if (hiringOnly && !allowed.includes(identity!.email.toLowerCase()))
     fail(403, "Access is restricted to authorized hiring personnel.");
   return identity!;
 }

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import {hasPublishedTeam} from "@/lib/team/server";
 import posts from "@/content/posts/index.json";
 import { jobs } from "@/lib/careers/server";
 export const dynamic = "force-dynamic";
@@ -11,6 +12,7 @@ const pages: Array<{
   changeFrequency: NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 }> = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/ai-team", priority: 0.7, changeFrequency: "monthly" },
   { path: "/ai-enablement", priority: 0.8, changeFrequency: "monthly" },
   { path: "/automation-systems-optimization", priority: 0.8, changeFrequency: "monthly" },
   { path: "/websites", priority: 0.8, changeFrequency: "monthly" },
@@ -40,7 +42,7 @@ const pages: Array<{
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const openings = await jobs(true).catch(() => []);
-  return [...openings.map(job => ({ url: `${siteDomain}/careers/${job.id}`, ...(job.updatedAt ? { lastModified: job.updatedAt } : {}), changeFrequency: "weekly" as const, priority: 0.6 })), ...pages.map(({ path, priority, changeFrequency }) => ({
+  return [...(await hasPublishedTeam() ? [{url: `${siteDomain}/team-delivery`,changeFrequency: "monthly" as const,priority: 0.8}] : []), ...openings.map(job => ({ url: `${siteDomain}/careers/${job.id}`, ...(job.updatedAt ? { lastModified: job.updatedAt } : {}), changeFrequency: "weekly" as const, priority: 0.6 })), ...pages.map(({ path, priority, changeFrequency }) => ({
     url: `${siteDomain}${path}`,
     changeFrequency,
     priority,

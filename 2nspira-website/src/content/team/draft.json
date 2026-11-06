@@ -1,0 +1,178 @@
+{
+  "revision": 0,
+  "status": "draft",
+  "intro": "A business transformation partner that uses technology to achieve practical results. We connect business priorities, hands-on implementation, and clear delivery ownership.",
+  "people": [
+    {
+      "id": "jeffrey-cortez",
+      "name": "Jeffrey Cortez",
+      "role": "Technology Executive",
+      "bio": "Jeffrey brings 20+ years of technology leadership across education, financial services, conservation, and enterprise operations. He connects modernization, responsible AI, cybersecurity, and organizational change to practical business decisions.",
+      "photo": "/images/leadership/jeffrey-cortez-linkedin-20261103.jpg",
+      "linkedin": "https://www.linkedin.com/in/jeffreyvcortez/",
+      "skills": "Technology leadership; enterprise systems; data modernization; responsible AI; cybersecurity",
+      "evidence": "/about#executive-profile",
+      "approved": true
+    },
+    {
+      "id": "mason-jefferson",
+      "name": "Mason Jefferson",
+      "role": "Quality & Governance Lead",
+      "bio": "Mason focuses on evaluating AI models and agent development environments, and coordinating AI-assisted websites and business operations modules. His work connects practical experimentation with repeatable development workflows. His LinkedIn profile lists Harvard University as his educational institution.",
+      "photo": "/images/leadership/mason-jefferson-owner-20261105.jpg",
+      "linkedin": "https://www.linkedin.com/in/mason-jefferson-a7767b446/",
+      "skills": "AI evaluation; multi-agent orchestration; AI-assisted software delivery",
+      "evidence": "https://www.linkedin.com/in/mason-jefferson-a7767b446/",
+      "approved": true
+    },
+    {
+      "id": "sebastian-leandro",
+      "name": "Sebastian Leandro",
+      "role": "AI Engineering Lead",
+      "bio": "Sebastian connects software engineering with business priorities, considering scope, maintenance, reliability, and team coordination. His approach focuses on understanding the problem before choosing what to build. He studied at Harvard University as an undergraduate and earned a master’s degree at MIT.",
+      "photo": "/images/leadership/sebastian-leandro-owner-20261105.jpg",
+      "linkedin": "https://www.linkedin.com/in/sebastian-leandro-0a4986446/",
+      "skills": "Software development; engineering tradeoffs; team coordination",
+      "evidence": "https://www.linkedin.com/in/sebastian-leandro-0a4986446/",
+      "approved": true
+    },
+    {
+      "id": "ethan-alexander",
+      "name": "Ethan Alexander",
+      "role": "Operations Lead",
+      "bio": "Ethan connects AI models, knowledge, and tools into practical workflows using retrieval-augmented generation, automation, and agent-based systems. His background spans technical support and network infrastructure, informing his focus on troubleshooting, reliability, and integration. His LinkedIn profile lists Columbia Engineering and notes studies at Queens College.",
+      "photo": "/images/leadership/ethan-alexander-owner-20261105.jpg",
+      "linkedin": "https://www.linkedin.com/in/ethan-alexander-2nspira/",
+      "skills": "RAG; AI integration; workflow automation; connected systems",
+      "evidence": "https://www.linkedin.com/in/ethan-alexander-2nspira/",
+      "approved": true
+    },
+    {
+      "id": "ashley-galum",
+      "name": "Ashley Galum",
+      "role": "Partnerships & Client Lead",
+      "bio": "Ashley works across marketing and business operations, helping keep priorities visible, information organized, and follow-up clear. Her role connects marketing coordination with the day-to-day support that helps a growing team move work forward. She studied nursing and marketing at Hunter College.",
+      "photo": "/images/leadership/ashley-galum-owner-20261105.jpg",
+      "linkedin": "https://www.linkedin.com/in/ashley-galum-817690446/",
+      "skills": "Marketing coordination; business operations; team support",
+      "evidence": "https://www.linkedin.com/in/ashley-galum-817690446/",
+      "approved": true
+    },
+    {
+      "id": "valentina-maria",
+      "name": "Valentina Maria",
+      "role": "Experience & Design Lead",
+      "bio": "Valentina leads business development at 2Nspira, bringing strengths in leadership, teamwork, and collaboration. Her background includes undergraduate studies at Hofstra University and a master’s degree in Biology from Columbia University.",
+      "photo": "/images/leadership/valentina-maria-owner-20261105.jpg",
+      "linkedin": "",
+      "skills": "Business development; leadership; teamwork; collaboration",
+      "evidence": "/team-delivery#valentina-maria",
+      "approved": true
+    },
+    {
+      "id": "joaquin-nicolas",
+      "name": "Joaquin Nicolas",
+      "role": "Strategy Lead",
+      "bio": "Joaquin works at the intersection of bioengineering, biology, and technology. His background includes undergraduate studies at Johns Hopkins University and a master’s degree in Biology from Columbia University, bringing a life-sciences foundation to his technical focus.",
+      "photo": "/images/leadership/joaquin-nicolas-owner-20261105.jpg",
+      "linkedin": "",
+      "skills": "Bioengineering; biology and technology",
+      "evidence": "/team-delivery#joaquin-nicolas",
+      "approved": true
+    }
+  ],
+  "agents": [
+    {
+      "id": "adam",
+      "name": "Adam",
+      "role": "Development Agent",
+      "bio": "Supports architecture, software development, AI integrations, automation, troubleshooting, and authorized deployment. Reports test evidence and verification gaps; people authorize critical decisions.",
+      "approved": true
+    },
+    {
+      "id": "maya",
+      "name": "Maya",
+      "role": "Research & Insights Agent",
+      "bio": "Supports research, strategy, proposals, messaging, and communications development. Sources and outward-facing claims require human review; outreach requires authorization.",
+      "approved": true
+    },
+    {
+      "id": "brian",
+      "name": "Brian",
+      "role": "Quality & Validation Agent",
+      "bio": "Supports functional and regression testing, defect documentation, user journey validation, risk reviews, and release-readiness recommendations. Security-related checks do not replace professional security auditing; people approve releases.",
+      "approved": true
+    },
+    {
+      "id": "dax",
+      "name": "Dax",
+      "role": "Operations Agent",
+      "bio": "Intended scope includes workflow coordination, automation, operational analysis, readiness support, and repeatable process documentation. Does not imply autonomous production management or validated continuous monitoring.",
+      "approved": true
+    },
+    {
+      "id": "cleo",
+      "name": "Cleo",
+      "role": "Design & Content Agent",
+      "bio": "Supports user journeys, visual design, front-end components, and accessible responsive experiences. Designs require rendered validation and human review; accessibility certification is not implied.",
+      "approved": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "teams",
+      "title": "Teams Management",
+      "kind": "Client project",
+      "summary": "Published property website connecting property discovery, photography, maps, inquiries, and tenant service entry points. Private Admin workflows are not a public demo.",
+      "url": "/work#teams-management",
+      "evidence": "/work#teams-management",
+      "approved": true
+    },
+    {
+      "id": "manufacturing",
+      "title": "Manufacturing Operations Command Center",
+      "kind": "Internal demonstration",
+      "summary": "Interactive prototype connecting production, inventory, procurement, quality, and reporting with synthetic data. Fictional company; not a client deployment or measured result.",
+      "url": "/work#concepts-prototypes",
+      "evidence": "/work#concepts-prototypes",
+      "approved": true
+    },
+    {
+      "id": "ai-workflow",
+      "title": "Multi-agent workflow field notes",
+      "kind": "Internal project",
+      "summary": "Published engineering lessons about AI coordination, local and cloud models, and human oversight. Not an independent client endorsement.",
+      "url": "/post/building-ai-team-multi-agent-workflow-lessons",
+      "evidence": "/work#internal-engineering",
+      "approved": true
+    }
+  ],
+  "responsibilities": [
+    {
+      "area": "Client communication",
+      "personId": "",
+      "support": "",
+      "detail": ""
+    },
+    {
+      "area": "Project planning",
+      "personId": "",
+      "support": "",
+      "detail": ""
+    },
+    {
+      "area": "Development",
+      "personId": "",
+      "support": "",
+      "detail": ""
+    },
+    {
+      "area": "Quality assurance",
+      "personId": "",
+      "support": "",
+      "detail": ""
+    }
+  ],
+  "ai": "AI delivery assistants help with research, implementation drafts, test execution, documentation, and coordination. They can misunderstand requirements, miss defects, or produce inaccurate information. People review evidence, make business decisions, approve commitments, and remain accountable for client delivery. Access depends on the tools and permissions available for each engagement.",
+  "rfp": "This page supports proposals; it does not replace required proposal content. When an RFP requests biographies, qualifications, or named delivery leads, include those directly in the proposal and confirm availability for that engagement."
+}
