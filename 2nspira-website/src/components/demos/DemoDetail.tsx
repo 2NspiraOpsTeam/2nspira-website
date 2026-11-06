@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SchoolVision from "./SchoolVision";
 import {
   ArrowUpRight,
   GraduationCap,
@@ -66,6 +67,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
           </aside>
         </div>
       </section>
+      {kind === "education" && <SchoolVision />}
       <section className="border-y border-line bg-canvas-deep py-14 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-2">
           <div>

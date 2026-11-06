@@ -5,9 +5,9 @@ export const demos = {
   education: {
     category: "Education",
     title: "School Management & Learning Platform",
-    headline: "One student journey. A clearer school day.",
+    headline: "A connected school. A visible learning journey.",
     intro:
-      "Explore how your school could connect family information, administrative decisions, and classroom learning—without asking people to enter the same details again.",
+      "Bring admissions, school operations, and meaningful learning into one connected experience. Follow a learner from the first application to classroom evidence and family-visible feedback—without entering the same information again.",
     audience:
       "For small private K–12 day schools evaluating a connected admissions, student-management, and learning experience. This example follows one Grade 7 learner at a fictional school.",
     challenge:
