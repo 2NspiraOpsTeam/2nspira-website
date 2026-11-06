@@ -3,7 +3,6 @@ import DemoTrust from "./DemoTrust";
 import Image from "next/image";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { demos } from "@/lib/demos";
-import { BOOKING_URL } from "@/lib/booking";
 import { buttonPrimary, eyebrow, h2, pageMain } from "@/components/ui";
 
 const scenes = [
@@ -135,19 +134,6 @@ export default function ManufacturingVision() {
             </p>
           </div>
         </details>
-      </section>
-      <section className="border-t border-line bg-canvas-deep py-14">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className={h2}>
-            What would a connected floor look like for you?
-          </h2>
-          <p className="mt-4 max-w-2xl leading-7 text-body">
-            Bring one operational bottleneck. Let’s map a practical first step.
-          </p>
-          <a href={BOOKING_URL} className={`mt-6 ${buttonPrimary}`}>
-            Discuss your manufacturing workflow
-          </a>
-        </div>
       </section>
       <DemoTrust />
     </main>
