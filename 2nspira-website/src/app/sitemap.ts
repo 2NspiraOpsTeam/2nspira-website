@@ -19,6 +19,7 @@ const pages: Array<{
   { path: "/work", priority: 0.8, changeFrequency: "monthly" },
   { path: "/demos", priority: 0.8, changeFrequency: "monthly" },
   { path: "/demos/education", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/demos/property-management", priority: 0.7, changeFrequency: "monthly" },
   { path: "/demos/manufacturing", priority: 0.7, changeFrequency: "monthly" },
   { path: "/fractional-cio", priority: 0.8, changeFrequency: "monthly" },
   { path: "/coaching", priority: 0.8, changeFrequency: "monthly" },

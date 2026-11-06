@@ -29,6 +29,7 @@ const ideas = [
   { name: "Resources", href: "/resources" },
   { name: "Leadership books", href: "/books" },
   { name: "School platform demo", href: "/demos/education" },
+  { name: "Property operations demo", href: "/demos/property-management" },
   { name: "Manufacturing demo", href: "/demos/manufacturing" },
   { name: "Bookstore", href: "https://books.2nspira.com" },
   { name: "Creative shop", href: "/shop" },
