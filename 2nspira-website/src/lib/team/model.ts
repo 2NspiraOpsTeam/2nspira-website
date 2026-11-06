@@ -70,12 +70,12 @@ export function publicationGaps(c: TeamContent): string[] {
   for (const a of c.agents)
     if (!a.name.trim() || !a.approved || !a.role.trim() || !a.bio.trim())
       gaps.push(`${a.name}: confirm actual AI functions and limitations.`);
-  for (const area of [
+  for (const area of c.responsibilities.length ? [
     "Client communication",
     "Project planning",
     "Development",
     "Quality assurance",
-  ]) {
+  ] : []) {
     const r = c.responsibilities.find((r) => r.area === area);
     if (
       !r ||

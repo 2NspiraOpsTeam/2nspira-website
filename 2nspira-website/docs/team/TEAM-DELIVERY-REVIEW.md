@@ -1,6 +1,6 @@
 # Team & Delivery — content review and publication
 
-Status: draft. No public team claims should be inferred from the unpublished draft.
+Status: owner-authorized production publication on November 5, 2026. Historical review notes below describe earlier draft states.
 
 ## Existing-solution preflight
 
@@ -129,3 +129,7 @@ Education-update validation: lint, canonical build and built-Worker route smoke,
 Jeffrey supplied a replacement team collaboration image. The draft now uses `team-realistic-owner-20261105.png` at its full 1774×887 ratio, retaining all six people and the human/AI collaboration labels. The previous asset and individual portraits are preserved. This image replacement does not publish the draft or change biographies or titles.
 
 Validation: lint, canonical build/Worker smoke checks, and TypeScript passed. Local rendered draft checks passed at 1440, 768, 390, and 320px: replacement decoded, all seven individual portraits retained, biographies unchanged, no overflow or browser exceptions. Desktop/mobile banner screenshots inspected; full composition retained. Embedded text scales down on mobile; equivalent profile titles remain available as page text. Hosted preview and production not verified for this revision.
+
+## Production publication authorization — November 5, 2026
+
+Jeffrey explicitly directed publication of the reviewed page after approving titles, education and the replacement image. Marked the supplied profiles approved for publication; backgrounds remain owner/LinkedIn-reported rather than independently verified. Valentina and Joaquin use their owner-supplied on-site profiles as sources. No engagement-specific human assignments were invented: the public page explains that each engagement names its leads, with no unassigned role cards. Responsibility assignments are optional for a general team page; when supplied, all four assignments still require valid human leads. This supersedes agent-imposed general-page assignment holds, not proposal-specific qualification requirements.

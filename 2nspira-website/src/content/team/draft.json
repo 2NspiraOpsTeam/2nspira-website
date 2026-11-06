@@ -23,7 +23,7 @@
       "linkedin": "https://www.linkedin.com/in/mason-jefferson-a7767b446/",
       "skills": "AI evaluation; multi-agent orchestration; AI-assisted software delivery",
       "evidence": "https://www.linkedin.com/in/mason-jefferson-a7767b446/",
-      "approved": false
+      "approved": true
     },
     {
       "id": "sebastian-leandro",
@@ -34,7 +34,7 @@
       "linkedin": "https://www.linkedin.com/in/sebastian-leandro-0a4986446/",
       "skills": "Software development; engineering tradeoffs; team coordination",
       "evidence": "https://www.linkedin.com/in/sebastian-leandro-0a4986446/",
-      "approved": false
+      "approved": true
     },
     {
       "id": "ethan-alexander",
@@ -45,7 +45,7 @@
       "linkedin": "https://www.linkedin.com/in/ethan-alexander-2nspira/",
       "skills": "RAG; AI integration; workflow automation; connected systems",
       "evidence": "https://www.linkedin.com/in/ethan-alexander-2nspira/",
-      "approved": false
+      "approved": true
     },
     {
       "id": "ashley-galum",
@@ -56,7 +56,7 @@
       "linkedin": "https://www.linkedin.com/in/ashley-galum-817690446/",
       "skills": "Marketing coordination; business operations; team support",
       "evidence": "https://www.linkedin.com/in/ashley-galum-817690446/",
-      "approved": false
+      "approved": true
     },
     {
       "id": "valentina-maria",
@@ -66,8 +66,8 @@
       "photo": "/images/leadership/valentina-maria-owner-20261105.jpg",
       "linkedin": "",
       "skills": "Business development; leadership; teamwork; collaboration",
-      "evidence": "",
-      "approved": false
+      "evidence": "/team-delivery#valentina-maria",
+      "approved": true
     },
     {
       "id": "joaquin-nicolas",
@@ -77,8 +77,8 @@
       "photo": "/images/leadership/joaquin-nicolas-owner-20261105.jpg",
       "linkedin": "",
       "skills": "Bioengineering; biology and technology",
-      "evidence": "",
-      "approved": false
+      "evidence": "/team-delivery#joaquin-nicolas",
+      "approved": true
     }
   ],
   "agents": [

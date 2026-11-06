@@ -237,6 +237,9 @@ try {
   check((await handle(request(edited))).status, 200);
   check((await publishedContent()).intro, publishedData.intro);
   check((await (await handle(request())).json()).content.intro, edited.intro);
+  const generalPage = { ...publishedData, revision: edited.revision + 1, responsibilities: [] };
+  check((await handle(request(generalPage))).status, 200);
+  check((await publishedContent()).responsibilities.length, 0);
   await db.prepare("UPDATE admins SET is_active=0 WHERE id='qa'").run();
   check((await handle(request())).status, 401);
   await db
