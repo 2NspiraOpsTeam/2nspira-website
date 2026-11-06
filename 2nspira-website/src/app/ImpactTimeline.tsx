@@ -6,8 +6,8 @@ export default function ImpactTimeline({ idPrefix = "impact" }: { idPrefix?: str
   return <div className={styles.timeline}>
     <fieldset className={styles.timelineNav}>
       <legend className="sr-only">Explore our milestones</legend>
-      {companyMilestones.map((item, index) => <div key={item.year} className={styles.timelineChoice}>
-        <input className="sr-only" type="radio" name={`${idPrefix}-milestone`} id={`${idPrefix}-year-${item.year}`} value={item.year} defaultChecked={index === 0} aria-controls={`${idPrefix}-milestone-${item.year}`} />
+      {companyMilestones.map(item => <div key={item.year} className={styles.timelineChoice}>
+        <input className="sr-only" type="radio" name={`${idPrefix}-milestone`} id={`${idPrefix}-year-${item.year}`} value={item.year} defaultChecked={item.year === "2026"} aria-controls={`${idPrefix}-milestone-${item.year}`} />
         <label htmlFor={`${idPrefix}-year-${item.year}`}><strong>{item.year}</strong><span>{item.title}</span></label>
       </div>)}
     </fieldset>
