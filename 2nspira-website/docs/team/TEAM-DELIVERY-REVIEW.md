@@ -93,3 +93,6 @@ human delivery ownership and its existing profile/evidence publication gates.
 
 ## Owner-approved banner and role alignment — 2026-11-05
 Jeffrey approved the supplied six-person banner as the main Team & Delivery banner and its displayed specialties as the six matching human profile roles. Preserved existing biographies and separate profile/publication approvals; this approval does not establish engagement-specific delivery ownership. Banner uses its full aspect ratio without cropping; accessible text lists all six specialties.
+
+## Updated owner banner — 2026-11-05
+Replaced the main banner with Jeffrey’s supplied Six-Person Professional Portrait Banner. Existing roles, individual portraits, accessible description and uncropped responsive layout are unchanged. Draft only; no production publication.

@@ -29,7 +29,7 @@ export default function TeamContent({
         <p className={`${lead} max-w-3xl`}>{c.intro}</p>
         <figure className="mt-8 overflow-hidden rounded-2xl border border-line">
           <img
-            src="/images/leadership/team-specialties-owner-20261105.png"
+            src="/images/leadership/team-professional-owner-20261105.png"
             alt="2Nspira human team: Joaquin — Research, Strategy & Communications; Sebastian — Engineering & AI Development; Ethan — Operations & Automation; Valentina — Digital Experience & Creative Design; Mason — Quality Assurance & Validation; Ashley — Client Engagement & Partnerships."
             width={1200}
             height={600}
