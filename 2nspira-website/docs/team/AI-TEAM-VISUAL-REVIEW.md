@@ -3,7 +3,7 @@
 Scope: Jeffrey requested a more engaging, image-led `/ai-team` with modern effects and less text, plus Careers in an About dropdown.
 
 - Reuse maintained lucide-react icons, shared Reveal progressive enhancement and site design tokens; no new animation dependency or platform.
-- Hero reuses existing `ai-human-led-v3.webp`; closing section reuses the owner-supplied realistic team banner. No new image provenance or real-client claims introduced.
+- Hero uses newly generated, Jeffrey-approved `ai-team-high-contrast-20261105.webp` (OpenAI image generation, 2026-11-05); closing section reuses the owner-supplied realistic team banner. Abstract AI artwork; no real-client claims introduced.
 - Concise role summaries replace repeated biographies/persona/quotes in the initial view. Biographies, full responsibilities and boundaries remain in native disclosures.
 - Shared desktop/mobile About navigation: Our Story, Team & Delivery, AI Team, Careers. Careers removed from top level; destinations unchanged.
 - Human decision-making, role-scope limitations and authorized integrations remain explicit.
