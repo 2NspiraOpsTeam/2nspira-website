@@ -1,6 +1,7 @@
 export const EDUCATION_DEMO_URL =
   "https://learning-grove-school-demo.jcortez-36a.workers.dev/";
 export const MANUFACTURING_DEMO_URL = "https://demo.2nspira.com/manufacturing/";
+export const PROPERTY_DEMO_URL = "https://harborstone-property-operations-demo.jcortez-36a.workers.dev/";
 export const demos = {
   education: {
     category: "Education",
@@ -129,6 +130,7 @@ export const demos = {
 // Shared navigation registry: add future published demos here.
 export const demoNavigationLinks = [
   { name: "All demos", href: "/demos" },
+  { name: "Property Management Operations", href: "/demos/property-management" },
   ...Object.entries(demos).map(([slug, demo]) => ({
     name: demo.title,
     href: `/demos/${slug}`,

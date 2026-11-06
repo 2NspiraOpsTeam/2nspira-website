@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { GraduationCap, Factory, ArrowRight } from "lucide-react";
+import { GraduationCap, Factory, Building2, ArrowRight } from "lucide-react";
 import { publicPageMetadata } from "@/lib/pageMetadata";
-import { demos } from "@/lib/demos";
+import { demos, PROPERTY_DEMO_URL } from "@/lib/demos";
 import {
   buttonPrimary,
   cardFlat,
@@ -12,10 +12,10 @@ import {
   pageMain,
 } from "@/components/ui";
 export const metadata = publicPageMetadata({
-  title: "Interactive Demos for Schools & Manufacturing",
+  title: "Interactive Demos for Schools, Manufacturing & Property Operations",
   shareTitle: "Explore a more connected way to work.",
   description:
-    "Try connected school and manufacturing workflows with fictional data. Explore practical ways to reduce repeated work and improve operational visibility.",
+    "Try connected school, manufacturing, and property-management workflows with fictional data. Explore practical ways to reduce repeated work and improve operational visibility.",
   path: "/demos",
 });
 export default function Demos() {
@@ -82,6 +82,9 @@ export default function Demos() {
             </article>
           );
         })}
+        <article className={`${cardFlat} overflow-hidden lg:col-span-2`}>
+          <div className="grid lg:grid-cols-2"><div className="bg-[#dceee3] p-8 sm:p-10"><Building2 className="h-12 w-12 text-accent" strokeWidth={1.3}/><p className={`mt-7 ${eyebrow}`}>Property management · Ready to explore</p><h2 className={`mt-4 ${h2}`}>Property Operations Workspace</h2><p className="mt-5 leading-8 text-body">Rent rolls, contacts, simulated rent collection, maintenance, and targeted resident updates. One connected fictional portfolio.</p></div><div className="flex flex-col justify-center p-8 sm:p-10"><p className="leading-8 text-body">Try the office and resident experiences: record a demo payment, complete a repair, and see the handoff from both sides.</p><div className="mt-7 flex flex-wrap items-center gap-5"><a href={PROPERTY_DEMO_URL} className={buttonPrimary}>Explore Demo <ArrowRight className="ml-2 h-4 w-4"/></a><Link href="/demos/property-management" className="inline-flex min-h-11 items-center text-sm font-medium text-accent underline underline-offset-4">Overview & guided path</Link></div></div></div>
+        </article>
       </section>
       <section className="border-y border-line bg-canvas-deep py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
