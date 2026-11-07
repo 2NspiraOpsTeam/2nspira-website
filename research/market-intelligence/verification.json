@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-07T05:06:40.081817+00:00",
+  "endpoint": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+  "checks_passed": 29,
+  "checks": [
+    {
+      "check": "anonymous research denied",
+      "passed": true
+    },
+    {
+      "check": "brian authenticated read",
+      "passed": true
+    },
+    {
+      "check": "adam authenticated read",
+      "passed": true
+    },
+    {
+      "check": "adam import denied",
+      "passed": true
+    },
+    {
+      "check": "maya authenticated read",
+      "passed": true
+    },
+    {
+      "check": "maya import denied",
+      "passed": true
+    },
+    {
+      "check": "cleo authenticated read",
+      "passed": true
+    },
+    {
+      "check": "cleo import denied",
+      "passed": true
+    },
+    {
+      "check": "dax authenticated read",
+      "passed": true
+    },
+    {
+      "check": "dax import denied",
+      "passed": true
+    },
+    {
+      "check": "jeffrey authenticated read",
+      "passed": true
+    },
+    {
+      "check": "jeffrey import denied",
+      "passed": true
+    },
+    {
+      "check": "unknown opportunity 404",
+      "passed": true
+    },
+    {
+      "check": "unknown route 404",
+      "passed": true
+    },
+    {
+      "check": "unsupported method denied",
+      "passed": true
+    },
+    {
+      "check": "malformed import rejected",
+      "passed": true
+    },
+    {
+      "check": "corrected current score 68",
+      "passed": true
+    },
+    {
+      "check": "original and corrected history retained",
+      "passed": true
+    },
+    {
+      "check": "original source revisions retained as research grows",
+      "passed": true
+    },
+    {
+      "check": "document integrity nightly-brief.md",
+      "passed": true
+    },
+    {
+      "check": "document integrity opportunity-register.json",
+      "passed": true
+    },
+    {
+      "check": "retry is idempotent",
+      "passed": true
+    },
+    {
+      "check": "key-order independent replay",
+      "passed": true
+    },
+    {
+      "check": "same-time new revision explicitly rejected",
+      "passed": true
+    },
+    {
+      "check": "source pagination first page",
+      "passed": true
+    },
+    {
+      "check": "source pagination next page",
+      "passed": true
+    },
+    {
+      "check": "immutable run conflict denied",
+      "passed": true
+    },
+    {
+      "check": "audit attributes authenticated identities",
+      "passed": true
+    },
+    {
+      "check": "audit records denied writes",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Role credentials exercised from Brian host, not independently from each team member machine.",
+    "Future scheduled clock trigger not yet observed."
+  ],
+  "additional_verification": {
+    "worker_sql_tests_passed": 8,
+    "client_redirect_tests_passed": 1,
+    "archive_files_hash_verified": 35,
+    "current_records": 4,
+    "research_revisions": 4,
+    "opportunity_versions": 14,
+    "source_documents": 29,
+    "private_credential_value_scan": "passed",
+    "archive_whitespace": "Original source whitespace retained byte-for-byte to preserve hashes; non-archive diff check clean."
+  }
+}

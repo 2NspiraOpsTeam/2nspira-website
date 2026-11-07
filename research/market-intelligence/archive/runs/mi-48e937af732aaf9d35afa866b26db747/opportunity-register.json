@@ -1,0 +1,460 @@
+{
+  "schema_version": "2.0",
+  "record_version": "structured-research-v3",
+  "as_of_utc": "2026-11-07",
+  "as_of_local": "2026-11-06 America/New_York",
+  "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+  "business_hub_status": "Existing transitional research D1; shared Business Hub integration pending Adam review",
+  "revenue_proven": false,
+  "opportunities": [
+    {
+      "candidate_id": "MI-001",
+      "category": "Workflow automation / productized B2B service",
+      "title": "Approval-first receivables exception desk for small B2B service firms",
+      "demand_evidence_links": [
+        "https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/",
+        "https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments"
+      ],
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "confidence": "medium problem evidence; willingness to pay untested",
+      "ranking": 1,
+      "score": 68,
+      "scores": {
+        "D": 3,
+        "C": 2,
+        "B": 4,
+        "F": 2,
+        "M": 3,
+        "T": 5,
+        "A": 5,
+        "L": 4
+      },
+      "stage": "RESEARCH_COMPLETE / EXPERIMENT_PROPOSED_NOT_RUN",
+      "owner_proposal": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian",
+      "experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
+      "date_checked": "2026-11-06 America/New_York (desk recalibration, not source refresh)",
+      "outcome": "No interviews, purchases, revenue or product launch; unvalidated offer",
+      "dedupe": "Adjacent to #185 acquisition; no new campaign. Excludes #186 Business Hub and payment-pilot checkout.",
+      "change_note": "71 -> 68: channel score corrected from C3 (reachable route) to C2 (plausible but untested); no specific reachable channel documented. No new buyer evidence.",
+      "research_details": {
+        "customer_segment": "US B2B service firms / bookkeepers; 2\u201320 staff is a targeting hypothesis",
+        "customer_needs": [
+          "Overdue-invoice exception review, reconciliation and human-approved follow-up"
+        ],
+        "industry_trends": [
+          {
+            "observation": "Vendor late-payment survey and older Federal Reserve problem evidence; not a niche demand forecast",
+            "evidence_urls": [
+              "https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/",
+              "https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments"
+            ],
+            "status": "indirect_signal_not_validated_demand"
+          }
+        ],
+        "competitor_analysis": [
+          {
+            "name": "Chaser",
+            "url": "https://www.chaserhq.com/chaser-pricing",
+            "observation": "Rendered from $259/month; currency, country, tax and billing basis unresolved",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "Accounting reminders and spreadsheets",
+            "url": null,
+            "observation": "Existing substitute; no comparative buyer test",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          }
+        ],
+        "pricing_intelligence": {
+          "proposed_offer": {
+            "amount": 499,
+            "currency": "USD",
+            "unit": "setup pilot",
+            "status": "untested_hypothesis"
+          },
+          "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits"
+        },
+        "demand_indicators": {
+          "evidence_urls": [
+            "https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/",
+            "https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments"
+          ],
+          "buyer_intent_verified": false,
+          "revenue_verified": false,
+          "limitations": "medium problem evidence; willingness to pay untested"
+        },
+        "recommended_products_services": [
+          "Productized CSV-first exception service; SaaS only if repeat use is established"
+        ],
+        "customer_acquisition_strategy": {
+          "proposal": "Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
+          "owner_proposal": "Maya",
+          "execution_authorized": false
+        },
+        "recommended_next_steps": [
+          "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval"
+        ],
+        "agent_fit": {
+          "research_owner": "Brian",
+          "suggested_execution_lead": "Adam",
+          "assignment_confirmed": false,
+          "rationale": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian"
+        },
+        "approval_reference": {
+          "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+          "status": "proposal_only_no_execution_approval_recorded",
+          "proposed_cash_cap_usd": 100,
+          "proposed_human_hours_cap": 12
+        },
+        "source_freshness": {
+          "source_access_window": "2026-11-06 America/New_York / 2026-11-07 UTC",
+          "metadata_structured_at": "2026-11-07T05:04:33.354764+00:00",
+          "new_source_research": false
+        },
+        "evidence_gaps": [
+          "No qualified buyer interviews, purchases or revenue",
+          "No verified distribution reach or realized margin"
+        ]
+      },
+      "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2\u201320 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval"
+    },
+    {
+      "candidate_id": "MI-002",
+      "category": "Accessibility QA / niche productized service",
+      "title": "Title II evidence-and-remediation handoff pack for public-sector web vendors",
+      "demand_evidence_links": [
+        "https://www.ada.gov/resources/2024-03-08-web-rule/"
+      ],
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "confidence": "low commercial confidence; authoritative rule signal, no procurement intent verified",
+      "ranking": 3,
+      "score": 60,
+      "scores": {
+        "D": 2,
+        "C": 2,
+        "B": 3,
+        "F": 3,
+        "M": 3,
+        "T": 4,
+        "A": 5,
+        "L": 3
+      },
+      "stage": "RESEARCH_COMPLETE / DISCOVERY_PROPOSED_NOT_RUN",
+      "owner_proposal": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner",
+      "experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
+      "date_checked": "2026-11-07 UTC",
+      "outcome": "No public website audited, bid identified, compliance certification or sale",
+      "dedupe": "Complements #178/#185 acquisition and #183 QA; not a duplicate website redesign or internal accessibility audit.",
+      "research_details": {
+        "customer_segment": "US web agencies serving public-sector clients",
+        "customer_needs": [
+          "Reproducible accessibility evidence, prioritized developer tickets and retest history"
+        ],
+        "industry_trends": [
+          {
+            "observation": "DOJ rule/deadline signal; no current funded procurement verified",
+            "evidence_urls": [
+              "https://www.ada.gov/resources/2024-03-08-web-rule/"
+            ],
+            "status": "indirect_signal_not_validated_demand"
+          }
+        ],
+        "competitor_analysis": [
+          {
+            "name": "Deque / axe",
+            "url": "https://www.deque.com/axe/devtools/",
+            "observation": "Mature automated/guided testing alternative; no dependable service quote",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "In-house QA",
+            "url": null,
+            "observation": "Existing substitute; qualified manual reviewer required",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          }
+        ],
+        "pricing_intelligence": {
+          "proposed_offer": {
+            "amount": 1499,
+            "currency": "USD",
+            "unit": "five-template assessment",
+            "status": "untested_hypothesis"
+          },
+          "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits"
+        },
+        "demand_indicators": {
+          "evidence_urls": [
+            "https://www.ada.gov/resources/2024-03-08-web-rule/"
+          ],
+          "buyer_intent_verified": false,
+          "revenue_verified": false,
+          "limitations": "low commercial confidence; authoritative rule signal, no procurement intent verified"
+        },
+        "recommended_products_services": [
+          "Scoped evidence-and-remediation handoff service, not certification"
+        ],
+        "customer_acquisition_strategy": {
+          "proposal": "Existing agency/RFP channel via Maya; no bid or outreach authorized",
+          "owner_proposal": "Maya",
+          "execution_authorized": false
+        },
+        "recommended_next_steps": [
+          "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote"
+        ],
+        "agent_fit": {
+          "research_owner": "Brian",
+          "suggested_execution_lead": "Brian",
+          "assignment_confirmed": false,
+          "rationale": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner"
+        },
+        "approval_reference": {
+          "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+          "status": "proposal_only_no_execution_approval_recorded",
+          "proposed_cash_cap_usd": 150,
+          "proposed_human_hours_cap": 12
+        },
+        "source_freshness": {
+          "source_access_window": "2026-11-06 America/New_York / 2026-11-07 UTC",
+          "metadata_structured_at": "2026-11-07T05:04:33.354764+00:00",
+          "new_source_research": false
+        },
+        "evidence_gaps": [
+          "No qualified buyer interviews, purchases or revenue",
+          "No verified distribution reach or realized margin"
+        ]
+      },
+      "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized"
+    },
+    {
+      "candidate_id": "MI-003",
+      "category": "Digital training kit / AI workflow governance",
+      "title": "Role-specific AI usage and literacy starter pack for small EU agencies",
+      "demand_evidence_links": [
+        "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+        "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"
+      ],
+      "source_ids": [
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "confidence": "low commercial confidence; adoption and guidance, no verified paid demand",
+      "ranking": 4,
+      "score": 59,
+      "scores": {
+        "D": 2,
+        "C": 2,
+        "B": 4,
+        "F": 2,
+        "M": 3,
+        "T": 5,
+        "A": 4,
+        "L": 3
+      },
+      "stage": "RESEARCH_COMPLETE / RULE_RECHECK_REQUIRED",
+      "owner_proposal": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution",
+      "experiment": "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests",
+      "date_checked": "2026-11-07 UTC",
+      "outcome": "No certification/compliance guarantee; no buyer validation; current FAQ has legacy text and legal extract incomplete",
+      "dedupe": "Distinct from #189 staff LinkedIn content and #184 Etsy/KDP listing work; no generic marketplace listing recommendation.",
+      "research_details": {
+        "customer_segment": "Small EU agencies with at least 10 staff; no customer network established",
+        "customer_needs": [
+          "Role-specific safe AI usage, practical learning records and output verification"
+        ],
+        "industry_trends": [
+          {
+            "observation": "Eurostat AI adoption signal, not training spend; official consolidated legal text still needs recheck",
+            "evidence_urls": [
+              "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+              "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"
+            ],
+            "status": "indirect_signal_not_validated_demand"
+          }
+        ],
+        "competitor_analysis": [
+          {
+            "name": "Elements of AI",
+            "url": "https://www.elementsofai.com/",
+            "observation": "Free foundation course and linked workplace training; no comparable paid quote",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          }
+        ],
+        "pricing_intelligence": {
+          "proposed_offer": {
+            "amount": 249,
+            "currency": "USD",
+            "unit": "team starter pack",
+            "status": "untested_hypothesis"
+          },
+          "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits"
+        },
+        "demand_indicators": {
+          "evidence_urls": [
+            "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+            "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"
+          ],
+          "buyer_intent_verified": false,
+          "revenue_verified": false,
+          "limitations": "low commercial confidence; adoption and guidance, no verified paid demand"
+        },
+        "recommended_products_services": [
+          "Original role-specific training kit, not mandatory certification"
+        ],
+        "customer_acquisition_strategy": {
+          "proposal": "Approved EU agency discovery via Maya; no reachable audience verified",
+          "owner_proposal": "Maya",
+          "execution_authorized": false
+        },
+        "recommended_next_steps": [
+          "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests"
+        ],
+        "agent_fit": {
+          "research_owner": "Brian",
+          "suggested_execution_lead": "Maya",
+          "assignment_confirmed": false,
+          "rationale": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution"
+        },
+        "approval_reference": {
+          "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+          "status": "proposal_only_no_execution_approval_recorded",
+          "proposed_cash_cap_usd": 100,
+          "proposed_human_hours_cap": 8
+        },
+        "source_freshness": {
+          "source_access_window": "2026-11-06 America/New_York / 2026-11-07 UTC",
+          "metadata_structured_at": "2026-11-07T05:04:33.354764+00:00",
+          "new_source_research": false
+        },
+        "evidence_gaps": [
+          "No qualified buyer interviews, purchases or revenue",
+          "No verified distribution reach or realized margin"
+        ]
+      },
+      "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified"
+    },
+    {
+      "candidate_id": "MI-004",
+      "category": "Video / creative services",
+      "title": "English B2B webinar caption-QA and evidence handoff",
+      "buyer_problem_channel_key": "B2B webinar producers | terminology/speaker/timing caption handoff | agency referral, untested",
+      "demand_evidence_links": [
+        "https://wistia.com/blog/video-marketing-statistics"
+      ],
+      "source_ids": [
+        "N1",
+        "N2"
+      ],
+      "confidence": "low; broad production/adoption evidence, no niche buying intent",
+      "ranking": 2,
+      "score": 60,
+      "scores": {
+        "D": 2,
+        "C": 2,
+        "B": 4,
+        "F": 2,
+        "M": 3,
+        "T": 5,
+        "A": 4,
+        "L": 4
+      },
+      "stage": "EXPLORATORY / EXPERIMENT_NOT_RUN",
+      "owner_proposal": "Brian research accountable; Maya any approved recruitment; separate caption/accessibility reviewer; delivery unassigned",
+      "experiment": "One original synthetic 10-minute webinar caption handoff, then 5 consented producer interviews only after exact recruitment approval",
+      "date_checked": "2026-11-06 America/New_York",
+      "outcome": "No interviews, buyers, publication, revenue or independent signoff",
+      "dedupe": "W03 video branch investigated, not a new generic music pack. Distinct from MI-002 public-sector web-template QA by buyer/job/channel; route to existing MI-002 if an agency needs that same Title II engagement. Adjacent #182 showcase is not a service launch; #189 staff posts are not deliverables for this offer.",
+      "research_details": {
+        "customer_segment": "US B2B software webinar teams or their video agencies; hypothesis",
+        "customer_needs": [
+          "Terminology, speaker, timing and caption change-control handoff"
+        ],
+        "industry_trends": [
+          {
+            "observation": "Wistia platform/video activity signal; no niche buying intent",
+            "evidence_urls": [
+              "https://wistia.com/blog/video-marketing-statistics"
+            ],
+            "status": "indirect_signal_not_validated_demand"
+          }
+        ],
+        "competitor_analysis": [
+          {
+            "name": "Wistia captions",
+            "url": "https://support.wistia.com/en/articles/8274062-transcripts-and-captions",
+            "observation": "Free machine captions/editor; professional service displayed as 1000 credits/minute, dollar conversion unverified",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "In-house review",
+            "url": null,
+            "observation": "Existing substitute; need documented unmet QA pain",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          }
+        ],
+        "pricing_intelligence": {
+          "proposed_offer": {
+            "amount": 149,
+            "currency": "USD",
+            "unit": "up-to-30-minute English clip",
+            "status": "untested_hypothesis"
+          },
+          "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits"
+        },
+        "demand_indicators": {
+          "evidence_urls": [
+            "https://wistia.com/blog/video-marketing-statistics"
+          ],
+          "buyer_intent_verified": false,
+          "revenue_verified": false,
+          "limitations": "low; broad production/adoption evidence, no niche buying intent"
+        },
+        "recommended_products_services": [
+          "Caption QA/evidence handoff service; no publishing, translation or compliance guarantee"
+        ],
+        "customer_acquisition_strategy": {
+          "proposal": "Agency referrals via Maya after approval; not an existing sales channel",
+          "owner_proposal": "Maya",
+          "execution_authorized": false
+        },
+        "recommended_next_steps": [
+          "One original synthetic 10-minute webinar caption handoff, then 5 consented producer interviews only after exact recruitment approval"
+        ],
+        "agent_fit": {
+          "research_owner": "Brian",
+          "suggested_execution_lead": "Brian",
+          "assignment_confirmed": false,
+          "rationale": "Brian research accountable; Maya any approved recruitment; separate caption/accessibility reviewer; delivery unassigned"
+        },
+        "approval_reference": {
+          "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+          "status": "proposal_only_no_execution_approval_recorded",
+          "proposed_cash_cap_usd": 50,
+          "proposed_human_hours_cap": 8
+        },
+        "source_freshness": {
+          "source_access_window": "2026-11-06 America/New_York / 2026-11-07 UTC",
+          "metadata_structured_at": "2026-11-07T05:04:33.354764+00:00",
+          "new_source_research": false
+        },
+        "evidence_gaps": [
+          "No qualified buyer interviews, purchases or revenue",
+          "No verified distribution reach or realized margin"
+        ]
+      }
+    }
+  ],
+  "checked_at": "2026-11-07T05:04:33.354764+00:00",
+  "prior_record": "../initial-2026-11-07/opportunity-register.json",
+  "changes": [
+    "Structured existing evidence into queryable research fields; no new source access, score change, buyer validation or experiment. Source dates and historical versions preserved."
+  ]
+}
