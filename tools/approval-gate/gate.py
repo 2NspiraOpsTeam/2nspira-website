@@ -82,7 +82,7 @@ def main():
     packet=json.loads(a.packet.read_text())
     repo=packet['repository']; number=packet['pr']
     # Validate URL components before any authenticated API request.
-    if not re.fullmatch(r'2NspiraOpsTeam/[A-Za-z0-9_.-]+',repo) or type(number) is not int or number<1:
+    if not re.fullmatch(r'2NspiraOpsTeam/[A-Za-z0-9_.-]+',repo) or type(number) is not int or number<1 or not re.fullmatch(r'[a-f0-9]{40}',packet['sha']):
         raise Rejected('Invalid repository/PR')
     pr=api(f'repos/{repo}/pulls/{number}')
     reviews=[];page=1
