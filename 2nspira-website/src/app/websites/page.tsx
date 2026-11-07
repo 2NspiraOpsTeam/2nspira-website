@@ -291,7 +291,7 @@ export default function WebsitesPage() {
               </p>
               <ServiceConversation label="Request a Website Assessment" />
               <a
-                href="#website-and-app-development"
+                href="/contact#contact-message"
                 className={`mt-4 min-h-11 ${linkInline}`}
               >
                 Building a New Website? Let’s Talk. <span aria-hidden="true"> ↓</span>
