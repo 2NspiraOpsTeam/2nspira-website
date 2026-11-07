@@ -11,3 +11,6 @@ Maya owns research, campaign, pipeline and RFP operating deliverables. Adam reta
 - [Data operations](DATA-OPERATIONS.md): existing canonical pipeline retained; staged research is not a second CRM.
 
 Business-level source observations are research hypotheses, not confirmed buying intent. Proposed campaign messages and final bids need their exact approval packets. Readiness and test results are recorded separately; a smoke test does not prove a full overnight run or external approval/submission lifecycle.
+
+- [Actual work review and remaining gates](REAL-WORK-REVIEW.md)
+- [Scheduler verification evidence](ACTIVATION-EVIDENCE.md)
