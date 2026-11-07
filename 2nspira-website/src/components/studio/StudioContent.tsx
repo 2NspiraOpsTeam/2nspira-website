@@ -25,9 +25,11 @@ export function StudioCard({
     external = href.startsWith("https://"),
     channel = item.type.toLowerCase() === "channel";
   const label = channel
-    ? "Watch on YouTube"
+    ? "Explore Our Videos"
     : item.type.toLowerCase() === "book" && item.url === item.purchaseUrl
-      ? "View book & purchase"
+      ? /amazon\./.test(href)
+        ? "Buy on Amazon"
+        : "View book & purchase"
       : item.type.toLowerCase() === "product"
         ? "View product"
         : item.type.toLowerCase() === "collection"
@@ -138,17 +140,26 @@ export default function StudioContent({
       <section className="border-b border-line bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
           <p className="text-sm uppercase tracking-widest text-body">
-            Ideas, imagination & things to make your own
+            Watch. Read. Play.
           </p>
           <h1 className={`mt-5 ${h1}`}>Creative Studio</h1>
           <p className={`max-w-3xl ${lead}`}>{c.intro}</p>
           <nav
             aria-label="Creative Studio groups"
-            className="mt-8 flex flex-wrap gap-3"
+            className="mt-8 grid gap-4 md:grid-cols-3"
           >
             {c.groups.map((g) => (
-              <a key={g.id} href={`#${g.id}`} className={buttonSecondary}>
-                {g.name} <span aria-hidden="true">↓</span>
+              <a
+                key={g.id}
+                href={`#${g.id}`}
+                className={`${card} block p-6 focus-visible:outline-2 focus-visible:outline-accent`}
+              >
+                <span className="text-2xl font-semibold text-ink">
+                  {g.name} <span aria-hidden="true">↓</span>
+                </span>
+                <span className="mt-3 block text-body leading-7">
+                  {g.description}
+                </span>
               </a>
             ))}
           </nav>
@@ -291,6 +302,15 @@ export default function StudioContent({
             </p>
           )}
         </section>
+        <aside className="mt-12 border-t border-line pt-8">
+          <h2 className={h2}>What could we create together?</h2>
+          <p className="mt-4 text-body">
+            Have a story to tell or an experience to bring to life?
+          </p>
+          <a href="/contact" className={`mt-5 ${buttonSecondary}`}>
+            Let’s explore your idea →
+          </a>
+        </aside>
       </div>
     </div>
   );

@@ -306,7 +306,7 @@ export default function StudioAdmin() {
         </p>
         <div className="my-5 flex flex-wrap gap-3">
           <a
-            href="/creative-studio"
+            href="/studio"
             target="_blank"
             rel="noopener noreferrer"
             className={buttonSecondary}

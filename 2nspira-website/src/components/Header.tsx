@@ -12,13 +12,14 @@ type MenuName = "services" | "ideas" | "about" | "demos";
 
 const serviceLinks = [
   { name: "Websites, Apps & Digital Platforms", href: "/websites" },
-  { name: "Automation & Systems Optimization", href: "/automation-systems-optimization" },
+  {
+    name: "Automation & Systems Optimization",
+    href: "/automation-systems-optimization",
+  },
   { name: "Organizational AI enablement", href: "/ai-enablement" },
   { name: "Fractional CIO & Technology Leadership", href: "/fractional-cio" },
   { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
 ];
-
-
 
 const aboutLinks = [
   { name: "Our Story", href: "/about" },
@@ -37,7 +38,12 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<MenuName | null>(null);
   const navigationRef = useRef<HTMLElement>(null);
-  const menuButtonRefs = useRef<Record<MenuName, HTMLButtonElement | null>>({ services: null, ideas: null, about: null, demos: null });
+  const menuButtonRefs = useRef<Record<MenuName, HTMLButtonElement | null>>({
+    services: null,
+    ideas: null,
+    about: null,
+    demos: null,
+  });
   const pinnedMenuRef = useRef<MenuName | null>(null);
   const pathname = usePathname();
 
@@ -47,13 +53,21 @@ export default function Header() {
     return path === "/" ? pathname === "/" : pathname.startsWith(path);
   };
   const menuIsCurrent = (menu: MenuName) =>
-    (menu === "services" ? serviceLinks : menu === "ideas" ? ideaLinks : menu === "demos" ? demoNavigationLinks : aboutLinks).some((link) => isCurrent(link.href));
+    (menu === "services"
+      ? serviceLinks
+      : menu === "ideas"
+        ? ideaLinks
+        : menu === "demos"
+          ? demoNavigationLinks
+          : aboutLinks
+    ).some((link) => isCurrent(link.href));
 
   const closeMenu = (returnFocus = false) => {
     const previousMenu = openMenu;
     pinnedMenuRef.current = null;
     setOpenMenu(null);
-    if (returnFocus && previousMenu) menuButtonRefs.current[previousMenu]?.focus();
+    if (returnFocus && previousMenu)
+      menuButtonRefs.current[previousMenu]?.focus();
   };
 
   const toggleMenu = (menu: MenuName) => {
@@ -83,7 +97,11 @@ export default function Header() {
     closeMenu(true);
   };
 
-  const renderMenu = (menu: MenuName, label: string, links: typeof serviceLinks) => {
+  const renderMenu = (
+    menu: MenuName,
+    label: string,
+    links: typeof serviceLinks,
+  ) => {
     const isOpen = openMenu === menu;
     return (
       <div
@@ -93,32 +111,77 @@ export default function Header() {
           if (pinnedMenuRef.current !== menu) setOpenMenu(null);
         }}
         onBlur={(event) => {
-          if (!event.currentTarget.contains(event.relatedTarget as Node | null)) closeMenu();
+          if (!event.currentTarget.contains(event.relatedTarget as Node | null))
+            closeMenu();
         }}
       >
+        {menu === "ideas" && (
+          <Link
+            href="/studio"
+            onClick={() => closeMenu()}
+            className="rounded-full px-2 py-2 text-sm font-medium text-body hover:text-ink focus-visible:outline-2 focus-visible:outline-accent"
+          >
+            Creative Studio
+          </Link>
+        )}
         <button
-          ref={(node) => { menuButtonRefs.current[menu] = node; }}
+          ref={(node) => {
+            menuButtonRefs.current[menu] = node;
+          }}
           type="button"
           onClick={() => toggleMenu(menu)}
           aria-expanded={isOpen}
           aria-controls={`${menu}-navigation`}
           className={`inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas ${menuIsCurrent(menu) ? "bg-accent-soft text-ink" : "text-body"}`}
         >
-          {label}
-          <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fillRule="evenodd" d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
+          {menu === "ideas" ? (
+            <span className="sr-only">Creative Studio collections</span>
+          ) : (
+            label
+          )}
+          <svg
+            className={`h-3.5 w-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.22 7.22a.75.75 0 0 1 1.06 0L10 10.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 8.28a.75.75 0 0 1 0-1.06Z"
+              clipRule="evenodd"
+            />
           </svg>
         </button>
 
-        <div id={`${menu}-navigation`} className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "services" || menu === "demos" ? "w-80" : "w-64"}`}>
+        <div
+          id={`${menu}-navigation`}
+          className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "services" || menu === "demos" ? "w-80" : "w-64"}`}
+        >
           <div className="rounded-2xl border border-line bg-canvas p-2 shadow-[0_16px_40px_rgba(35,41,54,0.14)]">
             {menu === "services" && (
-              <Link href="/services" onClick={() => closeMenu()} className="mb-1 block rounded-xl px-3 py-2.5 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+              <Link
+                href="/services"
+                onClick={() => closeMenu()}
+                className="mb-1 block rounded-xl px-3 py-2.5 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
                 View all services
               </Link>
             )}
             {links.map((link) => (
-              <Link key={link.name} href={link.href} aria-current={!link.href.includes("#") && (link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} onClick={() => closeMenu()} className="block rounded-xl px-3 py-2.5 text-sm font-medium text-body transition-colors duration-200 hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+              <Link
+                key={link.name}
+                href={link.href}
+                aria-current={
+                  !link.href.includes("#") &&
+                  (link.href === "/demos"
+                    ? pathname === link.href
+                    : isCurrent(link.href))
+                    ? "page"
+                    : undefined
+                }
+                onClick={() => closeMenu()}
+                className="block rounded-xl px-3 py-2.5 text-sm font-medium text-body transition-colors duration-200 hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink"
+              >
                 {link.name}
               </Link>
             ))}
@@ -129,39 +192,103 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-line bg-canvas/90 backdrop-blur-md backdrop-saturate-150" role="banner">
+    <header
+      className="sticky top-0 z-50 w-full border-b border-line bg-canvas/90 backdrop-blur-md backdrop-saturate-150"
+      role="banner"
+    >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="group flex items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas" aria-label="2Nspira home">
+        <Link
+          href="/"
+          className="group flex items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          aria-label="2Nspira home"
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo/2nspira-logo.png" alt="2Nspira" className="h-11 w-auto" width={320} height={132} />
+          <img
+            src="/images/logo/2nspira-logo.png"
+            alt="2Nspira"
+            className="h-11 w-auto"
+            width={320}
+            height={132}
+          />
         </Link>
 
-        <nav ref={navigationRef} className="hidden items-center gap-0.5 lg:flex" aria-label="Main navigation" onKeyDown={handleNavigationKeyDown}>
+        <nav
+          ref={navigationRef}
+          className="hidden items-center gap-0.5 lg:flex"
+          aria-label="Main navigation"
+          onKeyDown={handleNavigationKeyDown}
+        >
           {renderMenu("services", "Services", serviceLinks)}
-          <Link href={primaryLinks[0].href} aria-current={pathname === primaryLinks[0].href ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+          <Link
+            href={primaryLinks[0].href}
+            aria-current={
+              pathname === primaryLinks[0].href ? "page" : undefined
+            }
+            className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink"
+          >
             Work
           </Link>
           {renderMenu("demos", "Demos", demoNavigationLinks)}
           {renderMenu("ideas", "Creative Studio", ideaLinks)}
           {renderMenu("about", "About", aboutLinks)}
           {primaryLinks.slice(1).map((link) => (
-            <Link key={link.name} href={link.href} aria-current={!link.href.includes("#") && (link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+            <Link
+              key={link.name}
+              href={link.href}
+              aria-current={
+                !link.href.includes("#") &&
+                (link.href === "/demos"
+                  ? pathname === link.href
+                  : isCurrent(link.href))
+                  ? "page"
+                  : undefined
+              }
+              className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink"
+            >
               {link.name}
             </Link>
           ))}
           <span className="mx-1 h-5 w-px bg-line" aria-hidden="true" />
-          <Link href="/portal/login" className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas">Login</Link>
+          <Link
+            href="/portal/login"
+            className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          >
+            Login
+          </Link>
         </nav>
 
-        <button className="flex h-10 w-10 items-center justify-center rounded-full text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent lg:hidden" onClick={() => setIsMobileMenuOpen(true)} aria-expanded={isMobileMenuOpen} aria-label="Open menu" aria-controls="mobile-menu">
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        <button
+          className="flex h-10 w-10 items-center justify-center rounded-full text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent lg:hidden"
+          onClick={() => setIsMobileMenuOpen(true)}
+          aria-expanded={isMobileMenuOpen}
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={1.75}
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
       </div>
 
-      <MobileMenu studioLinks={ideaLinks} isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
-      <span className="sr-only" aria-live="polite" aria-atomic="true">{isMobileMenuOpen ? "Navigation menu opened" : "Navigation menu closed"}</span>
+      <MobileMenu
+        studioLinks={ideaLinks}
+        isOpen={isMobileMenuOpen}
+        onClose={closeMobileMenu}
+      />
+      <span className="sr-only" aria-live="polite" aria-atomic="true">
+        {isMobileMenuOpen ? "Navigation menu opened" : "Navigation menu closed"}
+      </span>
     </header>
   );
 }

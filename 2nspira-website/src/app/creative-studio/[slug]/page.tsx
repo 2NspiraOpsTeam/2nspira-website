@@ -30,7 +30,7 @@ export default async function Page({ params }: Props) {
       id="main-content"
       className="mx-auto w-full max-w-3xl px-4 py-14 sm:px-6"
     >
-      <Link href="/creative-studio" className="underline text-accent">
+      <Link href="/studio" className="underline text-accent">
         ← Creative Studio
       </Link>
       <article>

@@ -2,8 +2,8 @@
 
 ## Editorial structure
 
-- `/creative-studio` is the shared landing page. Watch, Read and Shop are data, not hard-coded format restrictions. Add Listen or another group in Admin when ready.
-- Watch starts with **one Channel record**, linking to the existing verified `https://www.youtube.com/@2Nspira`. Its branded image, description and URL are editable. Images and buttons link to the channel in a new tab. `/videos` permanently redirects to `/creative-studio#watch`.
+- `/studio` is the shared landing page. Watch, Read and Play are the initial Admin-managed groups. Shop is not a Studio category. Add another group in Admin when approved content is ready.
+- Watch starts with **one Channel record**, linking to the existing verified `https://www.youtube.com/@2Nspira`. Its branded image, description and URL are editable. Images and the Explore Our Videos button link to the channel in a new tab. `/videos` retains its established collection, metadata and opt-in embeds; the Studio Watch section highlights one channel without duplicating individual videos.
 - A category can belong to multiple groups. An item can belong to multiple categories. Items are stored once; collections reference that record. Empty, hidden and draft-only collections do not appear in navigation, filters, or group sections.
 - Desktop, mobile and footer consume one navigation projection. Labels follow group/category names unless explicitly overridden. “Explore Creative Studio” is always available. Custom navigation is scoped to populated visible groups/categories.
 - Existing articles keep `/post/:slug`. The leadership book retains `/books` and its direct purchase link. Existing marketplace product URLs and the rare-book store stay authoritative; no inventory, checkout, billing or payment configuration is copied or changed.
@@ -41,3 +41,13 @@ To recover an earlier editorial revision, an authorized operator can retrieve a 
 `node scripts/creative-studio-test.mjs` runs the real handlers with isolated Miniflare D1 and synthetic authentication, including drafts, publishing, public filtering, channel updates, duplicate/unsafe destination rejection, image publication guards/bytes, revoked sessions and concurrent writes. No production writes or email sends.
 
 Canonical project validation: `npm run lint`, `npm run build:ci`, `npx tsc --noEmit`; production dependency audit. Rendered browser evidence and environment-specific verification belong in `QA.md`.
+
+## November 7 owner update (#182)
+
+- `/creative-studio` permanently redirects to `/studio`, preserving category queries and browser fragments. Existing item URLs remain canonical at `/creative-studio/:id`; no duplicate detail pages are created.
+- Homepage includes a compact showcase below consulting/services content. Desktop and mobile have a direct Studio hub link plus separate collection disclosure controls.
+- Published book and activity purchase URLs are reused from the existing catalogue; no storefront, checkout, pricing or inventory is added.
+- Breadcrumb remains an **unpublished draft**. The November 4 retirement evidence records it offline; no game launch URL is invented or unpaused. Owner confirmation of the intended live destination is needed before publication.
+- Rare-book store placement is retained as a draft, not presented as a confirmed Etsy/Amazon product listing. The legacy site/store routes are untouched.
+- Signal vs. Noise writing remains in existing article records. A separate newsletter destination has not been confirmed; no newsletter URL is invented.
+- This updates the existing PR/branch, not a parallel Studio implementation. Earlier hosted QA below pertains to the superseded Watch/Read/Shop candidate.

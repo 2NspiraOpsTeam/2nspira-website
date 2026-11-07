@@ -126,11 +126,11 @@ try {
   const c = validateStudio(initialStudio());
   check(
     c.groups.map((g) => g.name),
-    ["Watch", "Read", "Shop"],
+    ["Watch", "Read", "Play"],
   );
   check(
     studioNavigation(c).map((l) => l.name),
-    ["Watch", "Read", "Shop", "Explore Creative Studio"],
+    ["Watch", "Read", "Play", "Explore Creative Studio"],
   );
   check(c.items.filter((i) => i.type === "Channel").length, 1);
   check(new Set(c.items.map((i) => i.url || i.id)).size, c.items.length);
@@ -276,7 +276,7 @@ try {
   );
   const nextImage = (await (await handle(req())).json()).content;
   nextImage.categories[0].visible = true;
-  nextImage.items[0].image = imageUrl;
+  nextImage.items.find((item) => item.id === "youtube-channel").image = imageUrl;
   nextImage.status = "published";
   check((await handle(req(nextImage))).status, 200);
   const served = await serveImage(new Request("https://site.test" + imageUrl));

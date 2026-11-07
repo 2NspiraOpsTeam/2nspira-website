@@ -28,7 +28,7 @@ export function initialStudio(): Studio {
     revision: 0,
     status: "draft",
     intro:
-      "A place for curious minds and creative pauses. Watch original worlds come to life, read ideas with a human perspective, and discover books and creative things to make your own.",
+      "Watch. Read. Play. A place for curious minds: original worlds, ideas with a human perspective, and creative experiences for adults and families.",
     groups: [
       {
         id: "watch",
@@ -45,10 +45,10 @@ export function initialStudio(): Studio {
         visible: true,
       },
       {
-        id: "shop",
-        name: "Shop",
+        id: "play",
+        name: "Play",
         description:
-          "Our published books, rare and collectible editions, and creative products.",
+          "Creative pauses, coloring, shared challenges, and games for adults and families.",
         visible: true,
       },
     ],
@@ -69,36 +69,42 @@ export function initialStudio(): Studio {
       {
         id: "authored-books",
         name: "Books we author",
-        groupIds: ["read", "shop"],
+        groupIds: ["read"],
         visible: true,
       },
       {
         id: "collectibles",
         name: "Rare & collectible books",
-        groupIds: ["shop"],
+        groupIds: ["read"],
         visible: true,
       },
       {
         id: "activity-books",
         name: "Activity books",
-        groupIds: ["shop"],
+        groupIds: ["play"],
         visible: true,
       },
       {
         id: "coloring-books",
         name: "Coloring books",
-        groupIds: ["shop"],
+        groupIds: ["play"],
         visible: true,
       },
       {
         id: "printables",
         name: "Printables & games",
-        groupIds: ["shop"],
+        groupIds: ["play"],
         visible: true,
       },
-      { id: "art", name: "Art prints", groupIds: ["shop"], visible: true },
+      {
+        id: "interactive",
+        name: "Games & experiences",
+        groupIds: ["play"],
+        visible: true,
+      },
+      { id: "art", name: "Art prints", groupIds: ["play"], visible: true },
     ],
-    links: ["watch", "read", "shop"].map((id) => ({
+    links: ["watch", "read", "play"].map((id) => ({
       id,
       name: "",
       groupId: id,
@@ -107,6 +113,19 @@ export function initialStudio(): Studio {
       visible: true,
     })),
     items: [
+      item({
+        id: "breadcrumb",
+        title: "Breadcrumb",
+        description:
+          "An OSINT challenge game for curious adults. Launch destination awaiting verification.",
+        type: "Game",
+        categoryIds: ["interactive"],
+        status: "draft",
+        image: "/images/work/project-breadcrumb.png",
+        imageAlt:
+          "Breadcrumb project artwork featuring an investigation workspace",
+        url: "/work",
+      }),
       item({
         id: "youtube-channel",
         title: "2Nspira on YouTube",
@@ -175,10 +194,11 @@ export function initialStudio(): Studio {
           "Explore rare, signed, and limited editions, with photographs and condition details for each individual copy at 2Nspira Books.",
         type: "Collection",
         categoryIds: ["collectibles"],
-        featured: true,
+        featured: false,
         image: "/images/shop/rare-books-website.webp",
         imageAlt: "A preview of the 2Nspira rare and collectible bookstore",
         url: "https://books.2nspira.com",
+        status: "draft",
       }),
       ...[
         ...activityBooks.map((p) => ({ p, cat: "activity-books" })),
@@ -191,6 +211,7 @@ export function initialStudio(): Studio {
           description: p.description,
           type: cat === "activity-books" ? "Book" : "Product",
           categoryIds: [cat],
+          featured: cat === "activity-books",
           image: p.image,
           imageAlt: p.imageAlt,
           url: p.href,

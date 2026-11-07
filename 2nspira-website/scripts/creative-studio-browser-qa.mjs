@@ -18,7 +18,7 @@ try {
     });
     const errors = [];
     page.on("pageerror", (e) => errors.push(e.message));
-    const r = await page.goto(base + "/creative-studio");
+    const r = await page.goto(base + "/studio");
     assert.equal(r.status(), 200);
     await page
       .getByRole("heading", { name: "Creative Studio", exact: true, level: 1 })
@@ -26,13 +26,14 @@ try {
     assert.deepEqual(await page.locator("main h2").allTextContents(), [
       "Watch",
       "Read",
-      "Shop",
+      "Play",
       "Explore the studio",
+      "What could we create together?",
     ]);
     const watch = page.locator("section#watch");
     assert.equal(await watch.locator("article").count(), 1);
     const channel = watch.getByRole("link", {
-      name: "Watch on YouTube",
+      name: "Explore Our Videos",
       exact: true,
     });
     assert.equal(
@@ -88,7 +89,7 @@ try {
       exact: true,
     });
     const button = nav.getByRole("button", {
-      name: "Creative Studio",
+      name: "Creative Studio collections",
       exact: true,
     });
     await button.focus();
@@ -99,10 +100,10 @@ try {
     await menu.waitFor({ state: "visible" });
     assert.deepEqual(
       (await menu.getByRole("link").allTextContents()).map((x) => x.trim()),
-      ["Watch", "Read", "Shop", "Explore Creative Studio"],
+      ["Watch", "Read", "Play", "Explore Creative Studio"],
     );
     await menu.getByRole("link", { name: "Watch", exact: true }).click();
-    await page.waitForURL("**/creative-studio#watch");
+    await page.waitForURL("**/studio#watch");
     await page.reload();
     assert.equal(
       await page.evaluate(
@@ -116,7 +117,7 @@ try {
     for (const json of jsonld) JSON.parse(json);
     assert.equal(
       await page.locator('link[rel="canonical"]').getAttribute("href"),
-      "https://2nspira.com/creative-studio",
+      "https://2nspira.com/studio",
     );
     assert.deepEqual(
       (
@@ -124,7 +125,7 @@ try {
           .locator("footer nav[aria-labelledby=footer-ideas-heading] a")
           .allTextContents()
       ).map((x) => x.trim()),
-      ["Watch", "Read", "Shop", "Explore Creative Studio"],
+      ["Watch", "Read", "Play", "Explore Creative Studio"],
     );
     assert.deepEqual(errors, []);
     await page.evaluate(() => window.scrollTo(0, 0));
@@ -143,8 +144,10 @@ try {
   const context = await browser.newContext({ extraHTTPHeaders: headers });
   const page = await context.newPage();
   let r = await context.request.get(base + "/videos", { maxRedirects: 0 });
+  assert.equal(r.status(), 200);
+  r = await context.request.get(base + "/creative-studio?category=authored-books", { maxRedirects: 0 });
   assert.equal(r.status(), 308);
-  assert.equal(r.headers().location, "/creative-studio#watch");
+  assert.equal(r.headers().location, "/studio?category=authored-books");
   r = await context.request.get(base + "/creative-studio/not-a-real-item");
   assert.equal(r.status(), 404);
   r = await context.request.get(base + "/api/admin/creative-studio");
@@ -172,7 +175,7 @@ try {
         .inputValue(),
       "QA draft introduction",
     );
-    const before = await context.request.get(base + "/creative-studio");
+    const before = await context.request.get(base + "/studio");
     assert.ok(!(await before.text()).includes("QA draft introduction"));
     await page.getByLabel("Studio introduction", { exact: true }).fill("");
     await page.getByRole("button", { name: "Save draft", exact: true }).click();

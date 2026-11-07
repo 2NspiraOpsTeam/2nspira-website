@@ -45,9 +45,9 @@ export type Studio = {
 export type NavigationLink = { name: string; href: string };
 export const itemUrl = (item: Item) =>
   item.url || `/creative-studio/${item.id}`;
-export const groupUrl = (id: string) => `/creative-studio#${id}`;
+export const groupUrl = (id: string) => `/studio#${id}`;
 export const categoryUrl = (id: string) =>
-  `/creative-studio?category=${encodeURIComponent(id)}#collections`;
+  `/studio?category=${encodeURIComponent(id)}#collections`;
 export function safeUrl(value: string, image = false) {
   if (!value) return true;
   if (/^\/(?!\/)[^\\\s\u0000-\u001f]*$/.test(value)) return true;
@@ -109,7 +109,7 @@ export function studioNavigation(c: Studio): NavigationLink[] {
         l.url ||
         (l.categoryId ? categoryUrl(l.categoryId) : groupUrl(l.groupId)),
     })),
-    { name: "Explore Creative Studio", href: "/creative-studio" },
+    { name: "Explore Creative Studio", href: "/studio" },
   ];
 }
 export function validateStudio(value: unknown): Studio {
