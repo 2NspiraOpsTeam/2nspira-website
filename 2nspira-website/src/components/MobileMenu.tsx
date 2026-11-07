@@ -151,7 +151,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
           {accordion("services", "Services", serviceLinks, serviceButtonRef)}
           <Link href="/work" onClick={handleClose} aria-current={pathname === "/work" ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Work</Link>
           {accordion("demos", "Demos", demoNavigationLinks, demosButtonRef)}
-          {accordion("ideas", "Ideas", ideaLinks, ideasButtonRef)}
+          {accordion("ideas", "Creative Studio", ideaLinks, ideasButtonRef)}
           {accordion("about", "About", aboutLinks, aboutButtonRef)}
           <Link href="/contact" onClick={handleClose} aria-current={isCurrent("/contact") ? "page" : undefined} className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft">Contact</Link>
           <div className="my-3 border-t border-line" />
