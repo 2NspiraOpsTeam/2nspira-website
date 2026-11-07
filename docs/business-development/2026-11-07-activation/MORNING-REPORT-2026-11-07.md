@@ -46,6 +46,10 @@ Public review material is on draft PR #191 (docs-only, no merge). Existing campa
 
 OTV v3 and ICLS v3 are conditional working narratives only. Bounded document-review findings were corrected, but full independent submission-package QA has NOT passed. At 03:00 reviewer findings were not recoverable; no independent QA pass is claimed. Later document checks do not substitute for executed platform tests, actual fieldwork, styled exports, factual attachments or every-page visual/text QA. No styled final PDF/DOCX, runtime demonstration or assessment fieldwork was completed overnight.
 
+## Private delivery status
+
+The single requested Telegram briefing with the private ZIP was attempted, but sendDocument returned a network failure and no delivery receipt. Telegram history reconciliation is unavailable from this scheduled session; bounded gateway log inspection produced no confirming evidence. Delivery remains UNCERTAIN, not successful. Send intent and error are saved; no blind resend. The exact private assets remain saved locally, not publicly published.
+
 ## Three precise owner decisions / evidence gaps
 
 1. **Acquisition review:** accept/reject the strongest customer draft and revised single-route partner draft in the private index. Do not revive the withdrawn premise without new visible evidence. This is content review only; exact recipient/channel/window, clearance and authenticated approval are still required before any send.
