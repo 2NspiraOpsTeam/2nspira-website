@@ -93,6 +93,10 @@ export default function BooksPage() {
             <p className={`mt-3 ${caption}`}>
               As an Amazon Associate I earn from qualifying purchases.
             </p>
+            <p className="mt-5 text-sm leading-6 text-body">
+              Looking for the separately listed <em>Learn, Adapt, and Endure</em> Kindle edition?{" "}
+              <Link href="/shop#trust-learn-adapt-kindle" className={linkInline}>Compare the editions in our shop →</Link>
+            </p>
             <Link
               href="/blog/categories/trust-is-the-operating-system"
               className={`mt-4 ${linkInline}`}

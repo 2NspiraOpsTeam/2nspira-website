@@ -45,7 +45,7 @@ export default function ShopPage() {
             <p className="mt-3 leading-7 text-body">Discover our collection of rare collectible books, including signed and limited editions. Explore photographs of the actual copies, individual condition details, and the stories behind each edition at 2Nspira Books.</p>
             <a href="https://books.2nspira.com" className={`mt-5 min-h-[48px] ${buttonPrimary}`}>Explore rare collectibles <span aria-hidden="true" className="ml-2">→</span></a>
           </div>
-          <a href="https://books.2nspira.com" data-catalog-card className="block overflow-hidden rounded-xl border border-line bg-white shadow-lg transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-label="Visit 2Nspira Books rare collectible bookstore">
+          <a href="https://books.2nspira.com" data-catalog-card className="block overflow-hidden rounded-xl border border-line bg-white shadow-lg transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
             <div className="flex items-center gap-2 border-b border-line bg-white px-4 py-3 text-xs text-body" aria-hidden="true">
               <span className="h-2 w-2 rounded-full bg-slate-300" />
               <span className="h-2 w-2 rounded-full bg-slate-300" />
@@ -86,7 +86,7 @@ export default function ShopPage() {
           <div data-catalog-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="coloring-books-title" className={h2}>Coloring Books</h2>
-              <p className="mt-3 max-w-2xl leading-7 text-body">Cozy worlds to make your own. Paperback coloring books from 2Nspira Books. Shop released titles on Amazon and preview what’s coming next.</p>
+              <p className="mt-3 max-w-2xl leading-7 text-body">Cozy worlds to make your own. Explore all four paperback coloring books from 2Nspira Books, available on Amazon.</p>
             </div>
             <Link href="/shop/coloring-books" className={`${linkInline} min-h-[44px]`}>Explore Coloring Books <span aria-hidden="true" className="ml-1">→</span></Link>
           </div>
@@ -102,6 +102,12 @@ export default function ShopPage() {
           </div>
           <ProductGrid products={artPrints} headingLevel="h3" />
         </section>
+        <aside data-catalog-card className="mt-16 rounded-2xl border border-line bg-accent-soft p-7 sm:p-10" aria-labelledby="shop-video-title">
+          <p className="text-sm font-semibold uppercase tracking-widest text-body">Watch &amp; unwind · Free on YouTube</p>
+          <h2 id="shop-video-title" className={`mt-3 ${h2}`}>A little atmosphere. A fresh perspective.</h2>
+          <p className="mt-4 max-w-2xl leading-7 text-body">Discover original rain soundscapes and ideas on leadership. Explore our public video collection, with previews and direct YouTube links.</p>
+          <Link href="/videos" className={`mt-6 ${buttonPrimary}`}>Explore our videos <span aria-hidden="true" className="ml-2">→</span></Link>
+        </aside>
         <CatalogFaq page="shop" />
         <EtsyShopLink />
       </div>
