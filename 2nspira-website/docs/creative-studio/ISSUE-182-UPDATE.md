@@ -13,3 +13,7 @@ Existing data-driven Admin model retained. Hub has three collection cards openin
 ## Incomplete content dependencies
 
 Breadcrumb was deliberately retired November 4 (`docs/qa/discovery-and-retirement-2026-11-04.md`). Keep it draft, do not invent a live launch link or reactivate infrastructure. Separate Signal vs. Noise newsletter URL is not established by source; existing Signal vs. Noise article remains available. Marketplace destinations are reused from the existing catalogue, not newly created listings. No production code/database or payment changes authorized by this update.
+
+## Hosted first-use defect reproduced and addressed
+
+At deployed `26a5f55`, selecting authored-books immediately after DOMContentLoaded changed the native selected value but left 47 results after 15 seconds. A second selection worked; no page errors. This reproduces lost pre-hydration input, not merely a repaint delay. Filters now remain disabled in server HTML until hydration readiness, using React's server/client external-store snapshot. No arbitrary sleep, retry click or weakened publication guard. Browser harness now verifies disabled filters without JavaScript as well as the first enabled selection in normal contexts. Exact updated-head hosted verification remains required.

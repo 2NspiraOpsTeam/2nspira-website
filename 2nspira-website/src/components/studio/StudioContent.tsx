@@ -1,5 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
+const subscribeReady = () => () => {};
+const clientReady = () => true;
+const serverReady = () => false;
 import {
   publicStudio,
   itemUrl,
@@ -109,6 +112,7 @@ export default function StudioContent({
   content: Studio;
   initialCategory?: string;
 }) {
+  const ready = useSyncExternalStore(subscribeReady, clientReady, serverReady);
   const c = publicStudio(content);
   const [category, setCategory] = useState(
     c.categories.some((cat) => cat.id === initialCategory)
@@ -246,6 +250,7 @@ export default function StudioContent({
             <label className="text-sm font-medium text-ink">
               Category
               <select
+                disabled={!ready}
                 aria-label="Category"
                 value={category}
                 onChange={(e) => chooseCategory(e.target.value)}
@@ -263,6 +268,7 @@ export default function StudioContent({
             <label className="text-sm font-medium text-ink">
               Content type
               <select
+                disabled={!ready}
                 aria-label="Content type"
                 value={format}
                 onChange={(e) => setFormat(e.target.value)}
@@ -277,7 +283,7 @@ export default function StudioContent({
             <button
               type="button"
               className={`self-end ${buttonSecondary}`}
-              disabled={!category && !format}
+              disabled={!ready || (!category && !format)}
               onClick={() => {
                 chooseCategory("");
                 setFormat("");

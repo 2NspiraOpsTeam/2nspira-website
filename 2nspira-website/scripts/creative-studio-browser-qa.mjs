@@ -141,6 +141,13 @@ try {
     );
     await page.close();
   }
+  const noJs = await browser.newContext({ javaScriptEnabled: false, extraHTTPHeaders: headers });
+  const noJsPage = await noJs.newPage();
+  await noJsPage.goto(base + "/studio");
+  assert.equal(await noJsPage.getByLabel("Category", { exact: true }).isDisabled(), true);
+  assert.equal(await noJsPage.getByLabel("Content type", { exact: true }).isDisabled(), true);
+  await noJs.close();
+  console.log("PASS no-JavaScript filter readiness guard");
   const context = await browser.newContext({ extraHTTPHeaders: headers });
   const page = await context.newPage();
   let r = await context.request.get(base + "/videos", { maxRedirects: 0 });
