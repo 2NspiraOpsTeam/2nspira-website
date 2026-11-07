@@ -1,3 +1,4 @@
+import Modernization from "./Modernization";
 import DemoTrust from "@/components/demos/DemoTrust";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
@@ -40,10 +41,10 @@ import {
 } from "@/components/ui";
 
 const description =
-  "Website design, web and mobile app development, and custom internal operations software. 2Nspira connects customer experiences with the work behind your business.";
+  "Modernize your website with accessible, mobile-friendly design, considered migration and easier content management. Explore websites, apps and custom operations software from 2Nspira.";
 export const metadata: Metadata = publicPageMetadata({
-  title: "Websites, Apps & Custom Operations Software",
-  shareTitle: "Your next website. Your next app. Your better way to work.",
+  title: "Website Modernization, Apps & Operations Software",
+  shareTitle: "Your Website Was Built for Yesterday. Let’s Build It for What’s Next.",
   description,
   path: "/websites",
 });
@@ -199,6 +200,9 @@ const capabilities = [
 ];
 
 const websiteQuestions = [
+  { question: "Who owns our content, and what happens if we leave?", answer: "Your agreement will define ownership, content export and handover. You retain ownership of the content you supply. Domain access, licensed assets, custom code rights, export formats and any transition assistance must be agreed before work starts; we do not promise a one-click migration to every platform." },
+  { question: "Do you maintain existing WordPress installations?", answer: "Existing WordPress sites are rebuild or migration prospects, not legacy-maintenance engagements. We inventory useful content and URLs, scope redirects and integrations, and agree a tested migration rather than taking over indefinite maintenance of an existing installation." },
+  { question: "Are these managed plans available to buy now?", answer: "No. This draft shows proposed pricing for internal review. CMS feasibility, service costs, usage allowances, support terms and the final offering must be validated and approved. Build work is quoted separately; no subscription is created here." },
   {
     question: "Do you build custom internal operations systems?",
     answer:
@@ -268,30 +272,29 @@ export default function WebsitesPage() {
           <AmbientField />
           <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <EyebrowPill>Websites, Apps &amp; Digital Platforms</EyebrowPill>
+              <EyebrowPill>Website Modernization</EyebrowPill>
               <p className={`mt-6 ${eyebrow}`}>
                 Websites · Apps · Custom operations solutions
               </p>
               <h1 className={h1}>
-                Your next big idea.
-                <br />A better way to work.
+                Your Website Was Built for Yesterday.
+                <br />Let’s Build It for What’s Next.
               </h1>
               <p className={lead}>
-                A website that earns attention. An app people want to use. An
-                internal system that gives your team its time back. We design
-                and build connected digital experiences around your customers,
-                your people, and the work that matters.
+                Transform an outdated website into a faster, accessible,
+                mobile-friendly, easier-to-manage digital experience, designed
+                to evolve with your organization.
               </p>
               <p className="mt-4 leading-7 text-body">
                 Start with what you need today. Build with tomorrow in mind.
                 AI-native in how we build. Human-led in what we deliver.
               </p>
-              <ServiceConversation label="Discuss your website, app or workflow" />
+              <ServiceConversation label="Request a Website Assessment" />
               <a
-                href="#website-and-app-development"
+                href="/contact#contact-message"
                 className={`mt-4 min-h-11 ${linkInline}`}
               >
-                See what we build <span aria-hidden="true"> ↓</span>
+                Building a New Website? Let’s Talk. <span aria-hidden="true"> ↓</span>
               </a>
             </div>
             <div
@@ -351,6 +354,8 @@ export default function WebsitesPage() {
             </Link>
           </div>
         </section>
+
+        <Modernization />
 
         <section
           id="website-and-app-development"
@@ -987,7 +992,7 @@ export default function WebsitesPage() {
         <section className={sectionBand} aria-labelledby="website-cta-heading">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
             <h2 data-catalog-reveal id="website-cta-heading" className={h2}>
-              What should your next digital solution make easier?
+              Ready for your website’s next chapter?
             </h2>
             <p className={lead}>
               Bring your current site, an app idea, or an internal workflow that
