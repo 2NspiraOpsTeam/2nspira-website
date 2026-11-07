@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-48e937af732aaf9d35afa866b26db747",
-      "observed_at": "2026-11-07T05:04:33.354Z",
+      "run_id": "mi-b6e879aed424d122ddee37d39268b0ab",
+      "observed_at": "2026-11-07T06:02:26.283Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -15,7 +15,9 @@
         "source_ids": [
           "S1",
           "S2",
-          "S3"
+          "S3",
+          "A2",
+          "A5"
         ],
         "confidence": "medium problem evidence; willingness to pay untested",
         "ranking": 1,
@@ -33,10 +35,10 @@
         "stage": "RESEARCH_COMPLETE / EXPERIMENT_PROPOSED_NOT_RUN",
         "owner_proposal": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian",
         "experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
-        "date_checked": "2026-11-06 America/New_York (desk recalibration, not source refresh)",
+        "date_checked": "2026-11-07 America/New_York: Wave competitor only; original problem surveys not refreshed",
         "outcome": "No interviews, purchases, revenue or product launch; unvalidated offer",
         "dedupe": "Adjacent to #185 acquisition; no new campaign. Excludes #186 Business Hub and payment-pilot checkout.",
-        "change_note": "71 -> 68: channel score corrected from C3 (reachable route) to C2 (plausible but untested); no specific reachable channel documented. No new buyer evidence.",
+        "change_note": "Fresh Wave competitor evidence narrows differentiation to human-approved exceptions; no new buyer intent. Score remains 68; historical 71 preserved.",
         "research_details": {
           "customer_segment": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis",
           "customer_needs": [
@@ -64,6 +66,14 @@
               "url": null,
               "observation": "Existing substitute; no comparative buyer test",
               "checked_date": "2026-11-07 UTC (original source access)"
+            },
+            {
+              "name": "Wave",
+              "url": "https://www.waveapps.com/invoicing",
+              "pricing_url": "https://www.waveapps.com/pricing",
+              "observation": "Native overdue reminders, invoice/payment/communication history and recurring billing are supplier-described substitutes. Pricing FAQ quotes Pro $19 USD/$25 CAD plus applicable taxes per business; not a like-for-like setup-service price. No trial or independent effectiveness verification. Some testimonials compensated.",
+              "checked_at": "2026-11-07T06:01:50.100Z",
+              "market": "US/Canada dollar quotations; current product page, no demand period"
             }
           ],
           "pricing_intelligence": {
@@ -73,7 +83,19 @@
               "unit": "setup pilot",
               "status": "untested_hypothesis"
             },
-            "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits"
+            "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits",
+            "observed_competitor_prices": [
+              {
+                "supplier": "Wave Pro",
+                "amount_usd": 19,
+                "amount_cad": 25,
+                "unit": "subscription per business; monthly interpretation from FAQ, checkout not tested",
+                "taxes": "plus applicable taxes",
+                "url": "https://www.waveapps.com/pricing",
+                "checked_at": "2026-11-07T06:01:50.100Z",
+                "comparability": "not equivalent to proposed $499 setup; regional/country checkout not tested"
+              }
+            ]
           },
           "demand_indicators": {
             "evidence_urls": [
@@ -93,7 +115,8 @@
             "execution_authorized": false
           },
           "recommended_next_steps": [
-            "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval"
+            "Retain synthetic 30-invoice gate; include a native-reminder/manual baseline and ask whether current tools already suffice",
+            "Do not pitch generic reminder automation; run approved five-user discovery only after independent technical review and exact recruitment authorization"
           ],
           "agent_fit": {
             "research_owner": "Brian",
@@ -110,19 +133,24 @@
           "source_freshness": {
             "source_access_window": "2026-11-06 America/New_York / 2026-11-07 UTC",
             "metadata_structured_at": "2026-11-07T05:04:33.354764+00:00",
-            "new_source_research": false
+            "new_source_research": true,
+            "competitor_sources_checked_at": "2026-11-07T06:01:50.100Z",
+            "scope": "Only Wave alternative/pricing refreshed; original problem evidence access window unchanged. Metadata timestamps do not refresh surveys."
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
-            "No verified distribution reach or realized margin"
+            "No verified distribution reach or realized margin",
+            "Incremental exception-review value versus Wave/native reminders is not established; no comparative usability or buyer test"
           ]
         },
-        "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval"
+        "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
+        "checked_at": "2026-11-07T06:02:26.283573+00:00",
+        "record_version": "2026-11-07-nightly-v4"
       }
     },
     {
-      "run_id": "mi-48e937af732aaf9d35afa866b26db747",
-      "observed_at": "2026-11-07T05:04:33.354Z",
+      "run_id": "mi-b6e879aed424d122ddee37d39268b0ab",
+      "observed_at": "2026-11-07T06:02:26.283Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -231,12 +259,15 @@
             "No verified distribution reach or realized margin"
           ]
         },
-        "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized"
+        "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
+        "checked_at": "2026-11-07T06:02:26.283573+00:00",
+        "record_version": "2026-11-07-nightly-v4",
+        "revision_note": "Carried forward unchanged; source dates/outcomes retained. This run does not refresh original evidence."
       }
     },
     {
-      "run_id": "mi-48e937af732aaf9d35afa866b26db747",
-      "observed_at": "2026-11-07T05:04:33.354Z",
+      "run_id": "mi-b6e879aed424d122ddee37d39268b0ab",
+      "observed_at": "2026-11-07T06:02:26.283Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -345,12 +376,15 @@
             "No qualified buyer interviews, purchases or revenue",
             "No verified distribution reach or realized margin"
           ]
-        }
+        },
+        "checked_at": "2026-11-07T06:02:26.283573+00:00",
+        "record_version": "2026-11-07-nightly-v4",
+        "revision_note": "Carried forward unchanged; source dates/outcomes retained. This run does not refresh original evidence."
       }
     },
     {
-      "run_id": "mi-48e937af732aaf9d35afa866b26db747",
-      "observed_at": "2026-11-07T05:04:33.354Z",
+      "run_id": "mi-b6e879aed424d122ddee37d39268b0ab",
+      "observed_at": "2026-11-07T06:02:26.283Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -458,7 +492,10 @@
             "No verified distribution reach or realized margin"
           ]
         },
-        "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified"
+        "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
+        "checked_at": "2026-11-07T06:02:26.283573+00:00",
+        "record_version": "2026-11-07-nightly-v4",
+        "revision_note": "Carried forward unchanged; source dates/outcomes retained. This run does not refresh original evidence."
       }
     }
   ]
