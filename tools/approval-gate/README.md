@@ -6,7 +6,7 @@ This is a **dry-run-only candidate**, not a production authorization or deploy s
 
 - OpenClaw's Adam intake, acknowledgment, Telegram receipt and idempotent claim pilot passed.
 - Education #176 and manufacturing #177 produced draft PRs while the prior task awaited approval. Both were subsequently merged and deployed by explicit direct operator authorization in Telegram. This is not an automated approval-loop test.
-- GitHub connector exposes commit-linked PR review submission. A live `get_user_login` returned `2NspiraOpsTeam`, numeric ID `264654435`, also the author identity used by the agent CLI. Shared-account identity cannot independently attest that a human rather than an agent approved a release. GitHub also rejects author self-approval.
+- Live connector write/readback passed: [review 5810115934](https://github.com/2NspiraOpsTeam/2nspira-website/pull/190#pullrequestreview-5810115934), state `COMMENTED`, anchored to `e7b9c31dc1cbe94cce90469a2c693343b0550178`. This is transport evidence only, not owner approval. GitHub connector exposes commit-linked PR review submission. A live `get_user_login` returned `2NspiraOpsTeam`, numeric ID `264654435`, also the author identity used by the agent CLI. Shared-account identity cannot independently attest that a human rather than an agent approved a release. GitHub also rejects author self-approval.
 - This instance's `openclaw agents list --json` exposes **only `main` (Adam)**. Connected execution nodes contain Adam, not Maya/Brian/Cleo/Dax. No independent instance credentials or authorized remote management path for those agents were established. Do not create pretend local identities, copy shared tokens, or claim a team rollout.
 
 ## Review packet
