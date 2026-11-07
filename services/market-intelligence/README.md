@@ -1,6 +1,6 @@
 # Shared market intelligence — GitHub #188
 
-Jeffrey requested this Cloudflare database on November 6, 2026. Brian owns the research and this bounded integration. This is **not** a replacement for Adam's Business Hub (#186), Cleo's dashboard (#187), or team approval routing (#175). It stores public-source business research only, not customer PII, payments, credentials, or autonomous launch approvals.
+Jeffrey requested this Cloudflare database on November 6, 2026. Brian owns research content and quality; Adam owns shared infrastructure, D1 integration, authentication and API security. This earlier dedicated store is transitional pending his adopt-or-consolidate review. This is **not** a replacement for Adam's Business Hub (#186), Cleo's dashboard (#187), or team approval routing (#175). It stores public-source business research only, not customer PII, payments, credentials, or autonomous launch approvals.
 
 ## Live resources
 
@@ -78,3 +78,7 @@ python3 scripts/verify_live.py
 Run the live test with private credential configs installed; it never prints tokens. It exercises all six role credentials from the operator host, denies anonymous/read-only writes, checks current score/history/document integrity and tests exact retry + immutable conflict. It creates no synthetic research rows. To stop ingestion, disable the nightly sync and revoke Brian's writer hash; reads may remain available. Roll back Worker code via Wrangler's deployment rollback without deleting D1. Do not destroy the database to roll back the API. Export D1 with `wrangler d1 export 2nspira-market-intelligence --remote --output <private-backup.sql>` before migrations; retain versioned local artifacts. D1 Time Travel is an additional provider recovery feature, not a substitute for verified exports.
 
 Inventory at setup found existing checkout, careers, team-management and client-portal databases but no market-research database. The inspected client portal held billing/customer tables; none were reused or changed. Dedicated namespaced research tables allow future #186 integration without putting public research into financial tables. Free-tier suitability depends on aggregate account usage; no paid plan upgrade was requested or performed. Monitor D1/Worker usage and audit table growth.
+
+## Expanded shared-intelligence requirements
+
+Versioned research and immutable source recovery artifacts now live in [research/market-intelligence](../../research/market-intelligence/README.md). The [integration handoff](../../research/market-intelligence/INTEGRATION.md) documents Adam/Cleo ownership, v2 structured fields, executive snapshot contract, migration constraints and acceptance gaps. No new infrastructure or security deployment was performed for this expansion. Existing q-search covers title/category only; broader structured/document search is pending Adam integration.
