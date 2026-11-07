@@ -1,0 +1,596 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "final": "https://2nspira.com/",
+    "title": "AI, Automation & Technology Consulting | 2Nspira",
+    "h1": [
+      "A clearer vision.A stronger business."
+    ],
+    "canonical": "https://2nspira.com",
+    "overflow": false,
+    "errors": [],
+    "links": [
+      {
+        "text": "Let\u2019s build what\u2019s next \u2197",
+        "href": "/contact#contact-message"
+      },
+      {
+        "text": "Independent thinking. Practical change. Since 2019. \u2193",
+        "href": "#our-purpose"
+      },
+      {
+        "text": "Get to know 2Nspira \u2197",
+        "href": "/about"
+      },
+      {
+        "text": "Explore our services",
+        "href": "/services"
+      },
+      {
+        "text": "",
+        "href": "/websites"
+      },
+      {
+        "text": "Websites, Apps & Digital Platforms",
+        "href": "/websites"
+      },
+      {
+        "text": "",
+        "href": "/automation-systems-optimization"
+      },
+      {
+        "text": "Automation & Systems Optimization",
+        "href": "/automation-systems-optimization"
+      },
+      {
+        "text": "",
+        "href": "/ai-enablement"
+      },
+      {
+        "text": "Organizational AI Enablement",
+        "href": "/ai-enablement"
+      },
+      {
+        "text": "",
+        "href": "/fractional-cio"
+      },
+      {
+        "text": "Fractional CIO & Technology Leadership",
+        "href": "/fractional-cio"
+      },
+      {
+        "text": "",
+        "href": "/coaching"
+      },
+      {
+        "text": "Entrepreneur Mentoring & Coaching",
+        "href": "/coaching"
+      },
+      {
+        "text": "Find your starting point \u2192",
+        "href": "/services"
+      },
+      {
+        "text": "Explore executive technology leadership \u2192",
+        "href": "/fractional-cio"
+      },
+      {
+        "text": "Explore better ways of working \u2192",
+        "href": "/automation-systems-optimization"
+      },
+      {
+        "text": "Explore mentoring\u2014not outsourced delivery \u2192",
+        "href": "/coaching"
+      },
+      {
+        "text": "Let\u2019s discuss your challenge \u2197",
+        "href": "/contact#contact-message"
+      },
+      {
+        "text": "Simpler operationsOur operations have become too complicated.Simplify repetitive work and connect the systems your business relies on.Explore operations solutions \u2197",
+        "href": "/automation-systems-optimization"
+      },
+      {
+        "text": "Organizational AI EnablementWe want to become an AI-enabled organization.Align leadership, people, workflows, technology, and governance around responsible AI\u2014and measure progress as you evolve.Explore organizational AI enablement \u2197",
+        "href": "/ai-enablement"
+      },
+      {
+        "text": "Better digital experiencesOur website no longer meets our needs.Build a better customer experience with useful digital capabilities behind it.Explore website solutions \u2197",
+        "href": "/websites"
+      },
+      {
+        "text": "Confident leadershipWe need experienced technology leadership.Gain strategic direction and oversight without hiring a full-time CIO.Explore technology leadership \u2197",
+        "href": "/fractional-cio"
+      },
+      {
+        "text": "Building a new venture?Make room for a clearer direction, practical guidance, and your next chapter as a founder.Explore entrepreneur mentoring\u2197",
+        "href": "/coaching"
+      },
+      {
+        "text": "Exploring what\u2019s possible?Discover how our services connect your goals with the right expertise and support.Explore how we can help\u2197",
+        "href": "/services"
+      },
+      {
+        "text": "How AI-ready is your organization?Explore your organization\u2019s readiness to build the capabilities, trust, and ways of working that AI requires.Start with the AI Readiness Scorecard\u2197",
+        "href": "/resources/ai-readiness-scorecard"
+      },
+      {
+        "text": "Discover our story \u2197",
+        "href": "/our-story"
+      },
+      {
+        "text": "Explore the project \u2197",
+        "href": "/work#teams-management"
+      },
+      {
+        "text": "Visit Teams Management \u2197 (opens in a new tab)",
+        "href": "https://www.teamsmanagement.com/"
+      },
+      {
+        "text": "Read all Google reviews \u2197 (opens in a new tab)",
+        "href": "https://www.google.com/maps/place/Teams+Management+LLC/data=!4m2!3m1!1s0x89c258c0e0b65e2d:0xa24510b57f3f6d39"
+      },
+      {
+        "text": "View our work \u2197",
+        "href": "/work"
+      },
+      {
+        "text": "GeVitals \u2197A bilingual clinic website connecting content, video, publishing, and local discovery.",
+        "href": "/websites#our-work"
+      },
+      {
+        "text": "Open Goal Soccer \u2197An accessible archival redesign preserving a community program\u2019s mission and story.",
+        "href": "/websites#our-work"
+      },
+      {
+        "text": "Explore the manufacturing demo \u2192",
+        "href": "/demos/manufacturing"
+      },
+      {
+        "text": "See all interactive demos",
+        "href": "/demos"
+      }
+    ]
+  },
+  {
+    "path": "/work",
+    "status": 200,
+    "final": "https://2nspira.com/work",
+    "title": "Technology Consulting Projects & Engineering Portfolio | 2Nspira",
+    "h1": [
+      "Our Work: Practical Problems, Connected Solutions"
+    ],
+    "canonical": "https://2nspira.com/work",
+    "overflow": false,
+    "errors": [],
+    "links": [
+      {
+        "text": "Client projects",
+        "href": "#teams-management"
+      },
+      {
+        "text": "2Nspira engineering",
+        "href": "#internal-engineering"
+      },
+      {
+        "text": "Platform engineering",
+        "href": "#concepts-prototypes"
+      },
+      {
+        "text": "Visit Teams Management (opens in a new tab)\u2197",
+        "href": "https://www.teamsmanagement.com/"
+      },
+      {
+        "text": "GeVitals: Visit Project \u2192",
+        "href": "https://gevitals.com"
+      },
+      {
+        "text": "Open Goal Soccer: Visit Project \u2192",
+        "href": "https://opengoalsoccer.com"
+      },
+      {
+        "text": "Explore the engineering lessons \u2192",
+        "href": "/post/building-ai-team-multi-agent-workflow-lessons"
+      },
+      {
+        "text": "Explore 2Nspira Books (opens in a new tab)\u2197",
+        "href": "https://2nspira-books-preview.jcortez-36a.workers.dev/"
+      },
+      {
+        "text": "Explore 2Nspira (opens in a new tab)\u2197",
+        "href": "https://2nspira.com"
+      },
+      {
+        "text": "Explore CalmLoop (opens in a new tab)\u2197",
+        "href": "https://calmloop.vercel.app"
+      },
+      {
+        "text": "AI enablement",
+        "href": "/ai-enablement"
+      },
+      {
+        "text": "digital platforms",
+        "href": "/websites"
+      },
+      {
+        "text": "technology leadership",
+        "href": "/fractional-cio"
+      },
+      {
+        "text": "View the demo overview \u2192",
+        "href": "/demos/manufacturing"
+      },
+      {
+        "text": "Let's Discuss Your Challenge",
+        "href": "/contact"
+      }
+    ]
+  },
+  {
+    "path": "/websites",
+    "status": 200,
+    "final": "https://2nspira.com/websites",
+    "title": "Website Modernization, Apps & Operations Software | 2Nspira",
+    "h1": [
+      "Your Website Was Built for Yesterday.Let\u2019s Build It for What\u2019s Next."
+    ],
+    "canonical": "https://2nspira.com/websites",
+    "overflow": false,
+    "errors": [],
+    "links": [
+      {
+        "text": "Request a Website Assessment\u2197",
+        "href": "https://calendar.app.google/54Gv2GFrkUFsNs4i9"
+      },
+      {
+        "text": "Send a message",
+        "href": "/contact#contact-message"
+      },
+      {
+        "text": "Building a New Website? Let\u2019s Talk.  \u2193",
+        "href": "/contact#contact-message"
+      },
+      {
+        "text": "Teams ManagementPublished website",
+        "href": "#teams-management"
+      },
+      {
+        "text": "GeVitalsPublished website",
+        "href": "#gevitals"
+      },
+      {
+        "text": "2NspiraIn-house platform",
+        "href": "#2nspira"
+      },
+      {
+        "text": "2Nspira BooksIn-house storefront preview",
+        "href": "#2nspira-books"
+      },
+      {
+        "text": "Explore our story \u2192",
+        "href": "/about#company-history-heading"
+      },
+      {
+        "text": "Request a Website Assessment",
+        "href": "/contact#contact-message"
+      },
+      {
+        "text": "Explore apps & operations",
+        "href": "#website-and-app-development"
+      },
+      {
+        "text": "Interactive experienceSchool operationsAdmissions, classroom work and family-visible progress.Explore the possibilities",
+        "href": "/demos/education"
+      },
+      {
+        "text": "Interactive experienceManufacturing operationsMaterials, production handoffs and quality gates.Explore the possibilities",
+        "href": "/demos/manufacturing"
+      },
+      {
+        "text": "Interactive experienceProperty operationsRent records, maintenance and resident updates.Explore the possibilities",
+        "href": "/demos/property-management"
+      },
+      {
+        "text": "Visit Teams Management  \u2197",
+        "href": "https://www.teamsmanagement.com/"
+      },
+      {
+        "text": "Visit GeVitals  \u2197",
+        "href": "https://gevitals.com/"
+      },
+      {
+        "text": "Explore 2Nspira  \u2197",
+        "href": "https://2nspira.com/"
+      },
+      {
+        "text": "Explore the bookstore preview  \u2197",
+        "href": "https://2nspira-books-preview.jcortez-36a.workers.dev/"
+      },
+      {
+        "text": "Visit Open Goal Soccer \u2197",
+        "href": "https://opengoalsoccer.com/"
+      },
+      {
+        "text": "Visit CalmLoop \u2197",
+        "href": "https://calmloop.vercel.app/"
+      },
+      {
+        "text": "See how the pieces connect \u2193",
+        "href": "#platform-model"
+      },
+      {
+        "text": "Google Calendar at 2Nspira  \u2191",
+        "href": "#2nspira"
+      },
+      {
+        "text": "Teams property discovery  \u2191",
+        "href": "#teams-management"
+      },
+      {
+        "text": "2Nspira Books \u00b7 preview  \u2191",
+        "href": "#2nspira-books"
+      },
+      {
+        "text": "2Nspira & Teams workflows  \u2191",
+        "href": "#teams-management"
+      },
+      {
+        "text": "Teams private property operations  \u2191",
+        "href": "#teams-management"
+      },
+      {
+        "text": "Teams private analytics workspace  \u2191",
+        "href": "#teams-management"
+      },
+      {
+        "text": "GeVitals bilingual website  \u2191",
+        "href": "#gevitals"
+      },
+      {
+        "text": "Explore AI enablement \u2192",
+        "href": "/ai-enablement"
+      },
+      {
+        "text": "Explore systems integration",
+        "href": "/automation-systems-optimization"
+      },
+      {
+        "text": "Discuss your website, app or workflow\u2197",
+        "href": "https://calendar.app.google/54Gv2GFrkUFsNs4i9"
+      },
+      {
+        "text": "Send a message",
+        "href": "/contact#contact-message"
+      },
+      {
+        "text": "Let\u2019s map your first improvement",
+        "href": "https://calendar.app.google/54Gv2GFrkUFsNs4i9"
+      },
+      {
+        "text": "Meet the people & delivery approach",
+        "href": "/team-delivery"
+      }
+    ]
+  },
+  {
+    "path": "/contact",
+    "status": 200,
+    "final": "https://2nspira.com/contact",
+    "title": "Discuss Your Business Challenge | 2Nspira",
+    "h1": [
+      "Let's Discuss Your Challenge"
+    ],
+    "canonical": "https://2nspira.com/contact",
+    "overflow": false,
+    "errors": [],
+    "links": [
+      {
+        "text": "Book a conversation",
+        "href": "https://calendar.app.google/54Gv2GFrkUFsNs4i9"
+      },
+      {
+        "text": "Prefer to send a message?",
+        "href": "#contact-message"
+      },
+      {
+        "text": "hello@2nspira.com",
+        "href": "mailto:hello@2nspira.com"
+      },
+      {
+        "text": "+1 (646) 543-0199",
+        "href": "tel:+16465430199"
+      }
+    ]
+  },
+  {
+    "path": "/services",
+    "status": 200,
+    "final": "https://2nspira.com/services",
+    "title": "Business Technology Consulting & Modernization | 2Nspira",
+    "h1": [
+      "A stronger business starts with your next right move."
+    ],
+    "canonical": "https://2nspira.com/services",
+    "overflow": false,
+    "errors": [],
+    "links": [
+      {
+        "text": "Let\u2019s talk about your next step\u2197",
+        "href": "https://calendar.app.google/54Gv2GFrkUFsNs4i9"
+      },
+      {
+        "text": "Send a message",
+        "href": "/contact#contact-message"
+      },
+      {
+        "text": "Find the right service  \u2193",
+        "href": "#find-the-right-service"
+      },
+      {
+        "text": "Websites & apps",
+        "href": "#service-1"
+      },
+      {
+        "text": "Automation",
+        "href": "#service-2"
+      },
+      {
+        "text": "AI enablement",
+        "href": "#service-3"
+      },
+      {
+        "text": "Technology leadership",
+        "href": "#service-4"
+      },
+      {
+        "text": "Mentoring & coaching",
+        "href": "#service-5"
+      },
+      {
+        "text": "Explore websites and apps \u2192",
+        "href": "/websites"
+      },
+      {
+        "text": "Explore systems optimization \u2192",
+        "href": "/automation-systems-optimization"
+      },
+      {
+        "text": "Explore organizational AI enablement \u2192",
+        "href": "/ai-enablement"
+      },
+      {
+        "text": "Explore fractional CIO leadership \u2192",
+        "href": "/fractional-cio"
+      },
+      {
+        "text": "Explore one-on-one mentoring \u2192",
+        "href": "/coaching"
+      },
+      {
+        "text": "technology leadership",
+        "href": "/fractional-cio"
+      },
+      {
+        "text": "workflow automation",
+        "href": "/automation-systems-optimization"
+      },
+      {
+        "text": "customer portal",
+        "href": "/websites"
+      },
+      {
+        "text": "Explore our work  \u2192",
+        "href": "/work"
+      },
+      {
+        "text": "Take the free scorecard  \u2192",
+        "href": "/resources/ai-readiness-scorecard"
+      },
+      {
+        "text": "Book a 30-minute conversation\u2197",
+        "href": "https://calendar.app.google/54Gv2GFrkUFsNs4i9"
+      },
+      {
+        "text": "Send a message",
+        "href": "/contact#contact-message"
+      },
+      {
+        "text": "Explore the manufacturing demo \u2192",
+        "href": "/demos/manufacturing"
+      },
+      {
+        "text": "See all interactive demos",
+        "href": "/demos"
+      }
+    ]
+  },
+  {
+    "path": "/studio",
+    "status": 404,
+    "final": "https://2nspira.com/studio",
+    "title": "2Nspira | Business Transformation for Practical Results",
+    "h1": [
+      "404"
+    ],
+    "canonical": "https://2nspira.com",
+    "overflow": false,
+    "errors": [],
+    "links": [
+      {
+        "text": "Return Home",
+        "href": "/"
+      },
+      {
+        "text": "Contact Support",
+        "href": "/contact"
+      }
+    ]
+  },
+  {
+    "path": "/videos",
+    "status": 200,
+    "final": "https://2nspira.com/videos",
+    "title": "Videos: Original Soundscapes, AI & Creative Stories | 2Nspira",
+    "h1": [
+      "Ideas you can see.Atmospheres you can feel."
+    ],
+    "canonical": "https://2nspira.com/videos",
+    "overflow": false,
+    "errors": [],
+    "links": [
+      {
+        "text": "Discover the latest",
+        "href": "#latest-videos"
+      },
+      {
+        "text": "Our YouTube channel",
+        "href": "https://www.youtube.com/@2Nspira"
+      },
+      {
+        "text": "Watch on YouTube",
+        "href": "https://www.youtube.com/watch?v=_3T_1ZhlzQM"
+      },
+      {
+        "text": "More soundscapes",
+        "href": "#latest-videos"
+      },
+      {
+        "text": "Ideas & leadership",
+        "href": "#leadership-videos"
+      },
+      {
+        "text": "Quiet favorites",
+        "href": "#ambience-videos"
+      },
+      {
+        "text": "Behind the creativity",
+        "href": "#creative-range"
+      },
+      {
+        "text": "Watch on YouTube",
+        "href": "https://www.youtube.com/watch?v=QgKIubT_s5k"
+      },
+      {
+        "text": "Explore more ideas",
+        "href": "/insights"
+      },
+      {
+        "text": "Watch on YouTube",
+        "href": "https://www.youtube.com/watch?v=hWk6mH_t0Cs"
+      },
+      {
+        "text": "Watch on YouTube",
+        "href": "https://www.youtube.com/watch?v=fqj8rEfb0-o"
+      },
+      {
+        "text": "Let\u2019s talk",
+        "href": "/contact"
+      },
+      {
+        "text": "Subscribe on YouTube for new releases",
+        "href": "https://www.youtube.com/@2Nspira"
+      }
+    ]
+  }
+]
