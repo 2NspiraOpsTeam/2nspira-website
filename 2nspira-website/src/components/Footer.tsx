@@ -1,3 +1,4 @@
+import { StudioFooterLinks } from "@/components/studio/StudioNavigation";
 import Link from "next/link";
 import {hasPublishedTeam} from "@/lib/team/server";
 import FooterInvitation from "./FooterInvitation";
@@ -23,17 +24,7 @@ const company = [
   { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
 ];
-const ideas = [
-  { name: "Insights", href: "/insights" },
-  { name: "Videos", href: "/videos" },
-  { name: "Resources", href: "/resources" },
-  { name: "Leadership books", href: "/books" },
-  { name: "School platform demo", href: "/demos/education" },
-  { name: "Property operations demo", href: "/demos/property-management" },
-  { name: "Manufacturing demo", href: "/demos/manufacturing" },
-  { name: "Bookstore", href: "https://books.2nspira.com" },
-  { name: "Creative shop", href: "/shop" },
-];
+
 const legal = [
   { name: "Privacy policy", href: "/privacy-policy" },
   { name: "Terms and conditions", href: "/terms-conditions" },
@@ -89,8 +80,8 @@ export default async function Footer() {
           <ul className={styles.list}>{[...company, ...(teamPublished ? [{ name: "Team & Delivery", href: "/team-delivery" }] : [])].map(link => <li key={link.href}><Link href={link.href} className={styles.link}>{link.name}</Link></li>)}</ul>
         </nav>
         <nav className={styles.ideas} aria-labelledby="footer-ideas-heading">
-          <h2 id="footer-ideas-heading" className={styles.heading}>Ideas &amp; resources</h2>
-          <ul className={styles.list}>{ideas.map(link => <li key={link.href}><a href={link.href} className={styles.link}>{link.name}</a></li>)}</ul>
+          <h2 id="footer-ideas-heading" className={styles.heading}>Creative Studio</h2>
+          <StudioFooterLinks listClass={styles.list} linkClass={styles.link}/>
         </nav>
       </div>
 

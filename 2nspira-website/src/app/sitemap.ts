@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import {hasPublishedTeam} from "@/lib/team/server";
+import { publishedStudio } from "@/lib/studio/server";
 import posts from "@/content/posts/index.json";
 import { jobs } from "@/lib/careers/server";
 export const dynamic = "force-dynamic";
@@ -37,7 +38,7 @@ const pages: Array<{
   { path: "/about", priority: 0.8, changeFrequency: "monthly" },
   { path: "/careers", priority: 0.6, changeFrequency: "monthly" },
   { path: "/insights", priority: 0.7, changeFrequency: "weekly" },
-  { path: "/videos", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/creative-studio", priority: 0.8, changeFrequency: "weekly" },
   { path: "/resources", priority: 0.9, changeFrequency: "monthly" },
   { path: "/resources/strength-profile", priority: 0.8, changeFrequency: "monthly" },
   { path: "/resources/ai-readiness-scorecard", priority: 0.8, changeFrequency: "monthly" },
@@ -46,7 +47,8 @@ const pages: Array<{
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const openings = await jobs(true).catch(() => []);
-  return [...(await hasPublishedTeam() ? [{url: `${siteDomain}/team-delivery`,changeFrequency: "monthly" as const,priority: 0.8}] : []), ...openings.map(job => ({ url: `${siteDomain}/careers/${job.id}`, ...(job.updatedAt ? { lastModified: job.updatedAt } : {}), changeFrequency: "weekly" as const, priority: 0.6 })), ...pages.map(({ path, priority, changeFrequency }) => ({
+  const studio = await publishedStudio();
+  return [...studio.items.filter(i=>!i.url).map(i=>({url:`${siteDomain}/creative-studio/${i.id}`, changeFrequency:"weekly" as const, priority:0.6})), ...(await hasPublishedTeam() ? [{url: `${siteDomain}/team-delivery`,changeFrequency: "monthly" as const,priority: 0.8}] : []), ...openings.map(job => ({ url: `${siteDomain}/careers/${job.id}`, ...(job.updatedAt ? { lastModified: job.updatedAt } : {}), changeFrequency: "weekly" as const, priority: 0.6 })), ...pages.map(({ path, priority, changeFrequency }) => ({
     url: `${siteDomain}${path}`,
     changeFrequency,
     priority,

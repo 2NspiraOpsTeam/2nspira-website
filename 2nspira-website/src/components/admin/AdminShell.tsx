@@ -18,6 +18,7 @@ const subscribeViewport = (notify: () => void) => {
 import { useRouter, usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
+  { path: "/admin/creative-studio", label: "Creative Studio" },
   { path: "/admin/dashboard", label: "Dashboard" },
   { path: "/admin/clients", label: "Clients" },
   { path: "/admin/careers", label: "Careers" },

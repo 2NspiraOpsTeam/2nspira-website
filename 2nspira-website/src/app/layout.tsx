@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { publishedStudio } from "@/lib/studio/server";
+import { studioNavigation } from "@/lib/studio/model";
+import { StudioNavigationProvider } from "@/components/studio/StudioNavigation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Analytics from "@/components/Analytics";
@@ -92,7 +95,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const studioLinks = studioNavigation(await publishedStudio());
   const siteJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -147,10 +151,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="min-h-full flex flex-col"><Analytics>
         <a href="#main-content" className="skip-link">Skip to main content</a>
-        <Header />
+        <StudioNavigationProvider initial={studioLinks}><Header />
         <MarketingEvents />
         {children}
-        <Footer />
+        <Footer /></StudioNavigationProvider>
       </Analytics>
       <script
         type="application/ld+json"

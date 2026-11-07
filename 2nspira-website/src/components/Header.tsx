@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileMenu from "./MobileMenu";
+import { useStudioNavigation } from "@/components/studio/StudioNavigation";
 import { demoNavigationLinks } from "@/lib/demos";
 
 type MenuName = "services" | "ideas" | "about" | "demos";
@@ -17,14 +18,7 @@ const serviceLinks = [
   { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
 ];
 
-const ideaLinks = [
-  { name: "Insights", href: "/insights" },
-  { name: "Videos", href: "/videos" },
-  { name: "Resources", href: "/resources" },
-  { name: "Leadership Books", href: "/books" },
-  { name: "Bookstore", href: "https://books.2nspira.com" },
-  { name: "Creative Shop", href: "/shop" },
-];
+
 
 const aboutLinks = [
   { name: "Our Story", href: "/about" },
@@ -39,6 +33,7 @@ const primaryLinks = [
 ];
 
 export default function Header() {
+  const ideaLinks = useStudioNavigation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<MenuName | null>(null);
   const navigationRef = useRef<HTMLElement>(null);
@@ -115,7 +110,7 @@ export default function Header() {
           </svg>
         </button>
 
-        <div id={`${menu}-navigation`} className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "services" || menu === "demos" ? "w-80" : "w-48"}`}>
+        <div id={`${menu}-navigation`} className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "services" || menu === "demos" ? "w-80" : "w-64"}`}>
           <div className="rounded-2xl border border-line bg-canvas p-2 shadow-[0_16px_40px_rgba(35,41,54,0.14)]">
             {menu === "services" && (
               <Link href="/services" onClick={() => closeMenu()} className="mb-1 block rounded-xl px-3 py-2.5 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
@@ -123,7 +118,7 @@ export default function Header() {
               </Link>
             )}
             {links.map((link) => (
-              <Link key={link.name} href={link.href} aria-current={(link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} onClick={() => closeMenu()} className="block rounded-xl px-3 py-2.5 text-sm font-medium text-body transition-colors duration-200 hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+              <Link key={link.name} href={link.href} aria-current={!link.href.includes("#") && (link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} onClick={() => closeMenu()} className="block rounded-xl px-3 py-2.5 text-sm font-medium text-body transition-colors duration-200 hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
                 {link.name}
               </Link>
             ))}
@@ -150,7 +145,7 @@ export default function Header() {
           {renderMenu("ideas", "Creative Studio", ideaLinks)}
           {renderMenu("about", "About", aboutLinks)}
           {primaryLinks.slice(1).map((link) => (
-            <Link key={link.name} href={link.href} aria-current={(link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+            <Link key={link.name} href={link.href} aria-current={!link.href.includes("#") && (link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
               {link.name}
             </Link>
           ))}
@@ -165,7 +160,7 @@ export default function Header() {
         </button>
       </div>
 
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
+      <MobileMenu studioLinks={ideaLinks} isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
       <span className="sr-only" aria-live="polite" aria-atomic="true">{isMobileMenuOpen ? "Navigation menu opened" : "Navigation menu closed"}</span>
     </header>
   );

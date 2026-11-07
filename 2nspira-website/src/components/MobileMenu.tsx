@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import type { KeyboardEvent as ReactKeyboardEvent, RefObject } from "react";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import type { NavigationLink } from "@/lib/studio/model";
 import { demoNavigationLinks } from "@/lib/demos";
 
 const serviceLinks = [
@@ -15,14 +16,7 @@ const serviceLinks = [
   { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
 ];
 
-const ideaLinks = [
-  { name: "Insights", href: "/insights" },
-  { name: "Videos", href: "/videos" },
-  { name: "Resources", href: "/resources" },
-  { name: "Leadership Books", href: "/books" },
-  { name: "Bookstore", href: "https://books.2nspira.com" },
-  { name: "Creative Shop", href: "/shop" },
-];
+
 
 const aboutLinks = [
   { name: "Our Story", href: "/about" },
@@ -31,7 +25,8 @@ const aboutLinks = [
   { name: "Careers", href: "/careers" },
 ];
 
-export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+export default function MobileMenu({ isOpen, onClose, studioLinks }: { isOpen: boolean; onClose: () => void; studioLinks: NavigationLink[] }) {
+  const ideaLinks = studioLinks;
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const serviceButtonRef = useRef<HTMLButtonElement>(null);
@@ -122,7 +117,7 @@ export default function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClo
             </Link>
           )}
           {links.map((link) => (
-            <Link key={link.name} href={link.href} onClick={handleClose} aria-current={(link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} className="flex min-h-12 items-center rounded-xl px-4 py-3 text-base font-medium leading-6 text-body transition-colors hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
+            <Link key={link.name} href={link.href} onClick={handleClose} aria-current={!link.href.includes("#") && (link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} className="flex min-h-12 items-center rounded-xl px-4 py-3 text-base font-medium leading-6 text-body transition-colors hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
               {link.name}
             </Link>
           ))}
