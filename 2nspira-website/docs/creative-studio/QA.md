@@ -31,3 +31,13 @@ Exported a local recovery copy, then applied only additive 0004 statements and i
 - Actual YouTube or marketplace content is maintained at its existing external destination. No videos, inventory, products, purchase pages, charges or emails were created by these tests.
 - Existing static article/product pages remain their primary destinations; their Studio placement is editable here, not their legacy page body. Newly authored Studio pages are fully publishable through this editor.
 - The preview schema is ready. Production requires its own schema/ledger baseline and additive migration during an authorized release, followed by exact-commit production verification.
+
+## Hosted verification
+
+Initial application commit `e87137479790ff129d15ce51a6b5616a086e0cba` passed Cloudflare Workers Builds (build `998d919f-a063-4d8d-9402-2d1a89a0746f`). Immutable Worker version `ac28d9c0-a2ed-43d7-92d4-d07abfd8962c` reports that exact SHA at `https://ac28d9c0-2nspira-website-preview.jcortez-36a.workers.dev/deployment.json`.
+
+- Hosted visitor harness passed at all five widths, including navigation/footer consistency, channel CTA/image behavior, filters/reset/refresh, canonicals/schema, no overflow/page errors, old-video redirect, unknown item 404 and anonymous Admin denial.
+- Hosted axe main-content checks: zero findings at 1440/768/320px.
+- All **51 rendered landing-page images decoded** in the mobile browser. Response is `noindex`; sitemap includes the canonical landing route and no synthetic content was hosted.
+- One harness assertion initially inspected a React result count before its repaint. A fresh single-activation diagnostic settled correctly; the harness now waits for the resulting status/empty state rather than assuming synchronous rendering. No application workaround or arbitrary sleep was introduced.
+- Follow-up changes update only the harness and this evidence record; they do not change application behavior. The PR remains open and production is unchanged.

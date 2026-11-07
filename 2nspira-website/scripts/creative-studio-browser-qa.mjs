@@ -51,6 +51,10 @@ try {
     await page
       .getByLabel("Category", { exact: true })
       .selectOption("authored-books");
+    await page
+      .locator("#collections [role=status]")
+      .filter({ hasText: /^1 item$/ })
+      .waitFor();
     assert.equal(await page.locator("#collections article").count(), 1);
     await page.reload();
     assert.equal(
@@ -60,6 +64,9 @@ try {
     await page
       .getByLabel("Content type", { exact: true })
       .selectOption("Channel");
+    await page
+      .getByText("No items match these filters.", { exact: false })
+      .waitFor();
     assert.equal(await page.locator("#collections article").count(), 0);
     await page
       .getByText("No items match these filters.", { exact: false })
@@ -67,6 +74,10 @@ try {
     await page
       .getByRole("button", { name: "Clear filters", exact: true })
       .click();
+    await page
+      .locator("#collections article")
+      .first()
+      .waitFor({ state: "visible" });
     assert.ok((await page.locator("#collections article").count()) > 5);
     if (width < 1024)
       await page
