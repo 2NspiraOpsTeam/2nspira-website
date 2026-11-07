@@ -147,7 +147,7 @@ export default function Header() {
             Work
           </Link>
           {renderMenu("demos", "Demos", demoNavigationLinks)}
-          {renderMenu("ideas", "Ideas", ideaLinks)}
+          {renderMenu("ideas", "Creative Studio", ideaLinks)}
           {renderMenu("about", "About", aboutLinks)}
           {primaryLinks.slice(1).map((link) => (
             <Link key={link.name} href={link.href} aria-current={(link.href === "/demos" ? pathname === link.href : isCurrent(link.href)) ? "page" : undefined} className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink">
