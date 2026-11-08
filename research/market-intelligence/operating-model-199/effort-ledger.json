@@ -1,0 +1,7 @@
+{
+  "schema": "199-effort-v1",
+  "baseline_at": "2026-11-08T19:49:18.049742+00:00",
+  "entries": [],
+  "actual_uninstrumented_before_baseline": true,
+  "note": "Do not backfill invented human hours; implementation wall time not counted as active research effort"
+}

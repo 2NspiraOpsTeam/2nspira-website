@@ -1,0 +1,10 @@
+{
+  "endpoint": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+  "result": {
+    "run_id": "mi-bdd2f4d7a1bab9d536921c7a2e510776",
+    "status": "imported",
+    "opportunities": 4,
+    "documents": 14
+  },
+  "source": "/Users/agent1/.openclaw/workspace/deliverables/market-intelligence/2026-11-08-7030"
+}

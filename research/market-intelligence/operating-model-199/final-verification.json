@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-11-08T19:52:40.980901+00:00",
+  "status": "PASS",
+  "checks": [
+    "MI-001 final API equality and run identity",
+    "MI-002 final API equality and run identity",
+    "MI-003 final API equality and run identity",
+    "MI-004 final API equality and run identity",
+    "Final v6.1 present in exported current snapshot",
+    "Both original job schedules/delivery/failure alerts preserved; exact old payload prefix preserved; directive added once"
+  ],
+  "record_version": "2026-11-08-7030-v6.1",
+  "run_id": "mi-bdd2f4d7a1bab9d536921c7a2e510776",
+  "commercial_validation": "No experiment, interview, outreach, spending, sale or release performed",
+  "execution_boundary": "Configuration and actual D1 data integration verified; new payload worker execution not observed. Existing nightly Nov8 succeeded after setup-timeout retry. Nov8 morning setup timed out; delivery unknown. No duplicate schedule or manual re-run launched.",
+  "diff_check": {
+    "standard": "3 new-blank-line-at-EOF warnings inherited from verbatim recommended-experiment source; immutable archive not rewritten",
+    "scoped": "git -c core.whitespace=-blank-at-eof diff --check brian/188-market-intelligence-db HEAD passed"
+  }
+}

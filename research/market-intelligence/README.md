@@ -35,3 +35,15 @@ python3 services/market-intelligence/scripts/export_research.py research/market-
 Review the **scoped** diff for provenance and secrets; commit only this research subtree and publish GitHub evidence. Push to the existing review branch until merged; do not deploy or merge the website. A failed sync or Git push is reported separately and retried, never claimed successful. Export refuses silently incomplete inventories at the current 100-run/100-opportunity API bounds; Adam must provide pagination before those limits are reached. Existing archive is retained if export fails; review partial local changes before committing. Run `export_research.py` only against the trusted configured service.
 
 `archive/executive-summary.json` is a real, dated **snapshot adapter**, not a connected dashboard or live KPI feed. It gives top opportunities, revision activity, proposed experiments/owners/approval links, and explicit insufficient evidence for emerging trends. These are not sales pipeline, qualified leads or revenue metrics. Hashes in `archive/manifest.json` verify exported content; they are not a database backup of audit/authorization tables.
+
+## Active 30-day 70/30 model — #199
+
+From November8 through December8,2026 use [OPERATING_MODEL_199.md](OPERATING_MODEL_199.md) and the first updated [portfolio](operating-model-199/nightly-brief.md). This is a content/effort contract within #188, not a new pipeline. Preserve MI-001–MI-004, approved accessibility deep dive, independent QA and source freshness. Log active effort separately from elapsed time; 70% Adjacent /30% New Stream is a research allocation, not a quota. Existing 01:00 research and07:00 summary jobs are retained. Weekly and day30 reviews run within them. Proposals do not authorize outreach/build/listing/spend/deployment.
+
+The isolated #199 review branch is based on PR194 and targets that branch, avoiding duplicate infrastructure work. Routine exports still use the established #188 worktree; this operating-model commit must be incorporated there by normal review, not by autonomous merge.
+
+## Active 30-day 70/30 model — #199
+
+From November8 through December8,2026 use [OPERATING_MODEL_199.md](OPERATING_MODEL_199.md) and the first updated [portfolio](operating-model-199/nightly-brief.md). This is a content/effort contract within #188, not a new pipeline. Preserve MI-001–MI-004, approved accessibility deep dive, independent QA and source freshness. Log active effort separately from elapsed time; 70% Adjacent /30% New Stream is a research allocation, not a quota. Existing 01:00 research and07:00 summary jobs are retained. Weekly and day30 reviews run within them. Proposals do not authorize outreach/build/listing/spend/deployment.
+
+The isolated #199 review branch is based on PR194 and targets that branch, avoiding duplicate infrastructure work. Routine exports still use the established #188 worktree; this operating-model commit must be incorporated there by normal review, not by autonomous merge.
