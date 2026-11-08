@@ -1,0 +1,96 @@
+{
+  "entries": [
+    {
+      "ts": 1794139260232,
+      "jobId": "6e405f1e-4385-440b-930e-d3db4a1d4e4d",
+      "action": "finished",
+      "status": "error",
+      "completionStatus": "failed",
+      "error": "cron: isolated agent setup timed out before runner start",
+      "errorReason": "timeout",
+      "diagnostics": {
+        "summary": "cron: isolated agent setup timed out before runner start",
+        "entries": [
+          {
+            "ts": 1794139260232,
+            "source": "cron-setup",
+            "severity": "error",
+            "message": "cron: isolated agent setup timed out before runner start"
+          }
+        ]
+      },
+      "runAtMs": 1794139200221,
+      "durationMs": 60011,
+      "nextRunAtMs": 1794225600000,
+      "deliveryStatus": "unknown",
+      "deliveryError": "cron: isolated agent setup timed out before runner start",
+      "jobName": "brian-188-189-morning-report",
+      "cause": "timeout",
+      "tsIso": "2026-11-08T07:01:00.232-05:00",
+      "runAtIso": "2026-11-08T07:00:00.221-05:00",
+      "nextRunAtIso": "2026-11-09T07:00:00.000-05:00"
+    },
+    {
+      "ts": 1794053655938,
+      "jobId": "6e405f1e-4385-440b-930e-d3db4a1d4e4d",
+      "action": "finished",
+      "status": "error",
+      "completionStatus": "failed",
+      "error": "Morning report\u2019s 07:00 attempt and first retry timed out; Telegram delivery is unknown. This retry rechecked evidence and saved the refreshed report.\n\n\u2022 **Research:** November 7, 01:05 EST output is fresh. D1 sync succeeded; Git push separately recorded. Top opportunities: receivables exceptions **68**, webinar caption QA **60**, accessibility handoff **60**. No proven revenue; insufficient longitudinal evidence for emerging trends.\n\n\u2022 **Jeffrey\u2019s decision:** approve, revise or park the receivables experiment\u2014**$100 cash + 12 hours**, independent review, then five consented user sessions. Not run.\n\n\u2022 **Staff:** November 6, 23:32 EST output remains fresh: four drafts, **zero published**; calendar contains four drafted and 24 planned entries. Authorized publishing integration remains unavailable.\n\n\u2022 **Next executions, EST:** research November 8 at 01:00; report at 07:00; staff November 8 at 23:29.\n\nResearch-only operation is verified\u2014not the live dashboard, broader #175 routing, architecture acceptance or peer-runtime credential access.\n\nReports and retry updates: [#188](https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6706798208) \u00b7 [#189](https://github.com/2NspiraOpsTeam/2nspira-website/issues/189#issuecomment-6706798491).",
+      "summary": "Morning report\u2019s 07:00 attempt and first retry timed out; Telegram delivery is unknown. This retry rechecked evidence and saved the refreshed report.\n\n\u2022 **Research:** November 7, 01:05 EST output is fresh. D1 sync succeeded; Git push separately recorded. Top opportunities: receivables exceptions **68**, webinar caption QA **60**, accessibility handoff **60**. No proven revenue; insufficient longitudinal evidence for emerging trends.\n\n\u2022 **Jeffrey\u2019s decision:** approve, revise or park the receivables experiment\u2014**$100 cash + 12 hours**, independent review, then five consented user sessions. Not run.\n\n\u2022 **Staff:** November 6, 23:32 EST output remains fresh: four drafts, **zero published**; calendar contains four drafted and 24 planned entries. Authorized publishing integration remains unavailable.\n\n\u2022 **Next executions, EST:** research November 8 at 01:00; report at 07:00; staff November 8 at 23:29.\n\nResearch-only operation is verified\u2014not the live dashboard, broader #175 routing, architecture acceptance or peer-runtime credential access.\n\nReports and retry updates: [#188](https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6706798208) \u00b7 [#189](https://github.com/2NspiraOpsTeam/2nspira-website/issues/189#issuecomment-6706798491).",
+      "diagnostics": {
+        "summary": "Morning report\u2019s 07:00 attempt and first retry timed out; Telegram delivery is unknown. This retry rechecked evidence and saved the refreshed report.\n\n\u2022 **Research:** November 7, 01:05 EST output is fresh. D1 sync succeeded; Git push separately recorded. Top opportunities: receivables exceptions **68**, webinar caption QA **60**, accessibility handoff **60**. No proven revenue; insufficient longitudinal evidence for emerging trends.\n\n\u2022 **Jeffrey\u2019s decision:** approve, revise or park the receivables experiment\u2014**$100 cash + 12 hours**, independent review, then five consented user sessions. Not run.\n\n\u2022 **Staff:** November 6, 23:32 EST output remains fresh: four drafts, **zero published**; calendar contains four drafted and 24 planned entries. Authorized publishing integration remains unavailable.\n\n\u2022 **Next executions, EST:** research November 8 at 01:00; report at 07:00; staff November 8 at 23:29.\n\nResearch-only operation is verified\u2014not the live dashboard, broader #175 routing, architecture acceptance or peer-runtime credential access.\n\nReports and retry updates: [#188](https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6706798208) \u00b7 [#189](https://github.com/2NspiraOpsTeam/2nspira-website/issues/189#issuecomment-6706798491).",
+        "entries": [
+          {
+            "ts": 1794053654096,
+            "source": "agent-run",
+            "severity": "error",
+            "message": "Morning report\u2019s 07:00 attempt and first retry timed out; Telegram delivery is unknown. This retry rechecked evidence and saved the refreshed report.\n\n\u2022 **Research:** November 7, 01:05 EST output is fresh. D1 sync succeeded; Git push separately recorded. Top opportunities: receivables exceptions **68**, webinar caption QA **60**, accessibility handoff **60**. No proven revenue; insufficient longitudinal evidence for emerging trends.\n\n\u2022 **Jeffrey\u2019s decision:** approve, revise or park the receivables experiment\u2014**$100 cash + 12 hours**, independent review, then five consented user sessions. Not run.\n\n\u2022 **Staff:** November 6, 23:32 EST output remains fresh: four drafts, **zero published**; calendar contains four drafted and 24 planned entries. Authorized publishing integration remains unavailable.\n\n\u2022 **Next executions, EST:** research November 8 at 01:00; report at 07:00; staff November 8 at 23:29.\n\nResearch-only operation is verified\u2014not the live dashboard, broader #175 routing, archite\u2026",
+            "truncated": true
+          }
+        ]
+      },
+      "runAtMs": 1794053509150,
+      "durationMs": 146788,
+      "nextRunAtMs": 1794139200000,
+      "model": "gpt-6.1-sol",
+      "provider": "openai",
+      "usage": {
+        "input_tokens": 52571,
+        "output_tokens": 3129,
+        "total_tokens": 446228,
+        "cache_read_tokens": 390528
+      },
+      "delivered": true,
+      "deliveryStatus": "delivered",
+      "delivery": {
+        "intended": {
+          "channel": "telegram",
+          "to": "8183646427",
+          "accountId": "default",
+          "source": "explicit"
+        },
+        "resolved": {
+          "ok": true,
+          "channel": "telegram",
+          "to": "8183646427",
+          "accountId": "default",
+          "source": "explicit"
+        },
+        "fallbackUsed": true,
+        "delivered": true
+      },
+      "sessionId": "2a2ab5eb-33d7-4e82-9f46-339abc1d3666",
+      "sessionKey": "agent:main:cron:6e405f1e-4385-440b-930e-d3db4a1d4e4d:run:2a2ab5eb-33d7-4e82-9f46-339abc1d3666",
+      "jobName": "brian-188-189-morning-report",
+      "tsIso": "2026-11-07T07:14:15.938-05:00",
+      "runAtIso": "2026-11-07T07:11:49.150-05:00",
+      "nextRunAtIso": "2026-11-08T07:00:00.000-05:00"
+    }
+  ],
+  "total": 5,
+  "offset": 0,
+  "limit": 2,
+  "hasMore": true,
+  "nextOffset": 2
+}

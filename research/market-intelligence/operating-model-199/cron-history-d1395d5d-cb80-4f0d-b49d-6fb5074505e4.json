@@ -1,0 +1,77 @@
+{
+  "entries": [
+    {
+      "ts": 1794118627113,
+      "jobId": "d1395d5d-cb80-4f0d-b49d-6fb5074505e4",
+      "action": "finished",
+      "status": "ok",
+      "completionStatus": "succeeded",
+      "summary": "Completed: four business cases, accessibility deep dive and Sunday decision memo. D1 sync verified; research commit `67a2042` pushed.\n\n[Verified GitHub report](https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6718129472)\n\nMI-001 remains 68. Gaps: accessibility buyer intent/manual reviewer unverified; MI-003 has only two independent supplier groups. Source failures recorded. No spend, launches or Telegram sent.",
+      "runAtMs": 1794117709774,
+      "durationMs": 917339,
+      "nextRunAtMs": 1794204000000,
+      "model": "gpt-6.1-sol",
+      "provider": "openai",
+      "usage": {
+        "input_tokens": 138548,
+        "output_tokens": 25235,
+        "total_tokens": 3363527,
+        "cache_read_tokens": 3199744
+      },
+      "delivered": false,
+      "deliveryStatus": "not-requested",
+      "delivery": {
+        "intended": {
+          "channel": "last",
+          "to": null,
+          "source": "last"
+        },
+        "fallbackUsed": false,
+        "delivered": false
+      },
+      "sessionId": "b52b873a-4ee9-42ad-bbb6-cf4abb22d868",
+      "sessionKey": "agent:main:cron:d1395d5d-cb80-4f0d-b49d-6fb5074505e4:run:b52b873a-4ee9-42ad-bbb6-cf4abb22d868",
+      "jobName": "brian-188-market-nightly",
+      "tsIso": "2026-11-08T01:17:07.113-05:00",
+      "runAtIso": "2026-11-08T01:01:49.774-05:00",
+      "nextRunAtIso": "2026-11-09T01:00:00.000-05:00"
+    },
+    {
+      "ts": 1794117660348,
+      "jobId": "d1395d5d-cb80-4f0d-b49d-6fb5074505e4",
+      "action": "finished",
+      "status": "error",
+      "completionStatus": "failed",
+      "error": "cron: isolated agent setup timed out before runner start",
+      "errorReason": "timeout",
+      "diagnostics": {
+        "summary": "cron: isolated agent setup timed out before runner start",
+        "entries": [
+          {
+            "ts": 1794117660348,
+            "source": "cron-setup",
+            "severity": "error",
+            "message": "cron: isolated agent setup timed out before runner start"
+          }
+        ]
+      },
+      "runAtMs": 1794117600252,
+      "durationMs": 60096,
+      "nextRunAtMs": 1794117690348,
+      "deliveryStatus": "not-requested",
+      "failureNotificationDelivery": {
+        "status": "unknown"
+      },
+      "jobName": "brian-188-market-nightly",
+      "cause": "timeout",
+      "tsIso": "2026-11-08T01:01:00.348-05:00",
+      "runAtIso": "2026-11-08T01:00:00.252-05:00",
+      "nextRunAtIso": "2026-11-08T01:01:30.348-05:00"
+    }
+  ],
+  "total": 4,
+  "offset": 0,
+  "limit": 2,
+  "hasMore": true,
+  "nextOffset": 2
+}
