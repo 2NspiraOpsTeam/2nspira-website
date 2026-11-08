@@ -31,7 +31,7 @@ export default function CatalogSchema({ page }: { page: CatalogPage }) {
         "@type": "Book", "@id": `${site}/shop#${book.id}`, url: `${site}/shop#${book.id}`,
         name: book.title, description: book.description, image: `${site}${book.image}`, sameAs: book.href,
         author: { "@type": "Person", name: "Jeffrey Cortez" },
-        bookFormat: ["https://schema.org/Paperback", "https://schema.org/EBook"], inLanguage: "en",
+        bookFormat: book.format === "Kindle eBook · Amazon" ? "https://schema.org/EBook" : ["https://schema.org/Paperback", "https://schema.org/EBook"], inLanguage: "en",
       })), ...activityBooks.map(book => ({
         "@type": "Book", "@id": `${site}/shop#${book.id}`, url: `${site}/shop#${book.id}`,
         name: book.title, description: `${book.description} ${book.details}`,
