@@ -128,9 +128,9 @@ const projects = [
     id: "2nspira-books",
     name: "2Nspira Books",
     category: "Specialist bookstore ecommerce",
-    status: "In-house storefront preview",
-    url: "https://2nspira-books-preview.jcortez-36a.workers.dev/",
-    link: "Explore the bookstore preview",
+    status: "In-house bookstore",
+    url: "https://books.2nspira.com",
+    link: "Explore the bookstore",
     image: "books",
     need: "Give collectors the photographs, edition details, and condition information needed to evaluate an individual book.",
     work: "A searchable catalog, actual-copy galleries, inventory and order tools, plus Stripe and PayPal checkout development.",
@@ -167,7 +167,7 @@ const capabilities = [
     icon: ShoppingBag,
     title: "Online stores",
     text: "Bring product details, photographs, checkout, inventory, and order management into one considered journey.",
-    proof: "2Nspira Books · preview",
+    proof: "2Nspira Books · storefront",
     href: "#2nspira-books",
   },
   {
@@ -527,7 +527,7 @@ export default function WebsitesPage() {
               A website is what your customers see. Booking, publishing,
               payments, and operations are what make it useful. Published client
               websites lead the selection below, followed by our in-house
-              platform and storefront preview. Private operational tools are not
+              platform and bookstore. Private operational tools are not
               public demos.
             </p>
             <div className="mt-10 grid items-start gap-6 lg:grid-cols-2">

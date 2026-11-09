@@ -37,8 +37,8 @@ const supportingProjects = [
   {
     name: "2Nspira Books",
     description:
-      "An in-house storefront preview for collectible books. Checkout and operational features remain development scope, not a claim of live payment readiness.",
-    url: "https://2nspira-books-preview.jcortez-36a.workers.dev/",
+      "Our dedicated storefront for rare and collectible books, with photographs and condition details for individual copies.",
+    url: "https://books.2nspira.com",
     image: "/images/work/live-books-20261105.jpg",
   },
   {
@@ -229,7 +229,7 @@ export default function WorkPage() {
             </article>
             {supportingProjects.filter(project => ["2Nspira", "2Nspira Books", "Breadcrumb", "CalmLoop"].includes(project.name)).map(project => {
               const visuals: Record<string, { image: string; alt: string; label: string }> = {
-                "2Nspira Books": { image: "/images/work/live-books-20261105.jpg", alt: "2Nspira Books storefront preview featuring collectible editions", label: "Storefront preview" },
+                "2Nspira Books": { image: "/images/work/live-books-20261105.jpg", alt: "2Nspira Books storefront featuring collectible editions", label: "Rare & collectible books" },
                 "2Nspira": { image: "/images/work/live-2nspira-20261105.jpg", alt: "2Nspira public website homepage", label: "Our digital platform" },
                 "Breadcrumb": { image: "/images/work/project-breadcrumb.png", alt: "Breadcrumb project artwork featuring an investigation workspace", label: "OSINT challenge game" },
                 "CalmLoop": { image: "/images/work/live-calmloop-20261105.jpg", alt: "CalmLoop companion application start screen", label: "Family-focused companion" },
