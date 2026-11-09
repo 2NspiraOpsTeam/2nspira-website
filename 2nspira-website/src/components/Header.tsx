@@ -8,25 +8,9 @@ import MobileMenu from "./MobileMenu";
 import { useStudioNavigation } from "@/components/studio/StudioNavigation";
 import { demoNavigationLinks } from "@/lib/demos";
 
+import { serviceLinks, aboutLinks } from "@/lib/navigation";
+
 type MenuName = "services" | "ideas" | "about" | "demos";
-
-const serviceLinks = [
-  { name: "Websites, Apps & Digital Platforms", href: "/websites" },
-  {
-    name: "Automation & Systems Optimization",
-    href: "/automation-systems-optimization",
-  },
-  { name: "Organizational AI enablement", href: "/ai-enablement" },
-  { name: "Fractional CIO & Technology Leadership", href: "/fractional-cio" },
-  { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
-];
-
-const aboutLinks = [
-  { name: "Our Story", href: "/about" },
-  { name: "Team & Delivery", href: "/team-delivery" },
-  { name: "AI Team", href: "/ai-team" },
-  { name: "Careers", href: "/careers" },
-];
 
 const primaryLinks = [
   { name: "Work", href: "/work" },
@@ -115,15 +99,6 @@ export default function Header() {
             closeMenu();
         }}
       >
-        {menu === "ideas" && (
-          <Link
-            href="/studio"
-            onClick={() => closeMenu()}
-            className="rounded-full px-2 py-2 text-sm font-medium text-body hover:text-ink focus-visible:outline-2 focus-visible:outline-accent"
-          >
-            Creative Studio
-          </Link>
-        )}
         <button
           ref={(node) => {
             menuButtonRefs.current[menu] = node;
@@ -134,11 +109,7 @@ export default function Header() {
           aria-controls={`${menu}-navigation`}
           className={`inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas ${menuIsCurrent(menu) ? "bg-accent-soft text-ink" : "text-body"}`}
         >
-          {menu === "ideas" ? (
-            <span className="sr-only">Creative Studio collections</span>
-          ) : (
-            label
-          )}
+          {label}
           <svg
             className={`h-3.5 w-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
             viewBox="0 0 20 20"
