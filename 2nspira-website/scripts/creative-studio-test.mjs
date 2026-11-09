@@ -72,7 +72,7 @@ try {
   await build({
     stdin: {
       contents:
-        'export * from "./src/lib/studio/server";export * from "./src/lib/studio/model";export * from "./src/lib/studio/seed";',
+        'export * from "./src/lib/studio/server";export * from "./src/lib/studio/model";export * from "./src/lib/studio/seed";export * from "./src/lib/studio/media";',
       resolveDir: process.cwd(),
       loader: "ts",
     },
@@ -102,6 +102,7 @@ try {
     publishedStudio,
     validateStudio,
     publicStudio,
+    studioVideoIds,
     studioNavigation,
     uploadImage,
     serveImage,
@@ -126,37 +127,47 @@ try {
   const c = validateStudio(initialStudio());
   check(
     c.groups.map((g) => g.name),
-    ["Watch", "Read", "Play"],
+    ["Watch", "Listen", "Read", "Play"],
   );
   check(
     studioNavigation(c).map((l) => l.name),
-    ["Watch", "Read", "Play", "Explore Creative Studio"],
+    ["Explore Creative Studio", "Watch", "Listen", "Read", "Play"],
   );
+  check(studioNavigation(c).map(l => l.href), ["/studio", "/studio/watch", "/studio/listen", "/studio/read", "/studio/play"]);
+  check(publicStudio(c).items.find(i => i.id === "breadcrumb")?.url, "https://breadcrumb-challenge.vercel.app/");
+  check(publicStudio(c).items.find(i => i.id === "breadcrumb")?.featured, true);
+  check(studioVideoIds(c,"watch"), ["hWk6mH_t0Cs"]);
+  check(studioVideoIds(c,"listen").length, 3);
+  const hiddenMedia=structuredClone(c);
+  hiddenMedia.items.find(i=>i.url.includes("_3T_1ZhlzQM")).status="draft";
+  check(studioVideoIds(hiddenMedia,"listen").length,2);
+  hiddenMedia.categories.find(cat=>cat.id==="music-ambience").visible=false;
+  check(studioVideoIds(hiddenMedia,"listen").length,0);
   check(c.items.filter((i) => i.type === "Channel").length, 1);
   check(new Set(c.items.map((i) => i.url || i.id)).size, c.items.length);
   const seeded = (await publishedStudio()).items.length;
   c.groups.push({
-    id: "listen",
-    name: "Listen",
+    id: "learn",
+    name: "Learn",
     description: "Future audio",
     visible: true,
   });
   c.categories.push({
     id: "audio",
     name: "Audio",
-    groupIds: ["listen"],
+    groupIds: ["learn"],
     visible: true,
   });
   c.links.push({
-    id: "listen",
+    id: "learn",
     name: "",
-    groupId: "listen",
+    groupId: "learn",
     categoryId: "",
     url: "",
     visible: true,
   });
   check(
-    publicStudio(c).groups.some((g) => g.id === "listen"),
+    publicStudio(c).groups.some((g) => g.id === "learn"),
     false,
   );
   c.items.push({
@@ -185,19 +196,19 @@ try {
   const p = await publishedStudio();
   check(p.items.filter((i) => i.id === "qa-article").length, 1);
   check(
-    p.groups.some((g) => g.id === "listen"),
+    p.groups.some((g) => g.id === "learn"),
     true,
   );
   check(
-    studioNavigation(p).some((l) => l.name === "Listen"),
+    studioNavigation(p).some((l) => l.name === "Learn"),
     true,
   );
   let current = (await (await handle(req())).json()).content;
-  current.groups.find((g) => g.id === "listen").visible = false;
+  current.groups.find((g) => g.id === "learn").visible = false;
   current.status = "published";
   check((await handle(req(current))).status, 200);
   check(
-    (await publishedStudio()).groups.some((g) => g.id === "listen"),
+    (await publishedStudio()).groups.some((g) => g.id === "learn"),
     false,
   );
   current = (await (await handle(req())).json()).content;

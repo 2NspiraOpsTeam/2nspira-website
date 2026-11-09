@@ -1,3 +1,4 @@
+import PageSections from "@/components/PageSections";
 import Modernization from "./Modernization";
 import DemoTrust from "@/components/demos/DemoTrust";
 import { publicPageMetadata } from "@/lib/pageMetadata";
@@ -267,7 +268,7 @@ export default function WebsitesPage() {
           }).replace(/</g, "\\u003c"),
         }}
       />
-      <ServiceEffects>
+      <ServiceEffects editorial>
         <section className="relative overflow-hidden border-b border-line bg-surface">
           <AmbientField />
           <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_0.9fr]">
@@ -355,6 +356,7 @@ export default function WebsitesPage() {
           </div>
         </section>
 
+        <PageSections items={[["why-modernize", "Why modernize?"], ["modernization-process", "The process"], ["website-and-app-development", "Websites & apps"], ["our-work", "Explore the work"]]} />
         <Modernization />
 
         <section
