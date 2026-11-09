@@ -48,11 +48,11 @@ export const videos = [
     description: "A perspective on trust, leadership, and the human side of adopting AI.",
   },
   {
-    id: "fqj8rEfb0-o",
-    title: "Cozy Rainy Café Ambience | 2 Hours for Reading | Cocoa Lounge, No Music",
+    id: "MxyL6MskW_g",
+    title: "Cocoa Lounge | 2 Hours of Warm Piano & Quiet Rain | 2Nspira",
     duration: "2:00:01",
     category: "ambience",
-    description: "Settle into a rainy café soundscape for reading or a quiet break. No music.",
+    description: "Warm instrumental keys and quiet rain in a continuously visible cozy lounge. A welcoming two-hour soundtrack for reading or winding down.",
   },
 ] as const;
 
