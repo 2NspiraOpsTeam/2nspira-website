@@ -138,7 +138,7 @@ export function initialStudio(): Studio {
         image: "/images/work/project-breadcrumb.png",
         imageAlt:
           "Breadcrumb project artwork featuring an investigation workspace",
-        url: "https://breadcrumb-challenge.vercel.app/",
+        url: "https://breadcrumb.2nspira.com/",
       }),
       item({
         id: "youtube-channel",
