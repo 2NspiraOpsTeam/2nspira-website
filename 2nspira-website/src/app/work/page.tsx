@@ -73,7 +73,7 @@ const supportingProjects = [
     name: "Breadcrumb",
     description:
       "A fast OSINT challenge game engineered to run anywhere without a server or database.",
-    url: "",
+    url: "https://breadcrumb.2nspira.com",
     image: "/images/work/project-breadcrumb.png",
   },
 ];
