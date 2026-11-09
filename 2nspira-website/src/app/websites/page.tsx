@@ -646,7 +646,7 @@ export default function WebsitesPage() {
                   {
                     name: "CalmLoop",
                     text: "A low-pressure web companion offering gentle routine ideas for neurodivergent children and their families.",
-                    url: "https://calmloop.vercel.app/",
+                    url: "https://calmloop.2nspira.com/",
                   },
                 ].map((site) => (
                   <article key={site.name}>
