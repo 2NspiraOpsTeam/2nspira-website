@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
  * - Wix editor stubs (never published real content) → soft 302 to the closest live section.
  */
 const redirects = [
+  { source: "/works", destination: "/work", permanent: true },
   // Pricing & plans (Wix) → services overview
   { source: "/pricing-plans/list", destination: "/services", permanent: true },
 
