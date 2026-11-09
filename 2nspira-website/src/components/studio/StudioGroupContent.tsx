@@ -21,6 +21,7 @@ export default function StudioGroupContent({content,groupId,initialCategory=""}:
    {!read&&strengths&&<section id="strength-profile" aria-labelledby="strength-profile-heading" className="mb-16 scroll-mt-24 rounded-3xl border border-line bg-accent-soft p-7 sm:p-10">
     <p className="text-xs font-semibold uppercase tracking-widest text-accent">Self-discovery · Free assessment</p>
     <h2 id="strength-profile-heading" className={`mt-4 ${h2}`}>Discover your strengths.</h2>
+    <Image src="/images/pages/discover-your-strengths.webp" alt="A person looking toward a luminous branching tree, symbolizing personal strengths and possibilities" width={1536} height={1024} sizes="(min-width: 1152px) 1056px, (min-width: 640px) calc(100vw - 128px), calc(100vw - 88px)" className="mt-7 aspect-[3/2] w-full rounded-2xl object-cover sm:aspect-[2/1]"/>
     <p className="mt-5 max-w-2xl leading-7 text-body">Explore the 2Nspira Strength Profile to reflect on how you contribute, collaborate, and do your best work. A thoughtful pause for personal discovery—not a game or a clinical assessment.</p>
     <Link href="/resources/strength-profile" className={`mt-7 ${buttonPrimary}`}>Explore Strength Profile →</Link>
    </section>}
