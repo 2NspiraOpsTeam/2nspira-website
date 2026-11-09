@@ -184,6 +184,12 @@ export default function Home() {
     ].map(project=><Link key={project.name} href="/websites#our-work" className={styles.workCard}><div><Photo src={`/images/pages/${project.image}-website-preview-20261021.jpg`} alt={`${project.name} public website preview`} /></div><h3>{project.name} <span aria-hidden="true">↗</span></h3><p>{project.text}</p></Link>)}</div></section>
 
 
+  <section className={styles.section} aria-labelledby="creative-studio-heading">
+      <p className={styles.eyebrow}>Creative Studio</p>
+      <h2 id="creative-studio-heading">Watch. Read. Play.</h2>
+      <p>Original worlds, human perspectives, and creative pauses for adults and families.</p>
+      <Link href="/studio" className={styles.textLink}>Explore Creative Studio <span aria-hidden="true">→</span></Link>
+    </section>
   <ManufacturingDemo />
     </main>;
 }

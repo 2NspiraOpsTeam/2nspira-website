@@ -37,7 +37,7 @@ export default function VideosPage() {
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
           <div data-catalog-reveal>
-            <p><EyebrowPill>Ideas · The 2Nspira video collection</EyebrowPill></p>
+            <p><EyebrowPill>Creative Studio · The 2Nspira video collection</EyebrowPill></p>
             <h1 id="videos-title" className={h1}>Ideas you can see.<br />Atmospheres you can feel.</h1>
             <p className={lead}>From thought-provoking perspectives to immersive rain soundscapes, explore how we bring stories, sound, and imagined worlds to life.</p>
             <div className="mt-7 flex flex-wrap gap-2">
