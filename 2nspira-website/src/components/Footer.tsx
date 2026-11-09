@@ -20,6 +20,7 @@ const company = [
   { name: "Our work", href: "/work" },
   { name: "Interactive demos", href: "/demos" },
   { name: "About 2Nspira", href: "/about" },
+  { name: "Team & Delivery", href: "/team-delivery" },
   { name: "Meet our AI team", href: "/ai-team" },
   { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
@@ -77,7 +78,7 @@ export default async function Footer() {
         </nav>
         <nav className={styles.company} aria-labelledby="footer-company-heading">
           <h2 id="footer-company-heading" className={styles.heading}>Company</h2>
-          <ul className={styles.list}>{[...company, ...(teamPublished ? [{ name: "Team & Delivery", href: "/team-delivery" }] : [])].map(link => <li key={link.href}><Link href={link.href} className={styles.link}>{link.name}</Link></li>)}</ul>
+          <ul className={styles.list}>{company.filter(link => link.href !== "/team-delivery" || teamPublished).map(link => <li key={link.href}><Link href={link.href} className={styles.link}>{link.name}</Link></li>)}</ul>
         </nav>
         <nav className={styles.ideas} aria-labelledby="footer-ideas-heading">
           <h2 id="footer-ideas-heading" className={styles.heading}>Creative Studio</h2>

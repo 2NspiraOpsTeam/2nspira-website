@@ -29,7 +29,7 @@ export async function runStudioCollectionsQA(base) {
    await page.getByLabel('Category',{exact:true}).selectOption('printables');for(const a of await page.locator('#collections article a').all())assert.match(await a.getAttribute('href'),/^https:\/\/2nspira\.etsy\.com\//);
    const footer=page.locator('footer nav[aria-labelledby=footer-ideas-heading]');assert.deepEqual(await footer.locator('a').evaluateAll(a=>a.map(x=>x.getAttribute('href'))),['/studio','/studio/watch','/studio/listen','/studio/read','/studio/play']);
    if(width<1024)await page.getByRole('button',{name:'Open menu',exact:true}).click();
-   const nav=page.getByRole('navigation',{name:width<1024?'Mobile navigation':'Main navigation',exact:true});await nav.getByRole('button',{name:'Creative Studio collections',exact:true}).click();
+   const nav=page.getByRole('navigation',{name:width<1024?'Mobile navigation':'Main navigation',exact:true});await nav.getByRole('button',{name:'Creative Studio',exact:true}).click();
    const menu=page.locator(width<1024?'#mobile-ideas-navigation':'#ideas-navigation');await menu.getByRole('link',{name:'Watch',exact:true}).click();await page.waitForURL('**/studio/watch');assert.deepEqual(errors,[]);await page.close();
   }
   const context=await browser.newContext({javaScriptEnabled:false,extraHTTPHeaders:{'x-forwarded-proto':'https'}});const page=await context.newPage();

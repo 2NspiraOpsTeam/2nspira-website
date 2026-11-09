@@ -8,23 +8,7 @@ import { createPortal } from "react-dom";
 import type { NavigationLink } from "@/lib/studio/model";
 import { demoNavigationLinks } from "@/lib/demos";
 
-const serviceLinks = [
-  { name: "Websites, Apps & Digital Platforms", href: "/websites" },
-  {
-    name: "Automation & Systems Optimization",
-    href: "/automation-systems-optimization",
-  },
-  { name: "Organizational AI enablement", href: "/ai-enablement" },
-  { name: "Fractional CIO & Technology Leadership", href: "/fractional-cio" },
-  { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
-];
-
-const aboutLinks = [
-  { name: "Our Story", href: "/about" },
-  { name: "Team & Delivery", href: "/team-delivery" },
-  { name: "AI Team", href: "/ai-team" },
-  { name: "Careers", href: "/careers" },
-];
+import { serviceLinks, aboutLinks } from "@/lib/navigation";
 
 export default function MobileMenu({
   isOpen,
@@ -117,15 +101,6 @@ export default function MobileMenu({
     const expanded = openSection === key;
     return (
       <>
-        {key === "ideas" && (
-          <Link
-            href="/studio"
-            onClick={handleClose}
-            className="flex min-h-12 items-center rounded-xl px-4 py-3 text-lg font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent"
-          >
-            Creative Studio
-          </Link>
-        )}
         <button
           ref={buttonRef}
           type="button"
@@ -134,7 +109,7 @@ export default function MobileMenu({
           aria-controls={`mobile-${key}-navigation`}
           className="flex w-full items-center justify-between rounded-xl px-4 py-3.5 text-left text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
-          {key === "ideas" ? "Creative Studio collections" : label}
+          {label}
           <svg
             className={`h-5 w-5 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`}
             viewBox="0 0 20 20"
