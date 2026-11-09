@@ -1,9 +1,30 @@
-// Public visibility verified against the complete @2Nspira Studio catalog, 2026-11-02.
+// Public releases verified in @2Nspira Studio, 2026-11-09.
 // Private uploads are intentionally excluded until reviewed and publicly released.
 // Add new published videos here; do not list unfinished productions.
 export const youtubeChannel = "https://www.youtube.com/@2Nspira";
 
 export const videos = [
+  {
+    id: "V6HQWSdNAfc",
+    title: "Soft Rain in a Cozy Library | 2 Hours for Relaxing & Sleep | 2Nspira",
+    duration: "2:00:01",
+    category: "ambience",
+    description: "Gentle synthesized rain and sparse distant birds in a continuously visible library scene. No music, thunder or voices.",
+  },
+  {
+    id: "AHUpWYbHboo",
+    title: "Blue Observatory | 2 Hours of Instrumental Music | 2Nspira",
+    duration: "2:00:01",
+    category: "ambience",
+    description: "Original instrumental music in a blue observatory, with subtle camera drift over AI-created artwork.",
+  },
+  {
+    id: "HGTP7PWyNMI",
+    title: "First Light Atelier | 2 Hours of Instrumental Music | 2Nspira",
+    duration: "2:00:01",
+    category: "ambience",
+    description: "A bright atelier and original instrumental music for a quiet moment. Subtle camera drift over AI-created artwork.",
+  },
   {
     id: "_3T_1ZhlzQM",
     title: "Rain on an Attic Window | 3 Hours for Reading & Study | No Music",
