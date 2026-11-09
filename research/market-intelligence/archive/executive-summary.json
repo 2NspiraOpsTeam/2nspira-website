@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
-  "source_observed_at": "2026-11-08T06:14:20.809Z",
+  "source_observed_at": "2026-11-09T06:07:02.574Z",
   "integration_status": "snapshot_only_dashboard_not_connected",
   "counts": {
     "current_opportunities": 4,
-    "research_revisions": 6
+    "research_revisions": 9
   },
   "top_opportunities": [
     {
@@ -13,32 +13,32 @@
       "title": "Approval-first receivables exception desk for small B2B service firms",
       "score": 68,
       "confidence": "medium problem evidence; willingness to pay untested",
-      "observed_at": "2026-11-08T06:14:20.809Z",
-      "run_id": "mi-8a6d422c2bb6597858ad83effd072184"
+      "observed_at": "2026-11-09T06:07:02.574Z",
+      "run_id": "mi-150dca448137cdf1273c2eb125bedbdd"
     },
     {
       "candidate_id": "MI-002",
       "title": "Title II evidence-and-remediation handoff pack for public-sector web vendors",
       "score": 60,
       "confidence": "low commercial confidence; authoritative rule signal, no procurement intent verified",
-      "observed_at": "2026-11-08T06:14:20.809Z",
-      "run_id": "mi-8a6d422c2bb6597858ad83effd072184"
+      "observed_at": "2026-11-09T06:07:02.574Z",
+      "run_id": "mi-150dca448137cdf1273c2eb125bedbdd"
     },
     {
       "candidate_id": "MI-004",
       "title": "English B2B webinar caption-QA and evidence handoff",
       "score": 60,
       "confidence": "low; broad production/adoption evidence, no niche buying intent",
-      "observed_at": "2026-11-08T06:14:20.809Z",
-      "run_id": "mi-8a6d422c2bb6597858ad83effd072184"
+      "observed_at": "2026-11-09T06:07:02.574Z",
+      "run_id": "mi-150dca448137cdf1273c2eb125bedbdd"
     },
     {
       "candidate_id": "MI-003",
       "title": "Role-specific AI usage and literacy starter pack for small EU agencies",
       "score": 59,
       "confidence": "low commercial confidence; adoption and guidance, no verified paid demand",
-      "observed_at": "2026-11-08T06:14:20.809Z",
-      "run_id": "mi-8a6d422c2bb6597858ad83effd072184"
+      "observed_at": "2026-11-09T06:07:02.574Z",
+      "run_id": "mi-150dca448137cdf1273c2eb125bedbdd"
     }
   ],
   "emerging_trends": {
@@ -46,6 +46,24 @@
     "note": "Metadata revisions and score recalibration are not market trends."
   },
   "research_activity": [
+    {
+      "run_id": "mi-150dca448137cdf1273c2eb125bedbdd",
+      "record_version": "2026-11-09-nightly-v7",
+      "observed_at": "2026-11-09T06:07:02.574Z",
+      "imported_at": "2026-11-09T06:07:12.927Z"
+    },
+    {
+      "run_id": "mi-bdd2f4d7a1bab9d536921c7a2e510776",
+      "record_version": "2026-11-08-7030-v6.1",
+      "observed_at": "2026-11-08T19:51:47.752Z",
+      "imported_at": "2026-11-08T19:51:55.109Z"
+    },
+    {
+      "run_id": "mi-e775f542a57ccc5ed8adff402428d33a",
+      "record_version": "2026-11-08-7030-v6",
+      "observed_at": "2026-11-08T19:49:18.049Z",
+      "imported_at": "2026-11-08T19:50:34.453Z"
+    },
     {
       "run_id": "mi-8a6d422c2bb6597858ad83effd072184",
       "record_version": "2026-11-08-weekly-business-case-v5",
