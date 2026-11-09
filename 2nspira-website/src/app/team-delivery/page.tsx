@@ -1,3 +1,4 @@
+import ServiceEffects from "@/components/ServiceEffects";
 import { notFound } from "next/navigation";
 import { publishedContent } from "@/lib/team/server";
 import TeamContent from "@/components/team/TeamContent";
@@ -13,8 +14,8 @@ export default async function TeamPage() {
   const c = await publishedContent();
   if (!c) notFound();
   return (
-    <main id="main-content">
+    <main id="main-content"><ServiceEffects editorial>
       <TeamContent content={c} />
-    </main>
+    </ServiceEffects></main>
   );
 }

@@ -45,7 +45,7 @@ export type Studio = {
 export type NavigationLink = { name: string; href: string };
 export const itemUrl = (item: Item) =>
   item.url || `/creative-studio/${item.id}`;
-export const groupUrl = (id: string) => `/studio#${id}`;
+export const groupUrl = (id: string) => ["watch", "listen", "read", "play"].includes(id) ? `/studio/${id}` : `/studio#${id}`;
 export const categoryUrl = (id: string) =>
   `/studio?category=${encodeURIComponent(id)}#collections`;
 export function safeUrl(value: string, image = false) {
@@ -99,8 +99,14 @@ export function publicStudio(c: Studio): Studio {
 }
 export function studioNavigation(c: Studio): NavigationLink[] {
   const p = publicStudio(c);
+  const order = ["watch", "listen", "read", "play"];
+  const links = [...p.links].sort((a,b) => {
+    const ai=order.indexOf(a.groupId), bi=order.indexOf(b.groupId);
+    return (ai < 0 ? order.length : ai) - (bi < 0 ? order.length : bi);
+  });
   return [
-    ...p.links.map((l) => ({
+    { name: "Explore Creative Studio", href: "/studio" },
+    ...links.map((l) => ({
       name:
         l.name ||
         p.categories.find((cat) => cat.id === l.categoryId)?.name ||
@@ -109,7 +115,6 @@ export function studioNavigation(c: Studio): NavigationLink[] {
         l.url ||
         (l.categoryId ? categoryUrl(l.categoryId) : groupUrl(l.groupId)),
     })),
-    { name: "Explore Creative Studio", href: "/studio" },
   ];
 }
 export function validateStudio(value: unknown): Studio {

@@ -19,7 +19,7 @@ export default function TeamContent({
 }) {
   return (
     <div className="bg-canvas text-ink">
-      <header className="mx-auto max-w-6xl px-5 py-16 sm:py-24">
+      <header data-editorial-hero className="mx-auto max-w-6xl px-5 py-16 sm:py-24">
         <p className={eyebrow}>Team &amp; Delivery</p>
         <h1 className={`${h1} max-w-4xl`}>
           People you can know.
@@ -99,9 +99,10 @@ export default function TeamContent({
                     </p>
                   </div>
                 </div>
-                <p className="mt-5 leading-8 text-body">
-                  {p.bio || "Biography awaiting confirmation."}
-                </p>
+                <details data-profile-details>
+                  <summary className="min-h-11 cursor-pointer py-3 text-sm font-medium">Background &amp; experience</summary>
+                  <p className="pb-3 leading-7 text-body">{p.bio || "Biography awaiting confirmation."}</p>
+                </details>
                 {p.skills && (
                   <p className="mt-4 text-sm leading-7 text-body">
                     <strong>Focus:</strong> {p.skills}
@@ -226,7 +227,7 @@ export default function TeamContent({
               .map((a) => (
                 <article
                   key={a.id}
-                  className="rounded-2xl border border-dashed border-line-strong bg-canvas p-6"
+                  className="effect-card rounded-2xl border border-dashed border-line-strong bg-canvas p-6"
                 >
                   <p className="text-xs font-semibold uppercase tracking-widest text-accent">
                     AI delivery assistant
@@ -235,9 +236,10 @@ export default function TeamContent({
                   <p className="mt-2 font-medium">
                     {a.role || "Functions awaiting confirmation"}
                   </p>
-                  <p className="mt-3 leading-7 text-body">
-                    {a.bio || "No public capability description approved yet."}
-                  </p>
+                  <details data-profile-details>
+                    <summary className="min-h-11 cursor-pointer py-3 text-sm font-medium">Capabilities &amp; boundaries</summary>
+                    <p className="pb-3 leading-7 text-body">{a.bio || "No public capability description approved yet."}</p>
+                  </details>
                   {preview && !a.approved && (
                     <p className="mt-3 text-sm text-amber-900">
                       Function description awaiting approval

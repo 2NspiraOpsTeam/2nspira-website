@@ -1,3 +1,4 @@
+import PageSections from "@/components/PageSections";
 import ManufacturingDemo from "@/components/ManufacturingDemo";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -71,7 +72,7 @@ const pathways = [
 ];
 
 export default function AutomationSystemsOptimizationPage() {
-  return <main className={pageMain} id="main-content"><ServiceEffects>
+  return <main className={pageMain} id="main-content"><ServiceEffects editorial>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(automationJsonLd).replace(/</g, "\\u003c") }} />
     <section className="relative overflow-hidden border-b border-line bg-surface">
       <AmbientField />
@@ -91,13 +92,14 @@ export default function AutomationSystemsOptimizationPage() {
       </div>
     </section>
 
+    <PageSections items={[["pathways-heading", "What needs improving?"], ["approach-heading", "Our approach"], ["workflow-example-heading", "See a workflow"]]} />
     <section className={section} aria-labelledby="pathways-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <p className="text-sm font-semibold uppercase tracking-widest text-accent">Sound familiar?</p>
         <h2 id="pathways-heading" className={`mt-3 ${h2}`}>Make everyday work easier.</h2>
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {pathways.map(({ id, icon: Icon, title, problem, text, examples }) => <article key={id} id={id} className={`scroll-mt-28 p-6 sm:p-7 ${cardFlat}`}>
-            <Icon className="mb-6 h-7 w-7 text-accent" aria-hidden="true" />
+            <Icon data-story-icon className="mb-6 h-7 w-7 p-2.5 text-accent" aria-hidden="true" />
             <p className="mb-3 text-sm text-muted">{problem}</p>
             <h3 className={h3}>{title}</h3>
             <p className="mt-3 leading-7 text-body">{text}</p>
@@ -116,7 +118,7 @@ export default function AutomationSystemsOptimizationPage() {
             { title: "Find the friction", text: "Walk through one real bottleneck with the people doing the work." },
             { title: "Make the right changes", text: "Simplify first. Connect or automate where it helps, keeping tools that still serve you." },
             { title: "Help your team move forward", text: "Test the workflow, clarify ownership, and help people use the improved process." },
-          ].map((item, i) => <li key={item.title} className="border-t border-line pt-5"><span className="text-sm font-semibold text-accent">0{i + 1}</span><h3 className={`mt-3 ${h3}`}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p></li>)}
+          ].map((item, i) => <li key={item.title} data-process-step className={`p-6 ${cardFlat}`}><span data-step-number className="text-sm font-semibold text-accent">0{i + 1}</span><h3 className={`mt-3 ${h3}`}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p></li>)}
         </ol>
         <details className="mt-10 rounded-2xl border border-line bg-surface p-5 sm:p-7">
           <summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">Behind the approach: our eight connected lenses</summary>
@@ -135,7 +137,7 @@ export default function AutomationSystemsOptimizationPage() {
         ["Capture once", "A structured request records the information needed to start, with validation and a clear acknowledgement."],
         ["Assign and follow through", "Route the work to an owner, make approval points visible, and send reminders when a defined action is due."],
         ["See what needs attention", "Track status in a shared record and surface exceptions for human review rather than hiding them in another inbox."]
-      ].map(([title, text], i) => <li className={`p-6 ${cardFlat}`} key={title}><p className="text-sm font-semibold text-accent">0{i+1}</p><h3 className={`mt-3 ${h3}`}>{title}</h3><p className="mt-3 leading-7 text-body">{text}</p></li>)}</ol>
+      ].map(([title, text], i) => <li data-process-step className={`p-6 ${cardFlat}`} key={title}><p data-step-number className="text-sm font-semibold text-accent">0{i+1}</p><h3 className={`mt-3 ${h3}`}>{title}</h3><p className="mt-3 leading-7 text-body">{text}</p></li>)}</ol>
       <p className="mt-5 text-sm leading-7 text-muted">Illustrative application, not a completed client engagement. Integrations, permissions, failure handling, and success measures are assessed before implementation.</p>
       <Link href="/work#concepts-prototypes" className={`mt-5 inline-flex min-h-11 items-center ${linkInline}`}>Explore a connected-operations concept →</Link>
     </div></section>

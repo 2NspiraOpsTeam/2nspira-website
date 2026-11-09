@@ -1,3 +1,4 @@
+import { videos } from "@/content/videos";
 import posts from "@/content/posts/index.json";
 import {
   activityBooks,
@@ -28,13 +29,19 @@ export function initialStudio(): Studio {
     revision: 0,
     status: "draft",
     intro:
-      "Watch. Read. Play. A place for curious minds: original worlds, ideas with a human perspective, and creative experiences for adults and families.",
+      "Step out of the everyday. Into a story, a new perspective, or a challenge that sparks your curiosity.",
     groups: [
       {
         id: "watch",
         name: "Watch",
         description:
-          "Original soundscapes, creative stories, and fresh perspectives on technology and leadership.",
+          "Visual stories and fresh perspectives on technology, trust, and leadership.",
+        visible: true,
+      },
+      {
+        id: "listen",
+        name: "Listen",
+        description: "Music & Ambience: original soundscapes and imagined worlds to spend a little time in.",
         visible: true,
       },
       {
@@ -57,6 +64,12 @@ export function initialStudio(): Studio {
         id: "youtube",
         name: "Our YouTube channel",
         groupIds: ["watch"],
+        visible: true,
+      },
+      {
+        id: "music-ambience",
+        name: "Music & Ambience",
+        groupIds: ["listen"],
         visible: true,
       },
       {
@@ -104,7 +117,7 @@ export function initialStudio(): Studio {
       },
       { id: "art", name: "Art prints", groupIds: ["play"], visible: true },
     ],
-    links: ["watch", "read", "play"].map((id) => ({
+    links: ["watch", "listen", "read", "play"].map((id) => ({
       id,
       name: "",
       groupId: id,
@@ -117,14 +130,15 @@ export function initialStudio(): Studio {
         id: "breadcrumb",
         title: "Breadcrumb",
         description:
-          "An OSINT challenge game for curious adults. Launch destination awaiting verification.",
+          "Follow a trail of clues in this browser-based OSINT investigation challenge for curious adults. Test your observation, research, and verification skills.",
         type: "Game",
         categoryIds: ["interactive"],
-        status: "draft",
+        status: "published",
+        featured: true,
         image: "/images/work/project-breadcrumb.png",
         imageAlt:
           "Breadcrumb project artwork featuring an investigation workspace",
-        url: "/work",
+        url: "https://breadcrumb-challenge.vercel.app/",
       }),
       item({
         id: "youtube-channel",
@@ -139,6 +153,17 @@ export function initialStudio(): Studio {
           "2Nspira Creative Studio — original soundscapes, creative stories, and fresh perspectives on YouTube",
         url: "https://www.youtube.com/@2Nspira",
       }),
+      ...videos.map((v) => item({
+        id: `video-${v.id.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
+        title: v.title,
+        description: v.description,
+        type: "Video",
+        categoryIds: [v.category === "ambience" ? "music-ambience" : "youtube"],
+        featured: true,
+        image: `/images/videos/${v.id}.jpg`,
+        imageAlt: `Preview for ${v.title}`,
+        url: `https://www.youtube.com/watch?v=${v.id}`,
+      })),
       ...posts.map((p, n) =>
         item({
           id: p.slug,

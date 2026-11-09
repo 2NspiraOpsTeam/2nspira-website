@@ -1,3 +1,5 @@
+import PageSections from "@/components/PageSections";
+import { Compass, UsersRound, Workflow, Database, ShieldCheck, ChartNoAxesCombined } from "lucide-react";
 import polish from "@/components/ServicePolish.module.css";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
@@ -14,6 +16,7 @@ export const metadata: Metadata = publicPageMetadata({
   title: "AI Transformation & Enablement Consulting", description, path: "/ai-enablement"
 });
 
+const dimensionIcons = [Compass, UsersRound, Workflow, Database, ShieldCheck, ChartNoAxesCombined];
 const dimensions = [
   { title: "Leadership & Strategy", text: "Leaders understand where AI creates value and how it supports organizational priorities." },
   { title: "People & Culture", text: "Employees have the skills, confidence, and support to work effectively alongside AI." },
@@ -51,7 +54,7 @@ const jsonLd = {
 };
 
 export default function Page() {
-  return <main className={`${pageMain} ${polish.page}`} id="main-content"><ServiceEffects>
+  return <main className={`${pageMain} ${polish.page}`} id="main-content"><ServiceEffects editorial>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     <section data-service-hero className="border-b border-line bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
@@ -59,8 +62,8 @@ export default function Page() {
         <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
           <div><EyebrowPill>AI Enablement &amp; Organizational Transformation</EyebrowPill>
             <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Move beyond using AI. Become an AI-enabled organization.</h1>
-            <p className={lead}>AI’s greatest opportunity isn’t simply doing today’s work faster. It’s rethinking how your organization operates, how people make decisions, and what’s possible when human expertise and intelligent technology work together.</p>
-            <p className="mt-4 leading-7 text-body">We help you move from scattered experiments to a coordinated, organization-wide approach—aligning leadership, people, processes, data, and technology for meaningful, measurable improvement.</p>
+            <p className={lead}>Align your people, workflows, and technology so AI supports useful, accountable work—not just more experiments.</p>
+            <p className="mt-4 leading-7 text-body">Start with readiness. Build the right skills and safeguards. Improve one workflow, then learn and expand.</p>
             <div className="mt-7 flex flex-wrap gap-3"><Link href="/resources/ai-readiness-scorecard" className={buttonPrimary}>Explore your organization’s AI readiness</Link><a href="#ai-conversation" className={buttonSecondary}>Talk about your AI transformation ↓</a></div>
           </div>
           <figure className="overflow-hidden rounded-[2rem] border border-line shadow-xl">
@@ -70,17 +73,18 @@ export default function Page() {
         <p className="mt-8 border-t border-line pt-5 text-sm font-medium text-muted">We don’t just help you adopt AI. We help you build the capabilities to succeed with it.</p>
       </div>
     </section>
+    <PageSections items={[["ai-capabilities-heading", "Build capability"], ["ai-roadmap-heading", "Your roadmap"], ["ai-work-heading", "See it in practice"], ["personal-ai-assistant", "Personal AI assistance"]]} />
     <section className={section} aria-labelledby="ai-capabilities-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <EyebrowPill>What an AI-enabled organization looks like</EyebrowPill>
       <h2 id="ai-capabilities-heading" className={`mt-5 max-w-3xl ${h2}`}>AI isn’t another tool. It’s a new organizational capability.</h2>
       <p className={`max-w-3xl ${lead}`}>An AI-enabled organization isn’t one that uses AI. It’s one that works better because of it. Six connected dimensions help turn isolated experiments into lasting organizational capability.</p>
-      <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{dimensions.map(item => <article key={item.title} className={`p-6 ${cardFlat}`}><h3 className={h3}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p></article>)}</div>
+      <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{dimensions.map((item, i) => { const Icon = dimensionIcons[i]; return <article key={item.title} className={`p-6 ${cardFlat}`}><span data-story-icon><Icon aria-hidden="true" className="h-6 w-6" /></span><h3 className={h3}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p></article>; })}</div>
     </div></section>
     <section className={sectionBand} aria-labelledby="ai-roadmap-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <EyebrowPill>From readiness to an AI-enabled operating model</EyebrowPill>
       <h2 id="ai-roadmap-heading" className={`mt-5 ${h2}`}>Your path to becoming AI-enabled</h2>
       <p className={`max-w-3xl ${lead}`}>A practical transformation framework, adapted to your organization’s size, readiness, and priorities.</p>
-      <ol className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{stages.map((stage, i) => <li data-process-step key={stage.title} className={`p-6 ${cardFlat}`}><span className="text-sm font-semibold text-accent">0{i+1}</span><h3 className={`mt-3 ${h3}`}>{stage.title}</h3><p className="mt-2 font-medium text-ink">{stage.subtitle}</p><p className="mt-3 leading-7 text-body">{stage.text}</p><details className="mt-5 border-t border-line pt-2"><summary className="min-h-11 cursor-pointer rounded py-3 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">Potential deliverable</summary><p className="pb-3 text-sm leading-7 text-body">{stage.output}</p></details></li>)}</ol>
+      <ol className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{stages.map((stage, i) => <li data-process-step key={stage.title} className={`p-6 ${cardFlat}`}><span data-step-number className="text-sm font-semibold text-accent">0{i+1}</span><h3 className={`mt-3 ${h3}`}>{stage.title}</h3><p className="mt-2 font-medium text-ink">{stage.subtitle}</p><p className="mt-3 leading-7 text-body">{stage.text}</p><details className="mt-5 border-t border-line pt-2"><summary className="min-h-11 cursor-pointer rounded py-3 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">Potential deliverable</summary><p className="pb-3 text-sm leading-7 text-body">{stage.output}</p></details></li>)}</ol>
       <p className="mt-6 max-w-3xl text-sm leading-7 text-muted">These are proposed stages and deliverables, not a promise that every project includes all five. Scope, implementation responsibilities, validation criteria, and ongoing support are defined for each client.</p>
     </div></section>
     <section className={section} aria-labelledby="ai-outcomes-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">

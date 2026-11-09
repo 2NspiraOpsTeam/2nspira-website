@@ -1,4 +1,5 @@
 "use client";
+import { Play, BookOpen, Sparkles, Headphones } from "lucide-react";
 import { useState, useSyncExternalStore } from "react";
 const subscribeReady = () => () => {};
 const clientReady = () => true;
@@ -27,17 +28,17 @@ export function StudioCard({
   const href = itemUrl(item),
     external = href.startsWith("https://"),
     channel = item.type.toLowerCase() === "channel";
-  const label = channel
+  const label = item.id === "breadcrumb" ? "Play Breadcrumb" : /etsy\.com/.test(href) ? "View on Etsy" : channel
     ? "Explore Our Videos"
     : item.type.toLowerCase() === "book" && item.url === item.purchaseUrl
-      ? /amazon\./.test(href)
+      ? /(?:amazon\.|link\.amazon)/.test(href)
         ? "Buy on Amazon"
         : "View book & purchase"
       : item.type.toLowerCase() === "product"
         ? "View product"
         : item.type.toLowerCase() === "collection"
           ? "Explore collection"
-          : "Explore";
+          : item.type.toLowerCase() === "book" ? "Explore the book" : "Explore";
   const props = external
     ? { target: "_blank", rel: "noopener noreferrer" }
     : {};
@@ -57,7 +58,7 @@ export function StudioCard({
             src={item.image}
             alt={item.imageAlt}
             loading={large ? "eager" : "lazy"}
-            className={`w-full ${large ? "h-full min-h-56 object-cover" : "aspect-[16/10] object-contain"}`}
+            className={`w-full ${large ? item.type.toLowerCase() === "book" ? "h-80 object-contain p-5 sm:h-96" : "h-full min-h-56 object-cover" : "aspect-[16/10] object-contain"}`}
             width={960}
             height={600}
           />
@@ -141,7 +142,7 @@ export default function StudioContent({
   }
   return (
     <div>
-      <section className="border-b border-line bg-surface">
+      <section data-editorial-hero className="border-b border-line bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
           <p className="text-sm uppercase tracking-widest text-body">
             Watch. Read. Play.
@@ -158,7 +159,8 @@ export default function StudioContent({
                 href={`#${g.id}`}
                 className={`${card} block p-6 focus-visible:outline-2 focus-visible:outline-accent`}
               >
-                <span className="text-2xl font-semibold text-ink">
+                <span data-story-icon>{g.id === "watch" ? <Play aria-hidden="true" className="h-6 w-6" /> : g.id === "listen" ? <Headphones aria-hidden="true" className="h-6 w-6" /> : g.id === "read" ? <BookOpen aria-hidden="true" className="h-6 w-6" /> : <Sparkles aria-hidden="true" className="h-6 w-6" />}</span>
+                <span className="block text-2xl font-semibold text-ink">
                   {g.name} <span aria-hidden="true">↓</span>
                 </span>
                 <span className="mt-3 block text-body leading-7">
@@ -185,6 +187,7 @@ export default function StudioContent({
             .slice(0, 3);
           return (
             <section
+              data-studio-section
               key={g.id}
               id={g.id}
               className="scroll-mt-24 border-b border-line pb-12 mb-12"
@@ -296,11 +299,18 @@ export default function StudioContent({
             {items.length} {items.length === 1 ? "item" : "items"}
           </p>
           {items.length ? (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {items.map((i) => (
-                <StudioCard key={i.id} item={i} />
-              ))}
-            </div>
+            <>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {items.slice(0, 9).map((i) => <StudioCard key={i.id} item={i} />)}
+              </div>
+              {items.length > 9 && <details key={`${category}:${format}`} className="mt-8 rounded-2xl border border-line bg-surface p-5 sm:p-7">
+                <summary className="min-h-11 cursor-pointer py-3 font-medium">Explore {items.length - 9} more items</summary>
+                <p className="my-4 text-sm text-body">The first nine items are shown above. Keep exploring below, or use the filters to narrow your selection.</p>
+                <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {items.slice(9).map((i) => <StudioCard key={i.id} item={i} />)}
+                </div>
+              </details>}
+            </>
           ) : (
             <p className="rounded-xl border border-line p-7 text-body">
               No items match these filters. Clear the filters to explore
