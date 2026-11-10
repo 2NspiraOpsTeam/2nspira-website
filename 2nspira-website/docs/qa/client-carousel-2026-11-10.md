@@ -39,3 +39,6 @@ Hosted/production verification pending.
 - Compass: https://www.compass.com/ucfe-assets/public-media/compass_logo.svg
 
 - Cushman & Wakefield: https://assets.cushmanwakefield.com/-/media/cw/global/about-us/logo.svg?rev=d52513d3e0584ffea7b4077ca0c8611c
+
+## Owner-requested refinement
+Bank Street horizontal PNG supplied by Jeffrey on 2026-11-10 replaces the sourced SVG. Client captions are visually hidden (screen-reader names retained); technology carousel defaults unchanged.

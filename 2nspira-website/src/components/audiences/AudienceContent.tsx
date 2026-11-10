@@ -44,6 +44,7 @@ export default function AudienceContent({ content: c }: { content: Content }) {
             <h2 className="text-2xl font-medium tracking-tight text-ink">Our clients</h2>
             <PlatformCarousel
               platforms={clientLogos}
+              showNames={false}
               description="A selection of the organizations we serve."
               label="Client logos"
               listLabel="Our clients"

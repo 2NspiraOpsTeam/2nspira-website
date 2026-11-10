@@ -12,7 +12,7 @@
 .viewport[data-moving="true"]::-webkit-scrollbar { display: none; }
 .track { display: flex; width: max-content; }
 .list { display: flex; flex: none; gap: 2.5rem; padding-inline-end: 2.5rem; }
-.logo { display: flex; width: 156px; flex: none; flex-direction: column; align-items: center; justify-content: flex-start; gap: 1rem; }
+.logo { position: relative; display: flex; width: 156px; flex: none; flex-direction: column; align-items: center; justify-content: flex-start; gap: 1rem; }
 .image { width: 156px; height: 64px; object-fit: contain; }
 @media (max-width: 639px) {
   .list { gap: 1.5rem; padding-inline-end: 1.5rem; }
