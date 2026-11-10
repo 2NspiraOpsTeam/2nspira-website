@@ -9,7 +9,7 @@ export const clientLogos = [
   {
     "id": "bankstreet",
     "name": "Bank Street College of Education",
-    "logo": "/images/clients/bankstreet.svg"
+    "logo": "/images/clients/bankstreet.png"
   },
   {
     "id": "dwight",
@@ -39,6 +39,7 @@ export const clientLogos = [
   },
   {
     "id": "nysoclib",
+    "blackBackground": true,
     "name": "The New York Society Library",
     "logo": "/images/clients/nysoclib.svg"
   },
