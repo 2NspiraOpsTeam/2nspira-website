@@ -18,6 +18,7 @@ const subscribeViewport = (notify: () => void) => {
 import { useRouter, usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
+  { path: "/admin/who-we-serve", label: "Who We Serve" },
   { path: "/admin/creative-studio", label: "Creative Studio" },
   { path: "/admin/dashboard", label: "Dashboard" },
   { path: "/admin/clients", label: "Clients" },
@@ -28,9 +29,11 @@ const NAV_ITEMS = [
 export default function AdminShell({
   admin,
   children,
+  beforeNavigate,
 }: {
   admin: { name: string; email: string } | null;
   children: React.ReactNode;
+  beforeNavigate?: () => boolean;
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -82,9 +85,10 @@ export default function AdminShell({
   }, [narrow, sidebarOpen]);
 
   const handleLogout = useCallback(async () => {
+    if (beforeNavigate && !beforeNavigate()) return;
     await fetch("/api/admin/auth/logout", { method: "POST" });
     router.push("/admin/login");
-  }, [router]);
+  }, [router, beforeNavigate]);
 
   const isActive = (itemPath: string) =>
     itemPath === pathname ||
@@ -135,6 +139,7 @@ export default function AdminShell({
             <button
               key={item.path}
               onClick={() => {
+                if (beforeNavigate && !beforeNavigate()) return;
                 setSidebarOpen(false);
                 router.push(item.path);
               }}
@@ -149,7 +154,9 @@ export default function AdminShell({
             </button>
           ))}
           <button
-            onClick={() => router.push("/")}
+            onClick={() => {
+              if (!beforeNavigate || beforeNavigate()) router.push("/");
+            }}
             className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-foreground/40 hover:bg-surface/50 hover:text-foreground transition-colors"
           >
             ← Back to Site

@@ -1,3 +1,4 @@
+import { BOOKING_URL } from "@/lib/booking";
 import ManufacturingDemo from "@/components/ManufacturingDemo";
 import Image from "next/image";
 import Link from "next/link";
@@ -99,7 +100,7 @@ export default function Home() {
         <p className={styles.eyebrow}>People. Purpose. Possibility.</p>
         <h1 id="hero-heading">A clearer vision.<br />A stronger business.</h1>
         <p>Improve operations, make clearer technology decisions, build an AI-enabled organization, and build digital experiences that serve your customers.</p>
-        <Link className={styles.lightButton} href="/contact#contact-message">Let’s build what’s next <span aria-hidden="true">↗</span></Link>
+        <a className={styles.lightButton} href={BOOKING_URL}>Book a Conversation <span aria-hidden="true">↗</span></a>
       </div>
       <a href="#our-purpose" className={styles.heroFoot}>Independent thinking. Practical change. Since 2019. <span aria-hidden="true">↓</span></a>
     </section>
@@ -109,6 +110,16 @@ export default function Home() {
       <h2 id="intro-heading">Good technology starts<br />with understanding people.</h2>
       <p>Behind every business challenge are people trying to do their best work. We help you see what’s getting in the way, simplify the complex, and move forward with purpose.</p>
       <Link href="/about" className={styles.textLink}>Get to know 2Nspira <span aria-hidden="true">↗</span></Link>
+    </section>
+
+    <section className={`${styles.section} ${styles.challenges}`} aria-labelledby="challenges-heading">
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What brings you here?</p><h2 id="challenges-heading">Where do you need<br />to make progress?</h2></div><p className={styles.challengeIntro}>You don’t need to know which service to ask for. Start with the challenge you’re facing.</p></div>
+      <div className={styles.challengeGrid}>{[
+        { image: "challenge-operations", category: "Simpler operations", title: "Our operations have become too complicated.", text: "Simplify repetitive work and connect the systems your business relies on.", href: "/automation-systems-optimization", link: "Explore operations solutions" },
+        { image: "digital-team", src: "/images/hero/ai-human-led-v3.webp", alt: "People working together with human-led AI technology.", category: "Organizational AI Enablement", title: "We want to become an AI-enabled organization.", text: "Align leadership, people, workflows, technology, and governance around responsible AI—and measure progress as you evolve.", href: "/ai-enablement", link: "Explore organizational AI enablement" },
+        { image: "tech-websites", category: "Better digital experiences", title: "Our website no longer meets our needs.", text: "Build a better customer experience with useful digital capabilities behind it.", href: "/websites", link: "Explore website solutions" },
+        { image: "executive-staff-briefing-v1", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
+      ].map(challenge => <Link key={challenge.href} href={challenge.href} className={styles.challengeCard}><div className={`${styles.challengePhoto} ${challenge.image === "executive-staff-briefing-v1" ? styles.staffBriefing : ""}`}><Photo src={challenge.src ?? `/images/homepage/${challenge.image}.jpg`} alt={challenge.alt ?? ""} /><span className={styles.challengeCategory}>{challenge.category}</span></div><div className={styles.challengeCopy}><h3>{challenge.title}</h3><p>{challenge.text}</p><span className={styles.challengeLink}>{challenge.link} <span className={styles.challengeArrow} aria-hidden="true">↗</span></span></div></Link>)}</div>
     </section>
 
     <section className={styles.section} id="find-the-right-service" aria-labelledby="services-heading">
@@ -131,18 +142,8 @@ export default function Home() {
           { title: "Schools & nonprofits", text: "Make limited resources go further through accessible digital services, practical technology, and stronger operations.", href: "/automation-systems-optimization", action: "Explore better ways of working" },
           { title: "Entrepreneurs & founders", text: "Gain the perspective and guidance to build confidently and lead effectively.", href: "/coaching", action: "Explore mentoring—not outsourced delivery" },
         ].map(audience => <li key={audience.title}><h3>{audience.title}</h3><p>{audience.text}</p><Link href={audience.href} className={styles.textLink}>{audience.action} <span aria-hidden="true">→</span></Link></li>)}</ul>
-        <Link href="/contact#contact-message" className={styles.textLink}>Let’s discuss your challenge <span aria-hidden="true">↗</span></Link>
+        <Link href="/who-we-serve" className={styles.textLink}>Explore Who We Serve <span aria-hidden="true">↗</span></Link>
       </div>
-    </section>
-
-    <section className={`${styles.section} ${styles.challenges}`} aria-labelledby="challenges-heading">
-      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What brings you here?</p><h2 id="challenges-heading">Where do you need<br />to make progress?</h2></div><p className={styles.challengeIntro}>You don’t need to know which service to ask for. Start with the challenge you’re facing.</p></div>
-      <div className={styles.challengeGrid}>{[
-        { image: "challenge-operations", category: "Simpler operations", title: "Our operations have become too complicated.", text: "Simplify repetitive work and connect the systems your business relies on.", href: "/automation-systems-optimization", link: "Explore operations solutions" },
-        { image: "digital-team", src: "/images/hero/ai-human-led-v3.webp", alt: "People working together with human-led AI technology.", category: "Organizational AI Enablement", title: "We want to become an AI-enabled organization.", text: "Align leadership, people, workflows, technology, and governance around responsible AI—and measure progress as you evolve.", href: "/ai-enablement", link: "Explore organizational AI enablement" },
-        { image: "tech-websites", category: "Better digital experiences", title: "Our website no longer meets our needs.", text: "Build a better customer experience with useful digital capabilities behind it.", href: "/websites", link: "Explore website solutions" },
-        { image: "executive-staff-briefing-v1", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
-      ].map(challenge => <Link key={challenge.href} href={challenge.href} className={styles.challengeCard}><div className={`${styles.challengePhoto} ${challenge.image === "executive-staff-briefing-v1" ? styles.staffBriefing : ""}`}><Photo src={challenge.src ?? `/images/homepage/${challenge.image}.jpg`} alt={challenge.alt ?? ""} /><span className={styles.challengeCategory}>{challenge.category}</span></div><div className={styles.challengeCopy}><h3>{challenge.title}</h3><p>{challenge.text}</p><span className={styles.challengeLink}>{challenge.link} <span className={styles.challengeArrow} aria-hidden="true">↗</span></span></div></Link>)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.nextSteps}`} aria-labelledby="next-steps-heading">
@@ -184,12 +185,6 @@ export default function Home() {
     ].map(project=><Link key={project.name} href="/websites#our-work" className={styles.workCard}><div><Photo src={`/images/pages/${project.image}-website-preview-20261021.jpg`} alt={`${project.name} public website preview`} /></div><h3>{project.name} <span aria-hidden="true">↗</span></h3><p>{project.text}</p></Link>)}</div></section>
 
 
-  <section className={styles.section} aria-labelledby="creative-studio-heading">
-      <p className={styles.eyebrow}>Creative Studio</p>
-      <h2 id="creative-studio-heading">Watch. Read. Play.</h2>
-      <p>Original worlds, human perspectives, and creative pauses for adults and families.</p>
-      <Link href="/studio" className={styles.textLink}>Explore Creative Studio <span aria-hidden="true">→</span></Link>
-    </section>
   <ManufacturingDemo />
     </main>;
 }

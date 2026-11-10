@@ -1,3 +1,5 @@
+import Relationships from "@/components/audiences/Relationships";
+import {publishedContent} from "@/lib/audiences/server";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import type { Metadata } from "next";
@@ -78,7 +80,9 @@ const supportingProjects = [
   },
 ];
 
-export default function WorkPage() {
+export const dynamic = "force-dynamic";
+export default async function WorkPage() {
+  const relationships = await publishedContent();
   return (
     <main id="main-content" className="min-h-screen bg-surface"><CatalogEffects headings>
       {/* --- Hero Section --- */}
@@ -278,6 +282,7 @@ export default function WorkPage() {
           </div >
         </Reveal>
       </div >
+    <Relationships content={relationships} />
     </CatalogEffects></main>
   );
 }
