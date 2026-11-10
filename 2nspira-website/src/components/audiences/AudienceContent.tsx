@@ -1,3 +1,6 @@
+import CatalogEffects from "@/components/catalog/CatalogEffects";
+import PlatformCarousel from "@/components/platforms/PlatformCarousel";
+import { clientLogos } from "@/lib/audiences/clients";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -8,6 +11,7 @@ import {
   HeartHandshake,
   ShoppingBag,
   Clapperboard,
+  Plus,
 } from "lucide-react";
 import type { Content } from "@/lib/audiences/model";
 import { BOOKING_URL } from "@/lib/booking";
@@ -20,9 +24,11 @@ const icons = [
   HeartHandshake,
   ShoppingBag,
   Clapperboard,
+  Plus,
 ];
 export default function AudienceContent({ content: c }: { content: Content }) {
   return (
+    <CatalogEffects headings>
     <main id="main-content" className="flex-1 bg-canvas">
       <section className="border-b border-line bg-canvas-deep">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
@@ -31,6 +37,19 @@ export default function AudienceContent({ content: c }: { content: Content }) {
           <p className="mt-6 max-w-3xl text-lg leading-8 text-body">
             {c.intro}
           </p>
+          <nav aria-label="Explore industries" className="mt-7 flex flex-wrap gap-3">
+            {c.industries.filter(i => i.visible).map(i => <a key={i.id} href={`#industry-${i.id}`} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-accent hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-accent">{i.title}<ArrowRight size={15} aria-hidden="true" /></a>)}
+          </nav>
+          <div id="our-clients" className="mt-10 scroll-mt-24 border-t border-line pt-8">
+            <h2 className="text-2xl font-medium tracking-tight text-ink">Our clients</h2>
+            <PlatformCarousel
+              platforms={clientLogos}
+              description="A selection of the organizations we serve."
+              label="Client logos"
+              listLabel="Our clients"
+              notice="Names and logos belong to their respective owners. Inclusion identifies client relationships, not endorsement."
+            />
+          </div>
           <a
             href="#industries"
             className="mt-7 inline-flex min-h-11 items-center gap-2 font-medium text-accent underline underline-offset-4"
@@ -48,11 +67,9 @@ export default function AudienceContent({ content: c }: { content: Content }) {
           Practical technology for everyday challenges.
         </h2>
         <p className="mt-5 max-w-3xl leading-7 text-body">
-          Explore audiences we can support and solutions we can build together.
-          These are possibilities, not claims of completed client engagements or
-          guaranteed results.
+          Find your everyday challenges. Explore what a more connected way of working could look like.
         </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid items-start gap-6 md:grid-cols-2 xl:grid-cols-3">
           {c.industries
             .filter((i) => i.visible)
             .map((i, n) => {
@@ -60,7 +77,9 @@ export default function AudienceContent({ content: c }: { content: Content }) {
               return (
                 <article
                   key={i.id}
-                  className="flex min-w-0 flex-col rounded-3xl border border-line bg-white p-6 sm:p-8"
+                  id={`industry-${i.id}`}
+                  data-catalog-card
+                  className="group flex min-w-0 scroll-mt-28 flex-col rounded-3xl border border-line bg-white p-6 transition-[border-color,box-shadow] duration-300 hover:border-accent/40 hover:shadow-lg motion-reduce:transition-none sm:p-8"
                 >
                   <span className="mb-6 grid h-12 w-12 place-items-center rounded-2xl bg-accent-soft text-accent">
                     <Icon aria-hidden="true" size={25} />
@@ -69,7 +88,12 @@ export default function AudienceContent({ content: c }: { content: Content }) {
                     {i.title}
                   </h3>
                   <p className="mt-4 leading-7 text-body">{i.challenges}</p>
-                  <h4 className="mt-5 text-sm font-semibold text-ink">
+                  <details className="group/details my-5 border-y border-line">
+                    <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 rounded-sm py-3 text-sm font-semibold text-accent focus-visible:outline-2 focus-visible:outline-accent [&::-webkit-details-marker]:hidden">
+                      Explore the possibilities <span className="sr-only">for {i.title}</span>
+                      <Plus aria-hidden="true" size={18} className="shrink-0 transition-transform group-open/details:rotate-45 motion-reduce:transition-none" />
+                    </summary>
+                  <h4 className="mt-3 text-sm font-semibold text-ink">
                     How we can help
                   </h4>
                   <p className="mt-2 leading-7 text-body">{i.help}</p>
@@ -79,6 +103,8 @@ export default function AudienceContent({ content: c }: { content: Content }) {
                     </h4>
                     <p className="mt-2 leading-7 text-body">{i.outcomes}</p>
                   </div>
+                  <p className="mb-5 text-xs leading-5 text-muted">Illustrative possibilities, not guaranteed results or a description of any specific client engagement.</p>
+                  </details>
                   <div className="mt-auto space-y-2">
                     {i.href && (
                       <Link
@@ -112,8 +138,7 @@ export default function AudienceContent({ content: c }: { content: Content }) {
             What would make work easier for your people?
           </h2>
           <p className="mt-5 max-w-2xl leading-7 text-body">
-            Tell us where work slows down, what your customers need and where
-            you want to go. We’ll explore a practical next step together.
+            Tell us where work slows down. Let’s find a practical next step together.
           </p>
           <a href={BOOKING_URL} className={`${buttonPrimary} mt-7`}>
             Let’s discuss your business{" "}
@@ -122,5 +147,6 @@ export default function AudienceContent({ content: c }: { content: Content }) {
         </div>
       </section>
     </main>
+    </CatalogEffects>
   );
 }

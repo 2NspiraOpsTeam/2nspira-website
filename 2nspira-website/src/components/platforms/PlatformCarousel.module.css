@@ -19,3 +19,5 @@
   .logo { width: 128px; }
   .image { width: 128px; height: 56px; }
 }
+
+.imageDark { background: #193b30; border-radius: .5rem; padding: .6rem; }
