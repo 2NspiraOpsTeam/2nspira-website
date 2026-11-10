@@ -41,4 +41,4 @@ Hosted/production verification pending.
 - Cushman & Wakefield: https://assets.cushmanwakefield.com/-/media/cw/global/about-us/logo.svg?rev=d52513d3e0584ffea7b4077ca0c8611c
 
 ## Owner-requested refinement
-Bank Street horizontal PNG supplied by Jeffrey on 2026-11-10 replaces the sourced SVG. Client captions are visually hidden (screen-reader names retained); technology carousel defaults unchanged.
+Bank Street horizontal PNG supplied by Jeffrey on 2026-11-10 replaces the sourced SVG. Organization captions remain visible per Jeffrey’s revised preference. Society Library uses a black background for readable white lettering. Technology carousel defaults unchanged.
