@@ -19,6 +19,8 @@ const company = [
   { name: "Services", href: "/services" },
   { name: "Our work", href: "/work" },
   { name: "Interactive demos", href: "/demos" },
+  { name: "Who We Serve", href: "/who-we-serve" },
+  { name: "Client login", href: "/portal/login" },
   { name: "About 2Nspira", href: "/about" },
   { name: "Team & Delivery", href: "/team-delivery" },
   { name: "Meet our AI team", href: "/ai-team" },
@@ -44,7 +46,7 @@ export default async function Footer() {
         </div>
         <div className={styles.actions}>
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={styles.contact}
-            aria-label="Book a 30-minute conversation (Google Calendar, opens in a new tab)">Book a 30-minute conversation<ArrowUpRight aria-hidden="true" size={18} /></a>
+            aria-label="Book a 30-minute conversation (Google Calendar, opens in a new tab)">Book a Conversation<ArrowUpRight aria-hidden="true" size={18} /></a>
           <Link href="/contact#contact-message" className={styles.message}>Prefer to send a message? <span aria-hidden="true">→</span></Link>
           <p className={styles.bookingNote}>Introductory call via Google Meet. Share how we can help when you book. Google Calendar opens in a new tab.</p>
         </div>

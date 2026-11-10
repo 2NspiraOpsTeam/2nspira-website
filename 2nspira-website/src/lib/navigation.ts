@@ -10,6 +10,7 @@ export const serviceLinks = [
 ];
 
 export const aboutLinks = [
+  { name: "Who We Serve", href: "/who-we-serve" },
   { name: "Our Story", href: "/about" },
   { name: "Team & Delivery", href: "/team-delivery" },
   { name: "AI Team", href: "/ai-team" },

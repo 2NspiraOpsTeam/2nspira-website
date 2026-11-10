@@ -1,4 +1,5 @@
 "use client";
+import StudioSubnav from "@/components/studio/StudioSubnav";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -6,6 +7,7 @@ import type { KeyboardEvent as ReactKeyboardEvent, RefObject } from "react";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import type { NavigationLink } from "@/lib/studio/model";
+import { BOOKING_URL } from "@/lib/booking";
 import { demoNavigationLinks } from "@/lib/demos";
 
 import { serviceLinks, aboutLinks } from "@/lib/navigation";
@@ -154,6 +156,9 @@ export default function MobileMenu({
               {link.name}
             </Link>
           ))}
+          {key === "about" && (
+            <StudioSubnav links={ideaLinks} onNavigate={handleClose} />
+          )}
         </div>
       </>
     );
@@ -223,7 +228,6 @@ export default function MobileMenu({
             Work
           </Link>
           {accordion("demos", "Demos", demoNavigationLinks, demosButtonRef)}
-          {accordion("ideas", "Creative Studio", ideaLinks, ideasButtonRef)}
           {accordion("about", "About", aboutLinks, aboutButtonRef)}
           <Link
             href="/contact"
@@ -235,11 +239,11 @@ export default function MobileMenu({
           </Link>
           <div className="my-3 border-t border-line" />
           <Link
-            href="/portal/login"
+            href={BOOKING_URL}
             onClick={handleClose}
             className="mt-2 block rounded-xl bg-accent px-4 py-3.5 text-center text-base font-medium text-white transition-colors hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
           >
-            Login
+            Book a Conversation
           </Link>
         </nav>
 

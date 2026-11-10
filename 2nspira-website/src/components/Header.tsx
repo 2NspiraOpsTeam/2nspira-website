@@ -1,4 +1,5 @@
 "use client";
+import StudioSubnav from "@/components/studio/StudioSubnav";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -6,6 +7,7 @@ import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import { useStudioNavigation } from "@/components/studio/StudioNavigation";
+import { BOOKING_URL } from "@/lib/booking";
 import { demoNavigationLinks } from "@/lib/demos";
 
 import { serviceLinks, aboutLinks } from "@/lib/navigation";
@@ -126,7 +128,7 @@ export default function Header() {
 
         <div
           id={`${menu}-navigation`}
-          className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "services" || menu === "demos" ? "w-80" : "w-64"}`}
+          className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "services" || menu === "demos" ? "w-80" : menu === "about" ? "w-80 max-h-[75vh] overflow-y-auto" : "w-64"}`}
         >
           <div className="rounded-2xl border border-line bg-canvas p-2 shadow-[0_16px_40px_rgba(35,41,54,0.14)]">
             {menu === "services" && (
@@ -156,6 +158,9 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
+            {menu === "about" && (
+              <StudioSubnav links={ideaLinks} onNavigate={() => closeMenu()} />
+            )}
           </div>
         </div>
       </div>
@@ -200,7 +205,6 @@ export default function Header() {
             Work
           </Link>
           {renderMenu("demos", "Demos", demoNavigationLinks)}
-          {renderMenu("ideas", "Creative Studio", ideaLinks)}
           {renderMenu("about", "About", aboutLinks)}
           {primaryLinks.slice(1).map((link) => (
             <Link
@@ -221,10 +225,10 @@ export default function Header() {
           ))}
           <span className="mx-1 h-5 w-px bg-line" aria-hidden="true" />
           <Link
-            href="/portal/login"
+            href={BOOKING_URL}
             className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
           >
-            Login
+            Book a Conversation
           </Link>
         </nav>
 
