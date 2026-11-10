@@ -11,7 +11,7 @@ const subscribe = (notify: () => void) => {
 };
 const reducedSnapshot = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const serverSnapshot = () => true;
-type Platforms = (ReturnType<typeof publicContent>["platforms"][number] & { darkBackground?: boolean })[];
+type Platforms = (ReturnType<typeof publicContent>["platforms"][number] & { darkBackground?: boolean; blackBackground?: boolean })[];
 export default function PlatformCarousel({ platforms, description = "Platforms and technologies our team has worked with.", label = "Platform logos", listLabel = "Platforms and technologies", showNames = true, notice = "Names and logos belong to their respective owners; inclusion does not imply partnership, endorsement or certification." }: { platforms: Platforms; description?: string; label?: string; listLabel?: string; notice?: string; showNames?: boolean }) {
   const reduced = useSyncExternalStore(subscribe, reducedSnapshot, serverSnapshot);
   const [paused, setPaused] = useState(false);
@@ -42,7 +42,7 @@ export default function PlatformCarousel({ platforms, description = "Platforms a
   }, [moving]);
   if (!platforms.length) return null;
   const logos = () => platforms.map(p => <li key={p.id} className={styles.logo}>
-    <Image src={p.logo} alt="" width={156} height={64} unoptimized loading="eager" className={`${styles.image} ${p.darkBackground ? styles.imageDark : ""}`} />
+    <Image src={p.logo} alt="" width={156} height={64} unoptimized loading="eager" className={`${styles.image} ${p.darkBackground ? styles.imageDark : ""} ${p.blackBackground ? styles.imageBlack : ""}`} />
     <span className={showNames ? "text-center text-sm font-medium text-ink" : "sr-only"}>{p.name}</span>
   </li>);
   return <div className="mt-7 min-w-0">
