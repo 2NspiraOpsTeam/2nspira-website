@@ -451,7 +451,10 @@ export default function Page() {
               </section>
             </fieldset>
             <div className="flex flex-wrap gap-3">
-              <button className={buttonPrimary} disabled={busy || !dirty}>
+              <button
+                className={`${buttonPrimary} disabled:cursor-not-allowed disabled:opacity-50`}
+                disabled={busy || !dirty}
+              >
                 {busy ? "Saving…" : "Save Changes"}
               </button>
               <button
