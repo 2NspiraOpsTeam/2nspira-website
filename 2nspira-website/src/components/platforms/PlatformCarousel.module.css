@@ -7,7 +7,7 @@
   scrollbar-width: thin;
   padding-block: 1rem;
 }
-.viewport:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.viewport:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
 .viewport[data-moving="true"] { scrollbar-width: none; }
 .viewport[data-moving="true"]::-webkit-scrollbar { display: none; }
 .track { display: flex; width: max-content; }

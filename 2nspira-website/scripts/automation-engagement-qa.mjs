@@ -30,7 +30,7 @@ try {
  await page.getByRole('button',{name:'Pause logo carousel',exact:true}).click();const paused=await position();await page.waitForTimeout(350);check(Math.abs(await position()-paused)<2);
  await page.getByRole('button',{name:'Resume logo carousel',exact:true}).click();await page.waitForFunction(p=>document.querySelector('[role="region"][aria-label^="Platform logos"]').scrollLeft>p+8,paused);check(true);
  await viewport.hover();const hover=await position();await page.waitForTimeout(350);check(Math.abs(await position()-hover)<2);await page.mouse.move(1,1);
- await viewport.focus();const focus=await position();await page.waitForTimeout(250);check(Math.abs(await position()-focus)<2);await page.keyboard.press('ArrowRight');await page.waitForTimeout(300);check(await position()>focus);
+ await page.keyboard.press('Tab');await viewport.focus();check(await viewport.evaluate(e=>getComputedStyle(e).outlineStyle!=='none' && parseFloat(getComputedStyle(e).outlineWidth)>=2));const focus=await position();await page.waitForTimeout(250);check(Math.abs(await position()-focus)<2);await page.keyboard.press('ArrowRight');await page.waitForTimeout(300);check(await position()>focus);
  // Touch/pointer exploration stops auto motion, leaving native horizontal browsing.
  await viewport.dispatchEvent('pointerdown',{pointerType:'touch'});check(await page.getByRole('button',{name:'Resume logo carousel',exact:true}).isVisible());
  await page.getByRole('button',{name:'Resume logo carousel',exact:true}).click();
