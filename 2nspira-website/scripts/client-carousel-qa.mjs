@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {chromium} from '/opt/homebrew/lib/node_modules/openclaw/node_modules/playwright-core/index.mjs';
+const {chromium} = await import(process.env.PLAYWRIGHT_MODULE || 'playwright-core');
 const base=process.argv[2]||'http://localhost:3324';const browser=await chromium.launch({channel:'chrome',headless:true});let checks=0;const check=(v)=>{assert.ok(v);checks++};
 try{const context=await browser.newContext({extraHTTPHeaders:{'x-forwarded-proto':'https'}});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
 for(const width of[1440,768,390,320]){await page.setViewportSize({width,height:1000});await page.goto(base+'/who-we-serve');check(await page.getByRole('heading',{level:1}).count()===1);check(await page.getByRole('list',{name:'Our clients',exact:true}).locator('li').count()===14);await page.locator('#our-clients img').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));check(await page.locator('#our-clients img').evaluateAll(imgs=>imgs.every(i=>i.naturalWidth>0)));check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
