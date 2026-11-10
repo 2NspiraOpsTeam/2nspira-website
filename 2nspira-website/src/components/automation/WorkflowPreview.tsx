@@ -1,5 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
+const subscribeReady = () => () => {};
+const readySnapshot = () => true;
+const serverReadySnapshot = () => false;
 import { ArrowRight, Check, CircleDot, Inbox, Layers3 } from "lucide-react";
 import styles from "./WorkflowPreview.module.css";
 const examples = [
@@ -8,11 +11,12 @@ const examples = [
   { name: "Reporting", before: ["Export separate files", "Reconcile by hand", "Repeat next week"], after: ["Connect useful data", "Check shared definitions", "See a consistent view"], outcome: "Less assembly work. More time to understand the information." },
 ];
 export default function WorkflowPreview() {
+  const ready = useSyncExternalStore(subscribeReady, readySnapshot, serverReadySnapshot);
   const [selected, setSelected] = useState(0);
   const example = examples[selected];
   return <div className="mt-8">
     <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Choose an example workflow">
-      {examples.map((e, i) => <button key={e.name} type="button" aria-pressed={selected === i} aria-controls="workflow-comparison" onClick={() => setSelected(i)} className={`min-h-11 rounded-full border px-5 py-2.5 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${selected === i ? "border-accent bg-accent text-white" : "border-line bg-white text-ink hover:border-accent"}`}>{e.name}</button>)}
+      {examples.map((e, i) => <button key={e.name} type="button" disabled={!ready} aria-pressed={selected === i} aria-controls="workflow-comparison" onClick={() => setSelected(i)} className={`min-h-11 rounded-full border px-5 disabled:cursor-wait disabled:opacity-60 py-2.5 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${selected === i ? "border-accent bg-accent text-white" : "border-line bg-white text-ink hover:border-accent"}`}>{e.name}</button>)}
     </div>
     <div id="workflow-comparison" className="grid gap-5 lg:grid-cols-2" aria-live="polite" aria-atomic="true">
       <div key={`${selected}-before`} className={`${styles.panel} rounded-3xl border border-line bg-canvas-deep p-6 sm:p-8`}>

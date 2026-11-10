@@ -9,22 +9,22 @@ const viewport=page.getByRole('region',{name:'Platform logos. Use arrow keys or 
 const position=()=>viewport.evaluate(e=>e.scrollLeft);
 try {
  for(const [width,height] of [[1440,1000],[768,1024],[390,844],[320,740]]) {
-  await page.setViewportSize({width,height});await page.goto(base+'/automation-systems-optimization');
+  await page.setViewportSize({width,height});await page.goto(base+'/automation-systems-optimization',{waitUntil:'domcontentloaded'});
   await page.getByRole('heading',{name:'Your goals. The right technology.',exact:true}).waitFor();
   check(await page.getByRole('heading',{level:1}).count()===1);
   for(const [name,expected] of [['Approvals','Keep a decision record'],['Reporting','See a consistent view'],['Client intake','See what happens next']]) {
    await page.getByRole('button',{name,exact:true}).click();
-   check(await page.getByRole('button',{name,exact:true}).getAttribute('aria-pressed')==='true');
+   await page.getByRole('button',{name,exact:true,pressed:true}).waitFor();check(true);
    check(await page.locator('#workflow-comparison').getByText(expected,{exact:true}).isVisible());
   }
   const details=page.locator('details').filter({has:page.getByText('The wider picture we consider',{exact:true})});
-  await details.locator('summary').click();check(await details.getByText('Governance',{exact:true}).isVisible());await details.locator('summary').click();check(!(await details.getAttribute('open')));
+  await details.locator('summary').click();check(await details.getByText('Governance',{exact:true}).isVisible());await details.locator('summary').click();check((await details.getAttribute('open'))===null);
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   const schemas=await page.locator('script[type="application/ld+json"]').allTextContents();
   const parsed=schemas.map(s=>JSON.parse(s));check(parsed.some(s=>s['@type']==='Service' && s.provider['@id']==='https://2nspira.com/#organization'));
   await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:'/tmp/automation-engagement-'+width+'.png',fullPage:true});
  }
- await page.setViewportSize({width:1440,height:1000});await page.goto(base+'/automation-systems-optimization');
+ await page.setViewportSize({width:1440,height:1000});await page.goto(base+'/automation-systems-optimization',{waitUntil:'domcontentloaded'});
  await viewport.scrollIntoViewIfNeeded();await page.mouse.move(1,1);
  await page.waitForFunction(()=>document.querySelector('[role="region"][aria-label^="Platform logos"]').scrollLeft>20);check(true);
  await page.getByRole('button',{name:'Pause logo carousel',exact:true}).click();const paused=await position();await page.waitForTimeout(350);check(Math.abs(await position()-paused)<2);
@@ -43,6 +43,6 @@ try {
  const staticPos=await position();await page.waitForTimeout(350);check(Math.abs(await position()-staticPos)<2);
  await page.reload();await page.getByText(/Motion reduced. Swipe or scroll to explore/).waitFor();check(await viewport.locator('ul').count()===1);
  await page.emulateMedia({reducedMotion:'no-preference'});await page.getByRole('button',{name:'Pause logo carousel',exact:true}).waitFor();check(await viewport.locator('ul').count()===2);
- const noJS=await browser.newContext({javaScriptEnabled:false,extraHTTPHeaders:{'x-forwarded-proto':'https'}});const fallback=await noJS.newPage();await fallback.goto(base+'/automation-systems-optimization');check(await fallback.getByText('Microsoft',{exact:true}).count()===1);check(await fallback.getByText('Capture details once',{exact:true}).isVisible());check(await fallback.locator('h1').isVisible());await noJS.close();
+ const noJS=await browser.newContext({javaScriptEnabled:false,extraHTTPHeaders:{'x-forwarded-proto':'https'}});const fallback=await noJS.newPage();await fallback.goto(base+'/automation-systems-optimization');check(await fallback.getByText('Microsoft',{exact:true}).count()===1);check(await fallback.getByText('Capture details once',{exact:true}).isVisible());check(await fallback.locator('h1').isVisible());check(await fallback.getByRole('button',{name:'Approvals',exact:true}).isDisabled());await noJS.close();
  check(errors.length===0);console.log(`${checks} automation engagement/carousel checks passed: responsive scenarios/disclosures, motion/pause/resume/hover/focus/swipe/loop, reduced motion initial/runtime, JSON-LD and no-JS fallback.`);
 } finally {await browser.close();}
