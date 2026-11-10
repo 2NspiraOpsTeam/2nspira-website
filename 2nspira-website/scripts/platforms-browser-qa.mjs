@@ -7,25 +7,25 @@ let checks=0;const check=x=>{assert.ok(x);checks++;};
 const context=await browser.newContext({extraHTTPHeaders:{'x-forwarded-proto':'https'}});
 const errors=[];const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
 const api='/api/admin/platforms-technologies';
+const publicPath='/automation-systems-optimization';
+const logoList='ul[aria-label="Platforms and technologies"]';
 try {
  for(const [name,width,height] of [['desktop',1440,1000],['tablet',768,1024],['mobile',390,844],['small-mobile',320,740]]) {
   await page.setViewportSize({width,height});
-  const r=await page.goto(base+'/platforms-technologies');check(r.status()===200);
+  const r=await page.goto(base+publicPath);check(r.status()===200);
   await page.getByRole('heading',{name:'Your goals. The right technology.',exact:true}).waitFor();
-  check(await page.locator('main ul li').count()===30);
-  await page.locator('main ul li').last().scrollIntoViewIfNeeded();
-  await page.waitForFunction(()=>[...document.querySelectorAll('main ul img')].every(i=>i.complete && i.naturalWidth>0));
+  check(await page.locator(logoList+' > li').count()===30);
+  await page.getByRole('region',{name:'Platform logos. Use arrow keys or swipe to explore.',exact:true}).scrollIntoViewIfNeeded();
+  await page.waitForFunction(()=>[...document.querySelectorAll('ul[aria-label="Platforms and technologies"] img')].every(i=>i.complete && i.naturalWidth>0));
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-  check(await page.locator('main ul').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length)===(width>=1024?5:width>=640?3:2));
-  check(await page.locator('main').getByText('Microsoft',{exact:true}).count()===1);
-  check(await page.locator('main').getByText('Apple',{exact:true}).count()===1);
-  check(await page.getByRole('link',{name:'Let’s discuss your needs',exact:true}).getAttribute('href')==='https://calendar.app.google/54Gv2GFrkUFsNs4i9');
+  check(await page.locator(logoList).evaluate(e=>getComputedStyle(e).display)==='flex');
+  check(await page.locator(logoList).getByText('Microsoft',{exact:true}).count()===1);
+  check(await page.locator(logoList).getByText('Apple',{exact:true}).count()===1);
+  check(await page.getByRole('link',{name:/^Let’s discuss your needs/}).getAttribute('href')==='https://calendar.app.google/54Gv2GFrkUFsNs4i9');
   check(!(await page.locator('main').innerHTML()).includes('Technical background supplied'));
   await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:'/tmp/platforms-'+name+'.png',fullPage:true});
  }
- await page.goto(base+'/automation-systems-optimization');
- await page.getByRole('link',{name:'Platforms & Technologies',exact:true}).click();
- await page.waitForURL('**/platforms-technologies');check(true);
+ const redirect=await context.request.get(base+'/platforms-technologies',{maxRedirects:0});check(redirect.status()===308);check(redirect.headers().location===publicPath+'#platforms-technologies');
  check((await context.request.get(base+api)).status()===401);
  const anon=await context.request.get(base+'/admin/platforms-technologies',{maxRedirects:0});check([301,302,307,308].includes(anon.status()));
  if(local) {
@@ -70,11 +70,11 @@ try {
    await first.getByRole('checkbox',{name:'Visible on website',exact:true}).uncheck();
    await first.getByRole('button',{name:'Move down',exact:true}).click();
    await page.getByRole('button',{name:'Save Changes',exact:true}).click();await page.getByRole('status').filter({hasText:'Saved.'}).waitFor();
-   const pub=await context.newPage();await pub.goto(base+'/platforms-technologies');check(await pub.locator('main ul li').count()===29);check(await pub.locator('main ul li').first().innerText()==='Apple');check(await pub.getByText('Microsoft',{exact:true}).count()===0);await pub.close();
+   const pub=await context.newPage();await pub.goto(base+publicPath);check(await pub.locator(logoList+' > li').count()===29);check(await pub.locator(logoList+' > li').first().innerText()==='Apple');check(await pub.locator(logoList).getByText('Microsoft',{exact:true}).count()===0);await pub.close();
    await page.setViewportSize({width:390,height:844});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:'/tmp/platforms-admin-mobile.png',fullPage:true});
    // Empty public state is intentionally just the introduction and CTA.
    const empty=structuredClone(original);empty.platforms=[];check((await saveAPI(empty)).ok());
-   const emptyPage=await context.newPage();await emptyPage.goto(base+'/platforms-technologies');check(await emptyPage.locator('main ul').count()===0);check(await emptyPage.getByRole('link',{name:'Let’s discuss your needs',exact:true}).isVisible());await emptyPage.close();
+   const emptyPage=await context.newPage();await emptyPage.goto(base+publicPath);check(await emptyPage.locator(logoList).count()===0);check(await emptyPage.getByRole('link',{name:/^Let’s discuss your needs/}).isVisible());await emptyPage.close();
   } finally {check((await saveAPI(original)).ok());}
  }
  check(errors.length===0);

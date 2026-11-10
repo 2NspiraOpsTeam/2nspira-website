@@ -1,0 +1,7 @@
+@media (prefers-reduced-motion: no-preference) {
+  .panel { animation: settle 220ms ease-out; }
+}
+@keyframes settle {
+  from { opacity: .7; transform: translateY(5px); }
+  to { opacity: 1; transform: none; }
+}

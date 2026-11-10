@@ -135,7 +135,7 @@ export default function Page() {
       <div className="mx-auto w-full max-w-5xl space-y-6 p-4 sm:p-8">
         <h1 className="text-3xl font-semibold">Platforms & Technologies</h1>
         <p className="text-body">
-          Edit the introduction and logo grid. Add official logo URLs or local image paths, record our experience, then show and order entries. Save Changes publishes visible entries. Prior versions are retained for recovery.
+          Edit the introduction and logo carousel. Add official logo URLs or local image paths, record our experience, then show and order entries. Save Changes publishes visible entries. Prior versions are retained for recovery.
         </p>
         {error && (
           <p
@@ -186,7 +186,7 @@ export default function Page() {
               <section className="space-y-5">
                 <h2 className="text-2xl font-semibold">Platform logos</h2>
                 <p className="text-sm leading-6">Use official, unmodified logos. Visible entries require a private experience reference and official logo source. Listing a technology does not imply partnership or certification. The order below is the public display order.</p>
-                {!c.platforms.length && <p>No logos yet. Add a platform to begin; the public grid stays hidden until an entry is visible.</p>}
+                {!c.platforms.length && <p>No logos yet. Add a platform to begin; the public carousel stays hidden until an entry is visible.</p>}
                 {c.platforms.map((r,i)=><details key={r.id} className="rounded-2xl border border-line p-5">
                   <summary className="cursor-pointer font-semibold">{r.name || "New platform"}{!r.visible ? " — hidden" : ""}</summary>
                   <div className="mt-5 space-y-4">

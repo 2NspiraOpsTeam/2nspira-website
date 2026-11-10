@@ -1,0 +1,21 @@
+.viewport {
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border-radius: 1rem;
+  scroll-behavior: auto;
+  scrollbar-width: thin;
+  padding-block: 1rem;
+}
+.viewport:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.viewport[data-moving="true"] { scrollbar-width: none; }
+.viewport[data-moving="true"]::-webkit-scrollbar { display: none; }
+.track { display: flex; width: max-content; }
+.list { display: flex; flex: none; gap: 2.5rem; padding-inline-end: 2.5rem; }
+.logo { display: flex; width: 156px; flex: none; flex-direction: column; align-items: center; justify-content: flex-start; gap: 1rem; }
+.image { width: 156px; height: 64px; object-fit: contain; }
+@media (max-width: 639px) {
+  .list { gap: 1.5rem; padding-inline-end: 1.5rem; }
+  .logo { width: 128px; }
+  .image { width: 128px; height: 56px; }
+}
