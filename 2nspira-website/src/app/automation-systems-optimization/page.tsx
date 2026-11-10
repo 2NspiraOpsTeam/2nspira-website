@@ -109,6 +109,15 @@ export default function AutomationSystemsOptimizationPage() {
       </div>
     </section>
 
+    <section className={section} aria-labelledby="platforms-heading">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className={`${cardFlat} p-7 sm:p-10`}>
+          <h2 id="platforms-heading" className={h2}>Your goals. The right technology.</h2>
+          <p className="mt-4 max-w-2xl leading-7 text-body">We start with your business needs—not a preferred vendor. Explore platforms and technologies we work with.</p>
+          <Link href="/platforms-technologies" className={`${linkInline} mt-5`}>Platforms &amp; Technologies <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link>
+        </div>
+      </div>
+    </section>
     <section className={sectionBand} aria-labelledby="approach-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="approach-heading" className={h2}>Start with people. Improve the work.</h2>
