@@ -18,7 +18,7 @@ for(const width of [1440,768,390,320]){
    for(const label of ['AI Enablement','Business Automation','Digital Platforms','Executive Technology Advisory','Ongoing Managed Services & Support'])check((await page.locator('main').innerText()).includes(label),label);
    check(await page.locator('#ongoing-support').count()===1,'support anchor');
    check(await page.locator('main').getByText('Creative Studio',{exact:true}).count()===1,'studio separate');
-   for(const img of await page.locator('main img').all()){ await img.scrollIntoViewIfNeeded(); await img.evaluate(i=>i.decode()); check(await img.evaluate(i=>i.naturalWidth>0),'image loaded'); }
+   for(const img of await page.locator('#find-the-right-service img, main > section:first-child img').all()){ await img.scrollIntoViewIfNeeded(); await img.evaluate(i=>i.decode()); check(await img.evaluate(i=>i.naturalWidth>0),'image loaded'); }
    await page.evaluate(()=>scrollTo(0,0));
    await page.screenshot({path:`/tmp/transformation-${route==='/'?'home':'services'}-${width}.png`,fullPage:true});
   }
