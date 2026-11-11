@@ -80,8 +80,10 @@ export default function ExecutiveLensesCarousel({ lenses }: { lenses: Lens[] }) 
       <div className="flex flex-wrap items-center gap-3">
         <span className="text-sm text-body">{lenses.length} executive lenses</span>
         {canMove && <button type="button" aria-label={paused ? "Resume executive lenses carousel" : "Pause executive lenses carousel"} aria-controls="executive-lenses-track" onClick={() => setPaused(value => !value)} className={`${styles.control} gap-2 px-3 text-sm`}>{paused ? <Play size={16} aria-hidden="true" /> : <Pause size={16} aria-hidden="true" />}{paused ? "Resume" : "Pause"}</button>}
+        <div className="flex items-center gap-3">
         <button type="button" aria-label="Previous executive lenses" aria-controls="executive-lenses-track" onClick={() => move(-1)} className={styles.control}><ArrowLeft size={20} aria-hidden="true" /></button>
         <button type="button" aria-label="Next executive lenses" aria-controls="executive-lenses-track" onClick={() => move(1)} className={styles.control}><ArrowRight size={20} aria-hidden="true" /></button>
+        </div>
       </div>
     </div>
     <div ref={viewport} id="executive-lenses-track" className={styles.track} data-moving={moving} tabIndex={0} role="region" aria-roledescription="carousel" aria-label="Eight executive lenses" onPointerDown={() => setPaused(true)} onKeyDown={event => {
