@@ -41,7 +41,7 @@ try{
   await page.goto(base+'/',{waitUntil:'networkidle'});
   if(width<1024){await page.getByRole('button',{name:'Open menu',exact:true}).click();await page.getByRole('dialog').getByRole('button',{name:/^(Our )?Services$/}).click();}
   else await page.getByRole('button',{name:/^(Our )?Services$/}).click();
-  for(const name of ['Websites & Platforms','Automation & Integrations','AI Enablement','Executive Technology Advisory','Managed Services & Support']){
+  for(const name of ['Websites & Custom Digital Platforms','Business Automation & Integrations','Organizational AI enablement','Executive Technology Advisory','Managed Services & Support']){
    const a=page.getByRole('link',{name,exact:true}).filter({visible:true}).first();check(await a.isVisible(),'menu '+name);const box=await a.boundingBox();check(box.x>=0&&box.x+box.width<=width+1,'menu fit '+name);
   }
   const support=page.getByRole('link',{name:'Managed Services & Support',exact:true}).filter({visible:true}).first();await support.focus();await page.keyboard.press('Enter');await page.waitForURL('**/managed-services-support');check(await page.getByRole('heading',{level:1,name:'Managed Services & Support',exact:true}).isVisible(),'menu activation');
