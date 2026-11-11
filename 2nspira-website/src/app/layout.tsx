@@ -1,3 +1,5 @@
+import { publishedContent as publishedAudiences } from "@/lib/audiences/server";
+import { audienceRoutes } from "@/lib/audiences/routes";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { publishedStudio } from "@/lib/studio/server";
@@ -96,6 +98,8 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Fail closed for navigation/discovery without taking unrelated pages offline.
+  const audiences = await publishedAudiences().catch(() => ({ industries: [] }));
   const studioLinks = studioNavigation(await publishedStudio());
   const siteJsonLd = {
     "@context": "https://schema.org",
@@ -151,7 +155,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     >
       <body className="min-h-full flex flex-col"><Analytics>
         <a href="#main-content" className="skip-link">Skip to main content</a>
-        <StudioNavigationProvider initial={studioLinks}><Header />
+        <StudioNavigationProvider initial={studioLinks}><Header audienceLinks={[{name:"View all audiences",href:"/who-we-serve"}, ...audiences.industries.map(i=>({name:i.title,href:audienceRoutes[i.id] || i.href})).filter(i=>i.href)]} />
         <MarketingEvents />
         {children}
         <Footer /></StudioNavigationProvider>

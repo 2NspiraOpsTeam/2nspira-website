@@ -1,4 +1,20 @@
 import { safeLink } from "@/lib/team/model";
+export type AudiencePage = {
+  seoTitle: string;
+  seoDescription: string;
+  headline: string;
+  intro: string;
+  challenges: { title: string; text: string }[];
+  services: { title: string; text: string; href: string }[];
+  advisoryTitle: string;
+  advisoryText: string;
+  implementationTitle: string;
+  implementationText: string;
+  examples: { title: string; kind: string; text: string; href: string }[];
+  ctaTitle: string;
+  ctaText: string;
+  ctaLabel: string;
+};
 export type Industry = {
   id: string;
   title: string;
@@ -10,6 +26,7 @@ export type Industry = {
   exampleLabel: string;
   exampleHref: string;
   visible: boolean;
+  page?: AudiencePage;
 };
 export type Organization = {
   id: string;
@@ -52,6 +69,30 @@ export function validateContent(value: unknown): Content {
       throw Error("Use HTTPS or a site-relative link without spaces.");
     return s;
   };
+  const page = (value: unknown): AudiencePage => {
+    if (!value || typeof value !== "object") throw Error("Provide audience page content.");
+    const p = value as AudiencePage;
+    const items = <T,>(rows: unknown, label: string, parse: (r: T) => T, required = true): T[] => {
+      if (!Array.isArray(rows) || rows.length > 8 || (required && !rows.length))
+        throw Error(`Provide ${label} (up to eight items).`);
+      return rows.map(r => {
+        if (!r || typeof r !== "object") throw Error(`Invalid ${label}.`);
+        return parse(r);
+      });
+    };
+    const strings = Object.fromEntries([
+      "seoTitle", "seoDescription", "headline", "intro", "advisoryTitle", "advisoryText",
+      "implementationTitle", "implementationText", "ctaTitle", "ctaText", "ctaLabel",
+    ].map(key => [key, text(p[key as keyof AudiencePage], key, true)]));
+    if (p.seoTitle.length > 160 || p.seoDescription.length > 320)
+      throw Error("Keep the SEO title within 160 characters and description within 320 characters.");
+    return {
+      ...strings,
+      challenges: items<AudiencePage["challenges"][number]>(p.challenges, "challenges", r => ({ title: text(r.title, "challenge title", true), text: text(r.text, "challenge text", true) })),
+      services: items<AudiencePage["services"][number]>(p.services, "services", r => ({ title: text(r.title, "service title", true), text: text(r.text, "service text", true), href: link(text(r.href, "service link", true)) })),
+      examples: items<AudiencePage["examples"][number]>(p.examples, "examples", r => ({ title: text(r.title, "example title", true), kind: text(r.kind, "example type", true), text: text(r.text, "example scope", true), href: link(text(r.href, "example link", true)) }), false),
+    } as AudiencePage;
+  };
   const bool = (v: unknown) => {
     if (typeof v !== "boolean")
       throw Error("Choose a visibility or approval setting.");
@@ -92,6 +133,7 @@ export function validateContent(value: unknown): Content {
       ),
       exampleHref: link(i.exampleHref),
       visible: bool(i.visible),
+      ...(i.page === undefined ? {} : { page: page(i.page) }),
     })),
     organizations: c.organizations.map((o) => {
       const r = {

@@ -1,5 +1,7 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
+import AudiencePageEditor from "@/components/audiences/AudiencePageEditor";
+import { audienceRoutes } from "@/lib/audiences/routes";
 import AdminShell from "@/components/admin/AdminShell";
 import {
   type Content,
@@ -207,7 +209,7 @@ export default function Page() {
                 )}
               </section>
               <section className="space-y-5">
-                <h2 className="text-2xl font-semibold">Industries</h2>
+                <h2 className="text-2xl font-semibold">Audiences & industries</h2>
                 {c.industries.map((r, i) => (
                   <details
                     key={r.id}
@@ -229,7 +231,7 @@ export default function Page() {
                           "exampleLabel",
                           "exampleHref",
                         ] as const
-                      ).map((k) =>
+                      ).filter(k => k !== "href" || !r.page).map((k) =>
                         text(
                           {
                             title: "Industry title",
@@ -259,6 +261,7 @@ export default function Page() {
                         />
                         Visible on website
                       </label>
+                      {r.page && audienceRoutes[r.id] && <AudiencePageEditor page={r.page} path={audienceRoutes[r.id]} onChange={page=>updateRow("industries",i,{page})}/>}
                       <div className="flex flex-wrap gap-3">
                         <button
                           type="button"

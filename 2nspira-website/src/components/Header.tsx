@@ -12,14 +12,14 @@ import { demoNavigationLinks } from "@/lib/demos";
 
 import { serviceLinks, aboutLinks } from "@/lib/navigation";
 
-type MenuName = "services" | "ideas" | "about" | "demos";
+type MenuName = "services" | "ideas" | "about" | "demos" | "audiences";
 
 const primaryLinks = [
-  { name: "Work", href: "/work" },
-  { name: "Contact", href: "/contact" },
+  { name: "Our Work", href: "/work" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
-export default function Header() {
+export default function Header({ audienceLinks }: { audienceLinks: typeof serviceLinks }) {
   const ideaLinks = useStudioNavigation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<MenuName | null>(null);
@@ -29,6 +29,7 @@ export default function Header() {
     ideas: null,
     about: null,
     demos: null,
+    audiences: null,
   });
   const pinnedMenuRef = useRef<MenuName | null>(null);
   const pathname = usePathname();
@@ -39,7 +40,9 @@ export default function Header() {
     return path === "/" ? pathname === "/" : pathname.startsWith(path);
   };
   const menuIsCurrent = (menu: MenuName) =>
-    (menu === "services"
+    (menu === "audiences"
+      ? audienceLinks
+      : menu === "services"
       ? serviceLinks
       : menu === "ideas"
         ? ideaLinks
@@ -128,7 +131,7 @@ export default function Header() {
 
         <div
           id={`${menu}-navigation`}
-          className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "services" || menu === "demos" ? "w-80" : menu === "about" ? "w-80 max-h-[75vh] overflow-y-auto" : "w-64"}`}
+          className={`absolute left-1/2 top-full z-20 -translate-x-1/2 pt-2 ${isOpen ? "block" : "hidden"} ${menu === "audiences" ? "w-80 max-h-[75vh] overflow-y-auto" : menu === "services" || menu === "demos" ? "w-80" : menu === "about" ? "w-80 max-h-[75vh] overflow-y-auto" : "w-64"}`}
         >
           <div className="rounded-2xl border border-line bg-canvas p-2 shadow-[0_16px_40px_rgba(35,41,54,0.14)]">
             {menu === "services" && (
@@ -194,7 +197,7 @@ export default function Header() {
           aria-label="Main navigation"
           onKeyDown={handleNavigationKeyDown}
         >
-          {renderMenu("services", "Services", serviceLinks)}
+          {renderMenu("services", "Our Services", serviceLinks)}
           <Link
             href={primaryLinks[0].href}
             aria-current={
@@ -202,10 +205,11 @@ export default function Header() {
             }
             className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink"
           >
-            Work
+            Our Work
           </Link>
+          {renderMenu("audiences", "Who We Serve", audienceLinks)}
           {renderMenu("demos", "Demos", demoNavigationLinks)}
-          {renderMenu("about", "About", aboutLinks)}
+          {renderMenu("about", "About Us", aboutLinks)}
           {primaryLinks.slice(1).map((link) => (
             <Link
               key={link.name}
@@ -258,6 +262,7 @@ export default function Header() {
 
       <MobileMenu
         studioLinks={ideaLinks}
+        audienceLinks={audienceLinks}
         isOpen={isMobileMenuOpen}
         onClose={closeMobileMenu}
       />

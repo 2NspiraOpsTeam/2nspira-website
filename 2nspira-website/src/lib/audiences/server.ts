@@ -8,7 +8,7 @@ import {
   readJson,
 } from "@/lib/careers/server";
 import { validateContent, publicContent, type Content } from "./model";
-import { initialContent } from "./seed";
+import { initialContent, upgradeContent } from "./seed";
 export { initialContent };
 async function row() {
   return db()
@@ -17,7 +17,7 @@ async function row() {
 }
 export async function publishedContent() {
   const r = await row();
-  return publicContent(r ? JSON.parse(r.content_json) : initialContent());
+  return publicContent(upgradeContent(r ? JSON.parse(r.content_json) : initialContent()));
 }
 export async function handle(request: Request) {
   return route(async () => {
@@ -25,7 +25,7 @@ export async function handle(request: Request) {
     if (request.method === "GET") {
       const r = await row();
       return response({
-        content: r ? JSON.parse(r.content_json) : initialContent(),
+        content: upgradeContent(r ? JSON.parse(r.content_json) : initialContent()),
       });
     }
     sameOrigin(request);

@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 export const metadata = publicPageMetadata({
   title: "Who We Serve | Business Transformation for Your Industry",
   description:
-    "Explore how 2Nspira can help education, manufacturing and property management organizations simplify operations and improve experiences.",
+    "Technology support for startups, technology teams, retailers, professional services, education, manufacturing and property organizations. Explore practical ways we can help.",
   path: "/who-we-serve",
 });
 export default async function Page() {

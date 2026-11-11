@@ -64,5 +64,7 @@ export const clientLogos = [
     "logo": "/images/clients/nysci.png"
   },
 {"id":"compass","name":"Compass","logo":"/images/clients/compass.svg"},
-{"id":"cushman-wakefield","name":"Cushman & Wakefield","logo":"/images/clients/cushman-wakefield.svg"}
+{"id":"cushman-wakefield","name":"Cushman & Wakefield","logo":"/images/clients/cushman-wakefield.svg"} ,
+{"id":"senogara","name":"Senogara","logo":"/images/clients/senogara.png"},
+{"id":"amur","name":"AMUR","logo":"/images/clients/amur.png"}
 ];
