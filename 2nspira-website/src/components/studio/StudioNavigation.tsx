@@ -49,35 +49,5 @@ export function StudioFooterLinks({
   linkClass: string;
 }) {
   const links = useStudioNavigation();
-  return (
-    <ul className={listClass}>
-      <li>
-        <Link href="/studio/watch" className={linkClass}>
-          Watch
-        </Link>
-      </li>
-      <li>
-        <Link href="/studio/read" className={linkClass}>
-          Read
-        </Link>
-      </li>
-      <li>
-        <Link href="/shop" className={linkClass}>
-          Shop
-        </Link>
-      </li>
-      {links
-        .filter(
-          (link) =>
-            !["/studio/watch", "/studio/read", "/shop"].includes(link.href),
-        )
-        .map((link) => (
-          <li key={link.href}>
-            <a href={link.href} className={linkClass}>
-              {link.name}
-            </a>
-          </li>
-        ))}
-    </ul>
-  );
+  return <ul className={listClass}>{links.map(link => <li key={link.href}><Link href={link.href} className={linkClass}>{link.name}</Link></li>)}</ul>;
 }

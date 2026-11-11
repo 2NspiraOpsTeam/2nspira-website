@@ -34,6 +34,7 @@ export type NavLink = {
   visible: boolean;
 };
 export type Studio = {
+  navigationVersion?: number;
   revision: number;
   status: "draft" | "published";
   intro: string;
@@ -45,7 +46,7 @@ export type Studio = {
 export type NavigationLink = { name: string; href: string };
 export const itemUrl = (item: Item) =>
   item.url || `/creative-studio/${item.id}`;
-export const groupUrl = (id: string) => ["watch", "listen", "read", "play"].includes(id) ? `/studio/${id}` : `/studio#${id}`;
+export const groupUrl = (id: string) => id === "shop" ? "/shop" : ["watch", "listen", "read", "play"].includes(id) ? `/studio/${id}` : `/studio#${id}`;
 export const categoryUrl = (id: string) =>
   `/studio?category=${encodeURIComponent(id)}#collections`;
 export function safeUrl(value: string, image = false) {
@@ -63,7 +64,20 @@ export function safeUrl(value: string, image = false) {
     return false;
   }
 }
-export function publicStudio(c: Studio): Studio {
+// Upgrade existing saved catalogues without publishing drafts or copying product records.
+// Once saved, the marker preserves all subsequent Admin choices (including Listen).
+export function upgradeStudio(content: Studio): Studio {
+  if (content.navigationVersion === 2) return content;
+  const c = structuredClone(content);
+  c.navigationVersion = 2;
+  if (!c.groups.some(g => g.id === "shop")) c.groups.push({id:"shop", name:"Shop", description:"Purchase our published books, rare and collectible editions, and other creative products.", visible:true});
+  c.categories = c.categories.map(cat => ({...cat, groupIds: cat.id === "collectibles" ? ["shop"] : ["authored-books","activity-books","coloring-books","printables","art"].includes(cat.id) ? [...new Set([...cat.groupIds,"shop"])] : cat.id === "music-ambience" ? [...new Set([...cat.groupIds,"watch"])] : cat.groupIds}));
+  const custom = c.links.filter(l => !["watch","listen","read","play","shop"].includes(l.groupId) && l.id !== "explore");
+  c.links = [{id:"explore",name:"Explore Creative Studio",groupId:"",categoryId:"",url:"/studio",visible:true}, ...["watch","read","shop"].map(id => ({id,name:"",groupId:id,categoryId:"",url:"",visible:true})), ...custom];
+  return c;
+}
+export function publicStudio(content: Studio): Studio {
+  const c = upgradeStudio(content);
   const groups = c.groups.filter((g) => g.visible);
   const categories = c.categories.filter(
     (cat) =>
@@ -88,7 +102,7 @@ export function publicStudio(c: Studio): Studio {
     links: c.links.filter(
       (l) =>
         l.visible &&
-        active.some((g) => g.id === l.groupId) &&
+        (!l.groupId || active.some((g) => g.id === l.groupId)) &&
         (!l.categoryId ||
           populated.some(
             (cat) =>
@@ -99,28 +113,15 @@ export function publicStudio(c: Studio): Studio {
 }
 export function studioNavigation(c: Studio): NavigationLink[] {
   const p = publicStudio(c);
-  const order = ["watch", "listen", "read", "play"];
-  const links = [...p.links].sort((a,b) => {
-    const ai=order.indexOf(a.groupId), bi=order.indexOf(b.groupId);
-    return (ai < 0 ? order.length : ai) - (bi < 0 ? order.length : bi);
-  });
-  return [
-    { name: "Explore Creative Studio", href: "/studio" },
-    ...links.map((l) => ({
-      name:
-        l.name ||
-        p.categories.find((cat) => cat.id === l.categoryId)?.name ||
-        p.groups.find((g) => g.id === l.groupId)!.name,
-      href:
-        l.url ||
-        (l.categoryId ? categoryUrl(l.categoryId) : groupUrl(l.groupId)),
-    })),
-  ];
+  return p.links.map(l => ({
+    name: l.name || p.categories.find(cat => cat.id === l.categoryId)?.name || p.groups.find(g => g.id === l.groupId)?.name || "Explore Creative Studio",
+    href: l.url || (l.categoryId ? categoryUrl(l.categoryId) : l.groupId ? groupUrl(l.groupId) : "/studio"),
+  }));
 }
 export function validateStudio(value: unknown): Studio {
   if (!value || typeof value !== "object")
     throw Error("Invalid studio content.");
-  const c = value as Studio;
+  const c = upgradeStudio(value as Studio);
   if (
     !Number.isSafeInteger(c.revision) ||
     c.revision < 0 ||
@@ -265,7 +266,7 @@ export function validateStudio(value: unknown): Studio {
     const groupId = str(l.groupId, "group");
     const categoryId = str(l.categoryId, "category");
     if (
-      !groups.some((g) => g.id === groupId) ||
+      (groupId !== "" && !groups.some((g) => g.id === groupId)) ||
       (categoryId &&
         !categories.some(
           (cat) => cat.id === categoryId && cat.groupIds.includes(groupId),
@@ -282,6 +283,7 @@ export function validateStudio(value: unknown): Studio {
     };
   });
   return {
+    navigationVersion: 2,
     revision: c.revision,
     status: c.status,
     intro: name(c.intro, "studio introduction"),

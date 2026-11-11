@@ -102,6 +102,7 @@ try {
     publishedStudio,
     validateStudio,
     publicStudio,
+    upgradeStudio,
     studioVideoIds,
     studioNavigation,
     uploadImage,
@@ -127,24 +128,42 @@ try {
   const c = validateStudio(initialStudio());
   check(
     c.groups.map((g) => g.name),
-    ["Watch", "Listen", "Read", "Play"],
+    ["Watch", "Listen", "Read", "Play", "Shop"],
   );
   check(
     studioNavigation(c).map((l) => l.name),
-    ["Explore Creative Studio", "Watch", "Listen", "Read", "Play"],
+    ["Explore Creative Studio", "Watch", "Read", "Shop"],
   );
-  check(studioNavigation(c).map(l => l.href), ["/studio", "/studio/watch", "/studio/listen", "/studio/read", "/studio/play"]);
-  check(publicStudio(c).items.find(i => i.id === "breadcrumb")?.url, "https://breadcrumb-challenge.vercel.app/");
-  check(publicStudio(c).items.find(i => i.id === "breadcrumb")?.featured, true);
-  check(studioVideoIds(c,"watch"), ["hWk6mH_t0Cs"]);
-  check(studioVideoIds(c,"listen").length, 3);
+  check(studioNavigation(c).map(l => l.href), ["/studio", "/studio/watch", "/studio/read", "/shop"]);
+  check(publicStudio(c).items.some(i => i.id === "breadcrumb"), false);
+  check(c.items.find(i => i.id === "breadcrumb")?.status, "draft");
+  check(studioVideoIds(c,"watch").length, c.items.filter(i=>i.type==="Video").length);
+  const listenCount=studioVideoIds(c,"listen").length;
+  check(listenCount > 0, true);
   const hiddenMedia=structuredClone(c);
   hiddenMedia.items.find(i=>i.url.includes("_3T_1ZhlzQM")).status="draft";
-  check(studioVideoIds(hiddenMedia,"listen").length,2);
+  check(studioVideoIds(hiddenMedia,"listen").length,listenCount-1);
   hiddenMedia.categories.find(cat=>cat.id==="music-ambience").visible=false;
   check(studioVideoIds(hiddenMedia,"listen").length,0);
   check(c.items.filter((i) => i.type === "Channel").length, 1);
   check(new Set(c.items.map((i) => i.url || i.id)).size, c.items.length);
+  // Admin ordering, labels, custom destinations, landing visibility and future Listen.
+  const menu = structuredClone(c);
+  menu.links.reverse();
+  menu.links[0].name = "Visit our shop";
+  menu.links[0].url = "/shop#published-books";
+  check(studioNavigation(menu)[0], {name:"Visit our shop",href:"/shop#published-books"});
+  menu.links.find(l => l.id === "explore").visible = false;
+  check(studioNavigation(menu).some(l => l.href === "/studio"), false);
+  menu.links.push({id:"listen",name:"Listen",groupId:"listen",categoryId:"",url:"",visible:true});
+  check(studioNavigation(validateStudio(menu)).at(-1), {name:"Listen",href:"/studio/listen"});
+  menu.items.filter(i => i.categoryIds.includes("music-ambience")).forEach(i => i.status="draft");
+  check(studioNavigation(menu).some(l=>l.name==="Listen"), false);
+  const legacy = structuredClone(c);
+  delete legacy.navigationVersion;
+  check(upgradeStudio(legacy).items, legacy.items);
+  check(upgradeStudio(upgradeStudio(legacy)), upgradeStudio(legacy));
+  check(c.items.filter(i => i.categoryIds.includes("authored-books")).length, 1);
   const seeded = (await publishedStudio()).items.length;
   c.groups.push({
     id: "learn",

@@ -9,7 +9,7 @@ import {
   boundedBody,
 } from "@/lib/careers/server";
 import { initialStudio } from "./seed";
-import { validateStudio, publicStudio, type Studio } from "./model";
+import { validateStudio, publicStudio, upgradeStudio, type Studio } from "./model";
 export async function studioRow() {
   return db()
     .prepare(
@@ -46,7 +46,7 @@ export async function handle(request: Request) {
     if (request.method === "GET")
       return response({
         content: row
-          ? { ...JSON.parse(row.draft_json), revision: row.revision }
+          ? { ...upgradeStudio(JSON.parse(row.draft_json)), revision: row.revision }
           : initialStudio(),
         published: !!row?.published_json,
       });
