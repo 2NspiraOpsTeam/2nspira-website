@@ -7,9 +7,9 @@ import { publishedStudio } from "@/lib/studio/server";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = publicPageMetadata({
-  title: "Creative Studio — Watch. Listen. Read. Play.",
+  title: "Creative Studio — Watch. Read. Shop.",
   description:
-    "Watch original videos, listen to music and ambience, read ideas and books, and explore creative experiences for adults and families.",
+    "Explore our YouTube channel, read articles and introductions to our books, and shop published books, rare editions, and creative products.",
   path: "/studio",
 });
 export default async function Page({
@@ -22,6 +22,7 @@ export default async function Page({
   if (typeof q.category === "string") {
     const category=c.categories.find(cat=>cat.id===q.category);
     const group=category?.groupIds.find(id=>["watch","listen","read","play"].includes(id));
+    if(category?.groupIds.includes("shop") && !category.groupIds.includes("read"))permanentRedirect("/shop");
     if(group)permanentRedirect(["watch","listen"].includes(group) ? `/studio/${group}` : `/studio/${group}?category=${encodeURIComponent(q.category)}#collections`);
   }
   return (

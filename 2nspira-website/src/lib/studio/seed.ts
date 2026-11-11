@@ -7,7 +7,7 @@ import {
   printables,
 } from "@/content/shop/products";
 import { coloringBooks } from "@/content/shop/coloring-books";
-import type { Item, Studio } from "./model";
+import { upgradeStudio, type Item, type Studio } from "./model";
 const item = (
   value: Partial<Item> &
     Pick<Item, "id" | "title" | "description" | "categoryIds">,
@@ -25,7 +25,7 @@ const item = (
 });
 export function initialStudio(): Studio {
   const leadership = leadershipBooks[0];
-  return {
+  return upgradeStudio({
     revision: 0,
     status: "draft",
     intro:
@@ -133,7 +133,7 @@ export function initialStudio(): Studio {
           "Follow a trail of clues in this browser-based OSINT investigation challenge for curious adults. Test your observation, research, and verification skills.",
         type: "Game",
         categoryIds: ["interactive"],
-        status: "published",
+        status: "draft",
         featured: true,
         image: "/images/work/project-breadcrumb.png",
         imageAlt:
@@ -259,5 +259,5 @@ export function initialStudio(): Studio {
           }),
         ),
     ],
-  };
+  });
 }

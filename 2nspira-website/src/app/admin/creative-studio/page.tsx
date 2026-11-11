@@ -578,8 +578,8 @@ export default function StudioAdmin() {
                     <p className="my-3 text-body">
                       Keep this concise. Use a group destination or a category.
                       Leave the label blank to follow its name automatically.
-                      Desktop, mobile, and footer share this list; Explore
-                      Creative Studio is always included.
+                      Desktop, mobile, and footer share this list in the order below.
+                      Use a section link, not individual books or products. The landing-page link can also be renamed, moved, or hidden.
                     </p>
                     {content.links.map((l, n) => {
                       const patch = (p: Partial<typeof l>) =>
@@ -609,6 +609,7 @@ export default function StudioAdmin() {
                                 })
                               }
                             >
+                              <option value="">Studio landing page</option>
                               {content.groups.map((g) => (
                                 <option key={g.id} value={g.id}>
                                   {g.name}

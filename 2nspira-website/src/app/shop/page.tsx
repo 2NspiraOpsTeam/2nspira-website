@@ -1,3 +1,4 @@
+import StudioTrail from "@/components/studio/StudioTrail";
 import EditorialHero from "@/components/EditorialHero";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import CatalogBreadcrumbs from "@/components/catalog/CatalogBreadcrumbs";
@@ -8,7 +9,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
-import { CollectionNav, EtsyShopLink, ProductGrid } from "@/components/shop/ShopCollection";
+import { EtsyShopLink, ProductGrid } from "@/components/shop/ShopCollection";
 import ColoringBookCard from "@/components/shop/ColoringBookCard";
 import { coloringBooks } from "@/content/shop/coloring-books";
 import { activityBooks, artPrints, leadershipBooks, printables } from "@/content/shop/products";
@@ -28,11 +29,12 @@ export default function ShopPage() {
     <main id="main-content" className={pageMain}>
       <CatalogEffects headings>
       <CatalogBreadcrumbs page="shop" />
+      <div className="mx-auto max-w-6xl px-4 pb-6"><StudioTrail active="shop" /></div>
       <CatalogSchema page="shop" />
       <header className="relative overflow-hidden border-b border-line bg-surface mb-10">
         <AmbientField />
         <EditorialHero image="/images/shop/reduce-the-noise.jpg" alt="Reduce the Noise. Strengthen the Signal. art print." contain>
-          <EyebrowPill>The 2Nspira creative shop</EyebrowPill>
+          <EyebrowPill>Creative Studio · Shop</EyebrowPill>
           <h1 className={h1}>A little clarity.<br />A little creativity.</h1>
           <p className={lead}>Books to inspire. Games to gather around. Pages to color. Art to make space for what matters.</p>
         </EditorialHero>
@@ -41,7 +43,7 @@ export default function ShopPage() {
         <aside data-catalog-fade className="mb-10 grid items-center gap-7 rounded-2xl border border-line bg-accent-soft p-6 sm:p-8 lg:grid-cols-2 lg:gap-10" aria-labelledby="shop-bookstore-title">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-body">The collector’s shelf · 2Nspira Books</p>
-            <h2 id="shop-bookstore-title" className={h2}>Rare books. Remarkable editions.</h2>
+            <h2 id="shop-bookstore-title" className={h2}>Rare & collectible books.</h2>
             <p className="mt-3 leading-7 text-body">Discover our collection of rare collectible books, including signed and limited editions. Explore photographs of the actual copies, individual condition details, and the stories behind each edition at 2Nspira Books.</p>
             <a href="https://books.2nspira.com" className={`mt-5 min-h-[48px] ${buttonPrimary}`}>Explore rare collectibles <span aria-hidden="true" className="ml-2">→</span></a>
           </div>
@@ -56,11 +58,12 @@ export default function ShopPage() {
             <p className="border-t border-line px-4 py-3 text-sm font-semibold text-body">Preview our collectible bookstore <span aria-hidden="true">↗</span></p>
           </a>
         </aside>
-        <CollectionNav current="shop" />
+        <nav aria-label="Shop departments" className="flex flex-wrap gap-3">{[{name:"Our published books",href:"#published-books"},{name:"Rare & collectible books",href:"#shop-bookstore-title"},{name:"Other creative products",href:"#creative-products"}].map(link=><a key={link.href} href={link.href} className={buttonPrimary}>{link.name}</a>)}</nav>
+        <h2 id="published-books" className={`mt-14 scroll-mt-24 ${h2}`}>Our published books</h2>
         <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-6 text-body">Explore all our books in one place: leadership, family activities, and cozy coloring—plus printable games and thoughtful wall art. Choose a collection, then complete your purchase on Etsy or Amazon.</p>
         <section aria-labelledby="leadership-books-title" className="mt-14">
           <div data-catalog-reveal className="mb-8">
-            <h2 id="leadership-books-title" className={h2}>Leadership Books</h2>
+            <h3 id="leadership-books-title" className={h2}>Leadership Books</h3>
             <p className="mt-3 max-w-2xl leading-7 text-body">Ideas for human-centered leadership in an AI-saturated world. <Link href="/books" className={linkInline}>Explore the book and selected excerpts →</Link></p>
           </div>
           <ProductGrid products={leadershipBooks} headingLevel="h3" />
@@ -72,16 +75,6 @@ export default function ShopPage() {
           </div>
           <ProductGrid products={activityBooks} headingLevel="h3" />
         </section>
-        <section aria-labelledby="printables-title" className="mt-20 border-t border-line pt-14">
-          <div data-catalog-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 id="printables-title" className={h2}>Printables &amp; Games</h2>
-              <p className="mt-3 max-w-2xl leading-7 text-body">Shared laughter and creative calm. Download, print, and enjoy at your own pace.</p>
-            </div>
-            <Link href="/shop/printables-games" className={`${linkInline} min-h-[44px]`}>Explore Printables &amp; Games <span aria-hidden="true" className="ml-1">→</span></Link>
-          </div>
-          <ProductGrid products={printables} headingLevel="h3" />
-        </section>
         <section aria-labelledby="coloring-books-title" className="mt-20 border-t border-line pt-14">
           <div data-catalog-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -91,6 +84,17 @@ export default function ShopPage() {
             <Link href="/shop/coloring-books" className={`${linkInline} min-h-[44px]`}>Explore Coloring Books <span aria-hidden="true" className="ml-1">→</span></Link>
           </div>
           <div className="space-y-10">{coloringBooks.map(book => <ColoringBookCard key={book.id} {...book} />)}</div>
+        </section>
+        <h2 id="creative-products" className={`mt-16 scroll-mt-24 ${h2}`}>Other creative products</h2>
+        <section aria-labelledby="printables-title" className="mt-20 border-t border-line pt-14">
+          <div data-catalog-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 id="printables-title" className={h2}>Printables &amp; Games</h2>
+              <p className="mt-3 max-w-2xl leading-7 text-body">Shared laughter and creative calm. Download, print, and enjoy at your own pace.</p>
+            </div>
+            <Link href="/shop/printables-games" className={`${linkInline} min-h-[44px]`}>Explore Printables &amp; Games <span aria-hidden="true" className="ml-1">→</span></Link>
+          </div>
+          <ProductGrid products={printables} headingLevel="h3" />
         </section>
         <section aria-labelledby="art-title" className="mt-20 border-t border-line pt-14">
           <div data-catalog-reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
