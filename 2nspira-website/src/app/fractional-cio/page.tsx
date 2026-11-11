@@ -1,4 +1,4 @@
-import ManufacturingDemo from "@/components/ManufacturingDemo";
+import ServiceJourney from "@/components/ServiceJourney";
 import styles from "./FractionalCio.module.css";
 import polish from "@/components/ServicePolish.module.css";
 import ServiceEffects from "@/components/ServiceEffects";
@@ -73,10 +73,10 @@ export default function FractionalCioPage() {
         <AmbientField />
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-14">
           <div>
-            <p><EyebrowPill>Fractional CIO &amp; Technology Leadership</EyebrowPill></p>
+            <p><EyebrowPill>Executive Technology Advisory</EyebrowPill></p>
             <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Technology leadership without the full-time executive overhead</h1>
             <p className={`mt-6 ${lead}`}>A selective premium engagement spanning AI enablement, business automation and digital platforms. Set priorities, guide investment and align delivery with experienced executive technology judgment.</p>
-            <ServiceConversation label="Discuss your technology decisions" />
+            <ServiceConversation service="advisory" label="Discuss your technology decisions" />
           </div>
           <Reveal variant="scale">
             <figure className={`${styles.heroImage} relative overflow-hidden rounded-[2rem] border border-line`}>
@@ -91,6 +91,7 @@ export default function FractionalCioPage() {
           {[["#fit-heading", "Is this for you?"], ["#approach-heading", "How we work"], ["#deliverables-heading", "What you take away"], ["#executive-profile", "Your technology partner"]].map(([href, label]) => <a key={href} href={href} className={`inline-flex min-h-11 items-center text-sm ${linkInline}`}>{label} <span aria-hidden="true" className="ml-2">↗</span></a>)}
         </div>
       </nav>
+      <ServiceJourney service="advisory" />
       <section className={section} aria-labelledby="fit-heading">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal><figure className={styles.editorialImage}><Image src="/images/pages/fractional-cio-focus.webp" alt="Illustrative business leader reviewing technology information at a workstation." width={600} height={674} sizes="(min-width: 1024px) 520px, calc(100vw - 32px)" className="aspect-[4/3] w-full object-cover object-[center_35%]" /></figure></Reveal>
@@ -134,11 +135,11 @@ export default function FractionalCioPage() {
           <h2 id="fractional-cio-cta-heading" className={h2}>Bring executive clarity to your next technology decision</h2>
           <p className={`mx-auto mt-4 max-w-2xl ${lead}`}>Start with the priorities, decisions, or initiatives that need stronger technology leadership now.</p>
           <div className="mt-10">
-            <ServiceConversation label="Discuss your technology decisions" centered />
+            <ServiceConversation service="advisory" label="Discuss your technology decisions" centered />
           </div>
         </div>
       </section>
-    <ManufacturingDemo />
+
     </ServiceEffects></main>
   );
 }

@@ -63,7 +63,7 @@ export default function ResourcesPage() {
               <p className={styles.kicker}>For professionals &amp; the people who guide them</p>
               <h2 id="strengths-title">Professional Strengths Assessment</h2>
               <p className={styles.description}>Understand how you naturally create value, collaborate, and thrive at work.</p>
-              <Benefits items={["Natural strengths", "Role fit & energy", "Coaching & career conversations"]} />
+              <Benefits items={["Natural strengths", "Role fit & energy", "Role-fit & career reflection"]} />
               <Link href={strengthsUrl} className={styles.primary}>Take the assessment <Arrow /></Link>
             </div>
           </Reveal>
@@ -91,7 +91,7 @@ export default function ResourcesPage() {
       <section className={styles.practical} aria-labelledby="practical-title">
         <div className={styles.container}>
           <div className={styles.bandHeading}><h2 id="practical-title">Designed for practical use</h2><p>A starting point for a better conversation.</p></div>
-          <ul className={styles.useCases}>{["Career reflection", "Coaching", "Team development", "Responsible AI planning"].map((label, index) => <li key={label}><Marker kind={index} /><span>{label}</span></li>)}</ul>
+          <ul className={styles.useCases}>{["Career reflection", "Self-reflection", "Team development", "Responsible AI planning"].map((label, index) => <li key={label}><Marker kind={index} /><span>{label}</span></li>)}</ul>
         </div>
       </section>
 
