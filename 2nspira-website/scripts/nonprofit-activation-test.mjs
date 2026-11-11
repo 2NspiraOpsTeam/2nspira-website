@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {mkdtemp} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createRequire} from 'node:module';
+const temporary=await mkdtemp(join(tmpdir(),'nonprofit-upgrade-'));
+const outfile=join(temporary,'seed.cjs');
+await build({entryPoints:[fileURLToPath(new URL('../src/lib/audiences/seed.ts',import.meta.url))],bundle:true,platform:'node',format:'cjs',outfile});
+const {initialContent,upgradeContent}=createRequire(import.meta.url)(outfile);
+const content=initialContent();assert.equal(content.industries.filter(i=>i.visible).length,8);assert.equal(content.industries.filter(i=>i.id==='nonprofits').length,1);
+const legacy=structuredClone(content);legacy.revision=17;legacy.operationId='keep-operation';const nonprofit=legacy.industries.find(i=>i.id==='nonprofits');delete nonprofit.page;nonprofit.visible=false;nonprofit.title='Nonprofits & community organizations';nonprofit.challenges='Admin edited summary';nonprofit.help='Admin edited support';nonprofit.outcomes='Admin edited possibilities';
+const upgraded=upgradeContent(legacy);const added=upgraded.industries.find(i=>i.id==='nonprofits');assert.equal(added.visible,true);assert.equal(added.title,'Non-profits & Mission Organizations');for(const key of ['challenges','help','outcomes'])assert.equal(added[key],nonprofit[key]);assert.equal(upgraded.revision,17);assert.equal(upgraded.operationId,'keep-operation');assert.deepEqual(upgraded.industries.filter(i=>i.id!=='nonprofits'),legacy.industries.filter(i=>i.id!=='nonprofits'));
+const saved=structuredClone(upgraded);const edited=saved.industries.find(i=>i.id==='nonprofits');edited.visible=false;edited.title='Custom mission title';edited.page.headline='Custom Admin headline';const reopened=upgradeContent(saved).industries.find(i=>i.id==='nonprofits');assert.equal(reopened.visible,false);assert.equal(reopened.title,'Custom mission title');assert.equal(reopened.page.headline,'Custom Admin headline');assert.equal(saved.industries.indexOf(edited),upgraded.industries.findIndex(i=>i.id==='nonprofits'));
+console.log('PASS nonprofit activation, no duplicate, edited fields, revision/order and subsequent Admin visibility preservation');

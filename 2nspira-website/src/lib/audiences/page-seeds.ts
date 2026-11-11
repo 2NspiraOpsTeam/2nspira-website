@@ -116,4 +116,32 @@ export const dedicatedAudiences: Industry[] = [
       ctaTitle: "Which administrative task keeps coming back?", ctaText: "Bring one recurring task or walk us through your client journey. We can discuss a focused improvement that gives you more room to serve clients.", ctaLabel: "Book a conversation about your client workflow",
     },
   },
+  {
+    id: "nonprofits", title: "Non-profits & Mission Organizations", visible: true,
+    challenges: "Lean teams balance program delivery, supporter communication, volunteer coordination and reporting across disconnected tools.",
+    help: "Simplify registrations and shared records, connect routine workflows and build accessible websites around your mission.",
+    outcomes: "Less repeated administration, clearer coordination and more time focused on the communities and causes you serve.",
+    linkLabel: "Explore support for mission-led organizations", href: audienceRoutes.nonprofits,
+    exampleLabel: "", exampleHref: "",
+    page: {
+      seoTitle: "Technology for Non-profits & Mission Organizations",
+      seoDescription: "Practical websites, program registration, volunteer workflows and technology planning for nonprofits and mission-led organizations, with work scoped to your needs.",
+      headline: "More focus on your mission. Less time on disconnected work.",
+      intro: "For nonprofits, community organizations and mission-led teams balancing service delivery with limited time and resources. Start with one practical improvement that supports the people and causes you serve.",
+      challenges: [
+        { title: "Program information lives in too many places", text: "Registrations, schedules and updates move between inboxes, forms and spreadsheets, making it harder to keep everyone working from the same information." },
+        { title: "Coordination takes time away from delivery", text: "Volunteer availability, task handoffs and recurring communications depend on someone remembering each next step." },
+        { title: "Reporting means repeating the work", text: "Teams gather the same information again for internal reviews, program updates and reporting instead of using a clearer shared record." },
+      ],
+      services: [
+        { title: "Make your mission easier to find and understand", text: "An accessible, focused website can explain programs, answer common questions and guide supporters or participants toward the right next step.", href: "/websites" },
+        { title: "Connect program and volunteer workflows", text: "Scoped improvements can simplify registrations, scheduling, approvals and internal handoffs using tools that fit your team.", href: "/automation-systems-optimization" },
+        { title: "Plan technology around your resources", text: "Review priorities, existing tools and information-handling needs before committing to new software or a larger project.", href: "/technology-advisory" },
+      ],
+      advisoryTitle: "Choose a practical next step", advisoryText: "Clarify the everyday problem, compare options and plan around your budget, team capacity and mission. You retain ownership of spending and organizational decisions.",
+      implementationTitle: "Build a clearly scoped improvement", implementationText: "Websites, registration flows and supported integrations are agreed as separate implementation work. Access, consent, information handling and any payment-provider dependencies are reviewed before work begins.",
+      examples: [],
+      ctaTitle: "Where does administration get in the way of your mission?", ctaText: "Bring one recurring task, a program journey or a technology decision. We can discuss a practical improvement and the right level of support.", ctaLabel: "Discuss your organization’s needs",
+    },
+  },
 ];
