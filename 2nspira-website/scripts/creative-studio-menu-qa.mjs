@@ -5,7 +5,7 @@ const {chromium}=await import(process.env.PLAYWRIGHT_MODULE || 'playwright-core'
 const base=process.argv[2] || 'http://127.0.0.1:3322';
 const output=process.env.QA_OUTPUT || '/tmp/creative-studio-menu-qa';
 await mkdir(output,{recursive:true});
-const expected=[['Explore Creative Studio','/studio'],['Watch','/studio/watch'],['Read','/studio/read'],['Shop','/shop']];
+const expected=[['Explore Creative Studio','/studio'],['Watch','/studio/watch'],['Listen','/studio/listen'],['Read','/studio/read'],['Play','/studio/play'],['Shop','/shop']];
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const results=[];
 try {
@@ -18,6 +18,8 @@ try {
   assert.deepEqual(await page.locator('nav[aria-label="Creative Studio collections"] a').evaluateAll(a=>a.map(x=>x.getAttribute('href'))),expected.slice(1).map(x=>x[1]));
   if(width<1024)await page.getByRole('button',{name:'Open menu',exact:true}).click();
   const nav=page.getByRole('navigation',{name:width<1024?'Mobile navigation':'Main navigation',exact:true});
+  assert.equal(await nav.getByRole('button',{name:'Services',exact:true}).count(),1);
+  assert.equal(await nav.getByRole('button',{name:'Our Services',exact:true}).count(),0);
   await nav.getByRole('button',{name:'About Us',exact:true}).click();
   const sub=nav.locator('details').filter({has:page.locator('summary').filter({hasText:/^Creative Studio$/})});
   await sub.locator('summary').click();
@@ -30,6 +32,11 @@ try {
   assert.ok(await page.locator('main img[src="/images/studio/youtube-channel.svg"]').evaluate(i=>i.complete&&i.naturalWidth>0));
   assert.equal(await page.locator('main iframe').count(),0);
   assert.ok(await page.locator('main button[aria-label^="Load video:"]').count()>0);
+  await page.goto(base+'/studio/listen');
+  assert.ok(await page.locator('main button[aria-label^="Load video:"]').count()>0);
+  await page.goto(base+'/studio/play');
+  assert.equal(await page.locator('main a[href*="breadcrumb"]').count(),0);
+  assert.ok(await page.locator('main article').count()>0);
   await page.goto(base+'/studio/read');
   assert.equal(await page.locator('main a[href="https://books.2nspira.com"]').count(),0);
   assert.equal(await page.getByRole('link',{name:/Purchase this book/}).count(),1);

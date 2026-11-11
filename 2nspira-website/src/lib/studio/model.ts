@@ -73,7 +73,7 @@ export function upgradeStudio(content: Studio): Studio {
   if (!c.groups.some(g => g.id === "shop")) c.groups.push({id:"shop", name:"Shop", description:"Purchase our published books, rare and collectible editions, and other creative products.", visible:true});
   c.categories = c.categories.map(cat => ({...cat, groupIds: cat.id === "collectibles" ? ["shop"] : ["authored-books","activity-books","coloring-books","printables","art"].includes(cat.id) ? [...new Set([...cat.groupIds,"shop"])] : cat.id === "music-ambience" ? [...new Set([...cat.groupIds,"watch"])] : cat.groupIds}));
   const custom = c.links.filter(l => !["watch","listen","read","play","shop"].includes(l.groupId) && l.id !== "explore");
-  c.links = [{id:"explore",name:"Explore Creative Studio",groupId:"",categoryId:"",url:"/studio",visible:true}, ...["watch","read","shop"].map(id => ({id,name:"",groupId:id,categoryId:"",url:"",visible:true})), ...custom];
+  c.links = [{id:"explore",name:"Explore Creative Studio",groupId:"",categoryId:"",url:"/studio",visible:true}, ...["watch","listen","read","play","shop"].map(id => ({id,name:"",groupId:id,categoryId:"",url:"",visible:true})), ...custom];
   return c;
 }
 export function publicStudio(content: Studio): Studio {

@@ -132,9 +132,9 @@ try {
   );
   check(
     studioNavigation(c).map((l) => l.name),
-    ["Explore Creative Studio", "Watch", "Read", "Shop"],
+    ["Explore Creative Studio", "Watch", "Listen", "Read", "Play", "Shop"],
   );
-  check(studioNavigation(c).map(l => l.href), ["/studio", "/studio/watch", "/studio/read", "/shop"]);
+  check(studioNavigation(c).map(l => l.href), ["/studio", "/studio/watch", "/studio/listen", "/studio/read", "/studio/play", "/shop"]);
   check(publicStudio(c).items.some(i => i.id === "breadcrumb"), false);
   check(c.items.find(i => i.id === "breadcrumb")?.status, "draft");
   check(studioVideoIds(c,"watch").length, c.items.filter(i=>i.type==="Video").length);
@@ -155,10 +155,18 @@ try {
   check(studioNavigation(menu)[0], {name:"Visit our shop",href:"/shop#published-books"});
   menu.links.find(l => l.id === "explore").visible = false;
   check(studioNavigation(menu).some(l => l.href === "/studio"), false);
+  menu.links = menu.links.filter(l => l.groupId !== "listen");
   menu.links.push({id:"listen",name:"Listen",groupId:"listen",categoryId:"",url:"",visible:true});
   check(studioNavigation(validateStudio(menu)).at(-1), {name:"Listen",href:"/studio/listen"});
   menu.items.filter(i => i.categoryIds.includes("music-ambience")).forEach(i => i.status="draft");
   check(studioNavigation(menu).some(l=>l.name==="Listen"), false);
+  const customized = structuredClone(c);
+  customized.links = [customized.links[3], customized.links[1]];
+  customized.links[0].name = "My reading room";
+  customized.links[0].url = "/studio/read?category=resources";
+  check(upgradeStudio(customized), customized);
+  check(studioNavigation(customized).map(l => l.name), ["My reading room", "Watch"]);
+  check(publicStudio(c).groups.some(g=>g.id==="play"), true);
   const legacy = structuredClone(c);
   delete legacy.navigationVersion;
   check(upgradeStudio(legacy).items, legacy.items);
