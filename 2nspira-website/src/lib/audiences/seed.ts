@@ -108,6 +108,11 @@ export function initialContent(): Content {
 export function upgradeContent(content: Content): Content {
   const industries = content.industries.map(i => {
     const defaults = dedicatedAudiences.find(d => d.id === i.id);
+    if (i.id === "nonprofits" && defaults && !i.page) {
+      // Activate the requested existing entry once; preserve its edited summary.
+      // Once saved with its page, Admin visibility/order remain authoritative.
+      return { ...i, title: defaults.title, visible: true, href: defaults.href, linkLabel: defaults.linkLabel, page: structuredClone(defaults.page) };
+    }
     return defaults && !i.page ? structuredClone(defaults) : i;
   });
   for (const defaults of dedicatedAudiences) {

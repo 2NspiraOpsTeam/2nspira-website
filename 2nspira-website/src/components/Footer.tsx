@@ -1,3 +1,4 @@
+import { serviceLinks } from "@/lib/navigation";
 import { StudioFooterLinks } from "@/components/studio/StudioNavigation";
 import Link from "next/link";
 import {hasPublishedTeam} from "@/lib/team/server";
@@ -7,13 +8,7 @@ import { socialLinks } from "@/lib/socialLinks";
 import { BOOKING_URL } from "@/lib/booking";
 import styles from "./Footer.module.css";
 
-const services = [
-  { name: "Websites & Platforms", href: "/websites" },
-  { name: "AI Enablement", href: "/ai-enablement" },
-  { name: "Business Automation & Integrations", href: "/automation-systems-optimization" },
-  { name: "Technology Advisory & Leadership", href: "/technology-advisory" },
-  { name: "Managed Services & Support", href: "/managed-services-support" },
-];
+const services = serviceLinks;
 const company = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },

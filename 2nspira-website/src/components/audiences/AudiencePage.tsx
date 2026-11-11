@@ -24,7 +24,6 @@ export default function AudiencePage({ audience }: { audience: Industry }) {
         {image && <figure className="min-w-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img data-audience-hero src={`${image.src}-1280.webp`} srcSet={`${image.src}-640.webp 640w, ${image.src}-1280.webp 1280w`} sizes="(min-width: 1024px) 46vw, 100vw" alt={image.alt} width={1536} height={1024} fetchPriority="high" className="aspect-[3/2] w-full rounded-3xl object-cover" />
-          <figcaption className="mt-2 text-right text-xs text-muted">Illustrative image</figcaption>
         </figure>}
       </div>
     </section>

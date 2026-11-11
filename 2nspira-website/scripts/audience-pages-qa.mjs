@@ -17,7 +17,7 @@ try {
   for(const width of [1440,1024,768,390,320]) {
     await page.setViewportSize({width,height:900});
     await page.goto(base+"/who-we-serve",{waitUntil:"networkidle"});
-    check(await page.locator("#industries article").count()===7);
+    check(await page.locator("#industries article").count()===8);
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
     check(await page.getByRole("list",{name:"Our clients",exact:true}).locator("li").count()===16);
     await page.locator("#our-clients img").evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
