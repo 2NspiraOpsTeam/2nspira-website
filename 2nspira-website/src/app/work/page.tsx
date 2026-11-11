@@ -119,6 +119,7 @@ export default async function WorkPage() {
           {[['#teams-management', 'Client projects'], ['#internal-engineering', '2Nspira engineering'], ['#concepts-prototypes', 'Platform engineering']].map(([href, label]) => <a key={href} href={href} className="inline-flex min-h-11 items-center rounded-full border border-line px-5 py-3 font-medium text-accent focus-visible:outline-2 focus-visible:outline-accent">{label}</a>)}
         </nav>
         {/* --- Featured: Teams Management --- */}
+        <span id="client-websites" className="scroll-mt-24" /><h2 className="mb-8 text-3xl font-medium text-ink">Client Websites</h2>
         <section id="teams-management" className="mb-32 scroll-mt-24" aria-labelledby="teams-management-heading">
           <Reveal>
             <div className="mb-12 flex flex-col gap-4">
@@ -216,8 +217,8 @@ export default async function WorkPage() {
           </div >
         </section>
 
-        <section id="internal-engineering" className="mb-24 scroll-mt-24" aria-labelledby="engineering-heading">
-          <h2 id="engineering-heading" className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">2Nspira engineering</h2>
+        <span id="internal-engineering" className="scroll-mt-24" /><section id="custom-digital-platforms" className="mb-24 scroll-mt-24" aria-labelledby="engineering-heading">
+          <h2 id="engineering-heading" className="text-3xl font-medium tracking-tight text-ink sm:text-4xl">Custom Digital Platforms</h2>
           <p className="mt-4 max-w-3xl leading-8 text-body">Our own platforms and engineering experiments make our approach inspectable. They are internal work, not independent client endorsements or evidence of client return on investment.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <article data-catalog-card className={`${styles.engineeringCard} ${styles.featured} overflow-hidden rounded-2xl border border-line bg-canvas`}>
