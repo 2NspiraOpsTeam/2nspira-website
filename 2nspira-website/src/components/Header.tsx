@@ -15,8 +15,8 @@ import { serviceLinks, aboutLinks } from "@/lib/navigation";
 type MenuName = "services" | "ideas" | "about" | "demos";
 
 const primaryLinks = [
-  { name: "Work", href: "/work" },
-  { name: "Contact", href: "/contact" },
+  { name: "Our Work", href: "/work" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 export default function Header() {
@@ -194,7 +194,7 @@ export default function Header() {
           aria-label="Main navigation"
           onKeyDown={handleNavigationKeyDown}
         >
-          {renderMenu("services", "Services", serviceLinks)}
+          {renderMenu("services", "Our Services", serviceLinks)}
           <Link
             href={primaryLinks[0].href}
             aria-current={
@@ -202,10 +202,17 @@ export default function Header() {
             }
             className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink"
           >
-            Work
+            Our Work
+          </Link>
+          <Link
+            href="/who-we-serve"
+            aria-current={isCurrent("/who-we-serve") ? "page" : undefined}
+            className="rounded-full px-3 py-2 text-sm font-medium text-body transition-colors duration-300 ease-gentle hover:bg-accent-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas [aria-current=page]:bg-accent-soft [aria-current=page]:text-ink"
+          >
+            Who We Serve
           </Link>
           {renderMenu("demos", "Demos", demoNavigationLinks)}
-          {renderMenu("about", "About", aboutLinks)}
+          {renderMenu("about", "About Us", aboutLinks)}
           {primaryLinks.slice(1).map((link) => (
             <Link
               key={link.name}
