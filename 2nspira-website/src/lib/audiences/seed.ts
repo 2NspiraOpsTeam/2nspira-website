@@ -113,5 +113,12 @@ export function upgradeContent(content: Content): Content {
   for (const defaults of dedicatedAudiences) {
     if (!industries.some(i => i.id === defaults.id)) industries.push(structuredClone(defaults));
   }
-  return { ...content, industries };
+  // Retired offerings must not reappear from saved content. Preserve all other Admin edits.
+  const retire = (value: unknown): unknown => {
+    if (typeof value === "string") return value.replaceAll("/coaching", "/services").replaceAll("/entrepreneur-mentoring", "/services").replaceAll("Entrepreneur mentoring offers a sounding board for priorities, trade-offs and accountability as you develop the business.", "Technology advisory helps you compare priorities and plan the next stage of your business.").replaceAll("founder mentoring", "technology advisory").replaceAll("Advice and mentoring", "Technology advisory").replaceAll("get mentoring as the business grows", "plan technology as the business grows").replaceAll("Mentoring does not include", "Advisory does not include").replaceAll("advice, mentoring or", "technology advisory or");
+    if (Array.isArray(value)) return value.map(retire);
+    if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, retire(item)]));
+    return value;
+  };
+  return retire({ ...content, industries }) as Content;
 }

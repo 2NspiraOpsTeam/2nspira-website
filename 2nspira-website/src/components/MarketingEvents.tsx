@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 type MarketingWindow = Window & { dataLayer?: unknown[] };
-const services = new Set(["/services", "/websites", "/automation-systems-optimization", "/ai-enablement", "/fractional-cio", "/coaching"]);
+const services = new Set(["/services", "/websites", "/automation-systems-optimization", "/ai-enablement", "/fractional-cio"]);
 /** Intent signals only: no form values, free text, query strings, or visitor identifiers. */
 export default function MarketingEvents() {
   const pathname = usePathname();

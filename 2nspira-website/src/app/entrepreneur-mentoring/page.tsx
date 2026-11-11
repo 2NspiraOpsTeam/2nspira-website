@@ -1,5 +1,5 @@
 import { permanentRedirect } from "next/navigation";
 
-export default function EntrepreneurMentoringRedirect() {
-  permanentRedirect("/coaching");
+export default function RetiredService() {
+  permanentRedirect("/services");
 }

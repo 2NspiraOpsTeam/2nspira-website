@@ -26,7 +26,6 @@ const pages: Array<{
   { path: "/demos/property-management", priority: 0.7, changeFrequency: "monthly" },
   { path: "/demos/manufacturing", priority: 0.7, changeFrequency: "monthly" },
   { path: "/fractional-cio", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/coaching", priority: 0.8, changeFrequency: "monthly" },
   { path: "/privacy-policy", priority: 0.3, changeFrequency: "monthly" },
   { path: "/terms-conditions", priority: 0.3, changeFrequency: "monthly" },
   { path: "/refund-cancellation", priority: 0.3, changeFrequency: "monthly" },

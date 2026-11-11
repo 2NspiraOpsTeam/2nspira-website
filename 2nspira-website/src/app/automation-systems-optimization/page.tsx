@@ -24,7 +24,7 @@ export const metadata: Metadata = publicPageMetadata({
 const automationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Automation & Systems Optimization",
+  name: "Business Automation",
   description:
     "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
   url: "https://2nspira.com/automation-systems-optimization",
@@ -54,7 +54,7 @@ export default async function AutomationSystemsOptimizationPage() {
         <Link href="/services" className={linkInline}>← All services</Link>
         <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
           <div>
-            <EyebrowPill>Automation &amp; Systems Optimization</EyebrowPill>
+            <EyebrowPill>Business Automation</EyebrowPill>
             <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Less busywork.<br />More room to grow.</h1>
             <p className={lead}>Simplify repetitive work. Connect the systems you rely on. Give your people more room to focus.</p>
             <div className="mt-7 flex flex-wrap gap-3">

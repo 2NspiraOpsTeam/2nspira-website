@@ -1,3 +1,4 @@
+import TransformationSupport from "@/components/TransformationSupport";
 import { BOOKING_URL } from "@/lib/booking";
 import ManufacturingDemo from "@/components/ManufacturingDemo";
 import Image from "next/image";
@@ -10,7 +11,7 @@ import ImpactTimeline from "./ImpactTimeline";
 import TeamsReviewCarousel from "./TeamsReviewCarousel";
 
 const homepageDescription =
-  "2Nspira helps organizations become AI-enabled, improve operations, build websites and apps, and lead technology with fractional CIO services.";
+  "AI and technology transformation for growing organizations: AI enablement, business automation, digital platforms, executive advisory and ongoing managed support.";
 const homepageShareTitle =
   "AI, Automation & Technology Consulting | 2Nspira";
 const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
@@ -44,13 +45,11 @@ export const metadata: Metadata = {
 };
 
 const serviceImages = [
-  "/images/homepage/service-website.jpg",
-  "/images/homepage/tech-automation.jpg",
   "/images/homepage/tech-ai.jpg",
-  "/images/homepage/executive-boardroom-v1.jpg",
-  "/images/homepage/mentoring-office-v2.webp",
+  "/images/homepage/tech-automation.jpg",
+  "/images/homepage/service-website.jpg",
 ];
-const serviceAlts = ["Person reviewing a visual website on a laptop", "Engineer programming a laptop beside automated equipment", "Developer working with code across multiple screens", "Executives discussing strategy in a modern boardroom", "Two professionals engaged in a thoughtful one-to-one conversation in a modern office"];
+const serviceAlts = ["Developer working with code across multiple screens", "Engineer programming a laptop beside automated equipment", "Person reviewing a visual website on a laptop"];
 
 function Photo({ src, alt, className = "", priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
   return <Image src={src} alt={alt} fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 70vw" priority={priority} className={className} />;
@@ -98,8 +97,8 @@ export default function Home() {
       <div className={styles.heroShade} />
       <div className={styles.heroContent}>
         <p className={styles.eyebrow}>People. Purpose. Possibility.</p>
-        <h1 id="hero-heading">A clearer vision.<br />A stronger business.</h1>
-        <p>Improve operations, make clearer technology decisions, build an AI-enabled organization, and build digital experiences that serve your customers.</p>
+        <h1 id="hero-heading">AI &amp; Technology Transformation for Growing Organizations</h1>
+        <p>Enable AI. Automate your business. Connect your digital platforms. From transformation strategy to implementation and ongoing support.</p>
         <a className={styles.lightButton} href={BOOKING_URL}>Book a Conversation <span aria-hidden="true">↗</span></a>
       </div>
       <a href="#our-purpose" className={styles.heroFoot}>Independent thinking. Practical change. Since 2019. <span aria-hidden="true">↓</span></a>
@@ -116,7 +115,7 @@ export default function Home() {
       <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What brings you here?</p><h2 id="challenges-heading">Where do you need<br />to make progress?</h2></div><p className={styles.challengeIntro}>You don’t need to know which service to ask for. Start with the challenge you’re facing.</p></div>
       <div className={styles.challengeGrid}>{[
         { image: "challenge-operations", category: "Simpler operations", title: "Our operations have become too complicated.", text: "Simplify repetitive work and connect the systems your business relies on.", href: "/automation-systems-optimization", link: "Explore operations solutions" },
-        { image: "digital-team", src: "/images/hero/ai-human-led-v3.webp", alt: "People working together with human-led AI technology.", category: "Organizational AI Enablement", title: "We want to become an AI-enabled organization.", text: "Align leadership, people, workflows, technology, and governance around responsible AI—and measure progress as you evolve.", href: "/ai-enablement", link: "Explore organizational AI enablement" },
+        { image: "digital-team", src: "/images/hero/ai-human-led-v3.webp", alt: "People working together with human-led AI technology.", category: "AI Enablement", title: "We want to become an AI-enabled organization.", text: "Align leadership, people, workflows, technology, and governance around responsible AI—and measure progress as you evolve.", href: "/ai-enablement", link: "Explore organizational AI enablement" },
         { image: "tech-websites", category: "Better digital experiences", title: "Our website no longer meets our needs.", text: "Build a better customer experience with useful digital capabilities behind it.", href: "/websites", link: "Explore website solutions" },
         { image: "executive-staff-briefing-v1", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
       ].map(challenge => <Link key={challenge.href} href={challenge.href} className={styles.challengeCard}><div className={`${styles.challengePhoto} ${challenge.image === "executive-staff-briefing-v1" ? styles.staffBriefing : ""}`}><Photo src={challenge.src ?? `/images/homepage/${challenge.image}.jpg`} alt={challenge.alt ?? ""} /><span className={styles.challengeCategory}>{challenge.category}</span></div><div className={styles.challengeCopy}><h3>{challenge.title}</h3><p>{challenge.text}</p><span className={styles.challengeLink}>{challenge.link} <span className={styles.challengeArrow} aria-hidden="true">↗</span></span></div></Link>)}</div>
@@ -130,6 +129,7 @@ export default function Home() {
       </article>)}</div>
     </section>
 
+      <TransformationSupport />
     <section className={styles.audience} aria-labelledby="audience-heading">
       <div className={styles.audienceImage}><Photo src="/images/homepage/tech-community.jpg" alt="Two developers reviewing code together on a laptop" /></div>
       <div className={styles.bandCopy}>
@@ -140,7 +140,7 @@ export default function Home() {
           { title: "Established & growing businesses", text: "Build the systems and digital experiences your next stage of growth demands.", href: "/services", action: "Find your starting point" },
           { title: "Operations & technology leaders", text: "Bring clarity to technology decisions, simplify complexity, and build the capabilities to work effectively with AI.", href: "/fractional-cio", action: "Explore executive technology leadership" },
           { title: "Schools & nonprofits", text: "Make limited resources go further through accessible digital services, practical technology, and stronger operations.", href: "/automation-systems-optimization", action: "Explore better ways of working" },
-          { title: "Entrepreneurs & founders", text: "Gain the perspective and guidance to build confidently and lead effectively.", href: "/coaching", action: "Explore mentoring—not outsourced delivery" },
+          { title: "Entrepreneurs & founders", text: "Launch a focused digital platform and connect the workflows your growing business needs.", href: "/who-we-serve/startups-entrepreneurs", action: "Explore technology support for founders" },
         ].map(audience => <li key={audience.title}><h3>{audience.title}</h3><p>{audience.text}</p><Link href={audience.href} className={styles.textLink}>{audience.action} <span aria-hidden="true">→</span></Link></li>)}</ul>
         <Link href="/who-we-serve" className={styles.textLink}>Explore Who We Serve <span aria-hidden="true">↗</span></Link>
       </div>
@@ -149,7 +149,7 @@ export default function Home() {
     <section className={`${styles.section} ${styles.nextSteps}`} aria-labelledby="next-steps-heading">
       <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Find your next step</p><h2 id="next-steps-heading">More ways to move forward.</h2></div></div>
       <div className={styles.nextStepGrid}>{[
-        { icon: Rocket, title: "Building a new venture?", text: "Make room for a clearer direction, practical guidance, and your next chapter as a founder.", href: "/coaching", link: "Explore entrepreneur mentoring" },
+        { icon: Rocket, title: "Building a new venture?", text: "Build a focused digital experience and practical systems for your next stage.", href: "/who-we-serve/startups-entrepreneurs", link: "Explore support for founders" },
         { icon: Compass, title: "Exploring what’s possible?", text: "Discover how our services connect your goals with the right expertise and support.", href: "/services", link: "Explore how we can help" },
         { icon: ClipboardCheck, title: "How AI-ready is your organization?", text: "Explore your organization’s readiness to build the capabilities, trust, and ways of working that AI requires.", href: "/resources/ai-readiness-scorecard", link: "Start with the AI Readiness Scorecard" },
       ].map(({ icon: Icon, ...step }) => <Link key={step.href} href={step.href} className={styles.nextStepCard}><span className={styles.nextStepIcon}><Icon size={26} strokeWidth={1.5} aria-hidden="true" /></span><h3>{step.title}</h3><p>{step.text}</p><span className={styles.challengeLink}>{step.link}<span aria-hidden="true">↗</span></span></Link>)}</div>
