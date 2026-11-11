@@ -29,7 +29,7 @@ try {
           await d.locator('summary').press('Enter'); check(await d.getAttribute('open') === null, 'keyboard closes');
         }
       } else if (route === '/websites') {
-        check(await page.getByRole('list', { name: 'Website technologies', exact: true }).locator('li').count() === 6, 'six vendor logos');
+        check(await page.getByRole('list', { name: 'Website technologies', exact: true }).locator('li').count() === 7, 'seven vendor logos');
         check(await page.locator('#connected-journey li').count() === 3, 'three visual journey steps');
         for (const link of await page.locator('#connected-journey a').all()) {
           const href = await link.getAttribute('href');
