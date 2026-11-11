@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-5da98feb274aadd74c428b608f68d03c",
-      "observed_at": "2026-11-10T06:08:51.441Z",
+      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
+      "observed_at": "2026-11-11T06:09:39.564Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -35,10 +35,10 @@
         "stage": "RESEARCH_COMPLETE / EXPERIMENT_PROPOSED_NOT_RUN",
         "owner_proposal": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian",
         "experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
-        "date_checked": "2026-11-10 America/New_York; record review only, original source dates retained",
+        "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
         "outcome": "No interviews, purchases, revenue or product launch; unvalidated offer",
         "dedupe": "Adjacent to #185 acquisition; no new campaign. Excludes #186 Business Hub and payment-pilot checkout.",
-        "change_note": "Fresh Wave competitor evidence narrows differentiation to human-approved exceptions; no new buyer intent. Score remains 68; historical 71 preserved.",
+        "change_note": "Three current independent supplier checks reinforce overlap including suggestion-only exception handling. No score/demand upgrade; current68/original71 preserved.",
         "research_details": {
           "customer_segment": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis",
           "customer_needs": [
@@ -110,6 +110,30 @@
               "public_price": "Homepage offers AR visibility/analytics free forever. Paid collections price not recoverable in incomplete pricing extract; pricing title says plans by invoiced revenue/no seat fees. Terms: taxes excluded, plans prepaid, usage postpaid; order form governs.",
               "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
               "business_case_example_id": "EX-003"
+            },
+            {
+              "name": "Wave",
+              "url": "https://www.waveapps.com/invoicing",
+              "checked_at": "2026-11-11T06:05:01.354Z",
+              "observation": "Native overdue reminders (Pro/online-payment eligibility described), payment/communication history and recurring billing. Compensated testimonial disclosed; no independent outcome validation.",
+              "market_period": "English public supplier offer as accessed Nov11 2026; US/Canada Wave context; other geography/checkout unresolved; not sales-period data",
+              "evidence_grade": "supplier_primary_not_buyer_proof"
+            },
+            {
+              "name": "Upflow",
+              "url": "https://upflow.io/",
+              "checked_at": "2026-11-11T06:06:35.962Z",
+              "observation": "Suggestion-only to autonomous controls, complex-payment matching, exception workflows and ERP audit trail. Supplier DSO and match-rate claims not validated. Native exception support directly overlaps the proposed workflow.",
+              "market_period": "English public supplier offer as accessed Nov11 2026; US/Canada Wave context; other geography/checkout unresolved; not sales-period data",
+              "evidence_grade": "supplier_primary_not_buyer_proof"
+            },
+            {
+              "name": "Chaser",
+              "url": "https://www.chaserhq.com/chaser-pricing",
+              "checked_at": "2026-11-11T06:06:32.142Z",
+              "observation": "Compact 4 users/30 templates/4 automated workflows. Display $259/month alongside pound-denominated eligibility; country/currency, taxes and active monthly/yearly selector unresolved. Not a normalized USD quote.",
+              "market_period": "English public supplier offer as accessed Nov11 2026; US/Canada Wave context; other geography/checkout unresolved; not sales-period data",
+              "evidence_grade": "supplier_primary_not_buyer_proof"
             }
           ],
           "pricing_intelligence": {
@@ -153,7 +177,8 @@
           },
           "recommended_next_steps": [
             "Retain synthetic 30-invoice gate; include a native-reminder/manual baseline and ask whether current tools already suffice",
-            "Do not pitch generic reminder automation; run approved five-user discovery only after independent technical review and exact recruitment authorization"
+            "Do not pitch generic reminder automation; run approved five-user discovery only after independent technical review and exact recruitment authorization",
+            "Compare exception resolution and approval audit against native Upflow/Chaser/Wave, not just basic invoice reminder timing; no verified gap yet."
           ],
           "agent_fit": {
             "research_owner": "Brian",
@@ -175,7 +200,9 @@
             "scope": "Only Wave alternative/pricing refreshed; original problem evidence access window unchanged. Metadata timestamps do not refresh surveys.",
             "business_case_analyzed_at": "2026-11-08T06:07:49.573454+00:00",
             "comparable_access_window": "2026-11-08T06:06:10Z–2026-11-08T06:07:03Z; original problem surveys not refreshed",
-            "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00"
+            "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
+            "nov11_record_review_at": "2026-11-11T01:09:39.564530-05:00",
+            "nov11_scope": "Wave, Chaser and Upflow current offer pages refreshed only; original problem surveys not rechecked."
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -636,8 +663,8 @@
           }
         },
         "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
-        "checked_at": "2026-11-10T01:08:51.441503-05:00",
-        "record_version": "2026-11-10-nightly-v8",
+        "checked_at": "2026-11-11T01:09:39.564530-05:00",
+        "record_version": "2026-11-11-nightly-v9",
         "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
@@ -693,8 +720,8 @@
       }
     },
     {
-      "run_id": "mi-5da98feb274aadd74c428b608f68d03c",
-      "observed_at": "2026-11-10T06:08:51.441Z",
+      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
+      "observed_at": "2026-11-11T06:09:39.564Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -730,7 +757,7 @@
         "stage": "RESEARCH_COMPLETE / DISCOVERY_PROPOSED_NOT_RUN",
         "owner_proposal": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner",
         "experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
-        "date_checked": "2026-11-10 America/New_York; GSA/DHS methodology checks, supplier checks remain Nov8/9, no buyer proof",
+        "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
         "outcome": "No public website audited, bid identified, compliance certification or sale",
         "dedupe": "Complements #178/#185 acquisition and #183 QA; not a duplicate website redesign or internal accessibility audit.",
         "research_details": {
@@ -1002,7 +1029,9 @@
                 "accessed_at": "2026-11-10T06:05:31.634Z",
                 "truncated": false
               }
-            ]
+            ],
+            "nov11_record_review_at": "2026-11-11T01:09:39.564530-05:00",
+            "nov11_scope": "Record/outcome carry-forward only; no new source research for this candidate."
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -1477,8 +1506,8 @@
           }
         },
         "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
-        "checked_at": "2026-11-10T01:08:51.441503-05:00",
-        "record_version": "2026-11-10-nightly-v8",
+        "checked_at": "2026-11-11T01:09:39.564530-05:00",
+        "record_version": "2026-11-11-nightly-v9",
         "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
         "change_note": "Owner-directed accessibility second pass, costed manual-review/maintenance boundary and three supplier cards; score/outcome unchanged. No qualified manual reviewer or reachable client confirmed.",
         "allocation_tag": "Adjacent",
@@ -1535,8 +1564,8 @@
       }
     },
     {
-      "run_id": "mi-5da98feb274aadd74c428b608f68d03c",
-      "observed_at": "2026-11-10T06:08:51.441Z",
+      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
+      "observed_at": "2026-11-11T06:09:39.564Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -1565,7 +1594,7 @@
         "stage": "EXPLORATORY / EXPERIMENT_NOT_RUN",
         "owner_proposal": "Brian research accountable; Maya any approved recruitment; separate caption/accessibility reviewer; delivery unassigned",
         "experiment": "One original synthetic 10-minute webinar caption handoff, then 5 consented producer interviews only after exact recruitment approval",
-        "date_checked": "2026-11-10 America/New_York; record review only, original source dates retained",
+        "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
         "outcome": "No interviews, buyers, publication, revenue or independent signoff",
         "dedupe": "W03 video branch investigated, not a new generic music pack. Distinct from MI-002 public-sector web-template QA by buyer/job/channel; route to existing MI-002 if an agency needs that same Title II engagement. Adjacent #182 showcase is not a service launch; #189 staff posts are not deliverables for this offer.",
         "research_details": {
@@ -1669,7 +1698,9 @@
             "new_source_research": false,
             "business_case_analyzed_at": "2026-11-08T06:07:49.573454+00:00",
             "comparable_access_window": "2026-11-08T06:06:10Z–2026-11-08T06:07:03Z; original problem surveys not refreshed",
-            "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00"
+            "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
+            "nov11_record_review_at": "2026-11-11T01:09:39.564530-05:00",
+            "nov11_scope": "Record/outcome carry-forward only; no new source research for this candidate."
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -2117,8 +2148,8 @@
             "status": "Existing transitional D1 used; integrated Hub and independent recipient-runtime access not verified; no infrastructure/security changes"
           }
         },
-        "checked_at": "2026-11-10T01:08:51.441503-05:00",
-        "record_version": "2026-11-10-nightly-v8",
+        "checked_at": "2026-11-11T01:09:39.564530-05:00",
+        "record_version": "2026-11-11-nightly-v9",
         "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
         "allocation_tag": "New Stream",
         "allocation_rationale": "New video/creative-production revenue offer; not the web-audit service. Reclassify only on documented buyer/job change, never to make ratio look good.",
@@ -2174,8 +2205,8 @@
       }
     },
     {
-      "run_id": "mi-5da98feb274aadd74c428b608f68d03c",
-      "observed_at": "2026-11-10T06:08:51.441Z",
+      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
+      "observed_at": "2026-11-11T06:09:39.564Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -2206,7 +2237,7 @@
         "stage": "RESEARCH_COMPLETE / RULE_RECHECK_REQUIRED",
         "owner_proposal": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution",
         "experiment": "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests",
-        "date_checked": "2026-11-10 America/New_York; record review only, original source dates retained",
+        "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
         "outcome": "No certification/compliance guarantee; no buyer validation; current FAQ has legacy text and legal extract incomplete",
         "dedupe": "Distinct from #189 staff LinkedIn content and #184 Etsy/KDP listing work; no generic marketplace listing recommendation.",
         "research_details": {
@@ -2222,6 +2253,15 @@
                 "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"
               ],
               "status": "indirect_signal_not_validated_demand"
+            },
+            {
+              "observation": "Commission FAQ describes context/risk-specific literacy support and says no certificate or prescribed governance structure is required. FAQ references amended Article4 but also retains proposal wording; linked legal text unextractable.",
+              "evidence_urls": [
+                "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+                "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+              ],
+              "checked_at": "2026-11-11T06:05:03.295Z",
+              "status": "official_guidance_not_independently_verified_operative_law"
             }
           ],
           "competitor_analysis": [
@@ -2323,7 +2363,9 @@
             "new_source_research": false,
             "business_case_analyzed_at": "2026-11-08T06:07:49.573454+00:00",
             "comparable_access_window": "2026-11-08T06:06:10Z–2026-11-08T06:07:03Z; original problem surveys not refreshed",
-            "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00"
+            "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
+            "nov11_record_review_at": "2026-11-11T01:09:39.564530-05:00",
+            "nov11_scope": "Commission FAQ refreshed; linked EUR-Lex legal text extraction failed. FAQ truncated and mixes amended/proposal language; operative rule not independently resolved."
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -2811,8 +2853,8 @@
           }
         },
         "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
-        "checked_at": "2026-11-10T01:08:51.441503-05:00",
-        "record_version": "2026-11-10-nightly-v8",
+        "checked_at": "2026-11-11T01:09:39.564530-05:00",
+        "record_version": "2026-11-11-nightly-v9",
         "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
@@ -2864,7 +2906,8 @@
           "clock": "Preparation and buyer-test clock begins only after explicit authorization and capacity confirmation; day30 review still occurs if blocked"
         },
         "estimated_research_hours_30d": 2,
-        "decision_state": "HOLD_RULE_REVIEW"
+        "decision_state": "HOLD_RULE_REVIEW",
+        "change_note": "Official FAQ fresh-check supports no mandatory certificate positioning. Legal-text access remains unresolved, so HOLD_RULE_REVIEW and score59 unchanged."
       }
     }
   ]
