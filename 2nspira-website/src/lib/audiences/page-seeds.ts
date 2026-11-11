@@ -20,7 +20,7 @@ export const dedicatedAudiences: Industry[] = [
         { title: "The founder becomes the workflow", text: "Inquiries, appointments and updates depend on you remembering the next step. Growth adds administration before it adds capacity." },
       ],
       services: [
-        { title: "Make grounded technology decisions", text: "Technology planning can help compare build-versus-buy options, identify essential tools and agree a manageable sequence of investment.", href: "/fractional-cio" },
+        { title: "Make grounded technology decisions", text: "Technology planning can help compare build-versus-buy options, identify essential tools and agree a manageable sequence of investment.", href: "/technology-advisory" },
         { title: "Launch a focused digital experience", text: "Website and application implementation can turn an agreed scope into a useful first release, with a clear path for later improvements.", href: "/websites" },
         { title: "Remove repeatable busywork", text: "Practical automation can connect intake, notifications and routine updates so the same information does not need to be entered in several places.", href: "/automation-systems-optimization" },
 
@@ -49,7 +49,7 @@ export const dedicatedAudiences: Industry[] = [
         { title: "AI pressure is ahead of readiness", text: "Teams are asked to adopt new tools before use cases, data boundaries and review responsibilities have been agreed." },
       ],
       services: [
-        { title: "Turn priorities into a workable plan", text: "Technology leadership support can clarify dependencies, modernization options and sequencing so your team can make informed trade-offs.", href: "/fractional-cio" },
+        { title: "Turn priorities into a workable plan", text: "Technology leadership support can clarify dependencies, modernization options and sequencing so your team can make informed trade-offs.", href: "/technology-advisory" },
         { title: "Connect systems around the workflow", text: "Integration and automation can reduce rekeying, make exceptions visible and establish clearer handoffs between existing applications.", href: "/automation-systems-optimization" },
         { title: "Adopt AI with a defined purpose", text: "AI enablement can help select a bounded use case, establish human review and assess readiness before broader adoption.", href: "/ai-enablement" },
         { title: "Add focused delivery capacity", text: "Application and platform engineering can support a defined backlog, prototype or implementation, with agreed interfaces and handover expectations.", href: "/websites" },

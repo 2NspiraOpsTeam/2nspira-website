@@ -116,7 +116,7 @@ export default function Home() {
         { title: "Simplify our operations", href: "/automation-systems-optimization" },
         { title: "Put AI to work responsibly", href: "/ai-enablement" },
         { title: "Build a website or platform", href: "/websites" },
-        { title: "Get technology leadership", href: "/fractional-cio" },
+        { title: "Get technology leadership", href: "/technology-advisory" },
       ].map(item => <li key={item.href}><Link href={item.href}>{item.title}<span aria-hidden="true">↗</span></Link></li>)}</ul>
     </section>
 
@@ -137,7 +137,7 @@ export default function Home() {
         <p>Whether you’re growing a business, leading a team, serving a community, or building something new, we help you overcome what stands between where you are and where you want to go.</p>
         <ul className={styles.audienceNeeds}>{[
           { title: "Established & growing businesses", text: "Build the systems and digital experiences your next stage of growth demands.", href: "/services", action: "Find your starting point" },
-          { title: "Operations & technology leaders", text: "Bring clarity to technology decisions, simplify complexity, and build the capabilities to work effectively with AI.", href: "/fractional-cio", action: "Explore executive technology leadership" },
+          { title: "Operations & technology leaders", text: "Bring clarity to technology decisions, simplify complexity, and build the capabilities to work effectively with AI.", href: "/technology-advisory", action: "Explore executive technology leadership" },
           { title: "Schools & nonprofits", text: "Make limited resources go further through accessible digital services, practical technology, and stronger operations.", href: "/automation-systems-optimization", action: "Explore better ways of working" },
           { title: "Entrepreneurs & founders", text: "Launch a focused digital platform and connect the workflows your growing business needs.", href: "/who-we-serve/startups-entrepreneurs", action: "Explore technology support for founders" },
         ].map(audience => <li key={audience.title}><h3>{audience.title}</h3><p>{audience.text}</p><Link href={audience.href} className={styles.textLink}>{audience.action} <span aria-hidden="true">→</span></Link></li>)}</ul>

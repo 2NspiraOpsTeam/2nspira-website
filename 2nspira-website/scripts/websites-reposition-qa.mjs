@@ -8,7 +8,7 @@ try {
  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
  for(const width of [1440,768,390,320]){
   await page.setViewportSize({width,height:1000});
-  for(const route of ['/','/websites','/work','/services','/contact','/ai-enablement','/automation-systems-optimization','/fractional-cio']){
+  for(const route of ['/','/websites','/work','/services','/contact','/ai-enablement','/automation-systems-optimization','/technology-advisory']){
    const response=await page.goto(base+route,{waitUntil:'networkidle'});check(response.status()===200,route+' status');
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),route+' overflow '+width);
    const text=await page.locator('main').innerText();check(!/mobile app|Websites, Apps|Entrepreneur Mentoring|internal review draft|proposed managed website plans|Payload CMS/i.test(text),'obsolete public content '+route);
@@ -23,7 +23,7 @@ try {
     const summary=page.locator('main details summary').first();await summary.focus();await page.keyboard.press('Enter');check(await summary.locator('..').getAttribute('open')!==null,'keyboard open');await page.keyboard.press('Enter');check(await summary.locator('..').getAttribute('open')===null,'keyboard close');
     await page.screenshot({path:`/tmp/reposition-websites-${width}.png`,fullPage:true});
    }
-   if(route==='/'||route==='/services'){check(await page.locator('#find-the-right-service a[href="/websites"]').count()>0,'website discovery');check(text.includes('AI Enablement')&&text.includes('Business Automation')&&text.includes('Executive Technology Advisory'),'other services');}
+   if(route==='/'||route==='/services'){check(await page.locator('#find-the-right-service a[href="/websites"]').count()>0,'website discovery');check(text.includes('AI Enablement')&&text.includes('Business Automation')&&text.includes('Technology Advisory & Leadership'),'other services');}
    if(route==='/work'){check(text.includes('Client Websites')&&text.includes('Custom Digital Platforms'),'portfolio categories');await page.screenshot({path:`/tmp/reposition-work-${width}.png`,fullPage:true});}
   }
   await page.goto(base+'/',{waitUntil:'networkidle'});

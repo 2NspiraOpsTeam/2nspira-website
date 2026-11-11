@@ -2,7 +2,7 @@ export const serviceLinks = [
   { name: "Websites & Custom Digital Platforms", href: "/websites" },
   { name: "Business Automation & Integrations", href: "/automation-systems-optimization" },
   { name: "Organizational AI enablement", href: "/ai-enablement" },
-  { name: "Executive Technology Advisory", href: "/fractional-cio" },
+  { name: "Technology Advisory & Leadership", href: "/technology-advisory" },
   { name: "Managed Services & Support", href: "/managed-services-support" },
 ];
 

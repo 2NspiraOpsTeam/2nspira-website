@@ -43,7 +43,7 @@ const servicesJsonLd = {
         "@type": "ItemList",
         itemListElement: [
           ...serviceNeeds.map(item => ({ name: item.name, url: `https://2nspira.com${item.href}` })),
-          { name: "Executive Technology Advisory", url: "https://2nspira.com/fractional-cio" },
+          { name: "Technology Advisory & Leadership", url: "https://2nspira.com/technology-advisory" },
           { name: "Managed Services & Support", url: "https://2nspira.com/managed-services-support" },
         ].map((item, index) => ({ "@type": "ListItem", position: index + 1, ...item })),
       },
@@ -81,10 +81,10 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#fractional-leadership",
-      name: "Executive Technology Advisory",
+      name: "Technology Advisory & Leadership",
       description:
-        "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
-      url: "https://2nspira.com/fractional-cio",
+        "Technology strategy, planning, vendor guidance and leadership support, including Fractional CIO engagements, aligned with your business goals.",
+      url: "https://2nspira.com/technology-advisory",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
     },
@@ -122,7 +122,7 @@ export default function ServicesPage() {
             A stronger business starts with your next right move.
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
-            Turn technology uncertainty, disconnected operations, and growing pains into a clearer path forward. From responsible AI and connected systems to digital experiences and executive technology advisory, we help you move from what’s holding you back to what comes next.
+            Turn technology uncertainty, disconnected operations, and growing pains into a clearer path forward. From responsible AI and connected systems to digital experiences and technology advisory and leadership, we help you move from what’s holding you back to what comes next.
           </p>
           <ServiceConversation label="Let’s talk about your next step" />
           <a href="#find-the-right-service" className={`mt-4 min-h-11 ${linkInline}`}>Find the right service <span aria-hidden="true"> ↓</span></a>
@@ -174,7 +174,7 @@ export default function ServicesPage() {
 
       <section className={section} aria-labelledby="connected-services-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="connected-services-heading" className={h2}>One challenge. The right combination of support.</h2>
-        <p className="mt-4 max-w-3xl leading-8 text-body">A growing business might begin with <Link className={linkInline} href="/fractional-cio">technology leadership</Link>, identify a disconnected handoff, then prioritize <Link className={linkInline} href="/automation-systems-optimization">workflow automation</Link> or a <Link className={linkInline} href="/websites">customer portal</Link>. Each step is scoped around the need—not a requirement to buy every service.</p>
+        <p className="mt-4 max-w-3xl leading-8 text-body">A growing business might begin with <Link className={linkInline} href="/technology-advisory">technology leadership</Link>, identify a disconnected handoff, then prioritize <Link className={linkInline} href="/automation-systems-optimization">workflow automation</Link> or a <Link className={linkInline} href="/websites">customer portal</Link>. Each step is scoped around the need—not a requirement to buy every service.</p>
         <p className="mt-4 font-medium text-ink">Understand the challenge. Set the direction. Make it work.</p>
       </div></section>
       <section className={section} aria-labelledby="explore-heading">

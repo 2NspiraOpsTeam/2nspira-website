@@ -1,6 +1,7 @@
+import BreadcrumbList from "@/components/BreadcrumbList";
 import ExecutiveLensesCarousel from "@/components/ExecutiveLensesCarousel";
 import ServiceJourney from "@/components/ServiceJourney";
-import styles from "./FractionalCio.module.css";
+import styles from "./TechnologyAdvisory.module.css";
 import polish from "@/components/ServicePolish.module.css";
 import ServiceEffects from "@/components/ServiceEffects";
 import { publicPageMetadata } from "@/lib/pageMetadata";
@@ -25,10 +26,10 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: "Executive Technology Advisory",
-  shareTitle: "Clearer decisions. Technology that serves your goals.",
-  description: "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
-  path: "/fractional-cio"
+  title: "Technology Advisory & Leadership",
+  shareTitle: "Technology Advisory & Leadership",
+  description: "Technology strategy, planning, vendor guidance and leadership support, including Fractional CIO engagements, aligned with your business goals.",
+  path: "/technology-advisory"
 });
 
 const executiveLenses = [
@@ -55,28 +56,30 @@ const outcomes = [
   { title: "A more resilient environment", text: "Less avoidable complexity, better governance, and a practical path for modernization." },
 ];
 
-const fractionalCioJsonLd = {
+const technologyAdvisoryJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Executive Technology Advisory",
+  name: "Technology Advisory & Leadership",
   description:
-    "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
-  url: "https://2nspira.com/fractional-cio",
+    "Technology strategy, planning, vendor guidance and leadership support, including Fractional CIO engagements, aligned with your business goals.",
+  url: "https://2nspira.com/technology-advisory",
   provider: { "@id": "https://2nspira.com/#organization" },
   areaServed: "Worldwide",
 };
 
-export default function FractionalCioPage() {
+export default function TechnologyAdvisoryPage() {
   return (
     <main className={`${pageMain} ${polish.page} ${styles.page}`} id="main-content"><ServiceEffects>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fractionalCioJsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(technologyAdvisoryJsonLd).replace(/</g, "\\u003c") }} />
+      <BreadcrumbList items={[{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Technology Advisory & Leadership", url: "/technology-advisory" }]} />
       <section data-service-hero className="relative overflow-hidden border-b border-line bg-surface">
         <AmbientField />
+        <nav aria-label="Breadcrumb" className="relative mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 pt-6 text-sm text-body sm:px-6"><Link href="/" className={linkInline}>Home</Link><span aria-hidden="true">/</span><Link href="/services" className={linkInline}>Services</Link><span aria-hidden="true">/</span><span aria-current="page">Technology Advisory &amp; Leadership</span></nav>
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-14">
           <div>
-            <p><EyebrowPill>Executive Technology Advisory</EyebrowPill></p>
-            <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Technology leadership without the full-time executive overhead</h1>
-            <p className={`mt-6 ${lead}`}>A selective premium engagement spanning AI enablement, business automation and digital platforms. Set priorities, guide investment and align delivery with experienced executive technology judgment.</p>
+            <p><EyebrowPill>Technology Advisory & Leadership</EyebrowPill></p>
+            <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Clear technology direction. Leadership that moves you forward.</h1>
+            <p className={`mt-6 ${lead}`}>Technology strategy, practical planning, vendor guidance and leadership support for the decisions ahead. Engage us for focused advice or ongoing Fractional CIO leadership, with responsibilities agreed around your needs.</p>
             <ServiceConversation service="advisory" label="Discuss your technology decisions" />
           </div>
           <Reveal variant="scale">
@@ -87,19 +90,28 @@ export default function FractionalCioPage() {
           </Reveal>
         </div>
       </section>
-      <nav aria-label="Explore Fractional CIO services" className={styles.sectionNav}>
+      <nav aria-label="Explore Technology Advisory & Leadership" className={styles.sectionNav}>
         <div className="mx-auto flex max-w-6xl flex-wrap gap-x-6 gap-y-1 px-4 py-4 sm:px-6">
-          {[["#fit-heading", "Is this for you?"], ["#approach-heading", "How we work"], ["#deliverables-heading", "What you take away"], ["#executive-profile", "Your technology partner"]].map(([href, label]) => <a key={href} href={href} className={`inline-flex min-h-11 items-center text-sm ${linkInline}`}>{label} <span aria-hidden="true" className="ml-2">↗</span></a>)}
+          {[["#advisory-offerings", "Ways we can help"], ["#fit-heading", "Is this for you?"], ["#approach-heading", "How we work"], ["#deliverables-heading", "What you take away"], ["#executive-profile", "Your technology partner"]].map(([href, label]) => <a key={href} href={href} className={`inline-flex min-h-11 items-center text-sm ${linkInline}`}>{label} <span aria-hidden="true" className="ml-2">↗</span></a>)}
         </div>
       </nav>
+      <section id="advisory-offerings" className={`${section} scroll-mt-24`} aria-labelledby="advisory-offerings-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <p className={eyebrow}>Advice, planning and leadership</p><h2 id="advisory-offerings-heading" className={`mt-4 ${h2}`}>The right level of support for your next step</h2><p className={`mt-4 max-w-3xl ${lead}`}>Start with a specific decision or build an ongoing leadership relationship. Scope, cadence and decision authority are agreed before work begins.</p>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">{[
+          { title: "Technology strategy & planning", text: "Connect business goals to a practical technology roadmap, investment priorities and modernization sequence. Compare options, dependencies and risks before committing." },
+          { title: "Vendor guidance", text: "Assess solution fit, compare proposals and clarify vendor responsibilities, renewal questions and delivery expectations. Your organization retains purchasing and contract approval." },
+          { title: "Leadership support", text: "Bring experienced judgment to initiatives, governance and coordination across your team and partners. Establish clear owners, decision checkpoints and a workable review cadence." },
+          { title: "Fractional CIO", text: "Ongoing, part-time senior technology leadership for organizations that need CIO-level direction without a full-time appointment. Align strategy, investment, governance and delivery oversight through an agreed remit; decision authority remains yours unless explicitly delegated." },
+        ].map(offering => <article key={offering.title} className={`p-6 ${cardFlat}`}><h3 className={h3}>{offering.title}</h3><p className="mt-3 text-sm leading-7 text-body">{offering.text}</p></article>)}</div>
+      </div></section>
       <ServiceJourney service="advisory" />
       <section className={section} aria-labelledby="fit-heading">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal><figure className={styles.editorialImage}><Image src="/images/pages/fractional-cio-focus.webp" alt="Illustrative business leader reviewing technology information at a workstation." width={600} height={674} sizes="(min-width: 1024px) 520px, calc(100vw - 32px)" className="aspect-[4/3] w-full object-cover object-[center_35%]" /></figure></Reveal>
           <div><p className={eyebrow}>When the decisions get bigger</p><h2 id="fit-heading" className={`mt-4 ${h2}`}>Growing complexity. A leadership gap.</h2>
-            <p className={`mt-4 ${lead}`}>You don’t need another tool. You need a clear way forward.</p>
+            <p className={`mt-4 ${lead}`}>Before choosing another tool, clarify the direction and support your organization needs.</p>
             <ul className="mt-6 space-y-4">{["Technology spending is growing, but priorities are unclear.", "Vendors, systems, and teams are pulling in different directions.", "Modernization has stalled—or risk is getting harder to ignore."].map(text => <li key={text} className={styles.signal}><span aria-hidden="true">↗</span><p>{text}</p></li>)}</ul>
-            <p className="mt-6 text-sm leading-7 text-muted">Executive direction and accountability—not outsourced help-desk support. Your team and vendors remain part of the picture.</p>
+            <p className="mt-6 text-sm leading-7 text-muted">Strategic advice, planning and leadership—not outsourced help-desk support. Your team and vendors remain part of the picture.</p>
           </div>
         </div>
       </section>
@@ -127,13 +139,14 @@ export default function FractionalCioPage() {
         <div><p className={eyebrow}>Your technology partner</p><h2 id="executive-profile-heading" className={`mt-4 ${h2}`}>Experienced judgment. Independent perspective.</h2><p className="mt-5 leading-7 text-body">Jeffrey V. Cortez brings 20+ years of technology leadership across education, financial services, conservation, and enterprise operations. His collaborative approach connects executive direction with practical implementation.</p><p className="mt-4 leading-7 text-body">Our recommendations follow your needs—not a platform or license we need to sell.</p><div className="mt-5 flex flex-wrap gap-x-6 gap-y-2"><Link href="/about#executive-profile" className={`inline-flex min-h-11 items-center ${linkInline}`}>Meet Jeffrey →</Link><Link href="/work#internal-engineering" className={`inline-flex min-h-11 items-center ${linkInline}`}>Explore our engineering practice →</Link></div></div>
       </div></section>
       <ServiceQuestions items={[
-        { question: "Is this the same as outsourced IT support?", answer: "No. Fractional CIO work provides executive direction, decision support, and accountability. Day-to-day technical support and hands-on implementation are different responsibilities and are not automatically included." },
+        { question: "Is this the same as outsourced IT support?", answer: "No. Technology Advisory & Leadership covers strategy, planning, vendor guidance and leadership support. Fractional CIO is an ongoing leadership offering within that broader service. Day-to-day technical support and hands-on implementation are scoped separately and are not automatically included." },
+        { question: "Do we need an ongoing Fractional CIO engagement?", answer: "No. You can start with a focused technology decision, planning exercise or vendor review. Fractional CIO is available when you need ongoing senior leadership; it is not a requirement for advisory work." },
         { question: "What does a starting engagement look like?", answer: "We begin with your priorities, current environment, and decisions that need attention. We agree the leadership scope, authority, responsibilities, and way of working before the engagement begins." },
         { question: "Can you work with our existing team and vendors?", answer: "Yes. The service is designed to connect leadership, internal capability, and partners around a shared direction. Your organization retains business decision ownership, and any delegated authority is agreed explicitly." },
       ]} />
       <section className={sectionBand} aria-labelledby="fractional-cio-cta-heading">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <h2 id="fractional-cio-cta-heading" className={h2}>Bring executive clarity to your next technology decision</h2>
+          <h2 id="fractional-cio-cta-heading" className={h2}>Bring clarity to your next technology decision</h2>
           <p className={`mx-auto mt-4 max-w-2xl ${lead}`}>Start with the priorities, decisions, or initiatives that need stronger technology leadership now.</p>
           <div className="mt-10">
             <ServiceConversation service="advisory" label="Discuss your technology decisions" centered />

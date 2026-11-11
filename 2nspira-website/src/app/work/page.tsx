@@ -253,7 +253,7 @@ export default async function WorkPage() {
               </article>;
             })}
           </div>
-          <p className="mt-6 text-sm leading-7 text-body">Relevant to <Link href="/ai-enablement" className="text-accent underline">AI enablement</Link>, <Link href="/websites" className="text-accent underline">digital platforms</Link>, and <Link href="/fractional-cio" className="text-accent underline">technology leadership</Link>. Scope and applicability differ by engagement.</p>
+          <p className="mt-6 text-sm leading-7 text-body">Relevant to <Link href="/ai-enablement" className="text-accent underline">AI enablement</Link>, <Link href="/websites" className="text-accent underline">digital platforms</Link>, and <Link href="/technology-advisory" className="text-accent underline">technology leadership</Link>. Scope and applicability differ by engagement.</p>
         </section>
         <section id="concepts-prototypes" className="mb-24 scroll-mt-24" aria-labelledby="concepts-heading">
           <p className="text-sm font-semibold text-accent">2Nspira platform engineering · Internal project</p>
