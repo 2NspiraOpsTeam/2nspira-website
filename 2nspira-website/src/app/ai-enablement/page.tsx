@@ -1,3 +1,5 @@
+import PlatformCarousel from "@/components/platforms/PlatformCarousel";
+import { aiTools } from "@/lib/ai-tools";
 import PageSections from "@/components/PageSections";
 import { Compass, UsersRound, Workflow, Database, ShieldCheck, ChartNoAxesCombined } from "lucide-react";
 import polish from "@/components/ServicePolish.module.css";
@@ -73,7 +75,14 @@ export default function Page() {
         <p className="mt-8 border-t border-line pt-5 text-sm font-medium text-muted">We don’t just help you adopt AI. We help you build the capabilities to succeed with it.</p>
       </div>
     </section>
-    <PageSections items={[["ai-capabilities-heading", "Build capability"], ["ai-roadmap-heading", "Your roadmap"], ["ai-work-heading", "See it in practice"], ["personal-ai-assistant", "Personal AI assistance"]]} />
+    <PageSections items={[["ai-tools", "Tools & platforms"], ["ai-capabilities-heading", "Build capability"], ["ai-roadmap-heading", "Your roadmap"], ["ai-work-heading", "See it in practice"], ["personal-ai-assistant", "Personal AI assistance"]]} />
+    <section id="ai-tools" aria-labelledby="ai-tools-heading" className="scroll-mt-24 border-b border-line bg-canvas-deep py-10 sm:py-12">
+      <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6">
+        <p className="text-sm font-semibold uppercase tracking-widest text-accent">Hands-on AI experience</p>
+        <h2 id="ai-tools-heading" className={`mt-4 max-w-3xl ${h2}`}>AI tools & platforms we work with.</h2>
+        <PlatformCarousel platforms={aiTools} label="AI tool logos" listLabel="AI tools and platforms" description="Tools we use across AI-assisted research, development and connected workflows—from hosted assistants to local and open-weight ecosystems." notice="Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification." />
+      </div>
+    </section>
     <section className={section} aria-labelledby="ai-capabilities-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <EyebrowPill>What an AI-enabled organization looks like</EyebrowPill>
       <h2 id="ai-capabilities-heading" className={`mt-5 max-w-3xl ${h2}`}>AI isn’t another tool. It’s a new organizational capability.</h2>
