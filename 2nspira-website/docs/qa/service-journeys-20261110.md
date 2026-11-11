@@ -33,3 +33,7 @@ Rollback: remove the new preview Team row/tables and migration ledger entry only
 - Visually inspected rendered support mobile and automation desktop screenshots; further exact-head hosted QA recorded on the implementation PR.
 - Image artifact staging: all 280 source public images matched built artifact SHA-256. This app has no separate guarded rendition namespace.
 - Form delivery outcomes are simulated; no live email or booking is sent as part of QA. No measured conversion/customer comprehension, full WCAG certification, external connector operation, authenticated portal QA or production verification claimed.
+
+## Authorized production refinement — November 10
+
+Jeffrey approved production publication and requested engaging sections, restrained effects and less visible text. Reused the installed Lucide icons, Reveal progressive enhancement and native disclosures; no new dependency or animation framework. All five service journeys now expose three visual routes to audience fit, evidence and human delivery; contract details remain accessible in a disclosure. Website offering lists and case scope, plus AI capability/roadmap detail, are collapsed by default. Support gains visual coverage cards and numbered steps. Inquiry behavior and published-evidence boundaries remain unchanged. Motion honors reduced-motion preference and content remains server-rendered without JavaScript.

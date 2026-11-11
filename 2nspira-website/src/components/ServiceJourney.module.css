@@ -1,0 +1,7 @@
+.pathway { display: flex; flex-direction: column; height: 100%; padding: 1.5rem; position: relative; overflow: hidden; }
+.pathway::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--color-accent); opacity: .25; transition: opacity 240ms ease; }
+.icon { display: inline-flex; width: 3rem; height: 3rem; align-items: center; justify-content: center; border-radius: 1rem; margin-bottom: 1.25rem; color: var(--color-accent-strong); background: var(--color-accent-soft); }
+.pathway:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+.pathway:hover::before, .pathway:focus-visible::before { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) { .pathway { transition: transform 240ms ease, box-shadow 240ms ease; } .pathway:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); } }
+@media (prefers-reduced-motion: reduce) { .pathway::before { transition: none; } }
