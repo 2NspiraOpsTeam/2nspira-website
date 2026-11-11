@@ -42,7 +42,7 @@ def fetch(url):
         status = subprocess.check_output(['curl', '-sS', '--max-time', '30', '-D', str(headers), '-o', str(body), '-w', '%{http_code}', url], text=True)
         return int(status), headers.read_text(), body.read_text()
 
-routes = ['', '/services', '/about', '/insights', '/contact', '/resources', '/resources/strength-profile', '/resources/ai-readiness-scorecard', '/ai-enablement', '/fractional-cio', '/privacy-policy', '/terms-conditions', '/refund-cancellation', '/copyright', '/books', '/blog/categories/trust-is-the-operating-system']
+routes = ['', '/services', '/about', '/insights', '/contact', '/resources', '/resources/strength-profile', '/resources/ai-readiness-scorecard', '/ai-enablement', '/technology-advisory', '/privacy-policy', '/terms-conditions', '/refund-cancellation', '/copyright', '/books', '/blog/categories/trust-is-the-operating-system']
 posts = json.loads((ROOT / 'src/content/posts/index.json').read_text())
 routes += ['/post/' + post['slug'] for post in posts]
 for route in routes:

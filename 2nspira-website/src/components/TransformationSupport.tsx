@@ -12,9 +12,9 @@ export default function TransformationSupport() {
         <article className={`p-7 ${cardFlat}`}>
           <Image src="/images/audiences/advisory-strategy-1280.webp" alt="Contrasting chess knights on a board, a visual for strategic technology decisions." width={1280} height={853} unoptimized loading="lazy" sizes="(min-width: 768px) 50vw, 100vw" className="mb-6 aspect-[16/8] w-full rounded-2xl object-cover" />
           <p className="text-sm font-semibold text-accent">Selective premium engagement</p>
-          <h3 className={`mt-3 ${h3}`}>Executive Technology Advisory</h3>
+          <h3 className={`mt-3 ${h3}`}>Technology Advisory & Leadership</h3>
           <p className="mt-4 leading-7 text-body">Senior technology judgment spanning AI enablement, business automation and digital platforms. Align strategy, governance, investment and delivery around the decisions that matter.</p>
-          <Link href="/fractional-cio" className={`mt-5 min-h-11 ${linkInline}`}>Explore executive advisory →</Link>
+          <Link href="/technology-advisory" className={`mt-5 min-h-11 ${linkInline}`}>Explore technology advisory →</Link>
         </article>
         <article id="ongoing-support" className={`scroll-mt-28 p-7 ${cardFlat}`}>
           <Image src="/images/audiences/managed-infrastructure-1280.webp" alt="Network equipment racks and structured cabling in a technology infrastructure room." width={1280} height={853} unoptimized loading="lazy" sizes="(min-width: 768px) 50vw, 100vw" className="mb-6 aspect-[16/8] w-full rounded-2xl object-cover" />

@@ -3,7 +3,7 @@ const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright-core');
 const base=process.argv[2]||'http://localhost:3377';
 const browser=await chromium.launch({channel:'chrome',headless:true});
 let checks=0;const check=(v,m)=>{assert.ok(v,m);checks++};
-const services=[['/websites','websites','Website development or redesign'],['/automation-systems-optimization','automation','Business Automation & Integrations'],['/ai-enablement','ai','AI Enablement'],['/fractional-cio','advisory','Executive Technology Advisory'],['/managed-services-support','support','Managed Services & Support']];
+const services=[['/websites','websites','Website development or redesign'],['/automation-systems-optimization','automation','Business Automation & Integrations'],['/ai-enablement','ai','AI Enablement'],['/technology-advisory','advisory','Technology Advisory & Leadership'],['/managed-services-support','support','Managed Services & Support']];
 try{
  const ctx=await browser.newContext({extraHTTPHeaders:{'x-forwarded-proto':'https'},reducedMotion:'reduce'});
  const page=await ctx.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -41,7 +41,7 @@ try{
   await page.goto(base+'/',{waitUntil:'networkidle'});
   if(width<1024){await page.getByRole('button',{name:'Open menu',exact:true}).click();await page.getByRole('dialog').getByRole('button',{name:/^(Our )?Services$/}).click();}
   else await page.getByRole('button',{name:/^(Our )?Services$/}).click();
-  for(const name of ['Websites & Custom Digital Platforms','Business Automation & Integrations','Organizational AI enablement','Executive Technology Advisory','Managed Services & Support']){
+  for(const name of ['Websites & Custom Digital Platforms','Business Automation & Integrations','Organizational AI enablement','Technology Advisory & Leadership','Managed Services & Support']){
    const a=page.getByRole('link',{name,exact:true}).filter({visible:true}).first();check(await a.isVisible(),'menu '+name);const box=await a.boundingBox();check(box.x>=0&&box.x+box.width<=width+1,'menu fit '+name);
   }
   const support=page.getByRole('link',{name:'Managed Services & Support',exact:true}).filter({visible:true}).first();await support.focus();await page.keyboard.press('Enter');await page.waitForURL('**/managed-services-support');check(await page.getByRole('heading',{level:1,name:'Managed Services & Support',exact:true}).isVisible(),'menu activation');

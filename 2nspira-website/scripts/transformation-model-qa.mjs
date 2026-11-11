@@ -8,14 +8,14 @@ const context=await browser.newContext({extraHTTPHeaders:{'x-forwarded-proto':'h
 const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
 for(const width of [1440,768,390,320]){
  await page.setViewportSize({width,height:900});
- for(const route of ['/','/services','/fractional-cio','/about','/insights','/resources','/careers','/who-we-serve/startups-entrepreneurs']){
+ for(const route of ['/','/services','/technology-advisory','/about','/insights','/resources','/careers','/who-we-serve/startups-entrepreneurs']){
   const response=await page.goto(base+route,{waitUntil:'networkidle'});check(response.status()===200,route);
   check(await page.locator('a[href="/coaching"],a[href="/entrepreneur-mentoring"]').count()===0,'retired links '+route);
   check(!/Entrepreneur Mentoring|industry-aligned coach|founder mentoring|advice, mentoring/i.test(await page.locator('body').innerText()),'retired promotion '+route);
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'overflow '+route+' '+width);
   for(const node of await page.locator('script[type="application/ld+json"]').all())JSON.parse(await node.textContent());
   if(route==='/'||route==='/services'){
-   for(const label of ['AI Enablement','Business Automation','Digital Platforms','Executive Technology Advisory','Ongoing Managed Services & Support'])check((await page.locator('main').innerText()).includes(label),label);
+   for(const label of ['AI Enablement','Business Automation','Digital Platforms','Technology Advisory & Leadership','Ongoing Managed Services & Support'])check((await page.locator('main').innerText()).includes(label),label);
    check(await page.locator('#ongoing-support').count()===1,'support anchor');
    check(await page.locator('main').getByText('Creative Studio',{exact:true}).count()===1,'studio separate');
    for(const img of await page.locator('#find-the-right-service img, main > section:first-child img').all()){ await img.scrollIntoViewIfNeeded(); await img.evaluate(i=>i.decode()); check(await img.evaluate(i=>i.naturalWidth>0),'image loaded'); }
