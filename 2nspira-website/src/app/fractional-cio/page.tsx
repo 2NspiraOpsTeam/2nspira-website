@@ -1,3 +1,4 @@
+import ExecutiveLensesCarousel from "@/components/ExecutiveLensesCarousel";
 import ServiceJourney from "@/components/ServiceJourney";
 import styles from "./FractionalCio.module.css";
 import polish from "@/components/ServicePolish.module.css";
@@ -119,7 +120,7 @@ export default function FractionalCioPage() {
         </div>
       </section>
       <section className={sectionBand} aria-labelledby="lenses-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6"><p className={eyebrow}>The connected view</p><h2 id="lenses-heading" className={`mt-4 ${h2}`}>See the whole business. Not just the technology.</h2><p className="mt-4 max-w-2xl leading-7 text-body">Eight executive lenses help reveal dependencies, clarify ownership, and put business impact first.</p>
-        <details className={styles.disclosure}><summary>Explore the eight executive lenses</summary><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{executiveLenses.map((lens, index) => <article key={lens.title} className={`p-5 ${cardFlat}`}><span className="text-sm font-semibold text-accent">{String(index + 1).padStart(2, "0")}</span><h3 className={`mt-3 ${h3}`}>{lens.title}</h3><p className="mt-2 text-sm leading-6 text-body">{lens.text}</p></article>)}</div></details>
+        <ExecutiveLensesCarousel lenses={executiveLenses} />
       </div></section>
       <section id="executive-profile" className={section} aria-labelledby="executive-profile-heading"><div className="mx-auto grid max-w-6xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[0.65fr_1.35fr]">
         <Reveal><Image src="/images/leadership/jeffrey-cortez-linkedin-20261103.jpg" alt="Jeffrey V. Cortez" width={400} height={400} sizes="(min-width: 1024px) 320px, 240px" className="mx-auto aspect-square w-60 rounded-[2rem] object-cover lg:w-80" /></Reveal>
