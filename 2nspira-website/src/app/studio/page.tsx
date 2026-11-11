@@ -7,9 +7,9 @@ import { publishedStudio } from "@/lib/studio/server";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = publicPageMetadata({
-  title: "Creative Studio — Watch. Read. Shop.",
+  title: "Creative Studio — Watch. Listen. Read. Play. Shop.",
   description:
-    "Explore our YouTube channel, read articles and introductions to our books, and shop published books, rare editions, and creative products.",
+    "Watch our YouTube videos, listen to music and ambience, read articles and book introductions, play with creative activities, and shop books and creative products.",
   path: "/studio",
 });
 export default async function Page({

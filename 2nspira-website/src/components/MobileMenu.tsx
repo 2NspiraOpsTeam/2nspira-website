@@ -218,7 +218,7 @@ export default function MobileMenu({
         </div>
 
         <nav className="space-y-1 py-5" aria-label="Mobile navigation">
-          {accordion("services", "Our Services", serviceLinks, serviceButtonRef)}
+          {accordion("services", "Services", serviceLinks, serviceButtonRef)}
           <Link
             href="/work"
             onClick={handleClose}

@@ -194,7 +194,7 @@ export default function Header() {
           aria-label="Main navigation"
           onKeyDown={handleNavigationKeyDown}
         >
-          {renderMenu("services", "Our Services", serviceLinks)}
+          {renderMenu("services", "Services", serviceLinks)}
           <Link
             href={primaryLinks[0].href}
             aria-current={

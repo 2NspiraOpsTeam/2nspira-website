@@ -10,7 +10,7 @@ const stories = {
   listen: { Icon: Headphones, title: "A little space to exhale.", text: "Music & Ambience. Rain on an attic window, a mossy garden, or a quiet café. Step into an original soundscape and stay a while.", label: "Discover Listen", image: `/images/videos/${featuredVideo.id}.jpg`, alt: featuredVideo.title },
   read: { Icon: BookOpen, title: "Ideas that stay with you.", text: "A leadership book to return to. Insights that make you pause. Explore the human side of technology, trust, and change.", label: "Discover Read", image: "", alt: "" },
   shop: { Icon: ShoppingBag, title: "Find something worth keeping.", text: "Shop our published books, rare and collectible editions, and other creative products. Purchase through the existing Amazon, Etsy, and 2Nspira Books listings.", label: "Explore Shop", image: "/images/shop/rare-books-website.webp", alt: "The 2Nspira Books collectible bookstore" },
-  play: { Icon: Sparkles, title: "Follow your curiosity.", text: "Follow the clues in Breadcrumb, get lost in a coloring page, or bring everyone together around a playful challenge.", label: "Discover Play", image: "", alt: "" },
+  play: { Icon: Sparkles, title: "Follow your curiosity.", text: "Get lost in a coloring page, explore an activity book, or bring everyone together around a playful challenge.", label: "Discover Play", image: "", alt: "" },
 };
 export default function StudioOverview({ content }: { content: Studio }) {
   const c = publicStudio(content);
