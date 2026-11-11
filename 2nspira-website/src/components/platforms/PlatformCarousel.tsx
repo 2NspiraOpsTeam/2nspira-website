@@ -28,11 +28,15 @@ export default function PlatformCarousel({ platforms, description = "Platforms a
     let width = list.getBoundingClientRect().width;
     const observer = new ResizeObserver(() => { width = list.getBoundingClientRect().width; });
     observer.observe(list);
-    let previous = 0, request = 0;
+    let previous = 0, request = 0, remainder = 0;
     const tick = (time: number) => {
       if (previous && width > 0 && !document.hidden) {
-        const next = frame.scrollLeft + Math.min(time - previous, 80) * 0.035;
-        frame.scrollLeft = next >= width ? next % width : next;
+        // Preserve subpixel distance: browsers may quantize scrollLeft, so
+        // adding less than half a CSS pixel per 120Hz frame can otherwise stall.
+        const next = frame.scrollLeft + Math.min(time - previous, 80) * 0.035 + remainder;
+        const target = next >= width ? next % width : next;
+        frame.scrollLeft = target;
+        remainder = target - frame.scrollLeft;
       }
       previous = time;
       request = requestAnimationFrame(tick);
