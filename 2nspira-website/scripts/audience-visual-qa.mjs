@@ -21,7 +21,7 @@ try{
    await p.reload({waitUntil:'networkidle'});check(await p.locator('main details[open]').count()===0);
   }console.log('PASS four pages: images, scannability, keyboard disclosures, layout and refresh at '+width);
  }
- await p.goto(base+'/who-we-serve',{waitUntil:'networkidle'});const cards=p.locator('#industries article img');check(await cards.count()===4);for(const i of await cards.all()){await i.scrollIntoViewIfNeeded();await i.evaluate(e=>e.decode());check(await i.evaluate(e=>e.naturalWidth>0));}check(await p.locator('#industries article').count()===7);
+ await p.goto(base+'/who-we-serve',{waitUntil:'networkidle'});const cards=p.locator('#industries article img');check(await cards.count()===8);for(const i of await cards.all()){await i.scrollIntoViewIfNeeded();await i.evaluate(e=>e.decode());check(await i.evaluate(e=>e.naturalWidth>0));}check(await p.locator('#industries article').count()===8);
  await context.close();
  for(const options of [{javaScriptEnabled:false},{reducedMotion:'reduce'}]){
   const c=await browser.newContext({...options,viewport:{width:390,height:844},extraHTTPHeaders:{'x-forwarded-proto':'https'}});const q=await c.newPage();await q.goto(base+'/who-we-serve/'+routes[0],{waitUntil:'networkidle'});const d=q.locator('main details').first();await d.locator('summary').click();check(await d.getAttribute('open')!==null);check(await d.locator('p').isVisible());check(await q.locator('[data-audience-hero]').evaluate(i=>i.complete&&i.naturalWidth>0));await c.close();
