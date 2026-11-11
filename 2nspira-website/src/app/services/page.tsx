@@ -68,9 +68,9 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#websites",
-      name: "Digital Platforms",
+      name: "Websites & Custom Digital Platforms",
       description:
-        "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites, web and mobile apps, and custom internal operations solutions connected to the way your business works.",
+        "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites, custom web applications, and custom internal operations solutions connected to the way your business works.",
       url: "https://2nspira.com/websites",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
@@ -137,7 +137,7 @@ export default function ServicesPage() {
           </p></div>
 
           <nav aria-label="Jump to a service" className="mt-7 flex flex-wrap gap-3">
-            {serviceNeeds.map((service, index) => <a key={service.href} href={`#service-${index + 1}`} className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">{["AI Enablement", "Business Automation", "Digital Platforms"][index]}</a>)}
+            {serviceNeeds.map((service, index) => <a key={service.href} href={`#service-${index + 1}`} className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">{service.name}</a>)}
           </nav>
           <ClientServiceGrid />
           <p className="mt-6 max-w-3xl text-sm leading-7 text-body">These are examples of support, not fixed packages. We agree what to assess, advise on, or implement before the work begins.</p>

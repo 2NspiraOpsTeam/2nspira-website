@@ -31,6 +31,14 @@ export async function POST(request: NextRequest) {
   const organization = clean(payload.organization, 160);
   const message = clean(payload.message, MAX_BODY);
   const organizationType = clean(payload.organizationType, 80);
+  const projectType = clean(payload.projectType, 100);
+  const projectUrl = clean(payload.projectUrl, 500);
+  const timeline = clean(payload.timeline, 160);
+  const budget = clean(payload.budget, 160);
+  if (projectUrl) {
+    try { if (!["https:", "http:"].includes(new URL(projectUrl).protocol)) throw new Error(); }
+    catch { return NextResponse.json({ ok: false, error: "Use a valid http or https project URL" }, { status: 422 }); }
+  }
 
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -51,6 +59,10 @@ export async function POST(request: NextRequest) {
     `Email: ${email}`,
     `Organization: ${organization || "Not provided"}`,
     `Organization type: ${organizationType || "Not provided"}`,
+    `Project type: ${projectType || "Not provided"}`,
+    `Existing URL: ${projectUrl || "Not provided"}`,
+    `Expected timeline: ${timeline || "Not provided"}`,
+    `Budget range: ${budget || "Not provided"}`,
     "",
     message,
     "",
@@ -59,7 +71,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const status = await deliverContact({ email, subject, body,
-      fingerprint: JSON.stringify([name, email.toLowerCase(), organization, organizationType, message]),
+      fingerprint: JSON.stringify([name, email.toLowerCase(), organization, organizationType, message, projectType, projectUrl, timeline, budget]),
       ip: request.headers.get("cf-connecting-ip") || "local",
     });
     if (status === "delivered") return NextResponse.json({ ok: true, status });

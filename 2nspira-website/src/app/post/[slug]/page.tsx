@@ -51,7 +51,7 @@ export default async function PostPage({params}:Props) {
   const nextStep = /\bAI\b|artificial intelligence|agent/i.test(topic)
     ? { title: "Put responsible AI into practice", text: "Explore your organization’s readiness before deciding what to adopt.", href: "/ai-enablement", label: "Explore AI enablement", assessment: true }
     : /website|digital platform|web app/i.test(topic)
-    ? { title: "Build a better digital experience", text: "See published projects and practical options for your website or customer platform.", href: "/websites", label: "Explore websites and apps", assessment: false }
+    ? { title: "Build a better digital experience", text: "See published projects and practical options for your website or customer platform.", href: "/websites", label: "Explore websites and platforms", assessment: false }
     : { title: "Connect the idea to your next decision", text: "Explore practical technology leadership for the priorities facing your organization.", href: "/fractional-cio", label: "Explore technology leadership", assessment: false };
   const related = posts.filter((item) => item.slug !== post.slug).slice(0, 3);
   const articleUrl = `https://2nspira.com/post/${post.slug}`;
