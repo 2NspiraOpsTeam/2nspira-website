@@ -18,6 +18,7 @@ const pages: Array<{
   { path: "/ai-team", priority: 0.7, changeFrequency: "monthly" },
   { path: "/ai-enablement", priority: 0.8, changeFrequency: "monthly" },
   { path: "/automation-systems-optimization", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/managed-services-support", priority: 0.8, changeFrequency: "monthly" },
   { path: "/websites", priority: 0.8, changeFrequency: "monthly" },
   { path: "/who-we-serve", priority: 0.8, changeFrequency: "monthly" },
   { path: "/work", priority: 0.8, changeFrequency: "monthly" },

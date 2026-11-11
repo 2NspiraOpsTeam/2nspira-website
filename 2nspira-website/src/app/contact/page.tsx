@@ -116,6 +116,10 @@ export default function ContactPage() {
     organization: "",
     organizationType: "",
     message: "",
+    projectType: "",
+    projectUrl: "",
+    timeline: "",
+    budget: "",
   });
   const [state, setState] = useState<SubmitState>({ kind: "idle" });
   const [submitted, setSubmitted] = useState<{
@@ -124,6 +128,10 @@ export default function ContactPage() {
     organization: string;
     organizationType: string;
     message: string;
+    projectType: string;
+    projectUrl: string;
+    timeline: string;
+    budget: string;
   } | null>(null);
 
   const [draftLoaded, setDraftLoaded] = useState(false);
@@ -134,12 +142,16 @@ export default function ContactPage() {
       if (raw) {
         const saved = JSON.parse(raw);
         if (["name", "email", "organization", "organizationType", "message"].every(key => typeof saved.form?.[key] === "string")) {
-          setFormState(saved.form);
-          if (saved.status === "delivered") { setSubmitted(saved.form); setState({ kind: "delivered" }); }
+          const restored = { ...saved.form, projectType: saved.form.projectType === "Business Automation" ? "Business Automation & Integrations" : saved.form.projectType || "", projectUrl: saved.form.projectUrl || "", timeline: saved.form.timeline || "", budget: saved.form.budget || "" };
+          setFormState(restored);
+          if (saved.status === "delivered") { setSubmitted(restored); setState({ kind: "delivered" }); }
           if (saved.status === "sending" || saved.status === "unknown") setState({ kind: "unknown" });
         }
       }
     } catch { /* Storage unavailable: keep the editable in-memory draft. */ }
+    const selection = new URLSearchParams(window.location.search).get("service");
+    const services: Record<string, string> = { websites: "Website development or redesign", platforms: "Custom digital platform", automation: "Business Automation & Integrations", ai: "AI Enablement", advisory: "Executive Technology Advisory", support: "Managed Services & Support" };
+    if (selection && services[selection]) setFormState(prev => ({ ...prev, projectType: prev.projectType || services[selection] }));
     setDraftLoaded(true);
     }, 0);
     return () => window.clearTimeout(timer);
@@ -170,6 +182,10 @@ export default function ContactPage() {
       `Email: ${f.email}`,
       `Organization: ${f.organization || "Not provided"}`,
       `Organization type: ${f.organizationType || "Not provided"}`,
+      `Project type: ${f.projectType || "Not provided"}`,
+      `Existing URL: ${f.projectUrl || "Not provided"}`,
+      `Expected timeline: ${f.timeline || "Not provided"}`,
+      `Budget range: ${f.budget || "Not provided"}`,
       "",
       f.message,
       "",
@@ -217,7 +233,7 @@ export default function ContactPage() {
           return;
         }
         if (res.status === 422 || res.status === 400) {
-          setState({ kind: "error", detail: "Please check your name, email, and business challenge, then try again." });
+          setState({ kind: "error", detail: "Please check your name, email, project URL, and requirements, then try again." });
           return;
         }
         if (data.status === "draft" && data.subject && data.body) {
@@ -245,12 +261,17 @@ export default function ContactPage() {
   );
 
   const handleReset = useCallback(() => {
-    setFormState({ name: "", email: "", organization: "", organizationType: "", message: "" });
+    setFormState({ name: "", email: "", organization: "", organizationType: "", message: "", projectType: "", projectUrl: "", timeline: "", budget: "" });
     setSubmitted(null);
     setState({ kind: "idle" });
     formRef.current?.focus();
   }, []);
 
+  const serviceHint = formState.projectType === "Business Automation & Integrations" ? "Which tools are involved, and where does the handoff fail? Share only non-sensitive examples."
+    : formState.projectType === "Managed Services & Support" ? "Which site or system needs support? Include your current provider if relevant, priorities and desired coverage. Never include credentials."
+    : formState.projectType === "AI Enablement" ? "What are your AI priorities, current experiments and one workflow you would like to improve? Do not include sensitive records."
+    : formState.projectType === "Executive Technology Advisory" ? "Which technology decision needs attention, who owns it, and what is the timing? No confidential documents needed."
+    : "Describe your goals and what you want to improve. Please do not include passwords or sensitive records.";
   const faqs = [
     {
       q: "What happens after I send a message?",
@@ -491,9 +512,12 @@ export default function ContactPage() {
                   {["Business", "School or education organization", "Nonprofit or community organization", "Entrepreneur or founder", "Other"].map(value => <option key={value} value={value}>{value}</option>)}
                 </select>
               </FieldGroup></div>
+              <div className="mt-6"><FieldGroup label="Service or project type (optional)" id="projectType"><select id="projectType" name="projectType" value={formState.projectType} onChange={handleChange} className={field}><option value="">Not sure yet / another service</option><option>Website development or redesign</option><option>Custom digital platform</option><option>AI Enablement</option><option>Business Automation &amp; Integrations</option><option>Executive Technology Advisory</option><option>Managed Services &amp; Support</option></select></FieldGroup><p className="mt-3 text-sm leading-6 text-muted" aria-live="polite">{serviceHint}</p></div>
+              <div className="mt-6"><FieldGroup label="Existing website or project URL (optional)" id="projectUrl" hint="Use a complete https:// or http:// address."><input id="projectUrl" name="projectUrl" type="url" maxLength={500} aria-describedby="projectUrl-hint" value={formState.projectUrl} onChange={handleChange} className={field} placeholder="https://example.com" /></FieldGroup></div>
+              <div className="mt-6 grid gap-6 sm:grid-cols-2"><FieldGroup label="Expected timeline (optional)" id="timeline"><input id="timeline" name="timeline" maxLength={160} value={formState.timeline} onChange={handleChange} className={field} placeholder="For example, within 3 months" /></FieldGroup><FieldGroup label="Budget range, if known (optional)" id="budget"><input id="budget" name="budget" maxLength={160} value={formState.budget} onChange={handleChange} className={field} placeholder="Your range, or not sure yet" /></FieldGroup></div>
               <div className="mt-6">
                 <FieldGroup
-                  label="Business challenge"
+                  label="Brief description of requirements"
                   required
                   id="message"
                   hint="What feels stuck, what would you like to improve, and what have you tried? No technical terminology needed."

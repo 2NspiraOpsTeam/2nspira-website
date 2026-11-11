@@ -13,6 +13,7 @@ const examples = [
 export default function WorkflowPreview() {
   const ready = useSyncExternalStore(subscribeReady, readySnapshot, serverReadySnapshot);
   const [selected, setSelected] = useState(0);
+  const [delivery, setDelivery] = useState<"ready" | "failed" | "recorded">("ready");
   const example = examples[selected];
   return <div className="mt-8">
     <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Choose an example workflow">
@@ -29,6 +30,12 @@ export default function WorkflowPreview() {
       </div>
       <p className="text-base font-medium text-ink lg:col-span-2">{example.outcome}</p>
     </div>
+    <details className="mt-8 rounded-2xl border border-line bg-white p-6"><summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">Try an illustrative integration handoff</summary>
+      <p className="mt-3 text-sm leading-7 text-body">Fictional walkthrough only. No external tools are connected and no records are sent or saved. Reloading resets this sample.</p>
+      <ol className="mt-5 list-decimal space-y-3 pl-5 leading-7 text-body"><li>Trigger: a fictional request arrives.</li><li>Record: prepare one request with a stable reference.</li><li>Approval: the responsible human reviews it before the handoff.</li><li>Delivery: if the destination is unavailable, retain the same reference for a safe retry.</li><li>Handover: record the outcome and assign the operating owner.</li></ol>
+      <div className="mt-5 flex flex-wrap gap-3"><button type="button" disabled={!ready || delivery !== "ready"} onClick={() => setDelivery("failed")} className="min-h-11 rounded-full border border-line px-5 py-2 text-sm font-medium text-ink disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-accent">Simulate unavailable destination</button><button type="button" disabled={!ready || delivery !== "failed"} onClick={() => setDelivery("recorded")} className="min-h-11 rounded-full border border-line px-5 py-2 text-sm font-medium text-ink disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-accent">Retry same request</button><button type="button" disabled={!ready || delivery === "ready"} onClick={() => setDelivery("ready")} className="min-h-11 rounded-full border border-line px-5 py-2 text-sm font-medium text-ink disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-accent">Reset sample</button></div>
+      <p role="status" className="mt-4 leading-7 text-body">{delivery === "ready" ? "Sample request DEMO-001 is ready for an approved handoff." : delivery === "failed" ? "Destination unavailable. DEMO-001 remains pending; no completed record is shown." : "DEMO-001 recorded once in this sample. Retry is disabled; the operating owner can review the outcome."}</p>
+    </details>
     <p className="mt-3 text-xs leading-6 text-muted">Illustrative workflows, not client results. Connections, permissions and safeguards depend on your systems and agreed scope.</p>
   </div>;
 }
