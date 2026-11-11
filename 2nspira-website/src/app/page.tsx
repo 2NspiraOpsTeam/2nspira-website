@@ -110,14 +110,14 @@ export default function Home() {
       <Link href="/about" className={styles.textLink}>Get to know 2Nspira <span aria-hidden="true">↗</span></Link>
     </section>
 
-    <section className={`${styles.section} ${styles.challenges}`} aria-labelledby="challenges-heading">
-      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What brings you here?</p><h2 id="challenges-heading">Where do you need<br />to make progress?</h2></div><p className={styles.challengeIntro}>You don’t need to know which service to ask for. Start with the challenge you’re facing.</p></div>
-      <div className={styles.challengeGrid}>{[
-        { image: "challenge-operations", category: "Simpler operations", title: "Our operations have become too complicated.", text: "Simplify repetitive work and connect the systems your business relies on.", href: "/automation-systems-optimization", link: "Explore operations solutions" },
-        { image: "digital-team", src: "/images/hero/ai-human-led-v3.webp", alt: "People working together with human-led AI technology.", category: "AI Enablement", title: "We want to become an AI-enabled organization.", text: "Align leadership, people, workflows, technology, and governance around responsible AI—and measure progress as you evolve.", href: "/ai-enablement", link: "Explore organizational AI enablement" },
-        { image: "tech-websites", category: "Better digital experiences", title: "Our website no longer meets our needs.", text: "Build a better customer experience with useful digital capabilities behind it.", href: "/websites", link: "Explore website solutions" },
-        { image: "executive-staff-briefing-v1", category: "Confident leadership", title: "We need experienced technology leadership.", text: "Gain strategic direction and oversight without hiring a full-time CIO.", href: "/fractional-cio", link: "Explore technology leadership" },
-      ].map(challenge => <Link key={challenge.href} href={challenge.href} className={styles.challengeCard}><div className={`${styles.challengePhoto} ${challenge.image === "executive-staff-briefing-v1" ? styles.staffBriefing : ""}`}><Photo src={challenge.src ?? `/images/homepage/${challenge.image}.jpg`} alt={challenge.alt ?? ""} /><span className={styles.challengeCategory}>{challenge.category}</span></div><div className={styles.challengeCopy}><h3>{challenge.title}</h3><p>{challenge.text}</p><span className={styles.challengeLink}>{challenge.link} <span className={styles.challengeArrow} aria-hidden="true">↗</span></span></div></Link>)}</div>
+    <section id="quick-start" className={`${styles.section} ${styles.quickStart}`} aria-labelledby="challenges-heading">
+      <div className={styles.quickStartHead}><h2 id="challenges-heading">What do you need?</h2><p>Choose a starting point. We’ll help you shape the next step.</p></div>
+      <ul className={styles.quickStartLinks}>{[
+        { title: "Simplify our operations", href: "/automation-systems-optimization" },
+        { title: "Put AI to work responsibly", href: "/ai-enablement" },
+        { title: "Build a website or platform", href: "/websites" },
+        { title: "Get technology leadership", href: "/fractional-cio" },
+      ].map(item => <li key={item.href}><Link href={item.href}>{item.title}<span aria-hidden="true">↗</span></Link></li>)}</ul>
     </section>
 
     <section className={styles.section} id="find-the-right-service" aria-labelledby="services-heading">
