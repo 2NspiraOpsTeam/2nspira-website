@@ -1,3 +1,4 @@
+import { audienceImagery } from "@/lib/audiences/imagery";
 import { audienceRoutes } from "@/lib/audiences/routes";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import PlatformCarousel from "@/components/platforms/PlatformCarousel";
@@ -82,9 +83,12 @@ export default function AudienceContent({ content: c }: { content: Content }) {
                   data-catalog-card
                   className="group flex min-w-0 scroll-mt-28 flex-col rounded-3xl border border-line bg-white p-6 transition-[border-color,box-shadow] duration-300 hover:border-accent/40 hover:shadow-lg motion-reduce:transition-none sm:p-8"
                 >
-                  <span className="mb-6 grid h-12 w-12 place-items-center rounded-2xl bg-accent-soft text-accent">
+                  {audienceImagery[i.id] ? (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img src={`${audienceImagery[i.id].src}-640.webp`} alt={audienceImagery[i.id].alt} width={640} height={427} loading="lazy" className="mb-6 aspect-[3/2] w-full rounded-2xl object-cover" />
+                  ) : <span className="mb-6 grid h-12 w-12 place-items-center rounded-2xl bg-accent-soft text-accent">
                     <Icon aria-hidden="true" size={25} />
-                  </span>
+                  </span>}
                   <h3 className="text-2xl font-medium tracking-tight text-ink">
                     {i.title}
                   </h3>
