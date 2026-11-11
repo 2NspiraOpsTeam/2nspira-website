@@ -16,12 +16,10 @@ export default function MobileMenu({
   isOpen,
   onClose,
   studioLinks,
-  audienceLinks,
 }: {
   isOpen: boolean;
   onClose: () => void;
   studioLinks: NavigationLink[];
-  audienceLinks: typeof serviceLinks;
 }) {
   const ideaLinks = studioLinks;
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -29,10 +27,9 @@ export default function MobileMenu({
   const serviceButtonRef = useRef<HTMLButtonElement>(null);
   const aboutButtonRef = useRef<HTMLButtonElement>(null);
   const demosButtonRef = useRef<HTMLButtonElement>(null);
-  const audiencesButtonRef = useRef<HTMLButtonElement>(null);
   const ideasButtonRef = useRef<HTMLButtonElement>(null);
   const [openSection, setOpenSection] = useState<
-    "services" | "ideas" | "about" | "demos" | "audiences" | null
+    "services" | "ideas" | "about" | "demos" | null
   >(null);
   const pathname = usePathname();
 
@@ -51,9 +48,7 @@ export default function MobileMenu({
     event.preventDefault();
     if (openSection) {
       const activeButton =
-        openSection === "audiences"
-          ? audiencesButtonRef.current
-          : openSection === "services"
+        openSection === "services"
           ? serviceButtonRef.current
           : openSection === "ideas"
             ? ideasButtonRef.current
@@ -100,7 +95,7 @@ export default function MobileMenu({
   if (!isOpen) return null;
 
   const accordion = (
-    key: "services" | "ideas" | "about" | "demos" | "audiences",
+    key: "services" | "ideas" | "about" | "demos",
     label: string,
     links: typeof serviceLinks,
     buttonRef: RefObject<HTMLButtonElement | null>,
@@ -232,7 +227,14 @@ export default function MobileMenu({
           >
             Our Work
           </Link>
-          {accordion("audiences", "Who We Serve", audienceLinks, audiencesButtonRef)}
+          <Link
+            href="/who-we-serve"
+            onClick={handleClose}
+            aria-current={isCurrent("/who-we-serve") ? "page" : undefined}
+            className="block rounded-xl px-4 py-3.5 text-lg font-medium text-ink transition-colors hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent [aria-current=page]:bg-accent-soft"
+          >
+            Who We Serve
+          </Link>
           {accordion("demos", "Demos", demoNavigationLinks, demosButtonRef)}
           {accordion("about", "About Us", aboutLinks, aboutButtonRef)}
           <Link
