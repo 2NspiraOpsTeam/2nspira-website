@@ -19,7 +19,7 @@ export default function TransformationSupport() {
           <h3 className={`mt-3 ${h3}`}>Ongoing Managed Services &amp; Support</h3>
           <p className="mt-4 leading-7 text-body">Hosting, maintenance, monitoring, enhancements and advisory retainers keep your technology supported as your organization evolves.</p>
           <p className="mt-3 text-sm leading-7 text-body">We agree coverage, responsibilities, response expectations and fees before support begins. No implied unlimited support or round-the-clock coverage.</p>
-          <Link href="/contact" className={`mt-5 min-h-11 ${linkInline}`}>Discuss ongoing support →</Link>
+          <Link href="/managed-services-support" className={`mt-5 min-h-11 ${linkInline}`}>Explore managed support →</Link>
         </article>
       </div>
       <p className="mt-7 text-sm leading-7 text-body"><Link href="/studio" className={linkInline}>Creative Studio</Link> is our separate publishing and intellectual-property initiative—not a fourth transformation service.</p>

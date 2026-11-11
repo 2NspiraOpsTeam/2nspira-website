@@ -1,3 +1,4 @@
+import ServiceJourney from "@/components/ServiceJourney";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -15,7 +16,7 @@ import { EyebrowPill } from "@/components/VisualAccents";
 import { cardFlat, h2, h3, lead, pageMain, section, sectionBand, linkInline, buttonPrimary, buttonSecondary } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: "Business Process Automation & Connected Systems",
+  title: "Business Automation & Integrations",
   shareTitle: "Less manual work. Smoother operations.",
   description: "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
   path: "/automation-systems-optimization"
@@ -24,7 +25,7 @@ export const metadata: Metadata = publicPageMetadata({
 const automationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Business Automation",
+  name: "Business Automation & Integrations",
   description:
     "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
   url: "https://2nspira.com/automation-systems-optimization",
@@ -54,7 +55,7 @@ export default async function AutomationSystemsOptimizationPage() {
         <Link href="/services" className={linkInline}>← All services</Link>
         <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
           <div>
-            <EyebrowPill>Business Automation</EyebrowPill>
+            <EyebrowPill>Business Automation &amp; Integrations</EyebrowPill>
             <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Less busywork.<br />More room to grow.</h1>
             <p className={lead}>Simplify repetitive work. Connect the systems you rely on. Give your people more room to focus.</p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -67,13 +68,10 @@ export default async function AutomationSystemsOptimizationPage() {
             <Image src="/images/hero/automation-systems-optimization-hero.png" alt="A team reviewing connected operations dashboards together." width={1855} height={848} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" />
           </figure>
         </div>
-        <div id="platforms-technologies" className="mt-12 min-w-0 scroll-mt-28 border-t border-line pt-9 sm:mt-14">
-          <h2 className={h2}>{platforms.heading}</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-body">{platforms.intro}</p>
-          <PlatformCarousel platforms={platforms.platforms} />
-        </div>
+
       </div>
     </section>
+    <ServiceJourney service="automation" />
     <PageSections items={[["pathways-heading", "What we improve"], ["workflow-example-heading", "See the difference"], ["approach-heading", "How we work"]]} />
     <section className={section} aria-labelledby="pathways-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -131,6 +129,11 @@ export default async function AutomationSystemsOptimizationPage() {
         <p className="mt-5 text-sm text-body">Exploring AI too? <Link href="/ai-enablement" className={linkInline}>Start with purposeful AI enablement →</Link></p>
       </div>
     </section>
+    <section className={section}><div className="mx-auto max-w-6xl px-4 sm:px-6">        <div id="platforms-technologies" className="mt-12 min-w-0 scroll-mt-28 border-t border-line pt-9 sm:mt-14">
+          <h2 className={h2}>{platforms.heading}</h2>
+          <p className="mt-4 max-w-3xl leading-7 text-body">{platforms.intro}</p>
+          <PlatformCarousel platforms={platforms.platforms} />
+        </div></div></section>
     <ServiceQuestions items={[
       { question: "Do we need to replace our existing systems?", answer: "Not necessarily. We start with what works and check integration options before recommending a replacement." },
       { question: "Can we start with one workflow?", answer: "Yes. Bring one repeated task or difficult handoff. We’ll agree a useful scope and check its dependencies." },
@@ -142,7 +145,7 @@ export default async function AutomationSystemsOptimizationPage() {
         <p className="mt-4 max-w-xl leading-7 text-white/80">Bring one challenge. Let’s find a practical way forward.</p>
         <div className="mt-6 flex flex-wrap items-center gap-5">
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={buttonPrimary} aria-label="Let’s discuss your needs (Google Calendar, opens in a new tab)">Let’s discuss your needs <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" /></a>
-          <Link href="/contact#contact-message" className="inline-flex min-h-11 items-center text-sm text-white underline underline-offset-4">Prefer to send a message?</Link>
+          <Link href="/contact?service=automation#contact-message" className="inline-flex min-h-11 items-center text-sm text-white underline underline-offset-4">Prefer to send a message?</Link>
         </div>
         <p className="mt-3 text-xs leading-6 text-white/75">30-minute introductory call · Google Meet · Booking opens Google Calendar</p>
       </div>

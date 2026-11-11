@@ -142,7 +142,7 @@ export default function ContactPage() {
       if (raw) {
         const saved = JSON.parse(raw);
         if (["name", "email", "organization", "organizationType", "message"].every(key => typeof saved.form?.[key] === "string")) {
-          const restored = { ...saved.form, projectType: saved.form.projectType || "", projectUrl: saved.form.projectUrl || "", timeline: saved.form.timeline || "", budget: saved.form.budget || "" };
+          const restored = { ...saved.form, projectType: saved.form.projectType === "Business Automation" ? "Business Automation & Integrations" : saved.form.projectType || "", projectUrl: saved.form.projectUrl || "", timeline: saved.form.timeline || "", budget: saved.form.budget || "" };
           setFormState(restored);
           if (saved.status === "delivered") { setSubmitted(restored); setState({ kind: "delivered" }); }
           if (saved.status === "sending" || saved.status === "unknown") setState({ kind: "unknown" });
@@ -150,7 +150,8 @@ export default function ContactPage() {
       }
     } catch { /* Storage unavailable: keep the editable in-memory draft. */ }
     const selection = new URLSearchParams(window.location.search).get("service");
-    if (selection === "websites" || selection === "platforms") setFormState(prev => ({ ...prev, projectType: prev.projectType || (selection === "websites" ? "Website development or redesign" : "Custom digital platform") }));
+    const services: Record<string, string> = { websites: "Website development or redesign", platforms: "Custom digital platform", automation: "Business Automation & Integrations", ai: "AI Enablement", advisory: "Executive Technology Advisory", support: "Managed Services & Support" };
+    if (selection && services[selection]) setFormState(prev => ({ ...prev, projectType: prev.projectType || services[selection] }));
     setDraftLoaded(true);
     }, 0);
     return () => window.clearTimeout(timer);
@@ -266,6 +267,11 @@ export default function ContactPage() {
     formRef.current?.focus();
   }, []);
 
+  const serviceHint = formState.projectType === "Business Automation & Integrations" ? "Which tools are involved, and where does the handoff fail? Share only non-sensitive examples."
+    : formState.projectType === "Managed Services & Support" ? "Which site or system needs support? Include your current provider if relevant, priorities and desired coverage. Never include credentials."
+    : formState.projectType === "AI Enablement" ? "What are your AI priorities, current experiments and one workflow you would like to improve? Do not include sensitive records."
+    : formState.projectType === "Executive Technology Advisory" ? "Which technology decision needs attention, who owns it, and what is the timing? No confidential documents needed."
+    : "Describe your goals and what you want to improve. Please do not include passwords or sensitive records.";
   const faqs = [
     {
       q: "What happens after I send a message?",
@@ -506,7 +512,7 @@ export default function ContactPage() {
                   {["Business", "School or education organization", "Nonprofit or community organization", "Entrepreneur or founder", "Other"].map(value => <option key={value} value={value}>{value}</option>)}
                 </select>
               </FieldGroup></div>
-              <div className="mt-6"><FieldGroup label="Project type (optional)" id="projectType"><select id="projectType" name="projectType" value={formState.projectType} onChange={handleChange} className={field}><option value="">Not sure yet / another service</option><option>Website development or redesign</option><option>Custom digital platform</option><option>AI Enablement</option><option>Business Automation</option><option>Executive Technology Advisory</option></select></FieldGroup></div>
+              <div className="mt-6"><FieldGroup label="Service or project type (optional)" id="projectType"><select id="projectType" name="projectType" value={formState.projectType} onChange={handleChange} className={field}><option value="">Not sure yet / another service</option><option>Website development or redesign</option><option>Custom digital platform</option><option>AI Enablement</option><option>Business Automation &amp; Integrations</option><option>Executive Technology Advisory</option><option>Managed Services &amp; Support</option></select></FieldGroup><p className="mt-3 text-sm leading-6 text-muted" aria-live="polite">{serviceHint}</p></div>
               <div className="mt-6"><FieldGroup label="Existing website or project URL (optional)" id="projectUrl" hint="Use a complete https:// or http:// address."><input id="projectUrl" name="projectUrl" type="url" maxLength={500} aria-describedby="projectUrl-hint" value={formState.projectUrl} onChange={handleChange} className={field} placeholder="https://example.com" /></FieldGroup></div>
               <div className="mt-6 grid gap-6 sm:grid-cols-2"><FieldGroup label="Expected timeline (optional)" id="timeline"><input id="timeline" name="timeline" maxLength={160} value={formState.timeline} onChange={handleChange} className={field} placeholder="For example, within 3 months" /></FieldGroup><FieldGroup label="Budget range, if known (optional)" id="budget"><input id="budget" name="budget" maxLength={160} value={formState.budget} onChange={handleChange} className={field} placeholder="Your range, or not sure yet" /></FieldGroup></div>
               <div className="mt-6">

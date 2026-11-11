@@ -32,6 +32,7 @@ export const metadata: Metadata = publicPageMetadata({
 const servicesJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
+    { "@type": "Service", name: "Managed Services & Support", url: "https://2nspira.com/managed-services-support", provider: { "@id": "https://2nspira.com/#organization" } },
     {
       "@type": "CollectionPage",
       "@id": "https://2nspira.com/services#webpage",
@@ -42,6 +43,8 @@ const servicesJsonLd = {
         "@type": "ItemList",
         itemListElement: [
           ...serviceNeeds.map(item => ({ name: item.name, url: `https://2nspira.com${item.href}` })),
+          { name: "Executive Technology Advisory", url: "https://2nspira.com/fractional-cio" },
+          { name: "Managed Services & Support", url: "https://2nspira.com/managed-services-support" },
         ].map((item, index) => ({ "@type": "ListItem", position: index + 1, ...item })),
       },
     },
@@ -58,7 +61,7 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/automation-systems-optimization#service",
-      name: "Business Automation",
+      name: "Business Automation & Integrations",
       description:
         "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
       url: "https://2nspira.com/automation-systems-optimization",

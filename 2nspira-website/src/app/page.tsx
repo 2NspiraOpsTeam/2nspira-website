@@ -3,7 +3,6 @@ import { BOOKING_URL } from "@/lib/booking";
 import ManufacturingDemo from "@/components/ManufacturingDemo";
 import Image from "next/image";
 import Link from "next/link";
-import { Compass, Rocket, ClipboardCheck } from "lucide-react";
 import type { Metadata } from "next";
 import { serviceNeeds } from "@/lib/serviceNeeds";
 import styles from "./homepage.module.css";
@@ -143,16 +142,8 @@ export default function Home() {
           { title: "Entrepreneurs & founders", text: "Launch a focused digital platform and connect the workflows your growing business needs.", href: "/who-we-serve/startups-entrepreneurs", action: "Explore technology support for founders" },
         ].map(audience => <li key={audience.title}><h3>{audience.title}</h3><p>{audience.text}</p><Link href={audience.href} className={styles.textLink}>{audience.action} <span aria-hidden="true">→</span></Link></li>)}</ul>
         <Link href="/who-we-serve" className={styles.textLink}>Explore Who We Serve <span aria-hidden="true">↗</span></Link>
+        <p className="mt-5"><Link href="/resources/ai-readiness-scorecard" className={styles.textLink}>Assess your organization’s AI readiness →</Link></p>
       </div>
-    </section>
-
-    <section className={`${styles.section} ${styles.nextSteps}`} aria-labelledby="next-steps-heading">
-      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Find your next step</p><h2 id="next-steps-heading">More ways to move forward.</h2></div></div>
-      <div className={styles.nextStepGrid}>{[
-        { icon: Rocket, title: "Building a new venture?", text: "Build a focused digital experience and practical systems for your next stage.", href: "/who-we-serve/startups-entrepreneurs", link: "Explore support for founders" },
-        { icon: Compass, title: "Exploring what’s possible?", text: "Discover how our services connect your goals with the right expertise and support.", href: "/services", link: "Explore how we can help" },
-        { icon: ClipboardCheck, title: "How AI-ready is your organization?", text: "Explore your organization’s readiness to build the capabilities, trust, and ways of working that AI requires.", href: "/resources/ai-readiness-scorecard", link: "Start with the AI Readiness Scorecard" },
-      ].map(({ icon: Icon, ...step }) => <Link key={step.href} href={step.href} className={styles.nextStepCard}><span className={styles.nextStepIcon}><Icon size={26} strokeWidth={1.5} aria-hidden="true" /></span><h3>{step.title}</h3><p>{step.text}</p><span className={styles.challengeLink}>{step.link}<span aria-hidden="true">↗</span></span></Link>)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.purpose}`} aria-labelledby="purpose-heading">
@@ -168,9 +159,9 @@ export default function Home() {
     </section>
 
     <section className={`${styles.section} ${styles.projectReviews}`} aria-labelledby="teams-reviews-heading">
-      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>The people behind the property experience</p><h2 id="teams-reviews-heading">Real voices. Meaningful connections.</h2></div></div>
-      <p className={styles.reviewIntro}>The digital experience we built for Teams Management puts people first. These resident reviews reflect the responsive, human service at the heart of their business.</p>
-      <TeamsReviewCarousel />
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>The people behind the property experience</p><h2 id="teams-reviews-heading">The community behind this client website.</h2></div></div>
+      <p className={styles.reviewIntro}>These resident reviews describe Teams Management’s property-management service. They are client context—not testimonials about 2Nspira or evidence of our project results.</p>
+      <details className="mt-6"><summary className="min-h-11 cursor-pointer rounded py-3 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">Read the client’s resident reviews</summary><TeamsReviewCarousel /></details>
       <div className={styles.reviewFoot}><p>Selected positive Google review excerpts about Teams Management’s property-management service.</p><a href="https://www.google.com/maps/place/Teams+Management+LLC/data=!4m2!3m1!1s0x89c258c0e0b65e2d:0xa24510b57f3f6d39" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Read all Google reviews <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a></div>
     </section>
 

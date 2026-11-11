@@ -17,12 +17,12 @@ export const serviceNeeds = [
     link: "Explore organizational AI enablement",
   },
   {
-    name: "Business Automation",
+    name: "Business Automation & Integrations",
     need: "Our tools don’t work together.",
     help: "Find the repeated work and broken handoffs. Simplify the process and connect the systems that matter.",
     example: "Workflow mapping, integration planning, and phased automation.",
     href: "/automation-systems-optimization",
-    link: "Explore systems optimization",
+    link: "Explore automation and integrations",
   },
 
 ];

@@ -10,9 +10,9 @@ import styles from "./Footer.module.css";
 const services = [
   { name: "Websites & Platforms", href: "/websites" },
   { name: "AI Enablement", href: "/ai-enablement" },
-  { name: "Business Automation", href: "/automation-systems-optimization" },
+  { name: "Business Automation & Integrations", href: "/automation-systems-optimization" },
   { name: "Executive Technology Advisory", href: "/fractional-cio" },
-  { name: "Managed Services & Support", href: "/services#ongoing-support" },
+  { name: "Managed Services & Support", href: "/managed-services-support" },
 ];
 const company = [
   { name: "Home", href: "/" },

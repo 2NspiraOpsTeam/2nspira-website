@@ -11,7 +11,7 @@ const problems = [
   { title: "AI Uncertainty", quote: "Our employees are experimenting with AI, but we don’t have a plan.", text: "Identify practical opportunities, equip your team, and set responsible safeguards.", capability: "AI Enablement & Governance", href: "/ai-enablement" },
   { title: "Inefficient Operations", quote: "Our technology costs keep growing, but efficiency doesn’t.", text: "Simplify workflows and reduce avoidable administrative work before adding more tools.", capability: "Workflow Automation", href: "/automation-systems-optimization#workflow-automation" },
   { title: "Disconnected Digital Experiences", quote: "Our website looks professional, but everything behind it is still manual.", text: "Connect customer-facing experiences to the processes and systems behind your business.", capability: "Websites & Custom Digital Platforms", href: "/websites" },
-  { title: "Leadership Gap", quote: "We need experienced technology leadership, but aren’t ready for a full-time CIO.", text: "Bring senior judgment to priorities, planning, vendors, and technology decisions.", capability: "Fractional CIO", href: "/fractional-cio" },
+  { title: "Leadership Gap", quote: "We need experienced technology leadership, but aren’t ready for a full-time CIO.", text: "Bring senior judgment to priorities, planning, vendors, and technology decisions.", capability: "Executive Technology Advisory", href: "/fractional-cio" },
 ];
 
 const icons = [Cable, ChartNoAxesCombined, Compass, Workflow, PanelsTopLeft, BriefcaseBusiness];
