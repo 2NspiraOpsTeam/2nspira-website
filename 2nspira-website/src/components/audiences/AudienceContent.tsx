@@ -85,7 +85,7 @@ export default function AudienceContent({ content: c }: { content: Content }) {
                 >
                   {audienceImagery[i.id] ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
-                    <img src={`${audienceImagery[i.id].src}-640.webp`} alt={audienceImagery[i.id].alt} width={640} height={427} loading="lazy" className="mb-6 aspect-[3/2] w-full rounded-2xl object-cover" />
+                    <img src={`${audienceImagery[i.id].src}-640.webp`} srcSet={`${audienceImagery[i.id].src}-640.webp 640w, ${audienceImagery[i.id].src}-1280.webp 1280w`} sizes="(min-width: 1280px) 340px, (min-width: 768px) 45vw, 90vw" alt={audienceImagery[i.id].alt} width={640} height={427} loading="lazy" className="mb-6 aspect-[3/2] w-full rounded-2xl object-cover" />
                   ) : <span className="mb-6 grid h-12 w-12 place-items-center rounded-2xl bg-accent-soft text-accent">
                     <Icon aria-hidden="true" size={25} />
                   </span>}
