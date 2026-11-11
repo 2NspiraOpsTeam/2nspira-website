@@ -1,3 +1,4 @@
+import { dedicatedAudiences } from "./page-seeds";
 import type { Content, Industry } from "./model";
 const industry = (
   id: string,
@@ -22,7 +23,7 @@ const industry = (
   visible: ["education", "manufacturing", "property"].includes(id),
 });
 export function initialContent(): Content {
-  return {
+  return upgradeContent({
     revision: 0,
     operationId: "",
     heading: "Who We Serve",
@@ -97,5 +98,20 @@ export function initialContent(): Content {
         "/studio",
       ),
     ],
-  };
+  });
+}
+
+/** Upgrade legacy JSON in memory. No D1 schema change or automatic write.
+ * Existing Retail/Small Business IDs are reused. Once a page is present,
+ * all Admin edits, visibility and ordering remain authoritative.
+ */
+export function upgradeContent(content: Content): Content {
+  const industries = content.industries.map(i => {
+    const defaults = dedicatedAudiences.find(d => d.id === i.id);
+    return defaults && !i.page ? structuredClone(defaults) : i;
+  });
+  for (const defaults of dedicatedAudiences) {
+    if (!industries.some(i => i.id === defaults.id)) industries.push(structuredClone(defaults));
+  }
+  return { ...content, industries };
 }

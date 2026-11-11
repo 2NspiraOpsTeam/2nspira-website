@@ -1,3 +1,4 @@
+import { audienceRoutes } from "@/lib/audiences/routes";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import PlatformCarousel from "@/components/platforms/PlatformCarousel";
 import { clientLogos } from "@/lib/audiences/clients";
@@ -37,8 +38,8 @@ export default function AudienceContent({ content: c }: { content: Content }) {
           <p className="mt-6 max-w-3xl text-lg leading-8 text-body">
             {c.intro}
           </p>
-          <nav aria-label="Explore industries" className="mt-7 flex flex-wrap gap-3">
-            {c.industries.filter(i => i.visible).map(i => <a key={i.id} href={`#industry-${i.id}`} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-accent hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-accent">{i.title}<ArrowRight size={15} aria-hidden="true" /></a>)}
+          <nav aria-label="Explore audiences" className="mt-7 flex flex-wrap gap-3">
+            {c.industries.filter(i => i.visible).map(i => <a key={i.id} href={i.page && audienceRoutes[i.id] ? audienceRoutes[i.id] : `#industry-${i.id}`} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-accent hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-accent">{i.title}<ArrowRight size={15} aria-hidden="true" /></a>)}
           </nav>
           <div id="our-clients" className="mt-10 scroll-mt-24 border-t border-line pt-8">
             <h2 className="text-2xl font-medium tracking-tight text-ink">Our clients</h2>
@@ -108,7 +109,7 @@ export default function AudienceContent({ content: c }: { content: Content }) {
                   <div className="mt-auto space-y-2">
                     {i.href && (
                       <Link
-                        href={i.href}
+                        href={i.page && audienceRoutes[i.id] ? audienceRoutes[i.id] : i.href}
                         className="inline-flex min-h-11 items-center gap-2 font-medium text-accent underline underline-offset-4"
                       >
                         {i.linkLabel}

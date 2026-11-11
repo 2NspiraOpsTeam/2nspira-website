@@ -42,3 +42,7 @@ Hosted/production verification pending.
 
 ## Owner-requested refinement
 Bank Street horizontal PNG supplied by Jeffrey on 2026-11-10 replaces the sourced SVG. Organization captions remain visible per Jeffrey’s revised preference. Society Library uses a black background for readable white lettering. Technology carousel defaults unchanged.
+
+## Additional owner-supplied client logos
+
+Jeffrey supplied Senogara artwork and the AMUR logo in this conversation on 2026-11-10 and explicitly requested inclusion in the client list. Use the names printed on the supplied artwork; no additional legal entity, relationship scope, endorsement or performance claim is inferred. Senogara PNG is unchanged; AMUR was losslessly decoded from AVIF to PNG for browser compatibility. Captions remain visible. The carousel now contains 16 client entries.

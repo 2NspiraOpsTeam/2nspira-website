@@ -113,7 +113,7 @@ try {
   );
   const c = initialContent();
   c.operationId = crypto.randomUUID();
-  check(c.industries.length, 7);
+  check(c.industries.length, 9);
   check((await publishedContent()).organizations.length, 0);
   check((await handle(req(c, { origin: "https://evil.test" }))).status, 403);
   const blank = { ...c, heading: "" };
@@ -136,6 +136,15 @@ try {
     },
   ];
   check((await handle(req(invalid))).status, 400);
+  const badPage = structuredClone(c);
+  badPage.industries.find(i=>i.id === "startups").page.headline = "";
+  check((await handle(req(badPage))).status, 400);
+  const badExample = structuredClone(c);
+  badExample.industries.find(i=>i.id === "retail").page.examples[0].href = "javascript:alert(1)";
+  check((await handle(req(badExample))).status, 400);
+  const badSeo = structuredClone(c);
+  badSeo.industries.find(i=>i.id === "business").page.seoDescription = "x".repeat(321);
+  check((await handle(req(badSeo))).status, 400);
   check((await handle(req(c))).status, 200);
   check((await publishedContent()).revision, 1);
   check((await handle(req(c))).status, 200);
@@ -166,7 +175,7 @@ try {
   check((await handle(req(saved))).status, 200);
   const pub = await publishedContent();
   check(pub.intro, "QA saved introduction");
-  check(pub.industries.length, 2);
+  check(pub.industries.length, 6);
   check(pub.organizations.length, 1);
   check(JSON.stringify(pub).includes("PRIVATE_"), false);
   let next = (await (await handle(req())).json()).content;
@@ -190,6 +199,29 @@ try {
   check((await handle(req(next))).status, 503);
   check((await publishedContent()).intro, "QA saved introduction");
   await db.prepare("DROP TRIGGER reject_audience_audit").run();
+  // Simulate a pre-expansion saved JSON document: no migration or lost edits.
+  const legacy = structuredClone(c);
+  legacy.revision = 20;
+  legacy.heading = "Retained owner heading";
+  legacy.industries = legacy.industries.filter(i=>!["startups","technology"].includes(i.id)).map(i=>{delete i.page;return i;});
+  legacy.industries.find(i=>i.id === "education").help = "Owner-edited education wording";
+  await db.prepare("UPDATE audience_content SET revision=20,content_json=? WHERE id=1").bind(JSON.stringify(legacy)).run();
+  const upgraded = (await (await handle(req())).json()).content;
+  check(upgraded.revision, 20);
+  check(upgraded.heading, "Retained owner heading");
+  check(upgraded.industries.length, 9);
+  check(upgraded.industries.filter(i=>i.id === "retail").length, 1);
+  check(upgraded.industries.filter(i=>i.id === "business").length, 1);
+  check(upgraded.industries.filter(i=>i.page).length, 4);
+  check(upgraded.industries.find(i=>i.id === "education").help, "Owner-edited education wording");
+  upgraded.industries.find(i=>i.id === "startups").page.headline = "Owner-edited founder headline";
+  upgraded.industries.find(i=>i.id === "startups").visible = false;
+  upgraded.operationId = crypto.randomUUID();
+  check((await handle(req(upgraded))).status, 200);
+  const reloaded = (await (await handle(req())).json()).content;
+  check(reloaded.industries.find(i=>i.id === "startups").page.headline, "Owner-edited founder headline");
+  check(reloaded.industries.find(i=>i.id === "startups").visible, false);
+  check((await publishedContent()).industries.some(i=>i.id === "startups"), false);
   console.log(
     `${checks} audience handler/D1 checks passed; synthetic isolated data only.`,
   );

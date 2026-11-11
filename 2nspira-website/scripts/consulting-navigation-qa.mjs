@@ -69,10 +69,11 @@ try {
         .getByRole("button", { name: "Creative Studio", exact: true })
         .count()) === 0,
     );
-    await nav.getByRole("button", { name: "About", exact: true }).click();
+    await nav.getByRole("button", { name: "Who We Serve", exact: true }).click();
     await nav
-      .getByRole("link", { name: "Who We Serve", exact: true })
+      .getByRole("link", { name: "View all audiences", exact: true })
       .waitFor({ state: "visible" });
+    await nav.getByRole("button", { name: "About Us", exact: true }).click();
     check(
       await nav.getByRole("link", { name: "Careers", exact: true }).isVisible(),
     );

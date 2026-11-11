@@ -1,3 +1,5 @@
+import { publishedContent as publishedAudiences } from "@/lib/audiences/server";
+import { audienceRoutes } from "@/lib/audiences/routes";
 import type { MetadataRoute } from "next";
 import {hasPublishedTeam} from "@/lib/team/server";
 import { publishedStudio } from "@/lib/studio/server";
@@ -52,7 +54,9 @@ const pages: Array<{
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const openings = await jobs(true).catch(() => []);
   const studio = await publishedStudio();
-  return [...studio.groups.filter(g=>["read","play"].includes(g.id)).map(g=>({url:`${siteDomain}/studio/${g.id}`,changeFrequency:"weekly" as const,priority:0.7})), ...studio.items.filter(i=>!i.url).map(i=>({url:`${siteDomain}/creative-studio/${i.id}`, changeFrequency:"weekly" as const, priority:0.6})), ...(await hasPublishedTeam() ? [{url: `${siteDomain}/team-delivery`,changeFrequency: "monthly" as const,priority: 0.8}] : []), ...openings.map(job => ({ url: `${siteDomain}/careers/${job.id}`, ...(job.updatedAt ? { lastModified: job.updatedAt } : {}), changeFrequency: "weekly" as const, priority: 0.6 })), ...pages.map(({ path, priority, changeFrequency }) => ({
+  // Fail closed for navigation/discovery without taking unrelated pages offline.
+  const audiences = await publishedAudiences().catch(() => ({ industries: [] }));
+  return [...audiences.industries.filter(i=>i.page && audienceRoutes[i.id]).map(i=>({url:`${siteDomain}${audienceRoutes[i.id]}`,changeFrequency:"monthly" as const,priority:0.8})), ...studio.groups.filter(g=>["read","play"].includes(g.id)).map(g=>({url:`${siteDomain}/studio/${g.id}`,changeFrequency:"weekly" as const,priority:0.7})), ...studio.items.filter(i=>!i.url).map(i=>({url:`${siteDomain}/creative-studio/${i.id}`, changeFrequency:"weekly" as const, priority:0.6})), ...(await hasPublishedTeam() ? [{url: `${siteDomain}/team-delivery`,changeFrequency: "monthly" as const,priority: 0.8}] : []), ...openings.map(job => ({ url: `${siteDomain}/careers/${job.id}`, ...(job.updatedAt ? { lastModified: job.updatedAt } : {}), changeFrequency: "weekly" as const, priority: 0.6 })), ...pages.map(({ path, priority, changeFrequency }) => ({
     url: `${siteDomain}${path}`,
     changeFrequency,
     priority,

@@ -32,7 +32,7 @@ try {
         exact: true,
       })
       .waitFor();
-    check((await page.locator("#industries article").count()) === 3);
+    check((await page.locator("#industries article").count()) === 7);
     check(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
@@ -43,7 +43,7 @@ try {
       .evaluate(
         (el) => getComputedStyle(el).gridTemplateColumns.split(" ").length,
       );
-    check(cols === (width >= 768 ? 2 : 1));
+    check(cols === (width >= 1280 ? 3 : width >= 768 ? 2 : 1));
     check(
       (await page
         .getByRole("heading", {
@@ -58,20 +58,20 @@ try {
         fullPage: true,
       });
     if (width === 1440) {
-      await page.getByRole("button", { name: "About", exact: true }).click();
+      await page.getByRole("button", { name: "Who We Serve", exact: true }).click();
       await page
         .getByRole("navigation", { name: "Main navigation", exact: true })
-        .getByRole("link", { name: "Who We Serve", exact: true })
+        .getByRole("link", { name: "View all audiences", exact: true })
         .waitFor({ state: "visible" });
       check(true);
       await page.keyboard.press("Escape");
     }
     if (width === 390) {
       await page.getByRole("button", { name: "Open menu" }).click();
-      await page.getByRole("button", { name: "About", exact: true }).click();
+      await page.getByRole("button", { name: "Who We Serve", exact: true }).click();
       await page
         .getByRole("navigation", { name: "Mobile navigation", exact: true })
-        .getByRole("link", { name: "Who We Serve", exact: true })
+        .getByRole("link", { name: "View all audiences", exact: true })
         .click();
       await page.waitForURL("**/who-we-serve");
       check(true);
