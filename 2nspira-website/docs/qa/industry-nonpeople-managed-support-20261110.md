@@ -20,4 +20,9 @@ Jeffrey approved the existing Education, Manufacturing and Property Management i
 - Managed support selector is an informational client control, not a quote calculator or live integration. Choices have pressed-state feedback and an accessible live panel; no-JavaScript fallback exposes all four areas as native disclosures.
 
 ## Verification
-Pending final rendered local/preview/production results.
+- `npm run lint`: zero errors, four pre-existing warnings.
+- `npm run build:ci`: canonical Worker build and route smoke passed; `npx tsc --noEmit` passed.
+- `npm audit --omit=dev --audit-level=high`: zero vulnerabilities.
+- `node scripts/nonprofit-activation-test.mjs`: activation, uniqueness, preserved edited summaries/revision/order and subsequent Admin edits/hiding passed.
+- Final local rendered QA:425 checks passed at1440/768/390/320px. All8 industry images,5 audience detail routes, preserved approved imagery, nonprofit metadata/sitemap, lighthouse hero, support selection/keyboard/disclosures, compact mobile choices, no overflow/page errors, reduced motion, no-JavaScript,404 and anonymous Admin guard verified. Desktop/mobile screenshots inspected.
+- Hosted preview and production results are recorded in the release PR: https://github.com/2NspiraOpsTeam/2nspira-website/pull/235. Do not infer deployment from local success.
