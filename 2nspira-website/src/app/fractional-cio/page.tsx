@@ -24,7 +24,7 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: "Fractional CIO Services for Business Growth",
+  title: "Executive Technology Advisory",
   shareTitle: "Clearer decisions. Technology that serves your goals.",
   description: "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
   path: "/fractional-cio"
@@ -57,7 +57,7 @@ const outcomes = [
 const fractionalCioJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Fractional CIO & Technology Leadership",
+  name: "Executive Technology Advisory",
   description:
     "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
   url: "https://2nspira.com/fractional-cio",
@@ -75,7 +75,7 @@ export default function FractionalCioPage() {
           <div>
             <p><EyebrowPill>Fractional CIO &amp; Technology Leadership</EyebrowPill></p>
             <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Technology leadership without the full-time executive overhead</h1>
-            <p className={`mt-6 ${lead}`}>Clear priorities. Smarter investment. Accountable execution. Senior technology judgment, shaped around your business.</p>
+            <p className={`mt-6 ${lead}`}>A selective premium engagement spanning AI enablement, business automation and digital platforms. Set priorities, guide investment and align delivery with experienced executive technology judgment.</p>
             <ServiceConversation label="Discuss your technology decisions" />
           </div>
           <Reveal variant="scale">
@@ -124,7 +124,6 @@ export default function FractionalCioPage() {
         <Reveal><Image src="/images/leadership/jeffrey-cortez-linkedin-20261103.jpg" alt="Jeffrey V. Cortez" width={400} height={400} sizes="(min-width: 1024px) 320px, 240px" className="mx-auto aspect-square w-60 rounded-[2rem] object-cover lg:w-80" /></Reveal>
         <div><p className={eyebrow}>Your technology partner</p><h2 id="executive-profile-heading" className={`mt-4 ${h2}`}>Experienced judgment. Independent perspective.</h2><p className="mt-5 leading-7 text-body">Jeffrey V. Cortez brings 20+ years of technology leadership across education, financial services, conservation, and enterprise operations. His collaborative approach connects executive direction with practical implementation.</p><p className="mt-4 leading-7 text-body">Our recommendations follow your needs—not a platform or license we need to sell.</p><div className="mt-5 flex flex-wrap gap-x-6 gap-y-2"><Link href="/about#executive-profile" className={`inline-flex min-h-11 items-center ${linkInline}`}>Meet Jeffrey →</Link><Link href="/work#internal-engineering" className={`inline-flex min-h-11 items-center ${linkInline}`}>Explore our engineering practice →</Link></div></div>
       </div></section>
-      <section id="entrepreneur-mentoring" className="mx-auto max-w-6xl px-4 pb-12 sm:px-6" aria-labelledby="mentoring-intro-heading"><span id="founder-coaching-heading" /><div className={`p-6 ${cardFlat}`}><h2 id="mentoring-intro-heading" className={h3}>Building your business as an entrepreneur?</h2><p className="mt-3 leading-7 text-body">For personal business and leadership guidance, explore our complementary mentoring service.</p><Link href="/coaching" className={`mt-3 inline-flex min-h-11 items-center ${linkInline}`}>Explore Entrepreneur Mentoring &amp; Coaching →</Link></div></section>
       <ServiceQuestions items={[
         { question: "Is this the same as outsourced IT support?", answer: "No. Fractional CIO work provides executive direction, decision support, and accountability. Day-to-day technical support and hands-on implementation are different responsibilities and are not automatically included." },
         { question: "What does a starting engagement look like?", answer: "We begin with your priorities, current environment, and decisions that need attention. We agree the leadership scope, authority, responsibilities, and way of working before the engagement begins." },

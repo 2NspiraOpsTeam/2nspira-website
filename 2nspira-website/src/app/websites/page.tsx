@@ -251,7 +251,7 @@ export default function WebsitesPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://2nspira.com/websites#service",
-            name: "Websites, Apps & Digital Platforms",
+            name: "Digital Platforms",
             serviceType: [
               "Website design",
               "Website redesign",

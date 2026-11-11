@@ -5,13 +5,13 @@ export const dedicatedAudiences: Industry[] = [
   {
     id: "startups", title: "Startups & Entrepreneurs", visible: true,
     challenges: "You have an idea, customers to reach and more technology choices than time to evaluate them.",
-    help: "Choose a practical starting point, shape your website or application, automate repeatable work and get mentoring as the business grows.",
+    help: "Choose a practical starting point, shape your website or application, automate repeatable work and plan technology as the business grows.",
     outcomes: "A clearer launch plan, a focused first release and less time spent managing disconnected tools.",
     linkLabel: "Explore support for founders", href: audienceRoutes.startups,
     exampleLabel: "See CalmLoop — a 2Nspira internal project", exampleHref: "https://calmloop.2nspira.com",
     page: {
       seoTitle: "Technology Support for Startups & Entrepreneurs",
-      seoDescription: "Make confident technology decisions with 2Nspira. Explore founder mentoring, websites, applications and practical automation, with advisory and delivery scoped separately.",
+      seoDescription: "Make confident technology decisions with 2Nspira. Explore technology planning, websites, applications and practical automation, with advisory and delivery scoped separately.",
       headline: "Build the right next thing for your business.",
       intro: "For founders launching an idea or growing an established venture. Start with the customer problem, decide what matters now and choose technology that fits your stage—not somebody else’s roadmap.",
       challenges: [
@@ -23,12 +23,12 @@ export const dedicatedAudiences: Industry[] = [
         { title: "Make grounded technology decisions", text: "Technology planning can help compare build-versus-buy options, identify essential tools and agree a manageable sequence of investment.", href: "/fractional-cio" },
         { title: "Launch a focused digital experience", text: "Website and application implementation can turn an agreed scope into a useful first release, with a clear path for later improvements.", href: "/websites" },
         { title: "Remove repeatable busywork", text: "Practical automation can connect intake, notifications and routine updates so the same information does not need to be entered in several places.", href: "/automation-systems-optimization" },
-        { title: "Think through the next decision", text: "Entrepreneur mentoring offers a sounding board for priorities, trade-offs and accountability as you develop the business.", href: "/coaching" },
+
       ],
-      advisoryTitle: "Advice and mentoring", advisoryText: "We help you clarify the problem, compare choices, challenge assumptions and plan your next steps. You retain ownership of business decisions. Mentoring does not include building or operating your product.",
+      advisoryTitle: "Technology advisory", advisoryText: "We help you clarify the problem, compare choices, challenge assumptions and plan your next steps. You retain ownership of business decisions. Advisory does not include building or operating your product.",
       implementationTitle: "Hands-on implementation", implementationText: "When you need a website, application or connected workflow built, we agree the deliverables, responsibilities, budget and acceptance criteria separately. Advisory support is not a promise of an included build.",
       examples: [{ title: "CalmLoop", kind: "2Nspira internal project", text: "A low-pressure routine companion for children and families. Explore a focused digital product—not a startup client engagement or evidence of commercial results.", href: "https://calmloop.2nspira.com" }],
-      ctaTitle: "What is the next decision holding you back?", ctaText: "Bring your idea, current tools or launch plan. We can discuss whether advice, mentoring or a scoped implementation would be most useful.", ctaLabel: "Book a conversation about your venture",
+      ctaTitle: "What is the next decision holding you back?", ctaText: "Bring your idea, current tools or launch plan. We can discuss whether technology advisory or a scoped implementation would be most useful.", ctaLabel: "Book a conversation about your venture",
     },
   },
   {

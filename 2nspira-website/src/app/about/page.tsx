@@ -93,16 +93,6 @@ export default function AboutPage() {
           <ImpactTimeline idPrefix="story" />
         </section>
 
-        <section className={`mt-12 p-6 sm:p-10 ${card}`} aria-labelledby="about-coaching-heading">
-          <AccentRule className="mb-6" />
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">People, not just platforms</p>
-          <h2 id="about-coaching-heading" className={`mt-4 ${h2}`}>Building a stronger business starts with the person leading it.</h2>
-          <p className={`mt-4 ${lead}`}>Technology can transform how a business operates. But behind every growing business is someone making difficult decisions, navigating uncertainty, and learning what it takes to lead.</p>
-          <p className="mt-4 leading-8 text-body">You don&apos;t have to figure it all out alone.</p>
-          <p className="mt-4 leading-8 text-body">At 2Nspira, we believe investing in the person is just as important as investing in the business. That&apos;s why we connect entrepreneurs and business owners with experienced, industry-aligned mentors who offer real-world perspective, honest feedback, and practical guidance.</p>
-          <p className="mt-4 leading-8 text-body">Whether you&apos;re validating an idea, finding your first customers, developing a product, or learning to lead a growing team, our mentoring relationships help you turn challenges into clearer decisions—and decisions into meaningful progress.</p>
-          <Link href="/coaching" className={`mt-6 min-h-11 ${buttonPrimary}`}>Explore Entrepreneur Mentoring &amp; Coaching →</Link>
-        </section>
 
         <section className={`mt-20 ${styles.compass}`} aria-labelledby="framework-heading">
           <Reveal><p className={styles.eyebrow}>Our compass</p><h2 id="framework-heading" className={`mt-4 ${h2}`}>Good technology works on a human level.</h2><p className={`mt-4 max-w-2xl ${lead}`}>The 2Nspira Framework asks five questions that keep every decision connected to your people and purpose.</p></Reveal>

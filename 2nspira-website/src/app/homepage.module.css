@@ -99,3 +99,7 @@
 
 /* Keep the volunteer group visible in the shallow 2022 milestone crop. */
 .timelinePanel[data-year="2022"] .timelinePhoto img{object-position:center 22%}
+
+/* Three transformation pillars, balanced across wide and narrow screens. */
+.services{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:700px){.services{grid-template-columns:1fr}}

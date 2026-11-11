@@ -3,7 +3,6 @@ import { publicJobs } from "@/lib/careers/server";
 export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./careers.module.css";
 import CatalogEffects from "@/components/catalog/CatalogEffects";
 import { AccentRule, AmbientField, EyebrowPill } from "@/components/VisualAccents";
@@ -49,7 +48,6 @@ const expertise = [
   "Project and delivery leadership",
   "Business systems consulting",
   "Independent technology advisory",
-  "Entrepreneur mentoring and coaching",
   "Industry leadership and venture development",
 ];
 
@@ -136,7 +134,6 @@ export default async function CareersPage() {
               <li key={item} className={styles.expertise}><span aria-hidden="true" />{item}</li>
             ))}
           </ul>
-          <Link href="/coaching" className="mt-6 inline-flex min-h-11 items-center rounded font-medium text-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Explore our mentoring approach →</Link>
         </div>
       </section>
 

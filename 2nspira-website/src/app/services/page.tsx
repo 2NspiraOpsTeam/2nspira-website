@@ -1,3 +1,4 @@
+import TransformationSupport from "@/components/TransformationSupport";
 import ManufacturingDemo from "@/components/ManufacturingDemo";
 import EditorialHero from "@/components/EditorialHero";
 import { publicPageMetadata } from "@/lib/pageMetadata";
@@ -22,9 +23,9 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: "Business Technology Consulting & Modernization",
+  title: "AI & Technology Transformation for Growing Organizations",
   shareTitle: "Move your business forward—with people and technology.",
-  description: "Explore AI enablement, automation, websites and apps, fractional CIO leadership, and entrepreneur mentoring. Find a practical starting point for your business.",
+  description: "AI enablement, business automation and digital platforms for growing organizations, with selective executive advisory and clearly scoped ongoing support.",
   path: "/services"
 });
 
@@ -35,7 +36,7 @@ const servicesJsonLd = {
       "@type": "CollectionPage",
       "@id": "https://2nspira.com/services#webpage",
       url: "https://2nspira.com/services",
-      name: "Technology Services & Entrepreneur Mentoring",
+      name: "AI & Technology Transformation",
       about: { "@id": "https://2nspira.com/#organization" },
       mainEntity: {
         "@type": "ItemList",
@@ -57,7 +58,7 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/automation-systems-optimization#service",
-      name: "Automation & Systems Optimization",
+      name: "Business Automation",
       description:
         "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
       url: "https://2nspira.com/automation-systems-optimization",
@@ -67,7 +68,7 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#websites",
-      name: "Websites, Apps & Digital Platforms",
+      name: "Digital Platforms",
       description:
         "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites, web and mobile apps, and custom internal operations solutions connected to the way your business works.",
       url: "https://2nspira.com/websites",
@@ -77,19 +78,12 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#fractional-leadership",
-      name: "Fractional CIO & Technology Leadership",
+      name: "Executive Technology Advisory",
       description:
         "Unsure which technology investments will help your business? Get fractional CIO guidance to set priorities, manage risk, and support operations and growth.",
       url: "https://2nspira.com/fractional-cio",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
-    },
-    {
-      "@type": "Service", "@id": "https://2nspira.com/coaching#service",
-      name: "Entrepreneur Mentoring & Coaching",
-      description: "Industry-aligned, one-on-one mentoring for entrepreneurs, combining venture guidance with mindset and leadership coaching.",
-      url: "https://2nspira.com/coaching",
-      provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide",
     },
   ],
 };
@@ -125,7 +119,7 @@ export default function ServicesPage() {
             A stronger business starts with your next right move.
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
-            Turn technology uncertainty, disconnected operations, and growing pains into a clearer path forward. From responsible AI and connected systems to digital experiences and personal leadership, we help you move from what’s holding you back to what comes next.
+            Turn technology uncertainty, disconnected operations, and growing pains into a clearer path forward. From responsible AI and connected systems to digital experiences and executive technology advisory, we help you move from what’s holding you back to what comes next.
           </p>
           <ServiceConversation label="Let’s talk about your next step" />
           <a href="#find-the-right-service" className={`mt-4 min-h-11 ${linkInline}`}>Find the right service <span aria-hidden="true"> ↓</span></a>
@@ -143,13 +137,14 @@ export default function ServicesPage() {
           </p></div>
 
           <nav aria-label="Jump to a service" className="mt-7 flex flex-wrap gap-3">
-            {serviceNeeds.map((service, index) => <a key={service.href} href={`#service-${index + 1}`} className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">{["Websites & apps", "Automation", "AI enablement", "Technology leadership", "Mentoring & coaching"][index]}</a>)}
+            {serviceNeeds.map((service, index) => <a key={service.href} href={`#service-${index + 1}`} className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">{["AI Enablement", "Business Automation", "Digital Platforms"][index]}</a>)}
           </nav>
           <ClientServiceGrid />
           <p className="mt-6 max-w-3xl text-sm leading-7 text-body">These are examples of support, not fixed packages. We agree what to assess, advise on, or implement before the work begins.</p>
         </div>
       </section>
 
+      <TransformationSupport />
       {/* Common Outcomes */}
       <section className={`${sectionBand} relative overflow-hidden`} aria-labelledby="outcomes-heading">
         <AmbientField />
@@ -158,7 +153,7 @@ export default function ServicesPage() {
             From a first conversation to a focused path.
           </h2>
           <p className={`mt-4 max-w-2xl ${lead}`}>
-            Advice, implementation, or mentoring: the right engagement starts with understanding your situation, not prescribing a tool.
+            Strategy, implementation, and ongoing support: the right engagement starts with understanding your situation, not prescribing a tool.
           </p>
 
           <div className="mt-12 grid gap-5 md:grid-cols-3" role="list">
@@ -201,8 +196,8 @@ export default function ServicesPage() {
       </section>
       <ServiceQuestions items={[
         { question: "Do I need to know which service I need?", answer: "No. Start with your goals, current challenges, and the decisions you need to make. The introductory conversation helps us understand your situation and explore which service may fit." },
-        { question: "What happens after the introductory conversation?", answer: "If there is a fit, we agree the priorities, scope, responsibilities, and next steps before an engagement begins. The conversation itself does not commit you to a project or coaching relationship." },
-        { question: "Can services work together?", answer: "Yes. For example, a technology roadmap may identify an automation priority or an AI workflow to explore. We agree which advisory, implementation, training, or ongoing support activities are included. Mentoring remains guidance rather than done-for-you delivery." },
+        { question: "What happens after the introductory conversation?", answer: "If there is a fit, we agree the priorities, scope, responsibilities, and next steps before an engagement begins. The conversation itself does not commit you to an engagement." },
+        { question: "Can services work together?", answer: "Yes. For example, a technology roadmap may identify an automation priority or an AI workflow to explore. We agree which advisory, implementation, training, or ongoing support activities are included." },
       ]} />
       {/* CTA */}
       <section className={section} aria-labelledby="cta-heading">

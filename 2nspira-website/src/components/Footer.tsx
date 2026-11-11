@@ -8,11 +8,11 @@ import { BOOKING_URL } from "@/lib/booking";
 import styles from "./Footer.module.css";
 
 const services = [
-  { name: "Websites, Apps & Digital Platforms", href: "/websites" },
-  { name: "Automation & Systems Optimization", href: "/automation-systems-optimization" },
   { name: "AI Enablement", href: "/ai-enablement" },
-  { name: "Fractional CIO & Technology Leadership", href: "/fractional-cio" },
-  { name: "Entrepreneur Mentoring & Coaching", href: "/coaching" },
+  { name: "Business Automation", href: "/automation-systems-optimization" },
+  { name: "Digital Platforms", href: "/websites" },
+  { name: "Executive Technology Advisory", href: "/fractional-cio" },
+  { name: "Managed Services & Support", href: "/services#ongoing-support" },
 ];
 const company = [
   { name: "Home", href: "/" },
