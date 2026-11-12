@@ -60,11 +60,16 @@ export default function Page() {
   return <main className={`${pageMain} ${polish.page}`} id="main-content"><ServiceEffects editorial>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     <section data-service-hero className="border-b border-line bg-surface">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         <div className="flex flex-wrap gap-6"><Link href="/services" className={linkInline}>← All services</Link><Link href="/ai-team" className={linkInline}>Meet our human-led AI team →</Link></div>
+        <div className="mt-4"><EyebrowPill>AI Enablement &amp; Organizational Transformation</EyebrowPill>
+          <h1 className="mt-4 max-w-5xl text-[clamp(2rem,4vw,3.5rem)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Move beyond using AI. Become an AI-enabled organization.</h1>
+        </div>
+        <section id="ai-tools" aria-label="AI tools and platforms" className="min-w-0 scroll-mt-24">
+          <PlatformCarousel platforms={aiTools} label="AI tool logos" listLabel="AI tools and platforms" description="AI tools & platforms we work with." notice="Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification." />
+        </section>
         <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
-          <div><EyebrowPill>AI Enablement &amp; Organizational Transformation</EyebrowPill>
-            <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Move beyond using AI. Become an AI-enabled organization.</h1>
+          <div>
             <p className={lead}>Align your people, workflows, and technology so AI supports useful, accountable work—not just more experiments.</p>
             <p className="mt-4 leading-7 text-body">Start with readiness. Build the right skills and safeguards. Improve one workflow, then learn and expand.</p>
             <div className="mt-7 flex flex-wrap gap-3"><Link href="/resources/ai-readiness-scorecard" className={buttonPrimary}>Explore your organization’s AI readiness</Link><a href="#ai-conversation" className={buttonSecondary}>Talk about your AI transformation ↓</a></div>
@@ -74,13 +79,6 @@ export default function Page() {
           </figure>
         </div>
         <p className="mt-8 border-t border-line pt-5 text-sm font-medium text-muted">We don’t just help you adopt AI. We help you build the capabilities to succeed with it.</p>
-      </div>
-    </section>
-    <section id="ai-tools" aria-labelledby="ai-tools-heading" className="scroll-mt-24 border-b border-line bg-canvas-deep py-10 sm:py-12">
-      <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6">
-        <p className="text-sm font-semibold uppercase tracking-widest text-accent">Hands-on AI experience</p>
-        <h2 id="ai-tools-heading" className={`mt-4 max-w-3xl ${h2}`}>AI tools & platforms we work with.</h2>
-        <PlatformCarousel platforms={aiTools} label="AI tool logos" listLabel="AI tools and platforms" description="Tools we use across AI-assisted research, development and connected workflows—from hosted assistants to local and open-weight ecosystems." notice="Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification." />
       </div>
     </section>
     <ServiceJourney service="ai" />
