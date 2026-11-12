@@ -75,10 +75,15 @@ export default function TechnologyAdvisoryPage() {
       <section data-service-hero className="relative overflow-hidden border-b border-line bg-surface">
         <AmbientField />
         <nav aria-label="Breadcrumb" className="relative mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 pt-6 text-sm text-body sm:px-6"><Link href="/" className={linkInline}>Home</Link><span aria-hidden="true">/</span><Link href="/services" className={linkInline}>Services</Link><span aria-hidden="true">/</span><span aria-current="page">Technology Advisory &amp; Leadership</span></nav>
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-14">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-6 px-4 py-4 sm:px-6 sm:py-6 lg:grid-cols-2 lg:gap-x-14">
+          <div className="lg:col-span-2">
+            <p className="hidden sm:block"><EyebrowPill>Technology Advisory & Leadership</EyebrowPill></p>
+            <h1 className="mt-3 text-[clamp(1.75rem,4vw,3.5rem)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Clear technology direction. Leadership that moves you forward.</h1>
+          </div>
+          <div className="min-w-0 lg:col-span-2" aria-label="The connected view">
+            <ExecutiveLensesCarousel lenses={executiveLenses} />
+          </div>
           <div>
-            <p><EyebrowPill>Technology Advisory & Leadership</EyebrowPill></p>
-            <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Clear technology direction. Leadership that moves you forward.</h1>
             <p className={`mt-6 ${lead}`}>Technology strategy, practical planning, vendor guidance and leadership support for the decisions ahead. Engage us for focused advice or ongoing Fractional CIO leadership, with responsibilities agreed around your needs.</p>
             <ServiceConversation service="advisory" label="Discuss your technology decisions" />
           </div>
@@ -131,9 +136,6 @@ export default function TechnologyAdvisoryPage() {
           </div>
         </div>
       </section>
-      <section className={sectionBand} aria-labelledby="lenses-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6"><p className={eyebrow}>The connected view</p><h2 id="lenses-heading" className={`mt-4 ${h2}`}>See the whole business. Not just the technology.</h2><p className="mt-4 max-w-2xl leading-7 text-body">Eight executive lenses help reveal dependencies, clarify ownership, and put business impact first.</p>
-        <ExecutiveLensesCarousel lenses={executiveLenses} />
-      </div></section>
       <section id="executive-profile" className={section} aria-labelledby="executive-profile-heading"><div className="mx-auto grid max-w-6xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[0.65fr_1.35fr]">
         <Reveal><Image src="/images/leadership/jeffrey-cortez-linkedin-20261103.jpg" alt="Jeffrey V. Cortez" width={400} height={400} sizes="(min-width: 1024px) 320px, 240px" className="mx-auto aspect-square w-60 rounded-[2rem] object-cover lg:w-80" /></Reveal>
         <div><p className={eyebrow}>Featured technology partner</p><h2 id="executive-profile-heading" className={`mt-4 ${h2}`}>Experienced judgment. Independent perspective.</h2><p className="mt-5 leading-7 text-body">Jeffrey V. Cortez is one of our featured technology partners. He brings 20+ years of technology leadership across education, financial services, conservation, and enterprise operations. His collaborative approach connects executive direction with practical implementation.</p><p className="mt-4 leading-7 text-body">Our recommendations follow your needs—not a platform or license we need to sell.</p><div className="mt-5 flex flex-wrap gap-x-6 gap-y-2"><Link href="/about#executive-profile" className={`inline-flex min-h-11 items-center ${linkInline}`}>Meet Jeffrey →</Link><Link href="/work#internal-engineering" className={`inline-flex min-h-11 items-center ${linkInline}`}>Explore our engineering practice →</Link></div></div>
