@@ -71,6 +71,11 @@ export default async function AutomationSystemsOptimizationPage() {
 
       </div>
     </section>
+    <section className={section}><div className="mx-auto max-w-6xl px-4 sm:px-6">        <div id="platforms-technologies" className="min-w-0 scroll-mt-28">
+          <h2 className={h2}>{platforms.heading}</h2>
+          <p className="mt-4 max-w-3xl leading-7 text-body">{platforms.intro}</p>
+          <PlatformCarousel platforms={platforms.platforms} />
+        </div></div></section>
     <ServiceJourney service="automation" />
     <PageSections items={[["pathways-heading", "What we improve"], ["workflow-example-heading", "See the difference"], ["approach-heading", "How we work"]]} />
     <section className={section} aria-labelledby="pathways-heading">
@@ -129,11 +134,6 @@ export default async function AutomationSystemsOptimizationPage() {
         <p className="mt-5 text-sm text-body">Exploring AI too? <Link href="/ai-enablement" className={linkInline}>Start with purposeful AI enablement →</Link></p>
       </div>
     </section>
-    <section className={section}><div className="mx-auto max-w-6xl px-4 sm:px-6">        <div id="platforms-technologies" className="mt-12 min-w-0 scroll-mt-28 border-t border-line pt-9 sm:mt-14">
-          <h2 className={h2}>{platforms.heading}</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-body">{platforms.intro}</p>
-          <PlatformCarousel platforms={platforms.platforms} />
-        </div></div></section>
     <ServiceQuestions items={[
       { question: "Do we need to replace our existing systems?", answer: "Not necessarily. We start with what works and check integration options before recommending a replacement." },
       { question: "Can we start with one workflow?", answer: "Yes. Bring one repeated task or difficult handoff. We’ll agree a useful scope and check its dependencies." },
