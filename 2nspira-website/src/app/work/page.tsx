@@ -147,8 +147,8 @@ export default async function WorkPage() {
                 <Image
                   src="/images/work/teams-management-backend-20261112.png"
                   alt="Teams Management staff dashboard with property, tenant, and rent roll tools, plus visitor and property interest charts"
-                  width=1460
-                  height=1109
+                  width={1460}
+                  height={1109}
                   className="h-auto w-full rounded-2xl border border-line shadow-sm"
                   sizes="(min-width: 1152px) 1104px, calc(100vw - 32px)"
                 />
