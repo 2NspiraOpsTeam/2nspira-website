@@ -1,0 +1,11 @@
+# Campaign data operations — canonical pipeline reuse
+
+Canonical relationship data: business-development/prospects.csv; permanent exclusions: suppression.csv; actual communication events: relationships.jsonl. No new CRM service or credentials. Local files inherit existing account/filesystem protections; no claim of newly configured role-based access or encrypted backups. Never publish these private files.
+
+Company/partner research exports are staging/review views, not authoritative sent/approval records. Required source-attributed fields: prospect_id (existing or reserved), company, normalized_domain, location, industry, prospect_type, source_url, discovery_at, verified_at, visible_observation, observation_method, fit_hypothesis, contact_page_url, confidence, priority, stage, next_action, owner_decision, suppression_check_at, history_check_at and approval_reference. Unknown values remain blank/unknown; no guessed contacts. Canonical import maps relevant fields into the established schema while supplemental evidence stays in the linked brief.
+
+Before import: acquire existing project .run-lock with unique owner token; back up prospects.csv/STATE.json/suppression.csv with UTC stamp; reread all latest rows; deduplicate by normalized domain and any known email across every stage, suppression and communication history. Retain existing IDs, state and owner passes. Add only previously unknown companies using next available BD number after a fresh read. Keep no interest/need as explicit unknowns. Write CSV preserving field order and atomic replace; verify unique IDs, row count, changed records and untouched rows. Export UTF-8 CSV using established columns and quote newlines safely. Never delete history or overwrite opted-out status.
+
+Recovery: stop mutating jobs, inspect ledger and backups, compare affected IDs and reconcile any concurrent work before selectively restoring. Never restore an entire old tracker over newer work. Only release your own lock. Owner can pause each new night job independently. Existing daytime jobs remain preserved.
+
+Permissions/backup baseline: existing local owner-account controls, plus pre-edit snapshots during activation; off-host/encrypted backup and shared read access are NOT independently verified. GitHub contains sanitized public review assets only.
