@@ -141,6 +141,22 @@ export default async function WorkPage() {
                 sizes="(min-width: 1152px) 1104px, calc(100vw - 32px)"
               />
             </div >
+            <figure className="space-y-4">
+              <h3 className="text-2xl font-medium tracking-tight text-ink">Behind the scenes: Staff workspace</h3>
+              <a href="/images/work/teams-management-backend-20261112.png" target="_blank" rel="noopener noreferrer" className="block rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-label="View Teams Management backend dashboard at full size (opens in a new tab)">
+                <Image
+                  src="/images/work/teams-management-backend-20261112.png"
+                  alt="Teams Management staff dashboard with property, tenant, and rent roll tools, plus visitor and property interest charts"
+                  width={1460}
+                  height={1109}
+                  className="h-auto w-full rounded-2xl border border-line shadow-sm"
+                  sizes="(min-width: 1152px) 1104px, calc(100vw - 32px)"
+                />
+              </a>
+              <figcaption className="text-sm leading-6 text-body">
+                A backend workspace for daily property operations, with properties, tenants, rent rolls, and website intelligence in one place. Analytics shown are illustrative sample data, not actual traffic. Select the image to view it at full size.
+              </figcaption>
+            </figure>
             <div className={styles.showcaseDetails}>
               <p className="text-sm font-semibold text-accent">Status: Published website</p>
               <a href="https://www.teamsmanagement.com/" target="_blank" rel="noopener noreferrer" className={`${buttonPrimary} focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent`}>Visit Teams Management <span className="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
