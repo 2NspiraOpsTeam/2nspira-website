@@ -35,9 +35,9 @@ const automationJsonLd = {
 
 
 const pathways = [
-  { id: "workflow-automation", icon: Workflow, title: "Less busywork", text: "Simplify repeat tasks so your team can focus on useful work.", examples: "Approvals · Reminders · Onboarding" },
-  { id: "systems-integration", icon: Network, title: "Tools that work together", text: "Connect what already works. Reduce the copying in between.", examples: "CRM · Payments · Customer portals" },
-  { id: "data-analytics", icon: ChartNoAxesCombined, title: "Information you can use", text: "Bring scattered information into a clearer, more consistent view.", examples: "Shared records · Reporting · Data quality" },
+  { id: "workflow-automation", icon: Workflow, title: "Repeating the same tasks?", text: "Replace manual reminders, approvals and re-entry with a clearer workflow—so your team can focus on work that needs them.", examples: "Approvals · Reminders · Onboarding" },
+  { id: "systems-integration", icon: Network, title: "Copying between tools?", text: "Connect the systems you already rely on, so information can move without another spreadsheet or manual handoff.", examples: "CRM · Payments · Customer portals" },
+  { id: "data-analytics", icon: ChartNoAxesCombined, title: "Chasing a reliable answer?", text: "Bring scattered records into a consistent view, so your team can see what needs attention and decide what comes next.", examples: "Shared records · Reporting · Data quality" },
 ];
 const approach = [
   { title: "Find the friction", text: "Start with one bottleneck and the people doing the work." },
@@ -51,12 +51,12 @@ export default async function AutomationSystemsOptimizationPage() {
   return <main className={pageMain} id="main-content"><ServiceEffects editorial>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(automationJsonLd).replace(/</g, "\\u003c") }} />
     <section className={`${styles.hero} overflow-hidden border-b border-line`}>
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         <Link href="/services" className={linkInline}>← All services</Link>
-        <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
+        <div className="mt-5 grid items-center gap-6 lg:grid-cols-2">
           <div>
             <EyebrowPill>Business Automation &amp; Integrations</EyebrowPill>
-            <h1 className="mt-6 text-[length:var(--type-display)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Less busywork.<br />More room to grow.</h1>
+            <h1 className="mt-4 text-4xl sm:text-5xl font-medium leading-[1.08] tracking-[-0.04em] text-ink">Less busywork.<br />More room to grow.</h1>
             <p className={lead}>Simplify repetitive work. Connect the systems you rely on. Give your people more room to focus.</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={buttonPrimary} aria-label="Let’s simplify your operations (Google Calendar, opens in a new tab)">Let’s simplify your operations <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" /></a>
@@ -64,24 +64,25 @@ export default async function AutomationSystemsOptimizationPage() {
             </div>
             <p className="mt-3 text-xs leading-6 text-muted">30-minute introductory call · Google Meet · Booking opens Google Calendar</p>
           </div>
-          <figure className={styles.visual}>
+          <figure className={`${styles.visual} hidden lg:block`}>
             <Image src="/images/hero/automation-systems-optimization-hero.png" alt="A team reviewing connected operations dashboards together." width={1855} height={848} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" />
           </figure>
         </div>
 
       </div>
     </section>
-    <section className={section}><div className="mx-auto max-w-6xl px-4 sm:px-6">        <div id="platforms-technologies" className="min-w-0 scroll-mt-28">
-          <h2 className={h2}>{platforms.heading}</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-body">{platforms.intro}</p>
-          <PlatformCarousel platforms={platforms.platforms} />
-        </div></div></section>
-    <ServiceJourney service="automation" />
-    <PageSections items={[["pathways-heading", "What we improve"], ["workflow-example-heading", "See the difference"], ["approach-heading", "How we work"]]} />
+    <section className="border-b border-line bg-surface" aria-label="Technology experience"><div id="platforms-technologies" className={`${styles.heroPlatforms} mx-auto min-w-0 max-w-6xl px-4 pb-5 sm:px-6`}>
+      <PlatformCarousel platforms={platforms.platforms} />
+    </div></section>
+    <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10" aria-labelledby="technology-heading">
+      <h2 id="technology-heading" className={h2}>{platforms.heading}</h2>
+      <p className="mt-4 max-w-3xl leading-7 text-body">{platforms.intro}</p>
+    </section>
+    <PageSections items={[["pathways-heading", "Find your challenge"], ["workflow-example-heading", "Explore a solution"], ["approach-heading", "Understand the process"], ["automation-cta-heading", "Take the next step"]]} />
     <section className={section} aria-labelledby="pathways-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <EyebrowPill>Make everyday work easier</EyebrowPill>
-        <h2 id="pathways-heading" className={`mt-5 ${h2}`}>Less friction. Better flow.</h2>
+        <EyebrowPill>01 · Recognize the friction</EyebrowPill>
+        <h2 id="pathways-heading" className={`mt-5 ${h2}`}>Where is work getting stuck?</h2>
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {pathways.map(({ id, icon: Icon, title, text, examples }) => <article key={id} id={id} data-service-card data-catalog-card className={`${styles.pathway} scroll-mt-28 p-6 sm:p-7 ${cardFlat}`}>
             <span data-service-rule aria-hidden="true" />
@@ -95,7 +96,7 @@ export default async function AutomationSystemsOptimizationPage() {
     </section>
     <section className={sectionBand} aria-labelledby="workflow-example-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <EyebrowPill>Explore a familiar challenge</EyebrowPill>
+        <EyebrowPill>02 · Explore a better way</EyebrowPill>
         <h2 id="workflow-example-heading" className={`mt-5 ${h2}`}>Same work. A smoother way through.</h2>
         <p className="mt-4 max-w-2xl leading-7 text-body">Choose a workflow to see what better-connected work could look like.</p>
         <WorkflowPreview />
@@ -106,7 +107,7 @@ export default async function AutomationSystemsOptimizationPage() {
         <div className={`grid overflow-hidden lg:grid-cols-2 lg:items-center ${cardFlat}`} data-catalog-card>
           <Link href="/demos/manufacturing" className="block focus-visible:outline-2 focus-visible:outline-accent"><Image src="/images/work/northstar-manufacturing-demo.webp" alt="Manufacturing sample showing connected production, inventory and quality dashboards." width={1600} height={1000} sizes="(min-width: 1024px) 560px, calc(100vw - 32px)" unoptimized className="h-auto w-full" /></Link>
           <div className="p-6 sm:p-9">
-            <EyebrowPill>Try an interactive sample</EyebrowPill>
+            <EyebrowPill>03 · See it in practice</EyebrowPill>
             <h2 id="manufacturing-demo-heading" className={`mt-5 ${h2}`}>Connected operations. See for yourself.</h2>
             <p className="mt-4 leading-7 text-body">Explore production, inventory and quality in our manufacturing demo.</p>
             <p className="mt-3 text-xs leading-6 text-muted">Fictional company and sample data—not a client deployment. The assistant uses local rules, not a live AI model.</p>
@@ -118,7 +119,9 @@ export default async function AutomationSystemsOptimizationPage() {
     </section>
     <section className={sectionBand} aria-labelledby="approach-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 id="approach-heading" className={h2}>Start small. Make it useful.</h2>
+        <EyebrowPill>04 · Know what to expect</EyebrowPill>
+        <h2 id="approach-heading" className={`mt-5 ${h2}`}>Start with one workflow. Build from there.</h2>
+        <p className="mt-4 max-w-3xl leading-7 text-body">You do not need a complete transformation plan to begin. Together, we define a useful first change, how to check it and who will own it.</p>
         <ol className={`${styles.timeline} mt-9 grid gap-8 md:grid-cols-3`}>
           {approach.map((step, i) => <li key={step.title} className="relative" data-catalog-fade>
             <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent/20 bg-white text-sm font-semibold text-accent">0{i + 1}</span>
@@ -134,6 +137,7 @@ export default async function AutomationSystemsOptimizationPage() {
         <p className="mt-5 text-sm text-body">Exploring AI too? <Link href="/ai-enablement" className={linkInline}>Start with purposeful AI enablement →</Link></p>
       </div>
     </section>
+    <ServiceJourney service="automation" />
     <ServiceQuestions items={[
       { question: "Do we need to replace our existing systems?", answer: "Not necessarily. We start with what works and check integration options before recommending a replacement." },
       { question: "Can we start with one workflow?", answer: "Yes. Bring one repeated task or difficult handoff. We’ll agree a useful scope and check its dependencies." },
@@ -142,7 +146,7 @@ export default async function AutomationSystemsOptimizationPage() {
     <section className="mx-auto mb-16 max-w-6xl px-4 sm:px-6" aria-labelledby="automation-cta-heading">
       <div className="rounded-[2rem] bg-ink px-6 py-10 sm:px-10">
         <h2 id="automation-cta-heading" className="text-3xl font-medium tracking-tight text-white sm:text-4xl">What’s slowing your team down?</h2>
-        <p className="mt-4 max-w-xl leading-7 text-white/80">Bring one challenge. Let’s find a practical way forward.</p>
+        <p className="mt-4 max-w-xl leading-7 text-white/80">Tell us where work slows down, which tools you use and what you want to improve. We’ll use the introductory call to understand the fit and discuss a practical next step.</p>
         <div className="mt-6 flex flex-wrap items-center gap-5">
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={buttonPrimary} aria-label="Let’s discuss your needs (Google Calendar, opens in a new tab)">Let’s discuss your needs <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" /></a>
           <Link href="/contact?service=automation#contact-message" className="inline-flex min-h-11 items-center text-sm text-white underline underline-offset-4">Prefer to send a message?</Link>
