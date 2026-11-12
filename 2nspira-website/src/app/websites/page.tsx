@@ -14,6 +14,7 @@ const description = "Professional websites and custom digital platforms: redesig
 export const metadata = publicPageMetadata({ title: "Websites & Custom Digital Platforms", description, path: "/websites" });
 const websiteTechnologies = [
   { id: "filemaker", name: "Claris FileMaker", logo: "/images/platforms/filemaker.webp" },
+  { id: "wordpress", name: "WordPress", logo: "/images/platforms/wordpress.png" },
   { id: "nextjs", name: "Next.js", logo: "/images/platforms/nextjs.png" },
   { id: "react", name: "React", logo: "/images/platforms/react.svg" },
   { id: "typescript", name: "TypeScript", logo: "/images/platforms/typescript.png" },
