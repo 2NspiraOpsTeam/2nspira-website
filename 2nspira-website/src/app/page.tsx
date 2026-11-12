@@ -1,3 +1,4 @@
+import { Workflow, Sparkles, PanelsTopLeft, Compass, ArrowUpRight } from "lucide-react";
 import TransformationSupport from "@/components/TransformationSupport";
 import { BOOKING_URL } from "@/lib/booking";
 import ManufacturingDemo from "@/components/ManufacturingDemo";
@@ -111,13 +112,27 @@ export default function Home() {
     </section>
 
     <section id="quick-start" className={`${styles.section} ${styles.quickStart}`} aria-labelledby="challenges-heading">
-      <div className={styles.quickStartHead}><h2 id="challenges-heading">What do you need?</h2><p>Choose a starting point. We’ll help you shape the next step.</p></div>
+      <div className={styles.quickStartHead}>
+        <div><p className={styles.eyebrow}>Start with what matters to you</p><h2 id="challenges-heading">What do you need?</h2></div>
+        <p>You don’t need a technology roadmap to begin. Find the challenge that feels familiar, and explore what’s possible.</p>
+      </div>
       <ul className={styles.quickStartLinks}>{[
-        { title: "Simplify our operations", href: "/automation-systems-optimization" },
-        { title: "Put AI to work responsibly", href: "/ai-enablement" },
-        { title: "Build a website or platform", href: "/websites" },
-        { title: "Get technology leadership", href: "/technology-advisory" },
-      ].map(item => <li key={item.href}><Link href={item.href}>{item.title}<span aria-hidden="true">↗</span></Link></li>)}</ul>
+        { title: "Simplify our operations", href: "/automation-systems-optimization", icon: Workflow, label: "Less busywork. More momentum.", text: "Still moving information between spreadsheets, emails, and disconnected systems?", examples: ["Connected workflows", "Fewer manual handoffs"], action: "Explore smarter operations" },
+        { title: "Put AI to work responsibly", href: "/ai-enablement", icon: Sparkles, label: "Turn curiosity into capability.", text: "Ready to move beyond AI experiments and find useful, responsible ways for your team to work?", examples: ["Practical AI use cases", "Team readiness & guidance"], action: "Find your AI starting point" },
+        { title: "Build a website or platform", href: "/websites", icon: PanelsTopLeft, label: "Make your next idea tangible.", text: "Need a stronger online presence, a customer portal, or a platform built around your business?", examples: ["Websites & digital experiences", "Custom business platforms"], action: "Explore what we can build" },
+        { title: "Get technology leadership", href: "/technology-advisory", icon: Compass, label: "Clarity for your next decision.", text: "Facing competing priorities, growing complexity, or a technology decision you need to get right?", examples: ["Strategy & roadmaps", "Executive technology guidance"], action: "Explore technology advisory" },
+      ].map(({ icon: Icon, ...item }) => <li key={item.href}>
+        <Link href={item.href} className={styles.needCard}>
+          <div className={styles.needCardTop}><span className={styles.needIcon}><Icon size={25} strokeWidth={1.6} aria-hidden="true" /></span><span className={styles.needLabel}>{item.label}</span></div>
+          <h3>{item.title}</h3><p>{item.text}</p>
+          <ul className={styles.needExamples}>{item.examples.map(example => <li key={example}>{example}</li>)}</ul>
+          <span className={styles.needAction}>{item.action}<ArrowUpRight size={20} aria-hidden="true" /></span>
+        </Link>
+      </li>)}</ul>
+      <div className={styles.needHelp}>
+        <div><h3>A little of everything? Start with a conversation.</h3><p>Tell us what’s getting in the way. We’ll help you connect the dots and identify a practical next step.</p></div>
+        <Link href="/contact" className={styles.textLink}>Let’s find your starting point <span aria-hidden="true">↗</span></Link>
+      </div>
     </section>
 
     <section className={styles.section} id="find-the-right-service" aria-labelledby="services-heading">
