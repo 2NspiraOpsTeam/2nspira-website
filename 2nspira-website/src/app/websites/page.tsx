@@ -13,6 +13,7 @@ import { buttonPrimary, buttonSecondary, cardFlat, h1, h2, h3, lead, pageMain, s
 const description = "Professional websites and custom digital platforms: redesigns, customer portals, dashboards and connected business tools, with ongoing support scoped to your needs.";
 export const metadata = publicPageMetadata({ title: "Websites & Custom Digital Platforms", description, path: "/websites" });
 const websiteTechnologies = [
+  { id: "filemaker", name: "Claris FileMaker", logo: "/images/platforms/filemaker.webp" },
   { id: "nextjs", name: "Next.js", logo: "/images/platforms/nextjs.png" },
   { id: "react", name: "React", logo: "/images/platforms/react.svg" },
   { id: "typescript", name: "TypeScript", logo: "/images/platforms/typescript.png" },
