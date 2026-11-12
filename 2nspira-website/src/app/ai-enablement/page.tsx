@@ -76,6 +76,13 @@ export default function Page() {
         <p className="mt-8 border-t border-line pt-5 text-sm font-medium text-muted">We don’t just help you adopt AI. We help you build the capabilities to succeed with it.</p>
       </div>
     </section>
+    <section id="ai-tools" aria-labelledby="ai-tools-heading" className="scroll-mt-24 border-b border-line bg-canvas-deep py-10 sm:py-12">
+      <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6">
+        <p className="text-sm font-semibold uppercase tracking-widest text-accent">Hands-on AI experience</p>
+        <h2 id="ai-tools-heading" className={`mt-4 max-w-3xl ${h2}`}>AI tools & platforms we work with.</h2>
+        <PlatformCarousel platforms={aiTools} label="AI tool logos" listLabel="AI tools and platforms" description="Tools we use across AI-assisted research, development and connected workflows—from hosted assistants to local and open-weight ecosystems." notice="Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification." />
+      </div>
+    </section>
     <ServiceJourney service="ai" />
     <PageSections items={[["ai-tools", "Tools & platforms"], ["ai-capabilities-heading", "Build capability"], ["ai-roadmap-heading", "Your roadmap"], ["ai-work-heading", "See it in practice"], ["personal-ai-assistant", "Personal AI assistance"]]} />
     <section className={section} aria-labelledby="ai-capabilities-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -118,13 +125,6 @@ export default function Page() {
       <Link href="/about#executive-profile" className={`mt-5 min-h-11 ${linkInline}`}>Meet Jeffrey and explore his leadership experience →</Link>
       <details className="mt-8 rounded-2xl border border-line bg-surface p-6"><summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">How our capabilities work together</summary><ul className="mt-4 space-y-4 leading-7 text-body"><li><Link href="/technology-advisory" className={linkInline}>Technology Advisory & Leadership</Link> provides direction, investment priorities, and executive accountability.</li><li><Link href="/automation-systems-optimization" className={linkInline}>Business Automation &amp; Integrations</Link> improves the underlying operating model.</li><li>AI Enablement connects capability, governance, skills, and AI-enabled workflows.</li><li><Link href="/websites" className={linkInline}>Websites &amp; Custom Digital Platforms</Link> delivers customer-facing or operational applications where needed.</li></ul></details>
     </div></section>
-    <section id="ai-tools" aria-labelledby="ai-tools-heading" className="scroll-mt-24 border-b border-line bg-canvas-deep py-10 sm:py-12">
-      <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6">
-        <p className="text-sm font-semibold uppercase tracking-widest text-accent">Hands-on AI experience</p>
-        <h2 id="ai-tools-heading" className={`mt-4 max-w-3xl ${h2}`}>AI tools & platforms we work with.</h2>
-        <PlatformCarousel platforms={aiTools} label="AI tool logos" listLabel="AI tools and platforms" description="Tools we use across AI-assisted research, development and connected workflows—from hosted assistants to local and open-weight ecosystems." notice="Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification." />
-      </div>
-    </section>
     <ServiceQuestions items={questions} />
     <section id="ai-conversation" className="mx-auto mb-16 max-w-6xl scroll-mt-24 px-4 sm:px-6" aria-labelledby="ai-cta-heading"><div className="rounded-[2rem] bg-ink px-6 py-12 sm:px-10"><span className="inline-flex rounded-full border border-white/30 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-ink">Start with readiness. Define the next step.</span><h2 id="ai-cta-heading" className="mt-5 max-w-3xl text-3xl font-medium tracking-tight text-white sm:text-4xl">Build an organization capable of thriving with AI.</h2><p className="mt-4 max-w-3xl leading-7 text-white/80">Use the free AI Readiness Scorecard to surface strengths and gaps. Then bring your priorities, current experiments, and an example workflow to a focused conversation about organizational readiness and transformation.</p><div className="mt-7 flex flex-wrap gap-4"><Link href="/resources/ai-readiness-scorecard" className={buttonPrimary}>Take the free AI Readiness Scorecard</Link><a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center rounded-full border border-white/40 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Talk about your AI transformation <span className="sr-only">(Google Calendar, opens in a new tab)</span> ↗</a></div><p className="mt-4 text-sm leading-6 text-white/80">Choose an available time in Google Calendar for a conversation via Google Meet. Prefer a message? <Link href="/contact?service=ai#contact-message" className="rounded underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-white">Contact us</Link>. Please don’t include sensitive records or credentials.</p></div></section>
     <section className={sectionBand} aria-labelledby="personal-agent-heading" id="personal-ai-assistant">
