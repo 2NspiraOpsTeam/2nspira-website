@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
-      "observed_at": "2026-11-11T06:09:39.564Z",
+      "run_id": "mi-4ff155cba6d31695a80a106b2dbe27e1",
+      "observed_at": "2026-11-12T06:08:24.805Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -202,7 +202,9 @@
             "comparable_access_window": "2026-11-08T06:06:10Z–2026-11-08T06:07:03Z; original problem surveys not refreshed",
             "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
             "nov11_record_review_at": "2026-11-11T01:09:39.564530-05:00",
-            "nov11_scope": "Wave, Chaser and Upflow current offer pages refreshed only; original problem surveys not rechecked."
+            "nov11_scope": "Wave, Chaser and Upflow current offer pages refreshed only; original problem surveys not rechecked.",
+            "nov12_record_review_at": "2026-11-12T01:08:24.805519-05:00",
+            "nov12_scope": "Carry-forward only; no fresh source research on this candidate"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -654,18 +656,12 @@
             ],
             "independent_supplier_groups_199": 3
           },
-          "shared_integration_dependency": {
-            "current_authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/186",
-            "complete_hub_owner": "Cleo per current live body, supersedes historical Adam-owned Hub docs",
-            "research_owner": "Brian",
-            "adam": "Engineering/#175 only where assigned; not complete Hub implementation owner",
-            "status": "Existing transitional D1 used; integrated Hub and independent recipient-runtime access not verified; no infrastructure/security changes"
-          }
+          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
         },
         "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
-        "checked_at": "2026-11-11T01:09:39.564530-05:00",
-        "record_version": "2026-11-11-nightly-v9",
-        "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
+        "checked_at": "2026-11-12T01:08:24.805519-05:00",
+        "record_version": "2026-11-12-nightly-v10",
+        "revision_note": "Nov12 record review; old source dates retained. MI-002 supplier/ACR sources refreshed only; no original buyer demand refresh.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
@@ -720,8 +716,8 @@
       }
     },
     {
-      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
-      "observed_at": "2026-11-11T06:09:39.564Z",
+      "run_id": "mi-4ff155cba6d31695a80a106b2dbe27e1",
+      "observed_at": "2026-11-12T06:08:24.805Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -888,6 +884,27 @@
               "checked_at": "2026-11-09T06:03:37.590Z",
               "observation": "Manual+automated assessment, prioritized dashboard, remediation guidance, optional ACR; no numeric quote. Supplier 10000+ audits not independently verified.",
               "limitations": "English supplier page; dollar ISO/tax/checkout unverified where shown. No independently verified paid volume, profit or outcomes. Truncated extracts where indicated."
+            },
+            {
+              "name": "Accessible.org",
+              "url": "https://accessible.org/pricing/",
+              "checked_at": "2026-11-12T06:05:11.706Z",
+              "observation": "Manual representative-sample audit, Excel findings; WCAG ACR add-on $350 plus audit, Section508 $550, EN301549 $650, INT $950; support $195/h min2. Most audits $1250–2750. Method/environment add-ons vary; credentials supplier-claimed.",
+              "limitations": "Current English supplier offers; geography/currency ISO/tax/checkout not confirmed. No audited sales, client volume or profit. Partial extracts where flagged."
+            },
+            {
+              "name": "HalfAccessible",
+              "url": "https://halfaccessible.com/pricing/",
+              "checked_at": "2026-11-12T06:05:15.569Z",
+              "observation": "Quick $500 <=5 templates/spot checks/top10 versus Complete $2000 <=25 templates/flows, full manual, retest and90-day support; VPAT and remediation separately scoped. Not like-for-like to $1499 proposal.",
+              "limitations": "Current English supplier offers; geography/currency ISO/tax/checkout not confirmed. No audited sales, client volume or profit. Partial extracts where flagged."
+            },
+            {
+              "name": "Deque",
+              "url": "https://www.deque.com/accessibility-services/audits-compliance-testing/",
+              "checked_at": "2026-11-12T06:05:37.159Z",
+              "observation": "Manual+automated assessment, prioritized results dashboard, developer guidance and optional VPAT-based ACR. No numeric quote. Supplier turnaround/10000+ audits not independent outcomes.",
+              "limitations": "Current English supplier offers; geography/currency ISO/tax/checkout not confirmed. No audited sales, client volume or profit. Partial extracts where flagged."
             }
           ],
           "pricing_intelligence": {
@@ -1031,7 +1048,35 @@
               }
             ],
             "nov11_record_review_at": "2026-11-11T01:09:39.564530-05:00",
-            "nov11_scope": "Record/outcome carry-forward only; no new source research for this candidate."
+            "nov11_scope": "Record/outcome carry-forward only; no new source research for this candidate.",
+            "nov12_record_review_at": "2026-11-12T01:08:24.805519-05:00",
+            "nov12_scope": "Three suppliers and GSA ACR guidance only",
+            "nov12_source_checks": [
+              {
+                "url": "https://accessible.org/pricing/",
+                "accessed_at": "2026-11-12T06:05:11.706Z",
+                "status": 200,
+                "truncated": true
+              },
+              {
+                "url": "https://halfaccessible.com/pricing/",
+                "accessed_at": "2026-11-12T06:05:15.569Z",
+                "status": 200,
+                "truncated": true
+              },
+              {
+                "url": "https://www.deque.com/accessibility-services/audits-compliance-testing/",
+                "accessed_at": "2026-11-12T06:05:37.159Z",
+                "status": 200,
+                "truncated": false
+              },
+              {
+                "url": "https://www.section508.gov/sell/acr/",
+                "accessed_at": "2026-11-12T06:05:36.273Z",
+                "status": 200,
+                "truncated": false
+              }
+            ]
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -1039,7 +1084,8 @@
             "No acceptance/change-regression ownership agreement; open-ended remediation/indemnity must not be accepted within fixed pack.",
             "Accessible.org document pricing conflicts internally; no document quote used. No reviewer booked or paid.",
             "No independent qualified reviewer/certification verified. Customer-required methodology/credentials and complete WCAG2.1AA gap mapping must be agreed before a scoped quote; the federal baseline is not an automatic TitleII test plan.",
-            "W3C reporting/WCAG-EM primary pages returned403; no bypass or claimed new W3C-methodology verification."
+            "W3C reporting/WCAG-EM primary pages returned403; no bypass or claimed new W3C-methodology verification.",
+            "Nov12: buyer artifact acceptance (tickets versus ACR), assessor availability, independent review and acquisition cost remain unverified; suppliers already provide handoff. GSA page reviewed March2018, not a 2026 demand series."
           ],
           "business_case": {
             "version": "2026-11-08-weekly-business-case-v5",
@@ -1495,20 +1541,32 @@
               "hypothesis": "A buyer may value versioned ticket/retest delivery, but this has not been validated and competitors already offer it",
               "acceptance_gate_proposed": "Confirm client method/credential acceptance and gap-map federal process to agreed WCAG2.1AA scope; no certification/compliance claim based on automated or partial tests",
               "actual_reviewer_accepted": null
+            },
+            "handoff_boundary_nov12": {
+              "observed": "Three existing independent suppliers already sell evidence/remediation handoff; GSA federal ACR guidance identifies product-specific reporting and links an OpenACR editor. Generic report generation is not whitespace.",
+              "hypothesis": "A narrowly scoped agency ticket/retest handoff may reduce coordination effort; no reachable buyer or paid intent verified.",
+              "mandatory_scope_fields": [
+                "product/build version",
+                "tested templates and flows",
+                "standard/version and entity applicability",
+                "test environment/assistive tech/method",
+                "criterion findings with reproduction and evidence",
+                "severity and developer ticket",
+                "independent assessor",
+                "retest date and changes",
+                "explicit exclusions and untested coverage"
+              ],
+              "boundary": "Ticket handoff is not an ACR, legal opinion, whole-site certification or Section508/TitleII equivalence. Agree buyer-required artifact before quoting. No ACR created.",
+              "cost_stress_test": "At proposed $1499, 16h*$50+$100 tools+5%fees=$974.95 variable cost. Adding $350 ACR to unchanged scope gives $1324.95 variable/$174.05 contribution(11.61%); adding $390 support instead gives $1364.95/$134.05(8.94%). Illustrative add-ons only; purchased audit prerequisite means these are NOT standalone subcontract quotes. Full outsourcing at observed $1250 audit +$350 ACR already exceeds $1499 before our labor/fees. Do not presume margin or supplier availability.",
+              "decision": "Retain DEEPEN_RESEARCH; establish accepted deliverable/reviewer before any separately approved test; no rescore."
             }
           },
-          "shared_integration_dependency": {
-            "current_authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/186",
-            "complete_hub_owner": "Cleo per current live body, supersedes historical Adam-owned Hub docs",
-            "research_owner": "Brian",
-            "adam": "Engineering/#175 only where assigned; not complete Hub implementation owner",
-            "status": "Existing transitional D1 used; integrated Hub and independent recipient-runtime access not verified; no infrastructure/security changes"
-          }
+          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
         },
         "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
-        "checked_at": "2026-11-11T01:09:39.564530-05:00",
-        "record_version": "2026-11-11-nightly-v9",
-        "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
+        "checked_at": "2026-11-12T01:08:24.805519-05:00",
+        "record_version": "2026-11-12-nightly-v10",
+        "revision_note": "Nov12 record review; old source dates retained. MI-002 supplier/ACR sources refreshed only; no original buyer demand refresh.",
         "change_note": "Owner-directed accessibility second pass, costed manual-review/maintenance boundary and three supplier cards; score/outcome unchanged. No qualified manual reviewer or reachable client confirmed.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
@@ -1564,8 +1622,8 @@
       }
     },
     {
-      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
-      "observed_at": "2026-11-11T06:09:39.564Z",
+      "run_id": "mi-4ff155cba6d31695a80a106b2dbe27e1",
+      "observed_at": "2026-11-12T06:08:24.805Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -1700,7 +1758,9 @@
             "comparable_access_window": "2026-11-08T06:06:10Z–2026-11-08T06:07:03Z; original problem surveys not refreshed",
             "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
             "nov11_record_review_at": "2026-11-11T01:09:39.564530-05:00",
-            "nov11_scope": "Record/outcome carry-forward only; no new source research for this candidate."
+            "nov11_scope": "Record/outcome carry-forward only; no new source research for this candidate.",
+            "nov12_record_review_at": "2026-11-12T01:08:24.805519-05:00",
+            "nov12_scope": "Carry-forward only; no fresh source research on this candidate"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -2140,17 +2200,11 @@
             ],
             "independent_supplier_groups_199": 3
           },
-          "shared_integration_dependency": {
-            "current_authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/186",
-            "complete_hub_owner": "Cleo per current live body, supersedes historical Adam-owned Hub docs",
-            "research_owner": "Brian",
-            "adam": "Engineering/#175 only where assigned; not complete Hub implementation owner",
-            "status": "Existing transitional D1 used; integrated Hub and independent recipient-runtime access not verified; no infrastructure/security changes"
-          }
+          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
         },
-        "checked_at": "2026-11-11T01:09:39.564530-05:00",
-        "record_version": "2026-11-11-nightly-v9",
-        "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
+        "checked_at": "2026-11-12T01:08:24.805519-05:00",
+        "record_version": "2026-11-12-nightly-v10",
+        "revision_note": "Nov12 record review; old source dates retained. MI-002 supplier/ACR sources refreshed only; no original buyer demand refresh.",
         "allocation_tag": "New Stream",
         "allocation_rationale": "New video/creative-production revenue offer; not the web-audit service. Reclassify only on documented buyer/job change, never to make ratio look good.",
         "operating_model_30d": {
@@ -2205,8 +2259,8 @@
       }
     },
     {
-      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
-      "observed_at": "2026-11-11T06:09:39.564Z",
+      "run_id": "mi-4ff155cba6d31695a80a106b2dbe27e1",
+      "observed_at": "2026-11-12T06:08:24.805Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -2365,7 +2419,9 @@
             "comparable_access_window": "2026-11-08T06:06:10Z–2026-11-08T06:07:03Z; original problem surveys not refreshed",
             "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
             "nov11_record_review_at": "2026-11-11T01:09:39.564530-05:00",
-            "nov11_scope": "Commission FAQ refreshed; linked EUR-Lex legal text extraction failed. FAQ truncated and mixes amended/proposal language; operative rule not independently resolved."
+            "nov11_scope": "Commission FAQ refreshed; linked EUR-Lex legal text extraction failed. FAQ truncated and mixes amended/proposal language; operative rule not independently resolved.",
+            "nov12_record_review_at": "2026-11-12T01:08:24.805519-05:00",
+            "nov12_scope": "Carry-forward only; no fresh source research on this candidate"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -2844,18 +2900,12 @@
             ],
             "independent_supplier_groups_199": 3
           },
-          "shared_integration_dependency": {
-            "current_authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/186",
-            "complete_hub_owner": "Cleo per current live body, supersedes historical Adam-owned Hub docs",
-            "research_owner": "Brian",
-            "adam": "Engineering/#175 only where assigned; not complete Hub implementation owner",
-            "status": "Existing transitional D1 used; integrated Hub and independent recipient-runtime access not verified; no infrastructure/security changes"
-          }
+          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
         },
         "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
-        "checked_at": "2026-11-11T01:09:39.564530-05:00",
-        "record_version": "2026-11-11-nightly-v9",
-        "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
+        "checked_at": "2026-11-12T01:08:24.805519-05:00",
+        "record_version": "2026-11-12-nightly-v10",
+        "revision_note": "Nov12 record review; old source dates retained. MI-002 supplier/ACR sources refreshed only; no original buyer demand refresh.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {

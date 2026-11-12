@@ -1,0 +1,55 @@
+# Watchlist / rejections — November 8 Eastern
+All prior experiment outcomes remain NOT RUN. No watch item promoted into an invented candidate.
+
+- W01 public procurement: continue scoped MI-002 demand research; Maya #178 retains bid ownership. No new RFP task or submission.
+- W02 microbusiness literacy: unchanged; Eurostat >=10-person adoption headline is not a microbusiness demand measure.
+- W03 audio/music: screened again. Artlist business and official help both403; no bypass. Search snippets establish discovery leads only, no verified price, customer outcome or rights. Prior YouTube free-library substitute stands with original freshness. No original music-pack recommendation without niche buyer problem and distribution/rights proof.
+- W04 printables/KDP: free official KDP manuscript templates verified Nov8; generic formatting is not differentiated. Large-print community URL rendered only Loading; search snippets NOT buyer evidence. No acquired assets, sales-rank claims or cloned manuscript. Differentiate format only after direct reader problem/intent evidence. Dax #184 listing audit untouched. Current policy constraints do not prove demand.
+- W05 mandatory AI certificates: rejected positioning retained; legal-source inconsistency not cured by new business-case metadata.
+- W06 autonomous debt/payment activity: excluded; no outward reminders or money movement.
+- W07 field-service quote assistant: prior WATCH retained; no new buyer/problem/channel evidence, no MI-005.
+- W08 Etsy digital-delivery preflight: prior WATCH retained; five-file/20MB constraints not buying intent. Require three independent problem reports and inadequacy of existing tools before promotion.
+
+Rotation: fresh audio/music and differentiated KDP screen, plus owner-prioritized websites/accessibility. Existing workflow automation, digital training, video/creative services and niche-app watch backfilled, not all freshly researched. Next: focused niche-app/direct user-problem evidence and digital-product distribution proof. No category quota.
+
+## November9 additions (prior decisions preserved)
+- W01: PRISM guide is practice evidence, not funded solicitation. No procurement promotion or competing Maya pipeline.
+- W07 niche apps: GlideOS/AppSheet/Softr official pages checked. Glide separate Classic/OS subscriptions/data and migration gaps; AppSheet licensing/external-device counting; Softr navigation-only extraction. No specific reachable buyer pain verified, so no generic app-builder/MI-005 recommendation. Existing#203 personal calorie app belongs to Adam, not a new research prospect.
+- W08 delivery tooling: Etsy requested Selling-Digital-Items URL resolves custom-order content: private listings cannot be digital; linked made-to-order digital route not independently checked. Do not falsely refresh historical five-file/20MB rule from this different page.
+- W09 generic Notion templates: platform marketplace shows consulting/template supply and selected self-described user/review claims, not verified sales. No niche pain/price/demand or3independent success cards; WATCH_REJECT_GENERIC, no new candidate or copied templates. Source current Nov9, publication dates unknown. Need3independent direct problem receipts and native/free-tool inadequacy before promotion.
+- Audio/music/KDP/video: prior outcomes and rights/policy limits carried, NOT freshly checked tonight. Next rotation: original audio/music buyer-workflow sources plus niche reader problem, not generic formats. No requirement every category produce a brief.
+
+
+## November10 screen — source-checks, not new validated opportunities
+- W03 audio/music: ACX Audio Lab https://www.acx.com/audiolab (2026-11-10T06:05:32.837Z) already offers eight-metric technical feedback including RMS/peaks/bitrate/spacing. Price not displayed; full listening/semantic quality not proven. ACX help https://help.acx.com/s/article/what-are-the-acx-audio-submission-requirements (06:05:32.416Z) rendered only Loading; AI/human narration policy and numeric acceptance limits NOT verified. No generic ACX-validator recommendation.
+- W03 second independent supplier/partial substitute Auphonic https://auphonic.com/pricing (06:06:03.453Z): level/noise/loudness/encoding/API workflow, duration credits/min3minutes, same inputs in same production edits not charged again; changed inputs/new production charged again. Dollar amounts absent in extract; no numeric price inferred. Tax/VAT extra; API/account/media-consent limits untested. Automated processing is not a qualified human listening review.
+- W03 third independent supplier/partial substitute Audacity https://www.audacityteam.org/ (06:06:03.855Z): free/open-source recording/editing, formats/plugins/spectrogram tools. Download popularity is supplier claim, not paid demand. No download, plugin installation or asset license acquired. Three supplier groups establish strong substitutes only, not three paying buyers or our product profitability. No original music production/release; existing#198/#202 retained, not duplicated.
+- W04 niche reader/KDP screen: DAISY https://kb.daisy.org/publishing/docs/conformance/epub.html (06:05:33.391Z) says automated Ace pass alone insufficient and manual SMART complements it; accessibility metadata/distribution/DRM can affect access. Companion https://daisy.org/activities/standards/epub/ verified current EPUB overview. Same organization, not independent supplier groups. Reader-access problem/mechanism guidance, NOT direct reader interview, purchase intent or KDP print/large-print demand. Do not relabel EPUB as a KDP compliance specification; version references on pages differ, normative/legal interpretation unresolved. No EPUB production/publishing offer recommended or attached to MI-002's stable website buyer/problem/channel.
+- Prior W01/W02/W05–W09 decisions and outcomes remain. No new candidate because target-buyer/channel/demand and qualification gates are missing. Need3independent primary buyer-problem receipts, native/free inadequacy and reachable channel before promotion; supplier tools/policies alone do not pass.
+Next rotation: focused MI-001 native exception-workflow differentiation and MI-003 official rule-text positioning; retain MI-002 strategic research priority. No generic idea quota.
+
+
+## November11 screen — digital products/KDP; no new candidate
+
+Notion official https://www.notion.com/help/selling-on-marketplace: current selling page states creator approval/waitlist (review may take months), Stripe onboarding/eligible-country limits,8%+$0.40transaction fee,14-day payout holding period and buyer refund window; minimum payout$20, additional1%FX outsideUS. All salesUSD. This is platform policy, NOT creator earnings or a reachable acquisition channel. Refund/chargeback cash exposure and buyer support remain human/account dependencies. No application/account action performed.
+
+KDP official https://kdp.amazon.com/en_US/help/topic/G200672390: generated text/images/translations require disclosure even after substantial editing; assisted-only content treated differently. Rights, accurate metadata and customer quality remain publisher responsibilities. Policy permission does not establish niche buyer demand; Dax retains listing execution.
+
+Canva https://www.canva.com/creators returned403; no bypass. Etsy requested https://help.etsy.com/hc/en-us/articles/115015663107-Selling-Digital-Items returned **How to Offer Custom Items**, not the requested digital policy. Do not treat URL slug as verified content. Safe alternatives Notion/KDP support only their own platform claims. No three like-for-like template suppliers or direct niche pain found in this bounded policy screen; retain WATCH/REJECT_GENERIC, not MI-005 or a recommended business. Threshold: narrow documented buyer job +3relevant independent supplier groups where available +native/free shortcoming +reachable approved channel.
+
+Prior W01–W09 and audio/video/niche-app reasons/outcomes preserved above. Next new-stream screen prioritizes reader/niche-app problem evidence; no duplicate of Adam#203 or Cleo music#198/#202.
+
+
+## November12 New Stream screen — reader apps; WATCH, no new candidate
+
+DAISY https://daisy.org/news-events/articles/reading-apps-user-requirements-published/ (original publication Dec19,2025; board endorsement Nov2025) describes a user-grounded synthesis with individuals/user organizations/providers/developers/experts:120+requirements,11themes,18userstories. This is a real needs-oriented primary source, NOT a representative survey, an unsolved-gap audit, a 2026trend, willingness-to-pay or our target-buyer interview. Accessibility needs vary across screen readers, read-aloud, notes and visual adjustments.
+
+Three independently operated suppliers/partial substitutes checked:
+
+1. Voice Dream https://www.voicedream.com/: PDF/EPUB/Word import, highlights/notes/export, offline iPhone/iPad/Mac reading; supplier claims VoiceOver/VoiceControl/braille support. No numeric price extracted; testimonials/review totals not independently verified, not demand for our product.
+2. Speechify https://speechify.com/text-to-speech-online/: free-start browser TTS, document upload, saved-library account sync/download. No numeric paid quote; inclusion/effectiveness claims untested, not medical outcomes or asset/voice resale permission.
+3. Readwise https://readwise.io/read: Reader PDF/EPUB/RSS, highlights/export/TTS, integrations/offline and API. Display $9.99/month billed annually vs$12.99monthly,30daytrial; dollar ISO/tax/checkout unknown. Profitability statement is supplier self-report, not audited revenue and not our earnings.
+
+Partial substitutes: these address reading differently, not identical accessibility guarantees. Existing supply is strong. Hypothesis only: a narrow reader workflow may have unmet handoff/accessibility needs. No specific underserved buyer, native-tool failure, reachable channel or funded intent established, so no MI-005, build or price proposal. Watch W07/niche apps and W04reader formats; preserve earlier rejections. No duplication of calorieapp#203, existing website QA#181, KDP#184 or Cleo music#198/#202.
+
+Lifecycle: any later app requires original licensed inputs, accessible human-tested UX, independent assistive-tech users, consent/privacy review, API/export/account entitlement and maintenance. No library uploads/account trials or redistribution here. Threshold before promotion: original narrow buyer-job evidence plus3relevant suppliers where available, observable native-tool shortcoming and approved reachable channel; only then costed/falsifiable experiment proposal. Direct participant recruitment remains separately approved. No economics for a not-yet-defined offer invented.
