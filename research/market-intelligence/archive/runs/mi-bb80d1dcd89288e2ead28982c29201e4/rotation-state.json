@@ -1,0 +1,229 @@
+{
+  "local_date": "2026-11-11",
+  "checked": [
+    "MI-001 native exception/approval alternatives",
+    "MI-003 official AI-literacy FAQ and failed linked law",
+    "W04 template/KDP distribution, rights and account dependencies"
+  ],
+  "carried_not_refreshed": [
+    "MI-002 approved deep dive, supplier cards and manual reviewer gates",
+    "MI-004 caption offers/demand",
+    "original receivables/adoption surveys",
+    "audio/video/niche-app prior screens and rejection outcomes"
+  ],
+  "next": [
+    "MI-002 buyer-accepted handoff artifacts and cost/reviewer gaps",
+    "New Stream differentiated niche-app/reader problem evidence; avoid #203 duplication"
+  ],
+  "effort_ledger": {
+    "schema": "199-effort-v1",
+    "date": "2026-11-11",
+    "entries": [
+      {
+        "candidate_id": "MI-001",
+        "stable_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
+        "tag": "Adjacent",
+        "agent_active_minutes": null,
+        "human_hours": 0,
+        "evidence_grade": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+        "hypothesis": "Approval-first receivables exception desk for small B2B service firms provides incremental value beyond native/free alternatives to an accessible buyer.",
+        "next_experiment": {
+          "days_after_authorization": 7,
+          "cash_cap": 100,
+          "human_hours_cap": 12,
+          "technical": "30/30 synthetic invoice balances/classes correct; no reminders for paid/disputed/duplicate items; injection cannot change rules; zero outbound actions",
+          "pass_gate": "At least 3/5 consenting eligible users achieve >=30% faster exception review without extra errors AND 2/5 request a scoped $499 pilot with approval path",
+          "fail_gate": "Zero requests, >=3/5 native-tool sufficiency, or fewer than 3/5 meet time/error criterion",
+          "owner": "Brian accountable research; Maya proposed consented recruitment after separate approval; independent domain QA not builder",
+          "decision_state": "PROPOSED_NOT_RUN",
+          "inconclusive": "One request, mixed signals, technical uncertainty or insufficient eligible recruitment by deadline; do not count as pass",
+          "approval_required": "Exact participants/channel/data/scope/budget; research model is not approval to build/list/outreach/spend",
+          "clock": "Preparation and buyer-test clock begins only after explicit authorization and capacity confirmation; day30 review still occurs if blocked"
+        },
+        "owner": "Brian research; dependencies proposed not accepted",
+        "decision": "FIRST_EXPERIMENT_PROPOSED",
+        "proposed_cost_cap_usd": 100,
+        "actual_cash_spent_usd": 0,
+        "approval_reference": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+        "outcome": "NOT_RUN; no demand proof",
+        "original_demand_source_refresh": false,
+        "actual_human_delivery_hours": null,
+        "actual_compute_cost_usd": null,
+        "source_check_scope": "Wave/Chaser/Upflow native offers; old demand surveys not refreshed"
+      },
+      {
+        "candidate_id": "MI-002",
+        "stable_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
+        "tag": "Adjacent",
+        "agent_active_minutes": null,
+        "human_hours": 0,
+        "evidence_grade": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+        "hypothesis": "Title II evidence-and-remediation handoff pack for public-sector web vendors provides incremental value beyond native/free alternatives to an accessible buyer.",
+        "next_experiment": {
+          "days_after_authorization": 10,
+          "cash_cap": 150,
+          "human_hours_cap": 12,
+          "technical": "Original five-template sample; qualified independent manual assessor verifies evidence, WCAG mapping and retest; cost <=$975 including modeled fee/refund reserve",
+          "pass_gate": "2/3 consenting eligible existing clients/agency partners request scoped $1499 quote with budget/decision path AND technical/cost gate passes",
+          "fail_gate": "Zero quote requests or qualified manual-review role cannot be filled within cap",
+          "owner": "Brian accountable research; Maya proposed consented recruitment after separate approval; independent domain QA not builder",
+          "decision_state": "PROPOSED_NOT_RUN",
+          "inconclusive": "One request, mixed signals, technical uncertainty or insufficient eligible recruitment by deadline; do not count as pass",
+          "approval_required": "Exact participants/channel/data/scope/budget; research model is not approval to build/list/outreach/spend",
+          "clock": "Preparation and buyer-test clock begins only after explicit authorization and capacity confirmation; day30 review still occurs if blocked"
+        },
+        "owner": "Brian research; dependencies proposed not accepted",
+        "decision": "DEEPEN_RESEARCH",
+        "proposed_cost_cap_usd": 150,
+        "actual_cash_spent_usd": 0,
+        "approval_reference": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+        "outcome": "NOT_RUN; no demand proof",
+        "original_demand_source_refresh": false,
+        "actual_human_delivery_hours": null,
+        "actual_compute_cost_usd": null,
+        "source_check_scope": "Record carry-forward; approved deep dive retained"
+      },
+      {
+        "candidate_id": "MI-003",
+        "stable_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
+        "tag": "Adjacent",
+        "agent_active_minutes": null,
+        "human_hours": 0,
+        "evidence_grade": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+        "hypothesis": "Role-specific AI usage and literacy starter pack for small EU agencies provides incremental value beyond native/free alternatives to an accessible buyer.",
+        "next_experiment": {
+          "days_after_authorization": 7,
+          "cash_cap": 100,
+          "human_hours_cap": 8,
+          "technical": "Resolve current EU-rule positioning and independent subject review before promises; original synthetic agency use-inventory, no compliance certification",
+          "pass_gate": "3/5 eligible managers complete inventory in <=15 minutes AND 2/5 request scoped $249 pilot",
+          "fail_gate": "Zero requests or >=3/5 say free alternatives fully solve task",
+          "owner": "Brian accountable research; Maya proposed consented recruitment after separate approval; independent domain QA not builder",
+          "decision_state": "PROPOSED_NOT_RUN",
+          "inconclusive": "One request, mixed signals, technical uncertainty or insufficient eligible recruitment by deadline; do not count as pass",
+          "approval_required": "Exact participants/channel/data/scope/budget; research model is not approval to build/list/outreach/spend",
+          "clock": "Preparation and buyer-test clock begins only after explicit authorization and capacity confirmation; day30 review still occurs if blocked"
+        },
+        "owner": "Brian research; dependencies proposed not accepted",
+        "decision": "HOLD_RULE_REVIEW",
+        "proposed_cost_cap_usd": 100,
+        "actual_cash_spent_usd": 0,
+        "approval_reference": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+        "outcome": "NOT_RUN; no demand proof",
+        "original_demand_source_refresh": false,
+        "actual_human_delivery_hours": null,
+        "actual_compute_cost_usd": null,
+        "source_check_scope": "Official Commission FAQ; legal text failure retained"
+      },
+      {
+        "candidate_id": "MI-004",
+        "stable_key": "B2B webinar producers | terminology/speaker/timing caption handoff | agency referral, untested",
+        "tag": "New Stream",
+        "agent_active_minutes": null,
+        "human_hours": 0,
+        "evidence_grade": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+        "hypothesis": "English B2B webinar caption-QA and evidence handoff provides incremental value beyond native/free alternatives to an accessible buyer.",
+        "next_experiment": {
+          "days_after_authorization": 7,
+          "cash_cap": 50,
+          "human_hours_cap": 8,
+          "technical": "Original 10-minute synthetic technical webinar; independent reviewer catches every planted glossary/speaker/timing defect; no rights or publishing dependency bypass",
+          "pass_gate": "3/5 consenting producers report recurring terminology/handoff pain AND 2/5 request scoped $149 pilot",
+          "fail_gate": "Zero requests or >=3/5 native-tool sufficiency",
+          "owner": "Brian accountable research; Maya proposed consented recruitment after separate approval; independent domain QA not builder",
+          "decision_state": "PROPOSED_NOT_RUN",
+          "inconclusive": "One request, mixed signals, technical uncertainty or insufficient eligible recruitment by deadline; do not count as pass",
+          "approval_required": "Exact participants/channel/data/scope/budget; research model is not approval to build/list/outreach/spend",
+          "clock": "Preparation and buyer-test clock begins only after explicit authorization and capacity confirmation; day30 review still occurs if blocked"
+        },
+        "owner": "Brian research; dependencies proposed not accepted",
+        "decision": "PARK_COMPARE_NATIVE",
+        "proposed_cost_cap_usd": 50,
+        "actual_cash_spent_usd": 0,
+        "approval_reference": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+        "outcome": "NOT_RUN; no demand proof",
+        "original_demand_source_refresh": false,
+        "actual_human_delivery_hours": null,
+        "actual_compute_cost_usd": null,
+        "source_check_scope": "Record carry-forward; native caption comparison still required"
+      },
+      {
+        "candidate_id": null,
+        "stable_key": "W04 digital templates/KDP channel-policy screening",
+        "tag": "New Stream",
+        "agent_active_minutes": null,
+        "human_hours": 0,
+        "evidence_grade": "primary_platform_policy_not_demand",
+        "hypothesis": "A differentiated buyer job might justify an original template/book; unproven",
+        "next_experiment": "Require narrow buyer job, three relevant supplier groups and reachable channel before promotion; no build/list/outreach/spend",
+        "owner": "Brian research; Dax listings only if separately assigned",
+        "decision": "WATCH_NO_NEW_ID",
+        "proposed_cost_cap_usd": null,
+        "actual_cash_spent_usd": 0,
+        "actual_compute_cost_usd": null,
+        "approval_reference": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+        "outcome": "No paid/intent evidence"
+      }
+    ],
+    "human_hours": 0,
+    "human_hours_scope": "No human participated in unattended run; excludes unmeasured future review/delivery",
+    "agent_active_minutes": null,
+    "actual_cash_spent_usd": 0,
+    "tool_compute_cost_usd": null,
+    "allocation_actual_percent": null,
+    "reason": "No reliable active inference/category timer exposed; source counts and elapsed runtime are not effort. Actual 70/30 not measurable; no retroactive invented minutes.",
+    "target_percent": {
+      "Adjacent": 70,
+      "New Stream": 30
+    },
+    "proposed_next_effort_hours": {
+      "Adjacent": 7,
+      "New Stream": 3
+    },
+    "shared_overhead_policy": "If measured later allocate70/30 and label overhead, never fabricate timers",
+    "actuals": {
+      "experiments_completed_this_run": 0,
+      "qualified_leads": null,
+      "buyer_conversations": null,
+      "evidence_grade_improvements_to_qualified_or_paid": 0,
+      "false_positives": null,
+      "experiments_completed": 0,
+      "evidence_upgrades_to_qualified_or_paid": 0
+    },
+    "review_dates": [
+      "2026-11-15",
+      "2026-11-22",
+      "2026-11-29",
+      "2026-12-06",
+      "2026-12-08"
+    ],
+    "source_checks_this_run": [
+      "https://quickbooks.intuit.com/learn-support/en-us/help-article/invoicing/send-invoice-reminders-automatically-manually/L0WccR7C7_US_en_US",
+      "https://www.waveapps.com/invoicing",
+      "https://upflow.io/product",
+      "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+      "https://www.notion.com/help/selling-on-marketplace",
+      "https://www.canva.com/creators",
+      "https://kdp.amazon.com/en_US/help/topic/G200672390",
+      "https://upflow.io/",
+      "https://www.chaserhq.com/chaser-pricing",
+      "https://eur-lex.europa.eu/eli/reg/2026/1744/oj",
+      "https://help.etsy.com/hc/en-us/articles/115015663107-Selling-Digital-Items"
+    ]
+  },
+  "cadence": {
+    "weekly": [
+      "2026-11-15",
+      "2026-11-22",
+      "2026-11-29",
+      "2026-12-06"
+    ],
+    "final": "2026-12-08",
+    "overdue": false,
+    "sunday_memo": "Not due Wednesday; Nov8 memo preserved",
+    "next_uncommitted_effort_plan_hours": {
+      "Adjacent": 7,
+      "New Stream": 3
+    }
+  }
+}

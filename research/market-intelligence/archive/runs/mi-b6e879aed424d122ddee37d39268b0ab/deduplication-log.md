@@ -1,0 +1,3 @@
+# Dedupe November 7
+Read #188/#186 and adjacent #178/#184/#185 full comments plus bounded all-state26 issue body/title snapshot. Reviewed initial and Nov6 local records and latest v2 Git/D1 current4 inventory. Evidence snapshots are local recovery files; public consolidated report omits private prospect detail.
+MI-001 buyer/problem/channel key unchanged; add Wave alternative/pricing only. MI-002/003/004 keys/outcomes/scores unchanged. W07 and W08 are watchlist hypotheses, not novel ranked IDs or duplicated existing tasks. Quoting receivables overlap routes to MI-001; Etsy listing changes remain Dax184; RFP/acquisition remains Maya178/185. No global uniqueness or operational Business Hub read claimed.
