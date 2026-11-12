@@ -308,7 +308,7 @@ export default function ContactPage() {
       />
       {/* ── Hero section ── */}
       <section className="border-b border-line bg-surface">
-        <EditorialHero image="/images/pages/contact-environmental.webp" alt="Conceptual visualization of a calm meeting corner beside a window.">
+        <EditorialHero image="/images/pages/contact-matching-chairs.webp" alt="Conceptual visualization of a calm meeting corner beside a window.">
           <Reveal>
             <h1
               id="contact-hero-heading"
