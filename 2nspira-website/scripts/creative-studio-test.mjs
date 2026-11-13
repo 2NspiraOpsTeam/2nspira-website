@@ -137,7 +137,8 @@ try {
   check(studioNavigation(c).map(l => l.href), ["/studio", "/studio/watch", "/studio/listen", "/studio/read", "/studio/play", "/shop"]);
   check(publicStudio(c).items.some(i => i.id === "breadcrumb"), true);
   check(c.items.find(i => i.id === "breadcrumb")?.status, "published");
-  check(studioVideoIds(c,"watch").length, c.items.filter(i=>i.type==="Video").length);
+  check(studioVideoIds(c,"watch"), ["hWk6mH_t0Cs"]);
+  check(studioVideoIds(c,"listen").length, c.items.filter(i=>i.type==="Video").length - 1);
   const listenCount=studioVideoIds(c,"listen").length;
   check(listenCount > 0, true);
   const hiddenMedia=structuredClone(c);
@@ -167,6 +168,14 @@ try {
   check(upgradeStudio(customized), customized);
   check(studioNavigation(customized).map(l => l.name), ["My reading room", "Watch"]);
   check(publicStudio(c).groups.some(g=>g.id==="play"), true);
+  const previousVersion = structuredClone(c);
+  previousVersion.navigationVersion = 2;
+  previousVersion.categories.find(cat => cat.id === "music-ambience").groupIds = ["watch", "listen"];
+  previousVersion.categories.find(cat => cat.id === "coloring-books").groupIds = ["play", "shop"];
+  const migrated = upgradeStudio(previousVersion);
+  check(studioVideoIds(migrated, "watch"), ["hWk6mH_t0Cs"]);
+  check(migrated.categories.find(cat => cat.id === "coloring-books").groupIds, ["shop"]);
+  check(migrated.items, previousVersion.items);
   const legacy = structuredClone(c);
   delete legacy.navigationVersion;
   check(upgradeStudio(legacy).items, legacy.items);

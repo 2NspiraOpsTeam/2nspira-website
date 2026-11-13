@@ -2,8 +2,6 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import ServiceEffects from "@/components/ServiceEffects";
 import StudioTrail from "./StudioTrail";
-import { StudioCard } from "./StudioContent";
-import type { Item } from "@/lib/studio/model";
 import PageIdentity from "@/components/PageIdentity";
 import VideoPlayer from "@/components/VideoPlayer";
 import { AmbientField, EyebrowPill } from "@/components/VisualAccents";
@@ -23,10 +21,10 @@ function MediaCard({ video, listen }: { video: Video; listen: boolean }) {
     <MediaLink video={video} listen={listen} />
   </article>;
 }
-export default function WatchContent({ mode = "all", availableVideoIds, channel }: { mode?: Mode; availableVideoIds?: string[]; channel?: Item }) {
+export default function WatchContent({ mode = "all", availableVideoIds }: { mode?: Mode; availableVideoIds?: string[] }) {
   const listen=mode==='listen', watch=mode==='watch', studio=mode!=='all';
   const collection=videos.filter(v=>availableVideoIds ? availableVideoIds.includes(v.id) : mode==='all'||(listen?v.category==='ambience':v.category==='leadership'));
-  const featured=collection[0], rest=mode === "watch" && channel ? collection : collection.slice(1);
+  const featured=collection[0], rest=collection.slice(1);
   const path=studio?`/studio/${mode}`:'/videos';
   return <main id="main-content" className={pageMain}><ServiceEffects editorial>
     <PageIdentity type="CollectionPage" name={listen ? "Listen — Music & Ambience" : "2Nspira Videos"} path={path} />
@@ -38,11 +36,11 @@ export default function WatchContent({ mode = "all", availableVideoIds, channel 
           <div data-catalog-reveal>
             <p><EyebrowPill>Creative Studio · {listen ? "Listen — Music & Ambience" : watch ? "Watch" : "The full video collection"}</EyebrowPill></p>
             <h1 id="videos-title" className={h1}>{listen ? <>Find your<br/><span className="text-accent">quiet place.</span></> : watch ? <>Ideas you can see.<br/><span className="text-accent">Perspectives to explore.</span></> : <>Ideas you can see.<br/>Atmospheres you can feel.</>}</h1>
-            <p className={lead}>{listen ? "Original instrumental music, rain soundscapes, imagined places, and a little room to exhale. Choose an atmosphere for reading, rest, or a quiet moment." : watch ? "Explore our YouTube channel for music videos, original soundscapes, creative stories, and perspectives on leadership." : "From thought-provoking perspectives to immersive rain soundscapes, explore how we bring stories, sound, and imagined worlds to life."}</p>
+            <p className={lead}>{listen ? "Original instrumental music, rain soundscapes, imagined places, and a little room to exhale. Choose an atmosphere for reading, rest, or a quiet moment." : watch ? "Why AI adoption needs more than technology: explore the trust deficit leaders are missing." : "From thought-provoking perspectives to immersive rain soundscapes, explore how we bring stories, sound, and imagined worlds to life."}</p>
             <div className="mt-7 flex flex-wrap gap-2"><a href={rest.length ? '#latest-videos' : '#creative-range'} className={`gap-2 ${buttonPrimary}`}>{rest.length ? 'Explore the collection' : 'Keep exploring'} <ArrowDown size={17} aria-hidden="true"/></a><a href={youtubeChannel} target="_blank" rel="noopener noreferrer" className={buttonSecondary} aria-label="Our YouTube channel (opens in a new tab)">Our YouTube channel <ArrowUpRight size={17} aria-hidden="true" /></a></div>
             <p className="mt-6 text-sm leading-6 text-body">{collection.length} public {collection.length===1?'video':'videos'} · {listen?'Original soundscapes':watch?'Leadership & ideas':'Soundscapes & leadership'}</p>
           </div>
-          {watch && channel ? <StudioCard item={channel} /> : featured ? <article data-catalog-card id={watch?'leadership-videos':'ambience-videos'} className={`min-w-0 scroll-mt-28 p-4 sm:p-5 ${card}`}>
+          {featured ? <article data-catalog-card id={watch?'leadership-videos':'ambience-videos'} className={`min-w-0 scroll-mt-28 p-4 sm:p-5 ${card}`}>
             <p className={`mb-4 ${eyebrow}`}>{watch?'Featured perspective':'Featured soundscape · A little space to exhale'}</p>
             <VideoPlayer id={featured.id} title={featured.title} duration={featured.duration} />
             <h2 className="mt-5 text-2xl font-semibold leading-snug text-ink">{watch?'The human side of AI.':'Step into the rain.'}</h2>

@@ -6,7 +6,7 @@ import { featuredVideo } from "@/content/videos";
 import { h1, h2, lead, buttonPrimary, card } from "@/components/ui";
 
 const stories = {
-  watch: { Icon: Play, title: "A fresh way to see things.", text: "Visit our YouTube channel for music videos, original soundscapes, creative stories, and fresh perspectives.", label: "Discover Watch", image: "/images/videos/hWk6mH_t0Cs.jpg", alt: "Why AI Adoption Is Failing: The Trust Deficit Leaders Are Missing" },
+  watch: { Icon: Play, title: "A fresh way to see things.", text: "Watch Why AI Adoption Is Failing: The Trust Deficit Leaders Are Missing—a perspective on trust and human-centered leadership.", label: "Discover Watch", image: "/images/videos/hWk6mH_t0Cs.jpg", alt: "Why AI Adoption Is Failing: The Trust Deficit Leaders Are Missing" },
   listen: { Icon: Headphones, title: "A little space to exhale.", text: "Music & Ambience. Rain on an attic window, a mossy garden, or a quiet café. Step into an original soundscape and stay a while.", label: "Discover Listen", image: `/images/videos/${featuredVideo.id}.jpg`, alt: featuredVideo.title },
   read: { Icon: BookOpen, title: "Ideas that stay with you.", text: "A leadership book to return to. Insights that make you pause. Explore the human side of technology, trust, and change.", label: "Discover Read", image: "", alt: "" },
   shop: { Icon: ShoppingBag, title: "Find something worth keeping.", text: "Shop our published books, rare and collectible editions, and other creative products. Purchase through the existing Amazon, Etsy, and 2Nspira Books listings.", label: "Explore Shop", image: "/images/shop/rare-books-website.webp", alt: "The 2Nspira Books collectible bookstore" },
@@ -34,9 +34,9 @@ export default function StudioOverview({ content }: { content: Studio }) {
         const categoryIds=c.categories.filter(cat=>cat.groupIds.includes(g.id)).map(cat=>cat.id);
         const items=c.items.filter(i=>i.categoryIds.some(id=>categoryIds.includes(id)));
         const featured=(g.id==='read' ? items.find(i=>i.categoryIds.includes('authored-books')) : items.find(i=>i.id==='breadcrumb')) || items.find(i=>i.featured) || items[0];
-        const image=g.id === "watch" ? items.find(i => i.type === "Channel")?.image || story.image : story.image || featured?.image;
+        const image=story.image || featured?.image;
         return <section data-studio-section key={g.id} id={g.id} aria-labelledby={`overview-${g.id}`} className="grid items-center gap-7 lg:grid-cols-2 lg:gap-12">
-          {image && <figure className="overflow-hidden rounded-2xl bg-canvas-deep"><Image unoptimized src={image} alt={g.id === "watch" ? items.find(i => i.type === "Channel")?.imageAlt || story.alt : story.alt || featured?.imageAlt || ''} width={960} height={640} loading="lazy" sizes="(min-width: 1024px) 500px, calc(100vw - 64px)" className={`aspect-[3/2] w-full ${g.id==='read' ? 'object-contain p-5' : 'object-cover'}`} /></figure>}
+          {image && <figure className="overflow-hidden rounded-2xl bg-canvas-deep"><Image unoptimized src={image} alt={story.alt || featured?.imageAlt || ''} width={960} height={640} loading="lazy" sizes="(min-width: 1024px) 500px, calc(100vw - 64px)" className={`aspect-[3/2] w-full ${g.id==='read' ? 'object-contain p-5' : 'object-cover'}`} /></figure>}
           <div><p className="text-xs font-semibold uppercase tracking-widest text-accent">{g.name}</p><h2 id={`overview-${g.id}`} className={`mt-4 ${h2}`}>{story.title}</h2><p className="mt-5 max-w-xl leading-7 text-body">{story.text}</p><Link href={g.href} className={`mt-7 ${buttonPrimary}`}>{story.label} <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link>{!["watch","listen","read","play","shop"].includes(g.id) && <ul className="mt-6 space-y-3">{items.map(item => <li key={item.id}><Link className="underline" href={item.url || `/creative-studio/${item.id}`}>{item.title}</Link></li>)}</ul>}</div>
         </section>;
       })}

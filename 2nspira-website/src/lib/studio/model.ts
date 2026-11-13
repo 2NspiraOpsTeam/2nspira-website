@@ -67,14 +67,23 @@ export function safeUrl(value: string, image = false) {
 // Upgrade existing saved catalogues without publishing drafts or copying product records.
 // Once saved, the marker preserves all subsequent Admin choices (including Listen).
 export function upgradeStudio(content: Studio): Studio {
-  if (content.navigationVersion === 2) return content;
+  if (content.navigationVersion === 3) return content;
+  if (content.navigationVersion === 2) {
+    const next = structuredClone(content);
+    next.navigationVersion = 3;
+    next.categories = next.categories.map(cat => ({...cat, groupIds:
+      cat.id === "music-ambience" ? [...new Set([...cat.groupIds.filter(id => id !== "watch"), "listen"])] :
+      ["activity-books", "coloring-books", "printables", "art"].includes(cat.id) ? [...new Set([...cat.groupIds.filter(id => id !== "play"), "shop"])] : cat.groupIds}));
+    next.groups = next.groups.map(group => ({...group, description: group.id === "watch" ? "Perspectives on AI, trust, and human-centered leadership." : group.id === "play" ? "The Breadcrumb investigation challenge and Strength Profile self-discovery assessment." : group.description}));
+    return next;
+  }
   const c = structuredClone(content);
   c.navigationVersion = 2;
   if (!c.groups.some(g => g.id === "shop")) c.groups.push({id:"shop", name:"Shop", description:"Purchase our published books, rare and collectible editions, and other creative products.", visible:true});
   c.categories = c.categories.map(cat => ({...cat, groupIds: cat.id === "collectibles" ? ["shop"] : ["authored-books","activity-books","coloring-books","printables","art"].includes(cat.id) ? [...new Set([...cat.groupIds,"shop"])] : cat.id === "music-ambience" ? [...new Set([...cat.groupIds,"watch"])] : cat.groupIds}));
   const custom = c.links.filter(l => !["watch","listen","read","play","shop"].includes(l.groupId) && l.id !== "explore");
   c.links = [{id:"explore",name:"Explore Creative Studio",groupId:"",categoryId:"",url:"/studio",visible:true}, ...["watch","listen","read","play","shop"].map(id => ({id,name:"",groupId:id,categoryId:"",url:"",visible:true})), ...custom];
-  return c;
+  return upgradeStudio(c);
 }
 export function publicStudio(content: Studio): Studio {
   const c = upgradeStudio(content);
@@ -283,7 +292,7 @@ export function validateStudio(value: unknown): Studio {
     };
   });
   return {
-    navigationVersion: 2,
+    navigationVersion: 3,
     revision: c.revision,
     status: c.status,
     intro: name(c.intro, "studio introduction"),
