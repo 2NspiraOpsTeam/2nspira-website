@@ -100,3 +100,20 @@ Local checks: canonical build and route/404 smoke, TypeScript, lint (four existi
 | Narrow mobile | [Before](final-refinement/before-320.jpg) | [After](final-refinement/after-320.jpg) |
 
 Raw local result JSON is in `final-refinement/`. Hosted exact-commit verification is recorded in the PR handoff. Production is not approved or changed.
+
+## Engagement polish — approved production release, November 13
+
+Jeffrey approved implementation and production release after QA (PR comments 6866726520 / 6866737631 and direct Telegram approval). No second approval required.
+
+- Larger CSS-only device frame and layered backdrop, using the same 29 KB image; no new image dependency or animation JavaScript. Existing lucide-react supplies six decorative, hidden-from-AT line icons.
+- Hero copy shortened; project cards separate a concise challenge and solution. Service cards use one benefit and three capabilities; full explanations remain on the existing dedicated service pages, linked from every card.
+- Three icon-led working principles replace paragraphs. Final CTA padding reduced. Original service hierarchy, project facts/destinations, More Services, and Watch / Listen / Read / Play / Shop remain.
+- 250ms card lift/shadow, 300ms image movement, keyboard arrow cues, and 320ms non-fading hero settle. No scroll reveal hiding, autoplay, carousel or JS-dependent content. Reduced motion disables all homepage animations/transitions/transforms.
+
+### Before / after
+
+[Desktop before](engagement-polish/before-1440.jpg) · [Desktop after](engagement-polish/after-1440.jpg) · [Mobile before](engagement-polish/before-390.jpg) · [Mobile after](engagement-polish/after-390.jpg) · [Tablet](engagement-polish/after-768.jpg) · [Narrow mobile](engagement-polish/after-320.jpg)
+
+[Hover example](engagement-polish/hover-1440.jpg): lift, border/shadow and directional arrow reinforce the native project link. Touch needs no hover; all content stays visible. Keyboard focus has an independent outline.
+
+Local verification: 87 regression + 83 portfolio + 42 focused + 33 new motion/no-JS/performance assertions = **245 passed** at 1440/768/390/320. Zero automated homepage axe WCAG A/AA findings, not accessibility certification. All images decoded; no overflow; menus, focus return, project destinations, contact retry/double-click and chat opening checked. Local database-backed route/footer checks use the existing isolated QA fixtures, not production data. Contact responses intercepted; no message or AI request sent. Unthrottled single-run lab performance JSON is included; CLS zero in all four runs, not a field CWV claim. Build/routing/404 smoke, lint (four existing ai-team warnings) and typecheck passed. No package changes, database changes or new backend paths. Hosted exact-commit and production verification are reported in PR release comments.
