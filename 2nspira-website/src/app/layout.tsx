@@ -6,6 +6,7 @@ import { StudioNavigationProvider } from "@/components/studio/StudioNavigation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Analytics from "@/components/Analytics";
+import WebsiteChat from "@/components/WebsiteChat";
 import MarketingEvents from "@/components/MarketingEvents";
 import { socialLinks } from "@/lib/socialLinks";
 import "./globals.css";
@@ -155,7 +156,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <StudioNavigationProvider initial={studioLinks}><Header />
         <MarketingEvents />
         {children}
-        <Footer /></StudioNavigationProvider>
+        <Footer />
+        <WebsiteChat /></StudioNavigationProvider>
       </Analytics>
       <script
         type="application/ld+json"

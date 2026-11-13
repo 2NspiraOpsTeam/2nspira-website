@@ -15,6 +15,14 @@
       "text": "Last Updated: 10/5/2025"
     },
     {
+      "tag": "h3",
+      "text": "Optional website AI assistant"
+    },
+    {
+      "tag": "p",
+      "text": "If you choose to use our live AI assistant, the question you submit is sent to Groq, our AI inference provider, with public information about 2Nspira so an answer can be generated. Do not submit confidential, sensitive, payment or personal information. Our chatbot does not connect to client accounts or retain a chat transcript in a chatbot database. The conversation is held in the page until it is cleared, closed or refreshed; each question is answered independently. Technical request metadata is used for security and rate limiting. Provider processing is subject to Groq’s privacy policy at https://groq.com/privacy-policy/. You can contact our team instead of using AI. The labeled scripted demonstration does not send questions to an AI provider."
+    },
+    {
       "tag": "p",
       "text": "Welcome to 2nspira LLC (“we,” “us,” “our”). We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you visit our website (the “Site”), subscribe to our blog, book our services, or purchase service plans."
     },
