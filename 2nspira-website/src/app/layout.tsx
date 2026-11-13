@@ -155,9 +155,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <StudioNavigationProvider initial={studioLinks}><Header />
         <MarketingEvents />
+        <WebsiteChat />
         {children}
         <Footer />
-        <WebsiteChat /></StudioNavigationProvider>
+        </StudioNavigationProvider>
       </Analytics>
       <script
         type="application/ld+json"

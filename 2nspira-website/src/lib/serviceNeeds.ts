@@ -8,14 +8,7 @@ export const serviceNeeds = [
     href: "/websites",
     link: "Explore websites and platforms",
   },
-  {
-    name: "AI Enablement",
-    need: "How do we become an AI-enabled organization?",
-    help: "Strategy, governance, training and adoption to help your organization use AI responsibly and effectively.",
-    example: "Organizational readiness, a phased transformation roadmap, and responsible AI-enabled workflows.",
-    href: "/ai-enablement",
-    link: "Explore organizational AI enablement",
-  },
+
   {
     name: "Business Automation & Integrations",
     need: "Our tools don’t work together.",
@@ -24,5 +17,12 @@ export const serviceNeeds = [
     href: "/automation-systems-optimization",
     link: "Explore automation and integrations",
   },
-
+  {
+    name: "Organizational AI Enablement",
+    need: "How do we become an AI-enabled organization?",
+    help: "Strategy, governance, training and adoption to help your organization use AI responsibly and effectively.",
+    example: "Organizational readiness, a phased transformation roadmap, and responsible AI-enabled workflows.",
+    href: "/ai-enablement",
+    link: "Explore organizational AI enablement",
+  },
 ];

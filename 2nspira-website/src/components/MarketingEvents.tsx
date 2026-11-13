@@ -20,6 +20,8 @@ export default function MarketingEvents() {
       if (!anchor) return;
       const url = new URL(anchor.href, location.href);
       if (url.hostname === "calendar.google.com" || url.hostname === "calendar.app.google") emit("booking_click", "booking");
+      else if (url.origin === location.origin && url.pathname === "/contact") emit("project_inquiry_click", "contact");
+      else if (url.origin === location.origin && services.has(url.pathname)) emit("service_cta_click", url.pathname);
       else if (url.pathname.includes("ai-readiness") || url.hostname === "scorecard.2nspira.com") emit("assessment_click", "ai_readiness");
       else if (url.hostname === "strength.2nspira.com" || url.pathname.includes("professional-strengths")) emit("assessment_click", "professional_strengths");
       else if (pathname === "/work" && url.origin !== location.origin && ["http:", "https:"].includes(url.protocol)) emit("project_outbound_click", url.hostname);
