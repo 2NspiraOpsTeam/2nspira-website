@@ -157,7 +157,7 @@ export const activityBooks: ShopProduct[] = [
     imageWidth: 1312,
     imageHeight: 1873,
     imageAlt: "Holiday Family Challenge Book cover with cream lettering, gold stars, and a coral banner on a green background",
-    href: "https://www.amazon.com/dp/B0HPB5VSL6",
+    href: "https://www.amazon.com/dp/B0HPB5VSL6?tag=2nspira-20",
   },
   {
     id: "grandparents-grandkids-table-challenges",
@@ -170,7 +170,7 @@ export const activityBooks: ShopProduct[] = [
     imageWidth: 1312,
     imageHeight: 1873,
     imageAlt: "Grandparents and Grandkids Table Challenges cover with cream lettering, a gold banner, and two speech bubbles on a blue background",
-    href: "https://www.amazon.com/dp/B0HP83DSV9",
+    href: "https://www.amazon.com/dp/B0HP83DSV9?tag=2nspira-20",
   },
 ];
 
@@ -187,6 +187,6 @@ export const leadershipBooks: ShopProduct[] = [
     imageWidth: 1600,
     imageHeight: 2560,
     imageAlt: "Cover of Trust Is the Operating System by Jeffrey Cortez",
-    href: "https://www.amazon.com/dp/B0GDQG1XBL",
+    href: "https://www.amazon.com/dp/B0GDQG1XBL?tag=2nspira-20",
   },
 ];

@@ -88,9 +88,12 @@ export function ProductGrid({ products, headingLevel = "h2" }: { products: ShopP
                 <p className="mt-4 leading-7 text-body">{product.description}</p>
                 <p className="mt-4 text-sm leading-6 text-body">{product.details}</p>
                 <div className="mt-auto pt-6">
-                  <a href={product.href} className={`${buttonPrimary} min-h-[44px] w-full sm:w-auto`} aria-label={`Shop on ${product.marketplace ?? "Etsy"}: ${product.title}`}>
+                  <a href={product.href} rel={product.marketplace === "Amazon" ? "sponsored" : undefined} className={`${buttonPrimary} min-h-[44px] w-full sm:w-auto`} aria-label={`Shop on ${product.marketplace ?? "Etsy"}: ${product.title}`}>
                     Shop on {product.marketplace ?? "Etsy"} <span aria-hidden="true" className="ml-2">↗</span>
                   </a>
+                  {product.marketplace === "Amazon" && (
+                    <p className="mt-3 text-xs text-body">As an Amazon Associate I earn from qualifying purchases.</p>
+                  )}
                 </div>
               </div>
             </article>
