@@ -135,8 +135,8 @@ try {
     ["Explore Creative Studio", "Watch", "Listen", "Read", "Play", "Shop"],
   );
   check(studioNavigation(c).map(l => l.href), ["/studio", "/studio/watch", "/studio/listen", "/studio/read", "/studio/play", "/shop"]);
-  check(publicStudio(c).items.some(i => i.id === "breadcrumb"), false);
-  check(c.items.find(i => i.id === "breadcrumb")?.status, "draft");
+  check(publicStudio(c).items.some(i => i.id === "breadcrumb"), true);
+  check(c.items.find(i => i.id === "breadcrumb")?.status, "published");
   check(studioVideoIds(c,"watch").length, c.items.filter(i=>i.type==="Video").length);
   const listenCount=studioVideoIds(c,"listen").length;
   check(listenCount > 0, true);

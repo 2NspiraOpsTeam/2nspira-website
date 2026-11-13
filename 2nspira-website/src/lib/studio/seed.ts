@@ -55,7 +55,7 @@ export function initialStudio(): Studio {
         id: "play",
         name: "Play",
         description:
-          "Creative pauses, coloring, shared challenges, and games for adults and families.",
+          "The Breadcrumb investigation challenge and Strength Profile self-discovery assessment.",
         visible: true,
       },
     ],
@@ -94,19 +94,19 @@ export function initialStudio(): Studio {
       {
         id: "activity-books",
         name: "Activity books",
-        groupIds: ["play"],
+        groupIds: ["shop"],
         visible: true,
       },
       {
         id: "coloring-books",
         name: "Coloring books",
-        groupIds: ["play"],
+        groupIds: ["shop"],
         visible: true,
       },
       {
         id: "printables",
         name: "Printables & games",
-        groupIds: ["play"],
+        groupIds: ["shop"],
         visible: true,
       },
       {
@@ -115,7 +115,7 @@ export function initialStudio(): Studio {
         groupIds: ["play"],
         visible: true,
       },
-      { id: "art", name: "Art prints", groupIds: ["play"], visible: true },
+      { id: "art", name: "Art prints", groupIds: ["shop"], visible: true },
     ],
     links: ["watch", "listen", "read", "play"].map((id) => ({
       id,
@@ -133,7 +133,7 @@ export function initialStudio(): Studio {
           "Follow a trail of clues in this browser-based OSINT investigation challenge for curious adults. Test your observation, research, and verification skills.",
         type: "Game",
         categoryIds: ["interactive"],
-        status: "draft",
+        status: "published",
         featured: true,
         image: "/images/work/project-breadcrumb.png",
         imageAlt:
