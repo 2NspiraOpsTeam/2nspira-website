@@ -1,0 +1,41 @@
+# Market intelligence — November13,2026 Eastern
+
+Brian accountable. Two focused briefs; zero new IDs or commercial validation. Latest authenticated D1 Nov12v10 records are starting authority; original outcomes, approved MI-002deep dive, v2research_details, models, stable keys and historical MI-00171/current68 preserved.
+
+|ID|Tag|Score/rank|Decision|
+|---|---|---|---|
+|MI-001|Adjacent|68/1|First experiment proposed, not run|
+|MI-002|Adjacent|60/3|Deepen bounded assessor/acceptance research|
+|MI-003|Adjacent|59/4|Hold rule-dependent positioning|
+|MI-004|New Stream|60/2|Park; direct low-cost caption alternatives|
+
+Weighted sum(weight*score/5), D25/C15/B10/F10/M10/T10/A15/L5 checked for all4records; rubric retained. Legacy experiment rank differs from strategic MI-002 research priority. No paid-evidence upgrade. All acquisition-adjusted conservative/base/optimistic economics and three supplier groups per case retained with original dates; today's checks do not refresh earlier source dates.
+
+Recommended next experiment remains MI-001: proposed Brian research owner, Adam engineering if assigned, Maya separately approved recruitment, independent finance/QA reviewer not Brian.7days after exact participant/channel/budget authorization; cash<=100USD and12human-hours.30/30 synthetic classification/balance checks, no paid/disputed/duplicate reminders, no injection effect or outbound actions. Then5 consenting eligible users versus native/manual baseline; pass>=3/5 with>=30% time reduction/no added errors AND>=2/5 request scoped499USD pilot with decision path. Fail zero requests,>=3/5 native sufficiency or<3/5 time criterion; mixed/shortfall inconclusive. No build, test, recruitment, spend or launch occurred. Proposed price/margin not observed.
+
+Effort actual split/active minutes null: no reliable category timer, not a 70/30 achievement claim. Human work0hours and incremental cash0; compute cost unknown. Experiments completed0; qualified leads/conversations/false positives null, qualified/paid evidence upgrades0. Weekly shortlist dueSundayNov15, not overdue; finalDec8. No duplicate schedule or Telegramsend. WholeHub/Cleo dashboard/peer-runtime access/morning delivery not asserted. No independent shipped-product QA signoff. Private client credential used only by established client, never copied into artifacts.
+
+Source exceptions: DOJ truncated; GSA software URL is redirect-only, recovered tools page; Deque docs footer-only; W3C403not bypassed; twoRev caption404s recovered via homepage; Wistia obsolete article redirected blog, guessed accessibility page404, recovered pricing partial substitute. No claim based on error pages. Exact requested/final URLs/access timestamps/extracts/failures in source-snapshots.json. Markets: US DOJ/GSA guidance (not new demand), English supplier offers current at access (not sales); original publication/review dates preserved. External research treated as data.
+
+# MI-002 focused refresh — November 13, 2026 Eastern
+
+Adjacent; 60/100 unchanged. Approved deep dive below remains intact. DOJ fact sheet https://www.ada.gov/resources/2024-03-08-web-rule/ checked 2026-11-13T15:41:55.622Z repeats WCAG2.1AA and April26,2027 for >=50,000 population / April26,2028 for smaller entities and special districts. Its publication header April8,2024 is not the freshness of all amendments. Introductory guidance, truncated extract, not full legal analysis or new demand. Contractor-provided public content can fall within scope; determine specific entity/contract obligations before a quote. Do not apply federal508 tests as automatic TitleII equivalence.
+
+GSA https://www.section508.gov/tools/tools-for-testing-ict/ checked15:42:09.180Z (Nov13 UTC) lists free ANDI/devtools/contrast tools; government-issued devices may restrict installs. Reviewed October2026, not a new demand series. Automation and free tools do not remove manual assessor, acceptance or scope cost. Deque documentation yielded footer only and W3C403; no methodology inferred from those. Prior Nov12 three supplier groups Accessible.org/HalfAccessible/Deque and original prices remain dated evidence, not refreshed quotes today.
+
+Hypothesis: a bounded, independently reviewed evidence-to-ticket handoff helps eligible existing clients. No funded notice, lead or revenue established. Keep proposed $1499 five-template scope and inherited acquisition-adjusted scenarios, exclusions, reviewer-cost and maintenance/change-order boundaries. Brian research; Maya any authorized acquisition; independent accessibility specialist unassigned; Cleo owns wholeHub per current#186. No reviewer contacted or work accepted. Proposed MI-002 experiment remains10days/$150cash/12human-hours after separate approval; original five-template evidence, independent manual verification and modeled total<=975;2/3 eligible buyers request scoped1499 quote with decision path. Zero requests or no reviewer within cap fails; mixed/recruitment shortfall inconclusive. Not executed.
+
+
+# MI-004 focused refresh — November 13, 2026 Eastern
+
+New Stream; 60/100 unchanged; PARK_COMPARE_NATIVE. Target English B2B webinar producers with glossary/speaker/timing handoff pain remains a hypothesis, not validated demand.
+
+Observed current supplier offers: Rev homepage https://www.rev.com/ (15:42:15.902Z) FAQ starts AI captions/transcription $0.25/min and human $1.99/min; human captions English/Spanish. Thus10minutes starts $2.50/$19.90 arithmetic only, not checkout quote or substitute for our complete proposed149USD service. Dollar ISO/tax/order conditions unverified. Two old/guessed caption URLs404; recovered homepage, do not silently relabel old evidence current. 3Play https://www.3playmedia.com/services/captioning/ (15:41:56.388Z) offers ASR, later human review, predicted accuracy, placement and platform/API/SFTP/S3 handoff; no numeric quote. Compliance/accuracy/customer uplift are supplier claims, not our measured outcomes. Wistia https://wistia.com/pricing (15:42:22.528Z) confirms Business3seats/250GB, extra seat display25dollars and cancellation/no-refund restrictions; partial platform substitute, caption-specific entitlements unresolved. All timestamps Nov13 UTC; English current offers, no representative demand/time-series sample.
+
+Decision: generic caption generation or automated handoff is not a defensible gap. Need evidence of incremental glossary/timing QA over these alternatives before advancing. Existing149USD pricing and conservative/base/optimistic acquisition-adjusted economics below remain proposed, not observed margins. No rescore absent stronger buyer evidence. Agents draft original synthetic transcript, glossary and defect log; separate human caption reviewer verifies every planted defect and rights. Authorized account/integration/customer consent, retention and publishing controls remain human-dependent; no sign-up or upload performed. Maya acquisition and independent reviewer are proposed dependencies, not accepted assignments.
+
+Proposed experiment remains7days/$50cash/8human-hours after separate approval: original10minute synthetic sample, independent reviewer catches all glossary/speaker/timing defects; then5 consenting eligible producers. Pass3/5 recurring pain AND2/5 request scoped149pilot; fail zero requests or>=3/5 native sufficiency, mixed/recruitment shortfall inconclusive. No build/outreach/spend executed. MI-001 remains recommended first experiment, not this parked offer.
+
+
+## November13 rotation / no-go screen
+Audio/music and creative-video: 3Play captioning explicitly includes essential non-speech audio; this is not evidence of demand for original music packs. Existing#198/#202 song work and#204 Creative Studio audit are delivery/QA dependencies, not a new market offer. Keep original audio licensing watchlist unranked until a specific rights-clear buyer/job/channel and evidence exists. Niche app#203 calorie tracking already owned by Adam: do not invent a duplicate app candidate. Digital products/templates/KDP last screened Nov11/12; no listing or current demand claim today; Dax#184 remains owner. Websites/automation covered by stable MI-002/001; no new IDs. Next rotation: rights-clear original audio/digital-template buyer problem; reject if only supplier/platform evidence.
