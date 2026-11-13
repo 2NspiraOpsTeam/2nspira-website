@@ -84,3 +84,19 @@ All three current anonymous public homepages returned HTTP 200 and were visually
 | 320 | — | [Narrow mobile](portfolio-after-320.jpg) |
 
 Local checks: canonical build and route/404 smoke, TypeScript, lint (four existing warnings), plus 83 portfolio checks at 1440/768/390/320: all three real destinations, Enter activation, visible focus, descriptive alt, decoded screenshots, no chatbot covering card headings, text-spacing/no overflow, public HTTP 200. General homepage regression results and final hosted checks are recorded in the PR update. No contact email, appointment or real AI inference submitted. Performance evidence is limited to small image assets, image-loading checks and layout stability; no new field CWV claim.
+
+
+## Final owner refinements — November 13
+
+- Teams leads with its responsive mobile-site detail, not the repeated desktop screenshot. GeVitals and Open Goal Soccer lead the three-project portfolio; all three remain linked and accurately labelled.
+- Mobile chat is a normal-flow button directly below navigation, not an image-covering floating overlay. It scrolls with the page; desktop floating access remains. Keyboard opening and Escape/focus return verified.
+- Latest November 13 direction overrides earlier November 10 taxonomy: shared navigation/footer now Explore Creative Studio / Watch / Read / Play. This is a navigation-only change, not a parallel #182 catalogue implementation. Listen, Shop, videos, content records and SEO URLs retained. No database write.
+- 87 regression + 83 portfolio + 42 focused browser checks passed locally at 1440/768/390/320. Lint zero errors/four unchanged warnings; supported build/routing smoke and TypeScript passed. Synthetic contact responses intercepted; no messages or real inference sent.
+
+| Width | Before | After |
+|---|---|---|
+| Desktop | [Before](final-refinement/before-1440.jpg) | [After](final-refinement/after-1440.jpg) |
+| Mobile | [Before](final-refinement/before-390.jpg) | [After](final-refinement/after-390.jpg) |
+| Narrow mobile | [Before](final-refinement/before-320.jpg) | [After](final-refinement/after-320.jpg) |
+
+Raw local result JSON is in `final-refinement/`. Hosted exact-commit verification is recorded in the PR handoff. Production is not approved or changed.

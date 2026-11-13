@@ -3,7 +3,7 @@ const {chromium}=await import(process.env.PLAYWRIGHT_MODULE || 'playwright-core'
 import {mkdir,writeFile} from 'node:fs/promises';
 const base=process.argv[2];const out=process.argv[3];await mkdir(out,{recursive:true});
 const b=await chromium.launch({channel:'chrome',headless:true});const p=await b.newPage({extraHTTPHeaders:{'x-forwarded-proto':'https'}});let checks=0;const results=[];const ok=(v,label)=>{assert.ok(v,label);checks++;results.push(label)};
-const urls=['https://www.teamsmanagement.com/','https://gevitals.com/','https://opengoalsoccer.com/'];
+const urls=['https://gevitals.com/','https://opengoalsoccer.com/','https://www.teamsmanagement.com/'];
 for(const width of [1440,768,390,320]){
  await p.setViewportSize({width,height:900});await p.goto(base,{waitUntil:'networkidle'});
  const section=p.getByRole('region',{name:'Different businesses. Distinct digital experiences.'});await section.scrollIntoViewIfNeeded();

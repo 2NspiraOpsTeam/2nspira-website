@@ -66,13 +66,13 @@ export default function Home() {
       </div>
       <Link href="/work#teams-management" className={styles.heroProject}>
         <div className={styles.browserBar}><span aria-hidden="true">● ● ●</span><span>Selected client work</span></div>
-        <Image src="/images/work/teams-homepage-20261113.webp" alt="Teams Management public website featuring property discovery" width={1008} height={700} priority unoptimized sizes="(max-width: 900px) 100vw, 50vw" />
+        <Image src="/images/work/teams-mobile-20261113.webp" alt="Teams Management responsive property website on a mobile screen" width={420} height={740} priority unoptimized sizes="(max-width: 900px) 100vw, 50vw" />
         <div className={styles.projectCaption}><span>Teams Management<br /><small>Published property website</small></span><span aria-hidden="true">↗</span></div>
       </Link>
     </section>
     <section id="featured-websites" className={`${styles.section} ${styles.portfolio}`} aria-labelledby="portfolio-heading">
       <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Selected websites · Live and explorable</p><h2 id="portfolio-heading">Different businesses.<br />Distinct digital experiences.</h2></div><Link href="/work" className={styles.textLink}>Explore our work <span aria-hidden="true">→</span></Link></div>
-      <div className={styles.portfolioGrid}>{featuredProjects.map(project => <article key={project.name} className={styles.portfolioCard}>
+      <div className={styles.portfolioGrid}>{[featuredProjects[1], featuredProjects[2], featuredProjects[0]].map(project => <article key={project.name} className={styles.portfolioCard}>
         <a href={project.url} className={styles.portfolioLink}>
           <div className={styles.portfolioImage}><div className={styles.browserBar}><span aria-hidden="true">● ● ●</span><span>{new URL(project.url).hostname.replace(/^www\./, "")}</span></div><Image src={`/images/work/${project.image}-homepage-20261113.webp`} alt={project.alt} width={1008} height={700} unoptimized sizes="(max-width: 760px) calc(100vw - 48px), 29vw" /></div>
           <div className={styles.portfolioCopy}><p className={styles.portfolioType}>{project.type}</p><h3>{project.name}<span aria-hidden="true">↗</span></h3><p>{project.description}</p><span className={styles.portfolioStatus}>{project.status}</span><span className={styles.portfolioVisit}>Visit website <span aria-hidden="true">→</span></span></div>
