@@ -39,8 +39,9 @@ export function StudioCard({
         : item.type.toLowerCase() === "collection"
           ? "Explore collection"
           : item.type.toLowerCase() === "book" ? "Explore the book" : "Explore";
+  const amazon = /(?:amazon\.|link\.amazon)/.test(href);
   const props = external
-    ? { target: "_blank", rel: "noopener noreferrer" }
+    ? { target: "_blank", rel: amazon ? "noopener noreferrer sponsored" : "noopener noreferrer" }
     : {};
   return (
     <article
@@ -85,6 +86,9 @@ export function StudioCard({
             {label}
             <span aria-hidden="true">{external ? " ↗" : " →"}</span>
           </a>
+          {(amazon || /(?:amazon\.|link\.amazon)/.test(item.purchaseUrl ?? "")) && (
+            <p className="mt-3 text-xs text-body">As an Amazon Associate I earn from qualifying purchases.</p>
+          )}
           {external && (
             <p className="mt-3 text-xs text-body">
               {channel ? "YouTube opens" : "Opens"} in a new tab.
@@ -94,7 +98,7 @@ export function StudioCard({
             <a
               href={item.purchaseUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={/(?:amazon\.|link\.amazon)/.test(item.purchaseUrl) ? "noopener noreferrer sponsored" : "noopener noreferrer"}
               className="mt-4 block underline text-accent"
             >
               Purchase this book{" "}
