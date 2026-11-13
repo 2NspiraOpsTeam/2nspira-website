@@ -90,7 +90,7 @@ Local checks: canonical build and route/404 smoke, TypeScript, lint (four existi
 
 - Teams leads with its responsive mobile-site detail, not the repeated desktop screenshot. GeVitals and Open Goal Soccer lead the three-project portfolio; all three remain linked and accurately labelled.
 - Mobile chat is a normal-flow button directly below navigation, not an image-covering floating overlay. It scrolls with the page; desktop floating access remains. Keyboard opening and Escape/focus return verified.
-- Latest November 13 direction overrides earlier November 10 taxonomy: shared navigation/footer now Explore Creative Studio / Watch / Read / Play. This is a navigation-only change, not a parallel #182 catalogue implementation. Listen, Shop, videos, content records and SEO URLs retained. No database write.
+- Jeffrey’s latest direct clarification retains Explore Creative Studio / Watch / Listen / Read / Play / Shop. Existing shared navigation implementation, catalogue, content records and SEO URLs are unchanged. No database write.
 - 87 regression + 83 portfolio + 42 focused browser checks passed locally at 1440/768/390/320. Lint zero errors/four unchanged warnings; supported build/routing smoke and TypeScript passed. Synthetic contact responses intercepted; no messages or real inference sent.
 
 | Width | Before | After |

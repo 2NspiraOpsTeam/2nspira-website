@@ -11,12 +11,7 @@ export function StudioNavigationProvider({
   initial: NavigationLink[];
   children: React.ReactNode;
 }) {
-  // Scoped owner-approved navigation only; preserve the catalogue and all legacy routes.
-  const approvedLinks = (items: NavigationLink[]) => [
-    ...items.filter(link => link.href === "/studio"),
-    ...["watch", "read", "play"].map(id => ({ name: id[0].toUpperCase() + id.slice(1), href: `/studio/${id}` })),
-  ];
-  const [links, setLinks] = useState(() => approvedLinks(initial));
+  const [links, setLinks] = useState(initial);
   const pathname = usePathname();
   useEffect(() => {
     const controller = new AbortController();
@@ -28,7 +23,7 @@ export function StudioNavigationProvider({
         });
         if (r.ok) {
           const d = await r.json();
-          setLinks(approvedLinks(d.links));
+          setLinks(d.links);
         }
       } catch {
         /* Keep the last successfully loaded navigation during a transient request failure. */

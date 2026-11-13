@@ -8,7 +8,7 @@ try{for(const width of [1440,768,390,320]){
 await p.setViewportSize({width,height:900});await p.goto(base,{waitUntil:'networkidle'});
 const chat=p.getByRole('button',{name:'Ask 2Nspira',exact:true});await chat.waitFor({state:'visible'});
 const footer=p.locator('footer').getByRole('navigation',{name:'Creative Studio'});
-ok(JSON.stringify(await footer.locator('a').allTextContents())===JSON.stringify(['Explore Creative Studio','Watch','Read','Play']),`footer taxonomy ${width}`);
+ok(JSON.stringify(await footer.locator('a').allTextContents())===JSON.stringify(['Explore Creative Studio','Watch','Listen','Read','Play','Shop']),`footer taxonomy ${width}`);
 ok((await p.locator('#featured-websites h3').allTextContents()).join('|').startsWith('GeVitals'),'GeVitals leads portfolio '+width);
 ok(await p.locator('main section').first().locator('img').getAttribute('src')==='/images/work/teams-mobile-20261113.webp','distinct Teams detail '+width);
 if(width<=480){ok(await chat.evaluate(e=>getComputedStyle(e).position==='static'),'mobile chat in flow '+width);
