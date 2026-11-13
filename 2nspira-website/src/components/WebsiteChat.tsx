@@ -1,9 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
 import { MessageCircle, Send, X, RotateCcw, ArrowUpRight } from "lucide-react";
 import styles from "./WebsiteChat.module.css";
+
+const subscribeReady = () => () => {};
+const clientReady = () => true;
+const serverReady = () => false;
 
 type Entry = { role: "user" | "assistant"; text: string; sources?: { title: string; href: string }[] };
 const starters = ["How can you help my business with AI?", "Can you build a website with a client portal?", "What does a fractional CIO do?"];
@@ -14,8 +18,7 @@ const demoAnswers = [
 ];
 
 export function ChatPanel({ demo = false, onClose }: { demo?: boolean; onClose?: () => void }) {
-  const [ready, setReady] = useState(false);
-  useEffect(() => setReady(true), []);
+  const ready = useSyncExternalStore(subscribeReady, clientReady, serverReady);
   const [entries, setEntries] = useState<Entry[]>([]);
   const [question, setQuestion] = useState("");
   const [busy, setBusy] = useState(false);
@@ -93,8 +96,7 @@ export function ChatPanel({ demo = false, onClose }: { demo?: boolean; onClose?:
   </section>;
 }
 function ChatLauncher() {
-  const [ready, setReady] = useState(false);
-  useEffect(() => setReady(true), []);
+  const ready = useSyncExternalStore(subscribeReady, clientReady, serverReady);
   const [open, setOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   const launcher = useRef<HTMLButtonElement>(null);
