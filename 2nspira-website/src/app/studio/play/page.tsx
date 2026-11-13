@@ -5,7 +5,7 @@ import PageIdentity from "@/components/PageIdentity";
 import ServiceEffects from "@/components/ServiceEffects";
 import StudioGroupContent from "@/components/studio/StudioGroupContent";
 export const dynamic="force-dynamic";
-export const metadata=publicPageMetadata({title:"Play — Breadcrumb, Coloring Books & Games",description:"Play Breadcrumb, explore coloring and activity books, and find printable games on Amazon and Etsy.",path:"/studio/play"});
+export const metadata=publicPageMetadata({title:"Play — Breadcrumb & Strength Profile",description:"Follow the clues in the Breadcrumb investigation challenge, or discover your strengths with the free 2Nspira Strength Profile.",path:"/studio/play"});
 export default async function Page({searchParams}:{searchParams:Promise<{category?:string}>}){
  const c=await publishedStudio();const q=await searchParams;
  if(!c.groups.some(g=>g.id==='play'))notFound();
