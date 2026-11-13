@@ -1,4 +1,4 @@
-import { serviceLinks } from "@/lib/navigation";
+import { serviceLinks, moreServiceLinks } from "@/lib/navigation";
 import { StudioFooterLinks } from "@/components/studio/StudioNavigation";
 import Link from "next/link";
 import {hasPublishedTeam} from "@/lib/team/server";
@@ -72,6 +72,7 @@ export default async function Footer() {
         <nav className={styles.services} aria-labelledby="footer-services-heading">
           <h2 id="footer-services-heading" className={styles.heading}>Services</h2>
           <ul className={styles.list}>{services.map(link => <li key={link.href}><Link href={link.href} className={styles.link}>{link.name}</Link></li>)}</ul>
+          <h3 className={`mt-6 ${styles.heading}`}>More Services</h3><ul className={styles.list}>{moreServiceLinks.map(link => <li key={link.href}><Link href={link.href} className={styles.link}>{link.name}</Link></li>)}</ul>
         </nav>
         <nav className={styles.company} aria-labelledby="footer-company-heading">
           <h2 id="footer-company-heading" className={styles.heading}>Company</h2>

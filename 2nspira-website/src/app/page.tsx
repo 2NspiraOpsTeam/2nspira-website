@@ -1,59 +1,18 @@
-import { Workflow, Sparkles, PanelsTopLeft, Compass, ArrowUpRight } from "lucide-react";
-import TransformationSupport from "@/components/TransformationSupport";
-import { BOOKING_URL } from "@/lib/booking";
-import ManufacturingDemo from "@/components/ManufacturingDemo";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { serviceNeeds } from "@/lib/serviceNeeds";
+import { moreServiceLinks } from "@/lib/navigation";
 import styles from "./homepage.module.css";
-import ImpactTimeline from "./ImpactTimeline";
-import TeamsReviewCarousel from "./TeamsReviewCarousel";
 
-const homepageDescription =
-  "AI and technology transformation for growing organizations: AI enablement, business automation, digital platforms, executive advisory and ongoing managed support.";
-const homepageShareTitle =
-  "AI, Automation & Technology Consulting | 2Nspira";
-const homepageSocialImage = "https://2nspira.com/images/logo/og-image-v2.png";
-
+const homepageDescription = "Professional websites and custom digital platforms, business automation and organizational AI enablement. Human-led expertise, AI-enabled delivery.";
+const homepageShareTitle = "Websites & Custom Digital Platforms | 2Nspira";
 export const metadata: Metadata = {
-  title: { absolute: homepageShareTitle },
-  description: homepageDescription,
+  title: { absolute: homepageShareTitle }, description: homepageDescription,
   alternates: { canonical: "https://2nspira.com/" },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://2nspira.com/",
-    siteName: "2Nspira",
-    title: homepageShareTitle,
-    description: homepageDescription,
-    images: [
-      {
-        url: homepageSocialImage,
-        width: 1200,
-        height: 630,
-        alt: "2Nspira",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: homepageShareTitle,
-    description: homepageDescription,
-    images: [homepageSocialImage],
-  },
+  openGraph: { type: "website", locale: "en_US", url: "https://2nspira.com/", siteName: "2Nspira", title: homepageShareTitle, description: homepageDescription, images: [{ url: "https://2nspira.com/images/logo/og-image-v2.png", width: 1200, height: 630, alt: "2Nspira" }] },
+  twitter: { card: "summary_large_image", title: homepageShareTitle, description: homepageDescription, images: ["https://2nspira.com/images/logo/og-image-v2.png"] },
 };
-
-const serviceImages = [
-  "/images/homepage/service-website.jpg",
-  "/images/homepage/tech-ai.jpg",
-  "/images/homepage/tech-automation.jpg",
-];
-const serviceAlts = ["Person reviewing a visual website on a laptop", "Developer working with code across multiple screens", "Engineer programming a laptop beside automated equipment"];
-
-function Photo({ src, alt, className = "", priority = false }: { src: string; alt: string; className?: string; priority?: boolean }) {
-  return <Image src={src} alt={alt} fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 70vw" priority={priority} className={className} />;
-}
 
 const homepageJsonLd = {
   "@context": "https://schema.org",
@@ -72,7 +31,7 @@ const homepageJsonLd = {
     {
       "@type": "ItemList",
       "@id": "https://2nspira.com/#services",
-      name: "2Nspira services",
+      name: "2Nspira core services",
       numberOfItems: serviceNeeds.length,
       itemListElement: serviceNeeds.map((service, index) => ({
         "@type": "ListItem",
@@ -92,105 +51,37 @@ const homepageJsonLd = {
 export default function Home() {
   return <main id="main-content" className={styles.home}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd).replace(/</g, "\\u003c") }} />
-    <section className={styles.hero} aria-labelledby="hero-heading">
-      <Photo src="/images/homepage/tech-hero.webp" alt="Technology professional using a portable computer beside server racks" priority />
-      <div className={styles.heroShade} />
-      <div className={styles.heroContent}>
-        <p className={styles.eyebrow}>People. Purpose. Possibility.</p>
-        <h1 id="hero-heading">AI &amp; Technology Transformation for Growing Organizations</h1>
-        <p>Enable AI. Automate your business. Connect your digital platforms. From transformation strategy to implementation and ongoing support.</p>
-        <a className={styles.lightButton} href={BOOKING_URL}>Book a Conversation <span aria-hidden="true">↗</span></a>
+    <section className={styles.launchHero} aria-labelledby="hero-heading">
+      <div className={styles.launchCopy}>
+        <p className={styles.eyebrow}>Human-led. AI-enabled. Built for your business.</p>
+        <h1 id="hero-heading">Professional websites.<br /><span>Powerful digital platforms.</span></h1>
+        <p>We design and build modern business websites, client portals and custom digital systems—so your customers find you and your people can get to work.</p>
+        <div className={styles.actions}><Link href="/contact" className={styles.primaryButton}>Discuss Your Project <span aria-hidden="true">↗</span></Link><Link href="/work" className={styles.textLink}>View Our Work <span aria-hidden="true">→</span></Link></div>
       </div>
-      <a href="#our-purpose" className={styles.heroFoot}>Independent thinking. Practical change. Since 2019. <span aria-hidden="true">↓</span></a>
+      <Link href="/work#teams-management" className={styles.heroProject}>
+        <div className={styles.browserBar}><span aria-hidden="true">● ● ●</span><span>Selected client work</span></div>
+        <Image src="/images/work/live-teams-20261105.jpg" alt="Teams Management public website featuring property discovery" width={1440} height={1000} priority unoptimized sizes="(max-width: 900px) 100vw, 50vw" />
+        <div className={styles.projectCaption}><span>Teams Management<br /><small>Website &amp; property platform</small></span><span aria-hidden="true">↗</span></div>
+      </Link>
     </section>
+    <div className={styles.proofBand} aria-label="Experience and project evidence"><p>Building practical technology <strong>since 2019.</strong></p><Link href="/work#teams-management">Teams Management ↗</Link><Link href="/websites#our-work">GeVitals &amp; Open Goal Soccer ↗</Link></div>
 
-    <section className={`${styles.section} ${styles.intro}`} id="our-purpose" aria-labelledby="intro-heading">
-      <p className={styles.eyebrow}>Your business transformation partner</p>
-      <h2 id="intro-heading">Good technology starts<br />with understanding people.</h2>
-      <p>Behind every business challenge are people trying to do their best work. We help you see what’s getting in the way, simplify the complex, and move forward with purpose.</p>
-      <Link href="/about" className={styles.textLink}>Get to know 2Nspira <span aria-hidden="true">↗</span></Link>
-    </section>
-
-    <section id="quick-start" className={`${styles.section} ${styles.quickStart}`} aria-labelledby="challenges-heading">
-      <div className={styles.quickStartHead}>
-        <div><p className={styles.eyebrow}>Start with what matters to you</p><h2 id="challenges-heading">What do you need?</h2></div>
-        <p>You don’t need a technology roadmap to begin. Find the challenge that feels familiar, and explore what’s possible.</p>
+    <section className={`${styles.section} ${styles.featuredWork}`} aria-labelledby="feature-heading">
+      <div><p className={styles.eyebrow}>Real work, not a concept</p><h2 id="feature-heading">A website is only<br />the beginning.</h2><p className={styles.featureLead}>Teams Management connects property discovery with the people and tools behind it.</p>
+        <dl className={styles.projectFacts}><div><dt>The challenge</dt><dd>Help prospective residents and businesses find properties and reach the right team.</dd></div><div><dt>What we built</dt><dd>Property discovery, galleries, maps, rental inquiry paths and authorized staff tools.</dd></div></dl>
+        <Link href="/work#teams-management" className={styles.textLink}>Explore the Teams project <span aria-hidden="true">→</span></Link>
       </div>
-      <ul className={styles.quickStartLinks}>{[
-        { title: "Simplify our operations", href: "/automation-systems-optimization", icon: Workflow, label: "Less busywork. More momentum.", text: "Still moving information between spreadsheets, emails, and disconnected systems?", examples: ["Connected workflows", "Fewer manual handoffs"], action: "Explore smarter operations" },
-        { title: "Put AI to work responsibly", href: "/ai-enablement", icon: Sparkles, label: "Turn curiosity into capability.", text: "Ready to move beyond AI experiments and find useful, responsible ways for your team to work?", examples: ["Practical AI use cases", "Team readiness & guidance"], action: "Find your AI starting point" },
-        { title: "Build a website or platform", href: "/websites", icon: PanelsTopLeft, label: "Make your next idea tangible.", text: "Need a stronger online presence, a customer portal, or a platform built around your business?", examples: ["Websites & digital experiences", "Custom business platforms"], action: "Explore what we can build" },
-        { title: "Get technology leadership", href: "/technology-advisory", icon: Compass, label: "Clarity for your next decision.", text: "Facing competing priorities, growing complexity, or a technology decision you need to get right?", examples: ["Strategy & roadmaps", "Executive technology guidance"], action: "Explore technology advisory" },
-      ].map(({ icon: Icon, ...item }) => <li key={item.href}>
-        <Link href={item.href} className={styles.needCard}>
-          <div className={styles.needCardTop}><span className={styles.needIcon}><Icon size={25} strokeWidth={1.6} aria-hidden="true" /></span><span className={styles.needLabel}>{item.label}</span></div>
-          <h3>{item.title}</h3><p>{item.text}</p>
-          <ul className={styles.needExamples}>{item.examples.map(example => <li key={example}>{example}</li>)}</ul>
-          <span className={styles.needAction}>{item.action}<ArrowUpRight size={20} aria-hidden="true" /></span>
-        </Link>
-      </li>)}</ul>
-      <div className={styles.needHelp}>
-        <div><h3>A little of everything? Start with a conversation.</h3><p>Tell us what’s getting in the way. We’ll help you connect the dots and identify a practical next step.</p></div>
-        <Link href="/contact" className={styles.textLink}>Let’s find your starting point <span aria-hidden="true">↗</span></Link>
-      </div>
+      <div className={styles.projectDetail}><Image src="/images/work/teams-mobile-20261113.webp" alt="Teams Management website at mobile width with navigation, property discovery and inquiry entry points" width={390} height={844} unoptimized sizes="(max-width: 760px) 70vw, 280px" /><p>Teams Management · Mobile website</p></div>
     </section>
 
-    <section className={styles.section} id="find-the-right-service" aria-labelledby="services-heading">
-      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>What we do</p><h2 id="services-heading">Expertise that moves<br />your business forward.</h2></div><Link href="/services" className={styles.textLink}>Explore our services</Link></div>
-      <div className={styles.services}>{serviceNeeds.map((service, i) => <article key={service.href} className={styles.service}>
-        <Link href={service.href} className={styles.serviceImage} aria-label={service.name}><Photo src={serviceImages[i]} alt={serviceAlts[i]} /></Link>
-        <h3><Link href={service.href}>{service.name}</Link></h3><p>{service.help}</p>
-      </article>)}</div>
+    <section id="find-the-right-service" className={`${styles.section} ${styles.coreServices}`} aria-labelledby="services-heading">
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Three ways to move forward</p><h2 id="services-heading">Build. Connect. Enable.</h2></div><p>Start with what your organization needs next.</p></div>
+      <div className={styles.coreGrid}>{serviceNeeds.map((service, i) => <article key={service.href} className={styles.coreCard}><span className={styles.serviceNumber}>0{i + 1}{i === 0 ? " / Our flagship" : ""}</span><h3>{service.name}</h3><p>{service.help}</p>{i === 0 && <div className={styles.buildPaths}><Link href="/websites#professional-websites">Professional websites →</Link><Link href="/websites#custom-digital-platforms">Custom digital platforms →</Link></div>}<Link href={service.href} className={styles.textLink}>{service.link} <span aria-hidden="true">↗</span></Link></article>)}</div>
+      <div className={styles.moreServices}><h3>More Services</h3><p>Leadership and ongoing support as your needs evolve.</p>{moreServiceLinks.map(link => <Link key={link.href} href={link.href} className={styles.textLink}>{link.name} ↗</Link>)}</div>
     </section>
 
-      <TransformationSupport />
-    <section className={styles.audience} aria-labelledby="audience-heading">
-      <div className={styles.audienceImage}><Photo src="/images/homepage/tech-community.jpg" alt="Two developers reviewing code together on a laptop" /></div>
-      <div className={styles.bandCopy}>
-        <p className={styles.eyebrow}>Who we serve</p>
-        <h2 id="audience-heading">For organizations ready to move beyond what’s holding them back.</h2>
-        <p>Whether you’re growing a business, leading a team, serving a community, or building something new, we help you overcome what stands between where you are and where you want to go.</p>
-        <ul className={styles.audienceNeeds}>{[
-          { title: "Established & growing businesses", text: "Build the systems and digital experiences your next stage of growth demands.", href: "/services", action: "Find your starting point" },
-          { title: "Operations & technology leaders", text: "Bring clarity to technology decisions, simplify complexity, and build the capabilities to work effectively with AI.", href: "/technology-advisory", action: "Explore executive technology leadership" },
-          { title: "Schools & nonprofits", text: "Make limited resources go further through accessible digital services, practical technology, and stronger operations.", href: "/automation-systems-optimization", action: "Explore better ways of working" },
-          { title: "Entrepreneurs & founders", text: "Launch a focused digital platform and connect the workflows your growing business needs.", href: "/who-we-serve/startups-entrepreneurs", action: "Explore technology support for founders" },
-        ].map(audience => <li key={audience.title}><h3>{audience.title}</h3><p>{audience.text}</p><Link href={audience.href} className={styles.textLink}>{audience.action} <span aria-hidden="true">→</span></Link></li>)}</ul>
-        <Link href="/who-we-serve" className={styles.textLink}>Explore Who We Serve <span aria-hidden="true">↗</span></Link>
-        <p className="mt-5"><Link href="/resources/ai-readiness-scorecard" className={styles.textLink}>Assess your organization’s AI readiness →</Link></p>
-      </div>
-    </section>
-
-    <section className={`${styles.section} ${styles.purpose}`} aria-labelledby="purpose-heading">
-      <div><p className={styles.eyebrow}>Our purpose</p><h2 id="purpose-heading">Make work better.<br />Make room for<br /><em>what matters.</em></h2></div>
-      <div><p>Technology should create possibility, not more complexity. Our purpose is to help organizations work with greater clarity, confidence, and connection.</p><p>Experienced technology leadership. Hands-on implementation. A people-first approach. We connect strategic decisions with the work of building and improving systems, alongside the people who use them.</p><Link href="/our-story" className={styles.textLink}>Discover our story <span aria-hidden="true">↗</span></Link></div>
-    </section>
-
-    <section className={styles.feature} aria-labelledby="feature-heading">
-      <div className={styles.featureCopy}><p className={styles.eyebrow}>Published project / Digital platforms</p><h2 id="feature-heading">Teams<br />Management.</h2><p className={styles.featureLead}>A connected property experience.<br />Built around the people who use it.</p>
-        <dl><div><dt>The challenge</dt><dd>Help prospective residents and businesses discover the right property and reach the right team.</dd></div><div><dt>The solution</dt><dd>Property discovery, galleries, maps, rental inquiries, tenant service entry points, and authorized staff tools.</dd></div><div><dt>Explore the delivered experience</dt><dd>Browse residential and retail properties, view galleries and locations, and follow inquiry paths on the published website. See the project overview for the wider scope.</dd></div></dl>
-        <Link href="/work#teams-management" className={styles.lightButton}>Explore the project <span aria-hidden="true">↗</span></Link>
-      </div><div className={styles.featureImage}><Image src="/images/pages/teams-showcase-20261028.jpg" alt="Teams Management public website with property discovery and tenant services" width={1440} height={1000} unoptimized sizes="(max-width: 800px) 100vw, 55vw" /><a href="https://www.teamsmanagement.com/" target="_blank" rel="noopener noreferrer" className={styles.projectVisit}>Visit Teams Management <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a></div>
-    </section>
-
-    <section className={`${styles.section} ${styles.projectReviews}`} aria-labelledby="teams-reviews-heading">
-      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>The people behind the property experience</p><h2 id="teams-reviews-heading">The community behind this client website.</h2></div></div>
-      <p className={styles.reviewIntro}>These resident reviews describe Teams Management’s property-management service. They are client context—not testimonials about 2Nspira or evidence of our project results.</p>
-      <details className="mt-6"><summary className="min-h-11 cursor-pointer rounded py-3 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">Read the client’s resident reviews</summary><TeamsReviewCarousel /></details>
-      <div className={styles.reviewFoot}><p>Selected positive Google review excerpts about Teams Management’s property-management service.</p><a href="https://www.google.com/maps/place/Teams+Management+LLC/data=!4m2!3m1!1s0x89c258c0e0b65e2d:0xa24510b57f3f6d39" target="_blank" rel="noopener noreferrer" className={styles.textLink}>Read all Google reviews <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a></div>
-    </section>
-
-    <section className={`${styles.section} ${styles.impact}`} aria-labelledby="impact-heading">
-      <h2 id="impact-heading">Making an impact since 2019.</h2>
-      <ImpactTimeline />
-    </section>
-
-    <section className={`${styles.section} ${styles.work}`} aria-labelledby="work-heading"><div className={styles.sectionHead}><div><p className={styles.eyebrow}>More perspectives. More possibility.</p><h2 id="work-heading">A closer look at our work.</h2></div><Link href="/work" className={styles.textLink}>View our work <span aria-hidden="true">↗</span></Link></div><div className={styles.workGrid}>{[
-      {name:"GeVitals", image:"gevitals",text:"A bilingual clinic website connecting content, video, publishing, and local discovery."},
-      {name:"Open Goal Soccer",image:"open-goal",text:"An accessible archival redesign preserving a community program’s mission and story."}
-    ].map(project=><Link key={project.name} href="/websites#our-work" className={styles.workCard}><div><Photo src={`/images/pages/${project.image}-website-preview-20261021.jpg`} alt={`${project.name} public website preview`} /></div><h3>{project.name} <span aria-hidden="true">↗</span></h3><p>{project.text}</p></Link>)}</div></section>
-
-
-  <ManufacturingDemo />
-    </main>;
+    <section id="our-purpose" className={`${styles.section} ${styles.whyUs}`} aria-labelledby="why-heading"><div><p className={styles.eyebrow}>Why 2Nspira</p><h2 id="why-heading">Human judgment.<br />Hands-on delivery.</h2><Link href="/about" className={styles.textLink}>Our story, since 2019 <span aria-hidden="true">→</span></Link></div><div><article><h3>Start with the people</h3><p>Understand your customers, your team and the work before choosing the technology.</p></article><article><h3>Build with purpose</h3><p>Human-led engineering, supported by AI, with attention to accessibility, testing and maintainability.</p></article><article><h3>Keep the scope clear</h3><p>Agree what we’re building, how we’ll review it and what ongoing support includes.</p></article></div></section>
+    <aside className={styles.studioNote} aria-label="Creative Studio"><p>Another side of 2Nspira: original ideas, stories and experiments.</p><Link href="/studio" className={styles.textLink}>Explore Creative Studio <span aria-hidden="true">↗</span></Link></aside>
+    <section className={styles.contact} aria-labelledby="contact-heading"><p className={styles.eyebrow}>Your next project starts here</p><h2 id="contact-heading">What would you like to build?</h2><Link href="/contact" className={styles.lightButton}>Discuss Your Project <span aria-hidden="true">↗</span></Link><p>Tell us about your idea. Choose a message or an introductory call on our contact page.</p></section>
+  </main>;
 }

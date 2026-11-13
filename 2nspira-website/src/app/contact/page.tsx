@@ -220,6 +220,8 @@ export default function ContactPage() {
           error?: string;
         };
         if (res.ok && data.status === "delivered") {
+          const marketingWindow = window as Window & { dataLayer?: unknown[] };
+          (marketingWindow.dataLayer ??= []).push({ event: "contact_submit_success", page_path: "/contact" });
           setSubmitted({ ...formState });
           setState({ kind: "delivered" });
           return;

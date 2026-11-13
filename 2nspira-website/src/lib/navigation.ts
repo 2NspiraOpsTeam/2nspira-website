@@ -1,9 +1,12 @@
 export const serviceLinks = [
   { name: "Websites & Custom Digital Platforms", href: "/websites" },
   { name: "Business Automation & Integrations", href: "/automation-systems-optimization" },
-  { name: "Organizational AI enablement", href: "/ai-enablement" },
-  { name: "Technology Advisory & Leadership", href: "/technology-advisory" },
-  { name: "Managed Services & Support", href: "/managed-services-support" },
+  { name: "Organizational AI Enablement", href: "/ai-enablement" },
+];
+
+export const moreServiceLinks = [
+  { name: "Technology Leadership & Advisory", href: "/technology-advisory" },
+  { name: "Managed Maintenance & Support", href: "/managed-services-support" },
 ];
 
 export const aboutLinks = [

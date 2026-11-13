@@ -7,10 +7,9 @@ import type { KeyboardEvent as ReactKeyboardEvent, RefObject } from "react";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import type { NavigationLink } from "@/lib/studio/model";
-import { BOOKING_URL } from "@/lib/booking";
 import { demoNavigationLinks } from "@/lib/demos";
 
-import { serviceLinks, aboutLinks } from "@/lib/navigation";
+import { serviceLinks, moreServiceLinks, aboutLinks } from "@/lib/navigation";
 
 export default function MobileMenu({
   isOpen,
@@ -156,7 +155,8 @@ export default function MobileMenu({
               {link.name}
             </Link>
           ))}
-          {key === "about" && (
+          {key === "services" && <div className="mt-2 border-t border-line pt-2" role="group" aria-label="More Services"><p className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted">More Services</p>{moreServiceLinks.map(link => <Link key={link.href} href={link.href} onClick={handleClose} aria-current={isCurrent(link.href) ? "page" : undefined} className="flex min-h-11 items-center rounded-xl px-4 py-3 text-sm text-body hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">{link.name}</Link>)}</div>}
+            {key === "about" && (
             <StudioSubnav links={ideaLinks} onNavigate={handleClose} />
           )}
         </div>
@@ -247,11 +247,11 @@ export default function MobileMenu({
           </Link>
           <div className="my-3 border-t border-line" />
           <Link
-            href={BOOKING_URL}
+            href="/contact"
             onClick={handleClose}
             className="mt-2 block rounded-xl bg-accent px-4 py-3.5 text-center text-base font-medium text-white transition-colors hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
           >
-            Book a Conversation
+            Discuss Your Project
           </Link>
         </nav>
 

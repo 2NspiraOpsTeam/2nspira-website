@@ -32,7 +32,7 @@ export const metadata: Metadata = publicPageMetadata({
 const servicesJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Service", name: "Managed Services & Support", url: "https://2nspira.com/managed-services-support", provider: { "@id": "https://2nspira.com/#organization" } },
+    { "@type": "Service", name: "Managed Maintenance & Support", url: "https://2nspira.com/managed-services-support", provider: { "@id": "https://2nspira.com/#organization" } },
     {
       "@type": "CollectionPage",
       "@id": "https://2nspira.com/services#webpage",
@@ -43,15 +43,15 @@ const servicesJsonLd = {
         "@type": "ItemList",
         itemListElement: [
           ...serviceNeeds.map(item => ({ name: item.name, url: `https://2nspira.com${item.href}` })),
-          { name: "Technology Advisory & Leadership", url: "https://2nspira.com/technology-advisory" },
-          { name: "Managed Services & Support", url: "https://2nspira.com/managed-services-support" },
+          { name: "Technology Leadership & Advisory", url: "https://2nspira.com/technology-advisory" },
+          { name: "Managed Maintenance & Support", url: "https://2nspira.com/managed-services-support" },
         ].map((item, index) => ({ "@type": "ListItem", position: index + 1, ...item })),
       },
     },
     {
       "@type": "Service",
       "@id": "https://2nspira.com/ai-enablement#service",
-      name: "AI Enablement",
+      name: "Organizational AI Enablement",
       description:
         "Find where AI can reduce repetitive work and help your team serve customers better. Get practical AI strategy, training, and governance from 2Nspira.",
       url: "https://2nspira.com/ai-enablement",
@@ -81,7 +81,7 @@ const servicesJsonLd = {
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#fractional-leadership",
-      name: "Technology Advisory & Leadership",
+      name: "Technology Leadership & Advisory",
       description:
         "Technology strategy, planning, vendor guidance and leadership support, including Fractional CIO engagements, aligned with your business goals.",
       url: "https://2nspira.com/technology-advisory",
@@ -122,7 +122,7 @@ export default function ServicesPage() {
             A stronger business starts with your next right move.
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
-            Turn technology uncertainty, disconnected operations, and growing pains into a clearer path forward. From responsible AI and connected systems to digital experiences and technology advisory and leadership, we help you move from what’s holding you back to what comes next.
+            Build a professional website or custom platform, connect your business workflows, or enable your organization to use AI responsibly. Start with one of our three core offerings; leadership and ongoing support are available as your needs evolve.
           </p>
           <ServiceConversation label="Let’s talk about your next step" />
           <a href="#find-the-right-service" className={`mt-4 min-h-11 ${linkInline}`}>Find the right service <span aria-hidden="true"> ↓</span></a>

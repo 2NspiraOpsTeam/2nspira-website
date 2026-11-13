@@ -7,10 +7,9 @@ import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import { useStudioNavigation } from "@/components/studio/StudioNavigation";
-import { BOOKING_URL } from "@/lib/booking";
 import { demoNavigationLinks } from "@/lib/demos";
 
-import { serviceLinks, aboutLinks } from "@/lib/navigation";
+import { serviceLinks, moreServiceLinks, aboutLinks } from "@/lib/navigation";
 
 type MenuName = "services" | "ideas" | "about" | "demos";
 
@@ -40,7 +39,7 @@ export default function Header() {
   };
   const menuIsCurrent = (menu: MenuName) =>
     (menu === "services"
-      ? serviceLinks
+      ? [...serviceLinks, ...moreServiceLinks]
       : menu === "ideas"
         ? ideaLinks
         : menu === "demos"
@@ -158,6 +157,7 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
+            {menu === "services" && <div className="mt-2 border-t border-line pt-2" role="group" aria-label="More Services"><p className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted">More Services</p>{moreServiceLinks.map(link => <Link key={link.href} href={link.href} onClick={() => closeMenu()} aria-current={isCurrent(link.href) ? "page" : undefined} className="flex min-h-11 items-center rounded-xl px-4 py-3 text-sm text-body hover:bg-accent-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">{link.name}</Link>)}</div>}
             {menu === "about" && (
               <StudioSubnav links={ideaLinks} onNavigate={() => closeMenu()} />
             )}
@@ -233,10 +233,10 @@ export default function Header() {
           ))}
           <span className="mx-1 h-5 w-px bg-line" aria-hidden="true" />
           <Link
-            href={BOOKING_URL}
+            href="/contact"
             className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 ease-gentle hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
           >
-            Book a Conversation
+            Discuss Your Project
           </Link>
         </nav>
 
