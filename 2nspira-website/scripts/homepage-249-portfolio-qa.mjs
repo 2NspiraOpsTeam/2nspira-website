@@ -3,12 +3,12 @@ const {chromium}=await import(process.env.PLAYWRIGHT_MODULE || 'playwright-core'
 import {mkdir,writeFile} from 'node:fs/promises';
 const base=process.argv[2];const out=process.argv[3];await mkdir(out,{recursive:true});
 const b=await chromium.launch({channel:'chrome',headless:true});const p=await b.newPage({extraHTTPHeaders:{'x-forwarded-proto':'https'}});let checks=0;const results=[];const ok=(v,label)=>{assert.ok(v,label);checks++;results.push(label)};
-const urls=['https://gevitals.com/','https://opengoalsoccer.com/','https://www.teamsmanagement.com/'];
+const urls=['https://gevitals.com/','https://opengoalsoccer.com/','https://www.teamsmanagement.com/','https://books.2nspira.com/'];
 for(const width of [1440,768,390,320]){
  await p.setViewportSize({width,height:900});await p.goto(base,{waitUntil:'networkidle'});
  const section=p.getByRole('region',{name:'Different businesses. Distinct digital experiences.'});await section.scrollIntoViewIfNeeded();
- const cards=section.locator('article');ok(await cards.count()===3,`all three cards ${width}`);
- for(let i=0;i<3;i++){
+ const cards=section.locator('article');ok(await cards.count()===4,`all four cards ${width}`);
+ for(let i=0;i<4;i++){
   const card=cards.nth(i);await card.scrollIntoViewIfNeeded();const link=card.locator('a');ok(await link.getAttribute('href')===urls[i],`verified destination ${i} ${width}`);
   const img=card.locator('img');await img.evaluate(e=>e.decode());ok((await img.getAttribute('alt')).length>20,`descriptive alt ${i} ${width}`);
   ok(await img.evaluate(e=>e.complete&&e.naturalWidth===1008),`loaded real screenshot ${i} ${width}`);

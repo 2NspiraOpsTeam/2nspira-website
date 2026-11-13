@@ -17,7 +17,7 @@ try{
  for(const width of [1440,768,390,320]){
   await page.setViewportSize({width,height:900});await page.goto(base);await loaded();
   ok(await page.locator('main h1').count()===1,`one homepage h1 ${width}`);
-  ok(await page.locator('main article').filter({has:page.locator('h3')}).count()===9,`three portfolio projects, three services and three why statements ${width}`);
+  ok(await page.locator('main article').filter({has:page.locator('h3')}).count()===10,`four portfolio projects, three services and three why statements ${width}`);
   for(let y=0;y<await page.evaluate(()=>document.body.scrollHeight);y+=700){await page.evaluate(y=>scrollTo(0,y),y);await page.waitForTimeout(50);}
   ok(await page.evaluate(()=>[...document.images].every(x=>x.complete&&x.naturalWidth>0)),`all rendered images loaded ${width}`);
   ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`no overflow ${width}`);

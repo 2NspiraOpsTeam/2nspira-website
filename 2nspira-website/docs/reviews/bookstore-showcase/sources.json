@@ -1,0 +1,78 @@
+[
+  {
+    "name": "gevitals",
+    "url": "https://gevitals.com/",
+    "finalURL": "https://gevitals.com/",
+    "status": 200,
+    "capturedAt": "2026-11-13T23:21:52.489Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "original": "gevitals-source.png",
+    "asset": "public/images/work/gevitals-homepage-20261113.webp",
+    "optimizedDimensions": {
+      "width": 1008,
+      "height": 700
+    },
+    "optimizedBytes": 61378,
+    "processing": "Proportional resize from 1440x1000 to 1008x700, WebP quality 85; no fabricated content."
+  },
+  {
+    "name": "soccer",
+    "url": "https://opengoalsoccer.com/",
+    "finalURL": "https://opengoalsoccer.com/",
+    "status": 200,
+    "capturedAt": "2026-11-13T23:21:53.441Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "original": "soccer-source.png",
+    "asset": "public/images/work/soccer-homepage-20261113.webp",
+    "optimizedDimensions": {
+      "width": 1008,
+      "height": 700
+    },
+    "optimizedBytes": 71436,
+    "processing": "Proportional resize from 1440x1000 to 1008x700, WebP quality 85; no fabricated content."
+  },
+  {
+    "name": "teams",
+    "url": "https://www.teamsmanagement.com/",
+    "finalURL": "https://www.teamsmanagement.com/",
+    "status": 200,
+    "capturedAt": "2026-11-13T23:21:56.169Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "original": "teams-source.png",
+    "asset": "public/images/work/teams-homepage-20261113.webp",
+    "optimizedDimensions": {
+      "width": 1008,
+      "height": 700
+    },
+    "optimizedBytes": 86960,
+    "processing": "Proportional resize from 1440x1000 to 1008x700, WebP quality 85; no fabricated content."
+  },
+  {
+    "name": "bookstore",
+    "url": "https://books.2nspira.com/",
+    "finalURL": "https://books.2nspira.com/",
+    "status": 200,
+    "capturedAt": "2026-11-13T23:21:57.060Z",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "original": "bookstore-source.png",
+    "asset": "public/images/work/bookstore-homepage-20261113.webp",
+    "optimizedDimensions": {
+      "width": 1008,
+      "height": 700
+    },
+    "optimizedBytes": 39478,
+    "processing": "Proportional resize from 1440x1000 to 1008x700, WebP quality 85; no fabricated content."
+  }
+]
