@@ -43,5 +43,15 @@
     "CAREERS_EMAIL_VERIFIED": "true",
     "CAREERS_FROM_EMAIL": "hiring@2nspira.com",
     "CAREERS_SENDER_VERIFIED": "true"
-  }
+  },
+  "ratelimits": [
+    {
+      "name": "CHAT_RATE_LIMIT",
+      "namespace_id": "2026111301",
+      "simple": {
+        "limit": 8,
+        "period": 60
+      }
+    }
+  ]
 }
