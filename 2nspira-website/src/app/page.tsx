@@ -48,6 +48,12 @@ const homepageJsonLd = {
   ],
 };
 
+const featuredProjects = [
+  { name: "Teams Management", type: "Property management", status: "Published client website", url: "https://www.teamsmanagement.com/", image: "teams", alt: "Teams Management website showing New York property discovery", description: "Property pages, galleries and inquiry paths bring a New York portfolio into one clear website." },
+  { name: "GeVitals", type: "Health & wellness", status: "Published client website", url: "https://gevitals.com/", image: "gevitals", alt: "GeVitals clinic website with Spanish-language services and English navigation option", description: "A bilingual clinic website combining migrated content, video and service discovery." },
+  { name: "Open Goal Soccer", type: "Community & nonprofit", status: "Published community archive", url: "https://opengoalsoccer.com/", image: "soccer", alt: "Open Goal Soccer archive with its inclusive youth soccer story and original program photography", description: "A modernized digital archive preserving an inclusive youth soccer program’s mission and community story." },
+];
+
 export default function Home() {
   return <main id="main-content" className={styles.home}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd).replace(/</g, "\\u003c") }} />
@@ -60,19 +66,21 @@ export default function Home() {
       </div>
       <Link href="/work#teams-management" className={styles.heroProject}>
         <div className={styles.browserBar}><span aria-hidden="true">● ● ●</span><span>Selected client work</span></div>
-        <Image src="/images/work/live-teams-20261105.jpg" alt="Teams Management public website featuring property discovery" width={1440} height={1000} priority unoptimized sizes="(max-width: 900px) 100vw, 50vw" />
-        <div className={styles.projectCaption}><span>Teams Management<br /><small>Website &amp; property platform</small></span><span aria-hidden="true">↗</span></div>
+        <Image src="/images/work/teams-homepage-20261113.webp" alt="Teams Management public website featuring property discovery" width={1008} height={700} priority unoptimized sizes="(max-width: 900px) 100vw, 50vw" />
+        <div className={styles.projectCaption}><span>Teams Management<br /><small>Published property website</small></span><span aria-hidden="true">↗</span></div>
       </Link>
     </section>
-    <div className={styles.proofBand} aria-label="Experience and project evidence"><p>Building practical technology <strong>since 2019.</strong></p><Link href="/work#teams-management">Teams Management ↗</Link><Link href="/websites#our-work">GeVitals &amp; Open Goal Soccer ↗</Link></div>
-
-    <section className={`${styles.section} ${styles.featuredWork}`} aria-labelledby="feature-heading">
-      <div><p className={styles.eyebrow}>Real work, not a concept</p><h2 id="feature-heading">A website is only<br />the beginning.</h2><p className={styles.featureLead}>Teams Management connects property discovery with the people and tools behind it.</p>
-        <dl className={styles.projectFacts}><div><dt>The challenge</dt><dd>Help prospective residents and businesses find properties and reach the right team.</dd></div><div><dt>What we built</dt><dd>Property discovery, galleries, maps, rental inquiry paths and authorized staff tools.</dd></div></dl>
-        <Link href="/work#teams-management" className={styles.textLink}>Explore the Teams project <span aria-hidden="true">→</span></Link>
-      </div>
-      <div className={styles.projectDetail}><Image src="/images/work/teams-mobile-20261113.webp" alt="Teams Management website at mobile width with navigation, property discovery and inquiry entry points" width={390} height={844} unoptimized sizes="(max-width: 760px) 70vw, 280px" /><p>Teams Management · Mobile website</p></div>
+    <section id="featured-websites" className={`${styles.section} ${styles.portfolio}`} aria-labelledby="portfolio-heading">
+      <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Selected websites · Live and explorable</p><h2 id="portfolio-heading">Different businesses.<br />Distinct digital experiences.</h2></div><Link href="/work" className={styles.textLink}>Explore our work <span aria-hidden="true">→</span></Link></div>
+      <div className={styles.portfolioGrid}>{featuredProjects.map(project => <article key={project.name} className={styles.portfolioCard}>
+        <a href={project.url} className={styles.portfolioLink}>
+          <div className={styles.portfolioImage}><div className={styles.browserBar}><span aria-hidden="true">● ● ●</span><span>{new URL(project.url).hostname.replace(/^www\./, "")}</span></div><Image src={`/images/work/${project.image}-homepage-20261113.webp`} alt={project.alt} width={1008} height={700} unoptimized sizes="(max-width: 760px) calc(100vw - 48px), 29vw" /></div>
+          <div className={styles.portfolioCopy}><p className={styles.portfolioType}>{project.type}</p><h3>{project.name}<span aria-hidden="true">↗</span></h3><p>{project.description}</p><span className={styles.portfolioStatus}>{project.status}</span><span className={styles.portfolioVisit}>Visit website <span aria-hidden="true">→</span></span></div>
+        </a>
+      </article>)}</div>
+      <p className={styles.portfolioNote}>Teams’ tenant and staff workflows require authorized access; they are not public demos. Open Goal Soccer is a preserved archive, not an active program.</p>
     </section>
+    <div className={styles.proofBand} aria-label="Experience and project evidence"><p>Building practical technology <strong>since 2019.</strong></p><Link href="/work#teams-management">Explore Teams’ website &amp; staff workspace ↗</Link></div>
 
     <section id="find-the-right-service" className={`${styles.section} ${styles.coreServices}`} aria-labelledby="services-heading">
       <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Three ways to move forward</p><h2 id="services-heading">Build. Connect. Enable.</h2></div><p>Start with what your organization needs next.</p></div>

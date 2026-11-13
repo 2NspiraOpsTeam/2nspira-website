@@ -24,8 +24,8 @@ No conversion lift, revenue improvement, current site count, availability promis
 ## Implementation
 
 - Project-led hero, primary **Discuss Your Project** → `/contact`, secondary **View Our Work** → `/work`.
-- Existing Teams desktop project image plus a newly captured public mobile screenshot (390×844, November 13; WebP). No private dashboard or client record is added.
-- Concise project challenge/scope, then exactly three core service cards, a subordinate More Services row, brief delivery principles, distinct Creative Studio link, one closing invitation.
+- Current public Teams, GeVitals and Open Goal Soccer screenshots captured November 13 at 1440×1000 and delivered as 1008×700 WebP (74/54/62 KB). Existing published portfolio usage plus owner-requested reuse establishes the intended brand context; no new endorsement or private record is implied.
+- Three-project portfolio band immediately beneath the hero, followed by exactly three core service cards, a subordinate More Services row, brief delivery principles, distinct Creative Studio link and one closing invitation. All projects remain visible without carousel interactions; mobile uses a single column.
 - Desktop and mobile Services menus: exactly three core offerings, separated More Services group containing advisory and maintenance only. Existing destinations remain unchanged.
 - Footer taxonomy and `/services` discovery agree. Supporting-service links appear contextually in the three core service journeys. Existing `/websites` content and automation functionality are retained.
 - Existing desktop hover/click, Escape, focus return, mobile accordion and dialog behavior retained. No new UI dependency.
@@ -61,3 +61,26 @@ Rendered images reviewed for hierarchy, crop, whitespace and responsive composit
 ## Review decisions / release boundary
 
 Owner review: approve the visual direction and hierarchy after viewing the preview. No new unresolved business-policy decision was introduced. Production publication still requires Jeffrey’s explicit approval; this branch remains a draft and unmerged. Existing routes and About history are preserved, and no DNS, billing, secrets or production settings were changed.
+
+## Owner refinement — three-project showcase (November 13)
+
+Implements [owner feedback](https://github.com/2NspiraOpsTeam/2nspira-website/issues/249#issuecomment-6865812964) on the same PR #250. Teams remains the hero lead; GeVitals and Open Goal Soccer now have equally sized, image-led cards alongside Teams immediately below it, replacing the second Teams-only feature section.
+
+### Sources and accurate scope
+
+All three current anonymous public homepages returned HTTP 200 and were visually inspected before screenshots were used. Screenshots preserve real imagery/marks; no generated substitutes. Project descriptions derive from the existing published `/work` scope, corroborated by the public pages:
+
+- [Teams Management](https://www.teamsmanagement.com/): published client website; property discovery, galleries and inquiries. Current Work page also documents authorized staff tools. Public screenshots do not verify private tenant/Admin workflows, so the homepage explicitly distinguishes these from public demos and links to existing scope.
+- [GeVitals](https://gevitals.com/): published bilingual clinic website; service discovery, content and video. No medical outcomes or operational automation claimed.
+- [Open Goal Soccer](https://opengoalsoccer.com/): published community archive. Its live notice confirms the organization is no longer active; no current-program availability or commercial-client claim added.
+
+### Refinement before / after
+
+| Width | Before refinement | After refinement |
+| --- | --- | --- |
+| 1440 | [Desktop](portfolio-before-1440.jpg) | [Desktop](portfolio-after-1440.jpg) |
+| 768 | — | [Tablet](portfolio-after-768.jpg) |
+| 390 | [Mobile](portfolio-before-390.jpg) | [Mobile](portfolio-after-390.jpg) |
+| 320 | — | [Narrow mobile](portfolio-after-320.jpg) |
+
+Local checks: canonical build and route/404 smoke, TypeScript, lint (four existing warnings), plus 83 portfolio checks at 1440/768/390/320: all three real destinations, Enter activation, visible focus, descriptive alt, decoded screenshots, no chatbot covering card headings, text-spacing/no overflow, public HTTP 200. General homepage regression results and final hosted checks are recorded in the PR update. No contact email, appointment or real AI inference submitted. Performance evidence is limited to small image assets, image-loading checks and layout stability; no new field CWV claim.
