@@ -8,7 +8,7 @@ config.routes = [];
 delete config.route;
 config.workers_dev = true;
 config.d1_databases = [];
-config.vars = {};
+config.vars = process.env.CHAT_FREE_ONLY === 'verified' ? { CHAT_FREE_ONLY: 'verified' } : {};
 config.assets = {...config.assets, run_worker_first: true};
 config.ratelimits = [{name:'CHAT_RATE_LIMIT', namespace_id:'2026111302', simple:{limit:8,period:60}}];
 await writeFile('dist/server/wrangler.chatbot.json', JSON.stringify(config, null, 2));

@@ -14,22 +14,20 @@ try {
  for(const width of [1440,768,390,320]){
   await page.setViewportSize({width,height:1000});
   await page.goto(base+'/chatbot-demo');
-  await page.getByRole('button',{name:'How can you help my business with AI?'}).waitFor();
-  ok(await page.getByText('Interactive sample · no AI calls').isVisible(),`scripted disclosure ${width}`);
-  ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`no overflow ${width}`);
-  await page.screenshot({path:`${output}/demo-${width}.png`,fullPage:true});
-  await page.getByRole('button',{name:'How can you help my business with AI?'}).click();
-  await page.getByText('Sample answer',{exact:true}).waitFor();
-  ok(await page.getByText(/We help you turn AI experimentation/).isVisible(),`sample response ${width}`);
   const input=page.getByRole('textbox',{name:'Your question'});
-  for(let n=0;n<2;n++){await input.fill('Sample question');await page.getByRole('button',{name:'Send question'}).click();await page.getByRole('button',{name:'Send question'}).waitFor({state:'visible'});await page.waitForFunction(n=>document.querySelectorAll('[role="log"] > div').length===(n+2)*2,n);}
-  await input.fill('One more');await page.getByRole('button',{name:'Send question'}).click();
-  await page.getByText('The sample free allowance is used up.',{exact:false}).waitFor();
-  ok(await input.isDisabled(),`limit prevents send ${width}`);
-  ok(await page.getByRole('link',{name:'Contact 2Nspira',exact:true}).getAttribute('href')==='/contact',`limit contact ${width}`);
-  await page.screenshot({path:`${output}/limit-${width}.png`,fullPage:true});
-  await page.getByRole('button',{name:'Restart demo'}).click();ok(await page.locator('[role="log"] > div').count()===0,`clear demo ${width}`);
-  await input.fill('Unsaved partial question');await page.reload();ok(await input.inputValue()==='',`refresh clears demo ${width}`);
+  await input.waitFor();
+  await page.waitForFunction(()=>!document.querySelector('textarea').disabled);
+  ok(await page.getByText('AI guide · human expertise, one click away').isVisible(),`live disclosure ${width}`);
+  ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`no overflow ${width}`);
+  await input.fill('Can 2Nspira help with website and client portal development?');
+  await page.getByRole('button',{name:'Send question'}).click();
+  await page.getByText('2Nspira AI',{exact:true}).waitFor();
+  const answer=await page.locator('[role="log"] > div').last().innerText();
+  ok(/portal|website|digital/i.test(answer),`real AI service answer ${width}`);
+  await writeFile(`${output}/live-answer-${width}.txt`,answer);
+  await page.screenshot({path:`${output}/live-${width}.png`,fullPage:true});
+  await page.getByRole('button',{name:'Clear chat'}).click();ok(await page.locator('[role="log"] > div').count()===0,`clear chat ${width}`);
+  await input.fill('Unsaved partial question');await page.reload();ok(await input.inputValue()==='',`refresh clears chat ${width}`);
  }
  await page.setViewportSize({width:390,height:844});
  await page.goto(base+'/');
@@ -38,8 +36,6 @@ try {
  ok(await dialog.isVisible(),'first-click opens modal');
  await page.keyboard.press('Escape');await dialog.waitFor({state:'hidden'});ok(await launch.evaluate(e=>e===document.activeElement),'Escape restores launcher focus');
  await launch.click();
- await page.getByRole('button',{name:'How can you help my business with AI?'}).click();
- await page.getByText('Our AI assistant is not available right now.',{exact:false}).waitFor();ok(await page.getByRole('link',{name:'Contact 2Nspira',exact:true}).isVisible(),'unconfigured real endpoint has contact fallback');
  await page.getByRole('button',{name:'Close assistant'}).click();
  // Response states below are explicit browser stubs, not live provider tests.
  let calls=0;let scenario='success';
