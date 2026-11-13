@@ -128,7 +128,7 @@ export default function Demos() {
           ))}
         </div>
       </section>
-      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6"><div className="rounded-3xl border border-line bg-white p-7 sm:p-10"><p className={eyebrow}>Website AI assistant · scripted concept</p><h2 className={`mt-4 ${h2}`}>A helpful first conversation. A human next step.</h2><p className="mt-4 max-w-2xl leading-7 text-body">Explore a branded website assistant and see how a free-allowance limit leads visitors to your team. This interactive sample uses scripted answers, not live AI.</p><Link href="/chatbot-demo" className={`mt-6 ${buttonPrimary}`}>Try the chatbot concept <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link></div></section>
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6"><div className="rounded-3xl border border-line bg-white p-7 sm:p-10"><p className={eyebrow}>Website AI assistant · live demonstration</p><h2 className={`mt-4 ${h2}`}>A helpful first conversation. A human next step.</h2><p className="mt-4 max-w-2xl leading-7 text-body">Explore a branded website assistant and see how a free-allowance limit leads visitors to your team. This demonstration gives real AI answers using a limited free allowance, with a contact-page handoff when the allowance is reached.</p><Link href="/chatbot-demo" className={`mt-6 ${buttonPrimary}`}>Try the AI assistant <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link></div></section>
       <DemoTrust />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <details className="rounded-2xl border border-line p-6">

@@ -16,7 +16,7 @@ try {
   await page.goto(base+'/chatbot-demo');
   const input=page.getByRole('textbox',{name:'Your question'});
   await input.waitFor();
-  await page.waitForFunction(()=>!document.querySelector('textarea').disabled);
+  await page.waitForFunction(()=>{const input=document.querySelector('textarea');return input && !input.disabled;});
   ok(await page.getByText('AI guide · human expertise, one click away').isVisible(),`live disclosure ${width}`);
   ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`no overflow ${width}`);
   await input.fill('Can 2Nspira help with website and client portal development?');

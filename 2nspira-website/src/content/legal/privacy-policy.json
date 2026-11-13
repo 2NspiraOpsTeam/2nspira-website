@@ -20,7 +20,7 @@
     },
     {
       "tag": "p",
-      "text": "If you choose to use our live AI assistant, the question you submit is sent to Groq, our AI inference provider, with public information about 2Nspira so an answer can be generated. Do not submit confidential, sensitive, payment or personal information. Our chatbot does not connect to client accounts or retain a chat transcript in a chatbot database. The conversation is held in the page until it is cleared, closed or refreshed; each question is answered independently. Technical request metadata is used for security and rate limiting. Provider processing is subject to Groq’s privacy policy at https://groq.com/privacy-policy/. You can contact our team instead of using AI. The labeled scripted demonstration does not send questions to an AI provider."
+      "text": "If you choose to use our live AI assistant, the question you submit is sent to Groq, our AI inference provider, with public information about 2Nspira so an answer can be generated. Do not submit confidential, sensitive, payment or personal information. Our chatbot does not connect to client accounts or retain a chat transcript in a chatbot database. The conversation is held in the page until it is cleared, closed or refreshed; each question is answered independently. Technical request metadata is used for security and rate limiting. Provider processing is subject to Groq’s privacy policy at https://groq.com/privacy-policy/. You can contact our team instead of using AI."
     },
     {
       "tag": "p",
