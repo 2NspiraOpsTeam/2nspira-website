@@ -86,7 +86,6 @@ export default function Home() {
           <div className={styles.portfolioCopy}><p className={styles.portfolioType}>{project.type}</p><h3>{project.name}<span aria-hidden="true">↗</span></h3><p><strong className={styles.projectChallenge}>{project.challenge}</strong>{project.description}</p><span className={styles.portfolioStatus}>{project.status}</span><span className={styles.portfolioVisit}>{project.image === "bookstore" ? "Visit bookstore" : "Visit website"} <span aria-hidden="true">→</span></span></div>
         </a>
       </article>)}</div>
-      <p className={styles.portfolioNote}>Teams’ tenant and staff workflows require authorized access; they are not public demos. Open Goal Soccer is a preserved archive, not an active program.</p>
     </section>
     <div className={styles.proofBand} aria-label="Experience and project evidence"><p>Building practical technology <strong>since 2019.</strong></p><Link href="/work#teams-management">Explore Teams’ website &amp; staff workspace ↗</Link></div>
 
