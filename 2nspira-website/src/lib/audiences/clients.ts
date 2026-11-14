@@ -1,6 +1,7 @@
 // Client names and relationship designation supplied by Jeffrey, 2026-11-10.
 // Official logo provenance is recorded in docs/qa/client-carousel-2026-11-10.md.
 export const clientLogos = [
+  { id: "briarcrypt-books", name: "Briarcrypt Books", logo: "/images/clients/briarcrypt-books.png" },
   {
     "id": "columbia",
     "name": "Columbia University",

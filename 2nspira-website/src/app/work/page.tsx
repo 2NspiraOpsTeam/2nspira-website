@@ -41,7 +41,7 @@ const supportingProjects = [
     description:
       "An independent storefront built by 2Nspira for rare and collectible books, with photographs and condition details for individual copies.",
     url: "https://briarcrypt.com",
-    image: "/images/work/live-books-20261105.jpg",
+    image: "/images/work/briarcrypt-storefront-20261113.jpg",
   },
   {
     name: "2Nspira",
@@ -250,7 +250,7 @@ export default async function WorkPage() {
             </article>
             {supportingProjects.filter(project => ["2Nspira", "Briarcrypt Books", "Breadcrumb", "CalmLoop"].includes(project.name)).map(project => {
               const visuals: Record<string, { image: string; alt: string; label: string }> = {
-                "Briarcrypt Books": { image: "/images/work/live-books-20261105.jpg", alt: "Briarcrypt Books storefront featuring collectible editions", label: "Rare & collectible books" },
+                "Briarcrypt Books": { image: "/images/work/briarcrypt-storefront-20261113.jpg", alt: "Briarcrypt Books storefront featuring collectible editions", label: "Rare & collectible books" },
                 "2Nspira": { image: "/images/work/live-2nspira-20261105.jpg", alt: "2Nspira public website homepage", label: "Our digital platform" },
                 "Breadcrumb": { image: "/images/work/project-breadcrumb.png", alt: "Breadcrumb project artwork featuring an investigation workspace", label: "OSINT challenge game" },
                 "CalmLoop": { image: "/images/work/live-calmloop-20261105.jpg", alt: "CalmLoop companion application start screen", label: "Family-focused companion" },
@@ -258,7 +258,7 @@ export default async function WorkPage() {
               const visual = visuals[project.name];
               return <article key={project.name} data-catalog-card className={`${styles.engineeringCard} flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-canvas`}>
                 <div className="relative aspect-video overflow-hidden bg-surface">
-                  <Image src={visual.image} alt={visual.alt} fill sizes="(min-width: 1152px) 548px, (min-width: 768px) 48vw, calc(100vw - 32px)" className="object-contain" />
+                  <Image src={visual.image} alt={visual.alt} style={project.name === "Briarcrypt Books" ? { objectFit: "contain" } : undefined} fill sizes="(min-width: 1152px) 548px, (min-width: 768px) 48vw, calc(100vw - 32px)" className="object-contain" />
                 </div>
                 <div className="flex flex-1 flex-col p-6 sm:p-8">
                   <p className="text-sm font-semibold text-accent">{visual.label} · Internal project</p>
