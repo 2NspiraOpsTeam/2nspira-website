@@ -1,0 +1,31 @@
+> SANITIZED OWNER REVIEW ONLY — PARTIAL/BLOCKED. Conditional language is not verified capability, approved pricing, commitment or submission authority. Private source artifacts are local/private. No independent submission QA pass.
+
+# PEFC — conditional technical workstream narrative
+
+PRIVATE INTERNAL WORKING TEXT · PARTIAL / BLOCKED · not an offer, full proposal, or release-approved package
+
+This editable source-backed workstream text is available only if genuine bidder/team/reference/support evidence justifies a PEFC bid. It does not displace the St. Lucie pursuit. No personnel, delivery date, CMS selection, fee, capacity or audited conformance is asserted. No company claim or commercial term is copied from another proposal.
+
+## Preserve the design investment; validate the implementation
+
+The implementation approach would begin with PEFC's supplied fourteen-page mockup set and forty-page brand guideline, not a replacement visual identity. A bounded design-validation workshop would identify reusable components, responsive behaviours and unresolved interaction states before implementation. The mockups show recurring image/text panels, audience cards, metrics, accordions, videos, filtered content lists, pagination, a newsletter signup and shared navigation/footer. These patterns suggest a reusable component library with editor-controlled content and centrally governed accessible structure. They do not prove that a CMS currently supports those behaviours.
+
+The component register would link each proposed block to the source mockup page, editor fields, validation rules, keyboard behaviour, mobile layout and acceptance evidence. Editors would be able to create supported page compositions without code, while national-site separation and shared-platform governance would be tested independently. The first-screen audience quiz would be held as an unresolved interaction until PEFC confirms its outcomes, branching and any processing of answers; no accounts, CRM integration or persistent personal profile is assumed. Likewise, the member map and document-search layouts would be specified as user journeys before any supplier, licensing tier or extra service is selected.
+
+The brand rules distinguish development tooling from content authenticity. AI-assisted implementation may be considered with accountable review, security and testing, but the supplied photography rules prohibit AI-generated images. Proposed production imagery would therefore use approved authentic assets, with ownership and permissions established by PEFC. Official logos would retain approved proportions, clear space and applicable licence-number treatment. Typography would follow Poppins and the restricted Lora pull-quote usage where approved assets are available. All actual color combinations, focus indicators, text sizes and responsive states would be tested rather than assuming that a branded palette meets WCAG 2.2 AA.
+
+## Migration baseline and national rollout
+
+The October 6 published-URL annex supplies 9,184 distinct URLs across ten domains, including 2,446 international URLs and 6,738 national URLs. It provides an initial reconciliation and redirect baseline, not a fixed-price measure of the entire migration. Belgium has no sitemap in this annex; people, member organisations and landing pages are excluded by definition. Editorial selection, unpublished items, shared media and relationships require separate treatment. The transition plan would avoid counting a sitemap document URL as either an accessible document or a successfully extracted CMS record.
+
+A migration register would track source site, source URL, content type, retain/consolidate/archive decision, destination, language relationship, media dependencies, validation result and accountable approval. PEFC and national members would retain editorial decisions; the supplier would implement the extraction, transformation and technical QA. Published content and associated media would be the estimate baseline under Q56, with exclusions and further inventory dependencies stated transparently. Existing dynamic image addresses and embedded blocks would be mapped to the new content model without silently flattening meaningful relationships.
+
+The 88-row historical traffic annex would help prioritize regression journeys, not predict future demand. Certification-finding journeys, news, documents and member navigation would be tested using the source-reported historical priorities. Missing tenth-ranked entries for the international and Spanish sites would remain missing, with no invented analytics values. Unmeasured sites would still receive functional and accessibility acceptance checks.
+
+## Acceptance, transition and operations
+
+Before each launch, proposed acceptance evidence would include URL reconciliation, redirect status/destination checks, broken-link and missing-media checks, representative multilingual/embedded-block samples, editor task completion, keyboard and assistive-technology checks, and national-site permission isolation. Sampling and tolerances would be agreed rather than presented as issuer-approved. Search facets, download labels, article metadata, pagination and map/list alternatives would be tested in the implemented system. No tests described here have been executed.
+
+Tatamee and the excluded Label Generator application must continue operating during the transition. Shared media/CDN/database dependencies would be recorded before retirement decisions, preserving existing service routes until an agreed cutover and rollback is verified. International launch and the ten national migrations would be planned separately; all ten migrations would still appear in the three-year cost comparison even where the operational sequence is later. A proposed optional pilot would be itemized rather than silently added to core delivery.
+
+A bid could proceed only after named delivery accountability, two comparable permissible references, CET/CEST coordination and support coverage, data-processing/hosting controls and actual supplier economics are evidenced. Those gates are unresolved. This text is a conditional design/migration contribution, not proof of an eligible firm or a complete package ready for owner review.
