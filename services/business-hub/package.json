@@ -1,0 +1,5 @@
+{
+ "name": "2nspira-business-hub-prototype", "private": true, "type": "module",
+ "scripts": { "test": "node --test test/*.test.mjs", "dev": "node src/local-preview.mjs" },
+ "engines": { "node": ">=24" }
+}
