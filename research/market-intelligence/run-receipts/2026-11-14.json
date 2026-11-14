@@ -1,0 +1,48 @@
+{
+  "cloudflare_sync": {
+    "endpoint": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+    "result": {
+      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f",
+      "status": "imported",
+      "opportunities": 4,
+      "documents": 12
+    },
+    "source": "/Users/agent1/.openclaw/workspace/deliverables/market-intelligence/2026-11-14"
+  },
+  "persisted_records": [
+    {
+      "candidate_id": "MI-001",
+      "record_version": "2026-11-14-nightly-v12",
+      "exact_readback": true,
+      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f"
+    },
+    {
+      "candidate_id": "MI-002",
+      "record_version": "2026-11-14-nightly-v12",
+      "exact_readback": true,
+      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f"
+    },
+    {
+      "candidate_id": "MI-003",
+      "record_version": "2026-11-14-nightly-v12",
+      "exact_readback": true,
+      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f"
+    },
+    {
+      "candidate_id": "MI-004",
+      "record_version": "2026-11-14-nightly-v12",
+      "exact_readback": true,
+      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f"
+    }
+  ],
+  "scope": "Research subtree only; no merge/deploy",
+  "secret_scan": "No credential patterns in changed research files",
+  "source_limitations": [
+    "W3C403",
+    "HalfAccessible guessed URL DNS failure",
+    "Accessible.org truncated extract",
+    "YouTube incomplete-body warning"
+  ],
+  "agent_active_minutes": null,
+  "actual_effort_split": null
+}

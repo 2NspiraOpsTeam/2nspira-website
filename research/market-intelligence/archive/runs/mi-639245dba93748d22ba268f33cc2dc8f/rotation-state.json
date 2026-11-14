@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-11-14T01:02:37.447139-05:00",
+  "allocation_target": {
+    "Adjacent": 0.7,
+    "New Stream": 0.3
+  },
+  "agent_active_minutes": null,
+  "human_hours": 0,
+  "actual_effort_split": null,
+  "reason": "Per-category active timer unavailable; wall duration not active effort. Human participation0; delivery/reviewer/acquisition actuals unmeasured.",
+  "actual_incremental_cash_usd": 0,
+  "compute_cost_usd": null,
+  "experiments_completed": 0,
+  "qualified_leads": null,
+  "buyer_conversations": null,
+  "evidence_upgrades_to_qualified_or_paid": 0,
+  "false_positives": null,
+  "next_seven_day_plan": "70/30 Adjacent/New Stream effort; prioritize MI-002 assessor/acceptance evidence and MI-001 differentiation, rotate original audio/templates without new weak IDs",
+  "weekly_due": "2026-11-15",
+  "final_due": "2026-12-08",
+  "rows": [
+    {
+      "candidate_id": "MI-001",
+      "tag": "Adjacent",
+      "evidence_grade": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+      "hypothesis": "Approval-first receivables exception desk for small B2B service firms provides incremental value beyond native/free alternatives to an accessible buyer.",
+      "next_experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
+      "owner_proposed": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian",
+      "decision": "FIRST_EXPERIMENT_PROPOSED",
+      "human_hours_actual": 0,
+      "agent_active_minutes": null,
+      "cash_actual": 0,
+      "approval_reference": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+      "execution_approved": false
+    },
+    {
+      "candidate_id": "MI-002",
+      "tag": "Adjacent",
+      "evidence_grade": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+      "hypothesis": "Title II evidence-and-remediation handoff pack for public-sector web vendors provides incremental value beyond native/free alternatives to an accessible buyer.",
+      "next_experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
+      "owner_proposed": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner",
+      "decision": "DEEPEN_RESEARCH",
+      "human_hours_actual": 0,
+      "agent_active_minutes": null,
+      "cash_actual": 0,
+      "approval_reference": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+      "execution_approved": false
+    },
+    {
+      "candidate_id": "MI-003",
+      "tag": "Adjacent",
+      "evidence_grade": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+      "hypothesis": "Role-specific AI usage and literacy starter pack for small EU agencies provides incremental value beyond native/free alternatives to an accessible buyer.",
+      "next_experiment": "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests",
+      "owner_proposed": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution",
+      "decision": "HOLD_RULE_REVIEW",
+      "human_hours_actual": 0,
+      "agent_active_minutes": null,
+      "cash_actual": 0,
+      "approval_reference": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+      "execution_approved": false
+    },
+    {
+      "candidate_id": "MI-004",
+      "tag": "New Stream",
+      "evidence_grade": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+      "hypothesis": "English B2B webinar caption-QA and evidence handoff provides incremental value beyond native/free alternatives to an accessible buyer.",
+      "next_experiment": "One original synthetic 10-minute webinar caption handoff, then 5 consented producer interviews only after exact recruitment approval",
+      "owner_proposed": "Brian research accountable; Maya any approved recruitment; separate caption/accessibility reviewer; delivery unassigned",
+      "decision": "PARK_COMPARE_NATIVE",
+      "human_hours_actual": 0,
+      "agent_active_minutes": null,
+      "cash_actual": 0,
+      "approval_reference": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+      "execution_approved": false
+    }
+  ]
+}
