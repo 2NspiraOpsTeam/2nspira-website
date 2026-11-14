@@ -67,6 +67,13 @@ export function safeUrl(value: string, image = false) {
 // Upgrade existing saved catalogues without publishing drafts or copying product records.
 // Once saved, the marker preserves all subsequent Admin choices (including Listen).
 export function upgradeStudio(content: Studio): Studio {
+  // Rebrand only the existing bookstore item; preserve visibility, status and ordering.
+  content = { ...content, items: content.items.map(item => item.id === "rare-collectible-books" ? {
+    ...item,
+    url: item.url.replace("https://books.2nspira.com", "https://briarcrypt.com"),
+    description: item.description.replaceAll("2Nspira Books", "Briarcrypt Books"),
+    imageAlt: item.imageAlt.replace("2Nspira rare and collectible bookstore", "Briarcrypt Books rare and collectible bookstore"),
+  } : item) };
   if (content.navigationVersion === 3) return content;
   if (content.navigationVersion === 2) {
     const next = structuredClone(content);

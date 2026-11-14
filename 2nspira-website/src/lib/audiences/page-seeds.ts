@@ -66,7 +66,7 @@ export const dedicatedAudiences: Industry[] = [
     help: "Connect storefronts, inventory, order handling, payment workflows and customer communications around the way you sell.",
     outcomes: "Less repeated entry, clearer order follow-through and a more consistent shopping experience across channels.",
     linkLabel: "Explore retail & e-commerce support", href: audienceRoutes.retail,
-    exampleLabel: "Visit 2Nspira Books — our own storefront", exampleHref: "https://books.2nspira.com",
+    exampleLabel: "Visit Briarcrypt Books — independent bookstore", exampleHref: "https://briarcrypt.com",
     page: {
       seoTitle: "Retail & E-commerce Websites, Integrations & Automation",
       seoDescription: "Connect storefronts, inventory, orders, payments and customer communications with practical technology support for independent retailers and e-commerce businesses.",
@@ -84,7 +84,7 @@ export const dedicatedAudiences: Industry[] = [
       ],
       advisoryTitle: "Choose what fits your shop", advisoryText: "Review the sales journey, current tools and operational constraints before choosing an integration or replacement. We can help prioritize a manageable improvement rather than assume you need a new platform.",
       implementationTitle: "Build and connect an agreed scope", implementationText: "Implementation is separately scoped around supported systems, data access, payment-provider boundaries and testing. A storefront example does not imply every inventory or payment integration is already available.",
-      examples: [{ title: "2Nspira Books", kind: "2Nspira-owned storefront", text: "Our rare and collectible book storefront shows individual-copy photographs, condition details and product discovery. It is our own retail project, not a third-party client case study or proof of an omnichannel integration.", href: "https://books.2nspira.com" }],
+      examples: [{ title: "Briarcrypt Books", kind: "Independent client storefront", text: "Briarcrypt Books is an independent bookstore built by 2Nspira, with individual-copy photographs, condition details and product discovery. It is not proof of an omnichannel integration.", href: "https://briarcrypt.com" }],
       ctaTitle: "Where does a sale create extra work?", ctaText: "Walk us through your storefronts, order process and customer follow-up. We can discuss one practical connection or improvement to start with.", ctaLabel: "Book a conversation about your shop",
     },
   },
