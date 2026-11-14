@@ -42,20 +42,20 @@ export default function ShopPage() {
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
         <aside data-catalog-fade className="mb-10 grid items-center gap-7 rounded-2xl border border-line bg-accent-soft p-6 sm:p-8 lg:grid-cols-2 lg:gap-10" aria-labelledby="shop-bookstore-title">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-body">The collector’s shelf · 2Nspira Books</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-body">The collector’s shelf · Briarcrypt Books</p>
             <h2 id="shop-bookstore-title" className={h2}>Rare & collectible books.</h2>
-            <p className="mt-3 leading-7 text-body">Discover our collection of rare collectible books, including signed and limited editions. Explore photographs of the actual copies, individual condition details, and the stories behind each edition at 2Nspira Books.</p>
-            <a href="https://books.2nspira.com" className={`mt-5 min-h-[48px] ${buttonPrimary}`}>Explore rare collectibles <span aria-hidden="true" className="ml-2">→</span></a>
+            <p className="mt-3 leading-7 text-body">Discover an independent collection of rare collectible books, including signed and limited editions. Explore photographs of the actual copies, individual condition details, and the stories behind each edition at Briarcrypt Books.</p>
+            <a href="https://briarcrypt.com" className={`mt-5 min-h-[48px] ${buttonPrimary}`}>Explore rare collectibles <span aria-hidden="true" className="ml-2">→</span></a>
           </div>
-          <a href="https://books.2nspira.com" data-catalog-card className="block overflow-hidden rounded-xl border border-line bg-white shadow-lg transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-label="Visit 2Nspira Books rare collectible bookstore">
+          <a href="https://briarcrypt.com" data-catalog-card className="block overflow-hidden rounded-xl border border-line bg-white shadow-lg transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" aria-label="Visit Briarcrypt Books rare collectible bookstore">
             <div className="flex items-center gap-2 border-b border-line bg-white px-4 py-3 text-xs text-body" aria-hidden="true">
               <span className="h-2 w-2 rounded-full bg-slate-300" />
               <span className="h-2 w-2 rounded-full bg-slate-300" />
               <span className="h-2 w-2 rounded-full bg-slate-300" />
-              <span className="ml-2">books.2nspira.com</span>
+              <span className="ml-2">briarcrypt.com</span>
             </div>
-            <Image src="/images/shop/rare-books-website.webp" alt="2Nspira Books website featuring a signed limited edition of Stephen King’s Bag of Bones" width={1440} height={724} sizes="(min-width: 1024px) 500px, 100vw" className="h-auto w-full" />
-            <p className="border-t border-line px-4 py-3 text-sm font-semibold text-body">Preview our collectible bookstore <span aria-hidden="true">↗</span></p>
+            <Image src="/images/shop/rare-books-website.webp" alt="Briarcrypt Books website featuring a signed limited edition of Stephen King’s Bag of Bones" width={1440} height={724} sizes="(min-width: 1024px) 500px, 100vw" className="h-auto w-full" />
+            <p className="border-t border-line px-4 py-3 text-sm font-semibold text-body">Explore Briarcrypt Books <span aria-hidden="true">↗</span></p>
           </a>
         </aside>
         <nav aria-label="Shop departments" className="flex flex-wrap gap-3">{[{name:"Our published books",href:"#published-books"},{name:"Rare & collectible books",href:"#shop-bookstore-title"},{name:"Other creative products",href:"#creative-products"}].map(link=><a key={link.href} href={link.href} className={buttonPrimary}>{link.name}</a>)}</nav>

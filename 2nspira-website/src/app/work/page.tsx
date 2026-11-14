@@ -37,10 +37,10 @@ const teamsCapabilities = [
 
 const supportingProjects = [
   {
-    name: "2Nspira Books",
+    name: "Briarcrypt Books",
     description:
-      "Our dedicated storefront for rare and collectible books, with photographs and condition details for individual copies.",
-    url: "https://books.2nspira.com",
+      "An independent storefront built by 2Nspira for rare and collectible books, with photographs and condition details for individual copies.",
+    url: "https://briarcrypt.com",
     image: "/images/work/live-books-20261105.jpg",
   },
   {
@@ -248,9 +248,9 @@ export default async function WorkPage() {
                 <Link href="/post/building-ai-team-multi-agent-workflow-lessons" className={styles.projectLink}>Explore the engineering lessons <span aria-hidden="true">→</span></Link>
               </div>
             </article>
-            {supportingProjects.filter(project => ["2Nspira", "2Nspira Books", "Breadcrumb", "CalmLoop"].includes(project.name)).map(project => {
+            {supportingProjects.filter(project => ["2Nspira", "Briarcrypt Books", "Breadcrumb", "CalmLoop"].includes(project.name)).map(project => {
               const visuals: Record<string, { image: string; alt: string; label: string }> = {
-                "2Nspira Books": { image: "/images/work/live-books-20261105.jpg", alt: "2Nspira Books storefront featuring collectible editions", label: "Rare & collectible books" },
+                "Briarcrypt Books": { image: "/images/work/live-books-20261105.jpg", alt: "Briarcrypt Books storefront featuring collectible editions", label: "Rare & collectible books" },
                 "2Nspira": { image: "/images/work/live-2nspira-20261105.jpg", alt: "2Nspira public website homepage", label: "Our digital platform" },
                 "Breadcrumb": { image: "/images/work/project-breadcrumb.png", alt: "Breadcrumb project artwork featuring an investigation workspace", label: "OSINT challenge game" },
                 "CalmLoop": { image: "/images/work/live-calmloop-20261105.jpg", alt: "CalmLoop companion application start screen", label: "Family-focused companion" },

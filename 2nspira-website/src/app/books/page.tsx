@@ -150,12 +150,12 @@ export default function BooksPage() {
           </div>
         </section>
         <section className={`p-6 sm:p-10 ${card}`} aria-labelledby="bookstore-title">
-          <h2 id="bookstore-title" className={h2}>Discover 2Nspira Books</h2>
+          <h2 id="bookstore-title" className={h2}>Discover Briarcrypt Books</h2>
           <p className="mt-4 max-w-2xl leading-7 text-body">
-            Looking beyond leadership? Explore our dedicated bookstore for collectible
-            editions, our published books, coloring books, and printable activities.
+            Looking beyond leadership? Explore Briarcrypt Books, an independent bookstore built by 2Nspira, for collectible
+            horror editions, signed books, and limited editions with individual-copy photographs and condition details.
           </p>
-          <a href="https://books.2nspira.com" className={`mt-6 ${buttonPrimary}`}>
+          <a href="https://briarcrypt.com" className={`mt-6 ${buttonPrimary}`}>
             Visit the bookstore <span aria-hidden="true" className="ml-2">→</span>
           </a>
         </section>

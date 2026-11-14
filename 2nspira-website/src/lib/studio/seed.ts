@@ -216,13 +216,13 @@ export function initialStudio(): Studio {
         id: "rare-collectible-books",
         title: "The collector’s shelf",
         description:
-          "Explore rare, signed, and limited editions, with photographs and condition details for each individual copy at 2Nspira Books.",
+          "Explore rare, signed, and limited editions, with photographs and condition details for each individual copy at Briarcrypt Books.",
         type: "Collection",
         categoryIds: ["collectibles"],
         featured: false,
         image: "/images/shop/rare-books-website.webp",
-        imageAlt: "A preview of the 2Nspira rare and collectible bookstore",
-        url: "https://books.2nspira.com",
+        imageAlt: "A preview of Briarcrypt Books, an independent rare and collectible bookstore",
+        url: "https://briarcrypt.com",
         status: "draft",
       }),
       ...[
