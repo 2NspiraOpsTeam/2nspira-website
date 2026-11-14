@@ -258,7 +258,7 @@ export default async function WorkPage() {
               const visual = visuals[project.name];
               return <article key={project.name} data-catalog-card className={`${styles.engineeringCard} flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-canvas`}>
                 <div className="relative aspect-video overflow-hidden bg-surface">
-                  <Image src={visual.image} alt={visual.alt} fill sizes="(min-width: 1152px) 548px, (min-width: 768px) 48vw, calc(100vw - 32px)" className="object-contain" />
+                  <Image src={visual.image} alt={visual.alt} style={project.name === "Briarcrypt Books" ? { objectFit: "contain" } : undefined} fill sizes="(min-width: 1152px) 548px, (min-width: 768px) 48vw, calc(100vw - 32px)" className="object-contain" />
                 </div>
                 <div className="flex flex-1 flex-col p-6 sm:p-8">
                   <p className="text-sm font-semibold text-accent">{visual.label} · Internal project</p>
