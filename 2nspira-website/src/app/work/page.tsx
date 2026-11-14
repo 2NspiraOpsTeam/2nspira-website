@@ -239,7 +239,7 @@ export default async function WorkPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <article data-catalog-card className={`${styles.engineeringCard} ${styles.featured} overflow-hidden rounded-2xl border border-line bg-canvas`}>
               <div className={styles.featuredImage}>
-                <Image src="/images/advisory/focused-collaboration.webp" alt="Professionals reviewing work together at a laptop" fill sizes="(min-width: 768px) 55vw, 100vw" className="object-cover" />
+                <Image src="/images/work/multi-agent-workflow.svg" alt="Multi-agent AI workflow: an orchestrator connects research, build, review and validation agents, with human oversight and shared context across local and cloud models" unoptimized fill sizes="(min-width: 768px) 55vw, 100vw" style={{ objectFit: "contain", background: "#081d2e" }} />
               </div>
               <div className="flex flex-col justify-center p-6 sm:p-8">
                 <p className="text-sm font-semibold text-accent">Field notes · Internal AI experiment</p>
