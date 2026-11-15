@@ -1,0 +1,318 @@
+{
+  "applicationSHA": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+  "method": "Chromium DPR1 normal-motion screenshot pixels across transparent hero-link boxes, foreground glyphs/decoration temporarily hidden without layout changes; normal and hover. Minimum over whole box is conservative for glyph positions. Not focus/whole-page visual acceptance.",
+  "results": [
+    {
+      "width": 1440,
+      "state": "normal",
+      "text": "← All services",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 5.068326758661466,
+      "worstBackground": [
+        254,
+        254,
+        254
+      ],
+      "pixels": 2730
+    },
+    {
+      "width": 1440,
+      "state": "hover",
+      "text": "← All services",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 5.068326758661466,
+      "worstBackground": [
+        254,
+        254,
+        254
+      ],
+      "pixels": 2730
+    },
+    {
+      "width": 1440,
+      "state": "normal",
+      "text": "Meet our human-led AI team →",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.894482988908869,
+      "worstBackground": [
+        249,
+        250,
+        252
+      ],
+      "pixels": 6006
+    },
+    {
+      "width": 1440,
+      "state": "hover",
+      "text": "Meet our human-led AI team →",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.894482988908869,
+      "worstBackground": [
+        249,
+        250,
+        252
+      ],
+      "pixels": 6006
+    },
+    {
+      "width": 1440,
+      "state": "normal",
+      "text": "Talk about your AI transformation ↓",
+      "foreground": "rgb(31, 36, 48)",
+      "minimumRatio": 14.217045010425972,
+      "worstBackground": [
+        243,
+        245,
+        249
+      ],
+      "pixels": 11970
+    },
+    {
+      "width": 1440,
+      "state": "hover",
+      "text": "Talk about your AI transformation ↓",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.683193388069192,
+      "worstBackground": [
+        243,
+        245,
+        249
+      ],
+      "pixels": 11970
+    },
+    {
+      "width": 768,
+      "state": "normal",
+      "text": "← All services",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 5.11164381605571,
+      "worstBackground": [
+        255,
+        255,
+        255
+      ],
+      "pixels": 2730
+    },
+    {
+      "width": 768,
+      "state": "hover",
+      "text": "← All services",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 5.11164381605571,
+      "worstBackground": [
+        255,
+        255,
+        255
+      ],
+      "pixels": 2730
+    },
+    {
+      "width": 768,
+      "state": "normal",
+      "text": "Meet our human-led AI team →",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.801525797954953,
+      "worstBackground": [
+        246,
+        248,
+        250
+      ],
+      "pixels": 6006
+    },
+    {
+      "width": 768,
+      "state": "hover",
+      "text": "Meet our human-led AI team →",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.801525797954953,
+      "worstBackground": [
+        246,
+        248,
+        250
+      ],
+      "pixels": 6006
+    },
+    {
+      "width": 768,
+      "state": "normal",
+      "text": "Talk about your AI transformation ↓",
+      "foreground": "rgb(31, 36, 48)",
+      "minimumRatio": 14.449737449566218,
+      "worstBackground": [
+        245,
+        247,
+        249
+      ],
+      "pixels": 12015
+    },
+    {
+      "width": 768,
+      "state": "hover",
+      "text": "Talk about your AI transformation ↓",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.759843893968001,
+      "worstBackground": [
+        245,
+        247,
+        249
+      ],
+      "pixels": 12015
+    },
+    {
+      "width": 390,
+      "state": "normal",
+      "text": "← All services",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.976398764540771,
+      "worstBackground": [
+        251,
+        252,
+        253
+      ],
+      "pixels": 2730
+    },
+    {
+      "width": 390,
+      "state": "hover",
+      "text": "← All services",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.976398764540771,
+      "worstBackground": [
+        251,
+        252,
+        253
+      ],
+      "pixels": 2730
+    },
+    {
+      "width": 390,
+      "state": "normal",
+      "text": "Meet our human-led AI team →",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.683193388069192,
+      "worstBackground": [
+        243,
+        245,
+        249
+      ],
+      "pixels": 6210
+    },
+    {
+      "width": 390,
+      "state": "hover",
+      "text": "Meet our human-led AI team →",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.683193388069192,
+      "worstBackground": [
+        243,
+        245,
+        249
+      ],
+      "pixels": 6210
+    },
+    {
+      "width": 390,
+      "state": "normal",
+      "text": "Talk about your AI transformation ↓",
+      "foreground": "rgb(31, 36, 48)",
+      "minimumRatio": 13.94257269629901,
+      "worstBackground": [
+        240,
+        243,
+        247
+      ],
+      "pixels": 11970
+    },
+    {
+      "width": 390,
+      "state": "hover",
+      "text": "Talk about your AI transformation ↓",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.592780301117242,
+      "worstBackground": [
+        240,
+        243,
+        247
+      ],
+      "pixels": 11970
+    },
+    {
+      "width": 320,
+      "state": "normal",
+      "text": "← All services",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.894482988908869,
+      "worstBackground": [
+        249,
+        250,
+        252
+      ],
+      "pixels": 2730
+    },
+    {
+      "width": 320,
+      "state": "hover",
+      "text": "← All services",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.894482988908869,
+      "worstBackground": [
+        249,
+        250,
+        252
+      ],
+      "pixels": 2730
+    },
+    {
+      "width": 320,
+      "state": "normal",
+      "text": "Meet our human-led AI team →",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.555223576076385,
+      "worstBackground": [
+        239,
+        242,
+        247
+      ],
+      "pixels": 6210
+    },
+    {
+      "width": 320,
+      "state": "hover",
+      "text": "Meet our human-led AI team →",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.555223576076385,
+      "worstBackground": [
+        239,
+        242,
+        247
+      ],
+      "pixels": 6210
+    },
+    {
+      "width": 320,
+      "state": "normal",
+      "text": "Talk about your AI transformation ↓",
+      "foreground": "rgb(31, 36, 48)",
+      "minimumRatio": 13.968510516669475,
+      "worstBackground": [
+        241,
+        243,
+        247
+      ],
+      "pixels": 11970
+    },
+    {
+      "width": 320,
+      "state": "hover",
+      "text": "Talk about your AI transformation ↓",
+      "foreground": "rgb(74, 111, 165)",
+      "minimumRatio": 4.601324399329691,
+      "worstBackground": [
+        241,
+        243,
+        247
+      ],
+      "pixels": 11970
+    }
+  ]
+}
