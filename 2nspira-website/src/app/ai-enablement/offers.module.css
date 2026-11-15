@@ -2,3 +2,10 @@
 .focusClearance {
   scroll-margin-block: 12px 96px;
 }
+
+/* Root scrolling must be immediate while keyboard focus is inside this page.
+   The local page marker prevents retained route CSS affecting other pages;
+   pointer navigation retains the site's normal smooth scrolling. */
+:global(html):has(.keyboardScrollPage :focus-visible) {
+  scroll-behavior: auto !important;
+}
