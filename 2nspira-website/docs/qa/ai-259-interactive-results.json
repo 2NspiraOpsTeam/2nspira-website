@@ -1,0 +1,58 @@
+{
+  "applicationSHA": "eb102fecc7a01b43af64aa3c2ad9cca1d29b71d8",
+  "method": "Normal-motion Chromium. Pointer open all main summaries in DOM order, then close in reverse order so nested outputs remain visible for real clicks. Capture dimensions open and first option hovered. No CSS injection. Screenshots require separate visual review; not all expanded sections visually accepted.",
+  "results": [
+    {
+      "width": 1440,
+      "status": 200,
+      "summaryCount": 17,
+      "toggles": 34,
+      "hover": {
+        "hover": true,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(74, 111, 165)"
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 768,
+      "status": 200,
+      "summaryCount": 17,
+      "toggles": 34,
+      "hover": {
+        "hover": true,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(74, 111, 165)"
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "summaryCount": 17,
+      "toggles": 34,
+      "hover": {
+        "hover": true,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(74, 111, 165)"
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "status": 200,
+      "summaryCount": 17,
+      "toggles": 34,
+      "hover": {
+        "hover": true,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(74, 111, 165)"
+      },
+      "overflow": false,
+      "errors": []
+    }
+  ]
+}
