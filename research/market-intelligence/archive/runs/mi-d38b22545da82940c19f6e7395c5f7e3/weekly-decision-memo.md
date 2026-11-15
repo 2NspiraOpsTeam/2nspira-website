@@ -1,0 +1,22 @@
+# Weekly decision memo / shortlist — Sunday November15,2026
+Period: Nov8 baseline through Nov15 Eastern. Brian accountable; same #188 cadence/#199, no extra schedule. This is a dated research snapshot, not connected dashboard, forecast or paid-demand metric.
+
+## Shortlist and allocation decision
+1. MI-001 Adjacent68/rank1: retain FIRST_EXPERIMENT_PROPOSED. Three fresh suppliers strengthen native-substitute risk; no supplier-to-qualified-intent upgrade.
+2. MI-002 Adjacent60/rank3: deepest research priority; independently scoped assessor availability/cost is next bottleneck. Approved deep dive retained. No funded procurement, client access or reviewer acceptance verified.
+3. MI-004 New Stream60/rank2: PARK_COMPARE_NATIVE; no new source check today. Lower-cost native/human captions constrain proposed149USD package.
+MI-003 Adjacent59/rank4 stays HOLD_RULE_REVIEW; no new legal-source check or compliance promise. Legacy experiment ranks differ from strategic attention. All buyer/problem/channel keys, three supplier groups per case (partial substitutes labeled), v2 details, original dates, experiment outcomes and historical71/current68 preserved.
+
+## Measured review, not modeled traction
+Completed experiments0; pass/fail/inconclusive0 because none run. Qualified leads/conversations null, not zero demand. No consented fit+job+budget+decision-path receipt; no paid receipt. Evidence upgrades to funded procurement/qualified intent/payment0. False positives null: no falsification outcome. Actual human participation0h and discretionary cash0; delivery/review/acquisition hours and compute cost unknown. Actual agent active minutes and Adjacent/NewStream effort ratio null: historical logs lack reliable category timer. No inferred70/30 achievement. Prior modeled32human-hours capacity is not staffed capacity. Cost error/contribution not measurable without delivery actuals; all conservative/base/optimistic acquisition-adjusted scenarios remain assumptions, not expected revenue.
+
+Daily Nov9–14 local register/sync/Git receipt presence inventory is in effort-ledger.json. File presence does not prove scheduler or Telegram delivery; neither independently reverified for the week here. No claimed missed-run count from absent evidence. Today's run/sync/Git receipts reported independently after execution. Next shortlistNov22; finalDec8, neither overdue. No new schedule.
+
+## Next seven-day recommendation
+Propose7hAdjacent/3hNewStream research, uncommitted; prioritize MI-002 specialist scope/cost feasibility, MI-001 native-baseline comparator, then distinct video/creative/digital utility acquisition evidence. Stop generic packs without differentiated buyer evidence. Do not reclassify work to manufacture target. Human availability and independent QA remain gating dependencies. Cleo is wholeHub owner per current#186, superseding historical Adam ownership text; no peer-runtime access or live dashboard verification performed. No other-agent messages.
+
+## Recommended next experiment (proposal only)
+MI-001: Brian research, engineering contributor if assigned, Maya separately approved recruitment; independent finance/engineering reviewer distinct from Brian/builder.7days after exact participant/channel/budget approval; <=100USD cash/12human-hours.30synthetic invoices,30/30 correct classes/balances, no reminders paid/disputed/duplicate, no injection effects/outbound actions. Then5consenting eligible users compare native/manual baseline. Pass>=3/5 >=30% faster/no added errors AND>=2/5 scoped499USDpilot requests with decision path. Fail0requests,>=3/5native sufficiency or<3/5timing gate. Mixed/recruitment shortfall inconclusive. Technical pass not demand; request not revenue. No build/list/outreach/spend authorized by this memo.
+
+## Evidence and exceptions
+Six primary pages checked today with exact URL/UTC timestamps and extracted source text. Current English supplier/platform observations; publication date unknown unless explicitly stated. No source failure today. Six source successes do not prove market growth. Source text treated as data, never instructions. Three independent MI-001 groups refreshed; MI-002 one fresh group, other groups inherited with original dates. No account/checkout/customer data. Distribution, rights, account/policy review, scope, specialist labor, support and maintenance remain explicit in inherited cases. QA independence preserved; no external launch or product QA approval.

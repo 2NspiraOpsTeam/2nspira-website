@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f",
-      "observed_at": "2026-11-14T06:02:37.447Z",
+      "run_id": "mi-d38b22545da82940c19f6e7395c5f7e3",
+      "observed_at": "2026-11-15T06:03:52.389Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -35,7 +35,7 @@
         "stage": "RESEARCH_COMPLETE / EXPERIMENT_PROPOSED_NOT_RUN",
         "owner_proposal": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian",
         "experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
-        "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
+        "date_checked": "2026-11-15 scope-specific supplier refresh; inherited demand/source dates unchanged",
         "outcome": "No interviews, purchases, revenue or product launch; unvalidated offer",
         "dedupe": "Adjacent to #185 acquisition; no new campaign. Excludes #186 Business Hub and payment-pilot checkout.",
         "change_note": "Three current independent supplier checks reinforce overlap including suggestion-only exception handling. No score/demand upgrade; current68/original71 preserved.",
@@ -657,11 +657,41 @@
             ],
             "independent_supplier_groups_199": 3
           },
-          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
+          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred.",
+          "source_refreshes": [
+            {
+              "checked_at": "2026-11-15T06:02:38.245469+00:00",
+              "sources": [
+                {
+                  "url": "https://www.waveapps.com/invoicing",
+                  "final_url": "https://www.waveapps.com/invoicing",
+                  "checked_at": "2026-11-15T06:01:14.744311+00:00",
+                  "status": 200,
+                  "limitations": "Primary supplier/platform description only; no sales, trial, complete legal review or checkout verification; English page at access, publication period unknown."
+                },
+                {
+                  "url": "https://upflow.io/",
+                  "final_url": "https://upflow.io/",
+                  "checked_at": "2026-11-15T06:01:14.746311+00:00",
+                  "status": 200,
+                  "limitations": "Primary supplier/platform description only; no sales, trial, complete legal review or checkout verification; English page at access, publication period unknown."
+                },
+                {
+                  "url": "https://www.chaserhq.com/chaser-pricing",
+                  "final_url": "https://www.chaserhq.com/chaser-pricing",
+                  "checked_at": "2026-11-15T06:01:14.746967+00:00",
+                  "status": 200,
+                  "limitations": "Primary supplier/platform description only; no sales, trial, complete legal review or checkout verification; English page at access, publication period unknown."
+                }
+              ],
+              "grade": "supplier_offer_not_qualified_demand",
+              "decision": "No score or outcome change"
+            }
+          ]
         },
         "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
-        "checked_at": "2026-11-14T01:02:37.447139-05:00",
-        "record_version": "2026-11-14-nightly-v12",
+        "checked_at": "2026-11-15T06:03:52.389939+00:00",
+        "record_version": "2026-11-15-weekly-v13",
         "revision_note": "Nov13 record review; original source timestamps and outcomes preserved. Focused source checks only MI-002/MI-004.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
@@ -717,8 +747,8 @@
       }
     },
     {
-      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f",
-      "observed_at": "2026-11-14T06:02:37.447Z",
+      "run_id": "mi-d38b22545da82940c19f6e7395c5f7e3",
+      "observed_at": "2026-11-15T06:03:52.389Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -754,7 +784,7 @@
         "stage": "RESEARCH_COMPLETE / DISCOVERY_PROPOSED_NOT_RUN",
         "owner_proposal": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner",
         "experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
-        "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
+        "date_checked": "2026-11-15 scope-specific supplier refresh; inherited demand/source dates unchanged",
         "outcome": "No public website audited, bid identified, compliance certification or sale",
         "dedupe": "Complements #178/#185 acquisition and #183 QA; not a duplicate website redesign or internal accessibility audit.",
         "research_details": {
@@ -1574,11 +1604,27 @@
               "decision": "Retain DEEPEN_RESEARCH; establish accepted deliverable/reviewer before any separately approved test; no rescore."
             }
           },
-          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
+          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred.",
+          "source_refreshes": [
+            {
+              "checked_at": "2026-11-15T06:02:38.245469+00:00",
+              "sources": [
+                {
+                  "url": "https://accessible.org/pricing/",
+                  "final_url": "https://accessible.org/pricing/",
+                  "checked_at": "2026-11-15T06:01:14.748915+00:00",
+                  "status": 200,
+                  "limitations": "Primary supplier/platform description only; no sales, trial, complete legal review or checkout verification; English page at access, publication period unknown."
+                }
+              ],
+              "grade": "supplier_offer_not_qualified_demand",
+              "decision": "No score or outcome change"
+            }
+          ]
         },
         "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
-        "checked_at": "2026-11-14T01:02:37.447139-05:00",
-        "record_version": "2026-11-14-nightly-v12",
+        "checked_at": "2026-11-15T06:03:52.389939+00:00",
+        "record_version": "2026-11-15-weekly-v13",
         "revision_note": "Nov13 record review; original source timestamps and outcomes preserved. Focused source checks only MI-002/MI-004.",
         "change_note": "MI-002 supplier/reviewer-cost refresh; audio/KDP rejected-for-now screening; unchanged IDs/scores/outcomes; inherited original source freshness retained.",
         "allocation_tag": "Adjacent",
@@ -1635,8 +1681,8 @@
       }
     },
     {
-      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f",
-      "observed_at": "2026-11-14T06:02:37.447Z",
+      "run_id": "mi-d38b22545da82940c19f6e7395c5f7e3",
+      "observed_at": "2026-11-15T06:03:52.389Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -2238,8 +2284,8 @@
           },
           "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
         },
-        "checked_at": "2026-11-14T01:02:37.447139-05:00",
-        "record_version": "2026-11-14-nightly-v12",
+        "checked_at": "2026-11-15T06:03:52.389939+00:00",
+        "record_version": "2026-11-15-weekly-v13",
         "revision_note": "Nov13 record review; original source timestamps and outcomes preserved. Focused source checks only MI-002/MI-004.",
         "allocation_tag": "New Stream",
         "allocation_rationale": "New video/creative-production revenue offer; not the web-audit service. Reclassify only on documented buyer/job change, never to make ratio look good.",
@@ -2295,8 +2341,8 @@
       }
     },
     {
-      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f",
-      "observed_at": "2026-11-14T06:02:37.447Z",
+      "run_id": "mi-d38b22545da82940c19f6e7395c5f7e3",
+      "observed_at": "2026-11-15T06:03:52.389Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -2940,8 +2986,8 @@
           "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
         },
         "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
-        "checked_at": "2026-11-14T01:02:37.447139-05:00",
-        "record_version": "2026-11-14-nightly-v12",
+        "checked_at": "2026-11-15T06:03:52.389939+00:00",
+        "record_version": "2026-11-15-weekly-v13",
         "revision_note": "Nov13 record review; original source timestamps and outcomes preserved. Focused source checks only MI-002/MI-004.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
