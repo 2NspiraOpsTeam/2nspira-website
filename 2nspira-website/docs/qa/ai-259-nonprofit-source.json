@@ -1,0 +1,10 @@
+{
+  "retrievedUTC": "2026-11-15T12:55:35.671031+00:00",
+  "url": "https://www.microsoft.com/en-us/nonprofits/empower-your-nonprofit-with-AI",
+  "httpStatus": 200,
+  "title": "AI for nonprofits | Microsoft Nonprofits",
+  "responseSHA256": "bebb0d5037f195b5da916b4b53307006fcd52c58b38815a9393e4602a73f091d",
+  "method": "curl followed redirects; HTMLParser removed script/style; exact contiguous visible-text excerpt below. No PDF/ebook contents accessed.",
+  "excerpt": "Get your nonprofit ready for AI\nDownload e-book\nFind the right place to start\nStart with what your organization is trying to achieve, then build an AI vision and strategy around the outcomes that matter most.\nGet ready for responsible AI\nTurn your priorities into an actionable AI plan that prepares your people, defines how success will be measured, and establishes clear governance and accountability.\nFocus on meaningful opportunities\nFocus on AI use cases that address meaningful organizational needs, then test, measure, and refine your approach based on what you learn.\nBuild on early successes\nUse your AI learnings to determine next steps\u2014expand what works and explore how AI can support a more resilient, adaptable organization.\n",
+  "limits": "Vendor marketing guidance, not independent adoption survey, search demand, performance or client evidence. Source publication date not verified."
+}
