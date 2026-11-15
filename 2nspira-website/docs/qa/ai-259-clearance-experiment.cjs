@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 const {chromium}=require('/opt/homebrew/lib/node_modules/openclaw/node_modules/playwright-core');
 const fs=require('fs'),assert=require('assert');
 const base='https://97032636-2nspira-website-preview.jcortez-36a.workers.dev',applicationSHA='72ceefd5821cabb26feeb1c2c5b1786cc18d6591';
