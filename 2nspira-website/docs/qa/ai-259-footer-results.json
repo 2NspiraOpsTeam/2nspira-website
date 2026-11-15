@@ -1,0 +1,17 @@
+{
+  "applicationSHA": "eb102fecc7a01b43af64aa3c2ad9cca1d29b71d8",
+  "method": "Actual bottom viewport, not full-page capture; normal motion; no CSS injection. Only bottom 1000px evaluated.",
+  "geometry": {
+    "width": 320,
+    "height": 1000,
+    "scrollY": 15981,
+    "scrollHeight": 16981,
+    "scrollWidth": 320,
+    "footer": {
+      "top": -579.96875,
+      "bottom": 1000.4375
+    },
+    "text": "Practical technology. Human-centered leadership. Support for the business you’re building.\n\nCONNECT WITH US\nhello@2nspira.com\n+1 (646) 543-0199\nSERVICES\nWebsites & Custom Digital Platforms\nBusiness Automation & Integrations\nOrganizational AI Enablement\nMORE SERVICES\nTechnology Leadership & Advisory\nManaged Maintenance & Support\nCOMPANY\nHome\nServices\nOur work\nInteractive demos\nWho We Serve\nClient login\nAbout 2Nspira\nTeam & Delivery\nMeet our AI team\nCareers\nContact\nCREATIVE STUDIO\nExplore Creative Studio\nWatch\nListen\nRead\nPlay\nShop\n\n© 2026 2Nspira. All rights reserved.\n\nPrivacy policy\nTerms and conditions\nCopyright"
+  },
+  "errors": []
+}
