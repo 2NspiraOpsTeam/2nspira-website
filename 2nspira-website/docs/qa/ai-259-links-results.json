@@ -1,0 +1,143 @@
+{
+  "base": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev",
+  "applicationSHA": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+  "scope": "Unique main-region links, GET only, no contact submissions. External URLs not fetched.",
+  "results": [
+    {
+      "href": "/services",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/services",
+      "anchor": true
+    },
+    {
+      "href": "/ai-team",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/ai-team",
+      "anchor": true
+    },
+    {
+      "href": "/resources/ai-readiness-scorecard",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/resources/ai-readiness-scorecard",
+      "anchor": true
+    },
+    {
+      "href": "#ai-conversation",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "#ai-offers-heading",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "#ai-tools",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "#ai-capabilities-heading",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "#ai-roadmap-heading",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "#ai-work-heading",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "#personal-ai-assistant",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "#ai-readiness",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "#ai-implementation",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "#responsible-ai-support",
+      "status": 200,
+      "anchor": true
+    },
+    {
+      "href": "/contact?service=ai#contact-message",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/contact?service=ai#contact-message",
+      "anchor": true
+    },
+    {
+      "href": "/who-we-serve",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/who-we-serve",
+      "anchor": true
+    },
+    {
+      "href": "/work#internal-engineering",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/work#internal-engineering",
+      "anchor": true
+    },
+    {
+      "href": "/team-delivery",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/team-delivery",
+      "anchor": true
+    },
+    {
+      "href": "/technology-advisory",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/technology-advisory",
+      "anchor": true
+    },
+    {
+      "href": "/managed-services-support",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/managed-services-support",
+      "anchor": true
+    },
+    {
+      "href": "/post/building-ai-team-multi-agent-workflow-lessons",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/post/building-ai-team-multi-agent-workflow-lessons",
+      "anchor": true
+    },
+    {
+      "href": "https://demo.2nspira.com/manufacturing/",
+      "scope": "external destination source-reviewed only; not fetched or interacted with"
+    },
+    {
+      "href": "/about#executive-profile",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/about#executive-profile",
+      "anchor": true
+    },
+    {
+      "href": "/automation-systems-optimization",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/automation-systems-optimization",
+      "anchor": true
+    },
+    {
+      "href": "/websites",
+      "status": 200,
+      "finalURL": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/websites",
+      "anchor": true
+    },
+    {
+      "href": "https://calendar.app.google/54Gv2GFrkUFsNs4i9",
+      "scope": "external destination source-reviewed only; not fetched or interacted with"
+    }
+  ]
+}
