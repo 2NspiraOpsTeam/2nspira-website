@@ -1,0 +1,1160 @@
+{
+  "base": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev",
+  "applicationSHA": "eb102fecc7a01b43af64aa3c2ad9cca1d29b71d8",
+  "scope": "Actual Tab traversal from initial document, no focus() or explicit scroll. Three samples per added control, normal motion. 0ms is after keyboard dispatch, not guaranteed animation frame zero; delays are approximate.",
+  "results": [
+    {
+      "width": 1440,
+      "step": 22,
+      "text": "01 · Readiness",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 164,
+        "right": 302.5625,
+        "top": 855.796875,
+        "bottom": 907.796875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 22,
+      "text": "01 · Readiness",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 164,
+        "right": 302.5625,
+        "top": 855.796875,
+        "bottom": 907.796875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 22,
+      "text": "01 · Readiness",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 164,
+        "right": 302.5625,
+        "top": 855.796875,
+        "bottom": 907.796875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 23,
+      "text": "02 · Implementation",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 306.5625,
+        "right": 481.96875,
+        "top": 855.796875,
+        "bottom": 907.796875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 23,
+      "text": "02 · Implementation",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 306.5625,
+        "right": 481.96875,
+        "top": 855.796875,
+        "bottom": 907.796875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 23,
+      "text": "02 · Implementation",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 306.5625,
+        "right": 481.96875,
+        "top": 855.796875,
+        "bottom": 907.796875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 24,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 485.96875,
+        "right": 723.59375,
+        "top": 855.796875,
+        "bottom": 907.796875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 24,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 485.96875,
+        "right": 723.59375,
+        "top": 855.796875,
+        "bottom": 907.796875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 24,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 485.96875,
+        "right": 723.59375,
+        "top": 855.796875,
+        "bottom": 907.796875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 25,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 197,
+        "right": 491,
+        "top": 431.96875,
+        "bottom": 483.96875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 25,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 197,
+        "right": 491,
+        "top": 431.96875,
+        "bottom": 483.96875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 25,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 197,
+        "right": 491,
+        "top": 431.96875,
+        "bottom": 483.96875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 26,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 573,
+        "right": 867,
+        "top": 431.96875,
+        "bottom": 483.96875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 26,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 573,
+        "right": 867,
+        "top": 431.96875,
+        "bottom": 483.96875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 26,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 573,
+        "right": 867,
+        "top": 431.96875,
+        "bottom": 483.96875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 27,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 949,
+        "right": 1243,
+        "top": 431.96875,
+        "bottom": 483.96875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 27,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 949,
+        "right": 1243,
+        "top": 431.96875,
+        "bottom": 483.96875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 1440,
+      "step": 27,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 949,
+        "right": 1243,
+        "top": 431.96875,
+        "bottom": 483.96875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 16,
+      "text": "01 · Readiness",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 20,
+        "right": 158.5625,
+        "top": 855.59375,
+        "bottom": 907.59375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 16,
+      "text": "01 · Readiness",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 20,
+        "right": 158.5625,
+        "top": 855.59375,
+        "bottom": 907.59375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 16,
+      "text": "01 · Readiness",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 20,
+        "right": 158.5625,
+        "top": 855.59375,
+        "bottom": 907.59375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 17,
+      "text": "02 · Implementation",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 162.5625,
+        "right": 337.96875,
+        "top": 855.59375,
+        "bottom": 907.59375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 17,
+      "text": "02 · Implementation",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 162.5625,
+        "right": 337.96875,
+        "top": 855.59375,
+        "bottom": 907.59375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 17,
+      "text": "02 · Implementation",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 162.5625,
+        "right": 337.96875,
+        "top": 855.59375,
+        "bottom": 907.59375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 18,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 341.96875,
+        "right": 579.59375,
+        "top": 855.59375,
+        "bottom": 907.59375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 18,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 341.96875,
+        "right": 579.59375,
+        "top": 855.59375,
+        "bottom": 907.59375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 18,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 341.96875,
+        "right": 579.59375,
+        "top": 855.59375,
+        "bottom": 907.59375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 19,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 53,
+        "right": 715,
+        "top": 432.390625,
+        "bottom": 484.390625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 19,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 53,
+        "right": 715,
+        "top": 432.390625,
+        "bottom": 484.390625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 19,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 53,
+        "right": 715,
+        "top": 432.390625,
+        "bottom": 484.390625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 20,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 53,
+        "right": 715,
+        "top": 856.1875,
+        "bottom": 908.1875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 20,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 53,
+        "right": 715,
+        "top": 856.1875,
+        "bottom": 908.1875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 20,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 53,
+        "right": 715,
+        "top": 856.1875,
+        "bottom": 908.1875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 21,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 53,
+        "right": 715,
+        "top": 431.984375,
+        "bottom": 483.984375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 21,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 53,
+        "right": 715,
+        "top": 431.984375,
+        "bottom": 483.984375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 768,
+      "step": 21,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 53,
+        "right": 715,
+        "top": 431.984375,
+        "bottom": 483.984375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 16,
+      "text": "01 · Readiness",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 12,
+        "right": 150.5625,
+        "top": 432.140625,
+        "bottom": 484.140625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 16,
+      "text": "01 · Readiness",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 12,
+        "right": 150.5625,
+        "top": 432.140625,
+        "bottom": 484.140625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 16,
+      "text": "01 · Readiness",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 12,
+        "right": 150.5625,
+        "top": 432.140625,
+        "bottom": 484.140625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 17,
+      "text": "02 · Implementation",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 154.5625,
+        "right": 329.96875,
+        "top": 432.140625,
+        "bottom": 484.140625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 17,
+      "text": "02 · Implementation",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 154.5625,
+        "right": 329.96875,
+        "top": 432.140625,
+        "bottom": 484.140625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 17,
+      "text": "02 · Implementation",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 154.5625,
+        "right": 329.96875,
+        "top": 432.140625,
+        "bottom": 484.140625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 18,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 12,
+        "right": 249.625,
+        "top": 488.140625,
+        "bottom": 540.140625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 18,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 12,
+        "right": 249.625,
+        "top": 488.140625,
+        "bottom": 540.140625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 18,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 12,
+        "right": 249.625,
+        "top": 488.140625,
+        "bottom": 540.140625
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 19,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 37,
+        "right": 353,
+        "top": 431.9375,
+        "bottom": 483.9375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 19,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 37,
+        "right": 353,
+        "top": 431.9375,
+        "bottom": 483.9375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 19,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 37,
+        "right": 353,
+        "top": 431.9375,
+        "bottom": 483.9375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 20,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 37,
+        "right": 353,
+        "top": 431.734375,
+        "bottom": 483.734375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 20,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 37,
+        "right": 353,
+        "top": 431.734375,
+        "bottom": 483.734375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 20,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 37,
+        "right": 353,
+        "top": 431.734375,
+        "bottom": 483.734375
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 21,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 37,
+        "right": 353,
+        "top": 431.53125,
+        "bottom": 483.53125
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 21,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 37,
+        "right": 353,
+        "top": 431.53125,
+        "bottom": 483.53125
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 390,
+      "step": 21,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 37,
+        "right": 353,
+        "top": 431.53125,
+        "bottom": 483.53125
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 16,
+      "text": "01 · Readiness",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 12,
+        "right": 150.5625,
+        "top": 432.46875,
+        "bottom": 484.46875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 16,
+      "text": "01 · Readiness",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 12,
+        "right": 150.5625,
+        "top": 432.46875,
+        "bottom": 484.46875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 16,
+      "text": "01 · Readiness",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 12,
+        "right": 150.5625,
+        "top": 432.46875,
+        "bottom": 484.46875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 17,
+      "text": "02 · Implementation",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 12,
+        "right": 187.40625,
+        "top": 488.46875,
+        "bottom": 540.46875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 17,
+      "text": "02 · Implementation",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 12,
+        "right": 187.40625,
+        "top": 488.46875,
+        "bottom": 540.46875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 17,
+      "text": "02 · Implementation",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 12,
+        "right": 187.40625,
+        "top": 488.46875,
+        "bottom": 540.46875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 18,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 12,
+        "right": 249.625,
+        "top": 544.46875,
+        "bottom": 596.46875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 18,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 12,
+        "right": 249.625,
+        "top": 544.46875,
+        "bottom": 596.46875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 18,
+      "text": "03 · Optional ongoing support",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 12,
+        "right": 249.625,
+        "top": 544.46875,
+        "bottom": 596.46875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 19,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 37,
+        "right": 283,
+        "top": 428.265625,
+        "bottom": 487.453125
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 19,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 37,
+        "right": 283,
+        "top": 428.265625,
+        "bottom": 487.453125
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 19,
+      "text": "Explore an AI readiness assessment →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 37,
+        "right": 283,
+        "top": 428.265625,
+        "bottom": 487.453125
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 20,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 37,
+        "right": 283,
+        "top": 432.25,
+        "bottom": 484.25
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 20,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 37,
+        "right": 283,
+        "top": 432.25,
+        "bottom": 484.25
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 20,
+      "text": "Discuss an AI pilot →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 37,
+        "right": 283,
+        "top": 432.25,
+        "bottom": 484.25
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 21,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 0,
+      "rect": {
+        "left": 37,
+        "right": 283,
+        "top": 432.046875,
+        "bottom": 484.046875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 21,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 100,
+      "rect": {
+        "left": 37,
+        "right": 283,
+        "top": 432.046875,
+        "bottom": 484.046875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    },
+    {
+      "width": 320,
+      "step": 21,
+      "text": "Discuss ongoing AI support →",
+      "elapsedMs": 700,
+      "rect": {
+        "left": 37,
+        "right": 283,
+        "top": 432.046875,
+        "bottom": 484.046875
+      },
+      "clips": [],
+      "outline": "solid",
+      "viewport": true,
+      "unobscured": true
+    }
+  ],
+  "findings": []
+}
