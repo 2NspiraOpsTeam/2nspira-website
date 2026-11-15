@@ -1,0 +1,442 @@
+{
+  "applicationSHA": "eb102fecc7a01b43af64aa3c2ad9cca1d29b71d8",
+  "method": "Normal-motion native disclosure click, Enter/Space toggle; all nested summaries opened in DOM order, closed reverse. Hover exercised, not visually accepted. No CSS injection or submissions.",
+  "results": [
+    {
+      "width": 1440,
+      "count": 17,
+      "states": [
+        {
+          "label": "Explore the six dimensions of AI capability",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Explore the transformation roadmap",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "What we agree before work begins",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "How our capabilities work together",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Also exploring a personal AI assistant?",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Can we use confidential or student information?",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "How is pilot success measured?",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "What does ongoing AI support include?",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Do we need to choose an AI tool before we talk?",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "Does every engagement include all five stages?",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "How does the free scorecard differ from a readiness engagement?",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        },
+        {
+          "label": "What should we bring to the first conversation?",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 44
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 768,
+      "count": 17,
+      "states": [
+        {
+          "label": "Explore the six dimensions of AI capability",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Explore the transformation roadmap",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "What we agree before work begins",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "How our capabilities work together",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Also exploring a personal AI assistant?",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Can we use confidential or student information?",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "How is pilot success measured?",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "What does ongoing AI support include?",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Do we need to choose an AI tool before we talk?",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "Does every engagement include all five stages?",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "How does the free scorecard differ from a readiness engagement?",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        },
+        {
+          "label": "What should we bring to the first conversation?",
+          "width": 768,
+          "scrollWidth": 768,
+          "height": 44
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "count": 17,
+      "states": [
+        {
+          "label": "Explore the six dimensions of AI capability",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 67.1875
+        },
+        {
+          "label": "Explore the transformation roadmap",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "What we agree before work begins",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "How our capabilities work together",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "Also exploring a personal AI assistant?",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "Can we use confidential or student information?",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 72
+        },
+        {
+          "label": "How is pilot success measured?",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 44
+        },
+        {
+          "label": "What does ongoing AI support include?",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 72
+        },
+        {
+          "label": "Do we need to choose an AI tool before we talk?",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 72
+        },
+        {
+          "label": "Does every engagement include all five stages?",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 72
+        },
+        {
+          "label": "How does the free scorecard differ from a readiness engagement?",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 72
+        },
+        {
+          "label": "What should we bring to the first conversation?",
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 72
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 320,
+      "count": 17,
+      "states": [
+        {
+          "label": "Explore the six dimensions of AI capability",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 67.1875
+        },
+        {
+          "label": "Explore the transformation roadmap",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 67.1875
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 44
+        },
+        {
+          "label": "Potential deliverable",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 44
+        },
+        {
+          "label": "What we agree before work begins",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 67.1875
+        },
+        {
+          "label": "How our capabilities work together",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 67.1875
+        },
+        {
+          "label": "Also exploring a personal AI assistant?",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 67.1875
+        },
+        {
+          "label": "Can we use confidential or student information?",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 72
+        },
+        {
+          "label": "How is pilot success measured?",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 72
+        },
+        {
+          "label": "What does ongoing AI support include?",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 72
+        },
+        {
+          "label": "Do we need to choose an AI tool before we talk?",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 72
+        },
+        {
+          "label": "Does every engagement include all five stages?",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 72
+        },
+        {
+          "label": "How does the free scorecard differ from a readiness engagement?",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 100
+        },
+        {
+          "label": "What should we bring to the first conversation?",
+          "width": 320,
+          "scrollWidth": 320,
+          "height": 72
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
