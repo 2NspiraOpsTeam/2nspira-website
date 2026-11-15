@@ -1,3 +1,4 @@
+import offersStyles from "./offers.module.css";
 import ServiceJourney from "@/components/ServiceJourney";
 import PlatformCarousel from "@/components/platforms/PlatformCarousel";
 import { aiTools } from "@/lib/ai-tools";
@@ -113,7 +114,7 @@ export default function Page() {
       <EyebrowPill>One core service · Three purchase paths</EyebrowPill>
       <h2 id="ai-offers-heading" className={`mt-5 scroll-mt-24 ${h2}`}>Start where your organization is.</h2>
       <p className={`max-w-3xl ${lead}`}>Readiness → Implementation → Ongoing Support. Choose one scoped engagement; you don’t need to buy all three.</p>
-      <nav aria-label="AI engagement options" className="mt-6 flex flex-wrap gap-3">{offers.map(offer => <a key={offer.id} href={`#${offer.id}`} className={buttonSecondary}>{offer.step}</a>)}</nav>
+      <nav aria-label="AI engagement options" className="mt-6 flex flex-wrap gap-3">{offers.map(offer => <a key={offer.id} href={`#${offer.id}`} className={`${buttonSecondary} ${offersStyles.focusClearance}`}>{offer.step}</a>)}</nav>
       <div className="mt-8 grid gap-6 lg:grid-cols-3">{offers.map(offer => <article id={offer.id} key={offer.id} aria-labelledby={`${offer.id}-title`} className={`flex scroll-mt-28 flex-col p-6 sm:p-8 ${cardFlat}`}>
         <p className="text-sm font-semibold text-accent">{offer.step}</p>
         <h3 id={`${offer.id}-title`} className={`mt-3 ${h3}`}>{offer.title}</h3>
@@ -121,7 +122,7 @@ export default function Page() {
         <h4 className="mt-6 font-semibold text-ink">What we scope together</h4>
         <ul className="mt-3 list-disc space-y-3 pl-5 leading-7 text-body">{offer.deliverables.map(item => <li key={item}>{item}</li>)}</ul>
         <p className="mb-6 mt-5 border-t border-line pt-4 text-sm leading-6 text-muted">{offer.boundary}</p>
-        <Link href="/contact?service=ai#contact-message" className={`mt-auto min-h-11 ${linkInline}`}>{offer.cta} →</Link>
+        <Link href="/contact?service=ai#contact-message" className={`mt-auto min-h-11 ${linkInline} ${offersStyles.focusClearance}`}>{offer.cta} →</Link>
       </article>)}</div>
       <aside className="mt-8 rounded-2xl border border-line bg-surface p-6 sm:p-8"><h3 className={h3}>Clear boundaries, from the first pilot.</h3><p className="mt-3 max-w-3xl leading-7 text-body">Agree which sources can be used, who can access them, who reviews outputs and what happens when an answer is wrong. Test representative examples and failure cases before wider use. Policy drafting and a pilot are not legal advice or compliance certification.</p></aside>
     </div></section>

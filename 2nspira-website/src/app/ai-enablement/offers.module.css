@@ -1,0 +1,4 @@
+/* Keep keyboard outlines clear of viewport edges and floating support controls. */
+.focusClearance {
+  scroll-margin-block: 12px 96px;
+}
