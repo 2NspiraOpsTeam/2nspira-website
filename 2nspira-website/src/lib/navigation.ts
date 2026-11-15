@@ -1,6 +1,6 @@
 export const serviceLinks = [
-  { name: "Websites & Custom Digital Platforms", href: "/websites" },
-  { name: "Business Automation & Integrations", href: "/automation-systems-optimization" },
+  { name: "Websites", href: "/websites" },
+  { name: "Custom Software Development", href: "/custom-software-development" },
   { name: "Organizational AI Enablement", href: "/ai-enablement" },
 ];
 

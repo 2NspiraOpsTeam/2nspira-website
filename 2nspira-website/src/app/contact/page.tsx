@@ -150,7 +150,7 @@ export default function ContactPage() {
       }
     } catch { /* Storage unavailable: keep the editable in-memory draft. */ }
     const selection = new URLSearchParams(window.location.search).get("service");
-    const services: Record<string, string> = { websites: "Website development or redesign", platforms: "Custom digital platform", automation: "Business Automation & Integrations", ai: "AI Enablement", advisory: "Technology Advisory & Leadership", support: "Managed Services & Support" };
+    const services: Record<string, string> = { websites: "Website development or redesign", platforms: "Custom Software Development", automation: "Business Automation & Integrations", ai: "AI Enablement", advisory: "Technology Advisory & Leadership", support: "Managed Services & Support" };
     if (selection && services[selection]) setFormState(prev => ({ ...prev, projectType: prev.projectType || services[selection] }));
     setDraftLoaded(true);
     }, 0);

@@ -48,7 +48,7 @@ const lenses = ["Strategy", "Infrastructure", "Platforms", "Systems", "Data", "P
 export const dynamic = "force-dynamic";
 export default async function AutomationSystemsOptimizationPage() {
   const platforms = await publishedContent();
-  return <main className={pageMain} id="main-content"><ServiceEffects editorial>
+  return <main className={pageMain} id="main-content"><div className="mx-auto max-w-6xl px-6 pt-8"><Link href="/custom-software-development" className={linkInline}>Part of Custom Software Development →</Link></div><ServiceEffects editorial>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(automationJsonLd).replace(/</g, "\\u003c") }} />
     <section className={`${styles.hero} overflow-hidden border-b border-line`}>
       <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">

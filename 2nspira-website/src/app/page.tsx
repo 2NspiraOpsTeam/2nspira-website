@@ -6,8 +6,8 @@ import { serviceNeeds } from "@/lib/serviceNeeds";
 import { moreServiceLinks } from "@/lib/navigation";
 import styles from "./homepage.module.css";
 
-const homepageDescription = "Professional websites and custom digital platforms, business automation and organizational AI enablement. Human-led expertise, AI-enabled delivery.";
-const homepageShareTitle = "Websites & Custom Digital Platforms | 2Nspira";
+const homepageDescription = "Business websites, custom software development and organizational AI enablement. Human-led expertise, AI-enabled delivery.";
+const homepageShareTitle = "Websites, Custom Software & AI Enablement | 2Nspira";
 export const metadata: Metadata = {
   title: { absolute: homepageShareTitle }, description: homepageDescription,
   alternates: { canonical: "https://2nspira.com/" },
@@ -50,8 +50,8 @@ const homepageJsonLd = {
 };
 
 const serviceHighlights = [
-  { Icon: PanelsTopLeft, value: "Turn your next visitor into a clear next step.", capabilities: ["Business websites", "Portals & dashboards", "Connected tools"] },
-  { Icon: Workflow, value: "Less repeated work. Smoother handoffs.", capabilities: ["Workflow mapping", "System integrations", "Phased automation"] },
+  { Icon: PanelsTopLeft, value: "Turn your next visitor into a clear next step.", capabilities: ["Business websites", "Redesigns & conversion", "Ongoing care"] },
+  { Icon: Workflow, value: "Less repeated work. Smoother handoffs.", capabilities: ["Portals & dashboards", "Automation & integrations", "FileMaker modernization"] },
   { Icon: Compass, value: "Make AI useful, responsible and understood.", capabilities: ["Strategy & governance", "Team training", "Practical adoption"] },
 ];
 
@@ -91,7 +91,7 @@ export default function Home() {
 
     <section id="find-the-right-service" className={`${styles.section} ${styles.coreServices}`} aria-labelledby="services-heading">
       <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Three ways to move forward</p><h2 id="services-heading">Build. Connect. Enable.</h2></div><p>Start with what your organization needs next.</p></div>
-      <div className={styles.coreGrid}>{serviceNeeds.map((service, i) => <article key={service.href} className={styles.coreCard}><span className={styles.serviceGlyph} aria-hidden="true">{(() => { const Icon = serviceHighlights[i].Icon; return <Icon size={30} strokeWidth={1.4} />; })()}</span><span className={styles.serviceNumber}>0{i + 1}{i === 0 ? " / Our flagship" : ""}</span><h3>{service.name}</h3><p>{serviceHighlights[i].value}</p><ul className={styles.capabilities}>{serviceHighlights[i].capabilities.map(item => <li key={item}>{item}</li>)}</ul>{i === 0 && <div className={styles.buildPaths}><Link href="/websites#professional-websites">Professional websites →</Link><Link href="/websites#custom-digital-platforms">Custom digital platforms →</Link></div>}<Link href={service.href} className={styles.textLink}>{service.link} <span aria-hidden="true">↗</span></Link></article>)}</div>
+      <div className={styles.coreGrid}>{serviceNeeds.map((service, i) => <article key={service.href} className={styles.coreCard}><span className={styles.serviceGlyph} aria-hidden="true">{(() => { const Icon = serviceHighlights[i].Icon; return <Icon size={30} strokeWidth={1.4} />; })()}</span><span className={styles.serviceNumber}>0{i + 1}{i === 0 ? " / Our flagship" : ""}</span><h3>{service.name}</h3><p>{serviceHighlights[i].value}</p><ul className={styles.capabilities}>{serviceHighlights[i].capabilities.map(item => <li key={item}>{item}</li>)}</ul>{i === 0 && <div className={styles.buildPaths}><Link href="/websites#professional-websites">Professional websites →</Link><Link href="/custom-software-development">Custom software →</Link></div>}<Link href={service.href} className={styles.textLink}>{service.link} <span aria-hidden="true">↗</span></Link></article>)}</div>
       <div className={styles.moreServices}><h3>More Services</h3><p>Leadership and ongoing support as your needs evolve.</p>{moreServiceLinks.map(link => <Link key={link.href} href={link.href} className={styles.textLink}>{link.name} ↗</Link>)}</div>
     </section>
 
