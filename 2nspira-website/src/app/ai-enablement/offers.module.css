@@ -12,7 +12,7 @@
 
 .choices { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 28px; }
 .choice { display:flex; align-items:center; gap:12px; padding:18px; border:1px solid var(--color-line, #dce2e8); border-radius:16px; background:white; color:var(--color-ink, #152a3a); font-size:14px; font-weight:500; transition:background .2s, border-color .2s; }
-.choice > span { color:var(--color-accent,#176c96); font-size:12px; }
+.choice > span { flex-shrink:0; white-space:nowrap; color:var(--color-accent,#176c96); font-size:12px; }
 .choice > svg { margin-left:auto; flex-shrink:0; }
 .choice:hover { background:#edf5f8; border-color:#6594ac; }
 .choice:focus-visible, .scopeDetails > summary:focus-visible { outline:2px solid #176c96; outline-offset:4px; }

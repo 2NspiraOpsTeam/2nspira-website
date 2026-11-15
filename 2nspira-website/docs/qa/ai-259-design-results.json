@@ -1,0 +1,41 @@
+{
+  "base": "https://9d348369-2nspira-website-preview.jcortez-36a.workers.dev",
+  "results": [
+    {
+      "width": 1440,
+      "status": 200,
+      "disclosures": 15,
+      "overflow": false,
+      "anchorRefresh": true,
+      "jsonLd": 2
+    },
+    {
+      "width": 768,
+      "status": 200,
+      "disclosures": 15,
+      "overflow": false,
+      "anchorRefresh": true,
+      "jsonLd": 2
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "disclosures": 15,
+      "overflow": false,
+      "anchorRefresh": true,
+      "jsonLd": 2
+    },
+    {
+      "width": 320,
+      "status": 200,
+      "disclosures": 15,
+      "overflow": false,
+      "anchorRefresh": true,
+      "jsonLd": 2
+    }
+  ],
+  "errors": [],
+  "reducedMotion": true,
+  "noJS": true,
+  "contactPrefill": true
+}
