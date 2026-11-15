@@ -1,0 +1,95 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "status": 500,
+      "overflow": false,
+      "h1": 1,
+      "offers": true,
+      "ctas": [
+        {
+          "text": "Explore an AI readiness assessment →",
+          "href": "/contact?service=ai#contact-message"
+        },
+        {
+          "text": "Discuss an AI pilot →",
+          "href": "/contact?service=ai#contact-message"
+        },
+        {
+          "text": "Discuss ongoing AI support →",
+          "href": "/contact?service=ai#contact-message"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "status": 500,
+      "overflow": false,
+      "h1": 1,
+      "offers": true,
+      "ctas": [
+        {
+          "text": "Explore an AI readiness assessment →",
+          "href": "/contact?service=ai#contact-message"
+        },
+        {
+          "text": "Discuss an AI pilot →",
+          "href": "/contact?service=ai#contact-message"
+        },
+        {
+          "text": "Discuss ongoing AI support →",
+          "href": "/contact?service=ai#contact-message"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "status": 500,
+      "overflow": false,
+      "h1": 1,
+      "offers": true,
+      "ctas": [
+        {
+          "text": "Explore an AI readiness assessment →",
+          "href": "/contact?service=ai#contact-message"
+        },
+        {
+          "text": "Discuss an AI pilot →",
+          "href": "/contact?service=ai#contact-message"
+        },
+        {
+          "text": "Discuss ongoing AI support →",
+          "href": "/contact?service=ai#contact-message"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "status": 500,
+      "overflow": false,
+      "h1": 1,
+      "offers": true,
+      "ctas": [
+        {
+          "text": "Explore an AI readiness assessment →",
+          "href": "/contact?service=ai#contact-message"
+        },
+        {
+          "text": "Discuss an AI pilot →",
+          "href": "/contact?service=ai#contact-message"
+        },
+        {
+          "text": "Discuss ongoing AI support →",
+          "href": "/contact?service=ai#contact-message"
+        }
+      ]
+    },
+    {
+      "anchor": "#ai-readiness"
+    },
+    {
+      "refreshAnchor": "#ai-readiness"
+    }
+  ],
+  "errors": []
+}

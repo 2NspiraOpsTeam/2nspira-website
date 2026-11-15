@@ -14,10 +14,34 @@ import { BOOKING_URL } from "@/lib/booking";
 import { EyebrowPill } from "@/components/VisualAccents";
 import { h2, h3, lead, linkInline, pageMain, section, sectionBand, cardFlat, buttonPrimary, buttonSecondary } from "@/components/ui";
 
-const description = "Become an AI-enabled organization with 2Nspira. Align strategy, people, processes, and technology through practical AI consulting, training, and governance.";
+const description = "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.";
 export const metadata: Metadata = publicPageMetadata({
-  title: "AI Transformation & Enablement Consulting", description, path: "/ai-enablement"
+  title: "AI Readiness, Implementation & Support", description, path: "/ai-enablement"
 });
+
+const offers = [
+  {
+    id: "ai-readiness", step: "01 · Readiness", title: "Get Your Organization AI-Ready",
+    problem: "Not sure where AI will help—or where to avoid it? Start with your people and the work.",
+    deliverables: ["Stakeholder workshop and prioritized use-case shortlist", "Data and access constraints, staff training and an acceptable-use baseline for your review", "Phased adoption roadmap with a proposed pilot owner and success criteria"],
+    boundary: "A scoped assessment is quoted separately from the initial conversation. A process change or ordinary automation may be the better answer.",
+    cta: "Explore an AI readiness assessment"
+  },
+  {
+    id: "ai-implementation", step: "02 · Implementation", title: "Put AI to Work",
+    problem: "Have a promising use case? Test one practical workflow before expanding it.",
+    deliverables: ["One agreed workflow, approved test data and an access model", "Working pilot with evaluation cases, human review and failure handling", "Operator handoff and baseline-versus-pilot measurement report"],
+    boundary: "Agree quality thresholds and stop criteria before testing. A pilot is not a promise of ROI or unrestricted autonomous access.",
+    cta: "Discuss an AI pilot"
+  },
+  {
+    id: "responsible-ai-support", step: "03 · Optional ongoing support", title: "Operate AI Responsibly",
+    problem: "Keep an agreed workflow useful as your needs, models and policies change.",
+    deliverables: ["Scheduled answer-quality evaluations and usage/cost reviews", "Failure log, escalation ownership and access/governance reviews", "Prioritized improvements and a documented review cadence"],
+    boundary: "Optional support is scoped separately. Systems, support hours, response targets and escalation responsibilities are agreed before contracting; no 24/7 coverage is implied.",
+    cta: "Discuss ongoing AI support"
+  }
+];
 
 const dimensionIcons = [Compass, UsersRound, Workflow, Database, ShieldCheck, ChartNoAxesCombined];
 const dimensions = [
@@ -41,9 +65,12 @@ const applications = [
   { title: "Customer service", text: "More timely responses, better knowledge access, and smoother service experiences." },
   { title: "Finance & administration", text: "Assisted document processing, reconciliation support, and reporting—with human review." },
   { title: "Human resources", text: "Knowledge assistance, onboarding support, and training resources with appropriate controls." },
-  { title: "Education & nonprofits", text: "Administrative efficiency, staff support, improved information access, and mission-focused service delivery." }
+  { title: "Schools & nonprofits", text: "Explore staff knowledge assistance using approved guidance, or document workflows with human review. Start with synthetic or approved nonsensitive information—not student, donor or beneficiary records." }
 ];
 const questions = [
+  { question: "Can we use confidential or student information?", answer: "Data use is agreed during scoping. Initial examples use synthetic or approved nonsensitive information. Any proposed sensitive-data use requires review of permissions, vendor terms, retention, access controls and applicable obligations before implementation. A pilot is not a compliance certification." },
+  { question: "How is pilot success measured?", answer: "Agree a baseline, representative evaluation cases, quality thresholds, human-review steps and stop criteria before building. Compare the pilot with the current workflow, including cost and error handling—not speed alone. We do not guarantee ROI." },
+  { question: "What does ongoing AI support include?", answer: "Support is optional and scoped for named systems. Agree evaluation and review cadence, support hours, response targets, exclusions and escalation ownership before contracting. It is not an unlimited or 24/7 service." },
   { question: "Do we need to choose an AI tool before we talk?", answer: "No. Start with your organizational priorities and the work you want to improve. Readiness, data, risks, and team capacity help determine whether an AI tool, a process change, or another approach is appropriate." },
   { question: "Does every engagement include all five stages?", answer: "No. The roadmap is a flexible framework, not a fixed package. We agree the stages, deliverables, implementation responsibilities, and any ongoing support for your organization before work begins." },
   { question: "How does the free scorecard differ from a readiness engagement?", answer: "The AI Readiness Scorecard is a self-guided starting point. A scoped organizational readiness engagement can examine leadership, people, workflows, data, technology, and governance in greater depth, with agreed findings and priorities." },
@@ -63,7 +90,7 @@ export default function Page() {
       <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         <div className="flex flex-wrap gap-6"><Link href="/services" className={linkInline}>← All services</Link><Link href="/ai-team" className={linkInline}>Meet our human-led AI team →</Link></div>
         <div className="mt-4"><EyebrowPill>Organizational AI Enablement</EyebrowPill>
-          <h1 className="mt-4 max-w-5xl text-[clamp(2rem,4vw,3.5rem)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Move beyond using AI. Become an AI-enabled organization.</h1>
+          <h1 className="mt-4 max-w-5xl text-[clamp(2rem,4vw,3.5rem)] font-medium leading-[1.08] tracking-[-0.04em] text-ink">Get AI-ready. Put AI to work. Keep it accountable.</h1>
         </div>
         <section id="ai-tools" aria-label="AI tools and platforms" className="min-w-0 scroll-mt-24">
           <PlatformCarousel platforms={aiTools} label="AI tool logos" listLabel="AI tools and platforms" description="AI tools & platforms we work with." notice="Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification." />
@@ -71,7 +98,7 @@ export default function Page() {
         <div className="mt-8 grid items-center gap-9 lg:grid-cols-2">
           <div>
             <p className={lead}>Align your people, workflows, and technology so AI supports useful, accountable work—not just more experiments.</p>
-            <p className="mt-4 leading-7 text-body">Start with readiness. Build the right skills and safeguards. Improve one workflow, then learn and expand.</p>
+            <p className="mt-4 leading-7 text-body">Choose a starting point: prepare your team, test one useful workflow, or explore optional support for an agreed system.</p>
             <div className="mt-7 flex flex-wrap gap-3"><Link href="/resources/ai-readiness-scorecard" className={buttonPrimary}>Explore your organization’s AI readiness</Link><a href="#ai-conversation" className={buttonSecondary}>Talk about your AI transformation ↓</a></div>
           </div>
           <figure className="overflow-hidden rounded-[2rem] border border-line shadow-xl">
@@ -81,7 +108,23 @@ export default function Page() {
         <p className="mt-8 border-t border-line pt-5 text-sm font-medium text-muted">We don’t just help you adopt AI. We help you build the capabilities to succeed with it.</p>
       </div>
     </section>
-    <PageSections items={[["ai-tools", "Tools & platforms"], ["ai-capabilities-heading", "Build capability"], ["ai-roadmap-heading", "Your roadmap"], ["ai-work-heading", "See it in practice"], ["personal-ai-assistant", "Personal AI assistance"]]} />
+    <PageSections items={[["ai-offers-heading", "Three ways to start"], ["ai-tools", "Tools & platforms"], ["ai-capabilities-heading", "Build capability"], ["ai-roadmap-heading", "Your roadmap"], ["ai-work-heading", "See it in practice"], ["personal-ai-assistant", "Personal AI assistance"]]} />
+    <section className={sectionBand} aria-labelledby="ai-offers-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <EyebrowPill>One core service · Three purchase paths</EyebrowPill>
+      <h2 id="ai-offers-heading" className={`mt-5 scroll-mt-24 ${h2}`}>Start where your organization is.</h2>
+      <p className={`max-w-3xl ${lead}`}>Readiness → Implementation → Ongoing Support. Choose one scoped engagement; you don’t need to buy all three.</p>
+      <nav aria-label="AI engagement options" className="mt-6 flex flex-wrap gap-3">{offers.map(offer => <a key={offer.id} href={`#${offer.id}`} className={buttonSecondary}>{offer.step}</a>)}</nav>
+      <div className="mt-8 grid gap-6 lg:grid-cols-3">{offers.map(offer => <article id={offer.id} key={offer.id} aria-labelledby={`${offer.id}-title`} className={`flex scroll-mt-28 flex-col p-6 sm:p-8 ${cardFlat}`}>
+        <p className="text-sm font-semibold text-accent">{offer.step}</p>
+        <h3 id={`${offer.id}-title`} className={`mt-3 ${h3}`}>{offer.title}</h3>
+        <p className="mt-4 leading-7 text-body">{offer.problem}</p>
+        <h4 className="mt-6 font-semibold text-ink">What we scope together</h4>
+        <ul className="mt-3 list-disc space-y-3 pl-5 leading-7 text-body">{offer.deliverables.map(item => <li key={item}>{item}</li>)}</ul>
+        <p className="mb-6 mt-5 border-t border-line pt-4 text-sm leading-6 text-muted">{offer.boundary}</p>
+        <Link href="/contact?service=ai#contact-message" className={`mt-auto min-h-11 ${linkInline}`}>{offer.cta} →</Link>
+      </article>)}</div>
+      <aside className="mt-8 rounded-2xl border border-line bg-surface p-6 sm:p-8"><h3 className={h3}>Clear boundaries, from the first pilot.</h3><p className="mt-3 max-w-3xl leading-7 text-body">Agree which sources can be used, who can access them, who reviews outputs and what happens when an answer is wrong. Test representative examples and failure cases before wider use. Policy drafting and a pilot are not legal advice or compliance certification.</p></aside>
+    </div></section>
     <section className={section} aria-labelledby="ai-capabilities-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <EyebrowPill>What an AI-enabled organization looks like</EyebrowPill>
       <h2 id="ai-capabilities-heading" className={`mt-5 max-w-3xl ${h2}`}>AI isn’t another tool. It’s a new organizational capability.</h2>
@@ -97,7 +140,7 @@ export default function Page() {
     </div></section>
     <section className={section} aria-labelledby="ai-outcomes-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <h2 id="ai-outcomes-heading" className={`max-w-3xl ${h2}`}>What changes when your organization becomes AI-enabled?</h2>
-      <p className={`max-w-3xl ${lead}`}>Start with the work and the people it serves. These are potential applications—not guaranteed results. Suitability depends on your data, systems, controls, and agreed scope.</p>
+      <p className={`max-w-3xl ${lead}`}>Start with the work and the people it serves. These are illustrative applications, not client results or guaranteed outcomes. Suitability depends on your data, systems, controls, and agreed scope.</p>
       <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{applications.map(item => <article key={item.title} className={`p-6 ${cardFlat}`}><h3 className={h3}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p></article>)}</div>
       <aside className="mt-8 rounded-2xl border border-line bg-accent-soft p-6 sm:p-8"><h3 className={h3}>Define success before implementation.</h3><p className="mt-3 max-w-3xl leading-7 text-body">Baseline the measures that matter, then compare results: time saved, rework reduced, task quality, staff adoption, cost per workflow, and risk incidents. Review value alongside quality and safeguards—not speed alone.</p></aside>
     </div></section>
