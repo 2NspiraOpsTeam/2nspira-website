@@ -1,0 +1,1314 @@
+{
+  "applicationSHA": "eb102fecc7a01b43af64aa3c2ad9cca1d29b71d8",
+  "method": "Normal motion; sequential viewport scrolling to reveal lazy sections, then full-page capture. No CSS injection. Screenshots require human/model visual inspection, not an automated acceptance claim.",
+  "results": [
+    {
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "scrollWidth": 1440,
+      "height": 10298,
+      "images": [
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/logo/2nspira-logo.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/chatgpt.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/grok.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openclaw.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openrouter.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/n8n.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/perplexity.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/github-copilot.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/microsoft-foundry.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/platforms/copilot.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/ollama.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude-code.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/opencode.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hermes-agent.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hugging-face.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/lovable.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/chatgpt.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/grok.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openclaw.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openrouter.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/n8n.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/perplexity.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/github-copilot.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/microsoft-foundry.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/platforms/copilot.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/ollama.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude-code.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/opencode.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hermes-agent.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hugging-face.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/lovable.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/hero/ai-human-led-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/posts/ai-agents-human-accountability-20261030.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/work/manufacturing-command-center-card.webp",
+          "loaded": true
+        },
+        {
+          "src": "",
+          "loaded": false
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/logo/2nspira-logo.png",
+          "loaded": true
+        }
+      ],
+      "headings": [
+        {
+          "text": "Get AI-ready. Put AI to work. Keep it accountable.",
+          "top": 181.59375
+        },
+        {
+          "text": "Start where your organization is.",
+          "top": 1337.1875
+        },
+        {
+          "text": "Get Your Organization AI-Ready",
+          "top": 1672.796875
+        },
+        {
+          "text": "Put AI to Work",
+          "top": 1672.796875
+        },
+        {
+          "text": "Operate AI Responsibly",
+          "top": 1672.796875
+        },
+        {
+          "text": "Clear boundaries, from the first pilot.",
+          "top": 2438.96875
+        },
+        {
+          "text": "AI isn’t another tool. It’s a new organizational capability.",
+          "top": 2871.15625
+        },
+        {
+          "text": "Leadership & Strategy",
+          "top": 3303.375
+        },
+        {
+          "text": "People & Culture",
+          "top": 3303.375
+        },
+        {
+          "text": "Processes & Operations",
+          "top": 3303.375
+        },
+        {
+          "text": "Data & Technology",
+          "top": 3568.5625
+        },
+        {
+          "text": "Governance & Trust",
+          "top": 3568.5625
+        },
+        {
+          "text": "Performance & Improvement",
+          "top": 3568.5625
+        },
+        {
+          "text": "Your path to becoming AI-enabled",
+          "top": 3483.375
+        },
+        {
+          "text": "Discover",
+          "top": 3849.984375
+        },
+        {
+          "text": "Align",
+          "top": 3849.984375
+        },
+        {
+          "text": "Prepare",
+          "top": 3849.984375
+        },
+        {
+          "text": "Transform",
+          "top": 4243.765625
+        },
+        {
+          "text": "Evolve",
+          "top": 4243.765625
+        },
+        {
+          "text": "What changes when your organization becomes AI-enabled?",
+          "top": 4068.984375
+        },
+        {
+          "text": "Executive leadership",
+          "top": 4447.8125
+        },
+        {
+          "text": "Operations",
+          "top": 4447.8125
+        },
+        {
+          "text": "Customer service",
+          "top": 4447.8125
+        },
+        {
+          "text": "Finance & administration",
+          "top": 4645
+        },
+        {
+          "text": "Human resources",
+          "top": 4645
+        },
+        {
+          "text": "Schools & nonprofits",
+          "top": 4645
+        },
+        {
+          "text": "Define success before implementation.",
+          "top": 4946.1875
+        },
+        {
+          "text": "Choose a practical starting point",
+          "top": 5330.375
+        },
+        {
+          "text": "Find your fit",
+          "top": 5609.984375
+        },
+        {
+          "text": "See the evidence",
+          "top": 5609.984375
+        },
+        {
+          "text": "Meet your people",
+          "top": 5609.984375
+        },
+        {
+          "text": "We put AI to work—starting with our own operations.",
+          "top": 6253.171875
+        },
+        {
+          "text": "An AI team still needs a human lead.",
+          "top": 7007.015625
+        },
+        {
+          "text": "Useful AI starts with connected work.",
+          "top": 7007.015625
+        },
+        {
+          "text": "Executive judgment. Hands-on technology experience.",
+          "top": 7452.203125
+        },
+        {
+          "text": "Your own AI assistant. Set up around the way you work.",
+          "top": 8252.421875
+        },
+        {
+          "text": "Start with your day",
+          "top": 9197.515625
+        },
+        {
+          "text": "Make it yours",
+          "top": 9197.515625
+        },
+        {
+          "text": "Build confidence",
+          "top": 9197.515625
+        },
+        {
+          "text": "Before we talk",
+          "top": 8398.421875
+        },
+        {
+          "text": "Build an organization capable of thriving with AI.",
+          "top": 9116.03125
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "status": 200,
+      "errors": [],
+      "scrollWidth": 768,
+      "height": 11840,
+      "images": [
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/logo/2nspira-logo.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/chatgpt.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/grok.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openclaw.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openrouter.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/n8n.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/perplexity.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/github-copilot.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/microsoft-foundry.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/platforms/copilot.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/ollama.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude-code.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/opencode.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hermes-agent.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hugging-face.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/lovable.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/chatgpt.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/grok.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openclaw.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openrouter.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/n8n.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/perplexity.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/github-copilot.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/microsoft-foundry.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/platforms/copilot.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/ollama.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude-code.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/opencode.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hermes-agent.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hugging-face.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/lovable.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/hero/ai-human-led-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/posts/ai-agents-human-accountability-20261030.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/work/manufacturing-command-center-card.webp",
+          "loaded": true
+        },
+        {
+          "src": "",
+          "loaded": false
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/logo/2nspira-logo.png",
+          "loaded": true
+        }
+      ],
+      "headings": [
+        {
+          "text": "Get AI-ready. Put AI to work. Keep it accountable.",
+          "top": 181.59375
+        },
+        {
+          "text": "Start where your organization is.",
+          "top": 1718.796875
+        },
+        {
+          "text": "Get Your Organization AI-Ready",
+          "top": 2031.59375
+        },
+        {
+          "text": "Put AI to Work",
+          "top": 2569.390625
+        },
+        {
+          "text": "Operate AI Responsibly",
+          "top": 3079.1875
+        },
+        {
+          "text": "Clear boundaries, from the first pilot.",
+          "top": 3564.984375
+        },
+        {
+          "text": "AI isn’t another tool. It’s a new organizational capability.",
+          "top": 3991.984375
+        },
+        {
+          "text": "Leadership & Strategy",
+          "top": 4410.578125
+        },
+        {
+          "text": "People & Culture",
+          "top": 4410.578125
+        },
+        {
+          "text": "Processes & Operations",
+          "top": 4670.578125
+        },
+        {
+          "text": "Data & Technology",
+          "top": 4670.578125
+        },
+        {
+          "text": "Governance & Trust",
+          "top": 4930.578125
+        },
+        {
+          "text": "Performance & Improvement",
+          "top": 4930.578125
+        },
+        {
+          "text": "Your path to becoming AI-enabled",
+          "top": 4590.578125
+        },
+        {
+          "text": "Discover",
+          "top": 4934.375
+        },
+        {
+          "text": "Align",
+          "top": 4934.375
+        },
+        {
+          "text": "Prepare",
+          "top": 5350.96875
+        },
+        {
+          "text": "Transform",
+          "top": 5350.96875
+        },
+        {
+          "text": "Evolve",
+          "top": 5767.5625
+        },
+        {
+          "text": "What changes when your organization becomes AI-enabled?",
+          "top": 5153.375
+        },
+        {
+          "text": "Executive leadership",
+          "top": 5426.96875
+        },
+        {
+          "text": "Operations",
+          "top": 5426.96875
+        },
+        {
+          "text": "Customer service",
+          "top": 5618.96875
+        },
+        {
+          "text": "Finance & administration",
+          "top": 5618.96875
+        },
+        {
+          "text": "Human resources",
+          "top": 5810.96875
+        },
+        {
+          "text": "Schools & nonprofits",
+          "top": 5810.96875
+        },
+        {
+          "text": "Define success before implementation.",
+          "top": 6106.96875
+        },
+        {
+          "text": "Choose a practical starting point",
+          "top": 6485.96875
+        },
+        {
+          "text": "Find your fit",
+          "top": 6742.765625
+        },
+        {
+          "text": "See the evidence",
+          "top": 6742.765625
+        },
+        {
+          "text": "Meet your people",
+          "top": 6742.765625
+        },
+        {
+          "text": "We put AI to work—starting with our own operations.",
+          "top": 7424.765625
+        },
+        {
+          "text": "An AI team still needs a human lead.",
+          "top": 8024.984375
+        },
+        {
+          "text": "Useful AI starts with connected work.",
+          "top": 8024.984375
+        },
+        {
+          "text": "Executive judgment. Hands-on technology experience.",
+          "top": 8546.984375
+        },
+        {
+          "text": "Your own AI assistant. Set up around the way you work.",
+          "top": 9301.578125
+        },
+        {
+          "text": "Start with your day",
+          "top": 9985.046875
+        },
+        {
+          "text": "Make it yours",
+          "top": 9985.046875
+        },
+        {
+          "text": "Build confidence",
+          "top": 9985.046875
+        },
+        {
+          "text": "Before we talk",
+          "top": 9447.578125
+        },
+        {
+          "text": "Build an organization capable of thriving with AI.",
+          "top": 10142.375
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "scrollWidth": 390,
+      "height": 15309,
+      "images": [
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/logo/2nspira-logo.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/chatgpt.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/grok.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openclaw.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openrouter.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/n8n.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/perplexity.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/github-copilot.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/microsoft-foundry.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/platforms/copilot.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/ollama.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude-code.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/opencode.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hermes-agent.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hugging-face.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/lovable.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/chatgpt.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/grok.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openclaw.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openrouter.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/n8n.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/perplexity.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/github-copilot.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/microsoft-foundry.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/platforms/copilot.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/ollama.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude-code.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/opencode.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hermes-agent.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hugging-face.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/lovable.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/hero/ai-human-led-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/posts/ai-agents-human-accountability-20261030.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/work/manufacturing-command-center-card.webp",
+          "loaded": true
+        },
+        {
+          "src": "",
+          "loaded": false
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/logo/2nspira-logo.png",
+          "loaded": true
+        }
+      ],
+      "headings": [
+        {
+          "text": "Get AI-ready. Put AI to work. Keep it accountable.",
+          "top": 291.578125
+        },
+        {
+          "text": "Start where your organization is.",
+          "top": 2000.546875
+        },
+        {
+          "text": "Get Your Organization AI-Ready",
+          "top": 2430.140625
+        },
+        {
+          "text": "Put AI to Work",
+          "top": 3143.9375
+        },
+        {
+          "text": "Operate AI Responsibly",
+          "top": 3773.734375
+        },
+        {
+          "text": "Clear boundaries, from the first pilot.",
+          "top": 4403.53125
+        },
+        {
+          "text": "AI isn’t another tool. It’s a new organizational capability.",
+          "top": 4912.53125
+        },
+        {
+          "text": "Leadership & Strategy",
+          "top": 5455.109375
+        },
+        {
+          "text": "People & Culture",
+          "top": 5715.109375
+        },
+        {
+          "text": "Processes & Operations",
+          "top": 5975.109375
+        },
+        {
+          "text": "Data & Technology",
+          "top": 6235.109375
+        },
+        {
+          "text": "Governance & Trust",
+          "top": 6495.109375
+        },
+        {
+          "text": "Performance & Improvement",
+          "top": 6755.109375
+        },
+        {
+          "text": "Your path to becoming AI-enabled",
+          "top": 5587.109375
+        },
+        {
+          "text": "Discover",
+          "top": 5999.703125
+        },
+        {
+          "text": "Align",
+          "top": 6416.296875
+        },
+        {
+          "text": "Prepare",
+          "top": 6804.890625
+        },
+        {
+          "text": "Transform",
+          "top": 7193.484375
+        },
+        {
+          "text": "Evolve",
+          "top": 7610.078125
+        },
+        {
+          "text": "What changes when your organization becomes AI-enabled?",
+          "top": 6210.703125
+        },
+        {
+          "text": "Executive leadership",
+          "top": 6585.09375
+        },
+        {
+          "text": "Operations",
+          "top": 6749.09375
+        },
+        {
+          "text": "Customer service",
+          "top": 6941.09375
+        },
+        {
+          "text": "Finance & administration",
+          "top": 7105.09375
+        },
+        {
+          "text": "Human resources",
+          "top": 7297.09375
+        },
+        {
+          "text": "Schools & nonprofits",
+          "top": 7489.09375
+        },
+        {
+          "text": "Define success before implementation.",
+          "top": 7777.09375
+        },
+        {
+          "text": "Choose a practical starting point",
+          "top": 8194.09375
+        },
+        {
+          "text": "Find your fit",
+          "top": 8515.6875
+        },
+        {
+          "text": "See the evidence",
+          "top": 8747.6875
+        },
+        {
+          "text": "Meet your people",
+          "top": 8979.6875
+        },
+        {
+          "text": "We put AI to work—starting with our own operations.",
+          "top": 9601.6875
+        },
+        {
+          "text": "An AI team still needs a human lead.",
+          "top": 10332.328125
+        },
+        {
+          "text": "Useful AI starts with connected work.",
+          "top": 10842.578125
+        },
+        {
+          "text": "Executive judgment. Hands-on technology experience.",
+          "top": 11264.578125
+        },
+        {
+          "text": "Your own AI assistant. Set up around the way you work.",
+          "top": 12143.15625
+        },
+        {
+          "text": "Start with your day",
+          "top": 12719.796875
+        },
+        {
+          "text": "Make it yours",
+          "top": 12939.796875
+        },
+        {
+          "text": "Build confidence",
+          "top": 13159.796875
+        },
+        {
+          "text": "Before we talk",
+          "top": 12225.15625
+        },
+        {
+          "text": "Build an organization capable of thriving with AI.",
+          "top": 13087.953125
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "scrollWidth": 320,
+      "height": 16981,
+      "images": [
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/logo/2nspira-logo.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/chatgpt.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/grok.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openclaw.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openrouter.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/n8n.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/perplexity.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/github-copilot.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/microsoft-foundry.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/platforms/copilot.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/ollama.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude-code.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/opencode.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hermes-agent.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hugging-face.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/lovable.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/chatgpt.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/grok.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openclaw.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/openrouter.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/n8n.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/perplexity.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/github-copilot.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/microsoft-foundry.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/platforms/copilot.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/ollama.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/claude-code.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/opencode.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hermes-agent.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/hugging-face.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/ai-tools/lovable.png",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/hero/ai-human-led-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/posts/ai-agents-human-accountability-20261030.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/work/manufacturing-command-center-card.webp",
+          "loaded": true
+        },
+        {
+          "src": "",
+          "loaded": false
+        },
+        {
+          "src": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/images/logo/2nspira-logo.png",
+          "loaded": true
+        }
+      ],
+      "headings": [
+        {
+          "text": "Get AI-ready. Put AI to work. Keep it accountable.",
+          "top": 291.578125
+        },
+        {
+          "text": "Start where your organization is.",
+          "top": 2105.875
+        },
+        {
+          "text": "Get Your Organization AI-Ready",
+          "top": 2623.46875
+        },
+        {
+          "text": "Put AI to Work",
+          "top": 3446.453125
+        },
+        {
+          "text": "Operate AI Responsibly",
+          "top": 4212.25
+        },
+        {
+          "text": "Clear boundaries, from the first pilot.",
+          "top": 4978.046875
+        },
+        {
+          "text": "AI isn’t another tool. It’s a new organizational capability.",
+          "top": 5543.046875
+        },
+        {
+          "text": "Leadership & Strategy",
+          "top": 6154.421875
+        },
+        {
+          "text": "People & Culture",
+          "top": 6468.421875
+        },
+        {
+          "text": "Processes & Operations",
+          "top": 6756.421875
+        },
+        {
+          "text": "Data & Technology",
+          "top": 7070.421875
+        },
+        {
+          "text": "Governance & Trust",
+          "top": 7358.421875
+        },
+        {
+          "text": "Performance & Improvement",
+          "top": 7646.421875
+        },
+        {
+          "text": "Your path to becoming AI-enabled",
+          "top": 6286.421875
+        },
+        {
+          "text": "Discover",
+          "top": 6791
+        },
+        {
+          "text": "Align",
+          "top": 7263.59375
+        },
+        {
+          "text": "Prepare",
+          "top": 7705.78125
+        },
+        {
+          "text": "Transform",
+          "top": 8175.96875
+        },
+        {
+          "text": "Evolve",
+          "top": 8674.15625
+        },
+        {
+          "text": "What changes when your organization becomes AI-enabled?",
+          "top": 7030
+        },
+        {
+          "text": "Executive leadership",
+          "top": 7473.1875
+        },
+        {
+          "text": "Operations",
+          "top": 7665.1875
+        },
+        {
+          "text": "Customer service",
+          "top": 7857.1875
+        },
+        {
+          "text": "Finance & administration",
+          "top": 8049.1875
+        },
+        {
+          "text": "Human resources",
+          "top": 8241.1875
+        },
+        {
+          "text": "Schools & nonprofits",
+          "top": 8461.1875
+        },
+        {
+          "text": "Define success before implementation.",
+          "top": 8805.1875
+        },
+        {
+          "text": "Choose a practical starting point",
+          "top": 9278.1875
+        },
+        {
+          "text": "Find your fit",
+          "top": 9627.78125
+        },
+        {
+          "text": "See the evidence",
+          "top": 9859.78125
+        },
+        {
+          "text": "Meet your people",
+          "top": 10091.78125
+        },
+        {
+          "text": "We put AI to work—starting with our own operations.",
+          "top": 10816.96875
+        },
+        {
+          "text": "An AI team still needs a human lead.",
+          "top": 11579.421875
+        },
+        {
+          "text": "Useful AI starts with connected work.",
+          "top": 12094.296875
+        },
+        {
+          "text": "Executive judgment. Hands-on technology experience.",
+          "top": 12551.484375
+        },
+        {
+          "text": "Your own AI assistant. Set up around the way you work.",
+          "top": 13577.234375
+        },
+        {
+          "text": "Start with your day",
+          "top": 14183.296875
+        },
+        {
+          "text": "Make it yours",
+          "top": 14431.296875
+        },
+        {
+          "text": "Build confidence",
+          "top": 14679.296875
+        },
+        {
+          "text": "Before we talk",
+          "top": 13659.234375
+        },
+        {
+          "text": "Build an organization capable of thriving with AI.",
+          "top": 14578.03125
+        }
+      ]
+    }
+  ]
+}

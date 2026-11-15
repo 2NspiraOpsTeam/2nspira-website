@@ -1,0 +1,32 @@
+{
+  "base": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev",
+  "applicationSHA": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+  "scope": "All contact POSTs intercepted; no email or backend delivery exercised",
+  "results": [
+    {
+      "scenario": "unknown",
+      "unknownWarning": true,
+      "disabledAfterRefresh": true,
+      "posts": 1
+    },
+    {
+      "scenario": "network",
+      "unknownWarning": true,
+      "disabledAfterRefresh": true,
+      "posts": 1
+    },
+    {
+      "scenario": "429",
+      "draftRetained": true,
+      "retryDeliveredMock": true,
+      "posts": 2
+    },
+    {
+      "scenario": "new-message",
+      "fieldsCleared": true,
+      "storageCleared": true,
+      "refreshBlankWithUrlPrefill": true,
+      "posts": 1
+    }
+  ]
+}

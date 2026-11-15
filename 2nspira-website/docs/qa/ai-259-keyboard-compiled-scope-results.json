@@ -1,0 +1,32 @@
+{
+  "base": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev",
+  "applicationSHA": "eb102fecc7a01b43af64aa3c2ad9cca1d29b71d8",
+  "sameDocument": true,
+  "results": [
+    {
+      "label": "initial pointer modality",
+      "value": "smooth",
+      "expected": "smooth",
+      "url": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/ai-enablement"
+    },
+    {
+      "label": "AI hero keyboard focus",
+      "value": "auto",
+      "expected": "auto",
+      "url": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/ai-enablement"
+    },
+    {
+      "label": "pointer modality restored",
+      "value": "smooth",
+      "expected": "smooth",
+      "url": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/ai-enablement"
+    },
+    {
+      "label": "contact keyboard after client navigation",
+      "value": "smooth",
+      "expected": "smooth",
+      "url": "https://27b768aa-2nspira-website-preview.jcortez-36a.workers.dev/contact?service=ai#contact-message"
+    }
+  ],
+  "scope": "Computed root behavior only; not pointer animation timing or full visual acceptance."
+}

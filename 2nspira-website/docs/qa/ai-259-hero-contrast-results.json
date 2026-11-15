@@ -1,0 +1,114 @@
+{
+  "applicationSHA": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+  "method": "Conservative darkest gradient endpoint alpha-composited over asserted white background; normal-state transparent-background hero h1/p/a only. Not hover, focus, image or full-page visual certification.",
+  "results": [
+    {
+      "width": 1440,
+      "text": "← All services",
+      "minimumRatio": 4.498669706351055,
+      "disposition": "inconclusive: measure actual pixels at text location; conservative bound below 4.5 does not prove failure"
+    },
+    {
+      "width": 1440,
+      "text": "Meet our human-led AI team →",
+      "minimumRatio": 4.498669706351055,
+      "disposition": "inconclusive: measure actual pixels at text location; conservative bound below 4.5 does not prove failure"
+    },
+    {
+      "width": 1440,
+      "text": "Get AI-ready. Put AI to work. Keep it accountable.",
+      "minimumRatio": 13.656875640704971,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 1440,
+      "text": "AI tools & platforms we work with.",
+      "minimumRatio": 7.1825980148246815,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 1440,
+      "text": "Pauses on hover or keyboard focus. Swipe or scroll to explore. Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification.",
+      "minimumRatio": 5.216243848555405,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 1440,
+      "text": "Align your people, workflows, and technology so AI supports useful, accountable work—not just more experiments.",
+      "minimumRatio": 7.1825980148246815,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 1440,
+      "text": "Choose a starting point: prepare your team, test one useful workflow, or explore optional support for an agreed system.",
+      "minimumRatio": 7.1825980148246815,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 1440,
+      "text": "Talk about your AI transformation ↓",
+      "minimumRatio": 13.656875640704971,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 1440,
+      "text": "We don’t just help you adopt AI. We help you build the capabilities to succeed with it.",
+      "minimumRatio": 5.216243848555405,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 390,
+      "text": "← All services",
+      "minimumRatio": 4.498669706351055,
+      "disposition": "inconclusive: measure actual pixels at text location; conservative bound below 4.5 does not prove failure"
+    },
+    {
+      "width": 390,
+      "text": "Meet our human-led AI team →",
+      "minimumRatio": 4.498669706351055,
+      "disposition": "inconclusive: measure actual pixels at text location; conservative bound below 4.5 does not prove failure"
+    },
+    {
+      "width": 390,
+      "text": "Get AI-ready. Put AI to work. Keep it accountable.",
+      "minimumRatio": 13.656875640704971,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 390,
+      "text": "AI tools & platforms we work with.",
+      "minimumRatio": 7.1825980148246815,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 390,
+      "text": "Pauses on hover or keyboard focus. Swipe or scroll to explore. Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification.",
+      "minimumRatio": 5.216243848555405,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 390,
+      "text": "Align your people, workflows, and technology so AI supports useful, accountable work—not just more experiments.",
+      "minimumRatio": 7.1825980148246815,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 390,
+      "text": "Choose a starting point: prepare your team, test one useful workflow, or explore optional support for an agreed system.",
+      "minimumRatio": 7.1825980148246815,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 390,
+      "text": "Talk about your AI transformation ↓",
+      "minimumRatio": 13.656875640704971,
+      "disposition": "passes conservative bound"
+    },
+    {
+      "width": 390,
+      "text": "We don’t just help you adopt AI. We help you build the capabilities to succeed with it.",
+      "minimumRatio": 5.216243848555405,
+      "disposition": "passes conservative bound"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+/* Keep keyboard outlines clear of viewport edges and floating support controls. */
+.focusClearance {
+  scroll-margin-block: 12px 96px;
+}
+
+/* Root scrolling must be immediate while keyboard focus is inside this page.
+   The local page marker prevents retained route CSS affecting other pages;
+   pointer navigation retains the site's normal smooth scrolling. */
+:global(html):has(.keyboardScrollPage :focus-visible) {
+  scroll-behavior: auto !important;
+}
+
+.choices { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 28px; }
+.choice { display:flex; align-items:center; gap:12px; padding:18px; border:1px solid var(--color-line, #dce2e8); border-radius:16px; background:white; color:var(--color-ink, #152a3a); font-size:14px; font-weight:500; transition:background .2s, border-color .2s; }
+.choice > span { flex-shrink:0; white-space:nowrap; color:var(--color-accent,#176c96); font-size:12px; }
+.choice > svg { margin-left:auto; flex-shrink:0; }
+.choice:hover { background:#edf5f8; border-color:#6594ac; }
+.choice:focus-visible, .scopeDetails > summary:focus-visible { outline:2px solid #176c96; outline-offset:4px; }
+.offer { display:flex; flex-direction:column; overflow:hidden; scroll-margin-top:112px; transition:box-shadow .25s, border-color .25s; }
+.offer:hover, .offer:target { border-color:#8eafc0; box-shadow:0 12px 32px #173a5010; }
+.offerVisual { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:190px; isolation:isolate; overflow:hidden; background:radial-gradient(ellipse at 50% 20%,#e0f1f6,transparent 70%),#f1f5f6; color:#225d7a; gap:20px; }
+.offer:nth-child(2) .offerVisual { background:radial-gradient(ellipse at 50% 20%,#e0eceb,transparent 70%),#f2f6f3; color:#35675c; }
+.offer:nth-child(3) .offerVisual { background:radial-gradient(ellipse at 50% 20%,#e7e5f0,transparent 70%),#f5f4f8; color:#63587c; }
+.orbit { position:absolute; width:130px; height:130px; border:1px solid currentColor; opacity:.14; border-radius:50%; top:5px; z-index:-1; }
+.orbit::after { content:""; position:absolute; inset:12px; border:1px dashed currentColor; border-radius:50%; }
+.visualLabel { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.14em; }
+.offerBody { display:flex; flex:1; flex-direction:column; padding:28px; }
+.offerBody > a { display:flex; align-items:center; margin-top:auto; padding-top:14px; }
+.scopeDetails { border-top:1px solid var(--color-line,#dce2e8); margin-top:24px; padding-top:8px; }
+.scopeDetails > summary { cursor:pointer; min-height:48px; padding:12px 3px; font-size:14px; font-weight:500; color:var(--color-accent,#176c96); border-radius:4px; }
+.roadmap { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:24px; margin:40px 0; }
+.roadmap > li { position:relative; }
+.roadmap > li:not(:last-child)::after { content:""; position:absolute; left:52px; right:-12px; height:1px; background:#ccdbe1; top:22px; }
+.stepNumber { display:grid; place-items:center; height:44px; width:44px; border:1px solid #b4cbd6; background:#edf5f8; color:#225d7a; border-radius:50%; font-size:13px; }
+.workflow { padding:32px; border:1px solid #d2e1e6; border-radius:28px; background:radial-gradient(ellipse at top right,#e1eff4,transparent 70%),white; box-shadow:0 20px 60px #173a5008; }
+.workflow figcaption { font-size:12px; text-transform:uppercase; letter-spacing:.1em; font-weight:600; color:#476372; margin-bottom:26px; }
+.flowNode { position:relative; display:flex; align-items:center; gap:18px; padding:18px; background:#ffffffd9; border:1px solid #dce5e8; border-radius:16px; margin-top:28px; }
+.flowIcon { display:grid; flex-shrink:0; place-items:center; width:46px; height:46px; background:#edf5f8; color:#225d7a; border-radius:12px; }
+.connector { position:absolute; top:100%; left:39px; height:28px; color:#658c9e; }
+@media (hover:hover) and (prefers-reduced-motion:no-preference) { .offerVisual > svg { transition:transform .3s; } .offer:hover .offerVisual > svg { transform:translateY(-4px); } }
+@media (max-width:767px) { .choices { grid-template-columns:1fr; } .roadmap { grid-template-columns:1fr; gap:22px; } .roadmap > li { padding-left:64px; min-height:60px; } .stepNumber { position:absolute; left:0; top:0; } .roadmap h3 { margin-top:0; } .roadmap > li:not(:last-child)::after { left:22px; top:48px; bottom:-16px; height:auto; width:1px; right:auto; } .workflow { padding:22px; } .flowNode { padding:14px; gap:12px; } }
+@media (prefers-reduced-motion:reduce) { .choice, .offer, .offerVisual > svg { transition:none; } }

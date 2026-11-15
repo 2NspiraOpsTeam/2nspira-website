@@ -1,0 +1,1091 @@
+{
+  "base": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev",
+  "applicationSHA": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+  "scope": "Main region, all details expanded; automated audit is not comprehensive WCAG certification",
+  "results": [
+    {
+      "width": 1440,
+      "status": 200,
+      "sha": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+      "normalMotion": true,
+      "focused": [
+        {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "href": "/",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Services",
+          "href": null,
+          "outline": "rgb(31, 36, 48) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Our Work",
+          "href": "/work",
+          "outline": "rgb(70, 80, 95) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Who We Serve",
+          "href": "/who-we-serve",
+          "outline": "rgb(70, 80, 95) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Demos",
+          "href": null,
+          "outline": "rgb(70, 80, 95) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "BUTTON",
+          "text": "About Us",
+          "href": null,
+          "outline": "rgb(70, 80, 95) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Contact Us",
+          "href": "/contact",
+          "outline": "rgb(70, 80, 95) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Discuss Your Project",
+          "href": "/contact",
+          "outline": "rgb(255, 255, 255) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Ask 2Nspira",
+          "href": null,
+          "outline": "rgb(74, 111, 165) solid 3px",
+          "shadow": "rgba(36, 59, 91, 0.15) 0px 8px 30px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "← All services",
+          "href": "/services",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Meet our human-led AI team →",
+          "href": "/ai-team",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Pause motion",
+          "href": null,
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "DIV",
+          "text": "ChatGPTClaudeGrokOpenClawOpenRoutern8nPerplexityGitHub CopilotMicrosoft FoundryMicrosoft 365 CopilotOllamaClaude CodeOpenCodeHermes AgentHugging FaceLovableChat",
+          "href": null,
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Explore your organization’s AI readiness",
+          "href": "/resources/ai-readiness-scorecard",
+          "outline": "rgb(255, 255, 255) solid 3px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(74, 111, 165, 0.18) 0px 8px 24px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Talk about your AI transformation ↓",
+          "href": "#ai-conversation",
+          "outline": "rgb(31, 36, 48) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Three ways to start",
+          "href": "#ai-offers-heading",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Tools & platforms",
+          "href": "#ai-tools",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Build capability",
+          "href": "#ai-capabilities-heading",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Your roadmap",
+          "href": "#ai-roadmap-heading",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "See it in practice",
+          "href": "#ai-work-heading",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Personal AI assistance",
+          "href": "#personal-ai-assistant",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "01 · Readiness",
+          "href": "#ai-readiness",
+          "outline": "rgb(31, 36, 48) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "02 · Implementation",
+          "href": "#ai-implementation",
+          "outline": "rgb(31, 36, 48) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "03 · Optional ongoing support",
+          "href": "#responsible-ai-support",
+          "outline": "rgb(31, 36, 48) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Explore an AI readiness assessment →",
+          "href": "/contact?service=ai#contact-message",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Discuss an AI pilot →",
+          "href": "/contact?service=ai#contact-message",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Discuss ongoing AI support →",
+          "href": "/contact?service=ai#contact-message",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can we use confidential or student information?",
+          "enterOpens": true,
+          "spaceCloses": true
+        },
+        {
+          "question": "How is pilot success measured?",
+          "enterOpens": true,
+          "spaceCloses": true
+        },
+        {
+          "question": "What does ongoing AI support include?",
+          "enterOpens": true,
+          "spaceCloses": true
+        }
+      ],
+      "axe": {
+        "version": "4.13.0",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "div[aria-label=\"Explore your next step\"]"
+                ],
+                "summary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  ".decoration-accent\\/40.hover\\:decoration-accent[href$=\"services\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".decoration-accent\\/40.hover\\:decoration-accent[href$=\"ai-team\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".mt-4 > .border-accent\\/15.bg-accent-soft\\/80.py-1"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "h1"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".mb-4 > .leading-6"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(1) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(2) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(3) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(4) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(5) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(6) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(7) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(8) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(9) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(10) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(11) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(12) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(13) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(14) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(15) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(16) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(1) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(2) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(3) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(4) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(5) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(6) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(7) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(8) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(9) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(10) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(11) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(12) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(13) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(14) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(15) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(16) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".leading-6.text-muted.text-xs"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".gap-9 > div > .text-lg.leading-8.mt-6"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".gap-9 > div > .mt-4.leading-7"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "a[href$=\"#ai-conversation\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".pt-5"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".gap-3.flex.leading-7:nth-child(1) > .text-accent[aria-hidden=\"true\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  ".gap-3.flex.leading-7:nth-child(2) > .text-accent[aria-hidden=\"true\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  ".gap-3.flex.leading-7:nth-child(3) > .text-accent[aria-hidden=\"true\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+              }
+            ]
+          }
+        ],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "button-name",
+          "color-contrast",
+          "duplicate-id-aria",
+          "image-alt",
+          "link-in-text-block",
+          "link-name",
+          "list",
+          "listitem",
+          "nested-interactive",
+          "scrollable-region-focusable",
+          "summary-name"
+        ]
+      },
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "sha": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+      "normalMotion": true,
+      "focused": [
+        {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "href": "/",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "href": null,
+          "outline": "rgb(70, 80, 95) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(74, 111, 165) 0px 0px 0px 2px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Ask 2Nspira",
+          "href": null,
+          "outline": "rgb(74, 111, 165) solid 3px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "← All services",
+          "href": "/services",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Meet our human-led AI team →",
+          "href": "/ai-team",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Pause motion",
+          "href": null,
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "DIV",
+          "text": "ChatGPTClaudeGrokOpenClawOpenRoutern8nPerplexityGitHub CopilotMicrosoft FoundryMicrosoft 365 CopilotOllamaClaude CodeOpenCodeHermes AgentHugging FaceLovableChat",
+          "href": null,
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Explore your organization’s AI readiness",
+          "href": "/resources/ai-readiness-scorecard",
+          "outline": "rgb(255, 255, 255) solid 3px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(74, 111, 165, 0.18) 0px 8px 24px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Talk about your AI transformation ↓",
+          "href": "#ai-conversation",
+          "outline": "rgb(31, 36, 48) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Three ways to start",
+          "href": "#ai-offers-heading",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Tools & platforms",
+          "href": "#ai-tools",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Build capability",
+          "href": "#ai-capabilities-heading",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Your roadmap",
+          "href": "#ai-roadmap-heading",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "See it in practice",
+          "href": "#ai-work-heading",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Personal AI assistance",
+          "href": "#personal-ai-assistant",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "none",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "01 · Readiness",
+          "href": "#ai-readiness",
+          "outline": "rgb(31, 36, 48) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "02 · Implementation",
+          "href": "#ai-implementation",
+          "outline": "rgb(31, 36, 48) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "03 · Optional ongoing support",
+          "href": "#responsible-ai-support",
+          "outline": "rgb(31, 36, 48) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Explore an AI readiness assessment →",
+          "href": "/contact?service=ai#contact-message",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Discuss an AI pilot →",
+          "href": "/contact?service=ai#contact-message",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        },
+        {
+          "tag": "A",
+          "text": "Discuss ongoing AI support →",
+          "href": "/contact?service=ai#contact-message",
+          "outline": "rgb(74, 111, 165) solid 2px",
+          "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(250, 250, 249) 0px 0px 0px 2px, rgb(74, 111, 165) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+          "visible": true
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can we use confidential or student information?",
+          "enterOpens": true,
+          "spaceCloses": true
+        },
+        {
+          "question": "How is pilot success measured?",
+          "enterOpens": true,
+          "spaceCloses": true
+        },
+        {
+          "question": "What does ongoing AI support include?",
+          "enterOpens": true,
+          "spaceCloses": true
+        }
+      ],
+      "axe": {
+        "version": "4.13.0",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "div[aria-label=\"Explore your next step\"]"
+                ],
+                "summary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+              }
+            ]
+          },
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  ".decoration-accent\\/40.hover\\:decoration-accent[href$=\"services\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".decoration-accent\\/40.hover\\:decoration-accent[href$=\"ai-team\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".mt-4 > .border-accent\\/15.bg-accent-soft\\/80.py-1"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "h1"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".mb-4 > .leading-6"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(1) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(2) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(3) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(4) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(5) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(6) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(7) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(8) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(9) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(10) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(11) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(12) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(13) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(14) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(15) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14[aria-label=\"AI tools and platforms\"] > ._logo_1gdj5_15:nth-child(16) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(1) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(2) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(3) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(4) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(5) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(6) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(7) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(8) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(9) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(10) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(11) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(12) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(13) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(14) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(15) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "._list_1gdj5_14:nth-child(2) > ._logo_1gdj5_15:nth-child(16) > .text-center"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".leading-6.text-muted.text-xs"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".gap-9 > div > .text-lg.leading-8.mt-6"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".gap-9 > div > .mt-4.leading-7"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  "a[href$=\"#ai-conversation\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".pt-5"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              },
+              {
+                "target": [
+                  ".gap-3.flex.leading-7:nth-child(1) > .text-accent[aria-hidden=\"true\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  ".gap-3.flex.leading-7:nth-child(2) > .text-accent[aria-hidden=\"true\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  ".gap-3.flex.leading-7:nth-child(3) > .text-accent[aria-hidden=\"true\"]"
+                ],
+                "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+              }
+            ]
+          }
+        ],
+        "passes": [
+          "aria-allowed-attr",
+          "aria-conditional-attr",
+          "aria-deprecated-role",
+          "aria-hidden-focus",
+          "aria-prohibited-attr",
+          "aria-required-attr",
+          "aria-roles",
+          "aria-valid-attr-value",
+          "aria-valid-attr",
+          "button-name",
+          "color-contrast",
+          "duplicate-id-aria",
+          "image-alt",
+          "link-in-text-block",
+          "link-name",
+          "list",
+          "listitem",
+          "nested-interactive",
+          "scrollable-region-focusable",
+          "summary-name"
+        ]
+      },
+      "overflow": false
+    }
+  ]
+}

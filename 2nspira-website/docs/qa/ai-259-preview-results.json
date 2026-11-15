@@ -1,0 +1,163 @@
+{
+  "base": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev",
+  "results": [
+    {
+      "width": 1440,
+      "status": 200,
+      "sha": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+      "overflow": false,
+      "h1": 1,
+      "offers": [
+        {
+          "id": "ai-readiness",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        },
+        {
+          "id": "ai-implementation",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        },
+        {
+          "id": "responsible-ai-support",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        }
+      ],
+      "timing": [
+        {
+          "ttfb": 309,
+          "dom": 406
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "status": 200,
+      "sha": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+      "overflow": false,
+      "h1": 1,
+      "offers": [
+        {
+          "id": "ai-readiness",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        },
+        {
+          "id": "ai-implementation",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        },
+        {
+          "id": "responsible-ai-support",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        }
+      ],
+      "timing": [
+        {
+          "ttfb": 32,
+          "dom": 41
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "sha": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+      "overflow": false,
+      "h1": 1,
+      "offers": [
+        {
+          "id": "ai-readiness",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        },
+        {
+          "id": "ai-implementation",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        },
+        {
+          "id": "responsible-ai-support",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        }
+      ],
+      "timing": [
+        {
+          "ttfb": 30,
+          "dom": 39
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "status": 200,
+      "sha": "72ceefd5821cabb26feeb1c2c5b1786cc18d6591",
+      "overflow": false,
+      "h1": 1,
+      "offers": [
+        {
+          "id": "ai-readiness",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        },
+        {
+          "id": "ai-implementation",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        },
+        {
+          "id": "responsible-ai-support",
+          "visible": true,
+          "cta": "/contact?service=ai#contact-message"
+        }
+      ],
+      "timing": [
+        {
+          "ttfb": 31,
+          "dom": 40
+        }
+      ]
+    },
+    {
+      "anchorAfterRefresh": "#ai-readiness"
+    },
+    {
+      "contactUrl": "https://97032636-2nspira-website-preview.jcortez-36a.workers.dev/contact?service=ai#contact-message",
+      "prefill": "AI Enablement"
+    },
+    {
+      "invalidBlocked": true
+    },
+    {
+      "partialRefresh": true
+    },
+    {
+      "mock422": "Please check your name, email, project URL, and requirements, then try again.",
+      "requests": 1
+    },
+    {
+      "mockSuccess": "Message sent\n\nThanks, QA Preview. Your inquiry has been sent to our team. We typically respond within one business day.\n\nYour message: Synthetic browser-only QA. Do not deliver.\n\nSend another message",
+      "requests": 2
+    },
+    {
+      "successRefresh": "Message sent\n\nThanks, QA Preview. Your inquiry has been sent to our team. We typically respond within one business day.\n\nYour message: Synthetic browser-only QA. Do not deliver.\n\nSend another message"
+    },
+    {
+      "keyboardFocus": {
+        "tag": "A",
+        "text": "Skip to main content",
+        "outline": "solid"
+      },
+      "reducedMotion": true
+    },
+    {
+      "noJSStatus": 200,
+      "noJSOffers": 3
+    }
+  ],
+  "errors": [],
+  "contact": "All POST requests intercepted in browser; no real messages"
+}
