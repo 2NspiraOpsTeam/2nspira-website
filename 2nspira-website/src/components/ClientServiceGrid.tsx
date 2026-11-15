@@ -4,8 +4,8 @@ import { serviceNeeds } from "@/lib/serviceNeeds";
 import { card, h3, linkInline } from "./ui";
 
 const serviceDetails = [
-  { title: "Built around the customer journey", text: "Business websites, custom web applications, secure portals, booking, ecommerce, multilingual content, and scoped integrations. AI-native development supports the build; human product judgment guides the experience." },
-  { title: "Connect the work behind the scenes", text: "Map workflows, identify repetitive tasks and broken handoffs, connect business systems, and improve operational visibility. Start with a focused process before expanding." },
+  { title: "Built around the customer journey", text: "Business websites, redesigns, booking, ecommerce where appropriate, multilingual content, and ongoing care. AI-native development supports the build; human product judgment guides the experience." },
+  { title: "Connect the work behind the scenes", text: "Build portals and internal tools, modernize FileMaker, map workflows and connect business systems. Start with a focused process before expanding." },
   { title: "Move beyond scattered AI experiments", text: "Align AI with business priorities, build literacy across roles, define governance and data safeguards, and test useful workflows with human review and measurement." },
 ];
 

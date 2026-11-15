@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = publicPageMetadata({
   title: "AI & Technology Transformation for Growing Organizations",
   shareTitle: "Move your business forward—with people and technology.",
-  description: "AI enablement, business automation and digital platforms for growing organizations, with selective executive advisory and clearly scoped ongoing support.",
+  description: "Websites, custom software development and organizational AI enablement for growing organizations, with selective executive advisory and clearly scoped ongoing support.",
   path: "/services"
 });
 
@@ -60,18 +60,18 @@ const servicesJsonLd = {
     },
     {
       "@type": "Service",
-      "@id": "https://2nspira.com/automation-systems-optimization#service",
-      name: "Business Automation & Integrations",
+      "@id": "https://2nspira.com/custom-software-development#service",
+      name: "Custom Software Development",
       description:
         "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
-      url: "https://2nspira.com/automation-systems-optimization",
+      url: "https://2nspira.com/custom-software-development",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
     },
     {
       "@type": "Service",
       "@id": "https://2nspira.com/services#websites",
-      name: "Websites & Custom Digital Platforms",
+      name: "Websites",
       description:
         "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites, custom web applications, and custom internal operations solutions connected to the way your business works.",
       url: "https://2nspira.com/websites",
@@ -122,7 +122,7 @@ export default function ServicesPage() {
             A stronger business starts with your next right move.
           </h1>
           <p className={`mx-auto mt-6 max-w-2xl ${lead}`}>
-            Build a professional website or custom platform, connect your business workflows, or enable your organization to use AI responsibly. Start with one of our three core offerings; leadership and ongoing support are available as your needs evolve.
+            Build or improve your website, simplify operations with custom software, or help your organization put AI to work responsibly. Start with one of our three core offerings; leadership and ongoing support are available as your needs evolve.
           </p>
           <ServiceConversation label="Let’s talk about your next step" />
           <a href="#find-the-right-service" className={`mt-4 min-h-11 ${linkInline}`}>Find the right service <span aria-hidden="true"> ↓</span></a>
@@ -174,7 +174,7 @@ export default function ServicesPage() {
 
       <section className={section} aria-labelledby="connected-services-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="connected-services-heading" className={h2}>One challenge. The right combination of support.</h2>
-        <p className="mt-4 max-w-3xl leading-8 text-body">A growing business might begin with <Link className={linkInline} href="/technology-advisory">technology leadership</Link>, identify a disconnected handoff, then prioritize <Link className={linkInline} href="/automation-systems-optimization">workflow automation</Link> or a <Link className={linkInline} href="/websites">customer portal</Link>. Each step is scoped around the need—not a requirement to buy every service.</p>
+        <p className="mt-4 max-w-3xl leading-8 text-body">A growing business might begin with <Link className={linkInline} href="/technology-advisory">technology leadership</Link>, identify a disconnected handoff, then prioritize <Link className={linkInline} href="/automation-systems-optimization">workflow automation</Link> or a <Link className={linkInline} href="/custom-software-development">customer portal</Link>. Each step is scoped around the need—not a requirement to buy every service.</p>
         <p className="mt-4 font-medium text-ink">Understand the challenge. Set the direction. Make it work.</p>
       </div></section>
       <section className={section} aria-labelledby="explore-heading">
