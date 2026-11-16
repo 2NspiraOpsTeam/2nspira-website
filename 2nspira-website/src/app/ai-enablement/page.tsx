@@ -1,3 +1,5 @@
+import WorkflowExplorer from "@/components/engagement/WorkflowExplorer";
+import engagement from "@/components/engagement/engagement.module.css";
 import offersStyles from "./offers.module.css";
 import PlatformCarousel from "@/components/platforms/PlatformCarousel";
 import { aiTools } from "@/lib/ai-tools";
@@ -29,7 +31,7 @@ const offers = [
   },
   {
     id: "ai-training", step: "02 · Training & adoption", title: "Practical AI training for employees",
-    problem: "Already paying for AI tools, but struggling to get useful adoption? Help employees use AI confidently in daily work through role-based workshops, approved examples, practical exercises and clear guidance for reviewing AI-generated work.",
+    problem: "Turn tool access into practical team skills. Practice everyday tasks with role-based workshops, approved examples and clear review guidance.",
     deliverables: ["Role-based workshops and exercises using approved work examples", "Review checklists for accuracy, appropriate data use and human approval", "Practice guidance and follow-up office hours as agreed in your scope"],
     boundary: "Training is a separately scoped engagement. We agree tools, roles, session format, approved examples and follow-up availability before work begins; certification is not implied.",
     cta: "Discuss employee AI training"
@@ -50,7 +52,8 @@ const offers = [
   }
 ];
 
-const offerIcons = [Compass, UsersRound, Workflow, ShieldCheck];
+const offerImages = ["/images/engagement/ai-pathway-20261116.webp", "/images/engagement/employee-training-20261116.webp", "/images/demos/ai-invoice-workflow-20261116.webp", "/images/posts/ai-agents-human-accountability-20261030.webp"];
+const offerAlts = ["Concept illustration of connected platforms leading toward a brighter doorway.", "Illustrative workplace scene of colleagues practicing together with a facilitator.", "Concept illustration of an invoice workflow with a human approval checkpoint.", "Concept illustration of a human overseeing connected AI workspaces."];
 const offerOutcomes = ["A clear next step", "Practical team skills", "One workflow, tested", "Ongoing review and improvement"];
 
 const dimensionIcons = [Compass, UsersRound, Workflow, Database, ShieldCheck, ChartNoAxesCombined, ArrowRight, Check];
@@ -125,8 +128,8 @@ export default function Page() {
       <h2 id="ai-offers-heading" className={`mt-5 scroll-mt-28 ${h2}`}>Start where you are.</h2>
       <p className={`max-w-2xl ${lead}`}>Choose the help you need. Each engagement is scoped separately.</p>
       <nav aria-label="AI engagement options" className={offersStyles.choices}>{offers.map((offer, i) => <a key={offer.id} href={`#${offer.id}`} className={offersStyles.choice}><span>0{i + 1}</span>{["We need a plan", "We need team training", "We need implementation", "We need ongoing support"][i]}<ArrowRight size={18} aria-hidden="true" /></a>)}</nav>
-      <div className="mt-8 grid gap-6 lg:grid-cols-2">{offers.map((offer, i) => { const Icon = offerIcons[i]; return <article id={offer.id} key={offer.id} aria-labelledby={`${offer.id}-title`} className={`${offersStyles.offer} ${cardFlat}`}>
-        <div className={offersStyles.offerVisual} aria-hidden="true"><span className={offersStyles.orbit} /><Icon size={46} strokeWidth={1.25} /><span className={offersStyles.visualLabel}>{offerOutcomes[i]}</span></div>
+      <div className="mt-8 grid gap-6 lg:grid-cols-2">{offers.map((offer, i) => { return <article id={offer.id} key={offer.id} aria-labelledby={`${offer.id}-title`} className={`${offersStyles.offer} ${cardFlat}`}>
+        <div className={offersStyles.offerVisual}><Image src={offerImages[i]} alt={offerAlts[i]} width={1536} height={864} sizes="(min-width:1024px) 550px, 100vw" unoptimized className={offersStyles.offerImage} /><span className={offersStyles.visualLabel}>{offerOutcomes[i]}</span></div>
         <div className={offersStyles.offerBody}><p className="text-xs font-semibold uppercase tracking-widest text-accent">{offer.step}</p>
         <h3 id={`${offer.id}-title`} className={`mt-3 ${h3}`}>{offer.title}</h3>
         <p className="mt-3 leading-7 text-body">{offer.problem}</p>
@@ -135,15 +138,20 @@ export default function Page() {
       </article>; })}</div>
       <p className="mt-6 flex items-start gap-3 text-sm leading-6 text-muted"><ShieldCheck size={20} className="shrink-0 text-accent" aria-hidden="true" />Your people stay in control. Data access, human review and success criteria are agreed before work begins.</p>
     </div></section>
-    <section className={sectionBand} aria-labelledby="ai-outcomes-heading"><div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
-      <div><EyebrowPill>Picture one useful workflow</EyebrowPill><h2 id="ai-outcomes-heading" className={`mt-5 scroll-mt-28 ${h2}`}>Less searching.<br />More useful answers.</h2><p className="mt-5 max-w-xl leading-7 text-body">Imagine helping staff find approved guidance, draft a response and hand it to a person for review—all in one connected flow.</p><p className="mt-4 text-sm leading-6 text-muted">An illustrative workflow, not a client result. Start with synthetic or approved nonsensitive information.</p><ul className="mt-5 space-y-3 leading-7 text-body"><li>Find answers in approved internal guidance.</li><li>Draft customer responses for staff review.</li><li>Prepare document summaries and reports.</li><li>Coordinate invoice exceptions and follow-up.</li></ul><Link href="/demos/ai-operations" className={`mt-5 inline-flex min-h-11 items-center ${linkInline}`}>Try the invoice-dispute demo →</Link><p className="mt-2 text-sm leading-6 text-muted">Fictional sandbox with simulated email—not a live accounting integration or verified customer result.</p><details className={offersStyles.scopeDetails}><summary>Where else could AI help?</summary><div className="mt-4 space-y-4">{applications.map(item => <div key={item.title}><h3 className="font-medium text-ink">{item.title}</h3><p className="mt-1 text-sm leading-6 text-body">{item.text}</p></div>)}</div></details></div>
-      <figure className={offersStyles.workflow}><figcaption>From question to reviewed response</figcaption>{[{Icon: Database, title: "Approved knowledge", text: "Only the sources you choose"}, {Icon: Workflow, title: "AI-assisted draft", text: "A useful starting point, not the final word"}, {Icon: UsersRound, title: "Human review", text: "Your team checks and decides"}].map(({Icon, title, text}, i) => <div key={title} className={offersStyles.flowNode}><span className={offersStyles.flowIcon}><Icon aria-hidden="true" size={25} /></span><div><span className="text-xs font-semibold text-accent">0{i + 1}</span><h3 className="font-medium text-ink">{title}</h3><p className="mt-1 text-sm text-body">{text}</p></div>{i < 2 && <span className={offersStyles.connector} aria-hidden="true">↓</span>}</div>)}<p className="mt-6 text-center text-sm leading-6 text-muted">Measure quality, effort and cost before expanding.</p></figure>
+    <section className={engagement.chapter} aria-labelledby="training-chapter-heading"><div className={engagement.chapterInner}>
+      <Image src="/images/engagement/employee-training-20261116.webp" alt="Illustrative scene of colleagues learning practical AI skills together." width={1536} height={864} sizes="(min-width:768px) 576px, 100vw" unoptimized className={engagement.chapterImage} />
+      <div className={engagement.chapterCopy}><p className={engagement.kicker}>People first. Technology in context.</p><h2 id="training-chapter-heading">Confidence comes<br />from doing.</h2><p>Work on familiar tasks. Practice together. Learn what to trust—and what to check.</p><a href="#ai-training">Explore employee AI training →</a><p className="mt-4 text-xs">Illustrative scene · Not a client training photograph</p></div>
     </div></section>
-    <section className={section} aria-labelledby="ai-roadmap-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className={section} aria-labelledby="ai-outcomes-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <EyebrowPill>Picture one useful workflow</EyebrowPill><h2 id="ai-outcomes-heading" className={`mt-5 scroll-mt-28 ${h2}`}>Less searching. More moving forward.</h2><p className={`max-w-2xl ${lead}`}>Choose a moment in the workflow. See where assistance ends and human judgment begins.</p>
+      <WorkflowExplorer />
+      <details className={offersStyles.scopeDetails}><summary>Where else could AI help?</summary><div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{applications.map(item => <div key={item.title}><h3 className="font-medium text-ink">{item.title}</h3><p className="mt-1 text-sm leading-6 text-body">{item.text}</p></div>)}</div></details>
+    </div></section>
+    <section className={`${section} ${offersStyles.roadmapBand}`} aria-labelledby="ai-roadmap-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <EyebrowPill>A clear path, not a leap</EyebrowPill>
       <h2 id="ai-roadmap-heading" className={`mt-5 scroll-mt-28 ${h2}`}>Small steps. Shared confidence.</h2>
       <p className={`max-w-2xl ${lead}`}>Move from understanding the opportunity to improving real work. We adapt the path to your priorities.</p>
-      <ol className={offersStyles.roadmap}>{stages.map((stage, i) => <li key={stage.title}><span className={offersStyles.stepNumber}>0{i + 1}</span><h3 className={`mt-4 ${h3}`}>{stage.title}</h3><p className="mt-2 text-sm leading-6 text-body">{stage.subtitle}</p></li>)}</ol>
+      <figure className={offersStyles.pathwayImage}><Image src="/images/engagement/ai-pathway-20261116.webp" alt="Concept illustration of connected stepping platforms leading toward a warm light." width={1536} height={864} sizes="(min-width:1152px) 1100px, 100vw" unoptimized /><figcaption>A deliberate path forward · Concept illustration</figcaption></figure><ol className={offersStyles.roadmap}>{stages.map((stage, i) => <li key={stage.title}><span className={offersStyles.stepNumber}>0{i + 1}</span><h3 className={`mt-4 ${h3}`}>{stage.title}</h3><p className="mt-2 text-sm leading-6 text-body">{stage.subtitle}</p></li>)}</ol>
       <details className={offersStyles.scopeDetails}><summary>Explore the roadmap deliverables</summary><div className="mt-4 grid gap-5 sm:grid-cols-2">{stages.map(stage => <div key={stage.title}><h3 className="font-medium text-ink">{stage.title}</h3><p className="mt-2 text-sm leading-6 text-body">{stage.text}</p><p className="mt-2 text-sm font-medium text-accent">{stage.output}</p></div>)}</div><p className="mt-5 text-sm leading-6 text-muted">Not every engagement includes all five stages. Deliverables, responsibilities and validation criteria are agreed in your scope.</p></details>
       <details id="ai-capabilities-heading" className={offersStyles.scopeDetails}><summary>What makes an organization AI-ready?</summary><div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{dimensions.map((item, i) => { const Icon = dimensionIcons[i]; return <div key={item.title}><Icon aria-hidden="true" size={24} className="text-accent" /><h3 className="mt-3 font-medium text-ink">{item.title}</h3><p className="mt-2 text-sm leading-6 text-body">{item.text}</p></div>; })}</div></details>
     </div></section>

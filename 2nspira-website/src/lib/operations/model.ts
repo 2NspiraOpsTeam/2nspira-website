@@ -1,28 +1,28 @@
 export const samples = [
   {
     title: "Possible duplicate charge",
-    team: "Customer support",
-    text: "Hello, our statement shows two $480 charges for invoice INV-1023. Could someone investigate whether we were charged twice? Please let us know the next steps. — Alex, sample customer",
+    team: "Customer support → Finance",
+    text: "To: Finance\nSubject: Review possible duplicate charge — INV-1023\n\nHi Finance, a customer reports two $480 charges for invoice INV-1023. Could you compare the payment references, check whether both charges relate to the same invoice and recommend the next step? Please prepare an internal update for Support before we respond to the customer. — Alex, sample support lead",
   },
   {
-    title: "Project milestone update",
-    team: "Client services",
-    text: "Hi team, could you share an update on our website project and confirm the next milestone? We need to prepare our internal reviewers. — Jordan, sample client",
+    title: "Disputed invoice amount",
+    team: "Account management → Billing",
+    text: "To: Billing\nSubject: Customer disputes the amount — INV-1024\n\nHi Billing, the customer says the $720 invoice INV-1024 is higher than the amount they expected. Could you compare the invoice line items with the agreed quote and flag any discrepancy? The quote is not included here. Please draft an internal update for Account Management; no adjustment has been approved. — Jordan, sample account manager",
   },
   {
-    title: "New starter setup",
-    team: "People operations",
-    text: "Our new employee starts Monday. Which onboarding steps are still pending for their laptop, access and orientation? Please help coordinate the setup. — Casey, sample manager",
+    title: "Payment status question",
+    team: "Collections → Accounts receivable",
+    text: "To: Accounts Receivable\nSubject: Confirm payment status — INV-1024\n\nHi team, the customer says they have paid invoice INV-1024, but our statement still shows it outstanding. Could you check the payment allocation and identify what remittance details we need to reconcile it? Please prepare an internal response for Collections before the next reminder. — Casey, sample collections coordinator",
   },
   {
-    title: "Incomplete weekly report",
-    team: "Operations",
-    text: "The weekly report is missing figures from Sales and Fulfillment. Can we identify who should supply them and coordinate a corrected report? — Taylor, sample analyst",
+    title: "Credit not reflected",
+    team: "Customer success → Billing",
+    text: "To: Billing\nSubject: Check a reported credit — INV-1024\n\nHi Billing, the customer says a previously discussed credit is missing from their $720 invoice INV-1024. We do not have the credit approval or amount in this message. Could you verify whether an approved credit exists and explain the next step to Customer Success? Please do not promise or apply a credit. — Taylor, sample customer success lead",
   },
   {
-    title: "Vendor payment status",
-    team: "Finance",
-    text: "Hello, invoice INV-1024 appears past due. Could you confirm its payment status and let us know who will follow up? — Morgan, sample vendor",
+    title: "Invoice breakdown question",
+    team: "Sales → Billing",
+    text: "To: Billing\nSubject: Clarify invoice line items — INV-1023\n\nHi Billing, a customer has asked what the $480 invoice INV-1023 covers and which service period it relates to. Could you check the original invoice and supporting agreement, then prepare an internal explanation for Sales to review? The line items and agreement are not attached. — Morgan, sample sales coordinator",
   },
 ];
 export const invoices = [

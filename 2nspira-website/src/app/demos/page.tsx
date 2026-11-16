@@ -6,7 +6,9 @@ import DemoHero from "@/components/demos/DemoHero";
 import DemoTrust from "@/components/demos/DemoTrust";
 import DemoSchema from "@/components/demos/DemoSchema";
 import { publicPageMetadata } from "@/lib/pageMetadata";
-import { demos, PROPERTY_DEMO_URL } from "@/lib/demos";
+import DemoCollection from "@/components/engagement/DemoCollection";
+import CatalogEffects from "@/components/catalog/CatalogEffects";
+import engagement from "@/components/engagement/engagement.module.css";
 import { buttonPrimary, eyebrow, h2, pageMain } from "@/components/ui";
 const description =
   "Explore AI invoice workflows and interactive school, manufacturing and property management software demos. See connected workflows, clearer handoffs and practical possibilities with 2Nspira.";
@@ -17,41 +19,9 @@ export const metadata = publicPageMetadata({
   path: "/demos",
   image: "/images/demos/manufacturing-workspace.webp",
 });
-const experiences = [
-  {
-    slug: "education",
-    category: "Education",
-    title: "More room for the moments that matter.",
-    text: "From a family’s first application to a teacher’s published feedback. One connected learning journey.",
-    image: "education-workspace",
-    alt: "Learning Grove school family overview with classroom learning and published feedback.",
-    url: demos.education.url,
-    steps: "Admissions → Classroom → Family",
-  },
-  {
-    slug: "manufacturing",
-    category: "Manufacturing",
-    title: "Keep work moving. Keep everyone in the picture.",
-    text: "See the shortage. Move the order. Clear the quality gate. Follow the handoffs across a fictional factory.",
-    image: "manufacturing-workspace",
-    alt: "Northstar manufacturing command center with production cells and material alerts.",
-    url: demos.manufacturing.url,
-    steps: "Materials → Production → Quality",
-  },
-  {
-    slug: "property-management",
-    category: "Property management",
-    title: "A better day for your office. And your residents.",
-    text: "Connect rent records, repairs and updates. See the same handoff from the office and resident sides.",
-    image: "property-workspace",
-    alt: "Harborstone property office showing portfolio balances and maintenance activity.",
-    url: PROPERTY_DEMO_URL,
-    steps: "Portfolio → Office → Resident",
-  },
-];
 export default function Demos() {
   return (
-    <main className={pageMain}>
+    <main className={pageMain}><CatalogEffects headings>
       <DemoSchema
         path="/demos"
         title="Interactive software demos"
@@ -72,7 +42,8 @@ export default function Demos() {
           "Imagine your next step",
         ]}
       />
-      <InvoiceDemoFeature />
+      <InvoiceDemoFeature editorial />
+      <section className={engagement.chapter} aria-labelledby="demo-connection-heading"><div className={engagement.chapterInner}><Image src="/images/hero/ai-human-led-v3.webp" alt="Illustrative team exploring connected digital workflows together." width={1536} height={1024} sizes="(min-width:768px) 576px, 100vw" unoptimized className={engagement.chapterImage} /><div className={engagement.chapterCopy}><p className={engagement.kicker}>Don’t just read about it</p><h2 id="demo-connection-heading">Step inside.<br />Follow the connection.</h2><p>Choose a world below. Follow a handoff from one person to the next. Explore what better-connected work could feel like.</p><a href="#experiences">Choose your experience ↓</a><p className="mt-4 text-xs">Concept illustration · Fictional demo organizations</p></div></div></section>
       <section
         id="experiences"
         className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20"
@@ -83,54 +54,9 @@ export default function Demos() {
           <br />
           The same possibility: better-connected work.
         </h2>
-        <div className="mt-10 space-y-8">
-          {experiences.map((d, i) => (
-            <article
-              key={d.slug}
-              className="demo-story-card grid overflow-hidden rounded-3xl border border-line bg-white lg:grid-cols-2"
-            >
-              <Link
-                href={`/demos/${d.slug}`}
-                className={`block min-w-0 border-b border-line p-4 focus-visible:outline-2 focus-visible:outline-accent sm:p-6 lg:border-b-0 ${["bg-[#eee7f6]", "bg-[#e0eee6]", "bg-[#f0e9da]"][i]}`}
-                aria-label={`Discover the ${d.category} experience`}
-              >
-                <Image
-                  src={`/images/demos/${d.image}.webp`}
-                  alt={d.alt}
-                  width={1440}
-                  height={1000}
-                  sizes="(max-width:1024px) 100vw, 560px"
-                  unoptimized
-                  className="h-auto w-full rounded-xl border border-line shadow-sm"
-                />
-              </Link>
-              <div className="flex flex-col justify-center p-6 sm:p-9">
-                <p className={eyebrow}>{d.category}</p>
-                <h3 className="mt-4 text-2xl font-medium leading-tight tracking-tight text-ink sm:text-3xl">
-                  {d.title}
-                </h3>
-                <p className="mt-4 leading-7 text-body">{d.text}</p>
-                <p className="mt-5 text-xs font-semibold tracking-wide text-accent">
-                  {d.steps}
-                </p>
-                <div className="mt-7 flex flex-wrap items-center gap-4">
-                  <Link href={`/demos/${d.slug}`} className={buttonPrimary}>
-                    Discover the experience{" "}
-                    <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" />
-                  </Link>
-                  <a
-                    href={d.url}
-                    className="inline-flex min-h-11 items-center text-sm font-medium text-accent underline underline-offset-4"
-                  >
-                    Launch workspace ↗
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+        <DemoCollection />
       </section>
-      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6"><div className="rounded-3xl border border-line bg-white p-7 sm:p-10"><p className={eyebrow}>Website AI assistant · live demonstration</p><h2 className={`mt-4 ${h2}`}>A helpful first conversation. A human next step.</h2><p className="mt-4 max-w-2xl leading-7 text-body">Explore a branded website assistant and see how a free-allowance limit leads visitors to your team. This demonstration gives real AI answers using a limited free allowance, with a contact-page handoff when the allowance is reached.</p><Link href="/chatbot-demo" className={`mt-6 ${buttonPrimary}`}>Try the AI assistant <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link></div></section>
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6"><div className="grid overflow-hidden rounded-3xl border border-line bg-white lg:grid-cols-2"><Image src="/images/posts/ai-agents-human-accountability-20261030.webp" alt="Concept illustration of a human supervising connected AI workspaces." width={1672} height={941} sizes="(min-width:1024px) 550px, 100vw" unoptimized className="h-full min-h-64 w-full object-cover" /><div className="p-7 sm:p-10"><p className={eyebrow}>Website AI assistant · live demonstration</p><h2 className={`mt-4 ${h2}`}>A helpful first conversation. A human next step.</h2><p className="mt-4 max-w-2xl leading-7 text-body">Explore a branded website assistant and see how a free-allowance limit leads visitors to your team. This demonstration gives real AI answers using a limited free allowance, with a contact-page handoff when the allowance is reached.</p><Link href="/chatbot-demo" className={`mt-6 ${buttonPrimary}`}>Try the AI assistant <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link></div></div></section>
 
       <DemoTrust />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
@@ -151,6 +77,6 @@ export default function Demos() {
           </p>
         </details>
       </section>
-    </main>
+    </CatalogEffects></main>
   );
 }
