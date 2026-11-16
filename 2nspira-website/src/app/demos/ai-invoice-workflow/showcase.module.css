@@ -72,3 +72,15 @@
 .art:hover { transform:translateY(-3px); box-shadow:0 28px 64px #24556b28; }
 }
 @media(max-width:560px) { .steps summary { padding:14px; gap:12px; } .steps details p { padding:0 18px 20px; } }
+
+.gallery { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:32px; }
+.gallery figure { min-width:0; padding:16px; background:white; border:1px solid #cfdee5; border-radius:20px; }
+.gallery .overview { grid-column:1/-1; }
+.screenFrame { background:#f5f0f6; border:1px solid #e4d9e2; border-radius:10px; overflow:hidden; }
+.screenFrame img { display:block; width:100%; height:auto; }
+.overview .screenFrame img { max-height:650px; object-fit:contain; }
+.zoom { display:inline-flex; min-height:44px; align-items:center; color:var(--petrol); font-size:12px; text-decoration:underline; text-underline-offset:4px; }
+.gallery figcaption { padding:0 8px 8px; }
+.gallery h3 { margin-top:6px; }
+.gallery figcaption p { font-size:14px; line-height:1.8; color:#655868; }
+@media(max-width:767px) { .gallery { grid-template-columns:1fr; gap:20px; } .gallery figure { padding:10px; } }

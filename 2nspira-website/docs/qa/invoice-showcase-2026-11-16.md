@@ -28,3 +28,10 @@
 - Main-region axe scans with disclosures expanded: no WCAG A/AA rule violations on those four routes. Automated scan is not a full accessibility certification.
 - Showcase canonical, parsed JSON-LD, walkthrough and launch links, native scope disclosure and no-JavaScript content checked. AI page section ordering, six FAQs and actual-image-only inventory checked.
 - Release-specific hosted checks and exact deployed SHA are recorded in the PR/release report, separately from these local checks.
+
+## Complementary palette, engagement and screenshot follow-up
+
+- Petrol-blue accents and cool backgrounds balance the existing plum/copper identity.
+- Six native capability disclosures and an exclusive four-step native walkthrough work with keyboard and without JavaScript; existing Reveal enhancement respects reduced motion.
+- Screenshot section uses the existing full workspace capture and two new rendered close-ups: proposal/approval controls and saved case, linked task and simulated outbox. Close-ups were captured from the actual local OperationsHub using the existing in-memory SQLite handler and deterministic mocked provider from `scripts/operations-experience-qa.mjs`. No customer records, real provider invocation or external messages were involved. The saved-record view excludes the unrelated chat launcher and downstream marketing CTA. PNG captures were converted to WebP at quality 88 without altering UI content.
+- Full-size screenshots open directly in a new tab, with explicit accessible labels. Screenshot dimensions match the exported assets.
