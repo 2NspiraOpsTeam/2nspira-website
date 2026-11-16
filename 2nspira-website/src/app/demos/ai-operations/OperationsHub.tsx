@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { initial, invoices, samples, type State } from "@/lib/operations/model";
 import styles from "./operations.module.css";
+import VoiceInput from "./VoiceInput";
 type Snapshot = { revision: number; state: State };
 export default function OperationsHub() {
   const [snapshot, setSnapshot] = useState<Snapshot>({
@@ -30,6 +31,8 @@ export default function OperationsHub() {
     [confirm, setConfirm] = useState<
       "case" | "task" | "email" | "reset" | null
     >(null);
+  const [listening, setListening] = useState(false);
+  const outcome = useRef<HTMLElement>(null);
   const dialog = useRef<HTMLDialogElement>(null),
     locked = useRef(false);
   const { state, revision } = snapshot;
@@ -83,6 +86,9 @@ export default function OperationsHub() {
       const data = await response.json();
       if (!response.ok) throw Error(data.message);
       setSnapshot(data);
+      if (action === "approve" || action === "send") {
+        requestAnimationFrame(() => outcome.current?.scrollIntoView({ block: "start", behavior: "instant" }));
+      }
       if (action === "start") {
         setInput(samples[0].text);
         setSelected(0);
@@ -102,6 +108,7 @@ export default function OperationsHub() {
     }
   }
   const analyzing = (busy && !state.proposal) || state.phase === "analyzing";
+  const controlsBusy = busy || listening;
   function approval(part: "case" | "task" | "email") {
     setConfirm(part);
   }
@@ -157,7 +164,7 @@ export default function OperationsHub() {
           </div>
           <button
             className={styles.secondary}
-            disabled={!ready || busy}
+            disabled={!ready || controlsBusy}
             onClick={() => setConfirm("reset")}
           >
             <RotateCcw size={15} /> Reset demo
@@ -166,8 +173,8 @@ export default function OperationsHub() {
         <div className={styles.notice}>
           <ShieldCheck size={18} />
           <p>
-            You are the demo reviewer. AI cannot create records or send messages
-            on its own. Sessions expire after one hour. Use fictional
+            You manage the team’s incoming requests. Review what AI prepares,
+            then watch approved work appear in your saved sandbox workspace. Sessions expire after one hour. Use fictional
             information only; input is processed by Groq.
           </p>
         </div>
@@ -187,7 +194,7 @@ export default function OperationsHub() {
                   key={sample.title}
                   className={`${styles.sample} ${!custom && selected === i ? styles.selected : ""}`}
                   aria-pressed={!custom && selected === i}
-                  disabled={busy}
+                  disabled={controlsBusy}
                   onClick={() => {
                     setSelected(i);
                     setInput(sample.text);
@@ -203,7 +210,7 @@ export default function OperationsHub() {
             <button
               className={styles.custom}
               aria-pressed={custom}
-              disabled={busy}
+              disabled={controlsBusy}
               onClick={() => {
                 setCustom(true);
                 setInput("");
@@ -211,13 +218,14 @@ export default function OperationsHub() {
             >
               + Write a fictional request
             </button>
+            <VoiceInput disabled={!ready || busy} onListening={setListening} onTranscript={(text) => { setInput(text); setCustom(true); }} />
             <label className={styles.field}>
               Incoming message
               <textarea
                 value={input}
                 maxLength={2000}
                 rows={6}
-                disabled={busy}
+                disabled={controlsBusy}
                 onChange={(e) => {
                   setInput(e.target.value);
                   setCustom(true);
@@ -230,7 +238,7 @@ export default function OperationsHub() {
             <button
               className={styles.primary}
               disabled={
-                !ready || busy || !input.trim() || state.phase === "analyzing"
+                !ready || controlsBusy || !input.trim() || state.phase === "analyzing"
               }
               onClick={() => void action("analyze", { input })}
             >
@@ -288,6 +296,7 @@ export default function OperationsHub() {
                     <li>Read a fictional message</li>
                     <li>Run real AI analysis</li>
                     <li>Review and approve each action</li>
+                    <li>See the saved case, task and simulated reply</li>
                   </ol>
                   <span className={styles.tag}>No records created yet</span>
                 </div>
@@ -296,7 +305,7 @@ export default function OperationsHub() {
             {error && (
               <div role="alert" className={styles.error}>
                 {error}
-                <button onClick={() => void load()} disabled={busy}>
+                <button onClick={() => void load()} disabled={controlsBusy}>
                   Reload saved state
                 </button>
               </div>
@@ -324,13 +333,14 @@ export default function OperationsHub() {
                   </small>
                 </article>
                 <div className={styles.sectionLabel}>
-                  <ShieldCheck size={17} /> 03 / HUMAN APPROVAL QUEUE
+                  <ShieldCheck size={17} /> <span id="approval-queue">03 / HUMAN APPROVAL QUEUE</span>
                 </div>
                 <ReviewCard
+                  key={`case-${state.input}`}
                   kind="case"
                   title="Proposed case"
                   state={state}
-                  busy={busy}
+                  busy={controlsBusy}
                   onSave={(text, extra) =>
                     action("edit", { part: "case", text, ...extra })
                   }
@@ -338,19 +348,21 @@ export default function OperationsHub() {
                   onReject={() => action("reject", { part: "case" })}
                 />
                 <ReviewCard
+                  key={`task-${state.input}`}
                   kind="task"
                   title="Internal investigation task"
                   state={state}
-                  busy={busy}
+                  busy={controlsBusy}
                   onSave={(text) => action("edit", { part: "task", text })}
                   onApprove={() => approval("task")}
                   onReject={() => action("reject", { part: "task" })}
                 />
                 <ReviewCard
+                  key={`email-${state.input}`}
                   kind="email"
                   title="Reply draft · simulated outbox"
                   state={state}
-                  busy={busy}
+                  busy={controlsBusy}
                   onSave={(text) => action("edit", { part: "email", text })}
                   onApprove={() => approval("email")}
                   onReject={() => action("reject", { part: "email" })}
@@ -358,24 +370,46 @@ export default function OperationsHub() {
                 {state.email.status === "approved" && !state.sent && (
                   <button
                     className={styles.primary}
-                    disabled={busy}
+                    disabled={controlsBusy}
                     onClick={() => void action("send", { part: "email" })}
                   >
                     <Send size={16} /> Simulate sending approved reply
                   </button>
                 )}
-                {state.sent && (
-                  <div className={styles.success}>
-                    <Check size={20} />
-                    <div>
-                      <strong>Simulated sent</strong>
-                      <p>
-                        The approved reply moved to the demo outbox. No email
-                        was sent and no external system was contacted.
-                      </p>
-                    </div>
+                <section ref={outcome} className={styles.outcomes} aria-labelledby="outcome-title" tabIndex={-1}>
+                  <div className={styles.sectionLabel}><Workflow size={17} /> 04 / AFTER APPROVAL</div>
+                  <h2 id="outcome-title">{state.case.id && state.task.id && state.sent ? "From incoming request to coordinated follow-through." : "Watch your approvals turn into work."}</h2>
+                  <p role="status" aria-live="polite">{state.case.id && state.task.id && state.sent
+                    ? "Your case is saved, its investigation task is linked, and your reviewed reply is in the simulated outbox. The investigation itself remains open."
+                    : !state.case.id ? "Approve the case above to create the first saved record. Nothing is executed before your approval."
+                    : !state.task.id ? "Case created. Next, review and approve the investigation task to give the team a clear next step."
+                    : !state.sent ? "Case and task created. Review the reply, then choose Simulate sending approved reply to see it in the outbox."
+                    : "The simulated reply is recorded. You can still review the remaining case and task proposals above."}</p>
+                  <a className={styles.back} href="#approval-queue">Return to the approval queue ↑</a>
+                  <div className={styles.executionGrid}>
+                    <article className={styles.executionCard}>
+                      <span className={styles.tag}>{state.case.id ? "Created · Open" : state.case.status === "rejected" ? "Rejected · Not created" : "Awaiting approval"}</span>
+                      <h3>Case workspace</h3>
+                      {state.case.id ? <><strong>{state.case.id}</strong><h4>{state.proposal.caseTitle}</h4><p>Owner: {state.proposal.team} · {state.proposal.priority} priority</p><p>{state.proposal.summary}</p></> : <p>A saved case will give this request an owner and a place to track follow-through.</p>}
+                    </article>
+                    <article className={styles.executionCard}>
+                      <span className={styles.tag}>{state.task.id ? "Created · To do" : state.task.status === "rejected" ? "Rejected · Not created" : "Awaiting approval"}</span>
+                      <h3>Team task board</h3>
+                      {state.task.id ? <><strong>{state.task.id}</strong><p>{state.proposal.task}</p><p>Assigned team: {state.proposal.team}</p><p>Linked case: {state.case.id}</p><small>Task created, not completed. A person performs the investigation.</small></> : <p>The approved task will appear here, linked to its case and assigned team.</p>}
+                    </article>
+                    <article className={styles.executionCard}>
+                      <span className={styles.tag}>{state.sent ? "Simulated sent" : state.email.status === "approved" ? "Approved · Ready to simulate" : state.email.status === "rejected" ? "Rejected · Not sent" : "Awaiting approval"}</span>
+                      <h3>Simulated outbox</h3>
+                      {state.sent ? <><p className={styles.proposal}>{state.proposal.draft}</p><small>No email was dispatched. This is the exact approved reply saved in your session.</small></> : <p>{state.email.status === "approved" ? "Your approved draft is ready. Use Simulate sending approved reply above; approval alone does not send it." : "Approve the reply, then explicitly simulate sending it. The saved message will appear here."}</p>}
+                    </article>
                   </div>
-                )}
+                  <p className={styles.caption}>These are saved sandbox records, not connected business apps. Refresh to see your progress during this one-hour session. No refund, payment change or external message occurs.</p>
+                  {Boolean(state.case.id || state.task.id || state.sent) && <div className={styles.nextStep}>
+                    <h3>What could this look like for your team?</h3>
+                    <p>Bring one recurring handoff. We’ll discuss the people, tools and approvals involved, and where AI-assisted work could fit. Your real systems would need a separately scoped integration.</p>
+                    <Link className={styles.primary} href="/contact?service=automation#contact-message">Explore this for my business <ArrowRight size={16} /></Link>
+                  </div>}
+                </section>
               </>
             )}
           </div>
@@ -491,7 +525,7 @@ export default function OperationsHub() {
           </button>
           <button
             className={styles.primary}
-            disabled={busy}
+            disabled={controlsBusy}
             onClick={() => {
               const choice = confirm;
               setConfirm(null);
