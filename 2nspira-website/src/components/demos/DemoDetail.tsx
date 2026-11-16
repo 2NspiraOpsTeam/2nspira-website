@@ -15,7 +15,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
   if (kind === "manufacturing") return <ManufacturingVision />;
   const demo = demos[kind];
   return (
-    <main className={pageMain}>
+    <main id="main-content" tabIndex={-1} className={pageMain}>
       <DemoHero
         category="K–12 school management"
         title="One learning journey. Everyone connected."
