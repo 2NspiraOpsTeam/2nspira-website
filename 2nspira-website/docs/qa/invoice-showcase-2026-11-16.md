@@ -35,3 +35,9 @@
 - Six native capability disclosures and an exclusive four-step native walkthrough work with keyboard and without JavaScript; existing Reveal enhancement respects reduced motion.
 - Screenshot section uses the existing full workspace capture and two new rendered close-ups: proposal/approval controls and saved case, linked task and simulated outbox. Close-ups were captured from the actual local OperationsHub using the existing in-memory SQLite handler and deterministic mocked provider from `scripts/operations-experience-qa.mjs`. No customer records, real provider invocation or external messages were involved. The saved-record view excludes the unrelated chat launcher and downstream marketing CTA. PNG captures were converted to WebP at quality 88 without altering UI content.
 - Full-size screenshots open directly in a new tab, with explicit accessible labels. Screenshot dimensions match the exported assets.
+
+## Modern palette refinement
+
+- Replaced plum showcase surfaces, typography and controls with navy, off-white and restrained teal; copper remains a minor accent. Sharper button corners and a neutral product frame replace rounded plum treatment.
+- Hero now uses the existing actual proposal screenshot rather than purple concept artwork. Existing captured workspace screenshots remain unaltered and retain their original UI colors. No backend or demo behavior changed.
+- Local lint: zero errors, four existing unrelated warnings. Canonical build and Worker smoke gate, typecheck, rendered checks at 1440/768/390/320, image links, native disclosures, keyboard, reduced motion, no-JS and main-region axe checks passed. Desktop/mobile screenshots inspected.

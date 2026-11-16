@@ -5,7 +5,7 @@ import { ArrowRight, FileText, ListChecks, MessageSquare, ShieldCheck, History, 
 import DemoSchema from "@/components/demos/DemoSchema";
 import { publicPageMetadata } from "@/lib/pageMetadata";
 import styles from "./showcase.module.css";
-const image = "/images/demos/ai-operations-copper-20261116.webp";
+const image = "/images/demos/invoice-feature-review-20261116.webp";
 const workspace = "/demos/ai-operations#operations-workspace";
 const description = "Turn a billing question into a clear next step. Explore real AI analysis, proposed cases and tasks, editable replies and individual human approvals in the AI Invoice Workflow demo.";
 export const metadata = publicPageMetadata({ title: "AI Invoice Workflow Demo", shareTitle: "Less invoice chasing. A clearer next step.", description, path: "/demos/ai-invoice-workflow", image });
@@ -24,7 +24,7 @@ export default function InvoiceShowcase() {
     <section className={styles.hero}><div className={styles.container}>
       <Link href="/demos" className={styles.back}>← All demos</Link>
       <div className={styles.heroGrid}><div><p className={styles.eyebrow}>AI Invoice Workflow · Interactive demo</p><h1>Less invoice chasing.<br /><em>A clearer next step.</em></h1><p className={styles.lead}>A disputed charge. A missing credit. Another email waiting for an answer. See how AI turns a billing question into coordinated work—ready for your team to review.</p><div className={styles.actions}><Link href={workspace} className={styles.primary}>Try the demo <ArrowRight size={17} aria-hidden="true" /></Link><a href="#walkthrough" className={styles.secondary}>See how it works ↓</a></div><p className={styles.caption}>Real AI · Fictional invoices · Human-approved actions</p></div>
-      <figure className={styles.art}><Image src={image} alt="Illustration of fragmented invoices becoming organized cases, tasks and replies through a human approval gateway." width={1672} height={941} sizes="(min-width:1024px) 640px, 100vw" unoptimized priority /></figure></div>
+      <figure className={styles.art}><Image src={image} alt="Actual invoice demo interface showing the proposed case, Finance owner, priority and individual review controls." width={858} height={519} sizes="(min-width:1024px) 640px, 100vw" unoptimized priority /></figure></div>
       <ol className={styles.flow}><li><span>01</span> Choose a billing question</li><li><span>02</span> Review AI-prepared work</li><li><span>03</span> Approve and see the result</li></ol>
     </div></section>
     <section id="screenshots" className={styles.container} aria-labelledby="screenshots-heading"><p className={styles.eyebrow}>See the actual workspace</p><h2 id="screenshots-heading">From the inbox<br />to the next action.</h2><p className={styles.intro}>A closer look at the demo: choose a request, inspect what AI prepares, and see the records your approvals create.</p><Reveal><div className={styles.gallery}>{[
