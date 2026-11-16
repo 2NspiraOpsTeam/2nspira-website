@@ -1,3 +1,4 @@
+import InvoiceDemoFeature from "@/components/demos/InvoiceDemoFeature";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, LayoutDashboard, PanelsTopLeft, Workflow } from "lucide-react";
@@ -37,6 +38,7 @@ export default async function SoftwarePage() {
       ["Build & verify in phases", "Review useful increments with the people who will use them. Check the happy path, exceptions and recovery."],
       ["Handover with clear ownership", "Agree documentation, code and data ownership, operating responsibilities and any separately scoped support."]
     ].map(([title,text],i)=><li key={title}><span className={styles.number}>0{i+1}</span><div><h3 className={h3}>{title}</h3><p className="mt-3 leading-7 text-body">{text}</p></div></li>)}</ol></div></div></section>
+    <InvoiceDemoFeature />
     <ServiceQuestions items={[{question:"Can you improve an existing system?",answer:"Yes. We review its current state, licensing, data and integration constraints before recommending improvements, replacement or phased modernization."},{question:"Is a website project the right starting point?",answer:"If you mainly need a new website or redesign, explore our Websites service. You do not need a custom software engagement to build a clear, credible business website."},{question:"How are delivery and support agreed?",answer:"Your proposal defines scope, milestones, acceptance criteria, code and data ownership, handover and support responsibilities. No pricing or ongoing subscription is committed by this page."}]} />
     <section className={`${sectionBand} text-center`} aria-labelledby="software-conversation"><div className={`${styles.container} max-w-3xl`}><h2 id="software-conversation" className={h2}>Bring one workflow.<br />Find a practical next step.</h2><p className={lead}>What is slow, disconnected or hard to track? You do not need a technical specification to start.</p><Link href={contact} className={`mt-7 ${buttonPrimary}`}>Discuss Your Project</Link><div className="mt-7 flex flex-wrap justify-center gap-5"><Link href="/websites" className={linkInline}>Need a website instead?</Link><Link href="/technology-advisory" className={linkInline}>Need direction first?</Link></div></div></section>
   </main>;
