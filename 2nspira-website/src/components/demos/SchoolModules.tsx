@@ -151,6 +151,7 @@ export default function SchoolModules() {
         <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
           {groups.map(({ title, icon: Icon, description, modules }) => (
             <article
+              data-catalog-card
               key={title}
               className="overflow-hidden rounded-3xl border border-line"
             >

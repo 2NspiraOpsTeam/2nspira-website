@@ -2,6 +2,13 @@
 // Microsoft Foundry and GitHub Copilot names. Official asset provenance:
 // docs/qa/ai-tools-carousel-2026-11-10.md. No partnership/certification claim.
 export const aiTools = [
+  { id: "notebooklm", name: "NotebookLM", logo: "/images/ai-tools/notebooklm.svg" },
+  { id: "gemini", name: "Gemini", logo: "/images/ai-tools/gemini.png" },
+  { id: "nano-banana", name: "Nano Banana", logo: "/images/ai-tools/gemini.png" },
+  { id: "deepseek", name: "DeepSeek", logo: "/images/ai-tools/deepseek.png" },
+  { id: "gamma", name: "Gamma", logo: "/images/ai-tools/gamma.png" },
+  { id: "meta-ai", name: "Meta AI", logo: "/images/ai-tools/meta-ai.png" },
+  { id: "adobe-creative-cloud-mcp", name: "Adobe Creative Cloud MCP", logo: "/images/ai-tools/creative-cloud.svg" },
   { id: "chatgpt", name: "ChatGPT", logo: "/images/ai-tools/chatgpt.png" },
   { id: "claude", name: "Claude", logo: "/images/ai-tools/claude.svg" },
   { id: "grok", name: "Grok", logo: "/images/ai-tools/grok.png" },

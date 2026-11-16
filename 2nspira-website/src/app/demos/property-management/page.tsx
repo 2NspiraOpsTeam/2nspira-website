@@ -70,7 +70,7 @@ export default function PropertyDemoPage() {
               <a
                 href={`${PROPERTY_DEMO_URL}${path}/`}
                 key={path}
-                className={`rounded-2xl border border-line p-7 focus-visible:outline-2 focus-visible:outline-accent ${["bg-[#e0f1e8]", "bg-[#fff0d9]", "bg-[#e9e5f5]", "bg-[#fff3ce]"][i]}`}
+                className={`rounded-2xl border border-line p-7 focus-visible:outline-2 focus-visible:outline-accent ${["bg-[#e5eaf2]", "bg-[#f3ecde]", "bg-[#e9edf5]", "bg-[#f7efdc]"][i]}`}
               >
                 <h3 className="text-xl font-medium text-ink">
                   {title} <span aria-hidden="true">↗</span>
