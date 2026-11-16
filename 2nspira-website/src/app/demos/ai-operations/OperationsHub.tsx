@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   ArrowRight,
   Check,
@@ -133,7 +132,7 @@ export default function OperationsHub() {
           Turn an incoming request into a clear next step. Explore a real
           AI-assisted workflow—with a human in control of every action.
         </p>
-        <a className={styles.heroStart} href="#operations-workspace">Step into the workspace ↓</a></div><figure className={styles.heroArtwork}><Image src="/images/demos/ai-operations-copper-20261116.webp" alt="Illustration of scattered invoices becoming connected cases, tasks and replies through a human approval gateway." width={1672} height={941} sizes="(min-width:900px) 600px, 100vw" unoptimized priority /><figcaption>Connected work. Human judgment.</figcaption></figure></div>
+        <a className={styles.heroStart} href="#operations-workspace">Step into the workspace ↓</a></div><figure className={styles.heroArtwork}><div className={styles.heroFlow}><div><Inbox size={28} aria-hidden="true" /><span><strong>Start with a request</strong><small>A billing question, ready for review.</small></span></div><div><ShieldCheck size={28} aria-hidden="true" /><span><strong>Keep people in control</strong><small>Review and approve each proposed action.</small></span></div><div><Workflow size={28} aria-hidden="true" /><span><strong>Move the work forward</strong><small>Connected cases, tasks and a simulated reply.</small></span></div></div><figcaption>Connected work. Human judgment.</figcaption></figure></div>
         <details className={styles.supportDetail}><summary>Want this kind of workflow for your business?</summary><p><Link href="/accounts-receivable-workflow-automation">Explore invoice workflow support</Link> or <Link href="/contact?service=automation#contact-message">discuss your invoice workflow</Link>. This sandbox demonstrates a capability, not customer results.</p></details>
         <div className={styles.badges}>
           <span>
