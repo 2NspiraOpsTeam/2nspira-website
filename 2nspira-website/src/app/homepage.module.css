@@ -161,3 +161,7 @@
 @media(max-width:360px){.deviceStage{padding:24px 16px;min-height:330px;gap:8px}.deviceStage>img{width:145px}.deviceLabel{font-size:1.1rem}}
 @media(prefers-reduced-motion:no-preference){.launchCopy{animation:homepage-settle 320ms ease-out both}@keyframes homepage-settle{from{transform:translateY(8px)}to{transform:translateY(0)}}}
 @media(prefers-reduced-motion:reduce){.home *,.home *:before,.home *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.portfolioCard:hover,.portfolioCard:hover img,.deviceStage>img{transform:none!important}}
+
+/* Give the three core service paths equal visual weight. */
+.coreGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.coreCard:first-child{border-top:1px solid #dce0da}.coreServices .sectionHead>p{max-width:38ch}.coreServices .sectionHead h2{max-width:17ch}
+@media(max-width:1000px){.coreGrid{grid-template-columns:1fr}}
