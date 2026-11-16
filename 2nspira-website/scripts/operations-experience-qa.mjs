@@ -107,7 +107,7 @@ await page.getByRole('button', {name:'Speak your request', exact:true}).click();
 assert.equal(await page.getByRole('button', {name:'Process request', exact:true}).isDisabled(), true);
 await page.evaluate(() => { window.__speech.onresult({results:[{isFinal:true,0:{transcript:'Fictional invoice INV-1023 has two charges. Please investigate.'}}]}); window.__speech.onend(); });
 await page.waitForFunction(() => document.querySelector('textarea').value.startsWith('Fictional invoice'));
-assert.equal(await page.getByLabel('Incoming message').inputValue(), 'Fictional invoice INV-1023 has two charges. Please investigate.');
+assert.equal(await page.getByLabel('Incoming email or request').inputValue(), 'Fictional invoice INV-1023 has two charges. Please investigate.');
 assert.equal(await page.getByRole('heading', {name:'One request. A clearer path forward.'}).isVisible(), true);
 await page.getByRole('button', {name:'Speak your request', exact:true}).click();
 await page.evaluate(() => { window.__speech.onerror({error:'not-allowed'}); window.__speech.onend(); });
@@ -189,7 +189,7 @@ await page
 await page
   .getByRole("button", { name: "Write a fictional request", exact: false })
   .click();
-const input = page.getByLabel("Incoming message");
+const input = page.getByLabel("Incoming email or request");
 assert.equal(await input.inputValue(), "");
 assert.equal(
   await page
@@ -220,6 +220,6 @@ const fallback = await unsupported.newPage();
 await fallback.goto(base + "/demos/ai-operations");
 await fallback.getByText('Voice input is not supported in this browser.',{exact:false}).waitFor();
 assert.equal(await fallback.getByRole('button',{name:'Speak your request',exact:true}).isDisabled(),true);
-assert.equal(await fallback.getByLabel('Incoming message').isEnabled(),true);
+assert.equal(await fallback.getByLabel('Incoming email or request').isEnabled(),true);
 console.log('PASS unsupported browser typing fallback');
 await browser.close();
