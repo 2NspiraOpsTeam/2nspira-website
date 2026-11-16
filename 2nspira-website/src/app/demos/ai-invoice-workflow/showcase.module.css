@@ -1,4 +1,4 @@
-.page { background:#fcfaf8; color:#302334; }
+.page { --petrol:#24556b; --ice:#eaf2f5; background:#fcfaf8; color:#302334; }
 .container { max-width:1200px; margin:auto; padding:64px 24px; }
 .hero { background:linear-gradient(130deg,#f5eef5,#fcf6f0); border-bottom:1px solid #e4d9e2; }
 .hero .container { padding-top:28px; padding-bottom:32px; }
@@ -40,3 +40,35 @@
 @media(min-width:900px) and (prefers-reduced-motion:no-preference) { .cards article { transition:transform .2s,box-shadow .2s; } .cards article:hover { transform:translateY(-3px); box-shadow:0 12px 24px #4225380d; } }
 @media(max-width:900px) { .heroGrid,.split { grid-template-columns:1fr; gap:28px; } .cards { grid-template-columns:repeat(2,1fr); } .art img { aspect-ratio:16/9; } }
 @media(max-width:560px) { .container { padding:44px 20px; } .cards,.flow { grid-template-columns:1fr; } .cards article { padding:24px; } .flow { gap:14px; } .heroGrid { margin-top:20px; } .scenarios a { width:100%; } }
+
+/* Petrol blue balances the warm copper and plum without replacing their identity. */
+.hero { background:radial-gradient(ellipse at 100% 100%,#dcebf0 0,transparent 55%),linear-gradient(130deg,#f5eef5,#fcf6f0); }
+.flow { border-top-color:#b8ced8; }
+.flow span,.cards svg { color:var(--petrol); }
+.band { background:var(--ice); border-color:#cfdee5; }
+.stepHint { font-size:13px; color:var(--petrol); margin-bottom:16px; }
+.steps { gap:12px; }
+.steps li { display:block; }
+.steps details { width:100%; border:1px solid #bfd2dc; border-radius:16px; background:#ffffffa8; overflow:hidden; }
+.steps summary { display:flex; align-items:center; gap:16px; cursor:pointer; min-height:72px; padding:16px 20px; font-size:16px; font-weight:600; list-style:none; }
+.steps summary::-webkit-details-marker { display:none; }
+.steps summary > span:first-child { display:grid; place-items:center; flex-shrink:0; width:36px; height:36px; border-radius:50%; background:#e5eef2; color:var(--petrol); font-size:12px; }
+.steps details[open] { background:white; border-color:var(--petrol); box-shadow:0 8px 24px #24556b0c; }
+.steps details[open] summary > span:first-child { background:var(--petrol); color:white; }
+.stepPlus { margin-left:auto; color:var(--petrol); }
+.steps details[open] .stepPlus { transform:rotate(45deg); }
+.steps details p { padding:0 20px 22px 72px; }
+.example { margin-top:20px; border-top:1px solid #d6e2e8; }
+.example summary { cursor:pointer; color:var(--petrol); font-size:13px; font-weight:600; min-height:44px; padding:14px 0; }
+.example p { padding-bottom:4px; }
+.cta { background:linear-gradient(115deg,#e3eef3,#f1e8eb 80%); border-top:1px solid #c9dbe3; }
+.scenarios a:hover,.scenarios a:focus-visible { background:var(--ice); border-color:var(--petrol); color:var(--petrol); }
+.page a:focus-visible,.page summary:focus-visible { outline-color:var(--petrol); }
+@media(prefers-reduced-motion:no-preference) {
+.primary,.scenarios a,.art { transition:transform .22s ease,box-shadow .22s ease,background .22s ease; }
+.primary:hover { transform:translateY(-2px); box-shadow:0 8px 20px #60345224; }
+.scenarios a:hover svg { transform:translateX(3px); }
+.scenarios svg,.stepPlus { transition:transform .22s ease; }
+.art:hover { transform:translateY(-3px); box-shadow:0 28px 64px #24556b28; }
+}
+@media(max-width:560px) { .steps summary { padding:14px; gap:12px; } .steps details p { padding:0 18px 20px; } }
