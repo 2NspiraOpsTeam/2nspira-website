@@ -1,3 +1,4 @@
+import InvoiceDemoFeature from "@/components/demos/InvoiceDemoFeature";
 import Image from "next/image";
 import { PanelsTopLeft, Workflow, Compass, Users, ScanLine, Handshake } from "lucide-react";
 import Link from "next/link";
@@ -82,6 +83,8 @@ export default function Home() {
       <div className={styles.coreGrid}>{serviceNeeds.map((service, i) => <article key={service.href} className={styles.coreCard}><span className={styles.serviceGlyph} aria-hidden="true">{(() => { const Icon = serviceHighlights[i].Icon; return <Icon size={30} strokeWidth={1.4} />; })()}</span><span className={styles.serviceNumber}>0{i + 1}</span><h3>{service.name}</h3><p>{serviceHighlights[i].value}</p><ul className={styles.capabilities}>{serviceHighlights[i].capabilities.map(item => <li key={item}>{item}</li>)}</ul><Link href={service.href} className={styles.textLink}>{service.link} <span aria-hidden="true">↗</span></Link></article>)}</div>
       <div className={styles.moreServices}><h3>Support across all three</h3><p>Technology guidance and ongoing care, scoped to your needs.</p><Link href="/technology-advisory" className={styles.textLink}>Technology advisory →</Link><Link href="/managed-services-support" className={styles.textLink}>Maintenance &amp; support →</Link></div>
     </section>
+
+    <InvoiceDemoFeature />
 
     <section id="featured-websites" className={`${styles.section} ${styles.portfolio}`} aria-labelledby="portfolio-heading">
       <div className={styles.sectionHead}><div><p className={styles.eyebrow}>Selected websites · Live and explorable</p><h2 id="portfolio-heading">Different businesses.<br />Distinct digital experiences.</h2></div><Link href="/work" className={styles.textLink}>Explore our work <span aria-hidden="true">→</span></Link></div>
