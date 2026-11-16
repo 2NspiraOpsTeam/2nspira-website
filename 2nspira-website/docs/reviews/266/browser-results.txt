@@ -1,0 +1,6 @@
+PASS rendered 1440px, saved records and outbox
+PASS rendered 768px, saved records and outbox
+PASS rendered 390px, saved records and outbox
+PASS rendered 320px, saved records and outbox
+PASS custom clear, empty disabled, provider failure, reset, dialog Escape, edit approval, refresh
+PASS no page exceptions

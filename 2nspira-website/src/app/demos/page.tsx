@@ -129,6 +129,7 @@ export default function Demos() {
         </div>
       </section>
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6"><div className="rounded-3xl border border-line bg-white p-7 sm:p-10"><p className={eyebrow}>Website AI assistant · live demonstration</p><h2 className={`mt-4 ${h2}`}>A helpful first conversation. A human next step.</h2><p className="mt-4 max-w-2xl leading-7 text-body">Explore a branded website assistant and see how a free-allowance limit leads visitors to your team. This demonstration gives real AI answers using a limited free allowance, with a contact-page handoff when the allowance is reached.</p><Link href="/chatbot-demo" className={`mt-6 ${buttonPrimary}`}>Try the AI assistant <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link></div></section>
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6"><div className="rounded-3xl border border-line bg-white p-7 sm:p-10"><p className={eyebrow}>AI Operations Hub · interactive demonstration</p><h2 className={`mt-4 ${h2}`}>AI prepares the work. Your people decide.</h2><p className="mt-4 max-w-2xl leading-7 text-body">Explore five fictional requests or write your own. Real AI prepares a case, internal task and reply. You approve every sandbox action; email delivery is always simulated.</p><Link href="/demos/ai-operations" className={`mt-6 ${buttonPrimary}`}>Explore the Operations Hub <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link></div></section>
       <DemoTrust />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <details className="rounded-2xl border border-line p-6">
@@ -137,7 +138,7 @@ export default function Demos() {
           </summary>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-body">
             Fictional organizations and sample data, not client deployments or
-            measured client outcomes. Actions are simulated in your browser tab;
+            measured client outcomes. Existing industry-demo actions are simulated in your browser tab; the AI Operations Hub uses expiring server-side sandbox records.
             no real payments, messages, purchasing or shipments. Confirm Reset
             demo to restore the examples. Do not enter personal information.
             Explore{" "}

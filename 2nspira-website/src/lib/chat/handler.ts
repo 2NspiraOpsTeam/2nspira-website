@@ -1,3 +1,4 @@
+import { requestCompletion } from "./provider";
 import { sources, systemPrompt } from "./knowledge";
 export interface ChatEnv {
   CHAT_API_KEY?: string;
@@ -40,11 +41,7 @@ export async function handleChat(request: Request, env: ChatEnv, providerFetch: 
     const shared = await env.CHAT_RATE_LIMIT.limit({ key: "site" });
     if (!visitor.success || !shared.success) return reply(429, "Our free chat allowance is taking a breather. Please contact 2Nspira for more information, or try again later.", "limit", true);
     // No automatic retries, paid fallback, tools, conversation uploads or storage.
-    const response = await providerFetch("https://api.groq.com/openai/v1/chat/completions", {
-      method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${env.CHAT_API_KEY}` },
-      body: JSON.stringify({ model: "qwen/qwen3.8-27b", messages: [{ role: "system", content: systemPrompt }, { role: "user", content: question.trim() }], max_completion_tokens: 384, temperature: 0.2, reasoning_effort: "none" }),
-      signal: AbortSignal.timeout(15000),
-    });
+    const response = await requestCompletion(env.CHAT_API_KEY, [{role:"system",content:systemPrompt},{role:"user",content:question.trim()}], {tokens:384,timeout:15000}, providerFetch);
     if (response.status === 429) return reply(429, "Our free AI allowance has been reached. Please contact 2Nspira for more information, or try again later.", "limit", true);
     if (!response.ok) return reply(503, "Our AI assistant is temporarily unavailable. Please contact the team for help.", "unavailable");
     const data = await response.json() as { choices?: { message?: { content?: unknown } }[] };
