@@ -1,40 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { buttonPrimary, eyebrow, h2 } from "@/components/ui";
+import { eyebrow, h2 } from "@/components/ui";
 
-export default function InvoiceDemoFeature({ editorial = false }: { editorial?: boolean }) {
-  return (
-    <section id="invoice-workflow-demo" aria-labelledby="invoice-demo-heading" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16">
-      <div className={`overflow-hidden rounded-3xl border border-line bg-white ${editorial ? "lg:grid lg:grid-cols-2 lg:items-stretch" : ""}`}>
-        <figure className="relative bg-[#050c19]">
-          <Image
-            src="/images/demos/ai-invoice-workflow-20261116.webp"
-            alt="Conceptual illustration of invoices flowing through a connected workflow to a human-review checkpoint"
-            width={1536}
-            height={864}
-            sizes="(max-width: 1152px) 100vw, 1100px"
-            unoptimized
-            className={editorial ? "h-full min-h-64 w-full object-cover" : "aspect-video w-full object-cover"}
-          />
-          <figcaption className="absolute bottom-3 left-3 rounded-full bg-[#050c19]/90 px-3 py-1 text-xs font-medium text-white">AI-assisted. Human-approved. · Concept illustration</figcaption>
-        </figure>
-        <div className="p-7 sm:p-10">
-        <p className={eyebrow}>Accounts receivable automation · B2B service firms</p>
-        <h2 id="invoice-demo-heading" className={`mt-4 max-w-3xl ${h2}`}>Less manual work around overdue invoices.</h2>
-        {editorial ? <><p className="mt-4 max-w-3xl leading-7 text-body">A stalled invoice. A missing approval. An unclear next step. See how AI can connect the handoff—while your team stays in control.</p><p className="mt-4 max-w-3xl leading-7 text-body">Try a fictional billing dispute. Review the proposed case, task and reply. Approve each action yourself.</p></> : <>
-        <p className="mt-4 max-w-3xl leading-7 text-body">We help B2B service firms reduce the manual work around overdue invoices. Our invoice follow-up automation service identifies why invoices stall, connects existing tools, and keeps follow-up human-approved.</p>
-        <p className="mt-4 max-w-3xl leading-7 text-body">Chasing invoices by email? Waiting on missing documents or approvals? Unclear who owns the next follow-up?</p>
-        <p className="mt-4 max-w-3xl leading-7 text-body">Start with a fictional billing dispute in our interactive demo. Real AI proposes a case, an internal task and a reply; you review and approve each step.</p>
-        </>}
-        <p className="mt-5 text-sm leading-6 text-body">Demo only: fictional data, sandbox records and simulated email. No real invoices are changed or emails sent.</p>
-        <p className="mt-5"><Link href="/accounts-receivable-workflow-automation" className="inline-flex min-h-11 items-center font-medium text-accent underline underline-offset-4">Explore accounts receivable workflow automation →</Link></p>
-        <div className="mt-7 flex flex-wrap items-center gap-4">
-          <Link href="/demos/ai-operations" className={buttonPrimary}>Try the invoice-dispute demo <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link>
-          <Link href="/contact?service=automation#contact-message" className="inline-flex min-h-11 items-center text-sm font-medium text-accent underline underline-offset-4">Discuss your invoice workflow</Link>
-        </div>
-        </div>
-      </div>
-    </section>
-  );
+export default function InvoiceDemoFeature({ editorial = false, productScreen = false }: { editorial?: boolean; productScreen?: boolean }) {
+  return <section id="invoice-workflow-demo" aria-labelledby="invoice-demo-heading" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16">
+    <div className={`overflow-hidden rounded-3xl border border-[#dfd1dd] bg-[#fcf8fb] ${editorial ? "lg:grid lg:grid-cols-2 lg:items-stretch" : ""}`}>
+      <Link href="/demos/ai-invoice-workflow" className={`block min-w-0 ${productScreen ? "bg-white p-3 self-center" : "bg-[#291522]"} focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#75466c]`} aria-label="Discover the AI Invoice Workflow demo">
+        <Image src={productScreen ? "/images/demos/ai-operations-screen-20261116.webp" : "/images/demos/ai-operations-copper-20261116.webp"} alt={productScreen ? "Actual AI Operations demo workspace with billing samples, reviewed proposals and sandbox records." : "Illustration of scattered invoices becoming organized cases, tasks and replies through a human approval gateway."} width={productScreen ? 1250 : 1672} height={productScreen ? 950 : 941} sizes="(max-width:1024px) 100vw, 560px" unoptimized className={productScreen ? "h-auto w-full object-contain" : editorial ? "h-full min-h-64 w-full object-cover" : "aspect-video w-full object-cover"} />
+      </Link>
+      <div className="p-7 sm:p-10"><p className={eyebrow}>AI Invoice Workflow · Interactive demo</p><h2 id="invoice-demo-heading" className={`mt-4 max-w-3xl ${h2}`}>Still chasing answers about invoices?</h2><p className="mt-4 max-w-3xl leading-7 text-body">Turn a billing question into a case, a task and a reply. AI prepares the work. Your team decides what moves forward.</p><p className="mt-5 text-sm font-semibold tracking-wide text-[#75466c]">Billing question → AI proposal → Human approval</p><div className="mt-7 flex flex-wrap items-center gap-5"><Link href="/demos/ai-operations#operations-workspace" className="inline-flex min-h-12 items-center rounded-full bg-[#603452] px-6 py-3 text-sm font-medium text-white hover:bg-[#48253e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#75466c]">Try the demo <ArrowRight aria-hidden="true" className="ml-2 h-4 w-4" /></Link><Link href="/demos/ai-invoice-workflow" className="inline-flex min-h-11 items-center text-sm font-medium text-[#643d60] underline underline-offset-4">Discover the capabilities →</Link></div><p className="mt-5 text-xs leading-6 text-muted">Fictional data · Saved sandbox records · Simulated email</p></div>
+    </div>
+  </section>;
 }

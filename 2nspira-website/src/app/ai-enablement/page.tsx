@@ -1,5 +1,4 @@
-import WorkflowExplorer from "@/components/engagement/WorkflowExplorer";
-import engagement from "@/components/engagement/engagement.module.css";
+import InvoiceDemoFeature from "@/components/demos/InvoiceDemoFeature";
 import offersStyles from "./offers.module.css";
 import PlatformCarousel from "@/components/platforms/PlatformCarousel";
 import { aiTools } from "@/lib/ai-tools";
@@ -24,7 +23,7 @@ export const metadata: Metadata = publicPageMetadata({
 const offers = [
   {
     id: "ai-readiness", step: "01 · Readiness", title: "AI readiness assessment and strategy",
-    problem: "We don’t know where AI will help. Start with your people, priorities and the work.",
+    problem: "Not sure where AI can help? Start with your people, priorities and the work.",
     deliverables: ["Stakeholder workshop and prioritized use-case shortlist", "Data and access constraints, staff training and an acceptable-use baseline for your review", "Phased adoption roadmap with a proposed pilot owner and success criteria"],
     boundary: "A scoped assessment is quoted separately from the initial conversation. A process change or ordinary automation may be the better answer.",
     cta: "Explore an AI readiness assessment"
@@ -38,23 +37,19 @@ const offers = [
   },
   {
     id: "ai-implementation", step: "03 · Implementation", title: "AI implementation services: start with one workflow",
-    problem: "We have a workflow worth improving. Test one practical workflow before expanding it.",
+    problem: "Have a workflow worth improving? Test one practical workflow before expanding it.",
     deliverables: ["One agreed workflow, approved test data and an access model", "Working pilot with evaluation cases, human review and failure handling", "Operator handoff and baseline-versus-pilot measurement report"],
     boundary: "Agree quality thresholds and stop criteria before testing. A pilot is not a promise of ROI or unrestricted autonomous access.",
     cta: "Discuss an AI pilot"
   },
   {
     id: "responsible-ai-support", step: "04 · Optional ongoing support", title: "Ongoing AI adoption support",
-    problem: "We need help keeping AI useful and accountable. Review an agreed workflow as needs, models and policies change.",
+    problem: "Keep AI useful as needs change. Review quality, costs and the next improvements together.",
     deliverables: ["Scheduled answer-quality evaluations and usage/cost reviews", "Failure log, escalation ownership and access/governance reviews", "Prioritized improvements and a documented review cadence"],
     boundary: "Optional support is scoped separately. Systems, support hours, response targets and escalation responsibilities are agreed before contracting; no 24/7 coverage is implied.",
     cta: "Discuss ongoing AI support"
   }
 ];
-
-const offerImages = ["/images/engagement/ai-pathway-20261116.webp", "/images/engagement/employee-training-20261116.webp", "/images/demos/ai-invoice-workflow-20261116.webp", "/images/posts/ai-agents-human-accountability-20261030.webp"];
-const offerAlts = ["Concept illustration of connected platforms leading toward a brighter doorway.", "Illustrative workplace scene of colleagues practicing together with a facilitator.", "Concept illustration of an invoice workflow with a human approval checkpoint.", "Concept illustration of a human overseeing connected AI workspaces."];
-const offerOutcomes = ["A clear next step", "Practical team skills", "One workflow, tested", "Ongoing review and improvement"];
 
 const dimensionIcons = [Compass, UsersRound, Workflow, Database, ShieldCheck, ChartNoAxesCombined, ArrowRight, Check];
 const dimensions = [
@@ -72,25 +67,12 @@ const stages = [
   { title: "Transform", subtitle: "Put AI into everyday operations", text: "Redesign selected workflows, implement appropriate AI tools or agents, integrate existing systems, and validate results with employees and leadership.", output: "Verified AI-Enabled Workflows and Implementation Playbooks" },
   { title: "Evolve", subtitle: "Measure, improve, and expand", text: "Monitor adoption, effectiveness, costs, quality, and risk. Refine the operating model and responsibly extend proven capabilities.", output: "AI Performance Scorecard and Continuous Improvement Roadmap" }
 ];
-const applications = [
-  { title: "Executive leadership", text: "Faster access to useful information, better decision support, and clearer visibility." },
-  { title: "Operations", text: "Fewer repetitive tasks, more consistent handoffs, and improved workflow coordination." },
-  { title: "Customer service", text: "More timely responses, better knowledge access, and smoother service experiences." },
-  { title: "Finance & administration", text: "Assisted document processing, reconciliation support, and reporting—with human review." },
-  { title: "Human resources", text: "Knowledge assistance, onboarding support, and training resources with appropriate controls." },
-  { title: "Schools & nonprofits", text: "Explore staff knowledge assistance using approved guidance, or document workflows with human review. Start with synthetic or approved nonsensitive information—not student, donor or beneficiary records." }
-];
 const questions = [
   { question: "Can you provide AI training for employees using our existing tools?", answer: "Yes—start with your current tools and the tasks your staff need help with. We confirm supported capabilities, licensing, permissions and approved examples before agreeing role-based training. New subscriptions are not automatically required." },
   { question: "What does an AI readiness assessment include?", answer: "An agreed assessment can include stakeholder findings, a prioritized use-case shortlist, data and access constraints, an acceptable-use baseline and a phased roadmap with a proposed pilot owner and success criteria. The exact deliverables are confirmed in the scope." },
-  { question: "Can AI implementation start with one department or workflow?", answer: "Yes. A small team or one workflow can be a useful starting point. We agree an owner, approved information, review steps, evaluation criteria and boundaries before expanding." },
   { question: "How much do AI consulting and training services cost?", answer: "Scope depends on the number of roles and participants, training format, workflow complexity, data readiness, integration requirements and support needs. We agree deliverables, schedule and pricing before work begins; training, assessments, implementation and ongoing support can be scoped separately." },
   { question: "Can we use confidential or student information?", answer: "Data use is agreed during scoping. Initial examples use synthetic or approved nonsensitive information. Any proposed sensitive-data use requires review of permissions, vendor terms, retention, access controls and applicable obligations before implementation. A pilot is not a compliance certification." },
-  { question: "How is pilot success measured?", answer: "Agree a baseline, representative evaluation cases, quality thresholds, human-review steps and stop criteria before building. Compare the pilot with the current workflow, including cost and error handling—not speed alone. We do not guarantee ROI." },
-  { question: "What does ongoing AI adoption support include?", answer: "Support is optional and scoped for named systems. Agree evaluation and review cadence, support hours, response targets, exclusions and escalation ownership before contracting. It is not an unlimited or 24/7 service." },
   { question: "Do we need to choose an AI tool before we talk?", answer: "No. Start with your organizational priorities and the work you want to improve. Readiness, data, risks, and team capacity help determine whether an AI tool, a process change, or another approach is appropriate." },
-  { question: "Does every engagement include all five stages?", answer: "No. The roadmap is a flexible framework, not a fixed package. We agree the stages, deliverables, implementation responsibilities, and any ongoing support for your organization before work begins." },
-  { question: "How does the free scorecard differ from a readiness engagement?", answer: "The AI Readiness Scorecard is a self-guided starting point. A scoped organizational readiness engagement can examine leadership, people, workflows, data, technology, and governance in greater depth, with agreed findings and priorities." },
   { question: "What should we bring to the first conversation?", answer: "Bring your priorities, an example workflow, current AI experiments, and the decisions you need help making. Do not include sensitive records or credentials in the booking form." }
 ];
 const jsonLd = {
@@ -115,68 +97,59 @@ export default function Page() {
             <p className="mt-4 leading-7 text-body">Get AI-ready. Put AI to work. Keep it accountable.</p>
             <div className="mt-7 flex flex-wrap gap-3"><Link href="/contact?service=ai#contact-message" className={buttonPrimary}>Discuss Your Project</Link><Link href="/resources/ai-readiness-scorecard" className={buttonSecondary}>Take the free readiness scorecard</Link><a href="#ai-offers-heading" className={buttonSecondary}>Find your starting point ↓</a></div>
           </div>
-          <figure className="overflow-hidden rounded-[2rem] border border-line shadow-xl">
-            <Image src="/images/hero/ai-human-led-v3.webp" alt="Three professionals reviewing connected digital workflows together in an AI operations workspace." width={1536} height={1024} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" />
+          <figure className="overflow-hidden rounded-[2rem] border border-line bg-white shadow-xl"><Link href="/resources/ai-readiness-scorecard" className="block focus-visible:outline-2 focus-visible:outline-accent" aria-label="Explore the AI Readiness Scorecard">
+            <Image src="/images/engagement/ai-readiness-screen-20261116.webp" alt="Actual AI Readiness Scorecard showing assessment sectors and practical readiness priorities." width={1440} height={1000} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" /></Link><figcaption className="border-t border-line px-5 py-4 text-xs leading-6 text-muted">Our AI Readiness Scorecard · Explore your starting point</figcaption>
           </figure>
         </div>
         <p className="mt-8 border-t border-line pt-5 text-sm font-medium text-muted">We don’t just help you adopt AI. We help you build the capabilities to succeed with it.</p>
       </div>
     </section>
-    <section id="ai-tools" aria-label="AI tools and platforms" className="mx-auto min-w-0 max-w-6xl scroll-mt-24 px-4 pb-10 sm:px-6">
-          <PlatformCarousel platforms={aiTools} label="AI tool logos" listLabel="AI tools and platforms" description="AI tools & platforms we work with." notice="Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification." />
-    </section>
-    <PageSections items={[["ai-offers-heading", "Choose your starting point"], ["ai-training", "Team training"], ["ai-outcomes-heading", "Picture the possibilities"], ["ai-roadmap-heading", "See the path"], ["ai-work-heading", "Explore our work"]]} />
+    <PageSections items={[["ai-offers-heading", "Choose your starting point"], ["ai-training", "Team training"], ["invoice-workflow-demo", "Try the invoice demo"], ["ai-roadmap-heading", "See the path"], ["ai-work-heading", "Explore our work"]]} />
     <section className={sectionBand} aria-labelledby="ai-offers-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <EyebrowPill>Four ways forward</EyebrowPill>
       <h2 id="ai-offers-heading" className={`mt-5 scroll-mt-28 ${h2}`}>Start where you are.</h2>
-      <p className={`max-w-2xl ${lead}`}>Choose the help you need. Each engagement is scoped separately.</p>
+      <p className={`max-w-2xl ${lead}`}>Choose the help your team needs now.</p>
       <nav aria-label="AI engagement options" className={offersStyles.choices}>{offers.map((offer, i) => <a key={offer.id} href={`#${offer.id}`} className={offersStyles.choice}><span>0{i + 1}</span>{["We need a plan", "We need team training", "We need implementation", "We need ongoing support"][i]}<ArrowRight size={18} aria-hidden="true" /></a>)}</nav>
-      <div className="mt-8 grid gap-6 lg:grid-cols-2">{offers.map((offer, i) => { return <article id={offer.id} key={offer.id} aria-labelledby={`${offer.id}-title`} className={`${offersStyles.offer} ${cardFlat}`}>
-        <div className={offersStyles.offerVisual}><Image src={offerImages[i]} alt={offerAlts[i]} width={1536} height={864} sizes="(min-width:1024px) 550px, 100vw" unoptimized className={offersStyles.offerImage} /><span className={offersStyles.visualLabel}>{offerOutcomes[i]}</span></div>
+      <div className="mt-8 grid gap-6 lg:grid-cols-2">{offers.map((offer) => { return <article id={offer.id} key={offer.id} aria-labelledby={`${offer.id}-title`} className={`${offersStyles.offer} ${cardFlat}`}>
         <div className={offersStyles.offerBody}><p className="text-xs font-semibold uppercase tracking-widest text-accent">{offer.step}</p>
         <h3 id={`${offer.id}-title`} className={`mt-3 ${h3}`}>{offer.title}</h3>
         <p className="mt-3 leading-7 text-body">{offer.problem}</p>
         <details className={offersStyles.scopeDetails}><summary>What’s included</summary><ul className="mt-3 space-y-3 text-sm leading-6 text-body">{offer.deliverables.map(item => <li key={item} className="flex gap-2"><Check size={16} className="mt-1 shrink-0 text-accent" aria-hidden="true" />{item}</li>)}</ul><p className="mt-4 border-t border-line pt-4 text-sm leading-6 text-muted">{offer.boundary}</p></details>
         <Link href="/contact?service=ai#contact-message" className={`mt-auto min-h-11 ${linkInline} ${offersStyles.focusClearance}`}>{offer.cta} →</Link></div>
       </article>; })}</div>
-      <p className="mt-6 flex items-start gap-3 text-sm leading-6 text-muted"><ShieldCheck size={20} className="shrink-0 text-accent" aria-hidden="true" />Your people stay in control. Data access, human review and success criteria are agreed before work begins.</p>
+      <p className="mt-6 flex items-start gap-3 text-sm leading-6 text-muted"><ShieldCheck size={20} className="shrink-0 text-accent" aria-hidden="true" />Your people stay in control, from the first workshop to the working pilot.</p>
     </div></section>
-    <section className={engagement.chapter} aria-labelledby="training-chapter-heading"><div className={engagement.chapterInner}>
-      <Image src="/images/engagement/employee-training-20261116.webp" alt="Illustrative scene of colleagues learning practical AI skills together." width={1536} height={864} sizes="(min-width:768px) 576px, 100vw" unoptimized className={engagement.chapterImage} />
-      <div className={engagement.chapterCopy}><p className={engagement.kicker}>People first. Technology in context.</p><h2 id="training-chapter-heading">Confidence comes<br />from doing.</h2><p>Work on familiar tasks. Practice together. Learn what to trust—and what to check.</p><a href="#ai-training">Explore employee AI training →</a><p className="mt-4 text-xs">Illustrative scene · Not a client training photograph</p></div>
-    </div></section>
-    <section className={section} aria-labelledby="ai-outcomes-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
-      <EyebrowPill>Picture one useful workflow</EyebrowPill><h2 id="ai-outcomes-heading" className={`mt-5 scroll-mt-28 ${h2}`}>Less searching. More moving forward.</h2><p className={`max-w-2xl ${lead}`}>Choose a moment in the workflow. See where assistance ends and human judgment begins.</p>
-      <WorkflowExplorer />
-      <details className={offersStyles.scopeDetails}><summary>Where else could AI help?</summary><div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{applications.map(item => <div key={item.title}><h3 className="font-medium text-ink">{item.title}</h3><p className="mt-1 text-sm leading-6 text-body">{item.text}</p></div>)}</div></details>
-    </div></section>
+    <InvoiceDemoFeature editorial productScreen />
+    <section id="ai-tools" aria-label="AI tools and platforms" className="mx-auto min-w-0 max-w-6xl scroll-mt-24 px-4 pb-10 sm:px-6">
+          <PlatformCarousel platforms={aiTools} label="AI tool logos" listLabel="AI tools and platforms" description="AI tools & platforms we work with." notice="Names and logos belong to their respective owners. Inclusion reflects tool experience, not partnership, endorsement or certification." />
+    </section>
     <section className={`${section} ${offersStyles.roadmapBand}`} aria-labelledby="ai-roadmap-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <EyebrowPill>A clear path, not a leap</EyebrowPill>
       <h2 id="ai-roadmap-heading" className={`mt-5 scroll-mt-28 ${h2}`}>Small steps. Shared confidence.</h2>
       <p className={`max-w-2xl ${lead}`}>Move from understanding the opportunity to improving real work. We adapt the path to your priorities.</p>
-      <figure className={offersStyles.pathwayImage}><Image src="/images/engagement/ai-pathway-20261116.webp" alt="Concept illustration of connected stepping platforms leading toward a warm light." width={1536} height={864} sizes="(min-width:1152px) 1100px, 100vw" unoptimized /><figcaption>A deliberate path forward · Concept illustration</figcaption></figure><ol className={offersStyles.roadmap}>{stages.map((stage, i) => <li key={stage.title}><span className={offersStyles.stepNumber}>0{i + 1}</span><h3 className={`mt-4 ${h3}`}>{stage.title}</h3><p className="mt-2 text-sm leading-6 text-body">{stage.subtitle}</p></li>)}</ol>
-      <details className={offersStyles.scopeDetails}><summary>Explore the roadmap deliverables</summary><div className="mt-4 grid gap-5 sm:grid-cols-2">{stages.map(stage => <div key={stage.title}><h3 className="font-medium text-ink">{stage.title}</h3><p className="mt-2 text-sm leading-6 text-body">{stage.text}</p><p className="mt-2 text-sm font-medium text-accent">{stage.output}</p></div>)}</div><p className="mt-5 text-sm leading-6 text-muted">Not every engagement includes all five stages. Deliverables, responsibilities and validation criteria are agreed in your scope.</p></details>
+      <p className="mt-6 text-sm font-semibold tracking-wide text-accent">Discover → Align → Prepare → Implement → Improve</p>
+      <details className={offersStyles.scopeDetails}><summary>Explore the five-stage approach</summary><div className="mt-5 grid gap-5 sm:grid-cols-2">{stages.map(stage => <div key={stage.title}><h3 className="font-medium text-ink">{stage.title}</h3><p className="mt-2 text-sm leading-6 text-body">{stage.text}</p><p className="mt-2 text-sm font-medium text-accent">{stage.output}</p></div>)}</div><p className="mt-5 text-sm leading-6 text-muted">Choose only the stages you need. Deliverables and responsibilities are agreed in your scope.</p></details>
       <details id="ai-capabilities-heading" className={offersStyles.scopeDetails}><summary>What makes an organization AI-ready?</summary><div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{dimensions.map((item, i) => { const Icon = dimensionIcons[i]; return <div key={item.title}><Icon aria-hidden="true" size={24} className="text-accent" /><h3 className="mt-3 font-medium text-ink">{item.title}</h3><p className="mt-2 text-sm leading-6 text-body">{item.text}</p></div>; })}</div></details>
     </div></section>
     <section className={sectionBand} aria-labelledby="ai-work-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
       <p className="text-sm font-semibold uppercase tracking-widest text-accent">Practical experience. Not just AI theory.</p>
       <h2 id="ai-work-heading" className={`mt-3 ${h2}`}>We put AI to work—starting with our own operations.</h2>
-      <p className={`max-w-2xl ${lead}`}>Explore the workflows we build and the lessons we share. Internal experiments and fictional demos—not verified client outcomes.</p>
+      <p className={`max-w-2xl ${lead}`}>Explore our hands-on engineering and Jeffrey’s field notes from building a human-led AI team.</p>
       <Link href="/work#internal-engineering" className={`mt-5 min-h-11 ${linkInline}`}>Explore our internal AI engineering experience →</Link>
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {[
-          { image: "/images/posts/ai-agents-human-accountability-20261030.webp", width: 1672, height: 941, alt: "Illustration of a human overseeing many connected AI workspaces.", eyebrow: "Hands-on AI practice", title: "An AI team still needs a human lead.", text: "Jeffrey shares lessons from building a multi-agent workflow: coordination, model choices, and human oversight.", href: "/post/building-ai-team-multi-agent-workflow-lessons", label: "Read the field notes" },
-          { image: "/images/work/manufacturing-command-center-card.webp", width: 1100, height: 503, alt: "Manufacturing operations showcase showing connected production, quality, and inventory dashboards.", eyebrow: "Operational systems showcase", title: "Useful AI starts with connected work.", text: "Try our interactive manufacturing demo with fictional data. Explore connected workflows and accountability; its assistant uses local rules, not a live AI model.", href: "https://demo.2nspira.com/manufacturing/", label: "Explore the manufacturing demo" }
-        ].map(item => <article key={item.title} className={`overflow-hidden ${cardFlat}`}>
-          <a href={item.href} className="block focus-visible:outline-2 focus-visible:outline-accent"><Image src={item.image} alt={item.alt} width={item.width} height={item.height} sizes="(min-width: 768px) 540px, calc(100vw - 32px)" unoptimized className="aspect-[16/9] w-full object-cover" /></a>
+          { image: "", width: 1672, height: 941, alt: "", eyebrow: "Hands-on AI practice", title: "An AI team still needs a human lead.", text: "Jeffrey shares lessons from building a multi-agent workflow: coordination, model choices, and human oversight.", href: "/post/building-ai-team-multi-agent-workflow-lessons", label: "Read the field notes" },
+          { image: "/images/work/teams-homepage-20261113.webp", width: 1440, height: 1000, alt: "Teams Management property discovery website built by 2Nspira.", eyebrow: "Published project · Teams Management", title: "Make the next step easier to find.", text: "The challenge: help residents and businesses find the right property and reach the right team. We connected property discovery, galleries, location information and inquiry journeys in one website.", href: "/work", label: "Explore the project story" }
+        ].map(item => <article key={item.title} className={`overflow-hidden ${cardFlat} ${!item.image ? "flex flex-col justify-center" : ""}`}>
+          {item.image && <a href={item.href} className="block focus-visible:outline-2 focus-visible:outline-accent"><Image src={item.image} alt={item.alt} width={item.width} height={item.height} sizes="(min-width: 768px) 540px, calc(100vw - 32px)" unoptimized className="aspect-[16/9] w-full object-cover" /></a>}
           <div className="p-6 sm:p-8"><p className="text-xs font-semibold uppercase tracking-widest text-accent">{item.eyebrow}</p><h3 className={`mt-3 ${h3}`}>{item.title}</h3><p className="mt-3 leading-7 text-body">{item.text}</p><a href={item.href} className={`mt-4 inline-flex min-h-11 items-center ${linkInline}`}>{item.label} →</a></div>
         </article>)}
       </div>
     </div></section>
     <section className={section} aria-labelledby="ai-leadership-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6">
-      <h2 id="ai-leadership-heading" className={h2}>Executive judgment. Hands-on technology experience.</h2>
+      <div className="grid items-center gap-8 md:grid-cols-[200px_1fr]"><Image src="/images/leadership/jeffrey-cortez-linkedin-20261103.jpg" alt="Portrait of Jeffrey V. Cortez." width={400} height={400} sizes="200px" unoptimized className="aspect-square w-full max-w-[200px] rounded-2xl object-cover" /><div><h2 id="ai-leadership-heading" className={h2}>Executive judgment. Hands-on technology experience.</h2>
       <p className={`max-w-3xl ${lead}`}>Led by Jeffrey V. Cortez. Technology leadership, enterprise systems and AI education—with a named human accountable for the work.</p>
-      <Link href="/about#executive-profile" className={`mt-5 min-h-11 ${linkInline}`}>Meet Jeffrey and explore his leadership experience →</Link>
+      <Link href="/about#executive-profile" className={`mt-5 min-h-11 ${linkInline}`}>Meet Jeffrey and explore his leadership experience →</Link></div></div>
       <details className="mt-8 rounded-2xl border border-line bg-surface p-6"><summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">How our capabilities work together</summary><ul className="mt-4 space-y-4 leading-7 text-body"><li><Link href="/technology-advisory" className={linkInline}>Technology Leadership &amp; Advisory</Link> provides direction, investment priorities, and executive accountability.</li><li><Link href="/automation-systems-optimization" className={linkInline}>Business Automation &amp; Integrations</Link> improves the underlying operating model.</li><li>AI Enablement connects capability, governance, skills, and AI-enabled workflows.</li><li><Link href="/websites" className={linkInline}>Websites</Link> supports a clear customer-facing experience. <Link href="/custom-software-development" className={linkInline}>Custom Software Development</Link> connects operational applications and workflows where needed.</li></ul></details>
     </div></section>
     <section className={section} id="personal-ai-assistant" aria-labelledby="personal-agent-heading"><div className="mx-auto max-w-6xl px-4 sm:px-6"><h2 id="personal-agent-heading" className={h2}>Looking for a personal AI assistant?</h2><p className={`max-w-2xl ${lead}`}>Explore setup and training around your own tasks, tools and working preferences.</p><Link href="/personal-ai-assistant" className={`mt-5 min-h-11 ${linkInline}`}>Explore personal AI assistant setup →</Link></div></section>
