@@ -6,11 +6,11 @@ import { featuredVideo } from "@/content/videos";
 import { h1, h2, lead, buttonPrimary, card } from "@/components/ui";
 
 const stories = {
-  watch: { Icon: Play, title: "A fresh way to see things.", text: "Watch Why AI Adoption Is Failing: The Trust Deficit Leaders Are Missing—a perspective on trust and human-centered leadership.", label: "Discover Watch", image: "/images/videos/hWk6mH_t0Cs.jpg", alt: "Why AI Adoption Is Failing: The Trust Deficit Leaders Are Missing" },
-  listen: { Icon: Headphones, title: "A little space to exhale.", text: "Music & Ambience. Rain on an attic window, a mossy garden, or a quiet café. Step into an original soundscape and stay a while.", label: "Discover Listen", image: `/images/videos/${featuredVideo.id}.jpg`, alt: featuredVideo.title },
-  read: { Icon: BookOpen, title: "Ideas that stay with you.", text: "A leadership book to return to. Insights that make you pause. Explore the human side of technology, trust, and change.", label: "Discover Read", image: "", alt: "" },
+  watch: { Icon: Play, title: "Understand the human side of AI.", text: "Watch Why AI Adoption Is Failing: The Trust Deficit Leaders Are Missing—a perspective on trust and human-centered leadership.", label: "Explore leadership videos", image: "/images/videos/hWk6mH_t0Cs.jpg", alt: "Why AI Adoption Is Failing: The Trust Deficit Leaders Are Missing" },
+  listen: { Icon: Headphones, title: "Find a soundtrack for your moment.", text: "Music & Ambience. Rain on an attic window, a mossy garden, or a quiet café. Step into an original soundscape and stay a while.", label: "Find your listening atmosphere", image: `/images/videos/${featuredVideo.id}.jpg`, alt: featuredVideo.title },
+  read: { Icon: BookOpen, title: "Think through your next decision.", text: "A leadership book to return to. Insights that make you pause. Explore the human side of technology, trust, and change.", label: "Browse books & insights", image: "", alt: "" },
   shop: { Icon: ShoppingBag, title: "Find something worth keeping.", text: "Shop our published books, rare and collectible editions, and other creative products. Purchase through the existing Amazon, Etsy, and Briarcrypt Books listings.", label: "Explore Shop", image: "/images/shop/rare-books-website.webp", alt: "The Briarcrypt Books collectible bookstore" },
-  play: { Icon: Sparkles, title: "Follow your curiosity.", text: "Follow the clues in the Breadcrumb investigation challenge, or reflect on how you contribute with the Strength Profile.", label: "Discover Play", image: "", alt: "" },
+  play: { Icon: Sparkles, title: "Follow the clues. Find your own perspective.", text: "Follow the clues in the Breadcrumb investigation challenge, or reflect on how you contribute with the Strength Profile.", label: "Explore mysteries & reflection", image: "", alt: "" },
 };
 export default function StudioOverview({ content }: { content: Studio }) {
   const c = publicStudio(content);
@@ -19,11 +19,11 @@ export default function StudioOverview({ content }: { content: Studio }) {
     <section data-editorial-hero className="relative overflow-hidden border-b border-line">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
         <p className="text-xs font-semibold uppercase tracking-[.2em] text-accent">Creative Studio · {groups.map(g => g.name).join(". ")}.</p>
-        <h1 className={`${h1} max-w-4xl`}>Make room for<br /><span className="text-accent">a little wonder.</span></h1>
-        <p className={`${lead} max-w-2xl`}>{c.intro}</p>
+        <h1 className={`${h1} max-w-4xl`}>Ideas to explore.<br /><span className="text-accent">Room to unwind.</span></h1>
+        <p className={`${lead} max-w-2xl`}>Explore trust and leadership, settle into a quiet soundscape, or follow a mystery. Choose what you need today.</p>
         <nav aria-label="Creative Studio collections" className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {groups.map(g => { const story = stories[g.id as keyof typeof stories] || {Icon:Sparkles}; const Icon=story.Icon;
-            return <Link key={g.id} href={g.href} className={`${card} p-6`}><span data-story-icon><Icon aria-hidden="true" className="h-6 w-6" /></span><span className="flex items-center justify-between text-2xl font-medium text-ink">{g.name}<ArrowUpRight aria-hidden="true" className="h-5 w-5 text-accent" /></span><span className="mt-3 block text-sm leading-7 text-body">{g.description}</span></Link>;
+            return <Link key={g.id} href={g.href} className={`${card} p-6`}><span data-story-icon><Icon aria-hidden="true" className="h-6 w-6" /></span><span className="flex items-center justify-between text-2xl font-medium text-ink">{g.name}<ArrowUpRight aria-hidden="true" className="h-5 w-5 text-accent" /></span><span className="mt-3 block text-sm leading-7 text-body">{({watch: "Understand AI, trust and leadership through video.", listen: "Choose rain or music for reading, focus and winding down.", read: "Explore books, articles and resources for thoughtful decisions.", play: "Investigate a mystery, or take a separate moment for self-reflection."} as Record<string,string>)[g.id] || g.description}</span></Link>;
           })}
         </nav>
       </div>
