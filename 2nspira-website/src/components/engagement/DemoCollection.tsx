@@ -48,7 +48,7 @@ return <><div className={styles.filters} role="group" aria-label="Choose a demo 
             >
               <Link
                 href={`/demos/${d.slug}`}
-                className={`block min-w-0 border-b border-line p-4 focus-visible:outline-2 focus-visible:outline-accent sm:p-6 lg:border-b-0 ${({education:"bg-[#eee7f6]",manufacturing:"bg-[#e0eee6]","property-management":"bg-[#f0e9da]"})[d.slug]}`}
+                className={`block min-w-0 border-b border-line p-4 focus-visible:outline-2 focus-visible:outline-accent sm:p-6 lg:border-b-0 ${({education:"bg-[#e4eef8]",manufacturing:"bg-[#e0eee6]","property-management":"bg-[#e5eaf2]"})[d.slug]}`}
                 aria-label={`Discover the ${d.category} experience`}
               >
                 <Image

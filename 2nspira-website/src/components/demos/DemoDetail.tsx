@@ -1,4 +1,5 @@
 import DemoHero from "./DemoHero";
+import CatalogEffects from "@/components/catalog/CatalogEffects";
 import DemoTrust from "./DemoTrust";
 import SchoolVision from "./SchoolVision";
 import ManufacturingVision from "./ManufacturingVision";
@@ -25,6 +26,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
         href={demo.url}
         steps={["Welcome a learner", "Connect the classroom", "Share progress"]}
       />
+      <CatalogEffects headings>
       {kind === "education" && (
         <section className="border-y border-line bg-canvas-deep py-14">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -57,6 +59,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
                 ],
               ].map(([role, text], i) => (
                 <a
+                  data-catalog-card
                   href={`${demo.url}?role=${role}`}
                   key={role}
                   className={`${cardFlat} block p-6 focus-visible:outline-2 focus-visible:outline-accent ${["!bg-[#fff0d9]", "!bg-[#e0f4ef]", "!bg-[#efe4fa]", "!bg-[#fff1b8]"][i]}`}
@@ -135,7 +138,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
           </summary>
           <ol className="mt-6 grid gap-7 md:grid-cols-2">
             {demo.steps.map(([title, text], i) => (
-              <li key={title} className="flex gap-5">
+              <li data-catalog-reveal key={title} className="flex gap-5">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft text-sm font-semibold text-accent">
                   {i + 1}
                 </span>
@@ -164,6 +167,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
         </div>
       </section>
       <DemoTrust />
+      </CatalogEffects>
     </main>
   );
 }
