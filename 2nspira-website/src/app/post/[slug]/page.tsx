@@ -49,7 +49,7 @@ export default async function PostPage({params}:Props) {
   const reading = post.reading;
   const topic = `${post.title} ${post.description}`;
   const nextStep = /\bAI\b|artificial intelligence|agent/i.test(topic)
-    ? { title: "Put responsible AI into practice", text: "Explore your organization’s readiness before deciding what to adopt.", href: "/ai-enablement", label: "Explore AI enablement", assessment: true }
+    ? { title: "Put responsible AI into practice", text: "Explore your organization’s readiness before deciding what to adopt.", href: "/ai-enablement", label: "AI consulting and employee training", assessment: true }
     : /website|digital platform|web app/i.test(topic)
     ? { title: "Build a better digital experience", text: "See published projects and practical options for your website or customer platform.", href: "/websites", label: "Explore websites and platforms", assessment: false }
     : { title: "Connect the idea to your next decision", text: "Explore practical technology leadership for the priorities facing your organization.", href: "/technology-advisory", label: "Explore technology leadership", assessment: false };

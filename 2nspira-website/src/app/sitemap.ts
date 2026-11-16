@@ -16,6 +16,7 @@ const pages: Array<{
 }> = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
   { path: "/ai-team", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/personal-ai-assistant", priority: 0.6, changeFrequency: "monthly" },
   { path: "/ai-enablement", priority: 0.8, changeFrequency: "monthly" },
   { path: "/automation-systems-optimization", priority: 0.8, changeFrequency: "monthly" },
   { path: "/managed-services-support", priority: 0.8, changeFrequency: "monthly" },
