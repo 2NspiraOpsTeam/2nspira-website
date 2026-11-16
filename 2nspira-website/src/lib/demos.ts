@@ -130,7 +130,7 @@ export const demos = {
 // Shared navigation registry: add future published demos here.
 export const demoNavigationLinks = [
   { name: "All demos", href: "/demos" },
-  { name: "AI Invoice Workflow — sample", href: "/demos/ai-operations" },
+  { name: "AI Invoice Workflow — sample", href: "/demos/ai-invoice-workflow" },
   { name: "Property Management — sample", href: "/demos/property-management" },
   ...Object.entries(demos).map(([slug, demo]) => ({
     name: `${demo.title} — sample`,

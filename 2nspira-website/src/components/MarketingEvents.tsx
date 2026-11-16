@@ -8,7 +8,7 @@ const services = new Set(["/services", "/accounts-receivable-workflow-automation
 export default function MarketingEvents() {
   const pathname = usePathname();
   useEffect(() => {
-    const publicPage = services.has(pathname) || ["/", "/demos", "/demos/ai-operations", "/work", "/about", "/resources", "/contact"].includes(pathname) || pathname.startsWith("/post/") || pathname.startsWith("/resources/");
+    const publicPage = services.has(pathname) || ["/", "/demos", "/demos/ai-operations", "/demos/ai-invoice-workflow", "/work", "/about", "/resources", "/contact"].includes(pathname) || pathname.startsWith("/post/") || pathname.startsWith("/resources/");
     if (!publicPage) return;
     const emit = (event: string, destination?: string) => {
       const target = window as MarketingWindow;

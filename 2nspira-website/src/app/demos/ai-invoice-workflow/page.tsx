@@ -1,0 +1,40 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, FileText, ListChecks, MessageSquare, ShieldCheck, History, Mic } from "lucide-react";
+import DemoSchema from "@/components/demos/DemoSchema";
+import { publicPageMetadata } from "@/lib/pageMetadata";
+import styles from "./showcase.module.css";
+const image = "/images/demos/ai-operations-copper-20261116.webp";
+const workspace = "/demos/ai-operations#operations-workspace";
+const description = "Turn a billing question into a clear next step. Explore real AI analysis, proposed cases and tasks, editable replies and individual human approvals in the AI Invoice Workflow demo.";
+export const metadata = publicPageMetadata({ title: "AI Invoice Workflow Demo", shareTitle: "Less invoice chasing. A clearer next step.", description, path: "/demos/ai-invoice-workflow", image });
+const capabilities = [
+  { icon: FileText, title: "Understand the request", text: "AI classifies the billing question, summarizes the issue and proposes a priority and responsible team." },
+  { icon: ListChecks, title: "Connect the next actions", text: "Review a proposed case and internal task, then approve or reject each separately. Approved work appears in your sandbox records." },
+  { icon: MessageSquare, title: "Prepare a useful reply", text: "Edit the AI-prepared internal response before approval. Simulate sending it and see the saved message." },
+  { icon: ShieldCheck, title: "Keep people in control", text: "Confirmation gates separate an AI suggestion from an approved action. The demo never authorizes a refund or invoice adjustment." },
+  { icon: History, title: "Follow the trail", text: "See recorded activity and approved work together. Refresh to revisit the saved session or confirm a reset to start again." },
+  { icon: Mic, title: "Use your own fictional example", text: "Type a billing request, or dictate where your browser supports it. Voice input stays editable and never submits or approves work for you." },
+];
+export default function InvoiceShowcase() {
+  return <main id="main-content" tabIndex={-1} className={styles.page}>
+    <DemoSchema path="/demos/ai-invoice-workflow" title="AI Invoice Workflow Demo" description={description} image={image} />
+    <section className={styles.hero}><div className={styles.container}>
+      <Link href="/demos" className={styles.back}>← All demos</Link>
+      <div className={styles.heroGrid}><div><p className={styles.eyebrow}>AI Invoice Workflow · Interactive demo</p><h1>Less invoice chasing.<br /><em>A clearer next step.</em></h1><p className={styles.lead}>A disputed charge. A missing credit. Another email waiting for an answer. See how AI turns a billing question into coordinated work—ready for your team to review.</p><div className={styles.actions}><Link href={workspace} className={styles.primary}>Try the demo <ArrowRight size={17} aria-hidden="true" /></Link><a href="#walkthrough" className={styles.secondary}>See how it works ↓</a></div><p className={styles.caption}>Real AI · Fictional invoices · Human-approved actions</p></div>
+      <figure className={styles.art}><Image src={image} alt="Illustration of fragmented invoices becoming organized cases, tasks and replies through a human approval gateway." width={1672} height={941} sizes="(min-width:1024px) 640px, 100vw" unoptimized priority /></figure></div>
+      <ol className={styles.flow}><li><span>01</span> Choose a billing question</li><li><span>02</span> Review AI-prepared work</li><li><span>03</span> Approve and see the result</li></ol>
+    </div></section>
+    <section id="capabilities" className={styles.container}><p className={styles.eyebrow}>Inside the experience</p><h2>More than an answer.<br />A connected handoff.</h2><p className={styles.intro}>Explore the path from an incoming request to a case, a task and a reply, with a person deciding what moves forward.</p><div className={styles.cards}>{capabilities.map(({icon: Icon, title, text})=><article key={title}><Icon size={25} aria-hidden="true" /><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+    <section id="walkthrough" className={styles.band}><div className={`${styles.container} ${styles.split}`}><div><p className={styles.eyebrow}>Your first walkthrough</p><h2>One disputed charge.<br />Follow every handoff.</h2><p className={styles.intro}>Start with “Possible duplicate charge.” Two fictional payment references need investigation. AI prepares the work; you decide what happens next.</p><Link href={workspace} className={styles.primary}>Try the demo <ArrowRight size={17} aria-hidden="true" /></Link></div><ol className={styles.steps}>{[
+      ["Choose and analyze", "Open a sample billing email and request AI analysis against the fictional invoice context."],
+      ["Review the proposal", "Read the summary, suggested owner and priority. Inspect the proposed case, task and reply."],
+      ["Make the decisions", "Approve or reject each action individually. Edit the reply and confirm the simulated send."],
+      ["See what changed", "Inspect the saved records and activity trail. Refresh to continue, or reset and try another scenario."],
+    ].map(([title,text], i)=><li key={title}><span>0{i+1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol></div></section>
+    <section className={styles.container}><p className={styles.eyebrow}>Recognize the everyday friction</p><h2>Five ways to explore.</h2><div className={styles.scenarios}>{["Possible duplicate charge", "Disputed invoice amount", "Payment status question", "Credit not reflected", "Invoice breakdown question"].map(t=><Link href={workspace} key={t}>{t}<ArrowRight size={16} aria-hidden="true" /></Link>)}</div>
+      <details className={styles.details}><summary>Demo scope, data and integrations</summary><p>This is a fictional billing-workflow sandbox, not a connected accounting system. Real AI analysis is processed by Groq; use fictional information only. Cases, tasks and messages are saved in an isolated server-side session that expires after one hour. Email sends are simulated. No real invoice, payment, refund or credit is changed. Invoice context is a synthetic ledger snapshot; missing evidence still requires human investigation. Voice availability depends on your browser and permissions. Reset requires confirmation.</p><p>For a real implementation, we agree your systems, permissions, review steps, evaluation criteria and integration scope together.</p></details>
+    </section>
+    <section className={styles.cta}><div className={styles.container}><p className={styles.eyebrow}>Bring one workflow worth improving</p><h2>What is your team<br />still chasing by email?</h2><p>Start with the handoff that takes too much effort. We’ll help map a practical next step around your people and existing tools.</p><div className={styles.actions}><Link href="/contact?service=automation#contact-message" className={styles.primary}>Discuss your invoice workflow <ArrowRight size={17} aria-hidden="true" /></Link><Link href="/accounts-receivable-workflow-automation" className={styles.secondary}>Explore the service →</Link></div></div></section>
+  </main>;
+}

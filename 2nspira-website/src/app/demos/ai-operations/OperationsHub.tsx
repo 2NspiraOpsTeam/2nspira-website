@@ -115,8 +115,8 @@ export default function OperationsHub() {
   return (
     <main id="main-content" tabIndex={-1} className={styles.page}>
       <div className={styles.intro}>
-        <Link href="/demos" className={styles.back}>
-          ← All demonstrations
+        <Link href="/demos/ai-invoice-workflow" className={styles.back}>
+          ← AI Invoice Workflow overview
         </Link>
         <div className={styles.topline}>
           <span>
@@ -133,7 +133,7 @@ export default function OperationsHub() {
           Turn an incoming request into a clear next step. Explore a real
           AI-assisted workflow—with a human in control of every action.
         </p>
-        <a className={styles.heroStart} href="#operations-workspace">Step into the workspace ↓</a></div><figure className={styles.heroArtwork}><Image src="/images/demos/ai-invoice-workflow-20261116.webp" alt="Concept illustration of invoices connected to a human-review checkpoint." width={1536} height={864} sizes="(min-width:900px) 600px, 100vw" unoptimized priority /><figcaption>Connected work. Human judgment. · Concept illustration</figcaption></figure></div>
+        <a className={styles.heroStart} href="#operations-workspace">Step into the workspace ↓</a></div><figure className={styles.heroArtwork}><Image src="/images/demos/ai-operations-copper-20261116.webp" alt="Illustration of scattered invoices becoming connected cases, tasks and replies through a human approval gateway." width={1672} height={941} sizes="(min-width:900px) 600px, 100vw" unoptimized priority /><figcaption>Connected work. Human judgment.</figcaption></figure></div>
         <details className={styles.supportDetail}><summary>Want this kind of workflow for your business?</summary><p><Link href="/accounts-receivable-workflow-automation">Explore invoice workflow support</Link> or <Link href="/contact?service=automation#contact-message">discuss your invoice workflow</Link>. This sandbox demonstrates a capability, not customer results.</p></details>
         <div className={styles.badges}>
           <span>
