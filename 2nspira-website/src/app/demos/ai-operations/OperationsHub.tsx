@@ -125,6 +125,7 @@ export default function OperationsHub() {
           Turn an incoming request into a clear next step. Explore a real
           AI-assisted workflow—with a human in control of every action.
         </p>
+        <p className="mt-5 leading-7">Invoices stuck over disputes or missing approvals? <Link href="/accounts-receivable-workflow-automation" className="underline underline-offset-4">Explore invoice workflow support</Link> or <Link href="/contact?service=automation#contact-message" className="underline underline-offset-4">discuss your invoice workflow</Link>. This sandbox demonstrates a capability, not customer results.</p>
         <div className={styles.badges}>
           <span>
             <ShieldCheck size={16} /> Approval before action
