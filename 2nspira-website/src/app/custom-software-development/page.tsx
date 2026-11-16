@@ -9,13 +9,13 @@ import { publicPageMetadata } from "@/lib/pageMetadata";
 import { buttonPrimary, buttonSecondary, cardFlat, h1, h2, h3, lead, linkInline, pageMain, section, sectionBand } from "@/components/ui";
 import styles from "./software.module.css";
 
-const description = "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and FileMaker solutions built around your organization’s workflow.";
+const description = "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and operational software built around your organization’s workflow.";
 export const metadata = publicPageMetadata({ title: "Custom Software Development & Integrations", description, path: "/custom-software-development" });
 const contact = "/contact?service=platforms#contact-message";
 const capabilities = [
   { Icon: PanelsTopLeft, title: "Portals & internal tools", problem: "Requests scattered across inboxes?", text: "Give customers and staff one purposeful place to manage requests, records and next steps.", items: ["Customer and staff workspaces", "Role-based access and approvals", "Clear status and ownership"] },
   { Icon: LayoutDashboard, title: "Dashboards & operations", problem: "Too much data, too little visibility?", text: "Organize the information your team needs to understand work and decide what happens next.", items: ["Useful operational views", "Shared records and reporting", "Exceptions that need attention"] },
-  { Icon: Workflow, title: "Integrations & FileMaker", problem: "Entering the same information twice?", text: "Connect useful existing tools, automate defined handoffs, or modernize a FileMaker application in phases.", items: ["API integrations and data sync", "Workflow automation and retries", "FileMaker development and modernization"] },
+  { Icon: Workflow, title: "Integrations & modernization", problem: "Entering the same information twice?", text: "Connect useful existing tools, automate defined handoffs, or modernize an existing application in phases.", items: ["API integrations and data sync", "Workflow automation and retries", "Application development and modernization"] },
 ];
 export const dynamic = "force-dynamic";
 export default async function SoftwarePage() {
