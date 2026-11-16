@@ -333,7 +333,7 @@ export default function ContactPage() {
                 Prefer to send a message?
               </a>
             </div>
-            <p className="mt-3 text-sm leading-6 text-muted">30-minute appointments via Google Meet. Booking opens Google Calendar in a new tab.</p>
+            <p className="mt-3 text-sm leading-6 text-muted">Appointments via Google Meet. Duration is shown in Google Calendar. Booking opens Google Calendar in a new tab.</p>
           </Reveal>
         </EditorialHero>
       </section>

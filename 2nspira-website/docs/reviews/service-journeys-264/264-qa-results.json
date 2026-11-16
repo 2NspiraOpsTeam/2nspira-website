@@ -1,0 +1,2614 @@
+[
+  {
+    "width": 320,
+    "route": "/",
+    "title": "Website Design, Custom Software & AI Enablement | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/",
+    "description": "Build a better business website, connect your operations with custom software, and help your team use AI responsibly. Explore 2Nspira’s services and work.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://2nspira.com/#webpage",
+            "url": "https://2nspira.com/",
+            "name": "Website Design, Custom Software & AI Enablement | 2Nspira",
+            "description": "Build a better business website, connect your operations with custom software, and help your team use AI responsibly. Explore 2Nspira’s services and work.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://2nspira.com/#website"
+            },
+            "about": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "mainEntity": {
+              "@id": "https://2nspira.com/#services"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://2nspira.com/#services",
+            "name": "2Nspira core services",
+            "numberOfItems": 3,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Service",
+                  "name": "Websites",
+                  "description": "Build or improve a clear, accessible business website, from redesign to booking, payments and ongoing care where appropriate.",
+                  "url": "https://2nspira.com/websites",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Service",
+                  "name": "Custom Software Development",
+                  "description": "Simplify operations with portals, dashboards, internal tools and connected business systems. Choose custom work when existing products fall short.",
+                  "url": "https://2nspira.com/custom-software-development",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Service",
+                  "name": "Organizational AI Enablement",
+                  "description": "Strategy, governance, training and adoption to help your organization use AI responsibly and effectively.",
+                  "url": "https://2nspira.com/ai-enablement",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/services",
+    "title": "Websites, Custom Software & Organizational AI Enablement | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/services",
+    "description": "Websites, custom software development and organizational AI enablement for growing organizations, with selective executive advisory and clearly scoped ongoing support.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "name": "Managed Maintenance & Support",
+            "url": "https://2nspira.com/managed-services-support",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://2nspira.com/services#webpage",
+            "url": "https://2nspira.com/services",
+            "name": "Websites, Custom Software & Organizational AI Enablement",
+            "about": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Websites",
+                  "url": "https://2nspira.com/websites"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Custom Software Development",
+                  "url": "https://2nspira.com/custom-software-development"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Organizational AI Enablement",
+                  "url": "https://2nspira.com/ai-enablement"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/ai-enablement#service",
+            "name": "Organizational AI Enablement",
+            "description": "Find where AI can reduce repetitive work and help your team serve customers better. Get practical AI strategy, training, and governance from 2Nspira.",
+            "url": "https://2nspira.com/ai-enablement",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/custom-software-development#service",
+            "name": "Custom Software Development",
+            "description": "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
+            "url": "https://2nspira.com/custom-software-development",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/services#websites",
+            "name": "Websites",
+            "description": "Help customers understand your offer, make inquiries, and access your services. 2Nspira designs and develops business websites, redesigns and accessible inquiry journeys, with scoped ongoing care.",
+            "url": "https://2nspira.com/websites",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/services#fractional-leadership",
+            "name": "Technology Leadership & Advisory",
+            "description": "Technology strategy, planning, vendor guidance and leadership support, including Fractional CIO engagements, aligned with your business goals.",
+            "url": "https://2nspira.com/technology-advisory",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/websites",
+    "title": "Business Website Design & Development | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/websites",
+    "description": "Business website design, redesign, accessible customer journeys, booking and payments where appropriate, and ongoing care scoped to your needs.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Business Website Design & Development",
+        "description": "Business website design, redesign, accessible customer journeys, booking and payments where appropriate, and ongoing care scoped to your needs.",
+        "url": "https://2nspira.com/websites",
+        "serviceType": [
+          "Website development",
+          "Website redesign",
+          "Website maintenance"
+        ],
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/custom-software-development",
+    "title": "Custom Software Development & Integrations | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/custom-software-development",
+    "description": "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and FileMaker solutions built around your organization’s workflow.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Custom Software Development",
+        "description": "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and FileMaker solutions built around your organization’s workflow.",
+        "url": "https://2nspira.com/custom-software-development",
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/ai-enablement",
+    "title": "Organizational AI Enablement, Readiness & Training | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/ai-enablement",
+    "description": "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://2nspira.com/ai-enablement#service",
+        "name": "Organizational AI Enablement",
+        "description": "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.",
+        "serviceType": [
+          "Organizational AI transformation",
+          "AI readiness assessment",
+          "AI adoption strategy",
+          "AI governance consulting",
+          "Workforce AI training",
+          "AI workflow implementation"
+        ],
+        "url": "https://2nspira.com/ai-enablement",
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/work",
+    "title": "Technology Consulting Projects & Engineering Portfolio | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/work",
+    "description": "See how 2Nspira approaches disconnected workflows and customer-facing websites. Explore published projects and operational showcases with clear scope and status.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/contact",
+    "title": "Discuss Your Business Challenge | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/contact",
+    "description": "Struggling with manual work, disconnected systems, or unclear priorities? Tell 2Nspira what needs to improve and discuss practical next steps for your business.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What happens after I send a message?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We review what you’re trying to accomplish and help determine whether there’s a practical fit. If so, we agree a useful next step together."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer free consultations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer complimentary discovery calls to understand your needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What regions do you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Based in New York City, we work with growing businesses, established organizations, and mission-driven leaders nationally and internationally."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "title": "Website Design, Custom Software & AI Enablement | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/",
+    "description": "Build a better business website, connect your operations with custom software, and help your team use AI responsibly. Explore 2Nspira’s services and work.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://2nspira.com/#webpage",
+            "url": "https://2nspira.com/",
+            "name": "Website Design, Custom Software & AI Enablement | 2Nspira",
+            "description": "Build a better business website, connect your operations with custom software, and help your team use AI responsibly. Explore 2Nspira’s services and work.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://2nspira.com/#website"
+            },
+            "about": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "mainEntity": {
+              "@id": "https://2nspira.com/#services"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://2nspira.com/#services",
+            "name": "2Nspira core services",
+            "numberOfItems": 3,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Service",
+                  "name": "Websites",
+                  "description": "Build or improve a clear, accessible business website, from redesign to booking, payments and ongoing care where appropriate.",
+                  "url": "https://2nspira.com/websites",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Service",
+                  "name": "Custom Software Development",
+                  "description": "Simplify operations with portals, dashboards, internal tools and connected business systems. Choose custom work when existing products fall short.",
+                  "url": "https://2nspira.com/custom-software-development",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Service",
+                  "name": "Organizational AI Enablement",
+                  "description": "Strategy, governance, training and adoption to help your organization use AI responsibly and effectively.",
+                  "url": "https://2nspira.com/ai-enablement",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/services",
+    "title": "Websites, Custom Software & Organizational AI Enablement | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/services",
+    "description": "Websites, custom software development and organizational AI enablement for growing organizations, with selective executive advisory and clearly scoped ongoing support.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "name": "Managed Maintenance & Support",
+            "url": "https://2nspira.com/managed-services-support",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://2nspira.com/services#webpage",
+            "url": "https://2nspira.com/services",
+            "name": "Websites, Custom Software & Organizational AI Enablement",
+            "about": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Websites",
+                  "url": "https://2nspira.com/websites"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Custom Software Development",
+                  "url": "https://2nspira.com/custom-software-development"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Organizational AI Enablement",
+                  "url": "https://2nspira.com/ai-enablement"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/ai-enablement#service",
+            "name": "Organizational AI Enablement",
+            "description": "Find where AI can reduce repetitive work and help your team serve customers better. Get practical AI strategy, training, and governance from 2Nspira.",
+            "url": "https://2nspira.com/ai-enablement",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/custom-software-development#service",
+            "name": "Custom Software Development",
+            "description": "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
+            "url": "https://2nspira.com/custom-software-development",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/services#websites",
+            "name": "Websites",
+            "description": "Help customers understand your offer, make inquiries, and access your services. 2Nspira designs and develops business websites, redesigns and accessible inquiry journeys, with scoped ongoing care.",
+            "url": "https://2nspira.com/websites",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/services#fractional-leadership",
+            "name": "Technology Leadership & Advisory",
+            "description": "Technology strategy, planning, vendor guidance and leadership support, including Fractional CIO engagements, aligned with your business goals.",
+            "url": "https://2nspira.com/technology-advisory",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/websites",
+    "title": "Business Website Design & Development | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/websites",
+    "description": "Business website design, redesign, accessible customer journeys, booking and payments where appropriate, and ongoing care scoped to your needs.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Business Website Design & Development",
+        "description": "Business website design, redesign, accessible customer journeys, booking and payments where appropriate, and ongoing care scoped to your needs.",
+        "url": "https://2nspira.com/websites",
+        "serviceType": [
+          "Website development",
+          "Website redesign",
+          "Website maintenance"
+        ],
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/custom-software-development",
+    "title": "Custom Software Development & Integrations | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/custom-software-development",
+    "description": "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and FileMaker solutions built around your organization’s workflow.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Custom Software Development",
+        "description": "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and FileMaker solutions built around your organization’s workflow.",
+        "url": "https://2nspira.com/custom-software-development",
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/ai-enablement",
+    "title": "Organizational AI Enablement, Readiness & Training | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/ai-enablement",
+    "description": "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://2nspira.com/ai-enablement#service",
+        "name": "Organizational AI Enablement",
+        "description": "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.",
+        "serviceType": [
+          "Organizational AI transformation",
+          "AI readiness assessment",
+          "AI adoption strategy",
+          "AI governance consulting",
+          "Workforce AI training",
+          "AI workflow implementation"
+        ],
+        "url": "https://2nspira.com/ai-enablement",
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/work",
+    "title": "Technology Consulting Projects & Engineering Portfolio | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/work",
+    "description": "See how 2Nspira approaches disconnected workflows and customer-facing websites. Explore published projects and operational showcases with clear scope and status.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/contact",
+    "title": "Discuss Your Business Challenge | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/contact",
+    "description": "Struggling with manual work, disconnected systems, or unclear priorities? Tell 2Nspira what needs to improve and discuss practical next steps for your business.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What happens after I send a message?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We review what you’re trying to accomplish and help determine whether there’s a practical fit. If so, we agree a useful next step together."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer free consultations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer complimentary discovery calls to understand your needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What regions do you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Based in New York City, we work with growing businesses, established organizations, and mission-driven leaders nationally and internationally."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "title": "Website Design, Custom Software & AI Enablement | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/",
+    "description": "Build a better business website, connect your operations with custom software, and help your team use AI responsibly. Explore 2Nspira’s services and work.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://2nspira.com/#webpage",
+            "url": "https://2nspira.com/",
+            "name": "Website Design, Custom Software & AI Enablement | 2Nspira",
+            "description": "Build a better business website, connect your operations with custom software, and help your team use AI responsibly. Explore 2Nspira’s services and work.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://2nspira.com/#website"
+            },
+            "about": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "mainEntity": {
+              "@id": "https://2nspira.com/#services"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://2nspira.com/#services",
+            "name": "2Nspira core services",
+            "numberOfItems": 3,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Service",
+                  "name": "Websites",
+                  "description": "Build or improve a clear, accessible business website, from redesign to booking, payments and ongoing care where appropriate.",
+                  "url": "https://2nspira.com/websites",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Service",
+                  "name": "Custom Software Development",
+                  "description": "Simplify operations with portals, dashboards, internal tools and connected business systems. Choose custom work when existing products fall short.",
+                  "url": "https://2nspira.com/custom-software-development",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Service",
+                  "name": "Organizational AI Enablement",
+                  "description": "Strategy, governance, training and adoption to help your organization use AI responsibly and effectively.",
+                  "url": "https://2nspira.com/ai-enablement",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/services",
+    "title": "Websites, Custom Software & Organizational AI Enablement | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/services",
+    "description": "Websites, custom software development and organizational AI enablement for growing organizations, with selective executive advisory and clearly scoped ongoing support.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "name": "Managed Maintenance & Support",
+            "url": "https://2nspira.com/managed-services-support",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://2nspira.com/services#webpage",
+            "url": "https://2nspira.com/services",
+            "name": "Websites, Custom Software & Organizational AI Enablement",
+            "about": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Websites",
+                  "url": "https://2nspira.com/websites"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Custom Software Development",
+                  "url": "https://2nspira.com/custom-software-development"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Organizational AI Enablement",
+                  "url": "https://2nspira.com/ai-enablement"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/ai-enablement#service",
+            "name": "Organizational AI Enablement",
+            "description": "Find where AI can reduce repetitive work and help your team serve customers better. Get practical AI strategy, training, and governance from 2Nspira.",
+            "url": "https://2nspira.com/ai-enablement",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/custom-software-development#service",
+            "name": "Custom Software Development",
+            "description": "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
+            "url": "https://2nspira.com/custom-software-development",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/services#websites",
+            "name": "Websites",
+            "description": "Help customers understand your offer, make inquiries, and access your services. 2Nspira designs and develops business websites, redesigns and accessible inquiry journeys, with scoped ongoing care.",
+            "url": "https://2nspira.com/websites",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/services#fractional-leadership",
+            "name": "Technology Leadership & Advisory",
+            "description": "Technology strategy, planning, vendor guidance and leadership support, including Fractional CIO engagements, aligned with your business goals.",
+            "url": "https://2nspira.com/technology-advisory",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/websites",
+    "title": "Business Website Design & Development | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/websites",
+    "description": "Business website design, redesign, accessible customer journeys, booking and payments where appropriate, and ongoing care scoped to your needs.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Business Website Design & Development",
+        "description": "Business website design, redesign, accessible customer journeys, booking and payments where appropriate, and ongoing care scoped to your needs.",
+        "url": "https://2nspira.com/websites",
+        "serviceType": [
+          "Website development",
+          "Website redesign",
+          "Website maintenance"
+        ],
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/custom-software-development",
+    "title": "Custom Software Development & Integrations | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/custom-software-development",
+    "description": "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and FileMaker solutions built around your organization’s workflow.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Custom Software Development",
+        "description": "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and FileMaker solutions built around your organization’s workflow.",
+        "url": "https://2nspira.com/custom-software-development",
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/ai-enablement",
+    "title": "Organizational AI Enablement, Readiness & Training | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/ai-enablement",
+    "description": "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://2nspira.com/ai-enablement#service",
+        "name": "Organizational AI Enablement",
+        "description": "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.",
+        "serviceType": [
+          "Organizational AI transformation",
+          "AI readiness assessment",
+          "AI adoption strategy",
+          "AI governance consulting",
+          "Workforce AI training",
+          "AI workflow implementation"
+        ],
+        "url": "https://2nspira.com/ai-enablement",
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/work",
+    "title": "Technology Consulting Projects & Engineering Portfolio | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/work",
+    "description": "See how 2Nspira approaches disconnected workflows and customer-facing websites. Explore published projects and operational showcases with clear scope and status.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/contact",
+    "title": "Discuss Your Business Challenge | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/contact",
+    "description": "Struggling with manual work, disconnected systems, or unclear priorities? Tell 2Nspira what needs to improve and discuss practical next steps for your business.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What happens after I send a message?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We review what you’re trying to accomplish and help determine whether there’s a practical fit. If so, we agree a useful next step together."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer free consultations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer complimentary discovery calls to understand your needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What regions do you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Based in New York City, we work with growing businesses, established organizations, and mission-driven leaders nationally and internationally."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "title": "Website Design, Custom Software & AI Enablement | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/",
+    "description": "Build a better business website, connect your operations with custom software, and help your team use AI responsibly. Explore 2Nspira’s services and work.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://2nspira.com/#webpage",
+            "url": "https://2nspira.com/",
+            "name": "Website Design, Custom Software & AI Enablement | 2Nspira",
+            "description": "Build a better business website, connect your operations with custom software, and help your team use AI responsibly. Explore 2Nspira’s services and work.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://2nspira.com/#website"
+            },
+            "about": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "mainEntity": {
+              "@id": "https://2nspira.com/#services"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://2nspira.com/#services",
+            "name": "2Nspira core services",
+            "numberOfItems": 3,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Service",
+                  "name": "Websites",
+                  "description": "Build or improve a clear, accessible business website, from redesign to booking, payments and ongoing care where appropriate.",
+                  "url": "https://2nspira.com/websites",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Service",
+                  "name": "Custom Software Development",
+                  "description": "Simplify operations with portals, dashboards, internal tools and connected business systems. Choose custom work when existing products fall short.",
+                  "url": "https://2nspira.com/custom-software-development",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Service",
+                  "name": "Organizational AI Enablement",
+                  "description": "Strategy, governance, training and adoption to help your organization use AI responsibly and effectively.",
+                  "url": "https://2nspira.com/ai-enablement",
+                  "provider": {
+                    "@id": "https://2nspira.com/#organization"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/services",
+    "title": "Websites, Custom Software & Organizational AI Enablement | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/services",
+    "description": "Websites, custom software development and organizational AI enablement for growing organizations, with selective executive advisory and clearly scoped ongoing support.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "name": "Managed Maintenance & Support",
+            "url": "https://2nspira.com/managed-services-support",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://2nspira.com/services#webpage",
+            "url": "https://2nspira.com/services",
+            "name": "Websites, Custom Software & Organizational AI Enablement",
+            "about": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Websites",
+                  "url": "https://2nspira.com/websites"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Custom Software Development",
+                  "url": "https://2nspira.com/custom-software-development"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Organizational AI Enablement",
+                  "url": "https://2nspira.com/ai-enablement"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/ai-enablement#service",
+            "name": "Organizational AI Enablement",
+            "description": "Find where AI can reduce repetitive work and help your team serve customers better. Get practical AI strategy, training, and governance from 2Nspira.",
+            "url": "https://2nspira.com/ai-enablement",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/custom-software-development#service",
+            "name": "Custom Software Development",
+            "description": "Reduce manual work and disconnected spreadsheets. 2Nspira helps connect your systems, simplify handoffs, and improve the information your team relies on.",
+            "url": "https://2nspira.com/custom-software-development",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/services#websites",
+            "name": "Websites",
+            "description": "Help customers understand your offer, make inquiries, and access your services. 2Nspira designs and develops business websites, redesigns and accessible inquiry journeys, with scoped ongoing care.",
+            "url": "https://2nspira.com/websites",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://2nspira.com/services#fractional-leadership",
+            "name": "Technology Leadership & Advisory",
+            "description": "Technology strategy, planning, vendor guidance and leadership support, including Fractional CIO engagements, aligned with your business goals.",
+            "url": "https://2nspira.com/technology-advisory",
+            "provider": {
+              "@id": "https://2nspira.com/#organization"
+            },
+            "areaServed": "Worldwide"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/websites",
+    "title": "Business Website Design & Development | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/websites",
+    "description": "Business website design, redesign, accessible customer journeys, booking and payments where appropriate, and ongoing care scoped to your needs.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Business Website Design & Development",
+        "description": "Business website design, redesign, accessible customer journeys, booking and payments where appropriate, and ongoing care scoped to your needs.",
+        "url": "https://2nspira.com/websites",
+        "serviceType": [
+          "Website development",
+          "Website redesign",
+          "Website maintenance"
+        ],
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/custom-software-development",
+    "title": "Custom Software Development & Integrations | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/custom-software-development",
+    "description": "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and FileMaker solutions built around your organization’s workflow.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Custom Software Development",
+        "description": "Replace manual handoffs and disconnected tools with custom portals, dashboards, integrations and FileMaker solutions built around your organization’s workflow.",
+        "url": "https://2nspira.com/custom-software-development",
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/ai-enablement",
+    "title": "Organizational AI Enablement, Readiness & Training | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/ai-enablement",
+    "description": "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://2nspira.com/ai-enablement#service",
+        "name": "Organizational AI Enablement",
+        "description": "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.",
+        "serviceType": [
+          "Organizational AI transformation",
+          "AI readiness assessment",
+          "AI adoption strategy",
+          "AI governance consulting",
+          "Workforce AI training",
+          "AI workflow implementation"
+        ],
+        "url": "https://2nspira.com/ai-enablement",
+        "provider": {
+          "@id": "https://2nspira.com/#organization"
+        },
+        "areaServed": "Worldwide"
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/work",
+    "title": "Technology Consulting Projects & Engineering Portfolio | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/work",
+    "description": "See how 2Nspira approaches disconnected workflows and customer-facing websites. Explore published projects and operational showcases with clear scope and status.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/contact",
+    "title": "Discuss Your Business Challenge | 2Nspira",
+    "overflow": false,
+    "canonical": "https://2nspira.com/contact",
+    "description": "Struggling with manual work, disconnected systems, or unclear priorities? Tell 2Nspira what needs to improve and discuss practical next steps for your business.",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What happens after I send a message?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We review what you’re trying to accomplish and help determine whether there’s a practical fit. If so, we agree a useful next step together."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer free consultations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer complimentary discovery calls to understand your needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What regions do you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Based in New York City, we work with growing businesses, established organizations, and mission-driven leaders nationally and internationally."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://2nspira.com/#organization",
+            "name": "2Nspira",
+            "url": "https://2nspira.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://2nspira.com/images/logo/2nspira-logo.png",
+              "width": 320,
+              "height": 132
+            },
+            "description": "Make your business work better with 2Nspira. Reduce manual work, improve operations, serve customers better, and support growth through practical technology.",
+            "email": "hello@2nspira.com",
+            "telephone": "+1-646-543-0199",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11215 72nd Rd",
+              "addressLocality": "Forest Hills",
+              "addressRegion": "NY",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "hello@2nspira.com",
+              "telephone": "+1-646-543-0199",
+              "contactType": "customer support"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@2Nspira",
+              "https://www.linkedin.com/company/2nspira/",
+              "https://www.facebook.com/people/2Nspira/61595399081045/",
+              "https://www.instagram.com/2nspira/",
+              "https://www.youtube.com/@2Nspira",
+              "https://github.com/2NspiraOpsTeam"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://2nspira.com/#website",
+            "url": "https://2nspira.com",
+            "name": "2Nspira",
+            "publisher": {
+              "@id": "https://2nspira.com/#organization"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

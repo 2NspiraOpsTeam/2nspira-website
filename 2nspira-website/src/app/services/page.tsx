@@ -23,8 +23,8 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = publicPageMetadata({
-  title: "AI & Technology Transformation for Growing Organizations",
-  shareTitle: "Move your business forward—with people and technology.",
+  title: "Websites, Custom Software & Organizational AI Enablement",
+  shareTitle: "Websites, Custom Software & Organizational AI Enablement",
   description: "Websites, custom software development and organizational AI enablement for growing organizations, with selective executive advisory and clearly scoped ongoing support.",
   path: "/services"
 });
@@ -37,14 +37,12 @@ const servicesJsonLd = {
       "@type": "CollectionPage",
       "@id": "https://2nspira.com/services#webpage",
       url: "https://2nspira.com/services",
-      name: "AI & Technology Transformation",
+      name: "Websites, Custom Software & Organizational AI Enablement",
       about: { "@id": "https://2nspira.com/#organization" },
       mainEntity: {
         "@type": "ItemList",
         itemListElement: [
           ...serviceNeeds.map(item => ({ name: item.name, url: `https://2nspira.com${item.href}` })),
-          { name: "Technology Leadership & Advisory", url: "https://2nspira.com/technology-advisory" },
-          { name: "Managed Maintenance & Support", url: "https://2nspira.com/managed-services-support" },
         ].map((item, index) => ({ "@type": "ListItem", position: index + 1, ...item })),
       },
     },
@@ -73,7 +71,7 @@ const servicesJsonLd = {
       "@id": "https://2nspira.com/services#websites",
       name: "Websites",
       description:
-        "Help customers understand your offer, make inquiries, and access your services. 2Nspira builds websites, custom web applications, and custom internal operations solutions connected to the way your business works.",
+        "Help customers understand your offer, make inquiries, and access your services. 2Nspira designs and develops business websites, redesigns and accessible inquiry journeys, with scoped ongoing care.",
       url: "https://2nspira.com/websites",
       provider: { "@id": "https://2nspira.com/#organization" },
       areaServed: "Worldwide",
