@@ -2,14 +2,8 @@
 .container { width: 100%; max-width: 72rem; margin-inline: auto; padding-inline: 1.5rem; }
 .hero { border-bottom: 1px solid var(--color-line); background: var(--color-surface); }
 .heroGrid { display: grid; align-items: center; gap: 3rem; max-width: 72rem; margin-inline: auto; padding: 3rem 1.5rem 4rem; }
-.solution { min-width: 0; border: 1px solid var(--color-line); border-radius: 2rem; padding: clamp(1.25rem,3vw,2rem); background: var(--color-canvas-deep); box-shadow: 0 20px 60px rgb(35 41 54 / .07); }
-.scattered { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
-.scattered span { border: 1px dashed var(--color-line-strong); border-radius: .7rem; padding: .6rem .8rem; font-size: .8rem; color: var(--color-body); background: var(--color-surface); }
-.flowArrow { text-align: center; color: var(--color-accent); font-size: 2rem; padding-block: .7rem; }
-.connected { display: flex; align-items: center; gap: 1rem; border: 1px solid var(--color-accent); border-radius: 1rem; padding: 1.2rem; background: var(--color-surface); color: var(--color-accent); }
-.connected svg { flex-shrink: 0; }
-.flowSteps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .5rem; margin-top: 1rem; }
-.flowSteps li { text-align: center; border-radius: .5rem; background: var(--color-accent-soft); padding: .65rem .2rem; font-size: .8rem; color: var(--color-ink); }
+.heroArtwork { min-width: 0; overflow: hidden; border-radius: 1.5rem; background: #060e1b; box-shadow: 0 24px 64px rgb(6 14 27 / .18); }
+.heroImage { display: block; width: 100%; height: auto; }
 .capability { height: 100%; padding: 1.75rem; transition: border-color .25s, box-shadow .25s; }
 .capability:hover { border-color: var(--color-accent); box-shadow: 0 12px 35px rgb(35 41 54 / .06); }
 .details { margin-top: 1.5rem; border-top: 1px solid var(--color-line); padding-top: .5rem; }
