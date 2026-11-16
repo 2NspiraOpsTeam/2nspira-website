@@ -1,0 +1,23 @@
+.page { overflow-wrap: anywhere; }
+.container { width: 100%; max-width: 72rem; margin-inline: auto; padding-inline: 1.5rem; }
+.hero { border-bottom: 1px solid var(--color-line); background: var(--color-surface); }
+.heroGrid { display: grid; align-items: center; gap: 3rem; max-width: 72rem; margin-inline: auto; padding: 3rem 1.5rem 4rem; }
+.solution { min-width: 0; border: 1px solid var(--color-line); border-radius: 2rem; padding: clamp(1.25rem,3vw,2rem); background: var(--color-canvas-deep); box-shadow: 0 20px 60px rgb(35 41 54 / .07); }
+.scattered { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
+.scattered span { border: 1px dashed var(--color-line-strong); border-radius: .7rem; padding: .6rem .8rem; font-size: .8rem; color: var(--color-body); background: var(--color-surface); }
+.flowArrow { text-align: center; color: var(--color-accent); font-size: 2rem; padding-block: .7rem; }
+.connected { display: flex; align-items: center; gap: 1rem; border: 1px solid var(--color-accent); border-radius: 1rem; padding: 1.2rem; background: var(--color-surface); color: var(--color-accent); }
+.connected svg { flex-shrink: 0; }
+.flowSteps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .5rem; margin-top: 1rem; }
+.flowSteps li { text-align: center; border-radius: .5rem; background: var(--color-accent-soft); padding: .65rem .2rem; font-size: .8rem; color: var(--color-ink); }
+.capability { height: 100%; padding: 1.75rem; transition: border-color .25s, box-shadow .25s; }
+.capability:hover { border-color: var(--color-accent); box-shadow: 0 12px 35px rgb(35 41 54 / .06); }
+.details { margin-top: 1.5rem; border-top: 1px solid var(--color-line); padding-top: .5rem; }
+.details summary { cursor: pointer; min-height: 44px; padding-block: .75rem; font-weight: 500; color: var(--color-accent); }
+.details summary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; border-radius: .25rem; }
+.delivery { display: grid; gap: 1.5rem; }
+.delivery li { display: flex; align-items: flex-start; gap: 1.25rem; border-bottom: 1px solid var(--color-line); padding-bottom: 1.5rem; }
+.number { flex-shrink: 0; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--color-accent-soft); color: var(--color-accent); font-weight: 600; font-size: .85rem; }
+@media(min-width:1024px) { .heroGrid { grid-template-columns: 1.1fr 1fr; padding-block: 4rem; } }
+@media(max-width:639px) { .container { padding-inline: 1rem; } .heroGrid { padding-inline: 1rem; padding-top: 2rem; gap: 2rem; } .capability { padding: 1.5rem; } }
+@media(prefers-reduced-motion:reduce) { .capability { transition: none; } }

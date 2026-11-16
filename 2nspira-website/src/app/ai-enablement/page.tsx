@@ -16,7 +16,7 @@ import { h2, h3, lead, linkInline, pageMain, section, sectionBand, cardFlat, but
 
 const description = "Prepare your team, test one practical AI workflow, and explore ongoing support with clear scope, human review and measurable pilot criteria.";
 export const metadata: Metadata = publicPageMetadata({
-  title: "AI Readiness, Implementation & Support", description, path: "/ai-enablement"
+  title: "Organizational AI Enablement, Readiness & Training", description, path: "/ai-enablement"
 });
 
 const offers = [
@@ -81,7 +81,7 @@ const questions = [
 ];
 const jsonLd = {
   "@context": "https://schema.org", "@type": "Service", "@id": "https://2nspira.com/ai-enablement#service",
-  name: "Organizational AI Transformation & Enablement Consulting", description,
+  name: "Organizational AI Enablement", description,
   serviceType: ["Organizational AI transformation", "AI readiness assessment", "AI adoption strategy", "AI governance consulting", "Workforce AI training", "AI workflow implementation"],
   url: "https://2nspira.com/ai-enablement", provider: { "@id": "https://2nspira.com/#organization" }, areaServed: "Worldwide"
 };
@@ -99,7 +99,7 @@ export default function Page() {
           <div>
             <p className={lead}>Align your people, workflows, and technology so AI supports useful, accountable work—not just more experiments.</p>
             <p className="mt-4 leading-7 text-body">Start with a clear plan. Prove one useful workflow. Grow with confidence.</p>
-            <div className="mt-7 flex flex-wrap gap-3"><Link href="/resources/ai-readiness-scorecard" className={buttonPrimary}>Take the free readiness scorecard</Link><a href="#ai-offers-heading" className={buttonSecondary}>Find your starting point ↓</a></div>
+            <div className="mt-7 flex flex-wrap gap-3"><Link href="/contact?service=ai#contact-message" className={buttonPrimary}>Discuss Your Project</Link><Link href="/resources/ai-readiness-scorecard" className={buttonSecondary}>Take the free readiness scorecard</Link><a href="#ai-offers-heading" className={buttonSecondary}>Find your starting point ↓</a></div>
           </div>
           <figure className="overflow-hidden rounded-[2rem] border border-line shadow-xl">
             <Image src="/images/hero/ai-human-led-v3.webp" alt="Three professionals reviewing connected digital workflows together in an AI operations workspace." width={1536} height={1024} sizes="(min-width: 1024px) 552px, calc(100vw - 32px)" unoptimized fetchPriority="high" className="h-auto w-full" />
@@ -155,7 +155,7 @@ export default function Page() {
       <h2 id="ai-leadership-heading" className={h2}>Executive judgment. Hands-on technology experience.</h2>
       <p className={`max-w-3xl ${lead}`}>Led by Jeffrey V. Cortez. Technology leadership, enterprise systems and AI education—with a named human accountable for the work.</p>
       <Link href="/about#executive-profile" className={`mt-5 min-h-11 ${linkInline}`}>Meet Jeffrey and explore his leadership experience →</Link>
-      <details className="mt-8 rounded-2xl border border-line bg-surface p-6"><summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">How our capabilities work together</summary><ul className="mt-4 space-y-4 leading-7 text-body"><li><Link href="/technology-advisory" className={linkInline}>Technology Leadership &amp; Advisory</Link> provides direction, investment priorities, and executive accountability.</li><li><Link href="/automation-systems-optimization" className={linkInline}>Business Automation &amp; Integrations</Link> improves the underlying operating model.</li><li>AI Enablement connects capability, governance, skills, and AI-enabled workflows.</li><li><Link href="/websites" className={linkInline}>Websites &amp; Custom Digital Platforms</Link> delivers customer-facing or operational applications where needed.</li></ul></details>
+      <details className="mt-8 rounded-2xl border border-line bg-surface p-6"><summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">How our capabilities work together</summary><ul className="mt-4 space-y-4 leading-7 text-body"><li><Link href="/technology-advisory" className={linkInline}>Technology Leadership &amp; Advisory</Link> provides direction, investment priorities, and executive accountability.</li><li><Link href="/automation-systems-optimization" className={linkInline}>Business Automation &amp; Integrations</Link> improves the underlying operating model.</li><li>AI Enablement connects capability, governance, skills, and AI-enabled workflows.</li><li><Link href="/websites" className={linkInline}>Websites</Link> supports a clear customer-facing experience. <Link href="/custom-software-development" className={linkInline}>Custom Software Development</Link> connects operational applications and workflows where needed.</li></ul></details>
     </div></section>
     <section className={sectionBand} aria-labelledby="personal-agent-heading" id="personal-ai-assistant">
       <details className="mx-auto max-w-6xl px-4 sm:px-6"><summary className="min-h-11 cursor-pointer rounded py-2 font-medium text-ink focus-visible:outline-2 focus-visible:outline-accent">Also exploring a personal AI assistant?</summary>

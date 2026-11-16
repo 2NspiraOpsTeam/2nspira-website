@@ -1,0 +1,130 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "title": "Website Design, Custom Software &amp; AI Enablement | 2Nspira",
+    "h1": 1,
+    "canonical": "https://2nspira.com",
+    "metaRobots": "index, follow",
+    "bytes": 95151
+  },
+  {
+    "path": "/services",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "title": "AI &amp; Technology Transformation for Growing Organizations | 2Nspira",
+    "h1": 1,
+    "canonical": "https://2nspira.com/services",
+    "metaRobots": "index, follow",
+    "bytes": 130985
+  },
+  {
+    "path": "/websites",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "title": "Business Website Design &amp; Development | 2Nspira",
+    "h1": 1,
+    "canonical": "https://2nspira.com/websites",
+    "metaRobots": "index, follow",
+    "bytes": 142516
+  },
+  {
+    "path": "/custom-software-development",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "title": "Custom Software Development &amp; Integrations | 2Nspira",
+    "h1": 1,
+    "canonical": "https://2nspira.com/custom-software-development",
+    "metaRobots": "index, follow",
+    "bytes": 99148
+  },
+  {
+    "path": "/ai-enablement",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "title": "AI Readiness, Implementation &amp; Support | 2Nspira",
+    "h1": 1,
+    "canonical": "https://2nspira.com/ai-enablement",
+    "metaRobots": "index, follow",
+    "bytes": 176059
+  },
+  {
+    "path": "/work",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "title": "Technology Consulting Projects &amp; Engineering Portfolio | 2Nspira",
+    "h1": 1,
+    "canonical": "https://2nspira.com/work",
+    "metaRobots": "index, follow",
+    "bytes": 107261
+  },
+  {
+    "path": "/contact",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "title": "Discuss Your Business Challenge | 2Nspira",
+    "h1": 1,
+    "canonical": "https://2nspira.com/contact",
+    "metaRobots": "index, follow",
+    "bytes": 77834
+  },
+  {
+    "path": "/automation-systems-optimization",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "title": "Business Automation &amp; Integrations | 2Nspira",
+    "h1": 1,
+    "canonical": "https://2nspira.com/automation-systems-optimization",
+    "metaRobots": "index, follow",
+    "bytes": 145166
+  },
+  {
+    "path": "/works",
+    "status": 308,
+    "location": "/work",
+    "robots": null,
+    "h1": 0,
+    "bytes": 0
+  },
+  {
+    "path": "/book-online",
+    "status": 308,
+    "location": "/contact",
+    "robots": null,
+    "h1": 0,
+    "bytes": 0
+  },
+  {
+    "path": "/service-page/claris-filemaker-support-packages",
+    "status": 308,
+    "location": "/services",
+    "robots": null,
+    "h1": 0,
+    "bytes": 0
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "h1": 0,
+    "bytes": 2757
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "location": null,
+    "robots": null,
+    "h1": 0,
+    "bytes": 11499
+  }
+]
