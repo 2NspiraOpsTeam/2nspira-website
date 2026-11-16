@@ -21,7 +21,7 @@ export const metadata = publicPageMetadata({
 });
 export default function Demos() {
   return (
-    <main className={pageMain}><CatalogEffects headings>
+    <main id="main-content" tabIndex={-1} className={pageMain}><CatalogEffects headings>
       <DemoSchema
         path="/demos"
         title="Interactive software demos"

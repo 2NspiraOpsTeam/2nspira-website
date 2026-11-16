@@ -38,7 +38,7 @@ const scenes = [
 export default function ManufacturingVision() {
   const demo = demos.manufacturing;
   return (
-    <main className={pageMain}>
+    <main id="main-content" tabIndex={-1} className={pageMain}>
       <DemoHero
         category="Manufacturing operations"
         title="From order to shipment. Fewer blind spots."

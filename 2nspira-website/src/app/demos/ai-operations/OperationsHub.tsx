@@ -113,7 +113,7 @@ export default function OperationsHub() {
     setConfirm(part);
   }
   return (
-    <main className={styles.page}>
+    <main id="main-content" tabIndex={-1} className={styles.page}>
       <div className={styles.intro}>
         <Link href="/demos" className={styles.back}>
           ← All demonstrations

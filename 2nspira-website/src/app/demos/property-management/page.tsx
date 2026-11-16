@@ -38,7 +38,7 @@ const modules = [
 ];
 export default function PropertyDemoPage() {
   return (
-    <main className={pageMain}>
+    <main id="main-content" tabIndex={-1} className={pageMain}>
       <DemoSchema
         path="/demos/property-management"
         title="Property Management Operations Demo"
