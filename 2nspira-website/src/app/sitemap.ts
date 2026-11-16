@@ -24,6 +24,7 @@ const pages: Array<{
   { path: "/who-we-serve", priority: 0.8, changeFrequency: "monthly" },
   { path: "/work", priority: 0.8, changeFrequency: "monthly" },
   { path: "/demos", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/demos/ai-operations", priority: 0.7, changeFrequency: "monthly" },
   { path: "/demos/education", priority: 0.7, changeFrequency: "monthly" },
   { path: "/demos/property-management", priority: 0.7, changeFrequency: "monthly" },
   { path: "/demos/manufacturing", priority: 0.7, changeFrequency: "monthly" },
