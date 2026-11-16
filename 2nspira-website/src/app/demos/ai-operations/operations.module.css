@@ -678,3 +678,14 @@
   border-left: 2px solid #a1b49a;
   padding-left: 12px;
 }
+.heroGrid { display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; }
+.heroArtwork { border-radius:24px; overflow:hidden; position:relative; background:#071321; box-shadow:0 24px 60px #172b2920; }
+.heroArtwork img { width:100%; height:360px; object-fit:cover; }
+.heroArtwork figcaption { color:#d7e8ed; font-size:11px; padding:14px 18px; }
+.heroStart { display:inline-flex; align-items:center; min-height:48px; margin-top:24px; padding:12px 22px; background:#234f40; color:white; border-radius:30px; font-weight:500; }
+.workspace { scroll-margin-top:100px; }
+@media(max-width:899px) { .heroGrid { grid-template-columns:1fr; gap:24px; } .heroArtwork img { height:auto; aspect-ratio:16/9; } }
+.supportDetail { margin-top:24px; border-top:1px solid #cad8d1; padding-top:10px; font-size:14px; }
+.supportDetail summary { cursor:pointer; min-height:44px; padding-block:12px; }
+.supportDetail p { max-width:650px; line-height:1.8; padding-bottom:12px; }
+.supportDetail a { text-decoration:underline; text-underline-offset:4px; }

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Check,
@@ -116,7 +117,7 @@ export default function OperationsHub() {
           </span>
           <span>Real AI · Synthetic records · No outbound email</span>
         </div>
-        <h1>
+        <div className={styles.heroGrid}><div><h1>
           AI prepares the work.
           <br />
           <em>Your people decide.</em>
@@ -125,7 +126,8 @@ export default function OperationsHub() {
           Turn an incoming request into a clear next step. Explore a real
           AI-assisted workflow—with a human in control of every action.
         </p>
-        <p className="mt-5 leading-7">Invoices stuck over disputes or missing approvals? <Link href="/accounts-receivable-workflow-automation" className="underline underline-offset-4">Explore invoice workflow support</Link> or <Link href="/contact?service=automation#contact-message" className="underline underline-offset-4">discuss your invoice workflow</Link>. This sandbox demonstrates a capability, not customer results.</p>
+        <a className={styles.heroStart} href="#operations-workspace">Step into the workspace ↓</a></div><figure className={styles.heroArtwork}><Image src="/images/demos/ai-invoice-workflow-20261116.webp" alt="Concept illustration of invoices connected to a human-review checkpoint." width={1536} height={864} sizes="(min-width:900px) 600px, 100vw" unoptimized priority /><figcaption>Connected work. Human judgment. · Concept illustration</figcaption></figure></div>
+        <details className={styles.supportDetail}><summary>Want this kind of workflow for your business?</summary><p><Link href="/accounts-receivable-workflow-automation">Explore invoice workflow support</Link> or <Link href="/contact?service=automation#contact-message">discuss your invoice workflow</Link>. This sandbox demonstrates a capability, not customer results.</p></details>
         <div className={styles.badges}>
           <span>
             <ShieldCheck size={16} /> Approval before action
@@ -139,6 +141,7 @@ export default function OperationsHub() {
         </div>
       </div>
       <section
+        id="operations-workspace"
         className={styles.workspace}
         aria-label="AI Operations Hub workspace"
       >
