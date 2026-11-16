@@ -173,7 +173,7 @@ export default function OperationsHub() {
         <div className={styles.notice}>
           <ShieldCheck size={18} />
           <p>
-            You manage the team’s incoming requests. Review what AI prepares,
+            You manage internal billing requests and disputes. Review what AI prepares,
             then watch approved work appear in your saved sandbox workspace. Sessions expire after one hour. Use fictional
             information only; input is processed by Groq.
           </p>
@@ -183,10 +183,10 @@ export default function OperationsHub() {
             <div className={styles.sectionLabel}>
               <Inbox size={17} /> 01 / SIMULATED INBOX
             </div>
-            <h2>Choose a request</h2>
+            <h2>Choose a billing email</h2>
             <p className={styles.muted}>
-              Start with a possible duplicate charge, or explore another team’s
-              handoff.
+              Explore internal handoffs for billing disputes, payment questions
+              and invoice clarification.
             </p>
             <div className={styles.samples}>
               {samples.map((sample, i) => (
@@ -220,7 +220,7 @@ export default function OperationsHub() {
             </button>
             <VoiceInput disabled={!ready || busy} onListening={setListening} onTranscript={(text) => { setInput(text); setCustom(true); }} />
             <label className={styles.field}>
-              Incoming message
+              Incoming email or request
               <textarea
                 value={input}
                 maxLength={2000}
