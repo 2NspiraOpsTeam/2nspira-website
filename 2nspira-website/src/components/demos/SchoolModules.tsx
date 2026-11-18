@@ -6,6 +6,8 @@ const groups = [
     icon: GraduationCap,
     description: "One record from first enquiry to the school day.",
     modules: [
+      ["Administrator school hub", "Follow live scenario priorities, core placements, shared learning, school events, and recent activity.", "Try in demo"],
+      ["School calendar", "Create a November sample event, check same-time conflicts, and confirm removal across all demo views.", "Try in demo"],
       [
         "Registration & admissions",
         "Capture student and guardian details, review sample documents, and track admission.",
@@ -40,8 +42,8 @@ const groups = [
     modules: [
       [
         "Unit & lesson planning",
-        "Browse a three-step inquiry unit, learning intentions, and access strategies.",
-        "Read-only preview",
+        "Edit one Science 7 unit draft, cancel changes, then explicitly publish the plan to learner and family views.",
+        "Try in demo",
       ],
       [
         "Coursework & assignments",
@@ -70,6 +72,7 @@ const groups = [
     icon: Users,
     description: "Make progress easier to understand and act on.",
     modules: [
+      ["School announcements", "Publish all-school, family, or staff updates and verify the matching role’s noticeboard. No notification is sent.", "Try in demo"],
       [
         "Family progress view",
         "Follow a child’s learning evidence and teacher-published feedback.",
@@ -77,7 +80,7 @@ const groups = [
       ],
       [
         "School communication",
-        "Explore announcements and a shared fictional school conversation. Nothing is sent.",
+        "Explore a shared fictional school conversation. No external message is sent.",
         "Try in demo",
       ],
       [
@@ -99,12 +102,15 @@ const groups = [
   },
 ];
 const destinations: Record<string, [string, string]> = {
+  "Administrator school hub": ["Administrator", "School hub"],
+  "School calendar": ["Administrator", "School calendar"],
+  "School announcements": ["Administrator", "School announcements"],
   "Registration & admissions": ["Administrator", "Admissions"],
   "Enrollment & class capacity": ["Administrator", "Enrollment"],
   "Student & guardian records": ["Administrator", "Student record"],
   "Scheduling & attendance": ["Teacher", "Schedule & attendance"],
   "Tuition & payment status": ["Parent", "Tuition"],
-  "Unit & lesson planning": ["Teacher", "Learning"],
+  "Unit & lesson planning": ["Teacher", "Curriculum"],
   "Coursework & assignments": ["Teacher", "Learning"],
   "Assessment & feedback": ["Teacher", "Learning"],
   "Portfolio & student reflection": ["Student", "Learning"],

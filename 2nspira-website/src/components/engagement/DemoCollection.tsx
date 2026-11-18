@@ -10,10 +10,10 @@ const experiences = [
   {
     slug: "education",
     category: "Education",
-    title: "More room for the moments that matter.",
-    text: "From a family’s first application to a teacher’s published feedback. One connected learning journey.",
+    title: "2Nspira Campus",
+    text: "Learning opens possibilities. Connect school-office priorities, curriculum, classroom evidence, and the family’s view in one working demonstration.",
     image: "education-workspace",
-    alt: "Learning Grove school family overview with classroom learning and published feedback.",
+    alt: "2Nspira Campus administrator school hub with fictional school priorities, curriculum status and shared events.",
     url: demos.education.url,
     steps: "Admissions → Classroom → Family",
   },

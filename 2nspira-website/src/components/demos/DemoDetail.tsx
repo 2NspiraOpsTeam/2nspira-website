@@ -18,11 +18,12 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
   return (
     <main id="main-content" tabIndex={-1} className={pageMain}>
       <DemoHero
-        category="K–12 school management"
-        title="One learning journey. Everyone connected."
+        category="Connected K–12 school management"
+        brand={{src:"/images/brand/2nspira-campus-logo.svg",alt:"2Nspira Campus — Learning opens possibilities."}}
+        title="Learning opens possibilities."
         text="Give teachers room to teach and families a clearer view. Connect the first application to classroom progress, without losing the learner between systems."
         image="/images/demos/education-workspace.webp"
-        alt="Learning Grove family view showing classroom learning, enrolled classes and published teacher feedback."
+        alt="2Nspira Campus administrator school hub showing fictional learner priorities, curriculum status and school events."
         href={demo.url}
         steps={["Welcome a learner", "Connect the classroom", "Share progress"]}
       />
@@ -43,7 +44,7 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
               {[
                 [
                   "Administrator",
-                  "Review, admit, enroll, and follow the record.",
+                  "Review priorities, publish curriculum, and connect the school day.",
                 ],
                 [
                   "Teacher",
@@ -60,14 +61,14 @@ export default function DemoDetail({ kind }: { kind: keyof typeof demos }) {
               ].map(([role, text], i) => (
                 <a
                   data-catalog-card
-                  href={`${demo.url}?role=${role}`}
+                  href={`${demo.url}?role=${role}${role === "Administrator" ? "&section=School%20hub" : ""}`}
                   key={role}
                   className={`${cardFlat} block p-6 focus-visible:outline-2 focus-visible:outline-accent ${["!bg-[#fff0d9]", "!bg-[#e0f4ef]", "!bg-[#efe4fa]", "!bg-[#fff1b8]"][i]}`}
                 >
                   <h3 className="font-semibold text-ink">
                     {
                       {
-                        Administrator: "School office · Review admissions",
+                        Administrator: "School office · Open school hub",
                         Teacher: "Teacher · Open my classroom",
                         Student: "Student · Continue my learning",
                         Parent: "Family · See Riley’s learning",
