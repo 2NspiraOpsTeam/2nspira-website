@@ -5,10 +5,10 @@ export const PROPERTY_DEMO_URL = "https://harborstone-property-operations-demo.j
 export const demos = {
   education: {
     category: "Education",
-    title: "School Management & Learning Platform",
-    headline: "A connected school. A visible learning journey.",
+    title: "2Nspira Campus",
+    headline: "Learning opens possibilities.",
     intro:
-      "Bring admissions, school operations, and meaningful learning into one connected experience. Follow a learner from the first application to classroom evidence and family-visible feedback—without entering the same information again.",
+      "2Nspira Campus brings admissions, school operations, and meaningful learning into one connected experience. Follow a learner from the first application to classroom evidence and family-visible feedback—without entering the same information again.",
     audience:
       "For small private K–12 day schools evaluating a connected admissions, student-management, and learning experience. This example follows one Grade 7 learner at a fictional school.",
     challenge:
@@ -36,7 +36,7 @@ export const demos = {
       ],
       [
         "Progress & communication",
-        "See published feedback and attendance, browse sample announcements, and add a simulated school-support message.",
+        "See published feedback and attendance, publish audience-specific announcements, and add a simulated school-support message.",
       ],
       [
         "Illustrative tuition",

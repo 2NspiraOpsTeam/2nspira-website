@@ -12,6 +12,7 @@ export default function DemoHero({
   href,
   steps,
   overview = false,
+  brand,
 }: {
   category: string;
   title: string;
@@ -21,6 +22,7 @@ export default function DemoHero({
   href: string;
   steps: string[];
   overview?: boolean;
+  brand?: {src:string;alt:string};
 }) {
   return (
     <section className="demo-hero relative overflow-hidden border-b border-line">
@@ -35,6 +37,7 @@ export default function DemoHero({
         )}
         <div className="grid items-center gap-10 py-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:py-10">
           <div className="demo-arrive min-w-0">
+            {brand && <Image src={brand.src} alt={brand.alt} width={620} height={160} unoptimized className="mb-7 h-auto w-full max-w-[360px]" />}
             <p className={eyebrow}>{category}</p>
             <h1 className={`${h1} max-w-2xl`}>{title}</h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-body">{text}</p>
