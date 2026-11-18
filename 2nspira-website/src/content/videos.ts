@@ -40,11 +40,11 @@ export const videos = [
     description: "Eight hours of gentle window rain in a cozy studio setting, without thunder or music. A long listening companion for rest or a quiet moment.",
   },
   {
-    id: "_3T_1ZhlzQM",
-    title: "Rain on an Attic Window | 3 Hours for Reading & Study | No Music",
+    id: "Vu65dvQ_Omo",
+    title: "Rain on an Attic Window | 3 Hours of Sheltered Rain | No Music or Thunder",
     duration: "3:00:01",
     category: "ambience",
-    description: "A warm attic reading room and muted raindrops on glass. A three-hour visible scene for reading or study, without music.",
+    description: "Three hours of sheltered rain and window ambience with continuously simulated runoff over a still attic reading-room illustration. No music or thunder.",
   },
   {
     id: "QgKIubT_s5k",
