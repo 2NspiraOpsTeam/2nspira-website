@@ -54,11 +54,11 @@ export const videos = [
     description: "Light rain on leaves and wet stones in a Japanese-inspired moss courtyard. A three-hour visible scene, without thunder or music.",
   },
   {
-    id: "fqj8rEfb0-o",
-    title: "Cozy Rainy Café Ambience | 2 Hours for Reading | Cocoa Lounge, No Music",
+    id: "1yl3voNgdSw",
+    title: "Cocoa Lounge | 2 Hours of Cozy Window Rain | No Music, No Thunder",
     duration: "2:00:01",
     category: "ambience",
-    description: "Two hours of rain ambience in the Cocoa Lounge café setting, without music. A quiet backdrop for reading or unwinding.",
+    description: "Two hours of sheltered rain and window ambience with continuously simulated runoff over a still Cocoa Lounge illustration. No music or thunder.",
   },
   {
     id: "hWk6mH_t0Cs",
