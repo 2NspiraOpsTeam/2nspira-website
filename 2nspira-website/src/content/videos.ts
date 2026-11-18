@@ -12,11 +12,11 @@ export const videos = [
     description: "A continuous synthesized piano arrangement with quiet licensed rain and a continuously animated illustrated lounge.",
   },
   {
-    id: "HGTP7PWyNMI",
-    title: "First Light Atelier | 2 Hours of Instrumental Music | 2Nspira",
+    id: "c59t7nfZZ04",
+    title: "First Light Atelier | 2 Hours of Instrumental Music for Reading & Writing",
     duration: "2:00:01",
     category: "ambience",
-    description: "A bright atelier and original instrumental music for a quiet moment. Subtle camera drift over AI-created artwork.",
+    description: "A new continuous two-hour synthesized instrumental arrangement with subtle animated steam and sunlit dust over illustrated atelier artwork.",
   },
   {
     id: "AHUpWYbHboo",
