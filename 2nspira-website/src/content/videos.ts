@@ -26,11 +26,11 @@ export const videos = [
     description: "Original instrumental music in a blue observatory, with subtle camera drift over AI-created artwork.",
   },
   {
-    id: "V6HQWSdNAfc",
-    title: "Soft Rain in a Cozy Library | 2 Hours for Relaxing & Sleep | 2Nspira",
-    duration: "2:00:01",
+    id: "4ONBwCEgZWI",
+    title: "Rainlight Library — A Gentle Storm Arrives and Recedes | 2 Hours | No Music",
+    duration: "2:00:00",
     category: "ambience",
-    description: "Gentle synthesized rain and sparse distant birds in a continuously visible library scene. No music, thunder or voices.",
+    description: "A two-hour constructed rainstorm with softened distant thunder, animated glass runoff and a continuously visible illustrated library. Repeated field-recording sources; no music.",
   },
   {
     id: "u0BSQc236WQ",
