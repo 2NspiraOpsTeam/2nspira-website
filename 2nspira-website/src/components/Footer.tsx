@@ -58,7 +58,7 @@ export default async function Footer() {
           <h2 id="footer-contact-heading" className={`${styles.heading} ${styles.contactHeading}`}>Connect with us</h2>
           <ul className={styles.contactDetails} aria-labelledby="footer-contact-heading">
             <li><a href="mailto:hello@2nspira.com" className={styles.link}><Mail aria-hidden="true" size={17} />hello@2nspira.com</a></li>
-            <li><a href="tel:+16465430199" className={styles.link}><Phone aria-hidden="true" size={17} />+1 (646) 543-0199</a></li>
+            <li><a href="tel:+13474966211" className={styles.link}><Phone aria-hidden="true" size={17} />+1 (347) 496-6211</a></li>
           </ul>
           <nav aria-label="2Nspira social media" className={styles.social}>
             <ul className={styles.socialLinks}>{socialLinks.map(link => <li key={link.href}>
