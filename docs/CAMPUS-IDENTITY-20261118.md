@@ -1,7 +1,7 @@
 # 2Nspira Campus showcase identity — 18 November 2026
 
 Jeffrey selected **2Nspira Campus** and requested an original, meaningful logo.
-The vector book/doorway/path/spark identity and **Learning opens possibilities.**
+The original vector identity (superseded below) and **Learning opens possibilities.**
 line are shared with the education demo repository. Learning Grove Academy
 remains the fictional school. No trademark-registration, security-certification,
 production-readiness, client-result, or feature-parity claim is made.
@@ -32,3 +32,10 @@ local production deploy. Preview must be route-less/noindex with no production
 D1 bindings. Record immutable preview head, merged commit, matching production
 marker and rendered customer-entrance checks in the task release record.
 The standalone demo has its own independent deployment owner and marker.
+
+## Owner-directed identity revision
+
+Jeffrey found the original logo religious. Replaced it entirely with a secular
+abstract nested C, shared with the demo. Graphite/slate surfaces and restrained
+teal accents replace the playful demo palette. Updated screenshot shows the
+actual refreshed administrator hub; fictional-data boundaries remain unchanged.
