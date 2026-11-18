@@ -5,6 +5,13 @@ export const youtubeChannel = "https://www.youtube.com/@2Nspira";
 
 export const videos = [
   {
+    id: "A8VWKQkdUmk",
+    title: "Rainlight Library | 2 Hours of Instrumental Piano & Ambient Textures",
+    duration: "2:00:00",
+    category: "ambience",
+    description: "A continuous two-hour synthesized piano-style and ambient arrangement with animated glass runoff and cloud shading over illustrated library artwork. A distinct instrumental edition, separate from the no-music storm.",
+  },
+  {
     id: "dSAB-uzO0ec",
     title: "Cocoa Lounge | 2 Hours of Soft Piano & Quiet Rain",
     duration: "2:00:01",
