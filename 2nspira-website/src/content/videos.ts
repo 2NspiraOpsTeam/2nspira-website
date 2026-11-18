@@ -5,11 +5,11 @@ export const youtubeChannel = "https://www.youtube.com/@2Nspira";
 
 export const videos = [
   {
-    id: "MxyL6MskW_g",
-    title: "Cocoa Lounge | 2 Hours of Warm Piano & Quiet Rain | 2Nspira",
+    id: "dSAB-uzO0ec",
+    title: "Cocoa Lounge | 2 Hours of Soft Piano & Quiet Rain",
     duration: "2:00:01",
     category: "ambience",
-    description: "Warm instrumental keys and quiet rain in a continuously visible cozy lounge. A welcoming two-hour soundtrack for reading or winding down.",
+    description: "A continuous synthesized piano arrangement with quiet licensed rain and a continuously animated illustrated lounge.",
   },
   {
     id: "HGTP7PWyNMI",
