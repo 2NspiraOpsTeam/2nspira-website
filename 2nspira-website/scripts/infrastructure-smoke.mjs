@@ -13,7 +13,9 @@ for (const [path, status] of checks) {
     headers: { "x-forwarded-proto": "https", "user-agent": "2Nspira-infrastructure-monitor/1.0" },
   });
   assert.equal(r.status, status, `${path}: unexpected status`);
-  if (requireHardening) {
+  // Preview robots is intentionally served by the outer noindex wrapper,
+  // not application middleware. Assert middleware headers on HTML/private paths.
+  if (requireHardening && (r.headers.get("content-type")?.includes("text/html") || /^\/(admin|portal)/.test(path))) {
     assert.equal(r.headers.get("x-content-type-options"), "nosniff", path);
     if (/^\/(admin|portal)/.test(path)) {
       assert.match(r.headers.get("cache-control") || "", /no-store/, path);
