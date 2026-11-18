@@ -23,7 +23,7 @@ export function middleware(request: NextRequest) {
 
   if (pathname.startsWith("/admin") && pathname !== "/admin/login") {
     if (!request.cookies.get(ADMIN_SESSION_COOKIE)?.value) {
-      return redirectToLogin(request);
+      return secureResponse(redirectToLogin(request), pathname);
     }
   } else if (
     pathname.startsWith("/portal") &&
@@ -32,7 +32,7 @@ export function middleware(request: NextRequest) {
     pathname !== "/portal/register"
   ) {
     if (!request.cookies.get(CLIENT_SESSION_COOKIE)?.value) {
-      return redirectToLogin(request);
+      return secureResponse(redirectToLogin(request), pathname);
     }
   }
 
@@ -51,11 +51,11 @@ export function middleware(request: NextRequest) {
       headers: { Location: url.toString() },
     });
     response.headers.set("X-Deployment-Commit", deploymentCommit);
-    return response;
+    return secureResponse(response, pathname);
   }
   const response = NextResponse.next();
   response.headers.set("X-Deployment-Commit", deploymentCommit);
-  return response;
+  return secureResponse(response, pathname);
 }
 
 function redirectToLogin(request: NextRequest) {
@@ -63,4 +63,18 @@ function redirectToLogin(request: NextRequest) {
   url.pathname = "/portal/login";
   url.search = "";
   return NextResponse.redirect(url, 307);
+}
+
+/** Apply to redirects as well as rendered pages; APIs never enter shared caches. */
+function secureResponse(response: NextResponse, pathname: string) {
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  // Preserve intentional iframe embedding of public demonstrations.
+  if (/^\/(?:admin|portal)(?:\/|$)/.test(pathname) || pathname.startsWith("/api/")) {
+    response.headers.set("Cache-Control", "private, no-store");
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    response.headers.set("X-Frame-Options", "DENY");
+    response.headers.set("Content-Security-Policy", "frame-ancestors 'none'");
+  }
+  return response;
 }
