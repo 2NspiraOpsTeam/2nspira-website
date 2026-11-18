@@ -33,11 +33,11 @@ export const videos = [
     description: "A two-hour constructed rainstorm with softened distant thunder, animated glass runoff and a continuously visible illustrated library. Repeated field-recording sources; no music.",
   },
   {
-    id: "u0BSQc236WQ",
-    title: "Gentle Window Rain | 8 Hours Continuous Cozy Studio Scene | No Thunder or Music",
-    duration: "8:00:01",
+    id: "8zSUAoCZ7vQ",
+    title: "Gentle Window Rain | 8 Hours of Sheltered Rain | No Music or Thunder",
+    duration: "8:00:00",
     category: "ambience",
-    description: "Eight hours of gentle window rain in a cozy studio setting, without thunder or music. A long listening companion for rest or a quiet moment.",
+    description: "Eight hours of sheltered rain with continuously simulated window runoff over a still nighttime studio illustration. Repeated field-recording sources; no music or thunder.",
   },
   {
     id: "Vu65dvQ_Omo",
