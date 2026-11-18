@@ -142,7 +142,7 @@ try {
   const listenCount=studioVideoIds(c,"listen").length;
   check(listenCount > 0, true);
   const hiddenMedia=structuredClone(c);
-  hiddenMedia.items.find(i=>i.url.includes("_3T_1ZhlzQM")).status="draft";
+  hiddenMedia.items.find(i=>i.url.includes("Vu65dvQ_Omo")).status="draft";
   check(studioVideoIds(hiddenMedia,"listen").length,listenCount-1);
   hiddenMedia.categories.find(cat=>cat.id==="music-ambience").visible=false;
   check(studioVideoIds(hiddenMedia,"listen").length,0);
