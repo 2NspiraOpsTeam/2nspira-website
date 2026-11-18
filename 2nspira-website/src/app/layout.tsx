@@ -116,7 +116,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         description:
           siteDescription,
         email: "hello@2nspira.com",
-        telephone: "+1-646-543-0199",
+        telephone: "+1-347-496-6211",
         address: {
           "@type": "PostalAddress",
           streetAddress: "11215 72nd Rd",
@@ -127,7 +127,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         contactPoint: {
           "@type": "ContactPoint",
           email: "hello@2nspira.com",
-          telephone: "+1-646-543-0199",
+          telephone: "+1-347-496-6211",
           contactType: "customer support",
         },
         sameAs: [

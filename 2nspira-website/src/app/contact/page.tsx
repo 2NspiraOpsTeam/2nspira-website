@@ -601,10 +601,10 @@ export default function ContactPage() {
                 <p className={`mt-2 ${caption}`}>
                   Phone:{" "}
                   <a
-                    href="tel:+16465430199"
+                    href="tel:+13474966211"
                     className="font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors duration-300 ease-gentle hover:decoration-accent"
                   >
-                    +1 (646) 543-0199
+                    +1 (347) 496-6211
                   </a>
                 </p>
                 <p className={`mt-2 ${caption}`}>
