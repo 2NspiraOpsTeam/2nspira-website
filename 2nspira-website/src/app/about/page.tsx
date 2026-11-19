@@ -67,6 +67,11 @@ export default function AboutPage() {
 
       <LeadershipProfile />
       <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+        <Reveal className="mt-16"><section id="our-book" aria-labelledby="our-book-heading" className={styles.bookFeature}>
+          <Link href="/books" className={styles.bookCoverLink} aria-label="Explore Trust Is the Operating System"><Image src="/images/books/trust-is-the-operating-system.jpg" alt="Trust Is the Operating System by Jeffrey Cortez" width={1600} height={2560} sizes="(max-width: 640px) 180px, 220px" className="h-auto w-full shadow-xl" /></Link>
+          <div><p className={styles.eyebrow}>The thinking behind our work</p><h2 id="our-book-heading" className={`mt-4 ${h2}`}>Trust Is the Operating System</h2><p className="mt-3 text-sm font-medium text-accent">A book by Jeffrey Cortez</p><p className="mt-5 max-w-2xl text-lg leading-8 text-body">Technology moves quickly. Trust makes progress possible. Explore Jeffrey’s perspective on leadership, AI, and the human judgment that holds organizations together.</p><Link href="/books" className={`mt-6 ${buttonPrimary}`}>Explore the book <ArrowUpRight size={17} className="ml-2" aria-hidden="true" /></Link></div>
+        </section></Reveal>
+
         <Reveal className="mt-20"><section className={styles.story} aria-labelledby="our-story-heading">
           <div><AccentRule className="mb-6" /><p className={styles.eyebrow}>Our story</p><h2 id="our-story-heading" className={`mt-4 ${h2}`}>Built through experience.<br />Driven by possibility.</h2></div>
           <div>
