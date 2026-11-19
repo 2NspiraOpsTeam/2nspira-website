@@ -31,3 +31,9 @@
 .compass { background:#050505; padding:clamp(2rem,5vw,4rem); border-radius:1.5rem; --color-ink:#ffffff; --color-body:#d4d4d8; --color-accent:#a5c9ff; --color-line:#ffffff30; }
 .compass h2, .compass h3 { color:#fff; }
 @media(max-width:600px) { .compass { padding:2rem 1.25rem; } }
+
+.bookFeature { display:grid; grid-template-columns:220px 1fr; align-items:center; gap:clamp(2rem,5vw,4rem); padding:clamp(1.5rem,4vw,3rem); border:1px solid var(--color-line); border-radius:1.5rem; background:linear-gradient(135deg,#f1f2ef,var(--color-canvas)); }
+.bookCoverLink { display:block; max-width:220px; }
+.bookCoverLink:focus-visible { outline:2px solid var(--color-accent); outline-offset:8px; }
+@media(max-width:640px) { .bookFeature { grid-template-columns:1fr; } .bookCoverLink { width:180px; margin:auto; } }
+@media(prefers-reduced-motion:no-preference) and (hover:hover) { .bookCoverLink { transition:transform .3s ease; } .bookCoverLink:hover { transform:translateY(-4px) rotate(-1deg); } }
