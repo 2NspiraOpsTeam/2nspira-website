@@ -55,9 +55,9 @@ export default function WatchContent({ mode = "all", availableVideoIds }: { mode
       {listen&&<section aria-labelledby="listening-moment" className="mb-12">
         <p className={eyebrow}>Start with your moment</p><h2 id="listening-moment" className={`mt-3 ${h2}`}>What would you like to settle into?</h2>
         <div className="mt-7 grid gap-4 md:grid-cols-3">{[
-          {id:"_3T_1ZhlzQM",title:"Reading & study",text:"Three hours of muted attic-window rain, without music."},
+          {id:"Vu65dvQ_Omo",title:"Reading & study",text:"Three hours of muted attic-window rain, without music."},
           {id:"dSAB-uzO0ec",title:"Wind down with music",text:"Two hours of warm instrumental keys and quiet rain at Cocoa Lounge."},
-          {id:"V6HQWSdNAfc",title:"A quiet rain backdrop",text:"Two hours of library rain and sparse distant birds. No music, thunder or voices."},
+          {id:"4ONBwCEgZWI",title:"A quiet rain backdrop",text:"Two hours of library rain with softened distant thunder. No music or voices."},
         ].filter(moment=>collection.some(video=>video.id===moment.id)).map(moment=><a key={moment.id} href={`#video-${moment.id}`} className={`${card} block p-6`}><h3 className="text-lg font-semibold text-ink">{moment.title}</h3><p className="mt-3 leading-7 text-body">{moment.text}</p><span className="mt-4 inline-flex min-h-11 items-center text-accent">Go to this soundscape ↓</span></a>)}</div>
         <p className="mt-5 text-sm leading-6 text-body">Prefer a different atmosphere? Browse the full collection below. Each listing describes its soundtrack and duration.</p>
       </section>}
