@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./book.module.css";
 import CatalogSchema from "@/components/catalog/CatalogSchema";
 import { buttonPrimary, buttonSecondary, eyebrow, h2, linkInline } from "@/components/ui";
 
@@ -36,8 +37,12 @@ export default function BooksPage() {
           <div className="mt-5 flex flex-wrap items-center gap-2"><BuyLink /><Link href={excerpts} className={buttonSecondary}>Read selected excerpts <span aria-hidden="true">→</span></Link></div>
           <p className="mt-4 text-xs leading-5 text-body">As an Amazon Associate I earn from qualifying purchases.</p>
         </div>
-        <div className="mx-auto w-full max-w-[290px] sm:max-w-[330px] lg:max-w-[350px]">
-          <Image src="/images/books/trust-is-the-operating-system.jpg" alt="Cover of Trust Is the Operating System by Jeffrey Cortez" width={1600} height={2560} unoptimized preload className="h-auto w-full rounded-sm shadow-[12px_22px_45px_rgba(24,35,43,0.25)]" />
+        <div className="mx-auto w-full max-w-[290px] sm:max-w-[330px] lg:max-w-[350px]" style={{perspective: "1400px"}}>
+          <div className={styles.book}>
+          <div aria-hidden="true" className={styles.spine}><Image src="/images/books/trust-is-the-operating-system-spine.png" alt="" width={876} height={1200} unoptimized preload className={styles.spineArtwork} /></div>
+          <Image src="/images/books/trust-is-the-operating-system.jpg" alt="Cover of Trust Is the Operating System by Jeffrey Cortez" width={1600} height={2560} unoptimized preload className="relative block h-auto w-full shadow-[12px_22px_45px_rgba(24,35,43,0.25)]" />
+          </div>
+          <p className="mt-8 text-center text-xs text-body">Front &amp; spine view</p>
         </div>
       </div>
     </header>

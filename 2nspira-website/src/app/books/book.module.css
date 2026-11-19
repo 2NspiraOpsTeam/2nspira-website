@@ -1,0 +1,26 @@
+.book {
+  position: relative;
+  transform: rotateY(-25deg);
+  transform-style: preserve-3d;
+}
+.spine {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 7.5%;
+  height: 100%;
+  overflow: hidden;
+  background: #1d252c;
+  transform: rotateY(-90deg);
+  transform-origin: right center;
+  backface-visibility: hidden;
+}
+/* Display only the supplied printed strip; retain the original asset unchanged. */
+.spineArtwork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1564.286%;
+  max-width: none;
+  height: 100%;
+}
