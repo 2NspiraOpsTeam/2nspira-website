@@ -1,6 +1,6 @@
 .book {
   position: relative;
-  transform: rotateY(-25deg);
+  transform: rotateY(25deg);
   transform-style: preserve-3d;
 }
 .spine {
