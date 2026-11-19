@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-19",
+  "adjacent": "MI-002 deliverable feasibility",
+  "new_stream": "KDP/print workbook screen",
+  "next": [
+    "MI-003 current primary rule evidence",
+    "niche apps and digital templates"
+  ],
+  "prior_rotation": "November18 audio;November17 automation/templates;November16 websites/video",
+  "effort_actual_ratio": null
+}
