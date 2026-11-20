@@ -33,11 +33,11 @@ export const videos = [
     description: "A new continuous two-hour synthesized instrumental arrangement with subtle animated steam and sunlit dust over illustrated atelier artwork.",
   },
   {
-    id: "AHUpWYbHboo",
-    title: "Blue Observatory | 2 Hours of Instrumental Music | 2Nspira",
+    id: "ET3g-vm_dgM",
+    title: "Blue Observatory | 2 Hours of Instrumental Music for Quiet Focus",
     duration: "2:00:01",
     category: "ambience",
-    description: "Original instrumental music in a blue observatory, with subtle camera drift over AI-created artwork.",
+    description: "A new continuous two-hour synthesized instrumental arrangement with subtle animated water-light and drifting particles over illustrated observatory artwork.",
   },
   {
     id: "4ONBwCEgZWI",
