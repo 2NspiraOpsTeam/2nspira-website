@@ -1,3 +1,4 @@
+import { assertCurrentMain } from "./release-freshness.mjs";
 import { execFileSync } from "node:child_process";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -24,6 +25,8 @@ if (artifact.commit !== commit || artifact.branch !== "main") {
     `Production artifact mismatch: expected main@${commit}, received ${artifact.branch}@${artifact.commit}.`,
   );
 }
+
+assertCurrentMain(commit, { cwd: root });
 
 execFileSync(
   "./node_modules/.bin/vinext-cloudflare",
