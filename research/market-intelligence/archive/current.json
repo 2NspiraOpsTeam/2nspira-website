@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea",
-      "observed_at": "2026-11-19T06:03:36.392Z",
+      "run_id": "mi-eea00a9843468951395f16273aef2256",
+      "observed_at": "2026-11-20T06:01:58.919Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -229,7 +229,8 @@
             "nov11_scope": "Wave, Chaser and Upflow current offer pages refreshed only; original problem surveys not rechecked.",
             "nov12_record_review_at": "2026-11-12T01:08:24.805519-05:00",
             "nov12_scope": "Carry-forward only; no fresh source research on this candidate",
-            "nov13_scope": "Carry-forward only; not new source research"
+            "nov13_scope": "Carry-forward only; not new source research",
+            "nov20_record_review_at": "2026-11-20T06:01:58.919643+00:00"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -723,8 +724,8 @@
           ]
         },
         "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
-        "checked_at": "2026-11-19T06:03:36.392282+00:00",
-        "record_version": "2026-11-19-nightly-v17",
+        "checked_at": "2026-11-20T06:01:58.919643+00:00",
+        "record_version": "2026-11-20-nightly-v18",
         "revision_note": "November19 deliverable feasibility and KDP screen; source research refreshed only for MI-002, other source dates/outcomes inherited.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
@@ -780,8 +781,8 @@
       }
     },
     {
-      "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea",
-      "observed_at": "2026-11-19T06:03:36.392Z",
+      "run_id": "mi-eea00a9843468951395f16273aef2256",
+      "observed_at": "2026-11-20T06:01:58.919Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -1180,7 +1181,8 @@
               "checked_at": "2026-11-19T06:02:30.646597+00:00",
               "original_sample_publication": "2025-03-02",
               "legal_sources_refreshed": false
-            }
+            },
+            "nov20_record_review_at": "2026-11-20T06:01:58.919643+00:00"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -1743,8 +1745,8 @@
           }
         },
         "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
-        "checked_at": "2026-11-19T06:03:36.392282+00:00",
-        "record_version": "2026-11-19-nightly-v17",
+        "checked_at": "2026-11-20T06:01:58.919643+00:00",
+        "record_version": "2026-11-20-nightly-v18",
         "revision_note": "November19 deliverable feasibility and KDP screen; source research refreshed only for MI-002, other source dates/outcomes inherited.",
         "change_note": "November19 public deliverable comparison: three independent suppliers refreshed, no demand/score upgrade; prior approved deep dive preserved.",
         "allocation_tag": "Adjacent",
@@ -1801,8 +1803,8 @@
       }
     },
     {
-      "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea",
-      "observed_at": "2026-11-19T06:03:36.392Z",
+      "run_id": "mi-eea00a9843468951395f16273aef2256",
+      "observed_at": "2026-11-20T06:01:58.919Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -1962,7 +1964,8 @@
             "nov11_scope": "Record/outcome carry-forward only; no new source research for this candidate.",
             "nov12_record_review_at": "2026-11-12T01:08:24.805519-05:00",
             "nov12_scope": "Carry-forward only; no fresh source research on this candidate",
-            "nov13_scope": "Caption supplier and account checks only"
+            "nov13_scope": "Caption supplier and account checks only",
+            "nov20_record_review_at": "2026-11-20T06:01:58.919643+00:00"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -2438,8 +2441,8 @@
             }
           ]
         },
-        "checked_at": "2026-11-19T06:03:36.392282+00:00",
-        "record_version": "2026-11-19-nightly-v17",
+        "checked_at": "2026-11-20T06:01:58.919643+00:00",
+        "record_version": "2026-11-20-nightly-v18",
         "revision_note": "November19 deliverable feasibility and KDP screen; source research refreshed only for MI-002, other source dates/outcomes inherited.",
         "allocation_tag": "New Stream",
         "allocation_rationale": "New video/creative-production revenue offer; not the web-audit service. Reclassify only on documented buyer/job change, never to make ratio look good.",
@@ -2496,8 +2499,8 @@
       }
     },
     {
-      "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea",
-      "observed_at": "2026-11-19T06:03:36.392Z",
+      "run_id": "mi-eea00a9843468951395f16273aef2256",
+      "observed_at": "2026-11-20T06:01:58.919Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -2528,7 +2531,7 @@
         "stage": "RESEARCH_COMPLETE / RULE_RECHECK_REQUIRED",
         "owner_proposal": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution",
         "experiment": "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests",
-        "date_checked": "2026-11-18",
+        "date_checked": "2026-11-20",
         "outcome": "No certification/compliance guarantee; no buyer validation; current FAQ has legacy text and legal extract incomplete",
         "dedupe": "Distinct from #189 staff LinkedIn content and #184 Etsy/KDP listing work; no generic marketplace listing recommendation.",
         "research_details": {
@@ -2553,6 +2556,13 @@
               ],
               "checked_at": "2026-11-11T06:05:03.295Z",
               "status": "official_guidance_not_independently_verified_operative_law"
+            },
+            {
+              "url": "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+              "checked_at": "2026-11-20T06:00:48.000Z",
+              "observation": "EC FAQ describes context/role/risk-based literacy, no required certificate or mandated individual level. It describes amended Article4 and mid-July2026 entry into force, but also retains proposed-shift wording. Consolidated legal instrument not checked: retain HOLD_RULE_REVIEW; no compliance guarantee.",
+              "evidence_grade": "primary_guidance_or_supplier_not_qualified_intent",
+              "limitations": "Selected English public pages, no representative demand dataset; original publication date unknown; FAQ truncated."
             }
           ],
           "competitor_analysis": [
@@ -2605,6 +2615,27 @@
               "observation": "AI terminology, project workflows, strategy and society; four weeks, 2–3 hours/week; Coursera enrollment",
               "public_price": "Supplier FAQ displays $49 for 180 days certificate eligibility; currency unspecified, tax/region/current checkout unverified; do not normalize as USD quote",
               "limitations": "No EU Article4 equivalence; no legal certification, customer interview or sale"
+            },
+            {
+              "url": "https://www.deeplearning.ai/courses/ai-for-everyone/",
+              "checked_at": "2026-11-20T06:00:48.285Z",
+              "observation": "DeepLearning.AI FAQ: nontechnical four-week course; $49/180-day certificate eligibility, currency/checkout/tax unverified. Partial general-literacy substitute.",
+              "evidence_grade": "primary_guidance_or_supplier_not_qualified_intent",
+              "limitations": "Selected English public pages, no representative demand dataset; original publication date unknown; FAQ truncated."
+            },
+            {
+              "url": "https://www.elementsofai.com/",
+              "checked_at": "2026-11-20T06:00:50.699Z",
+              "observation": "Elements of AI free foundations plus separately linked workplace Get AI Ready; same MinnaLearn group, not two independent suppliers. Claimed2million signups not paid demand.",
+              "evidence_grade": "primary_guidance_or_supplier_not_qualified_intent",
+              "limitations": "Selected English public pages, no representative demand dataset; original publication date unknown; FAQ truncated."
+            },
+            {
+              "url": "https://www.goodhabitz.com/en/",
+              "checked_at": "2026-11-20T06:00:48.354Z",
+              "observation": "GoodHabitz: workplace digital-skills library, AI lesson, LMS and localized content, custom pricing. Supplier customer stories not independent sales proof; broader partial substitute.",
+              "evidence_grade": "primary_guidance_or_supplier_not_qualified_intent",
+              "limitations": "Selected English public pages, no representative demand dataset; original publication date unknown; FAQ truncated."
             }
           ],
           "pricing_intelligence": {
@@ -2659,13 +2690,37 @@
             "nov11_scope": "Commission FAQ refreshed; linked EUR-Lex legal text extraction failed. FAQ truncated and mixes amended/proposal language; operative rule not independently resolved.",
             "nov12_record_review_at": "2026-11-12T01:08:24.805519-05:00",
             "nov12_scope": "Carry-forward only; no fresh source research on this candidate",
-            "nov13_scope": "Carry-forward only; not new source research"
+            "nov13_scope": "Carry-forward only; not new source research",
+            "nov20_record_review_at": "2026-11-20T06:01:58.919643+00:00",
+            "nov20_source_checks": [
+              {
+                "url": "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+                "checked_at": "2026-11-20T06:00:48.000Z",
+                "truncated": true
+              },
+              {
+                "url": "https://www.deeplearning.ai/courses/ai-for-everyone/",
+                "checked_at": "2026-11-20T06:00:48.285Z",
+                "truncated": false
+              },
+              {
+                "url": "https://www.elementsofai.com/",
+                "checked_at": "2026-11-20T06:00:50.699Z",
+                "truncated": false
+              },
+              {
+                "url": "https://www.goodhabitz.com/en/",
+                "checked_at": "2026-11-20T06:00:48.354Z",
+                "truncated": false
+              }
+            ]
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
             "No verified distribution reach or realized margin",
             "Only two independently fetched supplier groups: Elements of AI and Get AI Ready share MinnaLearn. Two direct workplace comparators plus one free foundational baseline. Third independent supplier target DataCamp blocked 403; Udemy also 403. Three direct independent suppliers not established; no claim of full coverage. Revenue/profit not publicly verified; supplier marketing is not independent demand proof.",
-            "Third independent supplier group added; broader literacy substitute only. EU legal positioning and qualified demand remain unresolved."
+            "Third independent supplier group added; broader literacy substitute only. EU legal positioning and qualified demand remain unresolved.",
+            "Nov20 FAQ mixes amended-rule description and legacy proposed-shift wording; verify consolidated instrument and qualified interpretation before legal positioning."
           ],
           "business_case": {
             "version": "2026-11-08-weekly-business-case-v5",
@@ -3141,8 +3196,8 @@
           "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
         },
         "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
-        "checked_at": "2026-11-19T06:03:36.392282+00:00",
-        "record_version": "2026-11-19-nightly-v17",
+        "checked_at": "2026-11-20T06:01:58.919643+00:00",
+        "record_version": "2026-11-20-nightly-v18",
         "revision_note": "November19 deliverable feasibility and KDP screen; source research refreshed only for MI-002, other source dates/outcomes inherited.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",

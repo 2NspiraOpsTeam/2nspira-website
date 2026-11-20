@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
-  "source_observed_at": "2026-11-19T06:03:36.392Z",
+  "source_observed_at": "2026-11-20T06:01:58.919Z",
   "integration_status": "snapshot_only_dashboard_not_connected",
   "counts": {
     "current_opportunities": 4,
-    "research_revisions": 23
+    "research_revisions": 24
   },
   "top_opportunities": [
     {
@@ -13,32 +13,32 @@
       "title": "Approval-first receivables exception desk for small B2B service firms",
       "score": 68,
       "confidence": "medium problem evidence; willingness to pay untested",
-      "observed_at": "2026-11-19T06:03:36.392Z",
-      "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea"
+      "observed_at": "2026-11-20T06:01:58.919Z",
+      "run_id": "mi-eea00a9843468951395f16273aef2256"
     },
     {
       "candidate_id": "MI-002",
       "title": "Title II evidence-and-remediation handoff pack for public-sector web vendors",
       "score": 60,
       "confidence": "low commercial confidence; authoritative rule signal, no procurement intent verified",
-      "observed_at": "2026-11-19T06:03:36.392Z",
-      "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea"
+      "observed_at": "2026-11-20T06:01:58.919Z",
+      "run_id": "mi-eea00a9843468951395f16273aef2256"
     },
     {
       "candidate_id": "MI-004",
       "title": "English B2B webinar caption-QA and evidence handoff",
       "score": 60,
       "confidence": "low; broad production/adoption evidence, no niche buying intent",
-      "observed_at": "2026-11-19T06:03:36.392Z",
-      "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea"
+      "observed_at": "2026-11-20T06:01:58.919Z",
+      "run_id": "mi-eea00a9843468951395f16273aef2256"
     },
     {
       "candidate_id": "MI-003",
       "title": "Role-specific AI usage and literacy starter pack for small EU agencies",
       "score": 59,
       "confidence": "low commercial confidence; adoption and guidance, no verified paid demand",
-      "observed_at": "2026-11-19T06:03:36.392Z",
-      "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea"
+      "observed_at": "2026-11-20T06:01:58.919Z",
+      "run_id": "mi-eea00a9843468951395f16273aef2256"
     }
   ],
   "emerging_trends": {
@@ -46,6 +46,12 @@
     "note": "Metadata revisions and score recalibration are not market trends."
   },
   "research_activity": [
+    {
+      "run_id": "mi-eea00a9843468951395f16273aef2256",
+      "record_version": "2026-11-20-nightly-v18",
+      "observed_at": "2026-11-20T06:01:58.919Z",
+      "imported_at": "2026-11-20T06:01:59.393Z"
+    },
     {
       "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea",
       "record_version": "2026-11-19-nightly-v17",
