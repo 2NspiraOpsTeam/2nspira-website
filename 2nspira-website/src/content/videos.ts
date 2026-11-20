@@ -5,6 +5,13 @@ export const youtubeChannel = "https://www.youtube.com/@2Nspira";
 
 export const videos = [
   {
+    id: "BalL84V8Q6o",
+    title: "Cabin Roof Rain & Distant Thunder | 8 Hours | No Music",
+    duration: "8:00:00",
+    category: "ambience",
+    description: "Eight hours of cabin roof rain and distant thunder with continuously simulated rain over preserved illustrated scenery. Reused original soundtrack, reduced by 1 dB; no music.",
+  },
+  {
     id: "A8VWKQkdUmk",
     title: "Rainlight Library | 2 Hours of Instrumental Piano & Ambient Textures",
     duration: "2:00:00",
