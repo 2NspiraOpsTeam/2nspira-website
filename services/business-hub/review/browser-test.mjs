@@ -1,0 +1,38 @@
+// Optional external browser harness: set PLAYWRIGHT_MODULE to an installed module path.
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright-core');
+import assert from 'node:assert/strict';
+const browser = await chromium.launch({ executablePath:process.env.CHROME_EXECUTABLE || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true });
+const page = await browser.newPage({viewport:{width:1440,height:1050}});
+const errors=[]; page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:8789');
+await page.getByRole('button',{name:'Orbit Studio — synthetic'}).click();
+await page.getByRole('heading',{name:'Orbit Studio — synthetic'}).waitFor();
+assert.equal(await page.locator('.metric').count(),5);
+assert.equal(await page.locator('.card').count(),4);
+await page.getByRole('button',{name:'Monthly recurring revenue Not connected'}).click();
+assert.match(await page.locator('#metric-detail').textContent(),/no verified source/);
+await page.getByLabel('Find a customer').fill('does not exist'); await page.getByRole('button',{name:'Search',exact:true}).click();
+await page.getByText('No matching customers. Try another search.').waitFor();
+await page.getByLabel('Find a customer').fill('Orbit'); await page.getByRole('button',{name:'Search',exact:true}).click();
+await page.getByRole('button',{name:'Orbit Studio — synthetic'}).click();
+await page.getByRole('heading',{name:'Orbit Studio — synthetic'}).waitFor();
+await page.getByLabel('Search archived opportunity titles').fill('caption'); assert.equal(await page.locator('.card').count(),1);
+await page.getByLabel('Search archived opportunity titles').fill(''); assert.equal(await page.locator('.card').count(),4);
+await page.screenshot({path:new URL('./desktop.png',import.meta.url).pathname,fullPage:true});
+await page.setViewportSize({width:390,height:844});
+assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true);
+await page.screenshot({path:new URL('./mobile.png',import.meta.url).pathname,fullPage:true});
+await page.goto('http://127.0.0.1:8789'); await page.keyboard.press('Tab');
+assert.equal(await page.evaluate(()=>document.activeElement.textContent),'Skip to dashboard');
+// Explicit denial and fetch-failure UI states.
+await page.route('**/v1/customers*',route=>route.fulfill({status:403,contentType:'application/json',body:'{}'}));
+await page.reload(); await page.getByText('Permission denied.',{exact:true}).waitFor();
+await page.unroute('**/v1/customers*');
+await page.route('**/v1/metrics',route=>route.fulfill({status:503,contentType:'application/json',body:'{}'}));
+await page.reload(); await page.getByText('Data unavailable. Retry by reloading; no zero values inferred.',{exact:true}).waitFor();
+const { get: httpGet } = await import('node:http');
+const hostStatus = await new Promise(resolve => httpGet('http://127.0.0.1:8789', { headers: { Host: 'attacker.invalid' } }, res => { res.resume(); resolve(res.statusCode); })); assert.equal(hostStatus,403);
+const cross=await fetch('http://127.0.0.1:8789/v1/customers',{headers:{Origin:'https://attacker.invalid'}}); assert.equal(cross.status,403);
+assert.deepEqual(errors,[]);
+console.log('PASS: desktop/mobile, no horizontal overflow, customer search/detail/empty, research filter, KPI unknown drilldown, keyboard skip link, permission/error states, DNS-rebinding/cross-origin denials, no browser exceptions.');
+await browser.close();

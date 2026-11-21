@@ -1,0 +1,10 @@
+{
+  "name": "2nspira-business-hub-review",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-11-08",
+  "workers_dev": false,
+  "preview_urls": false
+  // Deliberately no route, account, remote D1 binding or identities.
+  // A deployment cannot serve data: missing binding/identity fails closed.
+  // Review adoption of existing research D1 before adding any binding.
+}
