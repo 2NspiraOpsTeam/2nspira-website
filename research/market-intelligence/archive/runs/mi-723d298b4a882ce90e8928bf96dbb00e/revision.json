@@ -1,0 +1,166 @@
+{
+  "run": {
+    "run_id": "mi-723d298b4a882ce90e8928bf96dbb00e",
+    "observed_at": "2026-11-07T04:29:58.170Z",
+    "imported_at": "2026-11-07T04:51:21.259Z",
+    "actor": "brian",
+    "issue_url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+    "record_version": "initial-2026-11-07-v1",
+    "payload_hash": "1bcae788c87d9e1db70d65efb33ab89138f2c54647fe0299729213861eaa799a",
+    "canonical_hash": "d09903d93c58d499a9894b74d6c01719391791fb88eeb129d0acf2f3cb6bb5bc"
+  },
+  "versions": [
+    {
+      "candidate_id": "MI-001",
+      "observed_at": "2026-11-07T04:29:58.170Z",
+      "record": {
+        "candidate_id": "MI-001",
+        "category": "Workflow automation / productized B2B service",
+        "title": "Approval-first receivables exception desk for small B2B service firms",
+        "demand_evidence_links": [
+          "https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/",
+          "https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "confidence": "medium problem evidence; willingness to pay untested",
+        "ranking": 1,
+        "score": 71,
+        "scores": {
+          "D": 3,
+          "C": 3,
+          "B": 4,
+          "F": 2,
+          "M": 3,
+          "T": 5,
+          "A": 5,
+          "L": 4
+        },
+        "stage": "RESEARCH_COMPLETE / EXPERIMENT_PROPOSED_NOT_RUN",
+        "owner_proposal": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian",
+        "experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
+        "date_checked": "2026-11-07 UTC",
+        "outcome": "No interviews, purchases, revenue or product launch; unvalidated offer",
+        "dedupe": "Adjacent to #185 acquisition; no new campaign. Excludes #186 Business Hub and payment-pilot checkout."
+      }
+    },
+    {
+      "candidate_id": "MI-002",
+      "observed_at": "2026-11-07T04:29:58.170Z",
+      "record": {
+        "candidate_id": "MI-002",
+        "category": "Accessibility QA / niche productized service",
+        "title": "Title II evidence-and-remediation handoff pack for public-sector web vendors",
+        "demand_evidence_links": [
+          "https://www.ada.gov/resources/2024-03-08-web-rule/"
+        ],
+        "source_ids": [
+          "S4",
+          "S5"
+        ],
+        "confidence": "low commercial confidence; authoritative rule signal, no procurement intent verified",
+        "ranking": 2,
+        "score": 60,
+        "scores": {
+          "D": 2,
+          "C": 2,
+          "B": 3,
+          "F": 3,
+          "M": 3,
+          "T": 4,
+          "A": 5,
+          "L": 3
+        },
+        "stage": "RESEARCH_COMPLETE / DISCOVERY_PROPOSED_NOT_RUN",
+        "owner_proposal": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner",
+        "experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
+        "date_checked": "2026-11-07 UTC",
+        "outcome": "No public website audited, bid identified, compliance certification or sale",
+        "dedupe": "Complements #178/#185 acquisition and #183 QA; not a duplicate website redesign or internal accessibility audit."
+      }
+    },
+    {
+      "candidate_id": "MI-003",
+      "observed_at": "2026-11-07T04:29:58.170Z",
+      "record": {
+        "candidate_id": "MI-003",
+        "category": "Digital training kit / AI workflow governance",
+        "title": "Role-specific AI usage and literacy starter pack for small EU agencies",
+        "demand_evidence_links": [
+          "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+          "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"
+        ],
+        "source_ids": [
+          "S6",
+          "S7",
+          "S8",
+          "S9"
+        ],
+        "confidence": "low commercial confidence; adoption and guidance, no verified paid demand",
+        "ranking": 3,
+        "score": 59,
+        "scores": {
+          "D": 2,
+          "C": 2,
+          "B": 4,
+          "F": 2,
+          "M": 3,
+          "T": 5,
+          "A": 4,
+          "L": 3
+        },
+        "stage": "RESEARCH_COMPLETE / RULE_RECHECK_REQUIRED",
+        "owner_proposal": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution",
+        "experiment": "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests",
+        "date_checked": "2026-11-07 UTC",
+        "outcome": "No certification/compliance guarantee; no buyer validation; current FAQ has legacy text and legal extract incomplete",
+        "dedupe": "Distinct from #189 staff LinkedIn content and #184 Etsy/KDP listing work; no generic marketplace listing recommendation."
+      }
+    }
+  ],
+  "documents": [
+    {
+      "name": "deduplication-log.md",
+      "sha256": "6fb4e9197c555432d3d5c5795fc92e768f1781e087afce2028862bc657232a40"
+    },
+    {
+      "name": "initial-brief.md",
+      "sha256": "d85fab42f909706334c455837b4217f98c215c87948654ba67fbfa89bedc0016"
+    },
+    {
+      "name": "open-issue-overlap-scan.md",
+      "sha256": "e5eb90d20ea9f86f4b805e7c3b68520a756d1a75dbce2d505f49c0b52aad1fa9"
+    },
+    {
+      "name": "opportunity-register-reviewed.json",
+      "sha256": "3a4de061a2a2c1624aadafe643d0d070ceed30fccaa2dff24f8873f8a4b3bc36"
+    },
+    {
+      "name": "opportunity-register.json",
+      "sha256": "ae1e15d16d1d0df775f224903510be909f3ca60eb096e41e2f9a1981ec3c959f"
+    },
+    {
+      "name": "parent-review.md",
+      "sha256": "57759f41f6aa44144a9cc0a89825fbc3cb3391e0174992a463d3aeaf5a68d5eb"
+    },
+    {
+      "name": "recommended-experiment.md",
+      "sha256": "964ba96c05c0107c8f8576abdeed33ece266d2781c4005790dcb662cdedf7d12"
+    },
+    {
+      "name": "scoring-rubric.md",
+      "sha256": "419a570815afd53917c7aae2319046c715d82cde23293bb7bb838444c10019c1"
+    },
+    {
+      "name": "source-snapshots.json",
+      "sha256": "aff6762bfec3e69e94e6f237b2f9f6ae6e3838e67b697b030946f4cf61b3ea0d"
+    },
+    {
+      "name": "watchlist.md",
+      "sha256": "d1b308a05d98ed0326dd793c43144528bbb1e2232fcbf1f1343446647558660c"
+    }
+  ]
+}

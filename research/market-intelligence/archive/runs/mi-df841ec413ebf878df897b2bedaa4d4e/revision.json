@@ -1,0 +1,191 @@
+{
+  "run": {
+    "run_id": "mi-df841ec413ebf878df897b2bedaa4d4e",
+    "observed_at": "2026-11-07T04:41:39.354Z",
+    "imported_at": "2026-11-07T04:51:21.985Z",
+    "actor": "brian",
+    "issue_url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+    "record_version": "2026-11-06-nightly-v2",
+    "payload_hash": "b8f124cf5955c69b67baed96654e857fbadab1e30af66686af0a404fb2079386",
+    "canonical_hash": "c4cd36c950de83b5df0a71929bac0da9b14290c7c4967e6cf46bcdc63c9eccea"
+  },
+  "versions": [
+    {
+      "candidate_id": "MI-001",
+      "observed_at": "2026-11-07T04:41:39.354Z",
+      "record": {
+        "candidate_id": "MI-001",
+        "category": "Workflow automation / productized B2B service",
+        "title": "Approval-first receivables exception desk for small B2B service firms",
+        "demand_evidence_links": [
+          "https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/",
+          "https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "confidence": "medium problem evidence; willingness to pay untested",
+        "ranking": 1,
+        "score": 68,
+        "scores": {
+          "D": 3,
+          "C": 2,
+          "B": 4,
+          "F": 2,
+          "M": 3,
+          "T": 5,
+          "A": 5,
+          "L": 4
+        },
+        "stage": "RESEARCH_COMPLETE / EXPERIMENT_PROPOSED_NOT_RUN",
+        "owner_proposal": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian",
+        "experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
+        "date_checked": "2026-11-06 America/New_York (desk recalibration, not source refresh)",
+        "outcome": "No interviews, purchases, revenue or product launch; unvalidated offer",
+        "dedupe": "Adjacent to #185 acquisition; no new campaign. Excludes #186 Business Hub and payment-pilot checkout.",
+        "change_note": "71 -> 68: channel score corrected from C3 (reachable route) to C2 (plausible but untested); no specific reachable channel documented. No new buyer evidence."
+      }
+    },
+    {
+      "candidate_id": "MI-002",
+      "observed_at": "2026-11-07T04:41:39.354Z",
+      "record": {
+        "candidate_id": "MI-002",
+        "category": "Accessibility QA / niche productized service",
+        "title": "Title II evidence-and-remediation handoff pack for public-sector web vendors",
+        "demand_evidence_links": [
+          "https://www.ada.gov/resources/2024-03-08-web-rule/"
+        ],
+        "source_ids": [
+          "S4",
+          "S5"
+        ],
+        "confidence": "low commercial confidence; authoritative rule signal, no procurement intent verified",
+        "ranking": 3,
+        "score": 60,
+        "scores": {
+          "D": 2,
+          "C": 2,
+          "B": 3,
+          "F": 3,
+          "M": 3,
+          "T": 4,
+          "A": 5,
+          "L": 3
+        },
+        "stage": "RESEARCH_COMPLETE / DISCOVERY_PROPOSED_NOT_RUN",
+        "owner_proposal": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner",
+        "experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
+        "date_checked": "2026-11-07 UTC",
+        "outcome": "No public website audited, bid identified, compliance certification or sale",
+        "dedupe": "Complements #178/#185 acquisition and #183 QA; not a duplicate website redesign or internal accessibility audit."
+      }
+    },
+    {
+      "candidate_id": "MI-003",
+      "observed_at": "2026-11-07T04:41:39.354Z",
+      "record": {
+        "candidate_id": "MI-003",
+        "category": "Digital training kit / AI workflow governance",
+        "title": "Role-specific AI usage and literacy starter pack for small EU agencies",
+        "demand_evidence_links": [
+          "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+          "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"
+        ],
+        "source_ids": [
+          "S6",
+          "S7",
+          "S8",
+          "S9"
+        ],
+        "confidence": "low commercial confidence; adoption and guidance, no verified paid demand",
+        "ranking": 4,
+        "score": 59,
+        "scores": {
+          "D": 2,
+          "C": 2,
+          "B": 4,
+          "F": 2,
+          "M": 3,
+          "T": 5,
+          "A": 4,
+          "L": 3
+        },
+        "stage": "RESEARCH_COMPLETE / RULE_RECHECK_REQUIRED",
+        "owner_proposal": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution",
+        "experiment": "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests",
+        "date_checked": "2026-11-07 UTC",
+        "outcome": "No certification/compliance guarantee; no buyer validation; current FAQ has legacy text and legal extract incomplete",
+        "dedupe": "Distinct from #189 staff LinkedIn content and #184 Etsy/KDP listing work; no generic marketplace listing recommendation."
+      }
+    },
+    {
+      "candidate_id": "MI-004",
+      "observed_at": "2026-11-07T04:41:39.354Z",
+      "record": {
+        "candidate_id": "MI-004",
+        "category": "Video / creative services",
+        "title": "English B2B webinar caption-QA and evidence handoff",
+        "buyer_problem_channel_key": "B2B webinar producers | terminology/speaker/timing caption handoff | agency referral, untested",
+        "demand_evidence_links": [
+          "https://wistia.com/blog/video-marketing-statistics"
+        ],
+        "source_ids": [
+          "N1",
+          "N2"
+        ],
+        "confidence": "low; broad production/adoption evidence, no niche buying intent",
+        "ranking": 2,
+        "score": 60,
+        "scores": {
+          "D": 2,
+          "C": 2,
+          "B": 4,
+          "F": 2,
+          "M": 3,
+          "T": 5,
+          "A": 4,
+          "L": 4
+        },
+        "stage": "EXPLORATORY / EXPERIMENT_NOT_RUN",
+        "owner_proposal": "Brian research accountable; Maya any approved recruitment; separate caption/accessibility reviewer; delivery unassigned",
+        "experiment": "One original synthetic 10-minute webinar caption handoff, then 5 consented producer interviews only after exact recruitment approval",
+        "date_checked": "2026-11-06 America/New_York",
+        "outcome": "No interviews, buyers, publication, revenue or independent signoff",
+        "dedupe": "W03 video branch investigated, not a new generic music pack. Distinct from MI-002 public-sector web-template QA by buyer/job/channel; route to existing MI-002 if an agency needs that same Title II engagement. Adjacent #182 showcase is not a service launch; #189 staff posts are not deliverables for this offer."
+      }
+    }
+  ],
+  "documents": [
+    {
+      "name": "nightly-brief.md",
+      "sha256": "5e261ec87176cdaa14621b0378f30b62d1433a4e3dc53b2db4d674f98a9a3e12"
+    },
+    {
+      "name": "opportunity-register.json",
+      "sha256": "3d6ea7329a3769774f396887fe2eb714b204282aa141247ea749753e0998993c"
+    },
+    {
+      "name": "recommended-experiment.md",
+      "sha256": "cfb8fafe60947c817a5f11124cca21b13e5fe3006236dfebf97b71f4d4955b6c"
+    },
+    {
+      "name": "rotation-state.json",
+      "sha256": "e025ecea6bbac98ce5df43e6cc2632c1c3d741a151a215f74259845c59f048b7"
+    },
+    {
+      "name": "scoring-rubric-v1-inherited.md",
+      "sha256": "419a570815afd53917c7aae2319046c715d82cde23293bb7bb838444c10019c1"
+    },
+    {
+      "name": "source-snapshots.json",
+      "sha256": "815f0f47471d6218d3f5fa2eede987ccf2deeab6efb2b31016f907cee5927dcd"
+    },
+    {
+      "name": "watchlist.md",
+      "sha256": "ce2f597f786a73ee826756c85963835981db1d361bbf743b143eee746f82e79b"
+    }
+  ]
+}

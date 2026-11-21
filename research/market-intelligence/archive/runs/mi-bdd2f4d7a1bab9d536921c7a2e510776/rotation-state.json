@@ -1,0 +1,40 @@
+{
+  "operating_model": {
+    "start": "2026-11-08",
+    "end": "2026-12-08",
+    "timezone": "America/New_York",
+    "authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+    "allocation_basis": "research and validation effort, not candidate count, bookings or revenue",
+    "target_percent": {
+      "Adjacent": 70,
+      "New Stream": 30
+    },
+    "illustrative_capacity_hours": 40,
+    "capacity_authorized_or_staffed": false,
+    "planned_hours": {
+      "MI-001": 10,
+      "MI-002": 16,
+      "MI-003": 2,
+      "MI-004": 4,
+      "new_stream_watchlist": 8
+    },
+    "actual_effort": {
+      "human_hours": null,
+      "agent_active_minutes": null,
+      "reason": "No reliable per-category pre-instrumentation timer; not reconstructed from timestamps or token counts. Start ledger at integration; future workers log actual active minutes separately from wall time/human hours."
+    },
+    "review_dates": [
+      "2026-11-15",
+      "2026-11-22",
+      "2026-11-29",
+      "2026-12-06",
+      "2026-12-08"
+    ]
+  },
+  "new_stream_screening": [
+    "Original licensed audio: rights/platform account constraints; no release",
+    "Niche utility apps: seek paid job proof before prototype",
+    "Original templates/video assets: no duplicate Etsy/KDP listing execution"
+  ],
+  "instruction": "Use existing IDs when buyer/job/channel overlap; preserve rejected hypotheses; no quota"
+}

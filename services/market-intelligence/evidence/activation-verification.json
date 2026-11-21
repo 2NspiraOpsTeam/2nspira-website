@@ -1,0 +1,201 @@
+{
+  "checked_at": "2026-11-07T04:57:50.171931+00:00",
+  "endpoint": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+  "checks_passed": 34,
+  "checks": [
+    {
+      "check": "anonymous research denied",
+      "passed": true
+    },
+    {
+      "check": "brian authenticated read",
+      "passed": true
+    },
+    {
+      "check": "adam authenticated read",
+      "passed": true
+    },
+    {
+      "check": "adam import denied",
+      "passed": true
+    },
+    {
+      "check": "maya authenticated read",
+      "passed": true
+    },
+    {
+      "check": "maya import denied",
+      "passed": true
+    },
+    {
+      "check": "cleo authenticated read",
+      "passed": true
+    },
+    {
+      "check": "cleo import denied",
+      "passed": true
+    },
+    {
+      "check": "dax authenticated read",
+      "passed": true
+    },
+    {
+      "check": "dax import denied",
+      "passed": true
+    },
+    {
+      "check": "jeffrey authenticated read",
+      "passed": true
+    },
+    {
+      "check": "jeffrey import denied",
+      "passed": true
+    },
+    {
+      "check": "unknown opportunity 404",
+      "passed": true
+    },
+    {
+      "check": "unknown route 404",
+      "passed": true
+    },
+    {
+      "check": "unsupported method denied",
+      "passed": true
+    },
+    {
+      "check": "malformed import rejected",
+      "passed": true
+    },
+    {
+      "check": "corrected current score 68",
+      "passed": true
+    },
+    {
+      "check": "original and corrected history retained",
+      "passed": true
+    },
+    {
+      "check": "three source revisions retained",
+      "passed": true
+    },
+    {
+      "check": "document integrity nightly-brief.md",
+      "passed": true
+    },
+    {
+      "check": "document integrity opportunity-register.json",
+      "passed": true
+    },
+    {
+      "check": "document integrity recommended-experiment.md",
+      "passed": true
+    },
+    {
+      "check": "document integrity rotation-state.json",
+      "passed": true
+    },
+    {
+      "check": "document integrity scoring-rubric-v1-inherited.md",
+      "passed": true
+    },
+    {
+      "check": "document integrity source-snapshots.json",
+      "passed": true
+    },
+    {
+      "check": "document integrity watchlist.md",
+      "passed": true
+    },
+    {
+      "check": "retry is idempotent",
+      "passed": true
+    },
+    {
+      "check": "key-order independent replay",
+      "passed": true
+    },
+    {
+      "check": "same-time new revision explicitly rejected",
+      "passed": true
+    },
+    {
+      "check": "source pagination first page",
+      "passed": true
+    },
+    {
+      "check": "source pagination next page",
+      "passed": true
+    },
+    {
+      "check": "immutable run conflict denied",
+      "passed": true
+    },
+    {
+      "check": "audit attributes authenticated identities",
+      "passed": true
+    },
+    {
+      "check": "audit records denied writes",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Role credentials exercised from Brian host, not independently from each team member machine.",
+    "Future scheduled clock trigger not yet observed."
+  ],
+  "data_counts": {
+    "current_opportunities": 4,
+    "source_revisions": 3,
+    "documents": 27,
+    "opportunity_versions": 10,
+    "source_links": 16
+  },
+  "isolated_worker_tests": {
+    "passed": 8,
+    "failed": 0,
+    "cases": [
+      "stale historical import cannot roll back current",
+      "idempotent retries and immutable conflict",
+      "read-only denied and server-controlled attribution",
+      "batch failure atomic rollback",
+      "same-time correction explicitly rejected",
+      "object key-order independent identity",
+      "competing commit recovered",
+      "source pagination/filters"
+    ]
+  },
+  "scheduler": {
+    "market_nightly": {
+      "id": "d1395d5d-cb80-4f0d-b49d-6fb5074505e4",
+      "enabled": true,
+      "cron": "0 1 * * *",
+      "timezone": "America/New_York",
+      "payload_updated": true
+    },
+    "morning_report": {
+      "id": "6e405f1e-4385-440b-930e-d3db4a1d4e4d",
+      "enabled": true,
+      "cron": "0 7 * * *",
+      "timezone": "America/New_York",
+      "payload_updated": true
+    }
+  },
+  "python_client_tests": {
+    "passed": 1,
+    "failed": 0,
+    "case": "authenticated redirects refused (cross-origin HTTPS, downgrade HTTP, same-origin)"
+  },
+  "independent_review": {
+    "completed": true,
+    "material_findings": 5,
+    "addressed": 5,
+    "fixes": [
+      "Authenticated redirects refused",
+      "Recursive canonical payload identity; original hashes preserved",
+      "Unique candidate/observation timestamps with explicit 409 for new equal-time revision",
+      "Batch-failure committed-run recovery",
+      "Source pagination plus candidate/run filters"
+    ]
+  }
+}

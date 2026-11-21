@@ -1,0 +1,29 @@
+{
+  "manifest_hashes_verified": 162,
+  "current_run_documents_verified": 12,
+  "changed_files_scanned": 16,
+  "secret_pattern_matches": 0,
+  "run_id": "mi-f4c6c3687f71833cc6b0b70ddd13861d",
+  "d1": {
+    "status": "verified",
+    "run_id": "mi-f4c6c3687f71833cc6b0b70ddd13861d",
+    "record_version": "2026-11-13-nightly-v11",
+    "candidate_ids": [
+      "MI-001",
+      "MI-002",
+      "MI-003",
+      "MI-004"
+    ],
+    "exact_record_equality": true
+  },
+  "sync_receipt": {
+    "endpoint": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+    "result": {
+      "run_id": "mi-f4c6c3687f71833cc6b0b70ddd13861d",
+      "status": "imported",
+      "opportunities": 4,
+      "documents": 12
+    },
+    "source": "/Users/agent1/.openclaw/workspace/deliverables/market-intelligence/2026-11-13"
+  }
+}

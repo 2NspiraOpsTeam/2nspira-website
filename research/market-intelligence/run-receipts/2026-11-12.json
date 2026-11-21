@@ -1,0 +1,64 @@
+{
+  "cloudflare_sync": {
+    "endpoint": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+    "result": {
+      "run_id": "mi-4ff155cba6d31695a80a106b2dbe27e1",
+      "status": "imported",
+      "opportunities": 4,
+      "documents": 13
+    },
+    "source": "/Users/agent1/.openclaw/workspace/deliverables/market-intelligence/2026-11-12"
+  },
+  "d1_verification": {
+    "status": "verified",
+    "run_id": "mi-4ff155cba6d31695a80a106b2dbe27e1",
+    "record_version": "2026-11-12-nightly-v10",
+    "candidate_ids": [
+      "MI-001",
+      "MI-002",
+      "MI-003",
+      "MI-004"
+    ],
+    "records_exactly_equal": true,
+    "history71_retained": true
+  },
+  "archive_verification": {
+    "checked_at": "2026-11-12T06:09:53.925970+00:00",
+    "status": "verified",
+    "manifest_hashes_verified": 149,
+    "runs_exported": 13,
+    "current_candidate_ids": [
+      "MI-001",
+      "MI-002",
+      "MI-003",
+      "MI-004"
+    ],
+    "run_id": "mi-4ff155cba6d31695a80a106b2dbe27e1",
+    "source_documents_exact": 13,
+    "scoped_changed_files_secret_scanned": 17,
+    "secret_pattern_matches": 0,
+    "source_provenance_review": "New dated sources and limitations reviewed; inherited evidence/approved deep dive/economics/outcomes retained; snapshot not live dashboard"
+  },
+  "pre_sync_verification": {
+    "status": "pass",
+    "checked_at": "2026-11-12T01:08:24.805519-05:00",
+    "required_documents": [
+      "opportunity-register.json",
+      "nightly-brief.md",
+      "brief-MI-001.md",
+      "brief-MI-002.md",
+      "brief-MI-003.md",
+      "brief-MI-004.md",
+      "watchlist.md",
+      "rotation-state.json",
+      "scoring-rubric.md",
+      "source-snapshots.json",
+      "recommended-experiment.md",
+      "deduplication-log.md"
+    ],
+    "stable_ids_keys_scores_outcomes_preserved": true,
+    "economics_preserved": true,
+    "approved_accessibility_deep_dive_preserved": true,
+    "assembly_complete": true
+  }
+}

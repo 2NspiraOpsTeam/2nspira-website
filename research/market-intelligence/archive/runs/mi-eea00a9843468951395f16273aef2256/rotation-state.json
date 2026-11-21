@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-20",
+  "adjacent": "MI-003 rule/supplier evidence",
+  "new_stream": "niche apps and digital templates",
+  "next": [
+    "MI-002 assessor feasibility",
+    "audio/music"
+  ],
+  "effort_actual_ratio": null,
+  "ledger": {
+    "date": "2026-11-20",
+    "agent_active_minutes": null,
+    "human_hours_actual": 0,
+    "discretionary_cash_actual_usd": 0,
+    "compute_cost_actual_usd": null,
+    "actual_adjacent_effort_ratio": null,
+    "target_adjacent_ratio": 0.7,
+    "experiments_completed": 0,
+    "qualified_leads": null,
+    "buyer_conversations": null,
+    "false_positives": null,
+    "evidence_grade_upgrades": 0,
+    "limitations": "No reliable active-time meter; elapsed time is not70/30 effort. No human participation/purchases.",
+    "next_week_proposal": "7h Adjacent/3h New Stream uncommitted; accessibility feasibility first.",
+    "weekly_review": "Nov15 retained; nextNov22/29,Dec6; finalDec8 not due."
+  }
+}

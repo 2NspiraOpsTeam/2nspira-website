@@ -1,0 +1,4 @@
+# Deduplication — 2026-11-08
+Read current #188 issue/comment directives and #186 body/comments; captured all-state100 issue backlog (26 returned) and #178 current full issue/comments. Prior initial and Nov6/7 register/watchlist histories retained. Existing four stable candidate IDs and exact buyer/problem/channel keys unchanged. No new candidate or acquisition pipeline entry.
+
+MI-002 second-pass is the same evidence/remediation handoff job; existing-client adjacency is a distribution hypothesis, not a new ID. Maya retains #178 RFP/BD-047/ICLS and #185 acquisition ownership; this report does not draft/submit a competing bid or count a researched prospect as interest. Dax #184 listing audit, Adam #182 Studio/#174 website positioning/#186 infrastructure, Cleo #187 UI and Brian QA independence remain intact. Business Hub live backlog access is unverified; this is a bounded GitHub/local/D1 dedupe, not a global uniqueness claim.
