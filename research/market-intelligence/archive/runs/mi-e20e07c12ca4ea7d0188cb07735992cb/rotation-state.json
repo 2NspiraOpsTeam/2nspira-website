@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-22",
+  "adjacent": "MI-002 supplier/lifecycle gate and weekly portfolio decision",
+  "new_stream": "KDP/digital production policy screen",
+  "next": [
+    "websites/automation",
+    "niche applications"
+  ],
+  "ledger": {
+    "date": "2026-11-22",
+    "agent_active_minutes": null,
+    "human_hours_actual": 0,
+    "discretionary_cash_actual_usd": 0,
+    "compute_cost_actual_usd": null,
+    "actual_adjacent_effort_ratio": null,
+    "target_adjacent_ratio": 0.7,
+    "experiments_completed": 0,
+    "qualified_leads": null,
+    "buyer_conversations": null,
+    "false_positives": null,
+    "evidence_grade_upgrades": 0,
+    "limitations": "No reliable active/category meter; source count and elapsed time are not effort. No human participation or discretionary spend.",
+    "next_week_proposal": "7h Adjacent (5h MI-002,2h MI-001),3h New Stream (2h differentiated caption workflow,1h niche screening); uncommitted",
+    "weekly_review": "Nov22 delivered in weekly-decision-memo.md; next Nov29/Dec6; final Dec8"
+  }
+}

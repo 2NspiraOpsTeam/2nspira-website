@@ -1,0 +1,44 @@
+# Open backlog read November17
+
+- #279: Dax: Define Creative Studio baseline, discovery keywords and experiment scorecard
+- #278: Deferred: Breadcrumb content experiment (not current video scope)
+- #277: Dax: Plan distinct reading and wind-down ambience experiments
+- #276: Dax: Draft practical Read/Watch feature and two social excerpts
+- #275: Dax: Audience-led direction for individual Creative Studio videos
+- #266: Adam ONLY: Build interactive AI Operations Hub demo with five emails, custom input and human approval
+- #264: Adam: Align 3-service customer journeys, supporting pages and SEO with new homepage
+- #259: Adam: Expand Organizational AI Enablement into 3 customer offerings (research → proposal → preview)
+- #258: Adam: Three-service website structure — Websites, Custom Software, Organizational AI
+- #249: Adam: Implement homepage conversion and premium design refresh — websites & custom platforms
+- #210: Cleo checkpoint: bookstore prices synchronized to owner eBay rates (Nov 9)
+- #204: Dax: Audit Creative Studio content quality against professional standards
+- #203: Adam — Own end-to-end personal calorie-tracking app MVP (delegate only to own sub-agents)
+- #202: Cleo — Creative Studio: Amazing Grace modern R&B/gospel demo (concept and arrangement)
+- #199: Brian: 30-day 70/30 opportunity intelligence strategy and validation gates
+- #198: Cleo task: Produce Anthony's original song — Pull My Own Strings
+- #193: Maya receipt-only assignment intake test
+- #189: Brian: Ongoing every-other-day LinkedIn content for four staff
+- #188: Brian: Nightly Market Opportunity Intelligence Engine and research briefs
+- #187: Cleo: Build Executive Dashboard UI and customer/project views (independent draft)
+- #186: Cleo: Own complete Business Hub — D1, Worker API, integrations, executive dashboard
+- #185: Maya owns end-to-end website client acquisition campaign — 5 qualified inquiries/month
+- #184: Dax (queued): Etsy + KDP organic discoverability and keyword research audit
+- #183: Adam: Conversion, credibility, navigation & SEO improvement audit
+- #182: Adam: Creative Studio — Watch, Read, Play (remove Shop)
+- #181: Brian: AI search discoverability and website machine-accessibility QA audit
+- #180: Adam: Refine /websites into Websites & Digital Systems (draft only)
+- #179: Adam: Audit Property Management marketing page and interactive demo; improve guided customer journey (draft only)
+- #178: Configure Maya's nightly RFP discovery and proposal drafting workflow
+- #177: Adam: Audit and improve Manufacturing Operations demo customer journey (draft only)
+- #176: Adam: Add 3-minute guided student journey to Education demo (draft only)
+- #175: Team-wide OpenClaw ↔ GitHub assignment routing and authenticated ChatGPT approvals
+- #174: Draft Websites page refresh: Website Modernization + transparent managed CMS pricing
+- #100: Review Websites service positioning and accessible homepage spotlight
+- #91: Align business social services and prioritize qualified client discovery
+- #77: Prevent delayed older Workers builds from overwriting newer production releases
+- #37: Portal demo sign-in returns 401 in production
+- #7: B2 Requirement Handoff: Adam's Acknowledgement Request
+- #2: Phase 5: Secondary Pages & Feature Development
+- #1: QA FINDING: Cloudflare Workers Build Failure - Missing Vite Configuration
+
+No new buyer/problem/channel key. Current#186 comments read: Cleo sole Hub owner; no peer-runtime test performed. No duplicate project or agent messages.

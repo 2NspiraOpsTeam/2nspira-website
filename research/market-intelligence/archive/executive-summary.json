@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.0",
+  "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+  "source_observed_at": "2026-11-22T06:02:44.399Z",
+  "integration_status": "snapshot_only_dashboard_not_connected",
+  "counts": {
+    "current_opportunities": 4,
+    "research_revisions": 26
+  },
+  "top_opportunities": [
+    {
+      "candidate_id": "MI-001",
+      "title": "Approval-first receivables exception desk for small B2B service firms",
+      "score": 68,
+      "confidence": "medium problem evidence; willingness to pay untested",
+      "observed_at": "2026-11-22T06:02:44.399Z",
+      "run_id": "mi-e20e07c12ca4ea7d0188cb07735992cb"
+    },
+    {
+      "candidate_id": "MI-002",
+      "title": "Title II evidence-and-remediation handoff pack for public-sector web vendors",
+      "score": 60,
+      "confidence": "low commercial confidence; authoritative rule signal, no procurement intent verified",
+      "observed_at": "2026-11-22T06:02:44.399Z",
+      "run_id": "mi-e20e07c12ca4ea7d0188cb07735992cb"
+    },
+    {
+      "candidate_id": "MI-004",
+      "title": "English B2B webinar caption-QA and evidence handoff",
+      "score": 60,
+      "confidence": "low; broad production/adoption evidence, no niche buying intent",
+      "observed_at": "2026-11-22T06:02:44.399Z",
+      "run_id": "mi-e20e07c12ca4ea7d0188cb07735992cb"
+    },
+    {
+      "candidate_id": "MI-003",
+      "title": "Role-specific AI usage and literacy starter pack for small EU agencies",
+      "score": 59,
+      "confidence": "low commercial confidence; adoption and guidance, no verified paid demand",
+      "observed_at": "2026-11-22T06:02:44.399Z",
+      "run_id": "mi-e20e07c12ca4ea7d0188cb07735992cb"
+    }
+  ],
+  "emerging_trends": {
+    "status": "insufficient_longitudinal_evidence",
+    "note": "Metadata revisions and score recalibration are not market trends."
+  },
+  "research_activity": [
+    {
+      "run_id": "mi-e20e07c12ca4ea7d0188cb07735992cb",
+      "record_version": "2026-11-22-nightly-v20",
+      "observed_at": "2026-11-22T06:02:44.399Z",
+      "imported_at": "2026-11-22T06:02:47.320Z"
+    },
+    {
+      "run_id": "mi-20084b42dfb1e796ef52d60c0ff89fb4",
+      "record_version": "2026-11-21-nightly-v19",
+      "observed_at": "2026-11-21T06:02:39.534Z",
+      "imported_at": "2026-11-21T06:02:40.161Z"
+    },
+    {
+      "run_id": "mi-eea00a9843468951395f16273aef2256",
+      "record_version": "2026-11-20-nightly-v18",
+      "observed_at": "2026-11-20T06:01:58.919Z",
+      "imported_at": "2026-11-20T06:01:59.393Z"
+    },
+    {
+      "run_id": "mi-6ae4230bb3e8016f8d6c464d634844ea",
+      "record_version": "2026-11-19-nightly-v17",
+      "observed_at": "2026-11-19T06:03:36.392Z",
+      "imported_at": "2026-11-19T06:03:36.792Z"
+    },
+    {
+      "run_id": "mi-e1cd2c67b6395671fed2b7024ce9fa31",
+      "record_version": "2026-11-19-nightly-v17",
+      "observed_at": "2026-11-19T06:02:30.646Z",
+      "imported_at": "2026-11-19T06:02:31.137Z"
+    },
+    {
+      "run_id": "mi-73d856eac41fbcabedad63650c1b7b22",
+      "record_version": "2026-11-18-nightly-v16",
+      "observed_at": "2026-11-18T06:03:26.707Z",
+      "imported_at": "2026-11-18T06:03:27.144Z"
+    },
+    {
+      "run_id": "mi-9995f0bedcedeff00cc84bf191abbf24",
+      "record_version": "2026-11-18-nightly-v16",
+      "observed_at": "2026-11-18T06:02:39.828Z",
+      "imported_at": "2026-11-18T06:02:40.456Z"
+    },
+    {
+      "run_id": "mi-c43158e7e126ccf0974c4b2a6af81681",
+      "record_version": "2026-11-17-nightly-v15",
+      "observed_at": "2026-11-17T06:02:43.731Z",
+      "imported_at": "2026-11-17T06:02:44.254Z"
+    },
+    {
+      "run_id": "mi-a8aad14c08a8020862d22e8232981f67",
+      "record_version": "2026-11-16-nightly-v14",
+      "observed_at": "2026-11-16T06:02:30.050Z",
+      "imported_at": "2026-11-16T06:02:30.502Z"
+    },
+    {
+      "run_id": "mi-d38b22545da82940c19f6e7395c5f7e3",
+      "record_version": "2026-11-15-weekly-v13",
+      "observed_at": "2026-11-15T06:03:52.389Z",
+      "imported_at": "2026-11-15T06:03:52.756Z"
+    },
+    {
+      "run_id": "mi-7e9a68d7a5ed7d195585d980643e82c4",
+      "record_version": "2026-11-15-weekly-v13",
+      "observed_at": "2026-11-15T06:02:38.245Z",
+      "imported_at": "2026-11-15T06:02:38.715Z"
+    },
+    {
+      "run_id": "mi-639245dba93748d22ba268f33cc2dc8f",
+      "record_version": "2026-11-14-nightly-v12",
+      "observed_at": "2026-11-14T06:02:37.447Z",
+      "imported_at": "2026-11-14T06:02:37.907Z"
+    },
+    {
+      "run_id": "mi-f4c6c3687f71833cc6b0b70ddd13861d",
+      "record_version": "2026-11-13-nightly-v11",
+      "observed_at": "2026-11-13T15:43:48.642Z",
+      "imported_at": "2026-11-13T15:43:54.773Z"
+    },
+    {
+      "run_id": "mi-4ff155cba6d31695a80a106b2dbe27e1",
+      "record_version": "2026-11-12-nightly-v10",
+      "observed_at": "2026-11-12T06:08:24.805Z",
+      "imported_at": "2026-11-12T06:08:36.666Z"
+    },
+    {
+      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
+      "record_version": "2026-11-11-nightly-v9",
+      "observed_at": "2026-11-11T06:09:39.564Z",
+      "imported_at": "2026-11-11T06:09:55.294Z"
+    },
+    {
+      "run_id": "mi-70a0aa3bf8d9b95c60477deb2dc92811",
+      "record_version": "2026-11-11-nightly-v9",
+      "observed_at": "2026-11-11T06:09:26.864Z",
+      "imported_at": "2026-11-11T06:09:29.482Z"
+    },
+    {
+      "run_id": "mi-5da98feb274aadd74c428b608f68d03c",
+      "record_version": "2026-11-10-nightly-v8",
+      "observed_at": "2026-11-10T06:08:51.441Z",
+      "imported_at": "2026-11-10T06:09:57.244Z"
+    },
+    {
+      "run_id": "mi-150dca448137cdf1273c2eb125bedbdd",
+      "record_version": "2026-11-09-nightly-v7",
+      "observed_at": "2026-11-09T06:07:02.574Z",
+      "imported_at": "2026-11-09T06:07:12.927Z"
+    },
+    {
+      "run_id": "mi-bdd2f4d7a1bab9d536921c7a2e510776",
+      "record_version": "2026-11-08-7030-v6.1",
+      "observed_at": "2026-11-08T19:51:47.752Z",
+      "imported_at": "2026-11-08T19:51:55.109Z"
+    },
+    {
+      "run_id": "mi-e775f542a57ccc5ed8adff402428d33a",
+      "record_version": "2026-11-08-7030-v6",
+      "observed_at": "2026-11-08T19:49:18.049Z",
+      "imported_at": "2026-11-08T19:50:34.453Z"
+    },
+    {
+      "run_id": "mi-8a6d422c2bb6597858ad83effd072184",
+      "record_version": "2026-11-08-weekly-business-case-v5",
+      "observed_at": "2026-11-08T06:14:20.809Z",
+      "imported_at": "2026-11-08T06:14:21.574Z"
+    },
+    {
+      "run_id": "mi-b6e879aed424d122ddee37d39268b0ab",
+      "record_version": "2026-11-07-nightly-v4",
+      "observed_at": "2026-11-07T06:02:26.283Z",
+      "imported_at": "2026-11-07T06:03:57.073Z"
+    },
+    {
+      "run_id": "mi-48e937af732aaf9d35afa866b26db747",
+      "record_version": "structured-research-v3",
+      "observed_at": "2026-11-07T05:04:33.354Z",
+      "imported_at": "2026-11-07T05:04:33.774Z"
+    },
+    {
+      "run_id": "mi-df841ec413ebf878df897b2bedaa4d4e",
+      "record_version": "2026-11-06-nightly-v2",
+      "observed_at": "2026-11-07T04:41:39.354Z",
+      "imported_at": "2026-11-07T04:51:21.985Z"
+    },
+    {
+      "run_id": "mi-1adccff6192e51aaebe19b3f570d8a62",
+      "record_version": "parent-review-v2",
+      "observed_at": "2026-11-07T04:41:01.442Z",
+      "imported_at": "2026-11-07T04:51:21.625Z"
+    },
+    {
+      "run_id": "mi-723d298b4a882ce90e8928bf96dbb00e",
+      "record_version": "initial-2026-11-07-v1",
+      "observed_at": "2026-11-07T04:29:58.170Z",
+      "imported_at": "2026-11-07T04:51:21.259Z"
+    }
+  ],
+  "recommendations_requiring_approval": [
+    {
+      "candidate_id": "MI-001",
+      "experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
+      "approval": {
+        "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+        "status": "proposal_only_no_execution_approval_recorded",
+        "proposed_cash_cap_usd": 100,
+        "proposed_human_hours_cap": 12
+      },
+      "owner_proposal": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian"
+    },
+    {
+      "candidate_id": "MI-002",
+      "experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
+      "approval": {
+        "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+        "status": "proposal_only_no_execution_approval_recorded",
+        "proposed_cash_cap_usd": 150,
+        "proposed_human_hours_cap": 12
+      },
+      "owner_proposal": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner"
+    },
+    {
+      "candidate_id": "MI-004",
+      "experiment": "One original synthetic 10-minute webinar caption handoff, then 5 consented producer interviews only after exact recruitment approval",
+      "approval": {
+        "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+        "status": "proposal_only_no_execution_approval_recorded",
+        "proposed_cash_cap_usd": 50,
+        "proposed_human_hours_cap": 8
+      },
+      "owner_proposal": "Brian research accountable; Maya any approved recruitment; separate caption/accessibility reviewer; delivery unassigned"
+    },
+    {
+      "candidate_id": "MI-003",
+      "experiment": "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests",
+      "approval": {
+        "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+        "status": "proposal_only_no_execution_approval_recorded",
+        "proposed_cash_cap_usd": 100,
+        "proposed_human_hours_cap": 8
+      },
+      "owner_proposal": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution"
+    }
+  ],
+  "commercial_validation": "No verified buyer intent or revenue; scores are research prioritization."
+}

@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-11-11T06:11:24.361423+00:00",
+  "cloudflare_sync": {
+    "endpoint": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+    "result": {
+      "run_id": "mi-bb80d1dcd89288e2ead28982c29201e4",
+      "status": "imported",
+      "opportunities": 4,
+      "documents": 13
+    },
+    "source": "/Users/agent1/.openclaw/workspace/deliverables/market-intelligence/2026-11-11"
+  },
+  "superseded_partial_sync": {
+    "endpoint": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+    "result": {
+      "run_id": "mi-70a0aa3bf8d9b95c60477deb2dc92811",
+      "status": "imported",
+      "opportunities": 4,
+      "documents": 6
+    },
+    "source": "/Users/agent1/.openclaw/workspace/deliverables/market-intelligence/2026-11-11"
+  },
+  "current_ids": [
+    "MI-001",
+    "MI-002",
+    "MI-003",
+    "MI-004"
+  ],
+  "exact_d1_records_verified": true,
+  "record_version": "2026-11-11-nightly-v9",
+  "manifest_hashes_verified": 135,
+  "exported_runs": 12,
+  "final_source_documents_equal": 13,
+  "score_history": [
+    71,
+    68
+  ],
+  "secret_pattern_matches": 0,
+  "research_summary_is_snapshot": true,
+  "exception": "Recovered missing inherited brief file; earlier 6-document import retained as superseded partial. Final13-document import verified. Source failures and active-effort nulls in full report.",
+  "not_claimed": [
+    "commercial validation",
+    "70/30 achieved",
+    "independent QA signoff",
+    "peer-runtime access",
+    "connected wholeHub",
+    "Telegram delivery",
+    "merge",
+    "deploy"
+  ],
+  "whitespace_exception": "Two inherited recommended-experiment.md EOF blank-line warnings, one in superseded partial run and one in final run. Preserved verbatim to retain source hashes; no other staged whitespace warning."
+}

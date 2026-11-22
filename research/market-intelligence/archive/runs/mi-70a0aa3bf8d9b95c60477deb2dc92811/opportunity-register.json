@@ -1,0 +1,2976 @@
+{
+  "schema_version": "2.0",
+  "record_version": "2026-11-11-nightly-v9",
+  "as_of_utc": "2026-11-11",
+  "as_of_local": "2026-11-11 America/New_York",
+  "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+  "business_hub_status": "Transitional research D1 available; #186 live body reassigns complete Hub to Cleo Nov8. Live integrated Hub/peer access unverified.",
+  "revenue_proven": false,
+  "opportunities": [
+    {
+      "candidate_id": "MI-001",
+      "category": "Workflow automation / productized B2B service",
+      "title": "Approval-first receivables exception desk for small B2B service firms",
+      "demand_evidence_links": [
+        "https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/",
+        "https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments"
+      ],
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "A2",
+        "A5"
+      ],
+      "confidence": "medium problem evidence; willingness to pay untested",
+      "ranking": 1,
+      "score": 68,
+      "scores": {
+        "D": 3,
+        "C": 2,
+        "B": 4,
+        "F": 2,
+        "M": 3,
+        "T": 5,
+        "A": 5,
+        "L": 4
+      },
+      "stage": "RESEARCH_COMPLETE / EXPERIMENT_PROPOSED_NOT_RUN",
+      "owner_proposal": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian",
+      "experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
+      "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
+      "outcome": "No interviews, purchases, revenue or product launch; unvalidated offer",
+      "dedupe": "Adjacent to #185 acquisition; no new campaign. Excludes #186 Business Hub and payment-pilot checkout.",
+      "change_note": "Three current independent supplier checks reinforce overlap including suggestion-only exception handling. No score/demand upgrade; current68/original71 preserved.",
+      "research_details": {
+        "customer_segment": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis",
+        "customer_needs": [
+          "Overdue-invoice exception review, reconciliation and human-approved follow-up"
+        ],
+        "industry_trends": [
+          {
+            "observation": "Vendor late-payment survey and older Federal Reserve problem evidence; not a niche demand forecast",
+            "evidence_urls": [
+              "https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/",
+              "https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments"
+            ],
+            "status": "indirect_signal_not_validated_demand"
+          }
+        ],
+        "competitor_analysis": [
+          {
+            "name": "Chaser",
+            "url": "https://www.chaserhq.com/chaser-pricing",
+            "observation": "Rendered from $259/month; currency, country, tax and billing basis unresolved",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "Accounting reminders and spreadsheets",
+            "url": null,
+            "observation": "Existing substitute; no comparative buyer test",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "Wave",
+            "url": "https://www.waveapps.com/invoicing",
+            "pricing_url": "https://www.waveapps.com/pricing",
+            "observation": "Native overdue reminders, invoice/payment/communication history and recurring billing are supplier-described substitutes. Pricing FAQ quotes Pro $19 USD/$25 CAD plus applicable taxes per business; not a like-for-like setup-service price. No trial or independent effectiveness verification. Some testimonials compensated.",
+            "checked_at": "2026-11-07T06:01:50.100Z",
+            "market": "US/Canada dollar quotations; current product page, no demand period"
+          },
+          {
+            "name": "Chaser",
+            "url": "https://www.chaserhq.com/chaser-pricing",
+            "checked_at": "2026-11-08T06:06:15.076Z",
+            "observation": "Compact: 4 users, 30 follow-up templates, 4 automated receivables workflows; accountant/bookkeeper partner route displayed.",
+            "public_price": "From $259/month Compact; $779 Core; $1,169 Complete. Country selector and monthly/yearly (10% saving) both present; currency/country, active billing selection, tax and checkout total unresolved. Do not normalize to USD or compare directly to $499 setup.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-001"
+          },
+          {
+            "name": "Wave",
+            "url": "https://www.waveapps.com/pricing",
+            "checked_at": "2026-11-08T06:06:10.713Z",
+            "observation": "Starter invoicing and bookkeeping; Pro adds automated late-payment reminders, transaction import/categorization and receipt capture.",
+            "public_price": "FAQ quotes Pro $19 USD / $25 CAD plus applicable taxes per business. Billing period is not explicit in that FAQ extract; do not infer checkout cadence. Payment-processing fees and add-ons separate.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-002"
+          },
+          {
+            "name": "Upflow",
+            "url": "https://upflow.io/",
+            "checked_at": "2026-11-08T06:06:53.230Z",
+            "observation": "B2B AR platform with suggestion-only through autonomous agent controls, multichannel collections, complex-payment matching, exception workflows and ERP audit trail.",
+            "public_price": "Homepage offers AR visibility/analytics free forever. Paid collections price not recoverable in incomplete pricing extract; pricing title says plans by invoiced revenue/no seat fees. Terms: taxes excluded, plans prepaid, usage postpaid; order form governs.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-003"
+          },
+          {
+            "name": "Upflow",
+            "url": "https://upflow.io/pricing",
+            "checked_at": "2026-11-08T06:06:28.899Z",
+            "observation": "B2B AR platform with suggestion-only through autonomous agent controls, multichannel collections, complex-payment matching, exception workflows and ERP audit trail.",
+            "public_price": "Homepage offers AR visibility/analytics free forever. Paid collections price not recoverable in incomplete pricing extract; pricing title says plans by invoiced revenue/no seat fees. Terms: taxes excluded, plans prepaid, usage postpaid; order form governs.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-003"
+          },
+          {
+            "name": "Wave",
+            "url": "https://www.waveapps.com/invoicing",
+            "checked_at": "2026-11-11T06:05:01.354Z",
+            "observation": "Native overdue reminders (Pro/online-payment eligibility described), payment/communication history and recurring billing. Compensated testimonial disclosed; no independent outcome validation.",
+            "market_period": "English public supplier offer as accessed Nov11 2026; US/Canada Wave context; other geography/checkout unresolved; not sales-period data",
+            "evidence_grade": "supplier_primary_not_buyer_proof"
+          },
+          {
+            "name": "Upflow",
+            "url": "https://upflow.io/",
+            "checked_at": "2026-11-11T06:06:35.962Z",
+            "observation": "Suggestion-only to autonomous controls, complex-payment matching, exception workflows and ERP audit trail. Supplier DSO and match-rate claims not validated. Native exception support directly overlaps the proposed workflow.",
+            "market_period": "English public supplier offer as accessed Nov11 2026; US/Canada Wave context; other geography/checkout unresolved; not sales-period data",
+            "evidence_grade": "supplier_primary_not_buyer_proof"
+          },
+          {
+            "name": "Chaser",
+            "url": "https://www.chaserhq.com/chaser-pricing",
+            "checked_at": "2026-11-11T06:06:32.142Z",
+            "observation": "Compact 4 users/30 templates/4 automated workflows. Display $259/month alongside pound-denominated eligibility; country/currency, taxes and active monthly/yearly selector unresolved. Not a normalized USD quote.",
+            "market_period": "English public supplier offer as accessed Nov11 2026; US/Canada Wave context; other geography/checkout unresolved; not sales-period data",
+            "evidence_grade": "supplier_primary_not_buyer_proof"
+          }
+        ],
+        "pricing_intelligence": {
+          "proposed_offer": {
+            "amount": 499,
+            "currency": "USD",
+            "unit": "setup pilot",
+            "status": "untested_hypothesis"
+          },
+          "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits",
+          "observed_competitor_prices": [
+            {
+              "supplier": "Wave Pro",
+              "amount_usd": 19,
+              "amount_cad": 25,
+              "unit": "subscription per business; monthly interpretation from FAQ, checkout not tested",
+              "taxes": "plus applicable taxes",
+              "url": "https://www.waveapps.com/pricing",
+              "checked_at": "2026-11-07T06:01:50.100Z",
+              "comparability": "not equivalent to proposed $499 setup; regional/country checkout not tested"
+            }
+          ],
+          "freshness_correction": "Nov8 Wave primary FAQ displays $19USD/$25CAD per business plus taxes; billing cadence not explicit in fresh extract. Prior monthly interpretation is historical, not verified current checkout."
+        },
+        "demand_indicators": {
+          "evidence_urls": [
+            "https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/",
+            "https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments"
+          ],
+          "buyer_intent_verified": false,
+          "revenue_verified": false,
+          "limitations": "medium problem evidence; willingness to pay untested"
+        },
+        "recommended_products_services": [
+          "Productized CSV-first exception service; SaaS only if repeat use is established"
+        ],
+        "customer_acquisition_strategy": {
+          "proposal": "Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
+          "owner_proposal": "Maya",
+          "execution_authorized": false
+        },
+        "recommended_next_steps": [
+          "Retain synthetic 30-invoice gate; include a native-reminder/manual baseline and ask whether current tools already suffice",
+          "Do not pitch generic reminder automation; run approved five-user discovery only after independent technical review and exact recruitment authorization",
+          "Compare exception resolution and approval audit against native Upflow/Chaser/Wave, not just basic invoice reminder timing; no verified gap yet."
+        ],
+        "agent_fit": {
+          "research_owner": "Brian",
+          "suggested_execution_lead": "Adam",
+          "assignment_confirmed": false,
+          "rationale": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian"
+        },
+        "approval_reference": {
+          "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+          "status": "proposal_only_no_execution_approval_recorded",
+          "proposed_cash_cap_usd": 100,
+          "proposed_human_hours_cap": 12
+        },
+        "source_freshness": {
+          "source_access_window": "2026-11-06 America/New_York / 2026-11-07 UTC",
+          "metadata_structured_at": "2026-11-07T05:04:33.354764+00:00",
+          "new_source_research": false,
+          "competitor_sources_checked_at": "2026-11-07T06:01:50.100Z",
+          "scope": "Only Wave alternative/pricing refreshed; original problem evidence access window unchanged. Metadata timestamps do not refresh surveys.",
+          "business_case_analyzed_at": "2026-11-08T06:07:49.573454+00:00",
+          "comparable_access_window": "2026-11-08T06:06:10Z–2026-11-08T06:07:03Z; original problem surveys not refreshed",
+          "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
+          "nov11_record_review_at": "2026-11-11T01:09:26.864016-05:00",
+          "nov11_scope": "Wave, Chaser and Upflow current offer pages refreshed only; original problem surveys not rechecked."
+        },
+        "evidence_gaps": [
+          "No qualified buyer interviews, purchases or revenue",
+          "No verified distribution reach or realized margin",
+          "Incremental exception-review value versus Wave/native reminders is not established; no comparative usability or buyer test",
+          "Chaser/Upflow direct functional; Wave low-cost native substitute. No identical human-run approval-first exception-desk offer demonstrated. Revenue/profit not publicly verified; supplier marketing is not independent demand proof."
+        ],
+        "business_case": {
+          "version": "2026-11-08-weekly-business-case-v5",
+          "as_of": "2026-11-08T06:07:49.573454+00:00",
+          "status": "exploratory_sensitivity_not_predictive_forecast",
+          "strategic_fit": {
+            "ordinal_score_1_to_5": 4,
+            "priority_for_business_case_review": 2,
+            "rationale": "CSV exception review beyond native reminders; adjacent to operations software, but no verified finance-client cross-sell or bookkeeper access.",
+            "current_customer_count_or_reachable_audience": "unknown; no CRM/client identities accessed"
+          },
+          "agent_deliverability": {
+            "status": "CONDITIONAL_NOT_END_TO_END_PROVEN",
+            "repeatability": "productized scope with human-reviewed delivery; not autonomous passive-income product",
+            "delivery_chain": [
+              {
+                "step": "research and provenance",
+                "proposed_owner": "Brian",
+                "tools": "gh, public web_fetch/search, private research API client; available in Brian runtime"
+              },
+              {
+                "step": "original creation/engineering",
+                "proposed_owner": "Adam with Brian specifications",
+                "tools": "Git/local fixtures; editor/approved model access unverified in recipient runtime"
+              },
+              {
+                "step": "independent QA",
+                "proposed_owner": "Separate qualified finance/accessibility/EU-training/caption reviewer; Brian only if not builder and genuinely independent",
+                "tools": "Domain knowledge, manual test environment and consented fixtures; reviewer capacity not verified"
+              },
+              {
+                "step": "approved distribution",
+                "proposed_owner": "Maya; Jeffrey exact scope/channel/budget approval",
+                "tools": "Authorized client route/account connector not proven; no outreach this run"
+              },
+              {
+                "step": "approved technical publishing",
+                "proposed_owner": "Adam, Cleo release/ops as assigned",
+                "tools": "Git review and authorized runtime; no merge/deploy by this research task"
+              },
+              {
+                "step": "support and iteration",
+                "proposed_owner": "Adam technical, Maya customer follow-up subject to approval",
+                "tools": "Permissioned issue/support queue, client agreement unverified"
+              },
+              {
+                "step": "measurement/reporting",
+                "proposed_owner": "Brian research; Cleo dashboard; Adam shared API",
+                "tools": "Versioned D1/Git available from Brian; Cleo live binding/peer access unverified"
+              }
+            ],
+            "human_dependencies": "Privacy, balances and dispute status; human finance authorization; never move money or automatically contact debtors.",
+            "availability_or_assignment_confirmed": false
+          },
+          "economics": {
+            "currency": "USD",
+            "all_values": "hypotheses not quotes, realized margin, approved spend or measured demand",
+            "mvp_effort": "2–5 person-days",
+            "human_review_and_delivery_hours_per_sale": 4,
+            "human_rate_usd_per_hour": 50,
+            "price_per_unit_usd": 499,
+            "tools_api_production_hosting_per_unit_usd": 24,
+            "payment_platform_fee_rate_assumed": 0.03,
+            "refund_rate_assumed": 0.02,
+            "variable_cost_usd": 248.95,
+            "contribution_per_unit_usd": 250.05,
+            "contribution_margin": 0.5011,
+            "launch_labor_hours": 24,
+            "launch_cash_usd": 100,
+            "launch_cost_usd": 1300,
+            "fixed_maintenance_support_monthly_usd": 60,
+            "fixed_cost_assumption": "1h labor+$10 tools monthly; MI-0022h+$10. Uncontracted; no verified supplier cost. Tools include incremental agent compute; subscriptions could increase costs. Taxes/owner overhead excluded; scope overruns extra. Refund reserve removes revenue once, not twice.",
+            "model_formula": "units=floor(min(months*leads_per_month*conversion,months*32/hours_per_sale)); bookings=units*price; revenue=bookings-refund_reserve (completion assumed); contribution=bookings-units*(labor+tools+3%fees+2%refunds); net=contribution-monthly_fixed*months-launch_cost",
+            "forecast_expected_revenue": "NOT ESTIMABLE: no verified reachable audience, traffic, conversion or launch authorization",
+            "scenarios": [
+              {
+                "name": "conservative",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 0,
+                  "unvalidated_conversion": 0,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": null,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 180,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -1480
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 360,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -1660
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 720,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -2020
+                  }
+                ]
+              },
+              {
+                "name": "base",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 5,
+                  "unvalidated_conversion": 0.2,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": 7,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 15,
+                    "units": 3,
+                    "gross_bookings_usd": 1497,
+                    "modeled_recognized_revenue_usd": 1467.06,
+                    "refund_reserve_usd": 29.94,
+                    "payment_platform_fees_usd": 44.91,
+                    "human_delivery_labor_usd": 600,
+                    "tools_api_hosting_usd": 72,
+                    "gross_contribution_after_refunds_usd": 750.15,
+                    "fixed_support_maintenance_usd": 180,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -729.85
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 30,
+                    "units": 6,
+                    "gross_bookings_usd": 2994,
+                    "modeled_recognized_revenue_usd": 2934.12,
+                    "refund_reserve_usd": 59.88,
+                    "payment_platform_fees_usd": 89.82,
+                    "human_delivery_labor_usd": 1200,
+                    "tools_api_hosting_usd": 144,
+                    "gross_contribution_after_refunds_usd": 1500.3,
+                    "fixed_support_maintenance_usd": 360,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -159.7
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 60,
+                    "units": 12,
+                    "gross_bookings_usd": 5988,
+                    "modeled_recognized_revenue_usd": 5868.24,
+                    "refund_reserve_usd": 119.76,
+                    "payment_platform_fees_usd": 179.64,
+                    "human_delivery_labor_usd": 2400,
+                    "tools_api_hosting_usd": 288,
+                    "gross_contribution_after_refunds_usd": 3000.6,
+                    "fixed_support_maintenance_usd": 720,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": 980.6
+                  }
+                ]
+              },
+              {
+                "name": "optimistic",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 10,
+                  "unvalidated_conversion": 0.2,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": 3,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 30,
+                    "units": 6,
+                    "gross_bookings_usd": 2994,
+                    "modeled_recognized_revenue_usd": 2934.12,
+                    "refund_reserve_usd": 59.88,
+                    "payment_platform_fees_usd": 89.82,
+                    "human_delivery_labor_usd": 1200,
+                    "tools_api_hosting_usd": 144,
+                    "gross_contribution_after_refunds_usd": 1500.3,
+                    "fixed_support_maintenance_usd": 180,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": 20.3
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 60,
+                    "units": 12,
+                    "gross_bookings_usd": 5988,
+                    "modeled_recognized_revenue_usd": 5868.24,
+                    "refund_reserve_usd": 119.76,
+                    "payment_platform_fees_usd": 179.64,
+                    "human_delivery_labor_usd": 2400,
+                    "tools_api_hosting_usd": 288,
+                    "gross_contribution_after_refunds_usd": 3000.6,
+                    "fixed_support_maintenance_usd": 360,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": 1340.6
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 120,
+                    "units": 24,
+                    "gross_bookings_usd": 11976,
+                    "modeled_recognized_revenue_usd": 11736.48,
+                    "refund_reserve_usd": 239.52,
+                    "payment_platform_fees_usd": 359.28,
+                    "human_delivery_labor_usd": 4800,
+                    "tools_api_hosting_usd": 576,
+                    "gross_contribution_after_refunds_usd": 6001.2,
+                    "fixed_support_maintenance_usd": 720,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": 3981.2
+                  }
+                ]
+              }
+            ],
+            "sensitivity": [
+              "Reachable qualified leads and conversion: entirely assumed; zero qualified leads yields zero bookings.",
+              "Human delivery hours/rate: double labor subtracts 200USD per unit; specialist premiums may erase modeled contribution.",
+              "Fixed support and one-off build amortization: low volume can make a nominally positive unit margin unprofitable."
+            ],
+            "actuals": {
+              "experiments_run": 0,
+              "units_sold_verified": 0,
+              "revenue_verified": false,
+              "bookings_or_sales_analytics": "not measured; no sales by these experiments",
+              "forecast_vs_actual": "not applicable; no authorized launch/date; compare only after actuals recorded"
+            },
+            "acquisition_adjusted_30day_sensitivity": [
+              {
+                "name": "conservative",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 0,
+                "qualified_leads_assumed": 0,
+                "conversion_assumed": 0,
+                "delivery_hours_multiplier": 1.5,
+                "price_usd_assumed": 499,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 4,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 200,
+                "unit_delivery_contribution_usd": 150.05,
+                "gross_bookings_usd": 0,
+                "gross_delivery_contribution_usd": 0,
+                "net_after_acquisition_support_and_oneoff_build_usd": -1560,
+                "demand_validated": false
+              },
+              {
+                "name": "base",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 1,
+                "qualified_leads_assumed": 5,
+                "conversion_assumed": 0.2,
+                "delivery_hours_multiplier": 1,
+                "price_usd_assumed": 499,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 3,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 150,
+                "unit_delivery_contribution_usd": 250.05,
+                "gross_bookings_usd": 499,
+                "gross_delivery_contribution_usd": 250.05,
+                "net_after_acquisition_support_and_oneoff_build_usd": -1259.95,
+                "demand_validated": false
+              },
+              {
+                "name": "optimistic",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 2,
+                "qualified_leads_assumed": 10,
+                "conversion_assumed": 0.2,
+                "delivery_hours_multiplier": 0.75,
+                "price_usd_assumed": 499,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 2,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 100,
+                "unit_delivery_contribution_usd": 300.05,
+                "gross_bookings_usd": 998,
+                "gross_delivery_contribution_usd": 600.1,
+                "net_after_acquisition_support_and_oneoff_build_usd": -859.9,
+                "demand_validated": false
+              }
+            ]
+          },
+          "next_lowest_cost_test": "Retain 30-invoice technical gate and approved five-user comparison in recommended-experiment.md.",
+          "examples_that_work": [
+            {
+              "example_id": "EX-001",
+              "candidate_id": "MI-001",
+              "supplier": "Chaser",
+              "sources": [
+                {
+                  "source_id": "chaser",
+                  "url": "https://www.chaserhq.com/chaser-pricing",
+                  "final_url": "https://www.chaserhq.com/chaser-pricing",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:15.076Z",
+                  "timezone": "UTC",
+                  "truncated": false,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                }
+              ],
+              "comparability": "Direct AR workflow comparator; service/setup model differs.",
+              "public_scope": "Compact: 4 users, 30 follow-up templates, 4 automated receivables workflows; accountant/bookkeeper partner route displayed.",
+              "public_price": "From $259/month Compact; $779 Core; $1,169 Complete. Country selector and monthly/yearly (10% saving) both present; currency/country, active billing selection, tax and checkout total unresolved. Do not normalize to USD or compare directly to $499 setup.",
+              "business_model": "Tiered recurring receivables SaaS; trial.",
+              "observed_channel": "Direct website trial/call; accountant and bookkeeper partner program linked.",
+              "displayed_outcomes_users_reviews": "Supplier page says over 10,000 users worldwide and markets 60+ hours/month saved. These are supplier assertions, not verified cohort outcomes or revenue.",
+              "revenue": {
+                "status": "private / not publicly verifiable from reviewed primary pages",
+                "amount": null,
+                "success_verified": false
+              },
+              "limitations": "Broad automation, not a demonstrated approval-first small-service-firm exception desk; plan eligibility text mixes £ and USD thresholds. No independent efficacy test.",
+              "lawful_original_adaptation": "Create original synthetic invoice queue, editable follow-up drafts, approval record and exception labels. Do not copy vendor templates, UI or branding."
+            },
+            {
+              "example_id": "EX-002",
+              "candidate_id": "MI-001",
+              "supplier": "Wave",
+              "sources": [
+                {
+                  "source_id": "wave",
+                  "url": "https://www.waveapps.com/pricing",
+                  "final_url": "https://www.waveapps.com/pricing",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:10.713Z",
+                  "timezone": "UTC",
+                  "truncated": false,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                }
+              ],
+              "comparability": "Direct low-cost substitute for reminders; partial comparator to exceptions.",
+              "public_scope": "Starter invoicing and bookkeeping; Pro adds automated late-payment reminders, transaction import/categorization and receipt capture.",
+              "public_price": "FAQ quotes Pro $19 USD / $25 CAD plus applicable taxes per business. Billing period is not explicit in that FAQ extract; do not infer checkout cadence. Payment-processing fees and add-ons separate.",
+              "business_model": "Freemium accounting SaaS plus subscriptions, payments and advisory add-ons.",
+              "observed_channel": "Self-service website and accountant/collaborator account access; no referral conversion verified.",
+              "displayed_outcomes_users_reviews": "Compensated Mitch Seekins testimonial claims 80% time saved; page explicitly discloses free annual subscription and $150 gift card. Supplier says invoices marked paid 3x faster when online payments enabled versus cash/check; not causal or exception-desk evidence.",
+              "revenue": {
+                "status": "private / not publicly verifiable from reviewed primary pages",
+                "amount": null,
+                "success_verified": false
+              },
+              "limitations": "Accounting-native substitute rather than outsourced exception review. Extract contains duplicated regional/plan variants; no checkout tested.",
+              "lawful_original_adaptation": "Use Wave/native reminders as baseline in original synthetic test. Build only distinct reconciliation/approval evidence, not a cloned invoicing product."
+            },
+            {
+              "example_id": "EX-003",
+              "candidate_id": "MI-001",
+              "supplier": "Upflow",
+              "sources": [
+                {
+                  "source_id": "upflowhome",
+                  "url": "https://upflow.io/",
+                  "final_url": "https://upflow.io/",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:53.230Z",
+                  "timezone": "UTC",
+                  "truncated": false,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                },
+                {
+                  "source_id": "upflow",
+                  "url": "https://upflow.io/pricing",
+                  "final_url": "https://upflow.io/pricing",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:28.899Z",
+                  "timezone": "UTC",
+                  "truncated": true,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                }
+              ],
+              "comparability": "Strongest functional comparator: explicit exceptions and autonomy controls; target scale differs.",
+              "public_scope": "B2B AR platform with suggestion-only through autonomous agent controls, multichannel collections, complex-payment matching, exception workflows and ERP audit trail.",
+              "public_price": "Homepage offers AR visibility/analytics free forever. Paid collections price not recoverable in incomplete pricing extract; pricing title says plans by invoiced revenue/no seat fees. Terms: taxes excluded, plans prepaid, usage postpaid; order form governs.",
+              "business_model": "Freemium analytics entry into AR/payments platform; paid commercial terms not fully observed.",
+              "observed_channel": "Website free analytics and embedded demo; B2B finance-team positioning.",
+              "displayed_outcomes_users_reviews": "Homepage claims 30% average DSO reduction in 3 months and 98% auto-match rate; Jason Lopez (ex Lattice Controller) testimonial says automate 99% of collections. Supplier-selected claims; methodology not displayed.",
+              "revenue": {
+                "status": "private / not publicly verifiable from reviewed primary pages",
+                "amount": null,
+                "success_verified": false
+              },
+              "limitations": "Pricing body incomplete after 750,000 bytes. Larger/more integrated platform than CSV-first service. No attribution or independent outcome/revenue verification.",
+              "lawful_original_adaptation": "Design original suggestion-only exception workflow and audit trail on synthetic data; benchmark whether manual approvals add value. No copying agents, code or testimonials."
+            }
+          ],
+          "evidence_gap": "Chaser/Upflow direct functional; Wave low-cost native substitute. No identical human-run approval-first exception-desk offer demonstrated. Revenue/profit not publicly verified; supplier marketing is not independent demand proof.",
+          "approval_references": [
+            {
+              "url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6709964928",
+              "scope": "authorize analysis/backfill only"
+            },
+            {
+              "url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6709972696",
+              "scope": "comparable evidence backfill; no execution approval"
+            }
+          ],
+          "independent_supplier_groups_199": 3
+        },
+        "shared_integration_dependency": {
+          "current_authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/186",
+          "complete_hub_owner": "Cleo per current live body, supersedes historical Adam-owned Hub docs",
+          "research_owner": "Brian",
+          "adam": "Engineering/#175 only where assigned; not complete Hub implementation owner",
+          "status": "Existing transitional D1 used; integrated Hub and independent recipient-runtime access not verified; no infrastructure/security changes"
+        }
+      },
+      "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
+      "checked_at": "2026-11-11T01:09:26.864016-05:00",
+      "record_version": "2026-11-11-nightly-v9",
+      "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
+      "allocation_tag": "Adjacent",
+      "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
+      "operating_model_30d": {
+        "start": "2026-11-08",
+        "end": "2026-12-08",
+        "timezone": "America/New_York",
+        "authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+        "allocation_basis": "research and validation effort, not candidate count, bookings or revenue",
+        "target_percent": {
+          "Adjacent": 70,
+          "New Stream": 30
+        },
+        "illustrative_capacity_hours": 40,
+        "capacity_authorized_or_staffed": false,
+        "planned_hours": {
+          "MI-001": 10,
+          "MI-002": 16,
+          "MI-003": 2,
+          "MI-004": 4,
+          "new_stream_watchlist": 8
+        },
+        "actual_effort": {
+          "human_hours": null,
+          "agent_active_minutes": null,
+          "reason": "No reliable per-category pre-instrumentation timer; not reconstructed from timestamps or token counts. Start ledger at integration; future workers log actual active minutes separately from wall time/human hours."
+        },
+        "review_dates": [
+          "2026-11-15",
+          "2026-11-22",
+          "2026-11-29",
+          "2026-12-06",
+          "2026-12-08"
+        ]
+      },
+      "evidence_quality": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+      "hypothesis": "Approval-first receivables exception desk for small B2B service firms provides incremental value beyond native/free alternatives to an accessible buyer.",
+      "experiment_design_30d": {
+        "days_after_authorization": 7,
+        "cash_cap": 100,
+        "human_hours_cap": 12,
+        "technical": "30/30 synthetic invoice balances/classes correct; no reminders for paid/disputed/duplicate items; injection cannot change rules; zero outbound actions",
+        "pass_gate": "At least 3/5 consenting eligible users achieve >=30% faster exception review without extra errors AND 2/5 request a scoped $499 pilot with approval path",
+        "fail_gate": "Zero requests, >=3/5 native-tool sufficiency, or fewer than 3/5 meet time/error criterion",
+        "owner": "Brian accountable research; Maya proposed consented recruitment after separate approval; independent domain QA not builder",
+        "decision_state": "PROPOSED_NOT_RUN",
+        "inconclusive": "One request, mixed signals, technical uncertainty or insufficient eligible recruitment by deadline; do not count as pass",
+        "approval_required": "Exact participants/channel/data/scope/budget; research model is not approval to build/list/outreach/spend",
+        "clock": "Preparation and buyer-test clock begins only after explicit authorization and capacity confirmation; day30 review still occurs if blocked"
+      },
+      "estimated_research_hours_30d": 10,
+      "decision_state": "FIRST_EXPERIMENT_PROPOSED"
+    },
+    {
+      "candidate_id": "MI-002",
+      "category": "Accessibility QA / niche productized service",
+      "title": "Title II evidence-and-remediation handoff pack for public-sector web vendors",
+      "demand_evidence_links": [
+        "https://www.ada.gov/resources/2024-03-08-web-rule/",
+        "https://www.prismrisk.gov/member-services/guidance-and-resource-library/accessibility/4-practical-tools-and-templates/digital-accessibility-procurement-guide/"
+      ],
+      "source_ids": [
+        "S4",
+        "S5",
+        "P10",
+        "P11",
+        "P12",
+        "NOV10-GSA-TOOLS",
+        "NOV10-GSA-BASELINE",
+        "NOV10-GSA-TESTER",
+        "NOV10-DHS"
+      ],
+      "confidence": "low commercial confidence; authoritative rule signal, no procurement intent verified",
+      "ranking": 3,
+      "score": 60,
+      "scores": {
+        "D": 2,
+        "C": 2,
+        "B": 3,
+        "F": 3,
+        "M": 3,
+        "T": 4,
+        "A": 5,
+        "L": 3
+      },
+      "stage": "RESEARCH_COMPLETE / DISCOVERY_PROPOSED_NOT_RUN",
+      "owner_proposal": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner",
+      "experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
+      "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
+      "outcome": "No public website audited, bid identified, compliance certification or sale",
+      "dedupe": "Complements #178/#185 acquisition and #183 QA; not a duplicate website redesign or internal accessibility audit.",
+      "research_details": {
+        "customer_segment": "Existing website modernization/maintenance clients with applicable scope, public-sector agencies and agency partners; customer reach/contract eligibility unverified. Original stable buyer/problem/channel key retained.",
+        "customer_needs": [
+          "Bounded manual+automated evidence, developer tickets and retest history; separately scoped from maintenance and code fixes"
+        ],
+        "industry_trends": [
+          {
+            "observation": "DOJ rule/deadline signal; no current funded procurement verified",
+            "evidence_urls": [
+              "https://www.ada.gov/resources/2024-03-08-web-rule/"
+            ],
+            "status": "indirect_signal_not_validated_demand"
+          },
+          {
+            "observation": "Nov8 DOJ scope/deadlines rechecked; existing public obligations remain. Not an emerging trend or funded demand",
+            "evidence_urls": [
+              "https://www.ada.gov/resources/2024-03-08-web-rule/"
+            ],
+            "checked_at": "2026-11-08T06:08:30.418Z",
+            "limitations": "Fact-sheet relevant text inspected, full rule not independently analyzed"
+          },
+          {
+            "observation": "PRISM guidance asks version-specific VPAT/ACR, testing before acceptance, remediation timelines and update/regression obligations. This is a procurement practice requirement, not an active solicitation, award or market-size trend.",
+            "evidence_urls": [
+              "https://www.prismrisk.gov/member-services/guidance-and-resource-library/accessibility/4-practical-tools-and-templates/digital-accessibility-procurement-guide/"
+            ],
+            "checked_at": "2026-11-09T06:04:28.777Z",
+            "market_period": "Public US agency-facing guidance current at access; publication date not displayed; not representative of all buyers",
+            "limitations": "Guidance not contract or legal advice; no funded notice, purchaser budget or intent verified."
+          },
+          {
+            "source_id": "NOV10-GSA-TOOLS",
+            "observation": "GSA identifies free ANDI, browser devtools and contrast tools; tool licensing cost is not the main manual-testing capacity proof. Reviewed/updated October2026.",
+            "evidence_urls": [
+              "https://www.section508.gov/tools/tools-for-testing-ict/"
+            ],
+            "checked_at": "2026-11-10T06:05:31.065Z",
+            "market_period": "US federal testing guidance current on access; stated original update dates retained, not time-series demand",
+            "limitations": "Methodological/acceptance evidence only, not funded procurement or buyer intent. Section508 is not automatically TitleII or WCAG2.1AA coverage."
+          },
+          {
+            "source_id": "NOV10-GSA-BASELINE",
+            "observation": "ICT Testing Baseline specifies tool-agnostic coverage components, explicitly not a complete step-by-step methodology or tool. Reviewed/updated October2025.",
+            "evidence_urls": [
+              "https://www.section508.gov/test/ict-testing-baseline-portfolio/"
+            ],
+            "checked_at": "2026-11-10T06:06:01.592Z",
+            "market_period": "US federal testing guidance current on access; stated original update dates retained, not time-series demand",
+            "limitations": "Methodological/acceptance evidence only, not funded procurement or buyer intent. Section508 is not automatically TitleII or WCAG2.1AA coverage."
+          },
+          {
+            "source_id": "NOV10-GSA-TESTER",
+            "observation": "Trusted Tester is a manual approach; agencies adopting the process only accept results from certified testers. Reviewed/updated July2026; do not generalize this to all TitleII buyers.",
+            "evidence_urls": [
+              "https://www.section508.gov/test/trusted-tester/"
+            ],
+            "checked_at": "2026-11-10T06:06:02.761Z",
+            "market_period": "US federal testing guidance current on access; stated original update dates retained, not time-series demand",
+            "limitations": "Methodological/acceptance evidence only, not funded procurement or buyer intent. Section508 is not automatically TitleII or WCAG2.1AA coverage."
+          },
+          {
+            "source_id": "NOV10-DHS",
+            "observation": "DHS describes common code-inspection testing and consistent sharing/reporting; page last updated April3,2025. Training/certification exists; Brian/recipient qualification not verified.",
+            "evidence_urls": [
+              "https://www.dhs.gov/trusted-tester"
+            ],
+            "checked_at": "2026-11-10T06:05:31.634Z",
+            "market_period": "US federal testing guidance current on access; stated original update dates retained, not time-series demand",
+            "limitations": "Methodological/acceptance evidence only, not funded procurement or buyer intent. Section508 is not automatically TitleII or WCAG2.1AA coverage."
+          }
+        ],
+        "competitor_analysis": [
+          {
+            "name": "Deque / axe",
+            "url": "https://www.deque.com/axe/devtools/",
+            "observation": "Mature automated/guided testing alternative; no dependable service quote",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "In-house QA",
+            "url": null,
+            "observation": "Existing substitute; qualified manual reviewer required",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "Accessible.org",
+            "url": "https://accessible.org/pricing/",
+            "checked_at": "2026-11-08T06:10:38.854Z",
+            "observation": "Manual representative sample, Excel findings, separate remediation/retest/support",
+            "public_price": "$100–$250 primary page; most audits $1250–$2750; support $195/h min2; dollars displayed, ISO/tax unverified",
+            "limitations": "Supplier claims, selection bias, credentials not independently checked; no purchasing or account testing"
+          },
+          {
+            "name": "HalfAccessible",
+            "url": "https://halfaccessible.com/pricing/",
+            "checked_at": "2026-11-08T06:10:41.065Z",
+            "observation": "Founder-led manual+automated assessment, severity/fix guidance; separate fixes/VPAT",
+            "public_price": "$500 Quick5template spotcheck; $2000 Complete25template/fullmanual/retest; dollars displayed ISO/tax unverified",
+            "limitations": "Supplier claims, selection bias, credentials not independently checked; no purchasing or account testing"
+          },
+          {
+            "name": "Deque",
+            "url": "https://www.deque.com/accessibility-services/audits-compliance-testing/",
+            "checked_at": "2026-11-08T06:10:31.149Z",
+            "observation": "Manual+automated audit, prioritized dashboard, developer/remediation guidance, optional ACR",
+            "public_price": "No numeric price on reviewed page",
+            "limitations": "Supplier claims, selection bias, credentials not independently checked; no purchasing or account testing"
+          },
+          {
+            "name": "Accessible.org",
+            "url": "https://accessible.org/pricing/",
+            "checked_at": "2026-11-09T06:03:34.563Z",
+            "observation": "Manual representative audits $1250–$2750; technical support $195/h min2; audit report Excel. Document prices conflict across body/FAQ; do not quote document remediation.",
+            "limitations": "English supplier page; dollar ISO/tax/checkout unverified where shown. No independently verified paid volume, profit or outcomes. Truncated extracts where indicated."
+          },
+          {
+            "name": "HalfAccessible",
+            "url": "https://halfaccessible.com/pricing/",
+            "checked_at": "2026-11-09T06:03:36.823Z",
+            "observation": "Quick $500 <=5templates spot checks/top10; Complete $2000 <=25templates/flows, full manual, retest and90day support. Not scope-equivalent to proposed pack.",
+            "limitations": "English supplier page; dollar ISO/tax/checkout unverified where shown. No independently verified paid volume, profit or outcomes. Truncated extracts where indicated."
+          },
+          {
+            "name": "Deque",
+            "url": "https://www.deque.com/accessibility-services/audits-compliance-testing/",
+            "checked_at": "2026-11-09T06:03:37.590Z",
+            "observation": "Manual+automated assessment, prioritized dashboard, remediation guidance, optional ACR; no numeric quote. Supplier 10000+ audits not independently verified.",
+            "limitations": "English supplier page; dollar ISO/tax/checkout unverified where shown. No independently verified paid volume, profit or outcomes. Truncated extracts where indicated."
+          }
+        ],
+        "pricing_intelligence": {
+          "proposed_offer": {
+            "amount": 1499,
+            "currency": "USD",
+            "unit": "five-template assessment",
+            "status": "untested_hypothesis"
+          },
+          "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits",
+          "observed_competitor_prices": [
+            {
+              "supplier": "Accessible.org",
+              "url": "https://accessible.org/pricing/",
+              "checked_at": "2026-11-08T06:10:38.854Z",
+              "price_observation": "$100–$250 primary page; most audits $1250–$2750; support $195/h min2; dollars displayed, ISO/tax unverified",
+              "comparability": "Direct scoped accessibility assessment/evidence competitor; not identical five-template existing-client handoff"
+            },
+            {
+              "supplier": "HalfAccessible",
+              "url": "https://halfaccessible.com/pricing/",
+              "checked_at": "2026-11-08T06:10:41.065Z",
+              "price_observation": "$500 Quick5template spotcheck; $2000 Complete25template/fullmanual/retest; dollars displayed ISO/tax unverified",
+              "comparability": "Direct scoped accessibility assessment/evidence competitor; not identical five-template existing-client handoff"
+            },
+            {
+              "supplier": "Deque",
+              "url": "https://www.deque.com/accessibility-services/audits-compliance-testing/",
+              "checked_at": "2026-11-08T06:10:31.149Z",
+              "price_observation": "No numeric price on reviewed page",
+              "comparability": "Direct scoped accessibility assessment/evidence competitor; not identical five-template existing-client handoff"
+            }
+          ],
+          "proposed_packages": [
+            {
+              "name": "triage2templates",
+              "amount_usd": 499,
+              "hours": 4,
+              "tools_usd": 25
+            },
+            {
+              "name": "five-template evidence handoff",
+              "amount_usd": 1499,
+              "hours": 16,
+              "tools_usd": 100
+            },
+            {
+              "name": "bounded retest<=2templates",
+              "amount_usd": 399,
+              "hours": 4,
+              "tools_usd": 25
+            }
+          ]
+        },
+        "demand_indicators": {
+          "evidence_urls": [
+            "https://www.ada.gov/resources/2024-03-08-web-rule/"
+          ],
+          "buyer_intent_verified": false,
+          "revenue_verified": false,
+          "limitations": "No primary procurement/award/interview verified this second pass; regulation and supplier prices not buying intent. Search provider errors/zero results do not prove absence."
+        },
+        "recommended_products_services": [
+          "Scoped evidence-and-remediation handoff service, not certification"
+        ],
+        "customer_acquisition_strategy": {
+          "proposal": "Existing agency/RFP channel via Maya; no bid or outreach authorized",
+          "owner_proposal": "Maya",
+          "execution_authorized": false
+        },
+        "recommended_next_steps": [
+          "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
+          "Before separately approved validation, require prospective manual reviewer to state method/version, relevant credentials, WCAG2.1AA coverage/gaps, evidence/retest scope and cost. This is a proposed gate, not contacted or assigned work."
+        ],
+        "agent_fit": {
+          "research_owner": "Brian",
+          "suggested_execution_lead": "Brian",
+          "assignment_confirmed": false,
+          "rationale": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner"
+        },
+        "approval_reference": {
+          "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+          "status": "proposal_only_no_execution_approval_recorded",
+          "proposed_cash_cap_usd": 150,
+          "proposed_human_hours_cap": 12
+        },
+        "source_freshness": {
+          "source_access_window": "2026-11-06 America/New_York / 2026-11-07 UTC",
+          "metadata_structured_at": "2026-11-07T05:04:33.354764+00:00",
+          "new_source_research": true,
+          "business_case_analyzed_at": "2026-11-08T06:07:49.573454+00:00",
+          "accessibility_sources_checked_local_date": "2026-11-08 America/New_York; exact per-source timestamps retained in source-snapshots.json",
+          "nov9_source_checks": [
+            {
+              "url": "https://accessible.org/pricing/",
+              "accessed_at": "2026-11-09T06:03:34.563Z",
+              "truncated": true
+            },
+            {
+              "url": "https://halfaccessible.com/pricing/",
+              "accessed_at": "2026-11-09T06:03:36.823Z",
+              "truncated": true
+            },
+            {
+              "url": "https://www.deque.com/accessibility-services/audits-compliance-testing/",
+              "accessed_at": "2026-11-09T06:03:37.590Z",
+              "truncated": false
+            },
+            {
+              "url": "https://www.prismrisk.gov/member-services/guidance-and-resource-library/accessibility/4-practical-tools-and-templates/digital-accessibility-procurement-guide/",
+              "accessed_at": "2026-11-09T06:04:28.777Z",
+              "truncated": false
+            },
+            {
+              "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+              "accessed_at": "2026-11-09T06:04:29.624Z",
+              "truncated": true
+            }
+          ],
+          "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
+          "nov10_source_checks": [
+            {
+              "url": "https://www.section508.gov/tools/tools-for-testing-ict/",
+              "accessed_at": "2026-11-10T06:05:31.065Z",
+              "truncated": false
+            },
+            {
+              "url": "https://www.section508.gov/test/ict-testing-baseline-portfolio/",
+              "accessed_at": "2026-11-10T06:06:01.592Z",
+              "truncated": false
+            },
+            {
+              "url": "https://www.section508.gov/test/trusted-tester/",
+              "accessed_at": "2026-11-10T06:06:02.761Z",
+              "truncated": false
+            },
+            {
+              "url": "https://www.dhs.gov/trusted-tester",
+              "accessed_at": "2026-11-10T06:05:31.634Z",
+              "truncated": false
+            }
+          ],
+          "nov11_record_review_at": "2026-11-11T01:09:26.864016-05:00",
+          "nov11_scope": "Record/outcome carry-forward only; no new source research for this candidate."
+        },
+        "evidence_gaps": [
+          "No qualified buyer interviews, purchases or revenue",
+          "No verified distribution reach or realized margin",
+          "No acceptance/change-regression ownership agreement; open-ended remediation/indemnity must not be accepted within fixed pack.",
+          "Accessible.org document pricing conflicts internally; no document quote used. No reviewer booked or paid.",
+          "No independent qualified reviewer/certification verified. Customer-required methodology/credentials and complete WCAG2.1AA gap mapping must be agreed before a scoped quote; the federal baseline is not an automatic TitleII test plan.",
+          "W3C reporting/WCAG-EM primary pages returned403; no bypass or claimed new W3C-methodology verification."
+        ],
+        "business_case": {
+          "version": "2026-11-08-weekly-business-case-v5",
+          "as_of": "2026-11-08T06:07:49.573454+00:00",
+          "status": "exploratory_sensitivity_not_predictive_forecast",
+          "strategic_fit": {
+            "ordinal_score_1_to_5": 5,
+            "priority_for_business_case_review": 1,
+            "rationale": "Strongest website-modernization/maintenance adjacency; hypothesized existing-client/partner route, not confirmed client access or funded pipeline.",
+            "current_customer_count_or_reachable_audience": "unknown; no CRM/client identities accessed"
+          },
+          "agent_deliverability": {
+            "status": "CONDITIONAL_NOT_END_TO_END_PROVEN",
+            "repeatability": "productized scope with human-reviewed delivery; not autonomous passive-income product",
+            "delivery_chain": [
+              {
+                "step": "research and provenance",
+                "proposed_owner": "Brian",
+                "tools": "gh, public web_fetch/search, private research API client; available in Brian runtime"
+              },
+              {
+                "step": "original creation/engineering",
+                "proposed_owner": "Adam with Brian specifications",
+                "tools": "Git/local fixtures; editor/approved model access unverified in recipient runtime"
+              },
+              {
+                "step": "independent QA",
+                "proposed_owner": "Separate qualified finance/accessibility/EU-training/caption reviewer; Brian only if not builder and genuinely independent",
+                "tools": "Domain knowledge, manual test environment and consented fixtures; reviewer capacity not verified"
+              },
+              {
+                "step": "approved distribution",
+                "proposed_owner": "Maya; Jeffrey exact scope/channel/budget approval",
+                "tools": "Authorized client route/account connector not proven; no outreach this run"
+              },
+              {
+                "step": "approved technical publishing",
+                "proposed_owner": "Adam, Cleo release/ops as assigned",
+                "tools": "Git review and authorized runtime; no merge/deploy by this research task"
+              },
+              {
+                "step": "support and iteration",
+                "proposed_owner": "Adam technical, Maya customer follow-up subject to approval",
+                "tools": "Permissioned issue/support queue, client agreement unverified"
+              },
+              {
+                "step": "measurement/reporting",
+                "proposed_owner": "Brian research; Cleo dashboard; Adam shared API",
+                "tools": "Versioned D1/Git available from Brian; Cleo live binding/peer access unverified"
+              }
+            ],
+            "human_dependencies": "Qualified keyboard/screen-reader/manual reviewer required; legal applicability needs entity-level review; no compliance certification.",
+            "availability_or_assignment_confirmed": false
+          },
+          "economics": {
+            "currency": "USD",
+            "all_values": "hypotheses not quotes, realized margin, approved spend or measured demand",
+            "mvp_effort": "6–10 person-days",
+            "human_review_and_delivery_hours_per_sale": 16,
+            "human_rate_usd_per_hour": 50,
+            "price_per_unit_usd": 1499,
+            "tools_api_production_hosting_per_unit_usd": 100,
+            "payment_platform_fee_rate_assumed": 0.03,
+            "refund_rate_assumed": 0.02,
+            "variable_cost_usd": 974.95,
+            "contribution_per_unit_usd": 524.05,
+            "contribution_margin": 0.3496,
+            "launch_labor_hours": 64,
+            "launch_cash_usd": 150,
+            "launch_cost_usd": 3350,
+            "fixed_maintenance_support_monthly_usd": 110,
+            "fixed_cost_assumption": "1h labor+$10 tools monthly; MI-0022h+$10. Uncontracted; no verified supplier cost. Tools include incremental agent compute; subscriptions could increase costs. Taxes/owner overhead excluded; scope overruns extra. Refund reserve removes revenue once, not twice.",
+            "model_formula": "units=floor(min(months*leads_per_month*conversion,months*32/hours_per_sale)); bookings=units*price; revenue=bookings-refund_reserve (completion assumed); contribution=bookings-units*(labor+tools+3%fees+2%refunds); net=contribution-monthly_fixed*months-launch_cost",
+            "forecast_expected_revenue": "NOT ESTIMABLE: no verified reachable audience, traffic, conversion or launch authorization",
+            "scenarios": [
+              {
+                "name": "conservative",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 0,
+                  "unvalidated_conversion": 0,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": null,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 330,
+                    "launch_cost_usd": 3350,
+                    "net_after_launch_and_maintenance_usd": -3680
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 660,
+                    "launch_cost_usd": 3350,
+                    "net_after_launch_and_maintenance_usd": -4010
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 1320,
+                    "launch_cost_usd": 3350,
+                    "net_after_launch_and_maintenance_usd": -4670
+                  }
+                ]
+              },
+              {
+                "name": "base",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 5,
+                  "unvalidated_conversion": 0.2,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": 9,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 15,
+                    "units": 3,
+                    "gross_bookings_usd": 4497,
+                    "modeled_recognized_revenue_usd": 4407.06,
+                    "refund_reserve_usd": 89.94,
+                    "payment_platform_fees_usd": 134.91,
+                    "human_delivery_labor_usd": 2400,
+                    "tools_api_hosting_usd": 300,
+                    "gross_contribution_after_refunds_usd": 1572.15,
+                    "fixed_support_maintenance_usd": 330,
+                    "launch_cost_usd": 3350,
+                    "net_after_launch_and_maintenance_usd": -2107.85
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 30,
+                    "units": 6,
+                    "gross_bookings_usd": 8994,
+                    "modeled_recognized_revenue_usd": 8814.12,
+                    "refund_reserve_usd": 179.88,
+                    "payment_platform_fees_usd": 269.82,
+                    "human_delivery_labor_usd": 4800,
+                    "tools_api_hosting_usd": 600,
+                    "gross_contribution_after_refunds_usd": 3144.3,
+                    "fixed_support_maintenance_usd": 660,
+                    "launch_cost_usd": 3350,
+                    "net_after_launch_and_maintenance_usd": -865.7
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 60,
+                    "units": 12,
+                    "gross_bookings_usd": 17988,
+                    "modeled_recognized_revenue_usd": 17628.24,
+                    "refund_reserve_usd": 359.76,
+                    "payment_platform_fees_usd": 539.64,
+                    "human_delivery_labor_usd": 9600,
+                    "tools_api_hosting_usd": 1200,
+                    "gross_contribution_after_refunds_usd": 6288.6,
+                    "fixed_support_maintenance_usd": 1320,
+                    "launch_cost_usd": 3350,
+                    "net_after_launch_and_maintenance_usd": 1618.6
+                  }
+                ]
+              },
+              {
+                "name": "optimistic",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 10,
+                  "unvalidated_conversion": 0.2,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": 4,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 30,
+                    "units": 6,
+                    "gross_bookings_usd": 8994,
+                    "modeled_recognized_revenue_usd": 8814.12,
+                    "refund_reserve_usd": 179.88,
+                    "payment_platform_fees_usd": 269.82,
+                    "human_delivery_labor_usd": 4800,
+                    "tools_api_hosting_usd": 600,
+                    "gross_contribution_after_refunds_usd": 3144.3,
+                    "fixed_support_maintenance_usd": 330,
+                    "launch_cost_usd": 3350,
+                    "net_after_launch_and_maintenance_usd": -535.7
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 60,
+                    "units": 12,
+                    "gross_bookings_usd": 17988,
+                    "modeled_recognized_revenue_usd": 17628.24,
+                    "refund_reserve_usd": 359.76,
+                    "payment_platform_fees_usd": 539.64,
+                    "human_delivery_labor_usd": 9600,
+                    "tools_api_hosting_usd": 1200,
+                    "gross_contribution_after_refunds_usd": 6288.6,
+                    "fixed_support_maintenance_usd": 660,
+                    "launch_cost_usd": 3350,
+                    "net_after_launch_and_maintenance_usd": 2278.6
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 120,
+                    "units": 24,
+                    "gross_bookings_usd": 35976,
+                    "modeled_recognized_revenue_usd": 35256.48,
+                    "refund_reserve_usd": 719.52,
+                    "payment_platform_fees_usd": 1079.28,
+                    "human_delivery_labor_usd": 19200,
+                    "tools_api_hosting_usd": 2400,
+                    "gross_contribution_after_refunds_usd": 12577.2,
+                    "fixed_support_maintenance_usd": 1320,
+                    "launch_cost_usd": 3350,
+                    "net_after_launch_and_maintenance_usd": 7907.2
+                  }
+                ]
+              }
+            ],
+            "sensitivity": [
+              "Reachable qualified leads and conversion: entirely assumed; zero qualified leads yields zero bookings.",
+              "Human delivery hours/rate: double labor subtracts 800USD per unit; specialist premiums may erase modeled contribution.",
+              "Fixed support and one-off build amortization: low volume can make a nominally positive unit margin unprofitable."
+            ],
+            "actuals": {
+              "experiments_run": 0,
+              "units_sold_verified": 0,
+              "revenue_verified": false,
+              "bookings_or_sales_analytics": "not measured; no sales by these experiments",
+              "forecast_vs_actual": "not applicable; no authorized launch/date; compare only after actuals recorded"
+            },
+            "acquisition_adjusted_30day_sensitivity": [
+              {
+                "name": "conservative",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 0,
+                "qualified_leads_assumed": 0,
+                "conversion_assumed": 0,
+                "delivery_hours_multiplier": 1.5,
+                "price_usd_assumed": 1499,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 4,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 200,
+                "unit_delivery_contribution_usd": 124.05,
+                "gross_bookings_usd": 0,
+                "gross_delivery_contribution_usd": 0,
+                "net_after_acquisition_support_and_oneoff_build_usd": -3660,
+                "demand_validated": false
+              },
+              {
+                "name": "base",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 1,
+                "qualified_leads_assumed": 5,
+                "conversion_assumed": 0.2,
+                "delivery_hours_multiplier": 1,
+                "price_usd_assumed": 1499,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 3,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 150,
+                "unit_delivery_contribution_usd": 524.05,
+                "gross_bookings_usd": 1499,
+                "gross_delivery_contribution_usd": 524.05,
+                "net_after_acquisition_support_and_oneoff_build_usd": -3085.95,
+                "demand_validated": false
+              },
+              {
+                "name": "optimistic",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 2,
+                "qualified_leads_assumed": 10,
+                "conversion_assumed": 0.2,
+                "delivery_hours_multiplier": 0.75,
+                "price_usd_assumed": 1499,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 2,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 100,
+                "unit_delivery_contribution_usd": 724.05,
+                "gross_bookings_usd": 2998,
+                "gross_delivery_contribution_usd": 1448.1,
+                "net_after_acquisition_support_and_oneoff_build_usd": -2111.9,
+                "demand_validated": false
+              }
+            ]
+          },
+          "next_lowest_cost_test": "Synthetic five-template evidence demo, specialist cost check, then three consented existing-client/agency interviews only after authorization. Pass:2 specific scope/price-qualified quote requests and reviewer-backed delivery cost <=$975. Fail:0 requests or unfillable manual-review role;1 request or insufficient recruitment inconclusive. Proposed cap:$150 cash/12 human hours; no expenditure.",
+          "examples_that_work": [
+            {
+              "example_id": "EX-010",
+              "candidate_id": "MI-002",
+              "supplier": "Accessible.org",
+              "sources": [
+                {
+                  "source_id": "P10",
+                  "url": "https://accessible.org/pricing/",
+                  "accessed_at": "2026-11-08T06:10:38.854Z",
+                  "http_status": 200,
+                  "publication_date": "2026-10-29 price update"
+                }
+              ],
+              "public_price": "$100–$250 primary page; most audits $1250–$2750; support $195/h min2; dollars displayed, ISO/tax unverified",
+              "public_scope": "Manual representative sample, Excel findings, separate remediation/retest/support",
+              "observed_outcomes": "No paid volume/revenue/outcome count verified; supplier credential claims only",
+              "revenue": "not publicly verifiable",
+              "success_verified": false,
+              "market_period": "English-language supplier page current Nov8; client region/measurement period not fully established",
+              "business_model": "project/manual audit services; direct website quote/booking",
+              "comparability": "Direct scoped accessibility assessment/evidence competitor; not identical five-template existing-client handoff",
+              "limitations": "Supplier claims, selection bias, credentials not independently checked; no purchasing or account testing",
+              "lawful_original_adaptation": "Original synthetic template evidence/ticket/retest fixture; no copying reports or certification claims",
+              "refresh_history": [
+                {
+                  "url": "https://accessible.org/pricing/",
+                  "accessed_at": "2026-11-09T06:03:34.563Z",
+                  "status": 200,
+                  "observations": "Manual representative audits $1250–$2750; technical support $195/h min2; audit report Excel. Document prices conflict across body/FAQ; do not quote document remediation.",
+                  "publication_date": "2026-10-29 stated pricing update",
+                  "truncated": true
+                }
+              ]
+            },
+            {
+              "example_id": "EX-011",
+              "candidate_id": "MI-002",
+              "supplier": "HalfAccessible",
+              "sources": [
+                {
+                  "source_id": "P11",
+                  "url": "https://halfaccessible.com/pricing/",
+                  "accessed_at": "2026-11-08T06:10:41.065Z",
+                  "http_status": 200,
+                  "publication_date": "unknown"
+                }
+              ],
+              "public_price": "$500 Quick5template spotcheck; $2000 Complete25template/fullmanual/retest; dollars displayed ISO/tax unverified",
+              "public_scope": "Founder-led manual+automated assessment, severity/fix guidance; separate fixes/VPAT",
+              "observed_outcomes": "Positive supplier-hosted testimonial, no paid volume/revenue verified",
+              "revenue": "not publicly verifiable",
+              "success_verified": false,
+              "market_period": "English-language supplier page current Nov8; client region/measurement period not fully established",
+              "business_model": "project/manual audit services; direct website quote/booking",
+              "comparability": "Direct scoped accessibility assessment/evidence competitor; not identical five-template existing-client handoff",
+              "limitations": "Supplier claims, selection bias, credentials not independently checked; no purchasing or account testing",
+              "lawful_original_adaptation": "Original synthetic template evidence/ticket/retest fixture; no copying reports or certification claims",
+              "refresh_history": [
+                {
+                  "url": "https://halfaccessible.com/pricing/",
+                  "accessed_at": "2026-11-09T06:03:36.823Z",
+                  "status": 200,
+                  "observations": "Quick $500 <=5templates spot checks/top10; Complete $2000 <=25templates/flows, full manual, retest and90day support. Not scope-equivalent to proposed pack.",
+                  "publication_date": null,
+                  "truncated": true
+                }
+              ]
+            },
+            {
+              "example_id": "EX-012",
+              "candidate_id": "MI-002",
+              "supplier": "Deque",
+              "sources": [
+                {
+                  "source_id": "P12",
+                  "url": "https://www.deque.com/accessibility-services/audits-compliance-testing/",
+                  "accessed_at": "2026-11-08T06:10:31.149Z",
+                  "http_status": 200,
+                  "publication_date": "unknown"
+                }
+              ],
+              "public_price": "No numeric price on reviewed page",
+              "public_scope": "Manual+automated audit, prioritized dashboard, developer/remediation guidance, optional ACR",
+              "observed_outcomes": "Supplier advertises10000+audits by experts and1–2weeks; no independently verified paid count/revenue",
+              "revenue": "not publicly verifiable",
+              "success_verified": false,
+              "market_period": "English-language supplier page current Nov8; client region/measurement period not fully established",
+              "business_model": "project/manual audit services; direct website quote/booking",
+              "comparability": "Direct scoped accessibility assessment/evidence competitor; not identical five-template existing-client handoff",
+              "limitations": "Supplier claims, selection bias, credentials not independently checked; no purchasing or account testing",
+              "lawful_original_adaptation": "Original synthetic template evidence/ticket/retest fixture; no copying reports or certification claims",
+              "refresh_history": [
+                {
+                  "url": "https://www.deque.com/accessibility-services/audits-compliance-testing/",
+                  "accessed_at": "2026-11-09T06:03:37.590Z",
+                  "status": 200,
+                  "observations": "Manual+automated assessment, prioritized dashboard, remediation guidance, optional ACR; no numeric quote. Supplier 10000+ audits not independently verified.",
+                  "publication_date": null,
+                  "truncated": false
+                }
+              ]
+            }
+          ],
+          "evidence_gap": "No revenue or qualified intent for the proposed 2Nspira package; source-scoped supplier/procurement observations in attached deep dive. Qualified reviewer and actual client access unverified.",
+          "approval_references": [
+            {
+              "url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6709964928",
+              "scope": "authorize analysis/backfill only"
+            },
+            {
+              "url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6709972696",
+              "scope": "comparable evidence backfill; no execution approval"
+            }
+          ],
+          "accessibility_second_pass_markdown": "# MI-002 focused second pass — November 8, 2026 Eastern\n\nBrian accountable. Updated same ID/buyer/problem/channel; adjacent segment hypotheses, not new prospects. Research completed; package viability, staffing, purchases and revenue NOT proven. No audit of a customer's site, outreach, bid, spend or production change. Compared with prior MI-002: fresh official scope/deadline check, three primary supplier comparables with two price benchmarks, stronger manual-staffing and existing-maintenance boundaries. No verified RFP/award or qualified buyer intent. Score60 remains provisional/exploratory.\n\n## Applicability / segments\n\n- State/local agencies, public schools, public libraries and public higher education: TitleII scope per DOJ. Population/entity status determines compliance date, not our chosen package. Special district governments have the2028date. School-district classification/population requires specific review; do not assume every school is special district.\n- Private small businesses/nonprofits/private schools: not automatically TitleII entities. A nonprofit delivering a public service under government arrangement can be part of the public entity's obligations. TitleIII/other laws/contract requirements need separate competent review; no universal exemption or universal2027deadline inferred.\n- Existing modernization/maintenance clients: highest adjacency, but no client roster, current statement of work, consent, eligible public entity or funded need verified. Do not label all current clients affected.\n- Web-agency partners: subcontractor evidence/ticket/retest handoff could fit; specific partners, rights, budget and reachable channel unverified. Maya owns actual customer/RFP research and any approved contact; current #178 OTV/ICLS pipelines not duplicated or counted as this service's buyers.\n\nOfficial DOJ source: https://www.ada.gov/resources/2024-03-08-web-rule/ checked2026-11-08T06:08:30.418Z. Original fact-sheet dateApril8,2024; updated text says April20,2026 IFR extends dates to April26,2027 for public entities>=50,000population and April26,2028 for smaller public entities/any special district. Generally WCAG2.1AA web/mobile standard; contractor-delivered government web content included. Limited archived/document/third-party exceptions do not erase existing effective-communication/equal-access obligations. Relevant scope/deadline passages directly inspected; full extract truncated. This summary is research, not legal advice/certification or independent full-rule analysis. Company may recommend WCAG2.2AA while reporting TitleII's2.1AA baseline separately; not interchangeable legal claims.\n\n## Examples That Work — three comparable offers, not three proven winners\n\nPrimary English-language supplier pages checked Nov8,2026; service availability/credentials/claims not independently tested. Public revenue, profit, paid volume and conversion are **not publicly verifiable** from these pages. No price quotes requested. Dollar symbols are displayed; ISO currency/taxes/checkout unresolved, so do not silently normalize to USD. Sampling public suppliers creates selection/marketing bias; no broad-demand inference.\n\n1. **Accessible.org** — https://accessible.org/pricing/ checked2026-11-08T06:10:38.854Z; page explicitly updatedOctober29,2026. Manual representative-sample audits advertised $100–$250primary page/screen and $25–$100light; most audits$1,250–$2,750. Advertised DHS Trusted Testers; screen-reader/keyboard/code/zoom checks and detailed spreadsheet. Fix validation/technical support$195/hour(min2hours); user testing$550session or$450with audit; WCAG VPAT add-on$350. Remediation$750–$4,500 advertised separately. These are supplier price/scope claims, not actual booked contract/outcome evidence; no sold-unit count. Direct website/cart/calculator commercial services model. Certification is THEIR offer, not permission to make ours. Extract truncated; cited current pricing precedes a separate discontinued-services section, whose old prices are NOT current comparables.\n2. **HalfAccessible** — https://halfaccessible.com/pricing/ checked2026-11-08T06:10:41.065Z; page publication date unknown (title2026not publication proof). $500Quick:up to5templates, automated/manual spot checks, top10issues,30mincall. $2,000Complete:up to25templates/keyflows, full JAWS/NVDA/VoiceOver/keyboard, severity/fix guidance, retest, statement draft,90dayssupport. Fixes/PDF/VPAT separate. Founder IAAP credentials/10+years are supplier claims, not independently checked. Website booking/contact distribution, fixed-project services plus custom programs. One positive testimonial in extract but no public paid volume/revenue; not evidence of our niche's willingness to pay. Extract truncated; relevant pricing inspected. Their broad legal coverage/lawsuit claims are NOT adopted as law.\n3. **Deque** — requested https://www.deque.com/services/accessibility-audits/ redirected to https://www.deque.com/accessibility-services/audits-compliance-testing/ checked2026-11-08T06:10:31.149Z. Manual+automated assessment, prioritized dashboard, developer guidance/remediation and optional VPAT-based ACR. Advertises1–2weeks and experts who have conducted10,000+audits; supplier-reported aggregate, not independent paid-sales count. Named Articulate testimonial on page; underlying case not inspected, so no verified impact. No numeric public service price; direct contact/enterprise services route. Important counterexample to novelty: evidence-to-remediation handoff is already offered.\n\nSupplementary substitute https://www.accessibilitychecker.org/pricing/ checked2026-11-08T06:10:32.783Z: platform Lite$69/domain/month billed annually(up to25URLs), also$89monthlydisplay; managed remediation custom. Automated evidence/manual-guidance workflow overlaps proposed packaging; no certification/legal claims adopted. Extract truncated and plan variants coexist; no checkout or purchase. This is not our qualified manual-review supplier quote.\n\n**Repeatable pattern / lawful adaptation:** Bound scope by unique templates and interactive flows; combine manual judgment with tooling; deliver actionable findings; quote fixes and retests separately. Public suppliers already do this. 2Nspira must demonstrate an original within-relationship developer-ticket/retest workflow rather than clone reports, protected test materials or claim novel certification. Original synthetic fixtures, own report layout and authorized tooling; verify licenses before customer data processing. Brand names used for factual comparison only.\n\n## Proposed packages / exclusions — hypotheses, not approved offers\n\n| Package | Proposed price USD | Deliverables / effort assumptions | Modeled contribution before overhead/build/tax |\n|---|---:|---|---|\n| Readiness triage |499|2agreed templates; inventory, automated findings plus manual spot checks, top10prioritized tickets, limitations;4human hours@$50 +$25tools +5%fee/refund reserve|249.05(49.9%)|\n| Five-template evidence handoff (primary scenario) |1499|5agreed templates and selected key flows; automated+qualified manual keyboard/screen-reader/form/error checks; URL/component inventory; dated reproduction evidence; WCAG2.1AA mapping/2.2recommendations separately; prioritized dev tickets,30minhandoff; one bounded verification pass of agreed fixes, no code implementation;16human hours@$50 +$100tools +5%reserve|524.05(35.0%)|\n| Bounded retest add-on |399|One agreed change set affecting<=2templates; before/after evidence and residual issues;4hours@$50+$25tools+5%reserve|154.05(38.6%)|\n\nAssumed hour allocation primary16:2inventory/scope,8qualified manual assessment,3evidence/tickets,1handoff,2bounded verification. $50/h is a modeling proxy, not a specialist quote. At$100/h for8specialist hours, contribution falls$400to$124.05; an additional4hours at$50 makes it negative. Public Accessible.org$195/h technical-support benchmark is NOT a staffing quote, but shows how unrealistic assuming cheap specialist capacity may be. All packages conditional; fix/retest scope overrun triggers re-quote, never reduced testing or misleading completeness. Initial reusable package6–10person-days; model64hours+$150cash launch and$110monthlysupport. No funds authorized. Lower-price competitors mean$1499cannot be justified on price alone.\n\nExclude whole-site certification, blanket legal compliance, overlay guarantees, formal VPAT/ACR, all PDFs/media, translation, native mobile apps, authenticated third-party tools, code fixes and unlimited retests unless expressly scoped and separately priced. Selected template audit is not whole-site conformance. Reports themselves must be accessible and document non-tested content/browser/AT environments.\n\n## Staffing and ownership — conditional\n\nBrian research/specification; Adam proposed implementation/technical fixture owner; Maya customer/RFP qualification; Cleo proposed release/ops/report accessibility support if assigned; independent qualified accessibility practitioner performs/interprets manual checks and reviews evidence. No agent acceptance, qualified practitioner or paid-tool access verified. Brian cannot independently approve a product he built. No end-to-end autonomous delivery claim. Required tools:approved scanner, browser/keyboard/screen-reader environments with proper licenses, Git ticket/report handoff, consented staging access, secure evidence retention and exact owner-approved scope. Team AI can cluster/suggest but cannot replace human AT assessment/legal judgment.\n\n## Existing maintenance integration\n\nOwner referenced$495/year maintenance; actual contract/inclusions/client allowances were not inspected. Public https://2nspira.com/websites checked2026-11-08T06:04:54.497Z instead displays explicitly internal-review proposed$79/$149/$299monthlyplans, not proven sold or approved plans. Preserve current agreements; do not infer that audit/remediation/retest is included. At illustrative$50/h, entire$495buys9.9hours before hosting/othercosts—insufficient for16-hour handoff alone. Proposed:monitor/log bounded issues within confirmed allowance, then separate scoped audit/remediation/retest change order. No live plan/price/site change.\n\n## Non-speculative demand search / gaps\n\nNo primary RFP, award notice or consenting buyer interview was verified in this bounded second pass. Strict.gov/.eduaccessibility+RFP queries returned0results; broader.gov/ county searches returned provider_error. Neither failure nor0searchresults proves absent demand. Current #178 has other modernization/intake opportunities, not proof of a funded five-template accessibility pack. No budget/award, active deadline or reachable buyer fabricated. Next safe research: Maya's already-authorized source pipeline for an issuer-original notice with accessibility-specific paid scope, preserving existing opportunity ID. No contact or new bid by this task.\n\n## Small reversible experiment — proposal only\n\nFirst make an original synthetic5template evidence/ticket/retest sample and independently verify it; confirm qualified manual-review availability and cost before customer promises. After exact participant/channel/budget approval, Maya could show it to3eligible existingclients/agency partners. Pass:2request a specifically scoped$1499quote with budget/decision path AND independent costed delivery<= $975including fees/reserve; fail0requests or unfillable manual-review role;1request/mixedor3notrecruited inconclusive. Proposed cap$150cash+12human hours; no subscription, outreach or actual spending authorized. This is MI-002 secondary proposal; MI-001 remains leading experimental candidate. Requests indicate intent, not revenue.\n\n## Exact exceptions and recovery\n\nAccessibility.Works guessed path404; use verified three suppliers above, no price invented. Search provider intermittentlyfailed; zero-resultqueries not absence evidence. Initial delegated output claimed saved artifacts but files were absent and conceptual comparables unsupported; Brian discarded that output and independently created this sourced replacement. Research self-review is not independent QA. Artlist403/KDPcommunityLoading retained in rotation record; no access-control bypass. Raw fetches/timestamps in accessibility-sources.json and combined source-snapshots.json.\n",
+          "independent_supplier_groups_199": 3,
+          "methodology_boundary_nov10": {
+            "checked_at": "2026-11-10T01:08:51.441503-05:00",
+            "source_urls": [
+              "https://www.section508.gov/tools/tools-for-testing-ict/",
+              "https://www.section508.gov/test/ict-testing-baseline-portfolio/",
+              "https://www.section508.gov/test/trusted-tester/",
+              "https://www.dhs.gov/trusted-tester"
+            ],
+            "observation": "Free tools and testing components already exist; reproducible coverage and qualified manual judgment remain constraints",
+            "hypothesis": "A buyer may value versioned ticket/retest delivery, but this has not been validated and competitors already offer it",
+            "acceptance_gate_proposed": "Confirm client method/credential acceptance and gap-map federal process to agreed WCAG2.1AA scope; no certification/compliance claim based on automated or partial tests",
+            "actual_reviewer_accepted": null
+          }
+        },
+        "shared_integration_dependency": {
+          "current_authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/186",
+          "complete_hub_owner": "Cleo per current live body, supersedes historical Adam-owned Hub docs",
+          "research_owner": "Brian",
+          "adam": "Engineering/#175 only where assigned; not complete Hub implementation owner",
+          "status": "Existing transitional D1 used; integrated Hub and independent recipient-runtime access not verified; no infrastructure/security changes"
+        }
+      },
+      "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
+      "checked_at": "2026-11-11T01:09:26.864016-05:00",
+      "record_version": "2026-11-11-nightly-v9",
+      "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
+      "change_note": "Owner-directed accessibility second pass, costed manual-review/maintenance boundary and three supplier cards; score/outcome unchanged. No qualified manual reviewer or reachable client confirmed.",
+      "allocation_tag": "Adjacent",
+      "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
+      "operating_model_30d": {
+        "start": "2026-11-08",
+        "end": "2026-12-08",
+        "timezone": "America/New_York",
+        "authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+        "allocation_basis": "research and validation effort, not candidate count, bookings or revenue",
+        "target_percent": {
+          "Adjacent": 70,
+          "New Stream": 30
+        },
+        "illustrative_capacity_hours": 40,
+        "capacity_authorized_or_staffed": false,
+        "planned_hours": {
+          "MI-001": 10,
+          "MI-002": 16,
+          "MI-003": 2,
+          "MI-004": 4,
+          "new_stream_watchlist": 8
+        },
+        "actual_effort": {
+          "human_hours": null,
+          "agent_active_minutes": null,
+          "reason": "No reliable per-category pre-instrumentation timer; not reconstructed from timestamps or token counts. Start ledger at integration; future workers log actual active minutes separately from wall time/human hours."
+        },
+        "review_dates": [
+          "2026-11-15",
+          "2026-11-22",
+          "2026-11-29",
+          "2026-12-06",
+          "2026-12-08"
+        ]
+      },
+      "evidence_quality": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+      "hypothesis": "Title II evidence-and-remediation handoff pack for public-sector web vendors provides incremental value beyond native/free alternatives to an accessible buyer.",
+      "experiment_design_30d": {
+        "days_after_authorization": 10,
+        "cash_cap": 150,
+        "human_hours_cap": 12,
+        "technical": "Original five-template sample; qualified independent manual assessor verifies evidence, WCAG mapping and retest; cost <=$975 including modeled fee/refund reserve",
+        "pass_gate": "2/3 consenting eligible existing clients/agency partners request scoped $1499 quote with budget/decision path AND technical/cost gate passes",
+        "fail_gate": "Zero quote requests or qualified manual-review role cannot be filled within cap",
+        "owner": "Brian accountable research; Maya proposed consented recruitment after separate approval; independent domain QA not builder",
+        "decision_state": "PROPOSED_NOT_RUN",
+        "inconclusive": "One request, mixed signals, technical uncertainty or insufficient eligible recruitment by deadline; do not count as pass",
+        "approval_required": "Exact participants/channel/data/scope/budget; research model is not approval to build/list/outreach/spend",
+        "clock": "Preparation and buyer-test clock begins only after explicit authorization and capacity confirmation; day30 review still occurs if blocked"
+      },
+      "estimated_research_hours_30d": 16,
+      "decision_state": "DEEPEN_RESEARCH"
+    },
+    {
+      "candidate_id": "MI-003",
+      "category": "Digital training kit / AI workflow governance",
+      "title": "Role-specific AI usage and literacy starter pack for small EU agencies",
+      "demand_evidence_links": [
+        "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+        "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"
+      ],
+      "source_ids": [
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "confidence": "low commercial confidence; adoption and guidance, no verified paid demand",
+      "ranking": 4,
+      "score": 59,
+      "scores": {
+        "D": 2,
+        "C": 2,
+        "B": 4,
+        "F": 2,
+        "M": 3,
+        "T": 5,
+        "A": 4,
+        "L": 3
+      },
+      "stage": "RESEARCH_COMPLETE / RULE_RECHECK_REQUIRED",
+      "owner_proposal": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution",
+      "experiment": "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests",
+      "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
+      "outcome": "No certification/compliance guarantee; no buyer validation; current FAQ has legacy text and legal extract incomplete",
+      "dedupe": "Distinct from #189 staff LinkedIn content and #184 Etsy/KDP listing work; no generic marketplace listing recommendation.",
+      "research_details": {
+        "customer_segment": "Small EU agencies with at least 10 staff; no customer network established",
+        "customer_needs": [
+          "Role-specific safe AI usage, practical learning records and output verification"
+        ],
+        "industry_trends": [
+          {
+            "observation": "Eurostat AI adoption signal, not training spend; official consolidated legal text still needs recheck",
+            "evidence_urls": [
+              "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+              "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"
+            ],
+            "status": "indirect_signal_not_validated_demand"
+          },
+          {
+            "observation": "Commission FAQ describes context/risk-specific literacy support and says no certificate or prescribed governance structure is required. FAQ references amended Article4 but also retains proposal wording; linked legal text unextractable.",
+            "evidence_urls": [
+              "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+              "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+            ],
+            "checked_at": "2026-11-11T06:05:03.295Z",
+            "status": "official_guidance_not_independently_verified_operative_law"
+          }
+        ],
+        "competitor_analysis": [
+          {
+            "name": "Elements of AI",
+            "url": "https://www.elementsofai.com/",
+            "observation": "Free foundation course and linked workplace training; no comparable paid quote",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "Elements of AI (MinnaLearn / University of Helsinki)",
+            "url": "https://www.elementsofai.com/",
+            "checked_at": "2026-11-08T06:06:36.040Z",
+            "observation": "Free introductory AI foundations and Building AI; self-paced theory and exercises. Page links separate Get AI Ready workplace training.",
+            "public_price": "Foundation courses explicitly free. Linked workplace offer is separate and not established as free.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-004"
+          },
+          {
+            "name": "MinnaLearn Get AI Ready",
+            "url": "https://www.minnalearn.com/get-ai-ready",
+            "checked_at": "2026-11-08T06:06:51.279Z",
+            "observation": "4 x 15-minute AI onboarding with workplace policy embedding, certificate and completion records, manager facilitation templates, 10+ languages, hosted or LMS delivery.",
+            "public_price": "Standard minimum 50 seats; base yearly price absent in fetched pricing tool. One language included; extra languages €1,500 per language/year. Enterprise custom. Do not infer full quote or treat language add-on as total price.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-005"
+          },
+          {
+            "name": "MinnaLearn Get AI Ready",
+            "url": "https://www.minnalearn.com/pricing/",
+            "checked_at": "2026-11-08T06:07:02.411Z",
+            "observation": "4 x 15-minute AI onboarding with workplace policy embedding, certificate and completion records, manager facilitation templates, 10+ languages, hosted or LMS delivery.",
+            "public_price": "Standard minimum 50 seats; base yearly price absent in fetched pricing tool. One language included; extra languages €1,500 per language/year. Enterprise custom. Do not infer full quote or treat language add-on as total price.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-005"
+          },
+          {
+            "name": "GoodHabitz",
+            "url": "https://www.goodhabitz.com/solutions/ai-literacy-skills",
+            "checked_at": "2026-11-08T06:06:38.221Z",
+            "observation": "Employee AI awareness, practical exercises, output validation, responsible use, company policy training, progress tracking and LMS rollout; tailored learning paths.",
+            "public_price": "No numeric public price in reviewed page; demo/contact route. No quote requested.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-006"
+          },
+          {
+            "name": "DeepLearning.AI",
+            "url": "https://www.deeplearning.ai/courses/ai-for-everyone/",
+            "checked_at": "2026-11-08T19:47:00.966Z",
+            "observation": "AI terminology, project workflows, strategy and society; four weeks, 2–3 hours/week; Coursera enrollment",
+            "public_price": "Supplier FAQ displays $49 for 180 days certificate eligibility; currency unspecified, tax/region/current checkout unverified; do not normalize as USD quote",
+            "limitations": "No EU Article4 equivalence; no legal certification, customer interview or sale"
+          }
+        ],
+        "pricing_intelligence": {
+          "proposed_offer": {
+            "amount": 249,
+            "currency": "USD",
+            "unit": "team starter pack",
+            "status": "untested_hypothesis"
+          },
+          "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits"
+        },
+        "demand_indicators": {
+          "evidence_urls": [
+            "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+            "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"
+          ],
+          "buyer_intent_verified": false,
+          "revenue_verified": false,
+          "limitations": "low commercial confidence; adoption and guidance, no verified paid demand"
+        },
+        "recommended_products_services": [
+          "Original role-specific training kit, not mandatory certification"
+        ],
+        "customer_acquisition_strategy": {
+          "proposal": "Approved EU agency discovery via Maya; no reachable audience verified",
+          "owner_proposal": "Maya",
+          "execution_authorized": false
+        },
+        "recommended_next_steps": [
+          "Synthetic agency case and 5 consented managers; require 3 task completions and 2 specific price-qualified requests"
+        ],
+        "agent_fit": {
+          "research_owner": "Brian",
+          "suggested_execution_lead": "Maya",
+          "assignment_confirmed": false,
+          "rationale": "Brian research; independent EU-qualified reviewer for legal positioning; Maya owns any approved distribution"
+        },
+        "approval_reference": {
+          "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+          "status": "proposal_only_no_execution_approval_recorded",
+          "proposed_cash_cap_usd": 100,
+          "proposed_human_hours_cap": 8
+        },
+        "source_freshness": {
+          "source_access_window": "2026-11-06 America/New_York / 2026-11-07 UTC",
+          "metadata_structured_at": "2026-11-07T05:04:33.354764+00:00",
+          "new_source_research": false,
+          "business_case_analyzed_at": "2026-11-08T06:07:49.573454+00:00",
+          "comparable_access_window": "2026-11-08T06:06:10Z–2026-11-08T06:07:03Z; original problem surveys not refreshed",
+          "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
+          "nov11_record_review_at": "2026-11-11T01:09:26.864016-05:00",
+          "nov11_scope": "Commission FAQ refreshed; linked EUR-Lex legal text extraction failed. FAQ truncated and mixes amended/proposal language; operative rule not independently resolved."
+        },
+        "evidence_gaps": [
+          "No qualified buyer interviews, purchases or revenue",
+          "No verified distribution reach or realized margin",
+          "Only two independently fetched supplier groups: Elements of AI and Get AI Ready share MinnaLearn. Two direct workplace comparators plus one free foundational baseline. Third independent supplier target DataCamp blocked 403; Udemy also 403. Three direct independent suppliers not established; no claim of full coverage. Revenue/profit not publicly verified; supplier marketing is not independent demand proof.",
+          "Third independent supplier group added; broader literacy substitute only. EU legal positioning and qualified demand remain unresolved."
+        ],
+        "business_case": {
+          "version": "2026-11-08-weekly-business-case-v5",
+          "as_of": "2026-11-08T06:07:49.573454+00:00",
+          "status": "exploratory_sensitivity_not_predictive_forecast",
+          "strategic_fit": {
+            "ordinal_score_1_to_5": 2,
+            "priority_for_business_case_review": 4,
+            "rationale": "Original role-based artifacts could complement AI enablement, but EU buyer access and legal-review capability unverified; free alternatives constrain differentiation.",
+            "current_customer_count_or_reachable_audience": "unknown; no CRM/client identities accessed"
+          },
+          "agent_deliverability": {
+            "status": "CONDITIONAL_NOT_END_TO_END_PROVEN",
+            "repeatability": "productized scope with human-reviewed delivery; not autonomous passive-income product",
+            "delivery_chain": [
+              {
+                "step": "research and provenance",
+                "proposed_owner": "Brian",
+                "tools": "gh, public web_fetch/search, private research API client; available in Brian runtime"
+              },
+              {
+                "step": "original creation/engineering",
+                "proposed_owner": "Dax original assets with Maya domain copy",
+                "tools": "Git/local fixtures; editor/approved model access unverified in recipient runtime"
+              },
+              {
+                "step": "independent QA",
+                "proposed_owner": "Separate qualified finance/accessibility/EU-training/caption reviewer; Brian only if not builder and genuinely independent",
+                "tools": "Domain knowledge, manual test environment and consented fixtures; reviewer capacity not verified"
+              },
+              {
+                "step": "approved distribution",
+                "proposed_owner": "Maya; Jeffrey exact scope/channel/budget approval",
+                "tools": "Authorized client route/account connector not proven; no outreach this run"
+              },
+              {
+                "step": "approved technical publishing",
+                "proposed_owner": "Adam, Cleo release/ops as assigned",
+                "tools": "Git review and authorized runtime; no merge/deploy by this research task"
+              },
+              {
+                "step": "support and iteration",
+                "proposed_owner": "Adam technical, Maya customer follow-up subject to approval",
+                "tools": "Permissioned issue/support queue, client agreement unverified"
+              },
+              {
+                "step": "measurement/reporting",
+                "proposed_owner": "Brian research; Cleo dashboard; Adam shared API",
+                "tools": "Versioned D1/Git available from Brian; Cleo live binding/peer access unverified"
+              }
+            ],
+            "human_dependencies": "Official consolidated legal-text recheck unresolved; no mandatory certificate or compliance guarantee; independent EU-qualified interpretation before legal positioning.",
+            "availability_or_assignment_confirmed": false
+          },
+          "economics": {
+            "currency": "USD",
+            "all_values": "hypotheses not quotes, realized margin, approved spend or measured demand",
+            "mvp_effort": "2–5 person-days excluding specialist review",
+            "human_review_and_delivery_hours_per_sale": 2.5,
+            "human_rate_usd_per_hour": 50,
+            "price_per_unit_usd": 249,
+            "tools_api_production_hosting_per_unit_usd": 5,
+            "payment_platform_fee_rate_assumed": 0.03,
+            "refund_rate_assumed": 0.02,
+            "variable_cost_usd": 142.45,
+            "contribution_per_unit_usd": 106.55,
+            "contribution_margin": 0.4279,
+            "launch_labor_hours": 24,
+            "launch_cash_usd": 100,
+            "launch_cost_usd": 1300,
+            "fixed_maintenance_support_monthly_usd": 60,
+            "fixed_cost_assumption": "1h labor+$10 tools monthly; MI-0022h+$10. Uncontracted; no verified supplier cost. Tools include incremental agent compute; subscriptions could increase costs. Taxes/owner overhead excluded; scope overruns extra. Refund reserve removes revenue once, not twice.",
+            "model_formula": "units=floor(min(months*leads_per_month*conversion,months*32/hours_per_sale)); bookings=units*price; revenue=bookings-refund_reserve (completion assumed); contribution=bookings-units*(labor+tools+3%fees+2%refunds); net=contribution-monthly_fixed*months-launch_cost",
+            "forecast_expected_revenue": "NOT ESTIMABLE: no verified reachable audience, traffic, conversion or launch authorization",
+            "scenarios": [
+              {
+                "name": "conservative",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 0,
+                  "unvalidated_conversion": 0,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": null,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 180,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -1480
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 360,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -1660
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 720,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -2020
+                  }
+                ]
+              },
+              {
+                "name": "base",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 5,
+                  "unvalidated_conversion": 0.2,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": 28,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 15,
+                    "units": 3,
+                    "gross_bookings_usd": 747,
+                    "modeled_recognized_revenue_usd": 732.06,
+                    "refund_reserve_usd": 14.94,
+                    "payment_platform_fees_usd": 22.41,
+                    "human_delivery_labor_usd": 375,
+                    "tools_api_hosting_usd": 15,
+                    "gross_contribution_after_refunds_usd": 319.65,
+                    "fixed_support_maintenance_usd": 180,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -1160.35
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 30,
+                    "units": 6,
+                    "gross_bookings_usd": 1494,
+                    "modeled_recognized_revenue_usd": 1464.12,
+                    "refund_reserve_usd": 29.88,
+                    "payment_platform_fees_usd": 44.82,
+                    "human_delivery_labor_usd": 750,
+                    "tools_api_hosting_usd": 30,
+                    "gross_contribution_after_refunds_usd": 639.3,
+                    "fixed_support_maintenance_usd": 360,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -1020.7
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 60,
+                    "units": 12,
+                    "gross_bookings_usd": 2988,
+                    "modeled_recognized_revenue_usd": 2928.24,
+                    "refund_reserve_usd": 59.76,
+                    "payment_platform_fees_usd": 89.64,
+                    "human_delivery_labor_usd": 1500,
+                    "tools_api_hosting_usd": 60,
+                    "gross_contribution_after_refunds_usd": 1278.6,
+                    "fixed_support_maintenance_usd": 720,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -741.4
+                  }
+                ]
+              },
+              {
+                "name": "optimistic",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 10,
+                  "unvalidated_conversion": 0.2,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": 9,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 30,
+                    "units": 6,
+                    "gross_bookings_usd": 1494,
+                    "modeled_recognized_revenue_usd": 1464.12,
+                    "refund_reserve_usd": 29.88,
+                    "payment_platform_fees_usd": 44.82,
+                    "human_delivery_labor_usd": 750,
+                    "tools_api_hosting_usd": 30,
+                    "gross_contribution_after_refunds_usd": 639.3,
+                    "fixed_support_maintenance_usd": 180,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -840.7
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 60,
+                    "units": 12,
+                    "gross_bookings_usd": 2988,
+                    "modeled_recognized_revenue_usd": 2928.24,
+                    "refund_reserve_usd": 59.76,
+                    "payment_platform_fees_usd": 89.64,
+                    "human_delivery_labor_usd": 1500,
+                    "tools_api_hosting_usd": 60,
+                    "gross_contribution_after_refunds_usd": 1278.6,
+                    "fixed_support_maintenance_usd": 360,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": -381.4
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 120,
+                    "units": 24,
+                    "gross_bookings_usd": 5976,
+                    "modeled_recognized_revenue_usd": 5856.48,
+                    "refund_reserve_usd": 119.52,
+                    "payment_platform_fees_usd": 179.28,
+                    "human_delivery_labor_usd": 3000,
+                    "tools_api_hosting_usd": 120,
+                    "gross_contribution_after_refunds_usd": 2557.2,
+                    "fixed_support_maintenance_usd": 720,
+                    "launch_cost_usd": 1300,
+                    "net_after_launch_and_maintenance_usd": 537.2
+                  }
+                ]
+              }
+            ],
+            "sensitivity": [
+              "Reachable qualified leads and conversion: entirely assumed; zero qualified leads yields zero bookings.",
+              "Human delivery hours/rate: double labor subtracts 125.0USD per unit; specialist premiums may erase modeled contribution.",
+              "Fixed support and one-off build amortization: low volume can make a nominally positive unit margin unprofitable."
+            ],
+            "actuals": {
+              "experiments_run": 0,
+              "units_sold_verified": 0,
+              "revenue_verified": false,
+              "bookings_or_sales_analytics": "not measured; no sales by these experiments",
+              "forecast_vs_actual": "not applicable; no authorized launch/date; compare only after actuals recorded"
+            },
+            "acquisition_adjusted_30day_sensitivity": [
+              {
+                "name": "conservative",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 0,
+                "qualified_leads_assumed": 0,
+                "conversion_assumed": 0,
+                "delivery_hours_multiplier": 1.5,
+                "price_usd_assumed": 249,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 4,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 200,
+                "unit_delivery_contribution_usd": 44.05,
+                "gross_bookings_usd": 0,
+                "gross_delivery_contribution_usd": 0,
+                "net_after_acquisition_support_and_oneoff_build_usd": -1560,
+                "demand_validated": false
+              },
+              {
+                "name": "base",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 1,
+                "qualified_leads_assumed": 5,
+                "conversion_assumed": 0.2,
+                "delivery_hours_multiplier": 1,
+                "price_usd_assumed": 249,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 3,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 150,
+                "unit_delivery_contribution_usd": 106.55,
+                "gross_bookings_usd": 249,
+                "gross_delivery_contribution_usd": 106.55,
+                "net_after_acquisition_support_and_oneoff_build_usd": -1403.45,
+                "demand_validated": false
+              },
+              {
+                "name": "optimistic",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 2,
+                "qualified_leads_assumed": 10,
+                "conversion_assumed": 0.2,
+                "delivery_hours_multiplier": 0.75,
+                "price_usd_assumed": 249,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 2,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 100,
+                "unit_delivery_contribution_usd": 137.8,
+                "gross_bookings_usd": 498,
+                "gross_delivery_contribution_usd": 275.6,
+                "net_after_acquisition_support_and_oneoff_build_usd": -1184.4,
+                "demand_validated": false
+              }
+            ]
+          },
+          "next_lowest_cost_test": "After rule and independent content-review gates, approved five-manager test:3 complete use-inventory in15min and2 request scoped$249 pilot. Zero requests or free substitutes fully suffice:park; mixed/incomplete:inconclusive. Cap:$100/8h, no spend.",
+          "examples_that_work": [
+            {
+              "example_id": "EX-004",
+              "candidate_id": "MI-003",
+              "supplier": "Elements of AI (MinnaLearn / University of Helsinki)",
+              "sources": [
+                {
+                  "source_id": "elements",
+                  "url": "https://www.elementsofai.com/",
+                  "final_url": "https://www.elementsofai.com/",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:36.040Z",
+                  "timezone": "UTC",
+                  "truncated": false,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                }
+              ],
+              "comparability": "Free baseline/adjacent substitute, not a fully direct paid-kit comparable.",
+              "public_scope": "Free introductory AI foundations and Building AI; self-paced theory and exercises. Page links separate Get AI Ready workplace training.",
+              "public_price": "Foundation courses explicitly free. Linked workplace offer is separate and not established as free.",
+              "business_model": "Free education/top-of-funnel to workplace training; institutional collaboration.",
+              "observed_channel": "Public self-service course; linked company training/demo.",
+              "displayed_outcomes_users_reviews": "Page says over 2 million students signed up, graduates from over 170 countries, and approximately 40% women participants. These are supplier-reported reach, not paid conversion or small-agency outcomes.",
+              "revenue": {
+                "status": "private / not publicly verifiable from reviewed primary pages",
+                "amount": null,
+                "success_verified": false
+              },
+              "limitations": "Adjacent foundational baseline, not itself a role-specific EU-agency kit. Same MinnaLearn supplier ecosystem as EX-005; must not count as a third independent supplier.",
+              "lawful_original_adaptation": "Link users to free official course; create wholly original agency role scenarios and output-verification exercises. Do not repackage course lessons or imply affiliation."
+            },
+            {
+              "example_id": "EX-005",
+              "candidate_id": "MI-003",
+              "supplier": "MinnaLearn Get AI Ready",
+              "sources": [
+                {
+                  "source_id": "minna",
+                  "url": "https://www.minnalearn.com/get-ai-ready",
+                  "final_url": "https://www.minnalearn.com/get-ai-ready/",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:51.279Z",
+                  "timezone": "UTC",
+                  "truncated": false,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                },
+                {
+                  "source_id": "minnaprice",
+                  "url": "https://www.minnalearn.com/pricing/",
+                  "final_url": "https://www.minnalearn.com/pricing/",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:07:02.411Z",
+                  "timezone": "UTC",
+                  "truncated": false,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                }
+              ],
+              "comparability": "Direct workplace EU-AI-literacy workflow comparator; package/seat scale differs.",
+              "public_scope": "4 x 15-minute AI onboarding with workplace policy embedding, certificate and completion records, manager facilitation templates, 10+ languages, hosted or LMS delivery.",
+              "public_price": "Standard minimum 50 seats; base yearly price absent in fetched pricing tool. One language included; extra languages €1,500 per language/year. Enterprise custom. Do not infer full quote or treat language add-on as total price.",
+              "business_model": "Seat-based recurring organization training subscription; enterprise tier and individual license link.",
+              "observed_channel": "Website pricing tool/demo; hosted platform and SCORM/xAPI/LMS delivery.",
+              "displayed_outcomes_users_reviews": "Page claims 80%+ completion and 2.1m+ learners training legacy. Learner total may include broader legacy courses and overlap EX-004; no paid Get AI Ready customer count independently verified.",
+              "revenue": {
+                "status": "private / not publicly verifiable from reviewed primary pages",
+                "amount": null,
+                "success_verified": false
+              },
+              "limitations": "50-seat minimum mismatches small 10+ staff agencies. Tool-agnostic/organization-wide rather than demonstrated role-specific agency kits. Article 4 alignment/certification language is vendor positioning, not legal verification.",
+              "lawful_original_adaptation": "Create original agency roles, locally tailored policy checklist, exercises and learning record. Independently review any EU legal positioning; no mandatory-certification or compliance guarantee."
+            },
+            {
+              "example_id": "EX-006",
+              "candidate_id": "MI-003",
+              "supplier": "GoodHabitz",
+              "sources": [
+                {
+                  "source_id": "goodhabitz",
+                  "url": "https://www.goodhabitz.com/solutions/ai-literacy-skills",
+                  "final_url": "https://www.goodhabitz.com/solutions/ai-literacy-skills",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:38.221Z",
+                  "timezone": "UTC",
+                  "truncated": false,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                }
+              ],
+              "comparability": "Direct workplace practical-literacy comparator; agency-role specificity unverified.",
+              "public_scope": "Employee AI awareness, practical exercises, output validation, responsible use, company policy training, progress tracking and LMS rollout; tailored learning paths.",
+              "public_price": "No numeric public price in reviewed page; demo/contact route. No quote requested.",
+              "business_model": "Commercial organization learning platform/library and tailored training; subscription term not displayed on page.",
+              "observed_channel": "Direct sales demo, free-trial links and existing-LMS delivery.",
+              "displayed_outcomes_users_reviews": "Supplier says trusted by 2,600+ organizations (all solutions; not AI-specific). Named Zumtobel example claims 1,300 hours of AI learning in two months and quotes Digital Innovation Manager David Jäger. Completion time does not prove competence, compliance or paid demand for this niche.",
+              "revenue": {
+                "status": "private / not publicly verifiable from reviewed primary pages",
+                "amount": null,
+                "success_verified": false
+              },
+              "limitations": "Broad workforce solution, not specifically small EU agencies or standalone $249 kit; no public quote, independent results or niche conversion data. Related-resource dates are not this product page's publication date.",
+              "lawful_original_adaptation": "Build original short role-specific dilemmas and assessment logs using synthetic agency situations. Do not copy modules or represent supplier compliance claims as law."
+            },
+            {
+              "example_id": "EX-013",
+              "candidate_id": "MI-003",
+              "supplier": "DeepLearning.AI",
+              "sources": [
+                {
+                  "url": "https://www.deeplearning.ai/courses/ai-for-everyone/",
+                  "final_url": "https://www.deeplearning.ai/courses/ai-for-everyone",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T19:47:00.966Z",
+                  "truncated": false,
+                  "publication_date": "not shown; potentially legacy FAQ"
+                }
+              ],
+              "comparability": "Independent nontechnical AI-literacy substitute, NOT EU role-specific compliance advice",
+              "public_scope": "AI terminology, project workflows, strategy and society; four weeks, 2–3 hours/week; Coursera enrollment",
+              "public_price": "Supplier FAQ displays $49 for 180 days certificate eligibility; currency unspecified, tax/region/current checkout unverified; do not normalize as USD quote",
+              "business_model": "Course/certificate via Coursera",
+              "displayed_outcomes_users_reviews": "No paid learner volume or audited outcome verified",
+              "revenue": {
+                "amount": null,
+                "success_verified": false,
+                "status": "unknown"
+              },
+              "limitations": "No EU Article4 equivalence; no legal certification, customer interview or sale",
+              "lawful_original_adaptation": "Original role-specific use-inventory and facilitator exercise, never copy slides/course content"
+            }
+          ],
+          "evidence_gap": "Only two independently fetched supplier groups: Elements of AI and Get AI Ready share MinnaLearn. Two direct workplace comparators plus one free foundational baseline. Third independent supplier target DataCamp blocked 403; Udemy also 403. Three direct independent suppliers not established; no claim of full coverage. Revenue/profit not publicly verified; supplier marketing is not independent demand proof.",
+          "approval_references": [
+            {
+              "url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6709964928",
+              "scope": "authorize analysis/backfill only"
+            },
+            {
+              "url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6709972696",
+              "scope": "comparable evidence backfill; no execution approval"
+            }
+          ],
+          "independent_supplier_groups_199": 3
+        },
+        "shared_integration_dependency": {
+          "current_authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/186",
+          "complete_hub_owner": "Cleo per current live body, supersedes historical Adam-owned Hub docs",
+          "research_owner": "Brian",
+          "adam": "Engineering/#175 only where assigned; not complete Hub implementation owner",
+          "status": "Existing transitional D1 used; integrated Hub and independent recipient-runtime access not verified; no infrastructure/security changes"
+        }
+      },
+      "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
+      "checked_at": "2026-11-11T01:09:26.864016-05:00",
+      "record_version": "2026-11-11-nightly-v9",
+      "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
+      "allocation_tag": "Adjacent",
+      "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
+      "operating_model_30d": {
+        "start": "2026-11-08",
+        "end": "2026-12-08",
+        "timezone": "America/New_York",
+        "authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+        "allocation_basis": "research and validation effort, not candidate count, bookings or revenue",
+        "target_percent": {
+          "Adjacent": 70,
+          "New Stream": 30
+        },
+        "illustrative_capacity_hours": 40,
+        "capacity_authorized_or_staffed": false,
+        "planned_hours": {
+          "MI-001": 10,
+          "MI-002": 16,
+          "MI-003": 2,
+          "MI-004": 4,
+          "new_stream_watchlist": 8
+        },
+        "actual_effort": {
+          "human_hours": null,
+          "agent_active_minutes": null,
+          "reason": "No reliable per-category pre-instrumentation timer; not reconstructed from timestamps or token counts. Start ledger at integration; future workers log actual active minutes separately from wall time/human hours."
+        },
+        "review_dates": [
+          "2026-11-15",
+          "2026-11-22",
+          "2026-11-29",
+          "2026-12-06",
+          "2026-12-08"
+        ]
+      },
+      "evidence_quality": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+      "hypothesis": "Role-specific AI usage and literacy starter pack for small EU agencies provides incremental value beyond native/free alternatives to an accessible buyer.",
+      "experiment_design_30d": {
+        "days_after_authorization": 7,
+        "cash_cap": 100,
+        "human_hours_cap": 8,
+        "technical": "Resolve current EU-rule positioning and independent subject review before promises; original synthetic agency use-inventory, no compliance certification",
+        "pass_gate": "3/5 eligible managers complete inventory in <=15 minutes AND 2/5 request scoped $249 pilot",
+        "fail_gate": "Zero requests or >=3/5 say free alternatives fully solve task",
+        "owner": "Brian accountable research; Maya proposed consented recruitment after separate approval; independent domain QA not builder",
+        "decision_state": "PROPOSED_NOT_RUN",
+        "inconclusive": "One request, mixed signals, technical uncertainty or insufficient eligible recruitment by deadline; do not count as pass",
+        "approval_required": "Exact participants/channel/data/scope/budget; research model is not approval to build/list/outreach/spend",
+        "clock": "Preparation and buyer-test clock begins only after explicit authorization and capacity confirmation; day30 review still occurs if blocked"
+      },
+      "estimated_research_hours_30d": 2,
+      "decision_state": "HOLD_RULE_REVIEW",
+      "change_note": "Official FAQ fresh-check supports no mandatory certificate positioning. Legal-text access remains unresolved, so HOLD_RULE_REVIEW and score59 unchanged."
+    },
+    {
+      "candidate_id": "MI-004",
+      "category": "Video / creative services",
+      "title": "English B2B webinar caption-QA and evidence handoff",
+      "buyer_problem_channel_key": "B2B webinar producers | terminology/speaker/timing caption handoff | agency referral, untested",
+      "demand_evidence_links": [
+        "https://wistia.com/blog/video-marketing-statistics"
+      ],
+      "source_ids": [
+        "N1",
+        "N2"
+      ],
+      "confidence": "low; broad production/adoption evidence, no niche buying intent",
+      "ranking": 2,
+      "score": 60,
+      "scores": {
+        "D": 2,
+        "C": 2,
+        "B": 4,
+        "F": 2,
+        "M": 3,
+        "T": 5,
+        "A": 4,
+        "L": 4
+      },
+      "stage": "EXPLORATORY / EXPERIMENT_NOT_RUN",
+      "owner_proposal": "Brian research accountable; Maya any approved recruitment; separate caption/accessibility reviewer; delivery unassigned",
+      "experiment": "One original synthetic 10-minute webinar caption handoff, then 5 consented producer interviews only after exact recruitment approval",
+      "date_checked": "2026-11-11 America/New_York; scope-specific source checks; earlier demand/outcome dates retained",
+      "outcome": "No interviews, buyers, publication, revenue or independent signoff",
+      "dedupe": "W03 video branch investigated, not a new generic music pack. Distinct from MI-002 public-sector web-template QA by buyer/job/channel; route to existing MI-002 if an agency needs that same Title II engagement. Adjacent #182 showcase is not a service launch; #189 staff posts are not deliverables for this offer.",
+      "research_details": {
+        "customer_segment": "US B2B software webinar teams or their video agencies; hypothesis",
+        "customer_needs": [
+          "Terminology, speaker, timing and caption change-control handoff"
+        ],
+        "industry_trends": [
+          {
+            "observation": "Wistia platform/video activity signal; no niche buying intent",
+            "evidence_urls": [
+              "https://wistia.com/blog/video-marketing-statistics"
+            ],
+            "status": "indirect_signal_not_validated_demand"
+          }
+        ],
+        "competitor_analysis": [
+          {
+            "name": "Wistia captions",
+            "url": "https://support.wistia.com/en/articles/8274062-transcripts-and-captions",
+            "observation": "Free machine captions/editor; professional service displayed as 1000 credits/minute, dollar conversion unverified",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "In-house review",
+            "url": null,
+            "observation": "Existing substitute; need documented unmet QA pain",
+            "checked_date": "2026-11-07 UTC (original source access)"
+          },
+          {
+            "name": "Wistia",
+            "url": "https://support.wistia.com/en/articles/8274062-transcripts-and-captions",
+            "checked_at": "2026-11-08T06:06:40.583Z",
+            "observation": "Computer-generated captions/transcripts, glossary, caption/text editor, timing and line-break corrections, SRT/VTT upload/download, optional human-reviewed service.",
+            "public_price": "Machine captions included free in current Wistia plans (underlying hosting plan separate); professional 1,000 credits/minute within 4 business days; rush 1,600 credits/minute within 1 business day. Dollar conversion not verified.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-007"
+          },
+          {
+            "name": "Rev",
+            "url": "https://www.rev.com/services/closed-captions",
+            "checked_at": "2026-11-08T06:06:52.024Z",
+            "observation": "English/Spanish human-reviewed captions; timing/word/speaker-name editing; collaboration editor; major caption formats; platform integrations.",
+            "public_price": "Human captions starting at $1.99/minute; automated tier displayed $0.25/minute. Dollar denomination displayed but ISO currency/taxes not resolved in extract; checkout not tested. No normalization to proposed $149/30-minute package.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-008"
+          },
+          {
+            "name": "3Play Media",
+            "url": "https://www.3playmedia.com/services/captioning/",
+            "checked_at": "2026-11-08T06:06:45.978Z",
+            "observation": "Human professional captioning, caption editor, full-review option, placement checking, ASR with optional human escalation, API/FTP/S3 and 30+ platform integrations.",
+            "public_price": "No numeric public price displayed on reviewed page; connect-with-team route. No quote requested.",
+            "market_period": "English-language public supplier page as checked; supplier-reported outcomes not independently validated; exact geography/measurement cohort may be unknown",
+            "business_case_example_id": "EX-009"
+          }
+        ],
+        "pricing_intelligence": {
+          "proposed_offer": {
+            "amount": 149,
+            "currency": "USD",
+            "unit": "up-to-30-minute English clip",
+            "status": "untested_hypothesis"
+          },
+          "competitor_price_comparability": "unverified; do not normalize unknown currencies or credits"
+        },
+        "demand_indicators": {
+          "evidence_urls": [
+            "https://wistia.com/blog/video-marketing-statistics"
+          ],
+          "buyer_intent_verified": false,
+          "revenue_verified": false,
+          "limitations": "low; broad production/adoption evidence, no niche buying intent"
+        },
+        "recommended_products_services": [
+          "Caption QA/evidence handoff service; no publishing, translation or compliance guarantee"
+        ],
+        "customer_acquisition_strategy": {
+          "proposal": "Agency referrals via Maya after approval; not an existing sales channel",
+          "owner_proposal": "Maya",
+          "execution_authorized": false
+        },
+        "recommended_next_steps": [
+          "One original synthetic 10-minute webinar caption handoff, then 5 consented producer interviews only after exact recruitment approval"
+        ],
+        "agent_fit": {
+          "research_owner": "Brian",
+          "suggested_execution_lead": "Brian",
+          "assignment_confirmed": false,
+          "rationale": "Brian research accountable; Maya any approved recruitment; separate caption/accessibility reviewer; delivery unassigned"
+        },
+        "approval_reference": {
+          "canonical_issue": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188",
+          "status": "proposal_only_no_execution_approval_recorded",
+          "proposed_cash_cap_usd": 50,
+          "proposed_human_hours_cap": 8
+        },
+        "source_freshness": {
+          "source_access_window": "2026-11-06 America/New_York / 2026-11-07 UTC",
+          "metadata_structured_at": "2026-11-07T05:04:33.354764+00:00",
+          "new_source_research": false,
+          "business_case_analyzed_at": "2026-11-08T06:07:49.573454+00:00",
+          "comparable_access_window": "2026-11-08T06:06:10Z–2026-11-08T06:07:03Z; original problem surveys not refreshed",
+          "nov10_record_review_at": "2026-11-10T01:08:51.441503-05:00",
+          "nov11_record_review_at": "2026-11-11T01:09:26.864016-05:00",
+          "nov11_scope": "Record/outcome carry-forward only; no new source research for this candidate."
+        },
+        "evidence_gaps": [
+          "No qualified buyer interviews, purchases or revenue",
+          "No verified distribution reach or realized margin",
+          "All directly address captioning/review, but none demonstrates identical small-B2B-webinar evidence-handoff package. Revenue/profit not publicly verified; supplier marketing is not independent demand proof."
+        ],
+        "business_case": {
+          "version": "2026-11-08-weekly-business-case-v5",
+          "as_of": "2026-11-08T06:07:49.573454+00:00",
+          "status": "exploratory_sensitivity_not_predictive_forecast",
+          "strategic_fit": {
+            "ordinal_score_1_to_5": 3,
+            "priority_for_business_case_review": 3,
+            "rationale": "Creative Studio adjacency without a verified publishing or client-distribution pipeline. Test terminology/change control, not commodity transcription.",
+            "current_customer_count_or_reachable_audience": "unknown; no CRM/client identities accessed"
+          },
+          "agent_deliverability": {
+            "status": "CONDITIONAL_NOT_END_TO_END_PROVEN",
+            "repeatability": "productized scope with human-reviewed delivery; not autonomous passive-income product",
+            "delivery_chain": [
+              {
+                "step": "research and provenance",
+                "proposed_owner": "Brian",
+                "tools": "gh, public web_fetch/search, private research API client; available in Brian runtime"
+              },
+              {
+                "step": "original creation/engineering",
+                "proposed_owner": "Dax original assets with Maya domain copy",
+                "tools": "Git/local fixtures; editor/approved model access unverified in recipient runtime"
+              },
+              {
+                "step": "independent QA",
+                "proposed_owner": "Separate qualified finance/accessibility/EU-training/caption reviewer; Brian only if not builder and genuinely independent",
+                "tools": "Domain knowledge, manual test environment and consented fixtures; reviewer capacity not verified"
+              },
+              {
+                "step": "approved distribution",
+                "proposed_owner": "Maya; Jeffrey exact scope/channel/budget approval",
+                "tools": "Authorized client route/account connector not proven; no outreach this run"
+              },
+              {
+                "step": "approved technical publishing",
+                "proposed_owner": "Adam, Cleo release/ops as assigned",
+                "tools": "Git review and authorized runtime; no merge/deploy by this research task"
+              },
+              {
+                "step": "support and iteration",
+                "proposed_owner": "Adam technical, Maya customer follow-up subject to approval",
+                "tools": "Permissioned issue/support queue, client agreement unverified"
+              },
+              {
+                "step": "measurement/reporting",
+                "proposed_owner": "Brian research; Cleo dashboard; Adam shared API",
+                "tools": "Versioned D1/Git available from Brian; Cleo live binding/peer access unverified"
+              }
+            ],
+            "human_dependencies": "Authorized original media, retention permissions, full human playback and specialist caption quality; no voice cloning, translation, publication or accessibility certification.",
+            "availability_or_assignment_confirmed": false
+          },
+          "economics": {
+            "currency": "USD",
+            "all_values": "hypotheses not quotes, realized margin, approved spend or measured demand",
+            "mvp_effort": "2–5 person-days",
+            "human_review_and_delivery_hours_per_sale": 1.5,
+            "human_rate_usd_per_hour": 50,
+            "price_per_unit_usd": 149,
+            "tools_api_production_hosting_per_unit_usd": 10,
+            "payment_platform_fee_rate_assumed": 0.03,
+            "refund_rate_assumed": 0.02,
+            "variable_cost_usd": 92.45,
+            "contribution_per_unit_usd": 56.55,
+            "contribution_margin": 0.3795,
+            "launch_labor_hours": 24,
+            "launch_cash_usd": 50,
+            "launch_cost_usd": 1250,
+            "fixed_maintenance_support_monthly_usd": 60,
+            "fixed_cost_assumption": "1h labor+$10 tools monthly; MI-0022h+$10. Uncontracted; no verified supplier cost. Tools include incremental agent compute; subscriptions could increase costs. Taxes/owner overhead excluded; scope overruns extra. Refund reserve removes revenue once, not twice.",
+            "model_formula": "units=floor(min(months*leads_per_month*conversion,months*32/hours_per_sale)); bookings=units*price; revenue=bookings-refund_reserve (completion assumed); contribution=bookings-units*(labor+tools+3%fees+2%refunds); net=contribution-monthly_fixed*months-launch_cost",
+            "forecast_expected_revenue": "NOT ESTIMABLE: no verified reachable audience, traffic, conversion or launch authorization",
+            "scenarios": [
+              {
+                "name": "conservative",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 0,
+                  "unvalidated_conversion": 0,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": null,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 180,
+                    "launch_cost_usd": 1250,
+                    "net_after_launch_and_maintenance_usd": -1430
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 360,
+                    "launch_cost_usd": 1250,
+                    "net_after_launch_and_maintenance_usd": -1610
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 0,
+                    "units": 0,
+                    "gross_bookings_usd": 0,
+                    "modeled_recognized_revenue_usd": 0,
+                    "refund_reserve_usd": 0,
+                    "payment_platform_fees_usd": 0,
+                    "human_delivery_labor_usd": 0,
+                    "tools_api_hosting_usd": 0,
+                    "gross_contribution_after_refunds_usd": 0,
+                    "fixed_support_maintenance_usd": 720,
+                    "launch_cost_usd": 1250,
+                    "net_after_launch_and_maintenance_usd": -1970
+                  }
+                ]
+              },
+              {
+                "name": "base",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 5,
+                  "unvalidated_conversion": 0.2,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": null,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 15,
+                    "units": 3,
+                    "gross_bookings_usd": 447,
+                    "modeled_recognized_revenue_usd": 438.06,
+                    "refund_reserve_usd": 8.94,
+                    "payment_platform_fees_usd": 13.41,
+                    "human_delivery_labor_usd": 225,
+                    "tools_api_hosting_usd": 30,
+                    "gross_contribution_after_refunds_usd": 169.65,
+                    "fixed_support_maintenance_usd": 180,
+                    "launch_cost_usd": 1250,
+                    "net_after_launch_and_maintenance_usd": -1260.35
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 30,
+                    "units": 6,
+                    "gross_bookings_usd": 894,
+                    "modeled_recognized_revenue_usd": 876.12,
+                    "refund_reserve_usd": 17.88,
+                    "payment_platform_fees_usd": 26.82,
+                    "human_delivery_labor_usd": 450,
+                    "tools_api_hosting_usd": 60,
+                    "gross_contribution_after_refunds_usd": 339.3,
+                    "fixed_support_maintenance_usd": 360,
+                    "launch_cost_usd": 1250,
+                    "net_after_launch_and_maintenance_usd": -1270.7
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 60,
+                    "units": 12,
+                    "gross_bookings_usd": 1788,
+                    "modeled_recognized_revenue_usd": 1752.24,
+                    "refund_reserve_usd": 35.76,
+                    "payment_platform_fees_usd": 53.64,
+                    "human_delivery_labor_usd": 900,
+                    "tools_api_hosting_usd": 120,
+                    "gross_contribution_after_refunds_usd": 678.6,
+                    "fixed_support_maintenance_usd": 720,
+                    "launch_cost_usd": 1250,
+                    "net_after_launch_and_maintenance_usd": -1291.4
+                  }
+                ]
+              },
+              {
+                "name": "optimistic",
+                "inputs": {
+                  "hypothetical_qualified_leads_per_month": 10,
+                  "unvalidated_conversion": 0.2,
+                  "verified_reachable_audience": null,
+                  "verified_traffic": null,
+                  "verified_leads": null,
+                  "capacity_human_hours_per_month": 32,
+                  "capacity_confirmed": false
+                },
+                "break_even_month_after_launch": 24,
+                "outputs": [
+                  {
+                    "months_after_hypothetical_authorized_launch": 3,
+                    "qualified_leads": 30,
+                    "units": 6,
+                    "gross_bookings_usd": 894,
+                    "modeled_recognized_revenue_usd": 876.12,
+                    "refund_reserve_usd": 17.88,
+                    "payment_platform_fees_usd": 26.82,
+                    "human_delivery_labor_usd": 450,
+                    "tools_api_hosting_usd": 60,
+                    "gross_contribution_after_refunds_usd": 339.3,
+                    "fixed_support_maintenance_usd": 180,
+                    "launch_cost_usd": 1250,
+                    "net_after_launch_and_maintenance_usd": -1090.7
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 6,
+                    "qualified_leads": 60,
+                    "units": 12,
+                    "gross_bookings_usd": 1788,
+                    "modeled_recognized_revenue_usd": 1752.24,
+                    "refund_reserve_usd": 35.76,
+                    "payment_platform_fees_usd": 53.64,
+                    "human_delivery_labor_usd": 900,
+                    "tools_api_hosting_usd": 120,
+                    "gross_contribution_after_refunds_usd": 678.6,
+                    "fixed_support_maintenance_usd": 360,
+                    "launch_cost_usd": 1250,
+                    "net_after_launch_and_maintenance_usd": -931.4
+                  },
+                  {
+                    "months_after_hypothetical_authorized_launch": 12,
+                    "qualified_leads": 120,
+                    "units": 24,
+                    "gross_bookings_usd": 3576,
+                    "modeled_recognized_revenue_usd": 3504.48,
+                    "refund_reserve_usd": 71.52,
+                    "payment_platform_fees_usd": 107.28,
+                    "human_delivery_labor_usd": 1800,
+                    "tools_api_hosting_usd": 240,
+                    "gross_contribution_after_refunds_usd": 1357.2,
+                    "fixed_support_maintenance_usd": 720,
+                    "launch_cost_usd": 1250,
+                    "net_after_launch_and_maintenance_usd": -612.8
+                  }
+                ]
+              }
+            ],
+            "sensitivity": [
+              "Reachable qualified leads and conversion: entirely assumed; zero qualified leads yields zero bookings.",
+              "Human delivery hours/rate: double labor subtracts 75.0USD per unit; specialist premiums may erase modeled contribution.",
+              "Fixed support and one-off build amortization: low volume can make a nominally positive unit margin unprofitable."
+            ],
+            "actuals": {
+              "experiments_run": 0,
+              "units_sold_verified": 0,
+              "revenue_verified": false,
+              "bookings_or_sales_analytics": "not measured; no sales by these experiments",
+              "forecast_vs_actual": "not applicable; no authorized launch/date; compare only after actuals recorded"
+            },
+            "acquisition_adjusted_30day_sensitivity": [
+              {
+                "name": "conservative",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 0,
+                "qualified_leads_assumed": 0,
+                "conversion_assumed": 0,
+                "delivery_hours_multiplier": 1.5,
+                "price_usd_assumed": 149,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 4,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 200,
+                "unit_delivery_contribution_usd": 19.05,
+                "gross_bookings_usd": 0,
+                "gross_delivery_contribution_usd": 0,
+                "net_after_acquisition_support_and_oneoff_build_usd": -1510,
+                "demand_validated": false
+              },
+              {
+                "name": "base",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 1,
+                "qualified_leads_assumed": 5,
+                "conversion_assumed": 0.2,
+                "delivery_hours_multiplier": 1,
+                "price_usd_assumed": 149,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 3,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 150,
+                "unit_delivery_contribution_usd": 56.55,
+                "gross_bookings_usd": 149,
+                "gross_delivery_contribution_usd": 56.55,
+                "net_after_acquisition_support_and_oneoff_build_usd": -1403.45,
+                "demand_validated": false
+              },
+              {
+                "name": "optimistic",
+                "period": "one hypothetical post-authorization 30-day launch month",
+                "units_assumed": 2,
+                "qualified_leads_assumed": 10,
+                "conversion_assumed": 0.2,
+                "delivery_hours_multiplier": 0.75,
+                "price_usd_assumed": 149,
+                "human_rate_usd_assumed": 50,
+                "acquisition_human_hours_assumed": 2,
+                "acquisition_cash_usd_assumed": 0,
+                "acquisition_economic_cost_usd": 100,
+                "unit_delivery_contribution_usd": 75.3,
+                "gross_bookings_usd": 298,
+                "gross_delivery_contribution_usd": 150.6,
+                "net_after_acquisition_support_and_oneoff_build_usd": -1259.4,
+                "demand_validated": false
+              }
+            ]
+          },
+          "next_lowest_cost_test": "Original synthetic10min example independently checked; after approval five producer sessions,3 current recurring pain reports AND2 scoped$149 requests pass;0 requests or3 native-tool sufficiency fails; mixed/recruitment shortfall inconclusive. Cap:$50/8h, no spend.",
+          "examples_that_work": [
+            {
+              "example_id": "EX-007",
+              "candidate_id": "MI-004",
+              "supplier": "Wistia",
+              "sources": [
+                {
+                  "source_id": "wistia",
+                  "url": "https://support.wistia.com/en/articles/8274062-transcripts-and-captions",
+                  "final_url": "https://support.wistia.com/en/articles/8274062-transcripts-and-captions",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:40.583Z",
+                  "timezone": "UTC",
+                  "truncated": true,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                }
+              ],
+              "comparability": "Direct native substitute for caption QA tasks; evidence handoff service not demonstrated.",
+              "public_scope": "Computer-generated captions/transcripts, glossary, caption/text editor, timing and line-break corrections, SRT/VTT upload/download, optional human-reviewed service.",
+              "public_price": "Machine captions included free in current Wistia plans (underlying hosting plan separate); professional 1,000 credits/minute within 4 business days; rush 1,600 credits/minute within 1 business day. Dollar conversion not verified.",
+              "business_model": "Video-platform subscription with usage-credit professional-caption add-on.",
+              "observed_channel": "Existing-account self-service ordering and help-center workflow.",
+              "displayed_outcomes_users_reviews": "Supplier table states automated 95% accuracy and professional human-reviewed 99%; these are product claims, not observed independent test scores. No niche customer/user/review outcome displayed in extract.",
+              "revenue": {
+                "status": "private / not publicly verifiable from reviewed primary pages",
+                "amount": null,
+                "success_verified": false
+              },
+              "limitations": "Extract truncated; relevant order/editor sections retained. Native glossary/timing/editor features substantially overlap proposed QA, so differentiation cannot be generic corrections.",
+              "lawful_original_adaptation": "Create original synthetic terminology/speaker/timing defect fixture, change log and export checklist. Treat native editor as baseline; use only licensed media."
+            },
+            {
+              "example_id": "EX-008",
+              "candidate_id": "MI-004",
+              "supplier": "Rev",
+              "sources": [
+                {
+                  "source_id": "rev2",
+                  "url": "https://www.rev.com/services/closed-captions",
+                  "final_url": "https://www.rev.com/services/closed-captions",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:52.024Z",
+                  "timezone": "UTC",
+                  "truncated": false,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                }
+              ],
+              "comparability": "Direct human captioning/QA substitute with public per-minute price.",
+              "public_scope": "English/Spanish human-reviewed captions; timing/word/speaker-name editing; collaboration editor; major caption formats; platform integrations.",
+              "public_price": "Human captions starting at $1.99/minute; automated tier displayed $0.25/minute. Dollar denomination displayed but ISO currency/taxes not resolved in extract; checkout not tested. No normalization to proposed $149/30-minute package.",
+              "business_model": "Per-minute human/AI services plus optional subscriptions.",
+              "observed_channel": "Direct self-service minute purchase/subscription and video/cloud integrations.",
+              "displayed_outcomes_users_reviews": "Supplier claims 99%+ human accuracy and 12-hour-or-less delivery; AI 95+% in five minutes or less. These are advertised service levels, not verified delivered webinar outcomes.",
+              "revenue": {
+                "status": "private / not publicly verifiable from reviewed primary pages",
+                "amount": null,
+                "success_verified": false
+              },
+              "limitations": "Not specifically webinar change-control evidence service. Accessibility claims are vendor claims; page qualifies standard-caption compliance where bottom-third visuals are absent. Initial outdated URL returned 404, corrected primary page fetched.",
+              "lawful_original_adaptation": "Use original terminology glossary, speaker map and timestamped correction log on owned synthetic recording. Do not reuse captions/content or guarantee legal compliance."
+            },
+            {
+              "example_id": "EX-009",
+              "candidate_id": "MI-004",
+              "supplier": "3Play Media",
+              "sources": [
+                {
+                  "source_id": "3play",
+                  "url": "https://www.3playmedia.com/services/captioning/",
+                  "final_url": "https://www.3playmedia.com/platform/captioning/",
+                  "http_status": 200,
+                  "accessed_at": "2026-11-08T06:06:45.978Z",
+                  "timezone": "UTC",
+                  "truncated": false,
+                  "extract_path": "examples-fetch-results.json",
+                  "publication_date": "unknown — not displayed in fetched primary-page extract"
+                }
+              ],
+              "comparability": "Direct review/quality competitor; target scale and handoff scope differ.",
+              "public_scope": "Human professional captioning, caption editor, full-review option, placement checking, ASR with optional human escalation, API/FTP/S3 and 30+ platform integrations.",
+              "public_price": "No numeric public price displayed on reviewed page; connect-with-team route. No quote requested.",
+              "business_model": "Managed captioning/platform service with optional review and integrations; contract/billing basis not displayed.",
+              "observed_channel": "Website contact-sales; platform integrations and automated file workflows.",
+              "displayed_outcomes_users_reviews": "Supplier claims minimum 99% accuracy, actual average 99.6%, full review typically 99.9%. Displayed selected case claims: This American Life +6.68% unique visitors; Discovery Digital Networks +13.48% views in 14 days; Dell +20% customers. Underlying studies not fetched; not causal, niche-specific or independent proof.",
+              "revenue": {
+                "status": "private / not publicly verifiable from reviewed primary pages",
+                "amount": null,
+                "success_verified": false
+              },
+              "limitations": "Supplier-selected case summaries and legal guarantees not independently verified. Broad enterprise media service, not specifically small B2B webinars. No pricing or paid-volume verification.",
+              "lawful_original_adaptation": "Create independent QA rubric and original error/evidence handoff, human escalation rules and delivery acceptance checklist. Do not copy proprietary accuracy scoring or imply their guarantees."
+            }
+          ],
+          "evidence_gap": "All directly address captioning/review, but none demonstrates identical small-B2B-webinar evidence-handoff package. Revenue/profit not publicly verified; supplier marketing is not independent demand proof.",
+          "approval_references": [
+            {
+              "url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6709964928",
+              "scope": "authorize analysis/backfill only"
+            },
+            {
+              "url": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-6709972696",
+              "scope": "comparable evidence backfill; no execution approval"
+            }
+          ],
+          "independent_supplier_groups_199": 3
+        },
+        "shared_integration_dependency": {
+          "current_authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/186",
+          "complete_hub_owner": "Cleo per current live body, supersedes historical Adam-owned Hub docs",
+          "research_owner": "Brian",
+          "adam": "Engineering/#175 only where assigned; not complete Hub implementation owner",
+          "status": "Existing transitional D1 used; integrated Hub and independent recipient-runtime access not verified; no infrastructure/security changes"
+        }
+      },
+      "checked_at": "2026-11-11T01:09:26.864016-05:00",
+      "record_version": "2026-11-11-nightly-v9",
+      "revision_note": "Nov10 record revision; original demand/supplier source timestamps and outcomes retained; not all sources refreshed.",
+      "allocation_tag": "New Stream",
+      "allocation_rationale": "New video/creative-production revenue offer; not the web-audit service. Reclassify only on documented buyer/job change, never to make ratio look good.",
+      "operating_model_30d": {
+        "start": "2026-11-08",
+        "end": "2026-12-08",
+        "timezone": "America/New_York",
+        "authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+        "allocation_basis": "research and validation effort, not candidate count, bookings or revenue",
+        "target_percent": {
+          "Adjacent": 70,
+          "New Stream": 30
+        },
+        "illustrative_capacity_hours": 40,
+        "capacity_authorized_or_staffed": false,
+        "planned_hours": {
+          "MI-001": 10,
+          "MI-002": 16,
+          "MI-003": 2,
+          "MI-004": 4,
+          "new_stream_watchlist": 8
+        },
+        "actual_effort": {
+          "human_hours": null,
+          "agent_active_minutes": null,
+          "reason": "No reliable per-category pre-instrumentation timer; not reconstructed from timestamps or token counts. Start ledger at integration; future workers log actual active minutes separately from wall time/human hours."
+        },
+        "review_dates": [
+          "2026-11-15",
+          "2026-11-22",
+          "2026-11-29",
+          "2026-12-06",
+          "2026-12-08"
+        ]
+      },
+      "evidence_quality": "supplier offers plus indirect problem evidence; no verified qualified demand for our offer",
+      "hypothesis": "English B2B webinar caption-QA and evidence handoff provides incremental value beyond native/free alternatives to an accessible buyer.",
+      "experiment_design_30d": {
+        "days_after_authorization": 7,
+        "cash_cap": 50,
+        "human_hours_cap": 8,
+        "technical": "Original 10-minute synthetic technical webinar; independent reviewer catches every planted glossary/speaker/timing defect; no rights or publishing dependency bypass",
+        "pass_gate": "3/5 consenting producers report recurring terminology/handoff pain AND 2/5 request scoped $149 pilot",
+        "fail_gate": "Zero requests or >=3/5 native-tool sufficiency",
+        "owner": "Brian accountable research; Maya proposed consented recruitment after separate approval; independent domain QA not builder",
+        "decision_state": "PROPOSED_NOT_RUN",
+        "inconclusive": "One request, mixed signals, technical uncertainty or insufficient eligible recruitment by deadline; do not count as pass",
+        "approval_required": "Exact participants/channel/data/scope/budget; research model is not approval to build/list/outreach/spend",
+        "clock": "Preparation and buyer-test clock begins only after explicit authorization and capacity confirmation; day30 review still occurs if blocked"
+      },
+      "estimated_research_hours_30d": 4,
+      "decision_state": "PARK_COMPARE_NATIVE"
+    }
+  ],
+  "checked_at": "2026-11-11T01:09:26.864016-05:00",
+  "prior_record": "Newest D1 2026-11-10-nightly-v8 (four full records); newer than 2026-11-08-7030 baseline.",
+  "changes": [
+    "MI-001 fresh supplier checks: native approval/exception overlap; no score change.",
+    "MI-003 official FAQ checked; operative law unresolved; no certificate claim.",
+    "W04 digital/template/KDP distribution policy checked; no niche demand, no new candidate.",
+    "All source dates, approved MI-002 deep dive, outcomes and 71/68 history preserved."
+  ],
+  "history": [
+    {
+      "record_version": "structured-research-v3",
+      "preserved_local": "history/structured-research-v3/opportunity-register.json",
+      "shared_run_id": "mi-48e937af732aaf9d35afa866b26db747",
+      "change": "Append competitor research; retain outcomes, scores and buyer/problem/channel IDs. Original MI-001 71 retained in earlier versions."
+    },
+    {
+      "record_version": "2026-11-07-nightly-v4",
+      "shared_run_id": "mi-b6e879aed424d122ddee37d39268b0ab",
+      "preserved_local": "../2026-11-07/opportunity-register.json",
+      "change": "Backfill business cases/scenario sensitivity; same stable IDs/keys and actual outcomes. MI-001 historical71 retained, current68."
+    },
+    {
+      "record_version": "2026-11-08-7030-v6.1",
+      "shared_run_id": "mi-bdd2f4d7a1bab9d536921c7a2e510776",
+      "preserved_local": "/Users/agent1/.openclaw/workspace/deliverables/market-intelligence/2026-11-08-7030",
+      "change": "Carry forward #199 portfolio, all four stable keys, outcomes, current68/historical71. Latest D1 records used, not old archive."
+    },
+    {
+      "record_version": "2026-11-09-nightly-v7",
+      "shared_run_id": "mi-150dca448137cdf1273c2eb125bedbdd",
+      "preserved_local": "/Users/agent1/.openclaw/workspace/deliverables/market-intelligence/2026-11-09",
+      "change": "Nov9 records retained; new Nov10 methodology and audio/EPUB screening append, not fresh demand or rescore"
+    },
+    {
+      "record_version": "2026-11-10-nightly-v8",
+      "source_run": "mi-5da98feb274aadd74c428b608f68d03c",
+      "preservation": "Immutable D1/Git/local Nov10 records retained; no prior outcome overwritten."
+    }
+  ],
+  "operating_model_30d": {
+    "start": "2026-11-08",
+    "end": "2026-12-08",
+    "timezone": "America/New_York",
+    "authority": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/199",
+    "allocation_basis": "research and validation effort, not candidate count, bookings or revenue",
+    "target_percent": {
+      "Adjacent": 70,
+      "New Stream": 30
+    },
+    "illustrative_capacity_hours": 40,
+    "capacity_authorized_or_staffed": false,
+    "planned_hours": {
+      "MI-001": 10,
+      "MI-002": 16,
+      "MI-003": 2,
+      "MI-004": 4,
+      "new_stream_watchlist": 8
+    },
+    "actual_effort": {
+      "human_hours": 0,
+      "agent_active_minutes": null,
+      "allocation_actual_percent": null,
+      "reason": "No reliable active inference/category timer exposed; source counts and elapsed runtime are not effort. Actual 70/30 not measurable; no retroactive invented minutes."
+    },
+    "review_dates": [
+      "2026-11-15",
+      "2026-11-22",
+      "2026-11-29",
+      "2026-12-06",
+      "2026-12-08"
+    ]
+  }
+}
