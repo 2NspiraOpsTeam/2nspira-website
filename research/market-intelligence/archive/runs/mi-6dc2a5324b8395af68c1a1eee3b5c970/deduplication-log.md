@@ -1,0 +1,1 @@
+Live#188/#199/#186 and all-state backlog reviewed. Preserve MI-001–004 keys/outcomes. No new ID. Newest authenticated records v20 matched prior local; no baseline rollback. Avoid#203/#266 and established#184/#185/#198/#202/#277/#279.

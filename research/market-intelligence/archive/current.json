@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-e20e07c12ca4ea7d0188cb07735992cb",
-      "observed_at": "2026-11-22T06:02:44.399Z",
+      "run_id": "mi-6dc2a5324b8395af68c1a1eee3b5c970",
+      "observed_at": "2026-11-23T06:02:23.201Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -724,9 +724,9 @@
           ]
         },
         "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
-        "checked_at": "2026-11-22T06:02:44.399944+00:00",
-        "record_version": "2026-11-22-nightly-v20",
-        "revision_note": "Nov22 weekly decision review; original source dates preserved. MI-002 supplier refresh only; other candidates no fresh source claims.",
+        "checked_at": "2026-11-23T01:02:23.201752-05:00",
+        "record_version": "2026-11-23-nightly-v21",
+        "revision_note": "Run metadata revision; fresh sources only as explicitly recorded below; historical evidence dates retained.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
@@ -781,8 +781,8 @@
       }
     },
     {
-      "run_id": "mi-e20e07c12ca4ea7d0188cb07735992cb",
-      "observed_at": "2026-11-22T06:02:44.399Z",
+      "run_id": "mi-6dc2a5324b8395af68c1a1eee3b5c970",
+      "observed_at": "2026-11-23T06:02:23.201Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -1805,12 +1805,20 @@
               "truncated": false
             }
           ],
-          "nov21_feasibility": "Quick $500 spot check is not comprehensive manual review/retest; $2000 Complete exceeds $1499 proposed offer even before internal costs. Accessible.org 5 primary pages at $100–250 plus $390 minimum support implies $890–1640 retail before internal work/ACR; not a quote or equivalent scope. Qualified independent assessor/capacity/cost gate remains unresolved."
+          "nov21_feasibility": "Quick $500 spot check is not comprehensive manual review/retest; $2000 Complete exceeds $1499 proposed offer even before internal costs. Accessible.org 5 primary pages at $100–250 plus $390 minimum support implies $890–1640 retail before internal work/ACR; not a quote or equivalent scope. Qualified independent assessor/capacity/cost gate remains unresolved.",
+          "methodology_refresh_nov23": {
+            "checked_at": "2026-11-23T01:02:23.201752-05:00",
+            "url": "https://www.section508.gov/tools/tools-for-testing-ict/",
+            "source_checked_at": "2026-11-23T06:01:22.186Z",
+            "observation": "GSA lists free ANDI, browser developer tools, Color Contrast Analyzer and WebAIM checker; agency-issued devices may restrict software installation. Reviewed/Updated October2026.",
+            "hypothesis": "Value must be qualified manual judgment, reproducible scoped evidence and handoff, not resale of free tools.",
+            "limitations": "Federal testing guidance, not a TitleII legal update, assessor qualification proof or demand evidence; no customer environment tested."
+          }
         },
         "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
-        "checked_at": "2026-11-22T06:02:44.399944+00:00",
-        "record_version": "2026-11-22-nightly-v20",
-        "revision_note": "Nov22 weekly decision review; original source dates preserved. MI-002 supplier refresh only; other candidates no fresh source claims.",
+        "checked_at": "2026-11-23T01:02:23.201752-05:00",
+        "record_version": "2026-11-23-nightly-v21",
+        "revision_note": "Run metadata revision; fresh sources only as explicitly recorded below; historical evidence dates retained.",
         "change_note": "Nov21: public retail scope comparison does not establish assessor availability or subcontract cost. No score/demand upgrade.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
@@ -1866,8 +1874,8 @@
       }
     },
     {
-      "run_id": "mi-e20e07c12ca4ea7d0188cb07735992cb",
-      "observed_at": "2026-11-22T06:02:44.399Z",
+      "run_id": "mi-6dc2a5324b8395af68c1a1eee3b5c970",
+      "observed_at": "2026-11-23T06:02:23.201Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -2504,9 +2512,9 @@
             }
           ]
         },
-        "checked_at": "2026-11-22T06:02:44.399944+00:00",
-        "record_version": "2026-11-22-nightly-v20",
-        "revision_note": "Nov22 weekly decision review; original source dates preserved. MI-002 supplier refresh only; other candidates no fresh source claims.",
+        "checked_at": "2026-11-23T01:02:23.201752-05:00",
+        "record_version": "2026-11-23-nightly-v21",
+        "revision_note": "Run metadata revision; fresh sources only as explicitly recorded below; historical evidence dates retained.",
         "allocation_tag": "New Stream",
         "allocation_rationale": "New video/creative-production revenue offer; not the web-audit service. Reclassify only on documented buyer/job change, never to make ratio look good.",
         "operating_model_30d": {
@@ -2562,8 +2570,8 @@
       }
     },
     {
-      "run_id": "mi-e20e07c12ca4ea7d0188cb07735992cb",
-      "observed_at": "2026-11-22T06:02:44.399Z",
+      "run_id": "mi-6dc2a5324b8395af68c1a1eee3b5c970",
+      "observed_at": "2026-11-23T06:02:23.201Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -3259,9 +3267,9 @@
           "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
         },
         "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
-        "checked_at": "2026-11-22T06:02:44.399944+00:00",
-        "record_version": "2026-11-22-nightly-v20",
-        "revision_note": "Nov22 weekly decision review; original source dates preserved. MI-002 supplier refresh only; other candidates no fresh source claims.",
+        "checked_at": "2026-11-23T01:02:23.201752-05:00",
+        "record_version": "2026-11-23-nightly-v21",
+        "revision_note": "Run metadata revision; fresh sources only as explicitly recorded below; historical evidence dates retained.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
