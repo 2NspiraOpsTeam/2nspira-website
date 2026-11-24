@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-11-24T06:04:01.924852+00:00",
+  "cloudflare_sync": {
+    "endpoint": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
+    "result": {
+      "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
+      "status": "imported",
+      "opportunities": 4,
+      "documents": 12
+    },
+    "source": "/Users/agent1/.openclaw/workspace/deliverables/market-intelligence/2026-11-24"
+  },
+  "verification": {
+    "checked_at": "2026-11-24T06:02:43.078694+00:00",
+    "records": [
+      {
+        "candidate_id": "MI-001",
+        "exact_record_match": true,
+        "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
+        "record_version": "2026-11-24-nightly-v22"
+      },
+      {
+        "candidate_id": "MI-002",
+        "exact_record_match": true,
+        "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
+        "record_version": "2026-11-24-nightly-v22"
+      },
+      {
+        "candidate_id": "MI-003",
+        "exact_record_match": true,
+        "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
+        "record_version": "2026-11-24-nightly-v22"
+      },
+      {
+        "candidate_id": "MI-004",
+        "exact_record_match": true,
+        "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
+        "record_version": "2026-11-24-nightly-v22"
+      }
+    ]
+  },
+  "files_hashed_verified": 352,
+  "historical_run_hashes_unchanged": true,
+  "github_permalink": "https://github.com/2NspiraOpsTeam/2nspira-website/issues/188#issuecomment-7123534991",
+  "whitespace_exception": "Inherited recommended-experiment.md final blank line preserved verbatim; no historical hash changed."
+}

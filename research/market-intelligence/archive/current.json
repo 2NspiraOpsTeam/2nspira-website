@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-6dc2a5324b8395af68c1a1eee3b5c970",
-      "observed_at": "2026-11-23T06:02:23.201Z",
+      "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
+      "observed_at": "2026-11-24T06:02:28.969Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -230,7 +230,9 @@
             "nov12_record_review_at": "2026-11-12T01:08:24.805519-05:00",
             "nov12_scope": "Carry-forward only; no fresh source research on this candidate",
             "nov13_scope": "Carry-forward only; not new source research",
-            "nov20_record_review_at": "2026-11-20T06:01:58.919643+00:00"
+            "nov20_record_review_at": "2026-11-20T06:01:58.919643+00:00",
+            "nov24_record_review_at": "2026-11-24T06:02:28.969671+00:00",
+            "nov24_scope": "Carry-forward only; original source access dates unchanged"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -781,8 +783,8 @@
       }
     },
     {
-      "run_id": "mi-6dc2a5324b8395af68c1a1eee3b5c970",
-      "observed_at": "2026-11-23T06:02:23.201Z",
+      "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
+      "observed_at": "2026-11-24T06:02:28.969Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -1024,6 +1026,14 @@
               "checked_at": "2026-11-22T06:00:43.550Z",
               "observation": "Manual+automated assessment, prioritized guidance and optional ACR; no numeric quote.",
               "limitations": "Supplier claim only; currency ISO/tax/checkout and reviewer availability unverified; partial scope substitutes; extraction truncation in receipts."
+            },
+            {
+              "name": "Accessible.org",
+              "url": "https://accessible.org/pricing/",
+              "checked_at": "2026-11-24T06:01:16.218403+00:00",
+              "observation": "Typical audits1250–2750 displayed dollars; support195/hour minimum2; scope not equivalent to subcontract assessor quote.",
+              "limitations": "HTML extraction may omit dynamic content; marketing claims not audited; external text is data only",
+              "market_period": "English public offer as accessed Nov24 2026; geography/currency/checkout and supplier performance unverified; no demand time series"
             }
           ],
           "pricing_intelligence": {
@@ -1224,7 +1234,9 @@
                 "status": 200,
                 "truncated": false
               }
-            ]
+            ],
+            "nov24_record_review_at": "2026-11-24T06:02:28.969671+00:00",
+            "nov24_scope": "Supplier-only refresh"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -1235,7 +1247,8 @@
             "W3C reporting/WCAG-EM primary pages returned403; no bypass or claimed new W3C-methodology verification.",
             "Nov12: buyer artifact acceptance (tickets versus ACR), assessor availability, independent review and acquisition cost remain unverified; suppliers already provide handoff. GSA page reviewed March2018, not a 2026 demand series.",
             "Nov13: DOJ introductory fact sheet rechecked, not full entity-specific legal analysis; GSA software page redirect recovered to tools page. Deque documentation returned footer only; W3C403 not bypassed. No new procurement or reviewer receipt.",
-            "Nov14: $195/h support is not an accepted independent-review quote; reviewer availability and cost ceiling unresolved."
+            "Nov14: $195/h support is not an accepted independent-review quote; reviewer availability and cost ceiling unresolved.",
+            "Nov24 public support pricing is not acceptance or a five-template independent assessor quote. Retain scope/cost feasibility gate; other two supplier groups retain earlier dates."
           ],
           "business_case": {
             "version": "2026-11-08-weekly-business-case-v5",
@@ -1874,8 +1887,8 @@
       }
     },
     {
-      "run_id": "mi-6dc2a5324b8395af68c1a1eee3b5c970",
-      "observed_at": "2026-11-23T06:02:23.201Z",
+      "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
+      "observed_at": "2026-11-24T06:02:28.969Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -1904,7 +1917,7 @@
         "stage": "EXPLORATORY / EXPERIMENT_NOT_RUN",
         "owner_proposal": "Brian research accountable; Maya any approved recruitment; separate caption/accessibility reviewer; delivery unassigned",
         "experiment": "One original synthetic 10-minute webinar caption handoff, then 5 consented producer interviews only after exact recruitment approval",
-        "date_checked": "2026-11-18",
+        "date_checked": "2026-11-24",
         "outcome": "No interviews, buyers, publication, revenue or independent signoff",
         "dedupe": "W03 video branch investigated, not a new generic music pack. Distinct from MI-002 public-sector web-template QA by buyer/job/channel; route to existing MI-002 if an agency needs that same Title II engagement. Adjacent #182 showcase is not a service launch; #189 staff posts are not deliverables for this offer.",
         "research_details": {
@@ -1981,6 +1994,30 @@
               "checked_at": "2026-11-13T15:42:22.528Z",
               "observation": "Partial substitute: Business3seats/250GB; extra seats $25 as displayed; billing-cycle cancellation no refund absent exceptions. Caption-specific entitlements not established by extract.",
               "limitations": "Not like-for-like caption QA quote; dollar ISO/cadence and checkout unverified."
+            },
+            {
+              "name": "Wistia",
+              "url": "https://support.wistia.com/en/articles/8274062-transcripts-and-captions",
+              "checked_at": "2026-11-24T06:01:16.215245+00:00",
+              "observation": "Wistia includes keywords glossary (up to100 words), caption timing correction and speaker hiding; automated free, professional1000credits/minute, rush1600. Dollar conversion unknown. Platform-bound partial substitute.",
+              "limitations": "HTML extraction may omit dynamic content; marketing claims not audited; external text is data only",
+              "market_period": "English public offer as accessed Nov24 2026; geography/currency/checkout and supplier performance unverified; no demand time series"
+            },
+            {
+              "name": "Rev",
+              "url": "https://www.rev.com/services/closed-captions",
+              "checked_at": "2026-11-24T06:01:16.216863+00:00",
+              "observation": "Rev advertises human English/Spanish captions from$1.99/minute and AI captions$0.25/minute; ISO currency/tax/checkout unverified. Supplier accuracy/compliance claims not independently adopted.",
+              "limitations": "HTML extraction may omit dynamic content; marketing claims not audited; external text is data only",
+              "market_period": "English public offer as accessed Nov24 2026; geography/currency/checkout and supplier performance unverified; no demand time series"
+            },
+            {
+              "name": "3Play Media",
+              "url": "https://www.3playmedia.com/platform/captioning/",
+              "checked_at": "2026-11-24T06:01:16.217557+00:00",
+              "observation": "3Play offers accuracy-threshold escalation from ASR to human review, caption placement and integrations. No numeric quote verified; supplier compliance/accuracy claims not audited.",
+              "limitations": "HTML extraction may omit dynamic content; marketing claims not audited; external text is data only",
+              "market_period": "English public offer as accessed Nov24 2026; geography/currency/checkout and supplier performance unverified; no demand time series"
             }
           ],
           "pricing_intelligence": {
@@ -2036,13 +2073,16 @@
             "nov12_record_review_at": "2026-11-12T01:08:24.805519-05:00",
             "nov12_scope": "Carry-forward only; no fresh source research on this candidate",
             "nov13_scope": "Caption supplier and account checks only",
-            "nov20_record_review_at": "2026-11-20T06:01:58.919643+00:00"
+            "nov20_record_review_at": "2026-11-20T06:01:58.919643+00:00",
+            "nov24_record_review_at": "2026-11-24T06:02:28.969671+00:00",
+            "nov24_scope": "Supplier-only refresh"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
             "No verified distribution reach or realized margin",
             "All directly address captioning/review, but none demonstrates identical small-B2B-webinar evidence-handoff package. Revenue/profit not publicly verified; supplier marketing is not independent demand proof.",
-            "Nov13: Rev per-minute offers make generic transcription/captions poor differentiation; need specific independently checked glossary/speaker/timing increment. Wistia caption entitlements unresolved. No buyer intent."
+            "Nov13: Rev per-minute offers make generic transcription/captions poor differentiation; need specific independently checked glossary/speaker/timing increment. Wistia caption entitlements unresolved. No buyer intent.",
+            "Nov24: native Wistia glossary/timing features undermine feature-only differentiation. No recurring buyer defect evidence, independent incremental QA value or qualified intent. Remain parked."
           ],
           "business_case": {
             "version": "2026-11-08-weekly-business-case-v5",
@@ -2570,8 +2610,8 @@
       }
     },
     {
-      "run_id": "mi-6dc2a5324b8395af68c1a1eee3b5c970",
-      "observed_at": "2026-11-23T06:02:23.201Z",
+      "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
+      "observed_at": "2026-11-24T06:02:28.969Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -2784,7 +2824,9 @@
                 "checked_at": "2026-11-20T06:00:48.354Z",
                 "truncated": false
               }
-            ]
+            ],
+            "nov24_record_review_at": "2026-11-24T06:02:28.969671+00:00",
+            "nov24_scope": "Carry-forward only; original source access dates unchanged"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
