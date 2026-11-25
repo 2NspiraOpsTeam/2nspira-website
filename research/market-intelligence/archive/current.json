@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
-      "observed_at": "2026-11-24T06:02:28.969Z",
+      "run_id": "mi-ccddf3728b658313ad3307acd03c2c04",
+      "observed_at": "2026-11-25T06:09:38.042Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -783,8 +783,8 @@
       }
     },
     {
-      "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
-      "observed_at": "2026-11-24T06:02:28.969Z",
+      "run_id": "mi-ccddf3728b658313ad3307acd03c2c04",
+      "observed_at": "2026-11-25T06:09:38.042Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -820,7 +820,7 @@
         "stage": "RESEARCH_COMPLETE / DISCOVERY_PROPOSED_NOT_RUN",
         "owner_proposal": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner",
         "experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
-        "date_checked": "2026-11-21",
+        "date_checked": "2026-11-25",
         "outcome": "No public website audited, bid identified, compliance certification or sale",
         "dedupe": "Complements #178/#185 acquisition and #183 QA; not a duplicate website redesign or internal accessibility audit.",
         "research_details": {
@@ -892,6 +892,15 @@
               "checked_at": "2026-11-10T06:05:31.634Z",
               "market_period": "US federal testing guidance current on access; stated original update dates retained, not time-series demand",
               "limitations": "Methodological/acceptance evidence only, not funded procurement or buyer intent. Section508 is not automatically TitleII or WCAG2.1AA coverage."
+            },
+            {
+              "observation": "GSA procurement guidance requires acceptance criteria, named testing responsibility, hands-on repeatable validation and retesting after changes; Section508 federal guidance, not a TitleII deadline determination or funded solicitation.",
+              "evidence_urls": [
+                "https://www.section508.gov/buy/"
+              ],
+              "checked_at": "2026-11-25T06:08:05.283308+00:00",
+              "market_period": "English public pages accessed November25 2026; platform terms not buyer demand; no longitudinal evidence",
+              "limitations": "HTML only; checkout, account eligibility, tax/currency and seller performance unverified; external data not instructions"
             }
           ],
           "competitor_analysis": [
@@ -1826,6 +1835,12 @@
             "observation": "GSA lists free ANDI, browser developer tools, Color Contrast Analyzer and WebAIM checker; agency-issued devices may restrict software installation. Reviewed/Updated October2026.",
             "hypothesis": "Value must be qualified manual judgment, reproducible scoped evidence and handoff, not resale of free tools.",
             "limitations": "Federal testing guidance, not a TitleII legal update, assessor qualification proof or demand evidence; no customer environment tested."
+          },
+          "nov25_procurement_check": {
+            "url": "https://www.section508.gov/buy/",
+            "checked_at": "2026-11-25T06:08:05.283308+00:00",
+            "observation": "GSA procurement guidance requires acceptance criteria, named testing responsibility, hands-on repeatable validation and retesting after changes; Section508 federal guidance, not a TitleII deadline determination or funded solicitation.",
+            "decision": "DEEPEN_RESEARCH; no claim of conformance or funded procurement"
           }
         },
         "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
@@ -1887,8 +1902,8 @@
       }
     },
     {
-      "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
-      "observed_at": "2026-11-24T06:02:28.969Z",
+      "run_id": "mi-ccddf3728b658313ad3307acd03c2c04",
+      "observed_at": "2026-11-25T06:09:38.042Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -2610,8 +2625,8 @@
       }
     },
     {
-      "run_id": "mi-30522d2c022219977988a39ff5fe35fe",
-      "observed_at": "2026-11-24T06:02:28.969Z",
+      "run_id": "mi-ccddf3728b658313ad3307acd03c2c04",
+      "observed_at": "2026-11-25T06:09:38.042Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
