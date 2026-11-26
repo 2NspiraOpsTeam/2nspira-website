@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-ccddf3728b658313ad3307acd03c2c04",
-      "observed_at": "2026-11-25T06:09:38.042Z",
+      "run_id": "mi-d47f21663b9c23fca59260225cee4831",
+      "observed_at": "2026-11-26T06:02:46.796Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -726,9 +726,9 @@
           ]
         },
         "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
-        "checked_at": "2026-11-23T01:02:23.201752-05:00",
-        "record_version": "2026-11-23-nightly-v21",
-        "revision_note": "Run metadata revision; fresh sources only as explicitly recorded below; historical evidence dates retained.",
+        "checked_at": "2026-11-26T06:02:46.796754+00:00",
+        "record_version": "2026-11-26-nightly-v24",
+        "revision_note": "Nov26 metadata revision; only MI-003 FAQ reviewed today; all other original source dates preserved.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
@@ -783,8 +783,8 @@
       }
     },
     {
-      "run_id": "mi-ccddf3728b658313ad3307acd03c2c04",
-      "observed_at": "2026-11-25T06:09:38.042Z",
+      "run_id": "mi-d47f21663b9c23fca59260225cee4831",
+      "observed_at": "2026-11-26T06:02:46.796Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -1844,9 +1844,9 @@
           }
         },
         "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
-        "checked_at": "2026-11-23T01:02:23.201752-05:00",
-        "record_version": "2026-11-23-nightly-v21",
-        "revision_note": "Run metadata revision; fresh sources only as explicitly recorded below; historical evidence dates retained.",
+        "checked_at": "2026-11-26T06:02:46.796754+00:00",
+        "record_version": "2026-11-26-nightly-v24",
+        "revision_note": "Nov26 metadata revision; only MI-003 FAQ reviewed today; all other original source dates preserved.",
         "change_note": "Nov21: public retail scope comparison does not establish assessor availability or subcontract cost. No score/demand upgrade.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
@@ -1902,8 +1902,8 @@
       }
     },
     {
-      "run_id": "mi-ccddf3728b658313ad3307acd03c2c04",
-      "observed_at": "2026-11-25T06:09:38.042Z",
+      "run_id": "mi-d47f21663b9c23fca59260225cee4831",
+      "observed_at": "2026-11-26T06:02:46.796Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -2567,9 +2567,9 @@
             }
           ]
         },
-        "checked_at": "2026-11-23T01:02:23.201752-05:00",
-        "record_version": "2026-11-23-nightly-v21",
-        "revision_note": "Run metadata revision; fresh sources only as explicitly recorded below; historical evidence dates retained.",
+        "checked_at": "2026-11-26T06:02:46.796754+00:00",
+        "record_version": "2026-11-26-nightly-v24",
+        "revision_note": "Nov26 metadata revision; only MI-003 FAQ reviewed today; all other original source dates preserved.",
         "allocation_tag": "New Stream",
         "allocation_rationale": "New video/creative-production revenue offer; not the web-audit service. Reclassify only on documented buyer/job change, never to make ratio look good.",
         "operating_model_30d": {
@@ -2625,8 +2625,8 @@
       }
     },
     {
-      "run_id": "mi-ccddf3728b658313ad3307acd03c2c04",
-      "observed_at": "2026-11-25T06:09:38.042Z",
+      "run_id": "mi-d47f21663b9c23fca59260225cee4831",
+      "observed_at": "2026-11-26T06:02:46.796Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -2841,7 +2841,8 @@
               }
             ],
             "nov24_record_review_at": "2026-11-24T06:02:28.969671+00:00",
-            "nov24_scope": "Carry-forward only; original source access dates unchanged"
+            "nov24_scope": "Carry-forward only; original source access dates unchanged",
+            "nov26_scope": "Commission FAQ only; full extraction retained; no consolidated legal-text confirmation or supplier refresh"
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -3321,12 +3322,20 @@
             ],
             "independent_supplier_groups_199": 3
           },
-          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred."
+          "shared_integration_dependency": "Cleo owns complete Hub per current #186; existing research D1 is transitional. No operational Hub or recipient runtime access inferred.",
+          "nov26_guidance_check": {
+            "source": "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+            "checked_at": "2026-11-26T06:01:31.811736+00:00",
+            "observations": "FAQ says amended mid-July2026/no specific sufficient level, no certificate; operative law not independently checked",
+            "decision": "HOLD_RULE_REVIEW",
+            "qualified_intent": null,
+            "revenue_verified": false
+          }
         },
         "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
-        "checked_at": "2026-11-23T01:02:23.201752-05:00",
-        "record_version": "2026-11-23-nightly-v21",
-        "revision_note": "Run metadata revision; fresh sources only as explicitly recorded below; historical evidence dates retained.",
+        "checked_at": "2026-11-26T06:02:46.796754+00:00",
+        "record_version": "2026-11-26-nightly-v24",
+        "revision_note": "Nov26 metadata revision; only MI-003 FAQ reviewed today; all other original source dates preserved.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
