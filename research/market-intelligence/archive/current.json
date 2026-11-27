@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-d47f21663b9c23fca59260225cee4831",
-      "observed_at": "2026-11-26T06:02:46.796Z",
+      "run_id": "mi-d25de3f9380ce2b8484fe7cdc5e42901",
+      "observed_at": "2026-11-27T06:04:49.938Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -726,9 +726,9 @@
           ]
         },
         "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
-        "checked_at": "2026-11-26T06:02:46.796754+00:00",
-        "record_version": "2026-11-26-nightly-v24",
-        "revision_note": "Nov26 metadata revision; only MI-003 FAQ reviewed today; all other original source dates preserved.",
+        "checked_at": "2026-11-27T06:04:49.938628+00:00",
+        "record_version": "2026-11-27-nightly-v25",
+        "revision_note": "Nov27 revision from newest D1v24; only MI-002 supplier sources refreshed; inherited dates/outcomes unchanged.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
@@ -783,8 +783,8 @@
       }
     },
     {
-      "run_id": "mi-d47f21663b9c23fca59260225cee4831",
-      "observed_at": "2026-11-26T06:02:46.796Z",
+      "run_id": "mi-d25de3f9380ce2b8484fe7cdc5e42901",
+      "observed_at": "2026-11-27T06:04:49.938Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -820,7 +820,7 @@
         "stage": "RESEARCH_COMPLETE / DISCOVERY_PROPOSED_NOT_RUN",
         "owner_proposal": "Brian accountable research; independent accessibility specialist for manual verification; Maya acquisition/RFP owner",
         "experiment": "Synthetic 5-page demo pack plus 3 consented vendor interviews; require 2 requests for scoped quote",
-        "date_checked": "2026-11-25",
+        "date_checked": "2026-11-27",
         "outcome": "No public website audited, bid identified, compliance certification or sale",
         "dedupe": "Complements #178/#185 acquisition and #183 QA; not a duplicate website redesign or internal accessibility audit.",
         "research_details": {
@@ -1790,6 +1790,31 @@
               ],
               "observation": "Manual-review scope and public retail tiers rechecked; Quick spot-check tier not comprehensive review; no quote/availability/intent established",
               "limitations": "Supplier statements; no independently verified revenue or qualification; source text/individual timestamps in source-snapshots.json"
+            },
+            {
+              "checked_at": "2026-11-27T06:04:49.938628+00:00",
+              "sources": [
+                {
+                  "url": "https://accessible.org/pricing/",
+                  "checked_at": "2026-11-27T06:03:44.764121+00:00",
+                  "http_status": 200,
+                  "limitation": "Public supplier/policy page only; no buyer demand, checkout or supplier performance verification; English current offer, region/publication date unknown unless stated."
+                },
+                {
+                  "url": "https://halfaccessible.com/pricing/",
+                  "checked_at": "2026-11-27T06:03:44.764722+00:00",
+                  "http_status": 200,
+                  "limitation": "Public supplier/policy page only; no buyer demand, checkout or supplier performance verification; English current offer, region/publication date unknown unless stated."
+                },
+                {
+                  "url": "https://www.deque.com/accessibility-services/audits-compliance-testing/",
+                  "checked_at": "2026-11-27T06:03:44.765256+00:00",
+                  "http_status": 200,
+                  "limitation": "Public supplier/policy page only; no buyer demand, checkout or supplier performance verification; English current offer, region/publication date unknown unless stated."
+                }
+              ],
+              "observation": "Accessible.org most audits $1250-$2750; HalfAccessible quick five-template/top10 issues $500 vs complete manual up to25templates $2000; Deque manual audits, price unverified. Retail scope not a subcontract quote.",
+              "decision": "Retain DEEPEN_RESEARCH; independent assessor acceptance/rate/capacity unknown."
             }
           ],
           "reviewer_feasibility_2026_11_18": {
@@ -1844,10 +1869,10 @@
           }
         },
         "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
-        "checked_at": "2026-11-26T06:02:46.796754+00:00",
-        "record_version": "2026-11-26-nightly-v24",
-        "revision_note": "Nov26 metadata revision; only MI-003 FAQ reviewed today; all other original source dates preserved.",
-        "change_note": "Nov21: public retail scope comparison does not establish assessor availability or subcontract cost. No score/demand upgrade.",
+        "checked_at": "2026-11-27T06:04:49.938628+00:00",
+        "record_version": "2026-11-27-nightly-v25",
+        "revision_note": "Nov27 revision from newest D1v24; only MI-002 supplier sources refreshed; inherited dates/outcomes unchanged.",
+        "change_note": "Three primary supplier pages rechecked; retail minimum/scope mismatch still blocks assumed independent assessor economics; no demand upgrade or rescore.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
@@ -1902,8 +1927,8 @@
       }
     },
     {
-      "run_id": "mi-d47f21663b9c23fca59260225cee4831",
-      "observed_at": "2026-11-26T06:02:46.796Z",
+      "run_id": "mi-d25de3f9380ce2b8484fe7cdc5e42901",
+      "observed_at": "2026-11-27T06:04:49.938Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -2567,9 +2592,9 @@
             }
           ]
         },
-        "checked_at": "2026-11-26T06:02:46.796754+00:00",
-        "record_version": "2026-11-26-nightly-v24",
-        "revision_note": "Nov26 metadata revision; only MI-003 FAQ reviewed today; all other original source dates preserved.",
+        "checked_at": "2026-11-27T06:04:49.938628+00:00",
+        "record_version": "2026-11-27-nightly-v25",
+        "revision_note": "Nov27 revision from newest D1v24; only MI-002 supplier sources refreshed; inherited dates/outcomes unchanged.",
         "allocation_tag": "New Stream",
         "allocation_rationale": "New video/creative-production revenue offer; not the web-audit service. Reclassify only on documented buyer/job change, never to make ratio look good.",
         "operating_model_30d": {
@@ -2625,8 +2650,8 @@
       }
     },
     {
-      "run_id": "mi-d47f21663b9c23fca59260225cee4831",
-      "observed_at": "2026-11-26T06:02:46.796Z",
+      "run_id": "mi-d25de3f9380ce2b8484fe7cdc5e42901",
+      "observed_at": "2026-11-27T06:04:49.938Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -3333,9 +3358,9 @@
           }
         },
         "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
-        "checked_at": "2026-11-26T06:02:46.796754+00:00",
-        "record_version": "2026-11-26-nightly-v24",
-        "revision_note": "Nov26 metadata revision; only MI-003 FAQ reviewed today; all other original source dates preserved.",
+        "checked_at": "2026-11-27T06:04:49.938628+00:00",
+        "record_version": "2026-11-27-nightly-v25",
+        "revision_note": "Nov27 revision from newest D1v24; only MI-002 supplier sources refreshed; inherited dates/outcomes unchanged.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
