@@ -2,8 +2,8 @@
   "source": "https://2nspira-market-intelligence.jcortez-36a.workers.dev",
   "opportunities": [
     {
-      "run_id": "mi-d25de3f9380ce2b8484fe7cdc5e42901",
-      "observed_at": "2026-11-27T06:04:49.938Z",
+      "run_id": "mi-3eb1465ced44038ee487f59960fbf6d5",
+      "observed_at": "2026-11-28T06:03:00.133Z",
       "record": {
         "candidate_id": "MI-001",
         "category": "Workflow automation / productized B2B service",
@@ -35,10 +35,10 @@
         "stage": "RESEARCH_COMPLETE / EXPERIMENT_PROPOSED_NOT_RUN",
         "owner_proposal": "Brian accountable; Adam prototype; Maya authorized recruitment only; independent QA reviewer not Brian",
         "experiment": "Local synthetic 30-invoice prototype, then 5 consented target-user sessions after approval",
-        "date_checked": "2026-11-18",
+        "date_checked": "2026-11-28",
         "outcome": "No interviews, purchases, revenue or product launch; unvalidated offer",
         "dedupe": "Adjacent to #185 acquisition; no new campaign. Excludes #186 Business Hub and payment-pilot checkout.",
-        "change_note": "Three independent primary suppliers refreshed November17; stronger native-overlap caution, no demand upgrade or rescore. Original71/current68 history retained.",
+        "change_note": "Three native supplier groups refreshed; Wave billing cadence now explicit in receipt. No demand upgrade/rescore; original71/current68 preserved.",
         "research_details": {
           "customer_segment": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis",
           "customer_needs": [
@@ -158,6 +158,30 @@
               "limitations": "Supplier/platform evidence only; no sales, profitability or qualified intent verified",
               "name": "Upflow",
               "observation": "Supplier describes suggestion-only autonomy controls, complex-payment matching and built-in exception workflows. Supplier outcome statistics not independently verified."
+            },
+            {
+              "name": "www.chaserhq.com",
+              "url": "https://www.chaserhq.com/chaser-pricing",
+              "checked_at": "2026-11-28T06:01:47.528290+00:00",
+              "observation": "Chaser public pricing renders from $259/month and alternative billing figures; country/currency/active toggle/checkout unresolved. Native reminders, forecasting and credit support create overlap; supplier claims not audited.",
+              "market_period": "English public current supplier offer; eligibility, checkout, taxes and sales unverified",
+              "limitations": "Public supplier offer only; no checkout, trial, independent performance, qualified intent or revenue verification."
+            },
+            {
+              "name": "www.waveapps.com",
+              "url": "https://www.waveapps.com/pricing",
+              "checked_at": "2026-11-28T06:01:47.529743+00:00",
+              "observation": "Wave Pro explicitly displays $19 USD/month billed monthly and $25 CAD/month billed monthly; promotional figures also displayed, eligibility/checkout unverified. Automated late-payment reminders are a native substitute. This resolves prior extracted cadence uncertainty, not buyer intent.",
+              "market_period": "English public current supplier offer; eligibility, checkout, taxes and sales unverified",
+              "limitations": "Public supplier offer only; no checkout, trial, independent performance, qualified intent or revenue verification."
+            },
+            {
+              "name": "upflow.io",
+              "url": "https://upflow.io/pricing",
+              "checked_at": "2026-11-28T06:01:47.530366+00:00",
+              "observation": "Upflow Starter up to $10M annual invoiced revenue and up to 40,000 new invoices/year, unlimited user seats, Gmail/Outlook two-way integration and multichannel reminders. Plans ask for quote. Separate payment-platform fee table is NOT base collections subscription price.",
+              "market_period": "English public current supplier offer; eligibility, checkout, taxes and sales unverified",
+              "limitations": "Public supplier offer only; no checkout, trial, independent performance, qualified intent or revenue verification."
             }
           ],
           "pricing_intelligence": {
@@ -232,7 +256,16 @@
             "nov13_scope": "Carry-forward only; not new source research",
             "nov20_record_review_at": "2026-11-20T06:01:58.919643+00:00",
             "nov24_record_review_at": "2026-11-24T06:02:28.969671+00:00",
-            "nov24_scope": "Carry-forward only; original source access dates unchanged"
+            "nov24_scope": "Carry-forward only; original source access dates unchanged",
+            "november28_supplier_refresh": {
+              "source_urls": [
+                "https://www.chaserhq.com/chaser-pricing",
+                "https://www.waveapps.com/pricing",
+                "https://upflow.io/pricing"
+              ],
+              "checked_at": "2026-11-28T06:03:00.133930+00:00",
+              "limitation": "Only supplier pages refreshed; original problem surveys and all outcomes retain their source dates."
+            }
           },
           "evidence_gaps": [
             "No qualified buyer interviews, purchases or revenue",
@@ -726,9 +759,9 @@
           ]
         },
         "buyer_problem_channel_key": "US B2B service firms / bookkeepers; 2–20 staff is a targeting hypothesis | Overdue-invoice exception review, reconciliation and human-approved follow-up | Bookkeeper/accountant referrals via Maya, subject to recruitment approval",
-        "checked_at": "2026-11-27T06:04:49.938628+00:00",
-        "record_version": "2026-11-27-nightly-v25",
-        "revision_note": "Nov27 revision from newest D1v24; only MI-002 supplier sources refreshed; inherited dates/outcomes unchanged.",
+        "checked_at": "2026-11-28T06:03:00.133930+00:00",
+        "record_version": "2026-11-28-nightly-v26",
+        "revision_note": "November28 supplier refresh MI-001 only; other source dates/outcomes and approved deep dive retained verbatim. Metadata time is not source freshness.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
@@ -783,8 +816,8 @@
       }
     },
     {
-      "run_id": "mi-d25de3f9380ce2b8484fe7cdc5e42901",
-      "observed_at": "2026-11-27T06:04:49.938Z",
+      "run_id": "mi-3eb1465ced44038ee487f59960fbf6d5",
+      "observed_at": "2026-11-28T06:03:00.133Z",
       "record": {
         "candidate_id": "MI-002",
         "category": "Accessibility QA / niche productized service",
@@ -1869,9 +1902,9 @@
           }
         },
         "buyer_problem_channel_key": "US web agencies serving public-sector clients | Reproducible accessibility evidence, prioritized developer tickets and retest history | Existing agency/RFP channel via Maya; no bid or outreach authorized",
-        "checked_at": "2026-11-27T06:04:49.938628+00:00",
-        "record_version": "2026-11-27-nightly-v25",
-        "revision_note": "Nov27 revision from newest D1v24; only MI-002 supplier sources refreshed; inherited dates/outcomes unchanged.",
+        "checked_at": "2026-11-28T06:03:00.133930+00:00",
+        "record_version": "2026-11-28-nightly-v26",
+        "revision_note": "November28 supplier refresh MI-001 only; other source dates/outcomes and approved deep dive retained verbatim. Metadata time is not source freshness.",
         "change_note": "Three primary supplier pages rechecked; retail minimum/scope mismatch still blocks assumed independent assessor economics; no demand upgrade or rescore.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
@@ -1927,8 +1960,8 @@
       }
     },
     {
-      "run_id": "mi-d25de3f9380ce2b8484fe7cdc5e42901",
-      "observed_at": "2026-11-27T06:04:49.938Z",
+      "run_id": "mi-3eb1465ced44038ee487f59960fbf6d5",
+      "observed_at": "2026-11-28T06:03:00.133Z",
       "record": {
         "candidate_id": "MI-004",
         "category": "Video / creative services",
@@ -2592,9 +2625,9 @@
             }
           ]
         },
-        "checked_at": "2026-11-27T06:04:49.938628+00:00",
-        "record_version": "2026-11-27-nightly-v25",
-        "revision_note": "Nov27 revision from newest D1v24; only MI-002 supplier sources refreshed; inherited dates/outcomes unchanged.",
+        "checked_at": "2026-11-28T06:03:00.133930+00:00",
+        "record_version": "2026-11-28-nightly-v26",
+        "revision_note": "November28 supplier refresh MI-001 only; other source dates/outcomes and approved deep dive retained verbatim. Metadata time is not source freshness.",
         "allocation_tag": "New Stream",
         "allocation_rationale": "New video/creative-production revenue offer; not the web-audit service. Reclassify only on documented buyer/job change, never to make ratio look good.",
         "operating_model_30d": {
@@ -2650,8 +2683,8 @@
       }
     },
     {
-      "run_id": "mi-d25de3f9380ce2b8484fe7cdc5e42901",
-      "observed_at": "2026-11-27T06:04:49.938Z",
+      "run_id": "mi-3eb1465ced44038ee487f59960fbf6d5",
+      "observed_at": "2026-11-28T06:03:00.133Z",
       "record": {
         "candidate_id": "MI-003",
         "category": "Digital training kit / AI workflow governance",
@@ -3358,9 +3391,9 @@
           }
         },
         "buyer_problem_channel_key": "Small EU agencies with at least 10 staff; no customer network established | Role-specific safe AI usage, practical learning records and output verification | Approved EU agency discovery via Maya; no reachable audience verified",
-        "checked_at": "2026-11-27T06:04:49.938628+00:00",
-        "record_version": "2026-11-27-nightly-v25",
-        "revision_note": "Nov27 revision from newest D1v24; only MI-002 supplier sources refreshed; inherited dates/outcomes unchanged.",
+        "checked_at": "2026-11-28T06:03:00.133930+00:00",
+        "record_version": "2026-11-28-nightly-v26",
+        "revision_note": "November28 supplier refresh MI-001 only; other source dates/outcomes and approved deep dive retained verbatim. Metadata time is not source freshness.",
         "allocation_tag": "Adjacent",
         "allocation_rationale": "Strengthens current automation, website/accessibility or AI enablement/governance work.",
         "operating_model_30d": {
